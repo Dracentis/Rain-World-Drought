@@ -1,0 +1,23 @@
+ID - Region - Color - Topic
+CC		CC	Gold		Illegal Information
+SI_west		SI	Black		FP and SRS //1591
+SI_top		SI	Black		Erratic Pulse //1650
+LF_west		LF	Red		Beverages Have Arrived
+LF_bottom	LF	Red		Starving Yourself
+HI		HI	Blue		Mask Factory
+SH		SH	Dark Red		Memory of an Ancient
+DS		DS	Dark Blue		Ambition
+SB_filtration	SB	Dark Red		Void Fluid
+SB_ravine	SB	Black		Random Worry
+GW		GW	Cyan		Pebbles' Mistake
+SL_bridge		SL	Purple		Iterators and Water
+SL_moon		SL	Yellow		Moon's Essay
+SU		SU	Silver		Mantras
+UW		UW	Dark Grey	Pebbles' City
+SL_chimney	SL	Pink		Purposed Organisms
+DroughtPearl1	IS	Dark Red		Gravity Dissruptors
+DroughtPearl2	FS	Dark Green	Sanctuary Experiments
+DroughtPearl3	MW	Dark Blue		Moon's Suspisions about SRS
+SI_Spire1		SI	Black		Silver of Straw //1627
+SI_Spire2		SI	Black		Moon and FP Relations //1598
+SI_Spire3		SI	Black		About Messenger //1625

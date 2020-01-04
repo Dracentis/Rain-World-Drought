@@ -1,0 +1,82 @@
+Existing Encryptions:
+1 - Echo
+2 - Echo
+3 - Echo
+4 - Echo
+5 - Echo
+6 - Echo
+7 - CC Pearl 	[Gold] 		(Illegal Information)
+8 - CC Pearl	[Gold]		(FP Conversation)
+9 - Moon Intro
+10 - LF Pearl 	[Red] 		(Beverages Have Arrived)
+11 - LF Pearl 	[Red] 		(Starving yourself)
+12 - HI Pearl 	[Blue] 		(Mask Factory)
+13 - SH Pearl 	[Dark Red]	(Memory of an Ancient)
+14 - DS Pearl	[Dark Blue]	(Ambition)
+15 - SB Pearl	[Filtration]	(Void Fluid)
+16 - GW Pearl	[Cyan]		(Pebbles Mistake)
+17 - SL Pearl	[Purple]		(Iterators and Water)
+18 - SL Pearl	[Yellow]		(Moon's Essay)
+19 - Five Pebbles' Neuron		(Thank you I suppose)//(Reformating Info)
+20 - SI Pearl	[Random]		(FP and SRS Frustration)
+21 - SI Pearl	[Random]		(Erratic Pulse)
+22 - SI Pearl	[Random]		(Silver of Straw) //(Erratic Pulse Plans)
+23 - SI Pearl	[Random]		(Moon and FP relations)//(Moon to Local)
+24 - SI Pearl	[Random]		(About Messenger)//(Forced Conversation)
+25 - Karma Flower
+26 - Blue Fruit
+27 - Flare Plant
+28 - Vulture Mask
+29 - Puffball
+30 - Jellyfish
+31 - Lantern
+32 - Mushroom
+33 - Firecracker Plant
+34 - Slime Mold
+35 - Karma Flower - FP
+36 - Blue Fruit - FP
+37 - Flare Plant - FP
+38 - Misc Pearls
+39 - Vulture Mask - FP
+40 - All of Five Pebbles' Pearls
+41 - SU Pearl	[Silver]		(Mantras)
+42 - UW Pearl	[Dark Grey]	(City on top of Pebbles')
+43 - SB Pearl 	[Ravine]		(Random Worry)//(Anyone heard from FP)
+44 - Bomb
+45 - Puffball - FP
+46 - Jellyfish - FP
+47 - Lantern - FP
+48 - Mushroom - FP
+49 - Firecracker Plant - FP
+50 - Slime Mold - FP
+51 - Hunter Pearl
+52 - Overseer remains
+53 - Bubble Plant
+54 - SL Pearl	[Pink]		(Purposed Organisms)	
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=FIVE PEBBLES-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+55 - LF Pearl 	[Red] 		(Beverages Have Arrived)
+56 - LF Pearl 	[Red] 		(Starving yourself)
+57 - HI Pearl 	[Blue] 		(Mask Factory)
+58 - SH Pearl 	[Dark Red]	(Memory of an Ancient)
+59 - DS Pearl	[Dark Blue]	(Ambition)
+60 - SB Pearl	[Filtration]	(Void Fluid)
+61 - GW Pearl	[Cyan]		(Pebbles Mistake)
+62 - SL Pearl	[Purple]		(Iterators and Water)
+63 - SL Pearl	[Yellow]		(Moon's Essay)
+64 - SI Pearl	[West]		(FP and SRS Frustration)
+65 - SI Pearl	[Random]		(Erratic Pulse)
+*66 - SI Pearl	[Random]		(Silver of Straw) //(Erratic Pulse Plans)
+*67 - SI Pearl	[Random]		(Moon and FP relations)//(Moon to Local)
+*68 - SI Pearl	[Random]		(About Messenger)//(Forced Conversation)
+69 - SU Pearl	[Silver]		(Mantras)
+70 - UW Pearl	[Dark Grey]	(City on top of Pebbles')
+*71 - SB Pearl 	[Ravine]		(Random Worry)//(Anyone heard from FP)
+72 - SL Pearl	[Pink]		(Purposed Organisms)	
+73 - All of Moon's Pearls
+74 - Misc Pearls - FP
+75 - Bomb - FP
+
+
+{PHY 191 and ((PHY 184 or concurrently) or PHY 184B)} or (PHY 232 and (PHY 234B or concurrently)) or (PHY 232C and (PHY 234B or concurrently))
+Not open to students with credit in
+LB 274 or PHY 252
