@@ -1,0 +1,11 @@
+Template: NONE
+DangerType: None
+Clouds: 1
+Grime: 0.02173913
+BkgDroneVolume: 0.2769565
+Palette: 18
+Effects: ZeroG-1-20-20, ZeroGSpecks-0.4782609-15-49, SunBlock-1-23-99, 
+PlacedObjects: VoidSpawnEgg><248.4655><158.303><-347~393~2~3~1, VoidSpawnEgg><395.5502><164.7399><-492~281~2~3~1, VoidSpawnEgg><554.5569><158.1978><-645~183~2~3~1, 
+AmbientSounds: OMNI><AM_IND-DeepHum.ogg><703.8363><246.9304><0.25><1, OMNI><AM_IND-SuperStructure.ogg><736.8393><488.381><0.6195652><1, OMNI><Mech Active.wav><719.0617><396.8098><0><1, SPOT><SO_SFX-Gutleut.ogg><701.9476><492.219><0.1847826><1><848.9475><72.21902><-247.3553><189.6447><0><0.1, 
+Triggers: Spot<tA>event<tB>ShowProjectedImageEvent<eA>afterEncounter<eB>1<eA>fromCycle<eB>0<eA>onlyWhenShowingDirection<eB>0<tA>multiUse<tB>1<tA>toCycle<tB>-1<tA>fromCycle<tB>0<tA>delay<tB>0<tA>panPos<tB>325.5532<tB>161.0353<tA>fireChance<tB>1<tA>entrance<tB>2<tA>karma<tB>0<tA>slugcats<tB>111<tA>pos<tB>786.5532<tB>90.03528<tA>handlePos<tB>-324.3553<tB>-38.35535, 
+FadePalette: 17, 0.6304348

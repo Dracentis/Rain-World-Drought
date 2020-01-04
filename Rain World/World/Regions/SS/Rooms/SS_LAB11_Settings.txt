@@ -1,0 +1,10 @@
+Template: SS_SettingsTemplate_Corrupt
+DangerType: None
+Clouds: 1
+Grime: 0.1847826
+Palette: 24
+EffectColorB: 12
+Effects: ZeroG-1-20-20, ZeroGSpecks-0.4021739-18-81, SSSwarmers-0.5326087-30-30, 
+PlacedObjects: LightSource><458.3135><360.1777><1~Environment~-327~244~-412~1.602539~1~0, LightFixture><880.396><84.92079><RedLight~17.32051~-10~88, LightFixture><33.36273><544.8545><RedLight~17.32051~-10~83, LightSource><904.5347><609.697><1~Environment~-97~102~-209~-178.3975~1~0, LightSource><293.7573><110.3001><0.8369565~Environment~-69~137~50~86.60254~1~0, CorruptionTube><-246.9469><230.5572><0~100, WallMycelia><111.873><437.6577><76~46, CoralCircuit><478.5647><370.0753><19~39, CoralNeuron><658.0555><368.7969><-112~117, 
+AmbientSounds: SPOT><AM_IND-DeepHum.ogg><753.7><309.2496><0.2391304><1><489.7><363.2496><-110.3553><-130.3553><0><0.1, 
+WetTerrain: OFF

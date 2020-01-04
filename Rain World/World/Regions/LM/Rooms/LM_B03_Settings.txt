@@ -1,0 +1,5 @@
+Palette: 25
+Effects: ProjectedScanLines-0.3804348-21-5, ZeroGSpecks-0.6739131-30-30, SunBlock-1-40-40, ZeroG-0.7934783-46-98, 
+PlacedObjects: LightSource><2769.819><1129.585><1~Environment~-311~-249~50~86.60254~1~0, LightSource><1466.819><1356.084><1~Environment~-108~-112~50~86.60254~1~0, LightSource><1027.806><1318.048><1~Environment~124~-244~50~86.60254~1~0, LightFixture><1192.678><863.0634><RedLight~17.32051~-10~46, LightFixture><2101.608><1355.359><RedLight~17.32051~-10~94, LightFixture><1543.432><336.3118><RedLight~17.32051~-10~91, 
+AmbientSounds: OMNI><AM_IND-SuperStructure.ogg><738.6934><491.5512><0.2826087><1, OMNI><AM_IND-Utility03.ogg><763.4113><446.6183><0.1630435><1, OMNI><AM_WIN-MedWind.ogg><758.6516><537.0759><0.1086956><1, OMNI><OM.wav><694.816><334.6715><0.07608695><1, 
+FadePalette: 10, 0, 0, 0, 0.5108696

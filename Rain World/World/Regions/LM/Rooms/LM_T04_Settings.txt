@@ -1,0 +1,6 @@
+Template: LM_SettingsTemplate_Transform
+DangerType: None
+Clouds: 1
+Palette: 25
+Effects: ElectricStorm-0.2717391-117-69, ZeroGSpecks-0.4347826-40-40, 
+PlacedObjects: LightFixture><133.9285><2090.463><RedLight~17.32051~-10~4, LightFixture><253.7277><1591.448><RedLight~17.32051~-10~89, LightFixture><755.5914><1857.831><RedLight~17.32051~-10~88, ZapCoil><633.5854><1506.318><44~184, LightFixture><644.3943><1647.693><ZapCoilLight~17.32051~-10~86, SuperStructureFuses><233.5157><1236.842><49~50, LightFixture><284.631><830.6364><ZapCoilLight~17.32051~-10~70, ZapCoil><553.5777><1112.566><86~34, ZapCoil><225.3674><908.6495><89~40, ZapCoil><237.8729><806.0953><68~43, LightFixture><521.9808><1199.949><RedLight~17.32051~-10~16, LightFixture><584.2974><914.3059><RedLight~17.32051~-10~91, LightFixture><87.69647><728.2124><RedLight~17.32051~-10~94, LightFixture><576.5425><360.5591><RedLight~17.32051~-10~46, LightFixture><499.3126><581.8201><RedLight~17.32051~-10~88, LightSource><209.0666><126.8727><1~Environment~65~108~50~86.60254~0~0, 

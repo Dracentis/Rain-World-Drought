@@ -1,0 +1,6 @@
+Template: SL_SettingsTemplate_Sewer
+DangerType: Flood
+BkgDroneVolume: 0.2769565
+Effects: Fog-0.4891304-20-20, Drain-0.3043478-30-30, 
+PlacedObjects: CustomDecal><427.8563><376.3306><-43~292~115~322~77~0~-504~-258~0.06521739~1~0~Rust1~0.7608696~1~0.7608696~1~0.3152174~1~0.3804348~1, 
+WetTerrain: OFF

@@ -1,0 +1,10 @@
+Template: NONE
+DangerType: Thunder
+Clouds: 1
+Palette: 16
+EffectColorA: 10
+Effects: Lightning-0.7065217-20-20, ExtraLoudThunder-0.2934783-36-68, GreenSparks-0.6521739-261-164, ElectricDeath-1-279-49, 
+PlacedObjects: SlimeMold><1293.254><752.8212><0~0~2~3, SlimeMold><1294.472><701.5382><0~0~2~3, SlimeMold><1346.202><688.9609><0~0~2~3, SlimeMold><1911.173><744.3395><0~0~2~3, SlimeMold><1911.738><699.3465><0~0~2~3, SlimeMold><1846.354><684.5106><1.988342~-78.93372~2~3, SlimeMold><1386.317><686.5812><0.0005493164~-0.0004882813~2~3, CosmeticSlimeMold><1327.303><731.0356><166~98, CosmeticSlimeMold><1877.454><713.9221><-92~72, CosmeticSlimeMold2><1331.623><712.4701><0~100, CosmeticSlimeMold2><1899.917><710.6103><0~100, LightFixture><1911.237><685.3002><SlimeMoldLight~17.32051~-10~100, LightFixture><1353.052><690.538><SlimeMoldLight~17.32051~-10~66, 
+AmbientSounds: OMNI><AM_WIN-HowlingWnd.ogg><739.8009><547.7312><0.5><1, OMNI><AM_WIN-WndTone.ogg><738.6295><474.4025><0.3043478><1, OMNI><AM_RAIN-RollingThunder.ogg><698.7755><308.6984><0.5><0.7847826, OMNI><AM_RAIN-Rumbles.ogg><698.7603><295.5503><0.3804348><1, 
+FadePalette: 17, 0.7065217, 0.7065217, 0.7065217
+WetTerrain: OFF

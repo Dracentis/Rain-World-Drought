@@ -1,0 +1,7 @@
+Template: NONE
+Clouds: 0.4021739
+Grime: 0
+Palette: 25
+Effects: ZeroG-1-20-20, ZeroGSpecks-0.173913-30-30, 
+AmbientSounds: OMNI><AM_IND-SuperStructure.ogg><758.5743><487.6544><0.6630435><1, 
+FadePalette: 10, 0.3478261

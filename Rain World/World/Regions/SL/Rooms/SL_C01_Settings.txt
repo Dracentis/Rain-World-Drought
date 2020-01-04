@@ -1,0 +1,10 @@
+WaveSpeed: 0.1521739
+WaveLength: 0.2173913
+WaveAmplitude: 0.1086956
+SecondWaveLength: 0.5144925
+SecondWaveAmplitude: 0.3478261
+Clouds: 0.8586956
+BkgDroneVolume: 0.2769565
+Effects: Fog-0.6304348-0-0, 
+PlacedObjects: UniqueDataPearl><863.3584><2029.891><-52~285.9672~0~0~0~0, DataPearl><895.166><2026.932><23~157~0~0~0~0, DataPearl><766.887><2029.896><29~-136~0~0~0~0, VoidSpawnEgg><178.8722><1630.842><-309~-137~1~3~0, InsectGroup><748.3096><2048.691><-84~96~-864~232~Wasp~0.1847826, KarmaFlower><797.7286><2053.052><0~0~5~7, InsectGroup><140.4578><1900.696><24~108~0~0~StandardFly~0.1086956, BlueToken><170.5504><2078.762><-8~-56~0~0~1~JellyFish~111, DeadTokenStalk><97.52063><2074.801><19~-54, 
+AmbientSounds: OMNI><AM_ENV-LightWind.ogg><755.9301><522.163><0.3804348><0.8434783, 

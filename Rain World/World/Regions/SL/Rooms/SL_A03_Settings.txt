@@ -1,0 +1,8 @@
+Template: SL_SettingsTemplate_Sewer
+Clouds: 0.1413043
+Grime: 0.3043478
+Effects: Drain-0.3043478-20-20, 
+PlacedObjects: DangleFruit><405.1847><529.1732><-534~6~2~3, DangleFruit><786.6992><468.7686><-911~-32~2~3, DangleFruit><685.0475><548.6943><-818~-182~2~3, DangleFruit><169.2505><499.8><-313~-251~2~3, DangleFruit><757.3961><540.1366><-902~-389~2~3, ProjectedImagePosition><753.1956><406.2918><, CustomDecal><496.5865><22.38478><35.08408~795.2388~-578.8871~654.9025~-397.6194~-35.08408~0~0~0.05434782~1~0~Rust3~1~1~1~1~0.01086957~1~0.1847826~1, BubbleGrass><403.1433><438.0808><-142~67~4~9, BubbleGrass><294.8564><431.6392><-38~154~4~9, BubbleGrass><550.4268><437.8435><2~154~4~9, Filter><349.35><424.6323><1~76~-90~36~010, Filter><562.2559><441.7><17~41~0~0~010, 
+AmbientSounds: SPOT><SO_WAT-OpenFlow.ogg><870.0305><462.8023><0.4891304><0.9804348><649.0305><358.8023><-118.3553><-28.35535><0><0.5565219, SPOT><SO_WAT-OpenFlow.ogg><865.5902><340.3215><0.5><1><308.5902><361.3215><-68.35535><-56.35535><0><0.502174, SPOT><SO_WAT-RunningWater.ogg><850.1359><213.3967><0.5><1><505.1359><326.3967><-56.35535><-48.35535><0><0.4804349, 
+Triggers: Spot<tA>event<tB>ShowProjectedImageEvent<eA>afterEncounter<eB>0<eA>fromCycle<eB>0<eA>onlyWhenShowingDirection<eB>0<tA>multiUse<tB>1<tA>toCycle<tB>-1<tA>fromCycle<tB>0<tA>delay<tB>0<tA>panPos<tB>50.14563<tB>277.8629<tA>fireChance<tB>1<tA>entrance<tB>-1<tA>karma<tB>0<tA>slugcats<tB>111<tA>pos<tB>426.1456<tB>424.8629<tA>handlePos<tB>-104.3553<tB>-411.3553, 
+FadePalette: 8, 0

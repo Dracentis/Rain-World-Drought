@@ -1,0 +1,13 @@
+Palette: 2
+batDepleteCyclesMin: 2
+batDepleteCyclesMax: 7
+batDepleteCyclesMaxIfLessThanTwoLeft: 3
+batDepleteCyclesMaxIfLessThanFiveLeft: 4
+overseersSpawnChance: 0.4
+overseersMin: 0
+overseersMax: 4
+Subregion: Looks to the Moon
+Subregion: Looks to the Moon (Damaged Transform Arrays)
+Subregion: Looks to the Moon (General System Bus)
+playerGuideOverseerSpawnChance: 0.2
+Room Setting Templates: Outside, General, Transform, Memory

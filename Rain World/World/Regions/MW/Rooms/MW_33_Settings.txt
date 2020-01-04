@@ -1,0 +1,11 @@
+Template: NONE
+DangerType: Thunder
+RumbleIntensity: 0.2065217
+Clouds: 0.5326087
+Palette: 16
+EffectColorA: 10
+EffectColorB: 8
+Effects: Lightning-0.6304348-24-125, ExtraLoudThunder-0.5326087-22-67, GreenSparks-0.6956522-20-20, ElectricDeath-1-311-227, LightBurn-0.1195652-272-92, 
+AmbientSounds: OMNI><AM_WIN-HowlingWnd.ogg><734.7557><544.95><0.4021739><1, OMNI><SO_SFX-ColdNight.ogg><708.3998><329.3269><0.2282609><1, OMNI><SO_ENV-StrongWnd.ogg><734.7516><419.45><0.25><1, OMNI><AM_RAIN-Rumbles.ogg><716.7802><296.3023><0.4021739><1, OMNI><AM_RAIN-RollingThunder.ogg><718.4496><308.5116><0.1847826><1, 
+FadePalette: 10, 0.3043478, 0.2934783
+WetTerrain: OFF

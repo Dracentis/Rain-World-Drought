@@ -1,0 +1,4 @@
+EffectColorA: 2
+Effects: Pulse-0.06521739-30-30, 
+AmbientSounds: OMNI><AM_IND-Fabrik01.ogg><815.8523><54.88489><0.173913><1, OMNI><AM_IND-Factory04.ogg><745.6284><371.8412><0.1630435><1, 
+FadePalette: 10, 0.6521739, 0.6304348

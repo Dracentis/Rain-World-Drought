@@ -1,0 +1,14 @@
+Template: NONE
+DangerType: None
+WaveAmplitude: 0.08695652
+SecondWaveAmplitude: 0
+Clouds: 1
+Grime: 0.1195652
+BkgDroneVolume: 0.2769565
+Palette: 25
+EffectColorA: 4
+Effects: ZeroGSpecks-0.1521739-20-20, LMSwarmers-0.1847826-157-178, BrokenZeroG-1-313-36, ZeroG-0.326087-356-215, ElectricStorm-0.1304348-16-125, 
+PlacedObjects: ProjectedImagePosition><2650.829><420.6044><, LightSource><1499.162><668.1799><1~Environment~135~-317~-119~-180.3975~1~0, LightSource><283.4285><642.1868><1~Environment~287~-403~-232~-405.3975~1~0, ProjectedStars><2606.567><314.0616><-97~120, WallMycelia><2211.077><15.59987><73~126, DeepProcessing><1001.095><105.2965><4~462~993~517~1049~0~-25~-34~0.7717391~1~0.173913, WallMycelia><1357.677><274.657><0~100, WallMycelia><1430.823><36.31366><0~100, LightSource><2968.908><664.3727><1~Environment~-501~-373~50~86.60254~1~0, SSLightRod><1984.168><618.3917><17.32051~-10~0.4782609~135~428.2609~0.5, SSLightRod><2397.077><205.8994><17.32051~-10~0.4673913~135~369.1304~0.5978261, SSLightRod><337.2654><39.8996><17.32051~-10~0.7479978~45~709.1304~0.2391304, LightFixture><824.3124><61.81915><RedLight~17.32051~-10~85, CoralStem><2139.198><12.548><0~100, CoralStem><1641.586><683.1358><64~-100, WallMycelia><1622.971><675.8135><0~100, 
+AmbientSounds: SPOT><AM_IND-SuperStructure.ogg><850.0605><584.814><0.3369565><0.9804348><-6.939514><524.814><-156.3553><-247.3553><0><0.4695654, SPOT><AM_IND-SuperStructure.ogg><850.9552><462.4449><0.1304348><1><1504.955><371.4449><-156.3553><-50.35535><0><0.5673915, SPOT><AM_IND-DeepHum.ogg><852.1105><340.8933><0.1847826><1><1526.11><232.8933><-126.3553><-40.35535><0><0.3500001, SPOT><AM_IND-DeepHum.ogg><849.8012><221.4781><0.1956522><1><2287.801><336.4781><-141.3553><-26.35535><0><0.404348, SPOT><AM_IND-SuperStructure.ogg><847.197><105.9656><0.25><1><3045.197><502.9656><-152.3553><-99.35535><0><0.4478262, OMNI><AM_IND-DeepHum.ogg><479.5612><572.184><0.5434783><1, OMNI><AM_IND-SuperStructure.ogg><603.562><588.8184><0.7934783><1, 
+Triggers: Spot<tA>event<tB>ShowProjectedImageEvent<eA>afterEncounter<eB>0<eA>fromCycle<eB>0<eA>onlyWhenShowingDirection<eB>0<tA>multiUse<tB>1<tA>toCycle<tB>-1<tA>fromCycle<tB>0<tA>delay<tB>0<tA>panPos<tB>1043.861<tB>278.8562<tA>fireChance<tB>1<tA>entrance<tB>1<tA>karma<tB>0<tA>slugcats<tB>111<tA>pos<tB>2314.861<tB>315.8562<tA>handlePos<tB>-4.355347<tB>-307.3553, 
+FadePalette: 10, 0.4565217, 0.423913, 0.423913

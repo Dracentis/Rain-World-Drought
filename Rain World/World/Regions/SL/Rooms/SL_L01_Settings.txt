@@ -1,0 +1,7 @@
+Template: SL_SettingsTemplate_Sewer
+DangerType: Flood
+Clouds: 1
+Effects: Pulse-0.1521739-14-61, 
+PlacedObjects: LightSource><1570.052><460.9432><1~Environment~-171~-218~50~86.60254~0~0, LightSource><225.6063><313.6109><1~Environment~238~199~50~86.60254~0~0, LargePistonDeathMode><1285.454><340.9446><, LargePistonDeathMode><1007.313><341.9302><, SmallPiston><2328.836><467.6354><, LargePistonDeathMode><1931.584><158.6973><, LargePistonDeathMode><2321.674><163.6848><, LargePistonDeathMode><4103.976><385.8014><, LightFixture><4866.637><483.6649><RedLight~17.32051~-10~10, LightFixture><3751.666><452.3187><RedLight~17.32051~-10~67, LightFixture><3160.369><459.6513><RedLight~17.32051~-10~94, 
+AmbientSounds: OMNI><AM_ENV-WallHum.ogg><707.8445><430.5738><0.3043478><1, OMNI><SO_WAT-LilDrips.ogg><788.3418><384.9277><0.173913><1, OMNI><SO_WAT-MoreDrips.ogg><769.3943><267.8616><0.07608695><1, OMNI><SO_SFX-AlienScythe.ogg><538.8466><514.4252><0.2173913><1, OMNI><SO_SFX-Corrosion.ogg><2.744244><318.0501><0.25><1, OMNI><SO_IND-NoiseMech.ogg><720.3067><532.8013><0.3152174><1, 
+FadePalette: 10, 0.5, 0.5, 0.5, 0.5, 0.5

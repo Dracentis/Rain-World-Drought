@@ -1,0 +1,4 @@
+Palette: 25
+Effects: ProjectedScanLines-1-20-20, BrokenZeroG-1-21-80, SunBlock-1-303-21, ZeroGSpecks-0.3913043-30-30, 
+FadePalette: 1, 0
+WetTerrain: OFF

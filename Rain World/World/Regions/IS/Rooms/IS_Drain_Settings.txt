@@ -1,0 +1,10 @@
+Template: NONE
+DangerType: Flood
+Palette: 35
+EffectColorA: 18
+EffectColorB: 7
+Effects: Pulse-0-30-30, 
+PlacedObjects: DangleFruit><506.7714><457.9489><0~0~2~3, DangleFruit><431.7672><376.5507><0~0~2~3, DangleFruit><413.7682><417.9492><0~0~2~3, LightFixture><782.3893><445.1435><RedLight~17.32051~-10~3, LightFixture><248.1678><570.1823><RedLight~17.32051~-10~80, 
+AmbientSounds: OMNI><AM_IND-Midsex02.ogg><739.4479><562.7785><0.3804348><1, OMNI><SO_IND-Boiler.ogg><706.8193><310.6643><0.2717391><1, OMNI><SO_SFX-LakeBottom.ogg><741.5474><425.6943><0.6521739><1, 
+FadePalette: 10, 0.5326087
+WetTerrain: OFF

@@ -1,0 +1,5 @@
+Template: SL_SettingsTemplate_Sewer
+DangerType: Flood
+Effects: Drain-0.3043478-20-20, 
+PlacedObjects: LightSource><757.0532><229.5358><1~Environment~-647~344~-346~229.6025~0~0, 
+FadePalette: 10, 0, 0.06521739, 0.173913, 0.2934783, 0.4130435, 0.5108696

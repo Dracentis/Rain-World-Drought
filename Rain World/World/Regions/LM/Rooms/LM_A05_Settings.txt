@@ -1,0 +1,8 @@
+Template: NONE
+Clouds: 1
+Grime: 0.2065217
+BkgDroneVolume: 0.326087
+Palette: 23
+Effects: ZeroG-1-20-20, ZeroGSpecks-0.2282609-21-87, Bloom-0.2608696-22-151, 
+PlacedObjects: SuperStructureFuses><275.4147><99.93088><267~116, SuperStructureFuses><123.9796><391.9489><202~157, SuperStructureFuses><669.1676><373.8177><154~49, SuperStructureFuses><660.6348><496.1023><163~52, SuperStructureFuses><675.5661><616.9214><156~50, ZapCoil><-25.05042><332.2368><32~304, LightSource><1024.756><46.05008><1~Environment~-80~88~50~86.60254~1~0, LightFixture><-9.422913><450.4345><ZapCoilLight~17.32051~-10~40, 
+FadePalette: 17, 0.3913043

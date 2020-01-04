@@ -1,0 +1,58 @@
+ROOMS
+GATE_SL_IS : DISCONNECTED, IS_B01 : GATE
+GATE_UW_IS : IS_F04, DISCONNECTED : GATE
+GATE_IS_MW : IS_V03, DISCONNECTED : GATE
+IS_B01 : GATE_SL_IS, IS_B02
+IS_B02 : IS_B03, IS_B01, IS_S01, IS_Drain
+IS_Drain : IS_B02, IS_V06
+IS_V06 : IS_Drain, IS_V04
+IS_V04 : IS_V06, IS_V01, IS_V07
+IS_V01 : IS_V04, IS_G04
+IS_G04 : IS_V01, IS_CORE
+IS_B03 : IS_B02, IS_A05
+IS_A05 : IS_B05, IS_B03
+IS_B05 : IS_B04, IS_V08, IS_A05
+IS_V08 : IS_B05, IS_V07
+IS_V07 : IS_V08, IS_V04, IS_V05
+IS_V05 : IS_V07, IS_V02, IS_G02
+IS_B04 : IS_S06, IS_B05
+IS_CORE : IS_F01a, IS_G03, IS_G04
+IS_F01a : IS_F01, IS_CORE
+IS_F01 : IS_F03, IS_F01a
+//IS_F02 : IS_F03, IS_F01
+IS_F03 : IS_F04, IS_S05, IS_F01
+IS_F04 : GATE_UW_IS, IS_F03
+IS_G01 : IS_G02, IS_G03
+IS_G02 : IS_V05, IS_G01, IS_S02
+IS_G03 : IS_G01, IS_CORE
+IS_V03 : GATE_IS_MW, IS_V02
+IS_V02 : IS_V03, IS_V05
+IS_S05 : IS_F03 : SHELTER
+IS_S01 : IS_B02 : SHELTER
+IS_S02 : IS_G02 : SHELTER
+IS_S06 : IS_B04 : SHELTER
+END ROOMS
+
+CREATURES
+OFFSCREEN : 0-Leviathan-2
+IS_B02 : 4-White, 5-Jet Fish-2, 6-SeaDrake, 8-SeaDrake,
+IS_B03 : 2-Jet Fish, 3-Salamander-2
+IS_B04 : 2-PoleMimic, 3-Snail-4
+IS_V08 : 3-BigSpider
+IS_V02 : 3-Blue, 4-, 5-White, 6-Centipede-2
+IS_V03 : 2-Yellow-4, 3-Dropbug
+IS_V04 : 3-Salamander
+IS_V07 : 3-Jet Fish, 4-Jet Fish, 5-, 6-SeaDrake, 7-SeaDrake, 10-Jet Fish, 11-Salamander
+IS_V01 : 2-Snail-3, 3-SeaDrake
+IS_V05 : 3-White, 4-Leech-7, 5-SeaDrake
+IS_G01 : 2-TentaclePlant
+IS_G02 : 3-SeaDrake, 4-Jet Fish, 5-Salamander, 6-Jet Fish
+IS_G03 : 2-Snail-2, 3-Salamander
+IS_G04 : 2-Blue-2, 3-PoleMimic, 4-Snail-3, 5-Jet Fish, 6-Jet Fish
+IS_F01 : 2-White, 3-Spider-6, 4-SpitterSpider, 5-Salamander
+IS_F03 : 4-Jet Fish-2, 5-SeaDrake
+IS_F04 : 2-Yellow, 4-SpitterSpider, 5-Snail, 6-Yellow, 7-Yellow, 8-Jet Fish-3, 9-Snail-2
+END CREATURES
+
+BAT MIGRATION BLOCKAGES
+END BAT MIGRATION BLOCKAGES

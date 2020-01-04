@@ -1,0 +1,12 @@
+Palette: 16
+batDepleteCyclesMin: 2
+batDepleteCyclesMax: 7
+batDepleteCyclesMaxIfLessThanTwoLeft: 3
+batDepleteCyclesMaxIfLessThanFiveLeft: 4
+overseersSpawnChance: 1
+overseersMin: 4
+overseersMax: 8
+playerGuideOverseerSpawnChance: 0.0
+Subregion: The Fractured Exterior
+Subregion: The East Leg
+Subregion: The West Leg

@@ -1,0 +1,8 @@
+Template: NONE
+DangerType: None
+Palette: 19
+Effects: ZeroG-1-20-20, AboveCloudsView-1-20-63, 
+PlacedObjects: LightFixture><401.916><1341.861><RedLight~17.32051~-10~59, LightFixture><192.5449><901.8051><RedLight~17.32051~-10~81, LightFixture><447.8969><679.8287><RedLight~17.32051~-10~63, LightFixture><814.4825><327.4492><RedLight~17.32051~-10~96, SpotLight><2088.504><261.05><0~40~40~40~40~0, 
+AmbientSounds: OMNI><AM_ENV-CityTone.ogg><759.3583><563.3589><0.3478261><1, SPOT><AM_ENV-WinterHum.ogg><737.6682><402.8175><0.7065217><1><2815.668><1244.818><-1414.355><-38.35535><0><0.1, SPOT><AM_ENV-WallHum.ogg><735.8002><285.7403><0.5><1><1512.8><1256.74><-80.35535><-43.35535><0><0.1, 
+FadePalette: 25, 0.7717391, 0.1630435, 0, 0.08695652, 0, 1
+RoomSpecificScriptActive: ON

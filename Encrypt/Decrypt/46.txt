@@ -1,0 +1,6 @@
+0-46
+A simple jellyfish. What would you like to know about it?<LINE>Ah, it stings... Well, I suppose you could eat it, or throw at enemies.
+
+It's a youngling, those jellyfishes can grow up to ten times as big as they are now, if given enough time.<LINE>Right now their shock isn't enough to kill, but still - be careful.
+
+I wonder if you'd ever seen bigger jellyfish. They don't live for too long, the waters are<LINE>full of predators.

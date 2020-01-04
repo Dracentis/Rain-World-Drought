@@ -1,0 +1,143 @@
+ROOMS
+GATE_DS_SB : DISCONNECTED, SB_D04, DISCONNECTED : GATE
+GATE_SB_SL : SB_G02, DISCONNECTED : GATE
+GATE_LF_SB : DISCONNECTED, SB_F03, DISCONNECTED : GATE
+SB_F03 : GATE_LF_SB, SB_A10, SB_A09, SB_H03
+SB_A10 : SB_F03
+SB_A09 : SB_F03, SB_H03
+SB_H03 : SB_A09, SB_F03, SB_S06, SB_H02
+SB_S06 : SB_H03 : SHELTER
+SB_H02 : SB_H03, SB_E04, SB_A03, SB_A04
+SB_A04 : SB_H02, SB_A13, SB_A01
+SB_A13 : SB_A04 : SCAVTRADER
+SB_A01 : SB_A04, SB_A11, SB_C01
+SB_A11 : SB_A01, SB_B01
+SB_B01 : SB_A11, SB_S07, SB_A12
+SB_S07 : SB_B01 : SHELTER
+SB_A12 : SB_A03, SB_B01
+SB_C01 : SB_B02, SB_A01 : SWARMROOM
+SB_B02 : SB_C01, SB_C05
+SB_C05 : SB_B02, SB_I01
+SB_A03 : SB_E04, SB_H02, SB_A12
+SB_E04 : SB_H02, SB_G03, SB_A03, SB_C06
+SB_C06 : SB_E04, SB_S03, SB_F02
+SB_S03 : SB_C06 : SHELTER
+SB_F02 : SB_C06, SB_D04, SB_I01
+SB_D04 : SB_S04, GATE_DS_SB, SB_F02
+SB_S04 : SB_D04 : SHELTER
+SB_G03 : SB_E04, SB_J01, SB_F01
+SB_F01 : SB_G03, SB_J03, SB_I01
+SB_J01 : DISCONNECTED, SB_E02, SB_G03, SB_C07 : SWARMROOM
+SB_E02 : SB_G02, SB_J01, SB_J02
+SB_G02 : SB_E02, SB_S05, GATE_SB_SL
+SB_S05 : SB_G02 : SHELTER
+SB_C07 : SB_J02, SB_J01
+SB_J02 : SB_E02, SB_J03, SB_C07
+SB_J03 : DISCONNECT, SB_J02, SB_F01, SB_S02
+SB_S02 : SB_J03 : SHELTER
+SB_I01 : SB_C05, SB_F02, SB_S01, SB_F01, SB_D06
+SB_S01 : SB_I01 : SHELTER
+SB_D06 : SB_I01, SB_E05
+SB_E05 : SB_D06, SB_A14
+SB_A14 : SB_D02, SB_E05
+SB_D02 : SB_A14, SB_E03, SB_A05, SB_A02
+SB_A02 : SB_J04, DISCONNECTED, SB_D02
+SB_J04 : SB_A02, SB_B03, SB_A08, SB_A06
+SB_A08 : SB_B03, SB_J04
+SB_B03 : SB_J04, SB_D03, SB_A08, SB_A07
+SB_A07 : SB_B03, SB_E03
+SB_E03 : SB_A07, SB_D02, SB_D05
+SB_D05 : SB_E03, SB_A06, SB_A05
+SB_A06 : SB_D05, SB_J04
+SB_A05 : SB_D02, SB_D05
+SB_D03 : SB_B03, SB_D07
+SB_D07 : SB_D03, SB_D01
+SB_D01 : SB_D07, DISCONNECTED, SB_C08
+SB_C08 : SB_D01, SB_E01
+SB_E01 : SB_C08, SB_E06
+SB_E06 : SB_C09, SB_E01
+SB_C09 : SB_E06, SB_L01
+SB_L01 : SB_C09 : PERF_HEAVY
+END ROOMS
+
+CREATURES
+//all
+OFFSCREEN : 0-Leviathan
+SB_A04 : 3-TentaclePlant
+SB_C01 : 2-TentaclePlant, 7-Black, 9-Black
+SB_G03 : 3-TentaclePlant, 4-Centipede, 5-Centipede, 6-Centipede
+SB_G02 : 4-Centipede, 10-TentaclePlant, 5-Centipede-2, 6-TentaclePlant
+SB_E02 : 6-TentaclePlant, 7-TentaclePlant, 5-Centipede, 10-Centipede, 8-Centipede
+SB_J01 : 4-Centipede, 6-Centipede
+SB_B02 : 3-TentaclePlant
+SB_A01 : 3-Small Centipede-4, 4-Centipede-2
+LINEAGE : SB_B02 : 4 : BigSpider-0.5, Black-0.2, Red-0
+LINEAGE : SB_B02 : 5 : Blue-0.5, White-0.5, Black-0.5, Red-0
+LINEAGE : SB_B01 : 3 : BigSpider-0.5, SpitterSpider-0.3, Red-0
+LINEAGE : SB_B01 : 4 : Green-0.5, Black-0.3, Red-0
+LINEAGE : SB_A01 : 3 : Small Centipede-0.6, Centipede-{0.4}-0.3, Centipede-{0.8}-0.7, Red Centipede-0
+
+//Wanderer
+(0)OFFSCREEN : 0-Miros-10, 0-Scavenger-15
+(0)SB_H03 : 3-Centipede-2, 4-SpitterSpider, 6-BigSpider-3, 7-BigSpider-2, 8-BigSpider-2, 5-Centipede-2
+(0)SB_H02 : 4-Centipede-3, 5-BigSpider-5 6-SpitterSpider-2, 7-Centipede-4, 5-Red Centipede
+(0)SB_C06 : 2-Black, 3-Black, 4-Black-2
+(0)SB_F02 : 4-Black, 5-Black, 6-Black, 7-Black-2
+(0)SB_J03 : 3-Black, 7-Black, 4-TentaclePlant, 5-Small Centipede-3, 6-Centipede-3
+(0)SB_J02 : 5-JetFish
+(0)SB_J02 : 3-Cyan-3
+(0)SB_G02 : 3-DropBug-2
+(0)SB_E02 : 3-DropBug-2
+(0)SB_C01 : 4-DropBug
+(0)SB_B02 : 2-DropBug
+(0)SB_A03 : 3-DropBug
+(0)SB_E04 : 4-SpitterSpider, 4-BigSpider
+(0)SB_A03 : 4-TentaclePlant, 5-Cyan-2
+(0)SB_F01 : 3-SpitterSpider, 4-SpitterSpider-2, 5-BigSpider
+(0)SB_C07 : 2-Salamander
+(0)SB_C07 : 3-Dropbug
+(0)SB_D04 : 9-Black, 5-BigSpider, 6-BigSpider
+(0)LINEAGE : SB_J02 : 4 : Jetfish-0.5, Salamander-0
+(0)LINEAGE : SB_C07 : 3 : Salamander-1.0, Cyan-0
+(0)LINEAGE : SB_E04 : 5 : Eggbug-1.0, SpitterSpider-0
+(0)LINEAGE : SB_A03 : 6 : Cyan-0.3, White-0.5, Red-0
+(0)LINEAGE : SB_E02 : 4 : Dropbug-0.8, SpitterSpider-0.5, Cyan-0.3
+(0)SB_H02 : 4-Centipede-{0.7}, 6-Small Centipede-3, 7-Centipede-2
+(0)SB_E04 : 4-Centipede
+(0)SB_J03 : 3-Black, 7-Black, 4-TentaclePlant, 5-Small Centipede-3, 6-Centipede-2
+(0)SB_A03 : 4-TentaclePlant, 5-Green
+(0)LINEAGE : SB_A03 : 6 : Blue-0.3, White-0.5, Red-0
+
+//[Other cat]
+(1)OFFSCREEN : 0-Miros-10, 0-Scavenger-15
+(1)SB_H03 : 3-Centipede-2, 4-SpitterSpider, 6-BigSpider-3, 7-BigSpider-2, 8-BigSpider-2, 5-Centipede-2
+(1)SB_H02 : 4-Centipede-3, 5-BigSpider-5 6-SpitterSpider-2, 7-Centipede-4, 5-Red Centipede
+(1)SB_C06 : 2-Black, 3-Black, 4-Black-2
+(1)SB_F02 : 4-Black, 5-Black, 6-Black, 7-Black-2
+(1)SB_J03 : 3-Black, 7-Black, 4-TentaclePlant, 5-Small Centipede-3, 6-Centipede-3
+(1)SB_J02 : 5-JetFish
+(1)SB_J02 : 3-Cyan-3
+(1)SB_G02 : 3-DropBug-2
+(1)SB_E02 : 3-DropBug-2
+(1)SB_C01 : 4-DropBug
+(1)SB_B02 : 2-DropBug
+(1)SB_A03 : 3-DropBug
+(1)SB_E04 : 4-SpitterSpider, 4-BigSpider
+(1)SB_A03 : 4-TentaclePlant, 5-Cyan-2
+(1)SB_F01 : 3-SpitterSpider, 4-SpitterSpider-2, 5-BigSpider
+(1)SB_C07 : 2-Salamander
+(1)SB_C07 : 3-Dropbug
+(1)SB_D04 : 9-Black, 5-BigSpider, 6-BigSpider
+(1)LINEAGE : SB_J02 : 4 : Jetfish-0.5, Salamander-0
+(1)LINEAGE : SB_C07 : 3 : Salamander-1.0, Cyan-0
+(1)LINEAGE : SB_E04 : 5 : Eggbug-1.0, SpitterSpider-0
+(1)LINEAGE : SB_A03 : 6 : Cyan-0.3, White-0.5, Red-0
+(1)LINEAGE : SB_E02 : 4 : Dropbug-0.8, SpitterSpider-0.5, Cyan-0.3
+
+//Wanderer and [Other cat]
+(0,1)SB_I01 : 8-Black, 9-Black, 10-Black, 11-Black, 12-Black, 13-Black
+(0,1)LINEAGE : SB_A04 : 4 : Dropbug-0.4, SpitterSpider-0.4, Red-0
+END CREATURES
+
+BAT MIGRATION BLOCKAGES
+END BAT MIGRATION BLOCKAGES

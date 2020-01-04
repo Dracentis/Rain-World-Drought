@@ -1,0 +1,6 @@
+Template: LF_SettingsTemplate_Farms
+BkgDroneVolume: 0.2569565
+Palette: 14
+Effects: Fog-0.1956522-0-0, 
+AmbientSounds: OMNI><AM_ENV-LightWind.ogg><730.395><518.6378><0.5><0.7456522, 
+FadePalette: 10, 0.173913, 0.1304348, 0.1086956

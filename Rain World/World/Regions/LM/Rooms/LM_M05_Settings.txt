@@ -1,0 +1,4 @@
+Template: LM_SettingsTemplate_Memory
+Effects: LMSwarmers-0.7608696-20-20, 
+PlacedObjects: LightSource><184.05><88.00415><1~White~168~183~50~86.60254~1~0, LightSource><406.4207><541.8958><1~Environment~0~100~50~86.60254~1~0, LightSource><891.55><193.5021><1~Environment~0~100~-178~-137.3975~1~0, WallMycelia><819.4454><111.2072><-94~84, WallMycelia><619.3936><17.38928><-40~141, WallMycelia><149.1071><358.3899><147~171, CoralCircuit><510.8759><342.0946><-7~28, CoralCircuit><548.645><271.3878><13~55, SpotLight><247.8931><138.831><0~412~578~457~546~-83, CoralNeuron><241.7><288.5019><360~238, CoralStemWithNeurons><844.0546><375.9424><-58~35, CoralStem><176.891><432.3323><149~-21, WallMycelia><884.5698><375.913><0~100, 
+WetTerrain: OFF

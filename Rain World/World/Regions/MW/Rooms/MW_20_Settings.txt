@@ -1,0 +1,10 @@
+Template: NONE
+Clouds: 0.7173913
+Palette: 16
+EffectColorA: 2
+EffectColorB: 11
+Effects: Lightning-0.75-20-20, ExtraLoudThunder-0.4021739-22-84, GreenSparks-0.6086956-336-276, 
+PlacedObjects: DangleFruit><299.3855><128.414><0~0~2~3, DangleFruit><167.391><173.3918><0~0~2~3, DangleFruit><392.1097><97.89258><0~0~2~3, DangleFruit><28.22864><347.5511><0~0~2~3, DangleFruit><719.1984><145.7245><-93.11224~-189.4972~2~3, DangleFruit><841.1864><208.6776><-58.26465~-158.4921~2~3, DangleFruit><950.9686><291.9475><0~0~2~3, DangleFruit><649.187><105.8185><0~0~2~3, LightSource><484.0241><1424.096><0.423913~EffectColor1~-42~-148~58.94232~-113.4118~0~0, LightSource><742.0062><711.443><0.423913~EffectColor1~-67~129~50~86.60254~0~0, LightSource><500.0107><995.481><0.423913~EffectColor1~0~136~50~86.60254~0~0, CosmeticSlimeMold><641.0403><225.8103><0~100, CosmeticSlimeMold2><643.9557><243.5176><0~100, SlimeMold><602.4398><200.0264><0~0~2~3, SlimeMold><643.683><204.8069><0~0~2~3, SlimeMold><678.3087><216.8451><0~0~2~3, SlimeMold><674.5494><252.9546><0~0~2~3, LightSource><744.7126><300.6414><0.4565191~EffectColor1~-28~122~50~86.60254~0~0, LightSource><460.0535><551.2113><0.3043465~EffectColor1~-125~53~50~86.60254~0~0, LightSource><225.581><293.2809><0.4565198~EffectColor1~1~134~50~86.60254~0~0, 
+AmbientSounds: OMNI><AM_ENV-CityTone.ogg><759.685><561.174><0.1630435><1, OMNI><AM_RAIN-RollingThunder.ogg><740.0539><311.3074><0.7065217><1, OMNI><AM_WIN-HowlingWnd.ogg><714.3846><544.5866><0.5><1, OMNI><SO_ENV-StrongWnd.ogg><704.5651><324.9237><0.5><1, 
+FadePalette: 17, 0.5543478, 0.5543478
+WetTerrain: OFF

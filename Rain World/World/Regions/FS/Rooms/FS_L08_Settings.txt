@@ -1,0 +1,8 @@
+Template: FS_SettingsTemplate_Forest
+RumbleIntensity: 0.04347826
+EffectColorA: 2
+EffectColorB: 13
+Effects: BorderPushBack-1-20-20, TinyDragonFly-0.173913-145-118, Moth-0.2391304-77-56, 
+AmbientSounds: OMNI><AM_ENV-Pasture.ogg><733.7994><407.0562><0.1956522><1, OMNI><AM_ENV-Outside.ogg><718.4329><475.0811><0.3695652><1, OMNI><AM_ENV-CricketsWnd.ogg><728.0543><551.3075><0.2934783><1, 
+FadePalette: 10, 0.1956522, 0.2065217
+WetTerrain: OFF

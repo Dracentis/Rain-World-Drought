@@ -1,0 +1,5 @@
+DangerType: None
+Clouds: 0
+Effects: SkyDandelions-0-20-20, AboveCloudsView-1-30-30, 
+AmbientSounds: OMNI><AM_WIN-StrongWnd2.ogg><732.3352><504.3633><0.6413044><1, SPOT><SO_SFX-Data1.ogg><399.5729><359.343><0.5><0.6282609><487.5729><381.343><-46.35535><-43.35535><0.08695652><0.06739144, 
+FadePalette: 18, 0.5869565

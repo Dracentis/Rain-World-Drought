@@ -1,0 +1,7 @@
+Template: IS_SettingsTemplate_GravityPump
+Clouds: 1
+Effects: GravityPulse-0.423913-30-30, 
+PlacedObjects: LightFixture><341.9585><493.4315><RedLight~17.32051~-10~58, LightFixture><1284.405><535.6737><RedLight~17.32051~-10~30, LightFixture><1510.314><195.4588><RedLight~17.32051~-10~75, LightFixture><103.8615><4.58403><RedLight~-199.6765~243.0106~13, LightFixture><2732.306><531.558><RedLight~17.32051~-10~85, LightFixture><2081.134><452.9127><RedLight~17.32051~-10~11, DangleFruit><2001.909><446.9308><0~0~2~3, DangleFruit><1932.627><452.9085><0~0~2~3, DangleFruit><1967.749><374.95><0~0~2~3, UniqueDataPearl><1058.132><455.6621><0~0~0~0~21~0, InsectGroup><283.3507><43.07732><59~114~0~0~WaterGlowworm~0.7282609, Hazer><1821.456><103.0859><0~0~7~10, 
+AmbientSounds: OMNI><AM_IND-Midsex02.ogg><724.848><562.88><0><1, OMNI><AM_IND-DeepHum.ogg><743.0787><307.5662><0><1, SPOT><AM_IND-Utility01.ogg><749.8624><475.5846><0.5><1><604.7753><98.58445><-193.3553><106.6447><0><0.1, 
+FadePalette: 10, 0.5760869, 0.5652174, 0.5543478
+WetTerrain: OFF

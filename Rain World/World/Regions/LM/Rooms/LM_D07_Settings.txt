@@ -1,0 +1,10 @@
+Template: NONE
+DangerType: None
+Clouds: 1
+Grime: 0.2065217
+BkgDroneVolume: 0.326087
+Palette: 23
+Effects: ZeroG-1-29-92, 
+PlacedObjects: LightFixture><131.3604><443.8568><RedLight~17.32051~-10~90, LightFixture><531.1227><414.908><RedLight~17.32051~-10~29, 
+AmbientSounds: OMNI><AM_IND-SuperStructure.ogg><774.3602><490.607><0.5543478><0.7652174, OMNI><OM.wav><720.3134><335.5719><0.4021739><1, 
+FadePalette: 17, 0.3804348

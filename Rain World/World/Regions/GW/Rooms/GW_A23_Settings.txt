@@ -1,0 +1,8 @@
+Template: GW_SettingsTemplate_Inside
+Clouds: 0.326087
+Grime: 0.25
+EffectColorA: 13
+EffectColorB: 7
+PlacedObjects: InsectGroup><749.6346><214.3521><-105~122~-249~-231~RockFlea~0.5, CustomDecal><765.45><47.9996><-13~280~134~288~98~1~-471~-6~0.1630435~0.5978261~0~RustB3~1~0~1~0~0~0~0~0, 
+AmbientSounds: OMNI><AM_ENV-LightWind.ogg><832.1823><651.6882><0.3695652><0.9217392, OMNI><SO_WAT-LilDrips.ogg><653.2384><650.3004><0.1847826><1, 
+FadePalette: 8, 0.1847826

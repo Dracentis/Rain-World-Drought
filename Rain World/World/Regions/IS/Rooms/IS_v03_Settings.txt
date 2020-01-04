@@ -1,0 +1,11 @@
+Template: NONE
+DangerType: Flood
+Clouds: 0.2717391
+Palette: 36
+EffectColorA: 10
+EffectColorB: 11
+Effects: Fog-0.8478261-316-226, Bloom-0.2608696-317-170, LightBurn-0.7717391-303-116, SkyBloom-0.4456522-310-66, 
+PlacedObjects: DangleFruit><1080.83><534.605><0~0~2~3, DangleFruit><1006.918><515.642><0~0~2~3, DangleFruit><974.2463><527.7><0~0~2~3, DangleFruit><918.9489><560.8066><0~0~2~3, DangleFruit><653.1699><492.6055><0~0~2~3, DangleFruit><807.9136><482.635><0~0~2~3, 
+AmbientSounds: OMNI><AM_IND-Midsex02.ogg><745.07><565.0872><0.2717391><1, OMNI><SO_IND-Humm.ogg><707.5606><188.4358><0.4130435><1, SPOT><SO_WAT-OpenFlow.ogg><712.8661><250.6015><0.5><1><1258.866><386.6014><-161.3553><-99.35535><0><0.1, SPOT><SO_WAT-OpenFlow.ogg><712.8><250.754><0.5><1><480.8><415.754><-190.3553><-134.3553><0><0.1, 
+FadePalette: 10, 0.7065217, 0.7173913
+WetTerrain: OFF

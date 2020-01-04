@@ -1,0 +1,106 @@
+ROOMS
+GATE_CC_UW : CC_H01, DISCONNECTED : GATE
+GATE_HI_CC : CC_A16, DISCONNECTED : GATE
+GATE_SI_CC : DISCONNECTED, CC_C09, CC_S04 : GATE
+CC_S04 : GATE_SI_CC : SHELTER
+CC_C09 : GATE_SI_CC, CC_A06
+CC_C12 : CC_A06
+CC_A06 : CC_C12, CC_C09, CC_H01, CC_C07 : SWARMROOM
+CC_H01 : GATE_CC_UW, CC_A06
+CC_C07 : CC_A06, CC_A15
+CC_B04 : CC_S05, CC_D01, CC_C04 : SWARMROOM
+CC_S05 : CC_B04 : SHELTER
+CC_D01 : CC_B04, CC_C13, CC_C04
+CC_C13 : CC_A15, CC_D01
+CC_A15 : CC_C07, CC_C13, CC_B08
+CC_B08 : CC_A15, CC_B05
+CC_B05 : CC_B08, CC_B06
+CC_A10 : CC_B01 : SWARMROOM
+CC_B01 : CC_A10, CC_B06
+CC_B06 : CC_B01, CC_B05, CC_C08
+CC_C04 : CC_B04, CC_D01, CC_B13
+CC_B13 : CC_C04, CC_C05
+CC_C05 : CC_B13, DISCONNECTED, CC_B10 : SWARMROOM
+CC_B10 : CC_C05, CC_B14
+CC_A12 : CC_S01, CC_A02
+CC_S01 : CC_A12 : SHELTER
+CC_A02 : CC_C08, CC_A12, CC_A16
+CC_A16 : CC_A02, GATE_HI_CC
+CC_C08 : CC_B06, CC_A02, CC_A07 : SWARMROOM
+CC_A07 : CC_C08, CC_C11
+CC_C11 : CC_B12, CC_B11, CC_A07 : SWARMROOM
+CC_B12 : CC_C11, CC_F01
+CC_F01 : CC_B12, CC_B14, CC_C03
+CC_C03 : CC_F01, CC_S03, CC_B11, CC_A17
+CC_A17 : CC_C03
+CC_S03 : CC_C03 : SHELTER
+CC_B11 : CC_C11, CC_C03
+CC_B14 : CC_B10, CC_F01
+END ROOMS
+
+CREATURES
+//all
+CC_A07 : 3-Mimic-{18}
+CC_C03 : 7-Garbage Worm-3
+CC_B14 : 3-Tube Worm, 4-Tube Worm
+LINEAGE : CC_C07 : 2 : White-0.5, Blue-0.5, CicadaB-0
+LINEAGE : CC_C07 : 3 : Blue-0.3, CicadaA-0
+LINEAGE : CC_A15 : 3 : Mimic-{13}-0.5, Mimic-{16}-0.5, Mimic-{21}-0.5, TentaclePlant-0
+
+//Wanderer
+(0)OFFSCREEN : 0-Vulture-4, 0-KingVulture-3, 0-Scavenger-7
+(0)CC_A15 : 4-Cyan-2
+(0)CC_B11 : 2-SpitterSpider, 3-BigSpider-2
+(0)CC_C11 : 4-SpitterSpider
+(0)CC_C03 : 4-BigSpider
+(0)CC_A07 : 2-DropBug
+(0)CC_C04 : 3-BigNeedleWorm, 3-SmallNeedleWorm-3
+(0)CC_B05 : 4-BigNeedleWorm, 4-SmallNeedleWorm-2
+(0)CC_B14 : 2-BigNeedleWorm, 2-SmallNeedleWorm-4
+(0)CC_C08 : 3-Cyan
+(0)CC_B05 : 2-DropBug, 3-White
+(0)CC_B04 : 3-White, 4-BigNeedleWorm, 4-SmallNeedleWorm-2
+(0)LINEAGE : CC_C05 : 3 : Cyan-0.2, NONE-0.5, White-0.2, Red-0
+(0)LINEAGE : CC_B01 : 2 : Cyan-0.2, Red-0
+(0)LINEAGE : CC_C08 : 4 : Cyan-0.2, Red-0
+(0)LINEAGE : CC_F01 : 3 : White-{Mean:0.3}-0.5, Blue-0.2, Cyan-0
+(0)LINEAGE : CC_A07 : 2 : Pink-0.2, Blue-0.5, White-0.2, Cyan-0
+(0)LINEAGE : CC_C11 : 3 : BigSpider-0.2, SpitterSpider-0.2, NONE-0.2, Cyan-0
+(0)LINEAGE : CC_B08 : 2 : Blue-0.2, White-0.2, Cyan-0
+(0)LINEAGE : CC_B08 : 4 : EggBug-0.2, DropBug-0
+(0)CC_B05 : 3-White
+(0)LINEAGE : CC_B01 : 2 : Pink-0.2, White-0.2, Red-0
+(0)LINEAGE : CC_C08 : 3 : Pink-0.2, Blue-0.3, NONE-0.3, Cyan-0
+(0)LINEAGE : CC_C08 : 4 : Pink-0.2, Blue-0.3, NONE-0.3, Cyan-0
+(0)LINEAGE : CC_C05 : 3 : Blue-0.2, NONE-0.5, White-0.2, Red-0
+
+//[Other cat]
+(1)OFFSCREEN : 0-Vulture-4, 0-KingVulture-3, 0-Scavenger-7
+(1)CC_A15 : 4-Cyan-2
+(1)CC_B11 : 2-SpitterSpider, 3-BigSpider-2
+(1)CC_C11 : 4-SpitterSpider
+(1)CC_C03 : 4-BigSpider
+(1)CC_A07 : 2-DropBug
+(1)CC_C04 : 3-BigNeedleWorm, 3-SmallNeedleWorm-3
+(1)CC_B05 : 4-BigNeedleWorm, 4-SmallNeedleWorm-2
+(1)CC_B14 : 2-BigNeedleWorm, 2-SmallNeedleWorm-4
+(1)CC_C08 : 3-Cyan
+(1)CC_B05 : 2-DropBug, 3-White
+(1)CC_B04 : 3-White, 4-BigNeedleWorm, 4-SmallNeedleWorm-2
+(1)LINEAGE : CC_C05 : 3 : Cyan-0.2, NONE-0.5, White-0.2, Red-0
+(1)LINEAGE : CC_B01 : 2 : Cyan-0.2, Red-0
+(1)LINEAGE : CC_C08 : 4 : Cyan-0.2, Red-0
+(1)LINEAGE : CC_F01 : 3 : White-{Mean:0.3}-0.5, Blue-0.2, Cyan-0
+(1)LINEAGE : CC_A07 : 2 : Pink-0.2, Blue-0.5, White-0.2, Cyan-0
+(1)LINEAGE : CC_C11 : 3 : BigSpider-0.2, SpitterSpider-0.2, NONE-0.2, Cyan-0
+(1)LINEAGE : CC_B08 : 2 : Blue-0.2, White-0.2, Cyan-0
+(1)LINEAGE : CC_B08 : 4 : EggBug-0.2, DropBug-0
+
+//Wanderer and [Other cat]
+(0,1)CC_B01 : 2-Blue, 3-White
+(0,1)CC_F01 : 4-Pink-2
+(0,1)CC_B08 : 3-White, 2-Pink
+END CREATURES
+
+BAT MIGRATION BLOCKAGES
+END BAT MIGRATION BLOCKAGES

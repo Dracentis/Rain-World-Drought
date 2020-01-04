@@ -1,0 +1,21 @@
+DangerType: Flood
+CeilingDrips: 0.6195652
+RainIntensity: 1
+RumbleIntensity: 1
+WaveSpeed: 0.6739131
+WaveLength: 0.6195652
+WaveAmplitude: 0.08695652
+SecondWaveLength: 0.1666667
+SecondWaveAmplitude: 0
+Clouds: 0
+Grime: 0.35
+BkgDroneVolume: 0.2769565
+BkgDroneNoThreatVolume: 1
+RandomItemDensity: 0.5
+RandomItemSpearChance: 0.2
+WaterReflectionAlpha: 1
+Palette: 34
+EffectColorA: 11
+EffectColorB: 7
+Effects: Fog-0.6195652-0-0, 
+AmbientSounds: OMNI><SO_IND-Turbine.ogg><745.0801><505.6445><0.423913><1, OMNI><SO_WAT-MoreDrips.ogg><769.3943><267.8616><0.3043478><1, OMNI><SO_WAT-LilDrips.ogg><788.3418><384.9277><0.3586957><1, 

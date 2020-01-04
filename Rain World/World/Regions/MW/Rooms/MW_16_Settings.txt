@@ -1,0 +1,11 @@
+Template: NONE
+DangerType: Thunder
+RumbleIntensity: 0.2282609
+Clouds: 1
+Palette: 16
+EffectColorA: 8
+Effects: ElectricDeath-1-20-20, ExtraLoudThunder-0.2934783-33-80, Lightning-1-30-30, BkgOnlyLightning-1-30-111, 
+PlacedObjects: LightFixture><356.1335><436.3511><RedLight~17.32051~-10~79, LightFixture><804.1613><437.3817><RedLight~17.32051~-10~36, LightFixture><428.3137><591.0728><RedLight~17.32051~-10~44, LightFixture><322.6661><1741.682><RedLight~17.32051~-10~30, LightFixture><742.4177><1741.109><RedLight~17.32051~-10~100, LightFixture><323.9113><1980.821><RedLight~17.32051~-10~100, LightFixture><730.8091><1981.559><RedLight~17.32051~-10~31, LightFixture><354.8362><1017.569><RedLight~17.32051~-10~55, LightFixture><809.0789><1008.146><RedLight~17.32051~-10~87, LightSource><480.4175><1295.318><0.4565217~EffectColor1~0~100~50~86.60254~0~0, LightSource><603.6222><1287.342><0.4565217~EffectColor1~0~100~50~86.60254~0~0, LightSource><705.7><1299.498><0.4565217~EffectColor1~0~100~50~86.60254~0~0, DangleFruit><332.2632><1083.422><0~0~2~3, DangleFruit><242.3759><1040.555><0~0~2~3, DangleFruit><163.613><1060.083><0~0~2~3, 
+AmbientSounds: OMNI><AM_IND-Utility03.ogg><722.6621><440.3203><0.3804348><1, OMNI><SO_IND-Humm.ogg><715.0698><191.4133><0.5><1, OMNI><SO_IND-HVAC.ogg><704.9376><175.8194><0.326087><1, SPOT><SO_IND-HeatDuct.ogg><720.525><202.1984><0.6739131><1><333.525><2128.198><154.6447><-158.3553><0><0.1, SPOT><SO_IND-Fridge.ogg><739.3293><365.0664><0.5><1><729.3293><1611.066><-142.3553><-60.35534><0><0.1, SPOT><SO_IND-FlourLight.ogg><709.8352><250.1133><0.5><1><588.8352><1278.113><-110.3553><-120.3553><0><0.1, OMNI><AM_WIN-HowlingWnd.ogg><733.8264><546.3493><0.1413043><1, OMNI><AM_RAIN-QuietThunder.ogg><721.1133><322.146><0.5543478><1, 
+FadePalette: 17, 0.7065217, 0.7065217, 0.7065217
+WetTerrain: OFF

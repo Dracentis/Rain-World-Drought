@@ -1,0 +1,8 @@
+Template: NONE
+Clouds: 0.4673913
+Palette: 8
+EffectColorB: 8
+Effects: AboveCloudsView-1-256-48, Fog-0.75-256-99, SkyBloom-0.5760869-1-97, 
+AmbientSounds: OMNI><AM_ENV-CityTone.ogg><680.7603><566.6997><0.5><1, OMNI><AM_ENV-CricketsWnd.ogg><718.801><548.4797><0.5><1, OMNI><AM_WIN-StrongWnd2.ogg><732.3808><502.9106><0.6195652><1, 
+FadePalette: 18, 0.5543478, 0.5543478, 0.5434783
+WetTerrain: OFF

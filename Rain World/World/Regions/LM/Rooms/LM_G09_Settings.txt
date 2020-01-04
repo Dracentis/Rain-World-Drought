@@ -1,0 +1,8 @@
+Template: NONE
+DangerType: None
+Clouds: 1
+Palette: 25
+Effects: ElectricStorm-0.2065217-30-30, BrokenZeroG-1-29-91, 
+PlacedObjects: GravityDisruptor><980.2858><802.3753><, LightSource><173.2101><228.2513><1~Environment~266~105~50~86.60254~0~0, LightFixture><237.6476><697.8281><RedLight~17.32051~-10~24, LightFixture><814.0668><197.5615><RedLight~17.32051~-10~92, LightSource><1961.075><820.811><1~Environment~-330~-259~-474~-140.3975~0~0, LightFixture><1585.514><264.5505><RedLight~17.32051~-10~29, LightFixture><1401.785><1367.553><RedLight~17.32051~-10~58, LightFixture><1510.476><1000.588><RedLight~17.32051~-10~53, LightSource><1713.148><1144.643><1~Environment~-150~110~50~86.60254~0~0, LightFixture><530.9099><1379.122><RedLight~17.32051~-10~0, LightFixture><314.4168><1151.682><RedLight~17.32051~-10~13, DeepProcessing><305.0488><377.2094><22~1029~1568~985~1687~-302~0~0~0.742285~1~0.1956522, 
+AmbientSounds: OMNI><SO_SFX-PulseWav.ogg><537.3475><548.8705><0.3152174><1, SPOT><SO_SFX-Escape.ogg><727.9817><520.9492><0.5><1><983.1519><817.9655><88.64465><-213.3553><0><0.1, OMNI><AM_IND-SuperStructure.ogg><530.6479><446.922><0.5><1, 
+FadePalette: 10, 0.4130435, 0.423913, 0.4130435, 0.423913

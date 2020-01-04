@@ -1,0 +1,124 @@
+ROOMS
+GATE_SI_CC : SI_D03, DISCONNECTED, DISCONNECTED : GATE
+GATE_SI_LF : SI_B13, DISCONNECTED, SI_S03 : GATE
+SI_S03 : GATE_SI_LF : SHELTER
+SI_A07 : SI_SP01, SI_A06
+SI_A06 : SI_A07, SI_B04
+SI_B04 : SI_A06, SI_B02
+SI_B02 : SI_B04, SI_D01
+SI_C07 : SI_C02 : SWARMROOM
+SI_C02 : SI_C07, SI_A17, SI_A18, DISCONNECTED, SI_C01
+SI_C01 : SI_C02, SI_C04 : SWARMROOM
+SI_C04 : SI_D01, SI_C01, SI_B10
+SI_D01 : SI_B02, SI_C03, SI_A27, SI_C04, SI_B10 : SWARMROOM
+SI_C03 : SI_D01, SI_B01
+SI_B01 : SI_A20, DISCONNECTED, SI_C03, SI_D03
+SI_A20 : SI_A21, SI_B01
+SI_A21 : SI_A20 : SCAVTRADER
+SI_D03 : GATE_SI_CC, SI_B01
+SI_A17 : DISCONNECTED, SI_C02, SI_C05
+SI_S04 : SI_A18 : SHELTER
+SI_A18 : SI_C02, SI_C05, SI_S04
+SI_C05 : SI_A17, SI_A18, SI_A28
+SI_A28 : SI_C05, SI_D06
+SI_A27 : SI_D01, SI_S05, SI_C06
+SI_S05 : SI_A27 : SHELTER
+SI_C06 : SI_A27, SI_B09
+SI_B10 : SI_D01, SI_C04, SI_B09
+SI_B09 : SI_C06, SI_A02, SI_B10
+SI_A02 : SI_B09, SI_A23
+SI_A23 : SI_C08, SI_A02 : SWARMROOM
+SI_C08 : SI_D05, SI_A23, SI_D06
+SI_D05 : SI_B11, SI_D06, SI_C08
+SI_B11 : SI_D05, SI_D06
+SI_D06 : SI_B11, SI_D05, SI_C08, SI_B03, SI_A28
+SI_B12 : SI_B03
+SI_B03 : SI_B12, SI_D06, SI_C09 : SWARMROOM
+SI_C09 : SI_B03, SI_D07
+SI_D07 : SI_C09, SI_B13 : SWARMROOM
+SI_B13 : SI_D07, GATE_SI_LF
+//SI_SpireShelter : SI_A13 : SHELTER
+SI_SP01 : SI_A13, SI_A07
+SI_A13 : SI_SP02, SI_DISCONNECTED, SI_SP01
+SI_SP02 : SI_A09, SI_A13
+SI_A09 : SI_A10, SI_SP02 : SWARMROOM
+SI_A10 : SI_Spire6, SI_A09
+SI_Spire6 : SI_A10
+END ROOMS
+
+CREATURES
+//all
+SI_A18 : 3-Eggbug
+SI_SP02 : 2-Dropbug-2, 5-Cyan, 8-BigNeedleWorm, 7-SmallNeedleWorm-5
+SI_SP01 : 3-White-2, 4-CicadaB-2, 5-CicadaA-2
+//SI_Spire4 : 3-CicadaB-2
+SI_A13 : 3-BigNeedleWorm, 4-SmallNeedleWorm-4
+//SI_SpireM : 4-Blue
+SI_A09 : 3-CicadaB-1, 4-CicadaA-3
+SI_C02 : 4-Eggbug
+SI_D05 : 4-Eggbug
+SI_B04 : 2-White
+SI_C08 : 3-Centiwing, 4-Centiwing
+SI_D05 : 5-CicadaA, 6-CicadaA
+SI_B11 : 1-CicadaA, 2-CicadaB
+SI_B02 : 1-CicadaA, 2-CicadaA
+SI_C05 : 3-Mimic-{10}, 4-Mimic-{13}, 5-Mimic-{14}, 6-Mimic-{17}
+SI_C02 : 5-BigNeedleWorm, 5-SmallNeedleWorm-3, 8-Mimic-{24}, 9-Mimic-{18}
+SI_B12 : 2-BigNeedleWorm, 2-SmallNeedleWorm-3
+SI_C07 : 1-Centiwing
+LINEAGE : SI_B01 : 4 : Pink-0.5, Blue-0.5, White-0.3, Red-0
+LINEAGE : SI_B01 : 6 : NONE-0.07, Mimic-{17}-0.5, Mimic-{21}-0.5, TentaclePlant-0
+LINEAGE : SI_C02 : 5 : NONE-0.05, Mimic-{20}-0.5, Mimic-{14}-0.5, TentaclePlant-0
+LINEAGE : SI_B09 : 3 : NONE-0.05, Mimic-{18}-0.5, Mimic-{16}-0.5, TentaclePlant-0
+LINEAGE : SI_C01 : 2 : NONE-0.05, Mimic-{12}-0.5, Mimic-{16}-0.5, TentaclePlant-0
+LINEAGE : SI_C01 : 5 : NONE-0.07, TentaclePlant-0
+
+//Wanderer
+(0)OFFSCREEN : 0-Vulture-3, 0-KingVulture-2, 0-Scavenger-8
+(0)SI_A17 : 4-DropBug
+(0)SI_D01 : 7-CicadaA-2, 8-CicadaB-2, 9-CicadaB, 10-CicadaB, 5-White, 5-Cyan, 6-EggBug
+(0)SI_C01 : 4-Yellow-2, 3-Cyan-2
+(0)SI_C07 : 2-Cyan, 3-Cyan
+(0)SI_B09 : 4-Cyan-2, 6-Centiwing
+(0)SI_B01 : 5-BigNeedleWorm, 5-SmallNeedleWorm
+(0)SI_A27 : 3-CicadaB, 4-CicadaA
+(0)SI_C06 : 2-DropBug-1
+(0)SI_D06 : 5-Yellow, 6-Yellow-2, 7-Yellow, 8-DropBug
+(0)SI_B03 : 3-Centiwing
+(0)SI_C09 : 3-Centiwing
+(0)LINEAGE : SI_A23 : 2 : NONE-0.2, Blue-0.5, Cyan-0
+(0)LINEAGE : SI_C06 : 3 : Centiwing-0.1, RedCentipede-0
+(0)LINEAGE : SI_B09 : 5 : White-0.5, Cyan-0.5, Red-0
+(0)SI_D01 : 7-CicadaA-2, 8-CicadaB-2, 9-CicadaB, 10-CicadaB, 6-Blue
+(0)SI_C01 : 3-Yellow, 4-Yellow-2
+(0)SI_C06 : 2-CicadaB, 3-CicadaA
+(0)SI_D06 : 5-Yellow, 6-Yellow, 7-Yellow
+(0)SI_B09 : 6-CicadaA
+(0)LINEAGE : SI_B09 : 4 : Centiwing-0.05, Centiwing-0.05, Centipede-{0.8}-0.2, RedCentipede-0
+(0)LINEAGE : SI_B09 : 5 : Pink-0.5, Blue-0.5, White-0.3, Red-0
+
+//[Other cat]
+(1)OFFSCREEN : 0-Vulture-3, 0-KingVulture-2, 0-Scavenger-8
+(1)SI_A17 : 4-DropBug
+(1)SI_D01 : 7-CicadaA-2, 8-CicadaB-2, 9-CicadaB, 10-CicadaB, 5-White, 5-Cyan, 6-EggBug
+(1)SI_C01 : 4-Yellow-2, 3-Cyan-2
+(1)SI_C07 : 2-Cyan, 3-Cyan
+(1)SI_B09 : 4-Cyan-2, 6-Centiwing
+(1)SI_B01 : 5-BigNeedleWorm, 5-SmallNeedleWorm
+(1)SI_A27 : 3-CicadaB, 4-CicadaA
+(1)SI_C06 : 2-DropBug-1
+(1)SI_D06 : 5-Yellow, 6-Yellow-2, 7-Yellow, 8-DropBug
+(1)SI_B03 : 3-Centiwing
+(1)SI_C09 : 3-Centiwing
+(1)LINEAGE : SI_A23 : 2 : NONE-0.2, Blue-0.5, Cyan-0
+(1)LINEAGE : SI_C06 : 3 : Centiwing-0.1, RedCentipede-0
+(1)LINEAGE : SI_B09 : 5 : White-0.5, Cyan-0.5, Red-0
+
+//Wanderer and [Other cat]
+(0,1)SI_C08 : 4-Centiwing
+(0,1)SI_A02 : 2-Blue
+(0,1)SI_A17 : 3-White
+END CREATURES
+
+BAT MIGRATION BLOCKAGES
+END BAT MIGRATION BLOCKAGES

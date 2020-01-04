@@ -1,0 +1,5 @@
+BkgDroneVolume: 0.2769565
+EffectColorB: 6
+Effects: Fog-0.5543478-0-0, 
+PlacedObjects: VoidSpawnEgg><515.5501><1596.257><0~0~2~3~0, DataPearl><331.3032><1347.714><-317~90~0~0~13~0, 
+AmbientSounds: OMNI><AM_ENV-LightWind.ogg><746.5655><515.5771><0.3478261><0.9413043, SPOT><AM_ENV-NatWind.ogg><703.3282><204.1841><0.3695652><1><436.3282><1428.184><-126.3553><44.64465><0><0.3826088, OMNI><AM_WAT-Sea01.ogg><833.6553><646.626><0><1, 

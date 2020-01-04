@@ -1,0 +1,12 @@
+Template: NONE
+RainIntensity: 0.01086957
+RumbleIntensity: 0.3043478
+Clouds: 0.1956522
+Grime: 0.2391304
+BkgDroneVolume: 0
+Palette: 14
+EffectColorA: 2
+EffectColorB: 8
+PlacedObjects: NoSpearStickZone><482.2978><247.5558><-241~108, ExitSymbolHidden><733.1121><115.3947><, ExitSymbolHidden><730.3123><130.8189><, 
+AmbientSounds: SPOT><AM_IND-DeepHum.ogg><752.6184><306.4006><0.2826087><1><471.6184><-41.59937><-162.3553><23.64466><0><0.2630436, OMNI><AM_ENV-LightWind.ogg><834.0676><644.168><0.3152174><0.6086956, SPOT><AM_IND-Utility02.ogg><108.6984><502.2755><0.4782609><1><980.6984><293.2755><-123.3553><-201.3553><0><0.3717393, SPOT><AM_IND-Utility02.ogg><108.3018><386.7769><0.4347826><1><-71.69818><302.7769><153.6447><-186.3553><0><0.328261, 
+FadePalette: 8, 0.5326087

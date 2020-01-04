@@ -1,0 +1,64 @@
+Palette: 0
+batDepleteCyclesMin: 2
+batDepleteCyclesMax: 7
+batDepleteCyclesMaxIfLessThanTwoLeft: 3
+batDepleteCyclesMaxIfLessThanFiveLeft: 4
+batsPerActiveSwarmRoom: 7
+overseersSpawnChance: 0.8
+overseersMin: 0
+overseersMax: 4
+playerGuideOverseerSpawnChance: 1.0
+Subregion: Outskirts
+Room Setting Templates: Outside, Inside
+Room_Attr: GATE_SU_HI: Vulture-1,SmallNeedleWorm-1,BigNeedleWorm-1,KingVulture-1,
+Room_Attr: GATE_LF_SU: Vulture-1,Scavenger-1,KingVulture-1,
+Room_Attr: SU_B13: Vulture-1,Centipede-1,SmallCentipede-1,SmallNeedleWorm-2,BigNeedleWorm-2,DropBug-2,KingVulture-1,
+Room_Attr: SU_A33: Vulture-1,Centipede-2,SmallCentipede-2,SmallNeedleWorm-2,BigNeedleWorm-2,KingVulture-1,
+Room_Attr: SU_B04: PinkLizard-3,GreenLizard-3,BlueLizard-3,YellowLizard-3,WhiteLizard-3,RedLizard-3,BlackLizard-3,Salamander-3,Vulture-2,SmallNeedleWorm-3,BigNeedleWorm-3,DropBug-3,KingVulture-2,
+Room_Attr: SU_A34: PinkLizard-2,GreenLizard-3,BlueLizard-2,YellowLizard-2,WhiteLizard-2,RedLizard-2,BlackLizard-2,Salamander-2,Vulture-1,Centipede-2,SmallCentipede-2,SmallNeedleWorm-2,BigNeedleWorm-2,KingVulture-1,
+Room_Attr: SU_A37: PinkLizard-2,GreenLizard-2,BlueLizard-2,YellowLizard-2,WhiteLizard-2,RedLizard-2,BlackLizard-2,Salamander-2,Vulture-1,SmallNeedleWorm-2,BigNeedleWorm-2,KingVulture-1,
+Room_Attr: SU_S04: PinkLizard-1,BlueLizard-1,YellowLizard-1,WhiteLizard-1,RedLizard-1,BlackLizard-1,Salamander-1,
+Room_Attr: SU_A63: PinkLizard-2,GreenLizard-2,BlueLizard-2,YellowLizard-2,WhiteLizard-2,RedLizard-2,BlackLizard-2,Salamander-2,Vulture-1,DropBug-2,KingVulture-1,
+Room_Attr: SU_B12: PinkLizard-2,GreenLizard-3,BlueLizard-3,YellowLizard-3,WhiteLizard-3,RedLizard-3,BlackLizard-3,Salamander-3,SmallNeedleWorm-3,BigNeedleWorm-3,DropBug-2,
+Room_Attr: SU_A17: Vulture-1,SmallNeedleWorm-3,BigNeedleWorm-3,DropBug-2,KingVulture-1,
+Room_Attr: SU_A40: GreenLizard-3,BlueLizard-3,YellowLizard-3,WhiteLizard-3,RedLizard-3,BlackLizard-3,Salamander-3,Vulture-1,DropBug-2,KingVulture-1,
+Room_Attr: SU_B07: PinkLizard-2,GreenLizard-3,BlueLizard-3,YellowLizard-3,WhiteLizard-3,RedLizard-3,BlackLizard-3,Salamander-3,SmallNeedleWorm-3,BigNeedleWorm-3,DropBug-2,
+Room_Attr: SU_A02: PinkLizard-2,Vulture-2,DropBug-2,KingVulture-2,
+Room_Attr: SU_A53: PinkLizard-2,GreenLizard-2,Vulture-2,KingVulture-2,
+Room_Attr: SU_A39: PinkLizard-2,GreenLizard-2,BlueLizard-2,YellowLizard-2,WhiteLizard-2,RedLizard-2,BlackLizard-2,Salamander-2,Vulture-1,SmallNeedleWorm-2,BigNeedleWorm-2,KingVulture-1,
+Room_Attr: SU_A38: PinkLizard-2,Vulture-1,SmallNeedleWorm-2,BigNeedleWorm-2,KingVulture-1,
+Room_Attr: SU_A25: PinkLizard-2,GreenLizard-1,BlueLizard-2,YellowLizard-2,WhiteLizard-2,RedLizard-2,BlackLizard-2,Salamander-2,Vulture-1,SmallNeedleWorm-2,BigNeedleWorm-2,KingVulture-1,
+Room_Attr: SU_A24: PinkLizard-1,GreenLizard-1,BlueLizard-1,YellowLizard-1,WhiteLizard-1,RedLizard-1,BlackLizard-1,Salamander-1,Vulture-1,SmallNeedleWorm-2,BigNeedleWorm-2,DropBug-1,KingVulture-1,
+Room_Attr: SU_A23: PinkLizard-1,GreenLizard-1,BlueLizard-1,YellowLizard-1,WhiteLizard-1,RedLizard-1,BlackLizard-1,Salamander-1,Vulture-1,SmallNeedleWorm-2,BigNeedleWorm-2,DropBug-1,KingVulture-1,
+Room_Attr: SU_A22: PinkLizard-1,GreenLizard-1,BlueLizard-1,YellowLizard-1,WhiteLizard-1,RedLizard-1,BlackLizard-1,Salamander-1,SmallNeedleWorm-2,BigNeedleWorm-2,DropBug-1,
+Room_Attr: SU_C04: Vulture-1,SmallNeedleWorm-2,BigNeedleWorm-2,KingVulture-1,
+Room_Attr: SU_A41: SmallNeedleWorm-2,BigNeedleWorm-2,
+Room_Attr: SU_A42: SmallNeedleWorm-2,BigNeedleWorm-2,
+Room_Attr: SU_A43: SmallNeedleWorm-2,BigNeedleWorm-2,
+Room_Attr: SU_A44: SmallNeedleWorm-2,BigNeedleWorm-2,
+Room_Attr: SU_S01: PinkLizard-1,GreenLizard-1,BlueLizard-1,YellowLizard-1,WhiteLizard-1,RedLizard-1,BlackLizard-1,Salamander-1,
+Room_Attr: SU_A06: PinkLizard-2,GreenLizard-3,Vulture-2,DropBug-3,KingVulture-2,
+Room_Attr: SU_A36: PinkLizard-2,Vulture-1,DropBug-3,KingVulture-1,
+Room_Attr: SU_B08: GreenLizard-3,BlueLizard-3,YellowLizard-3,WhiteLizard-3,RedLizard-3,BlackLizard-3,Salamander-3,SmallNeedleWorm-3,BigNeedleWorm-3,DropBug-3,
+Room_Attr: SU_B09: Vulture-1,SmallNeedleWorm-3,BigNeedleWorm-3,DropBug-3,KingVulture-1,
+Room_Attr: SU_A35: PinkLizard-2,GreenLizard-2,BlueLizard-2,YellowLizard-2,WhiteLizard-2,RedLizard-2,BlackLizard-2,Salamander-2,Vulture-1,Centipede-2,SmallCentipede-2,SmallNeedleWorm-2,BigNeedleWorm-2,KingVulture-1,
+Room_Attr: SU_A20: PinkLizard-3,Vulture-1,Centipede-4,SmallCentipede-4,DropBug-2,KingVulture-1,
+Room_Attr: SU_A31: Vulture-1,SmallNeedleWorm-2,BigNeedleWorm-2,KingVulture-1,
+Room_Attr: SU_A32: Vulture-1,SmallNeedleWorm-2,BigNeedleWorm-2,KingVulture-1,
+Room_Attr: SU_B05: PinkLizard-3,GreenLizard-3,BlueLizard-3,YellowLizard-3,WhiteLizard-3,RedLizard-3,BlackLizard-3,Salamander-3,DropBug-3,
+Room_Attr: SU_A07: PinkLizard-3,GreenLizard-3,BlueLizard-3,YellowLizard-3,WhiteLizard-3,RedLizard-3,BlackLizard-3,Salamander-3,CyanLizard-2,Scavenger-3,SmallNeedleWorm-3,BigNeedleWorm-3,DropBug-3,
+Room_Attr: SU_A45: CyanLizard-2,Vulture-1,Scavenger-2,SmallNeedleWorm-1,BigNeedleWorm-1,DropBug-2,KingVulture-1,
+Room_Attr: SU_C02: PinkLizard-3,GreenLizard-3,CyanLizard-2,Scavenger-3,SmallNeedleWorm-3,BigNeedleWorm-3,DropBug-2,
+Room_Attr: SU_B06: DropBug-3,
+Room_Attr: SU_B11: SmallNeedleWorm-3,BigNeedleWorm-3,DropBug-3,
+Room_Attr: SU_A12: PinkLizard-2,GreenLizard-2,BlueLizard-2,YellowLizard-2,WhiteLizard-2,RedLizard-2,BlackLizard-2,Salamander-2,Vulture-1,KingVulture-1,
+Room_Attr: SU_A13: SmallNeedleWorm-3,BigNeedleWorm-3,DropBug-3,
+Room_Attr: SU_B02: PinkLizard-3,Vulture-2,SmallNeedleWorm-3,BigNeedleWorm-3,DropBug-3,KingVulture-2,
+Room_Attr: SU_A29: PinkLizard-2,GreenLizard-2,BlueLizard-2,YellowLizard-2,WhiteLizard-2,RedLizard-2,BlackLizard-2,Salamander-2,Vulture-1,Centipede-2,SmallCentipede-2,SmallNeedleWorm-2,BigNeedleWorm-2,KingVulture-1,
+Room_Attr: SU_B10: PinkLizard-2,GreenLizard-2,BlueLizard-2,YellowLizard-2,WhiteLizard-2,RedLizard-2,BlackLizard-2,Salamander-2,Vulture-1,SmallNeedleWorm-2,BigNeedleWorm-2,KingVulture-1,
+Room_Attr: SU_A10: PinkLizard-3,GreenLizard-3,
+Room_Attr: SU_B01: PinkLizard-3,SmallNeedleWorm-3,BigNeedleWorm-3,DropBug-3,
+Room_Attr: SU_A04: PinkLizard-3,GreenLizard-3,SmallNeedleWorm-3,BigNeedleWorm-3,DropBug-3,
+Room_Attr: SU_C01: PinkLizard-3,SmallNeedleWorm-3,BigNeedleWorm-3,DropBug-3,
+Room_Attr: SU_B14: Vulture-1,SmallNeedleWorm-2,BigNeedleWorm-2,KingVulture-1,
+Room_Attr: SU_A30: Vulture-1,SmallNeedleWorm-2,BigNeedleWorm-2,KingVulture-1,

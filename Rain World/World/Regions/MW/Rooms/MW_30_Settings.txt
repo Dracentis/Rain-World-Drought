@@ -1,0 +1,11 @@
+Template: NONE
+DangerType: Thunder
+RumbleIntensity: 0.1630435
+Clouds: 0.2934783
+Palette: 16
+EffectColorA: 10
+Effects: Lightning-0.4021739-20-20, ElectricDeath-1-9-99, GreenSparks-0.2717391-179-176, 
+PlacedObjects: LightFixture><645.6825><2893.832><RedLight~17.32051~-10~23, LightFixture><545.2921><2793.946><RedLight~17.32051~-10~23, LightFixture><267.3331><2374.068><RedLight~17.32051~-10~25, LightFixture><159.9626><2154.553><RedLight~17.32051~-10~22, LightFixture><247.8328><1953.932><RedLight~17.32051~-10~21, LightFixture><111.6624><1821.883><RedLight~17.32051~-10~22, LightFixture><183.3008><1193.518><RedLight~17.32051~-10~23, LightFixture><155.1765><868.436><RedLight~17.32051~-10~8, LightFixture><281.7157><458.947><RedLight~17.32051~-10~11, LightSource><698.8563><2358.832><0.2826087~EffectColor1~0~100~50~86.60254~0~0, LightSource><530.9319><2352.918><0.2826087~EffectColor1~0~100~50~86.60254~0~0, LightSource><86.86542><2637.838><0.2826087~EffectColor1~0~100~50~86.60254~0~0, LightSource><303.894><2646.862><0.2826087~EffectColor1~0~100~50~86.60254~0~0, 
+AmbientSounds: OMNI><AM_ENV-CityTone.ogg><720.6898><564.313><0.2717391><1, OMNI><AM_IND-Factory02.ogg><715.9077><204.4274><0.5><1, OMNI><AM_IND-DeepHum.ogg><699.3225><308.4079><0.3804348><1, OMNI><AM_WIN-HowlingWnd.ogg><725.8828><551.6495><0.2065217><1, OMNI><AM_RAIN-MehThunder.ogg><728.1555><336.1242><0.5><1, SPOT><AM_IND-Utility01.ogg><714.4882><474.8004><0.5><1><604.4882><2859.799><-227.3553><-143.3553><0><0.1, 
+FadePalette: 17, 0.5543478, 0.5543478, 0.5543478, 0.5543478
+WetTerrain: OFF

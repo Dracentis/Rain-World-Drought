@@ -1,0 +1,7 @@
+Template: NONE
+Clouds: 0.4673913
+Palette: 8
+EffectColorB: 8
+AmbientSounds: OMNI><AM_ENV-WallHum.ogg><716.5543><430.041><0.5><1, 
+FadePalette: 18, 0.5543478, 0.5543478, 0.5434783
+WetTerrain: OFF

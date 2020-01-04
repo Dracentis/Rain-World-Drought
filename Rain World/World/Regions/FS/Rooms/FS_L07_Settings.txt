@@ -1,0 +1,8 @@
+RainIntensity: 0.01086957
+RumbleIntensity: 0
+Clouds: 0.09782609
+EffectColorB: 13
+AmbientSounds: OMNI><AM_ENV-CityTone.ogg><724.072><564.3412><0.3043478><1, OMNI><AM_ENV-LushNight.ogg><698.1892><502.0647><0.326087><1, OMNI><AM_IND-DeepHum.ogg><720.6279><305.6537><0.2608696><1, OMNI><AM_IND-Warehouse01.ogg><741.5244><411.0515><0.423913><1, 
+Triggers: Spot<tA>event<tB>MusicEvent<eA>songName<eB>NA_11 - Reminiscence<eA>vol<eB>0.3652174<eA>prio<eB>0.5<eA>mxThrt<eB>1<eA>loop<eB>0<eA>droneTol<eB>0<eA>rooms<eB>-1<eA>rest<eB>20<eA>fadeIn<eB>45.65217<eA>oneSongPerCycle<eB>0<eA>stopAtDeath<eB>0<eA>stopAtGate<eB>0<tA>multiUse<tB>0<tA>toCycle<tB>-1<tA>fromCycle<tB>0<tA>delay<tB>0<tA>panPos<tB>299.6785<tB>483.3132<tA>fireChance<tB>1<tA>entrance<tB>-1<tA>karma<tB>0<tA>slugcats<tB>111<tA>pos<tB>1658.678<tB>561.3132<tA>handlePos<tB>-186.3553<tB>-40.35535, 
+FadePalette: 10, 0.3043478, 0.3804348
+WetTerrain: OFF

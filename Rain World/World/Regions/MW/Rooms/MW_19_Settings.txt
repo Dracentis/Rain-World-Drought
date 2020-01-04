@@ -1,0 +1,11 @@
+Template: NONE
+DangerType: Thunder
+RumbleIntensity: 0.2282609
+Clouds: 0.6304348
+Palette: 16
+EffectColorA: 2
+Effects: Lightning-0.7717391-20-20, ExtraLoudThunder-0.2934783-19-77, ElectricDeath-1-20-127, GreenSparks-0.75-253-37, LightBurn-0-281-185, 
+PlacedObjects: CosmeticSlimeMold2><1146.61><584.6887><0~100, CosmeticSlimeMold><1123.956><591.765><0~100, SlimeMold><1117.661><519.4206><0~0~2~3, SlimeMold><1130.788><655.0501><0~0~2~3, SlimeMold><1085.872><643.4012><0~0~2~3, SlimeMold><1063.598><618.4671><0~0~2~3, 
+AmbientSounds: OMNI><AM_WIN-HowlingWnd.ogg><743.5503><552.2612><0.5><1, OMNI><SO_ENV-StrongWnd.ogg><708.3016><322.7748><0.3695652><1, OMNI><AM_RAIN-RollingThunder.ogg><730.9233><308.3153><0.5><1, OMNI><AM_RAIN-Rumbles.ogg><719.8737><291.8428><0.326087><1, 
+FadePalette: 17, 0.5543478, 0.5543478
+WetTerrain: OFF

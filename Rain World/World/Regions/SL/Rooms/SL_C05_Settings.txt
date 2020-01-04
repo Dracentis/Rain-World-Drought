@@ -1,0 +1,9 @@
+Template: SL_SettingsTemplate_Sewer
+DangerType: FloodAndRain
+Clouds: 0.2391304
+EffectColorB: 7
+Effects: Fog-0.6195652-0-0, WaterGlowworm-0.08695652-259-2, Drain-0.3043478-20-20, 
+PlacedObjects: DangleFruit><789.8386><487.6319><-908~0~2~3, DangleFruit><779.429><548.063><-891.0018~-1~2~3, InsectGroup><549.8357><344.1766><-96~107~0~0~WaterGlowworm~0.2282609, CustomDecal><330.7938><183.1952><-22~613~366~633~313~-128~-371~-129~0~1~0~RustB3~1~1~0.5~1~0.5~1~0.5~1, CustomDecal><2577.441><24.30835><0~876.4615~309.3395~876.4615~309.3395~0~-364~97~0~1~0~RustB3~1~1~0.4782609~1~0.4782609~1~0~1, 
+AmbientSounds: SPOT><AM_ENV-LightWind.ogg><51.30457><240.7075><0.5><0.823913><498.3046><684.7075><-68.35535><-48.35535><0><0.3065219, SPOT><AM_ENV-LightWind.ogg><306.4828><218.8008><0.5><0.9217392><2735.483><699.8008><-90.35535><-65.35535><0><0.3500001, SPOT><Basic Mech.ogg><271.9924><67.94986><0.2065217><1><1640.992><560.9498><-99.35535><-64.35535><0><0.502174, 
+Triggers: Spot<tA>event<tB>RoomSpecificTextMessage<tA>multiUse<tB>0<tA>toCycle<tB>-1<tA>fromCycle<tB>0<tA>delay<tB>0<tA>panPos<tB>729.3006<tB>211.7655<tA>fireChance<tB>1<tA>entrance<tB>0<tA>karma<tB>0<tA>slugcats<tB>111<tA>pos<tB>339.3005<tB>382.7656<tA>handlePos<tB>-162.3553<tB>-61.35535, 
+RoomSpecificScriptActive: ON

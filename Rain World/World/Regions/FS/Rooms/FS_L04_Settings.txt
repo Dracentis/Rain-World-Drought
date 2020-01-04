@@ -1,0 +1,10 @@
+Template: FS_SettingsTemplate_Forest
+Clouds: 0.5108696
+Grime: 0.326087
+EffectColorA: 15
+EffectColorB: 13
+Effects: BorderPushBack-1-20-20, Moth-0.1956522-20-102, TinyDragonFly-0.423913-24-59, 
+PlacedObjects: UniqueDataPearl><1814.603><483.9921><0~0~0~0~22~0, 
+AmbientSounds: OMNI><AM_ENV-Pasture.ogg><733.7994><407.0562><0.3478261><1, OMNI><AM_ENV-Outside.ogg><714.1375><585.3952><0.5><1, OMNI><AM_ENV-CricketsWnd.ogg><722.5701><551.4127><0.5><1, 
+FadePalette: 10, 0.2065217, 0.2282609, 0.2608696, 0.2391304
+WetTerrain: OFF

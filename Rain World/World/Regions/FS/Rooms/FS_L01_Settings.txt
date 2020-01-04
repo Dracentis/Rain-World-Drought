@@ -1,0 +1,6 @@
+DangerType: Rain
+RainIntensity: 0.01086957
+RumbleIntensity: 0
+Clouds: 0.09782609
+PlacedObjects: DangleFruit><669.4498><1150.492><0~0~2~3, DangleFruit><575.4475><1132.531><0~0~2~3, DangleFruit><617.407><1087.624><0~0~2~3, 
+FadePalette: 10, 0.3043478, 0.4565217

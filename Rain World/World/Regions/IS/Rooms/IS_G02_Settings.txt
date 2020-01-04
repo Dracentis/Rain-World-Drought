@@ -1,0 +1,6 @@
+Template: IS_SettingsTemplate_GravityPump
+Effects: Fog-0.1956522-30-30, WaterGlowworm-0.75-40-40, 
+PlacedObjects: LightFixture><1911.943><851.71><RedLight~17.32051~-10~82, LightFixture><1100.734><877.2493><RedLight~17.32051~-10~17, LightFixture><1436.736><1359.048><RedLight~17.32051~-10~21, LightFixture><814.0551><858.4553><RedLight~17.32051~-10~87, LightFixture><248.1685><1099.683><RedLight~17.32051~-10~99, LightFixture><448.1879><1346.31><RedLight~17.32051~-10~23, LightSource><926.8369><534.6343><1~Environment~78~-403~50~86.60254~1~0, DangleFruit><278.5754><1349.814><0~0~2~3, DangleFruit><211.3768><1335.157><0~0~2~3, ReliableSpear><1144.679><968.6615><, ReliableSpear><1198.48><1128.95><, ReliableSpear><773.6258><893.3447><, ReliableSpear><585.5522><1230.531><, 
+AmbientSounds: SPOT><Weird Deep Hole.wav><669.3013><508.0228><0.5><1><890.8126><740.2894><476.6447><143.6447><0><0.1, SPOT><SO_SFX-LakeBottom.ogg><693.3983><427.5778><0.5><1><932.8053><56.82857><441.6447><565.6447><0><0.1, OMNI><AM_IND-Midsex02.ogg><724.848><562.88><0.5217391><1, OMNI><SO_SFX-Pi.ogg><717.83><501.8553><0><1, 
+FadePalette: 10, 0.4891304, 0.6739131, 0.5760869, 0.5434783
+WetTerrain: OFF

@@ -1,0 +1,21 @@
+DangerType: None
+CeilingDrips: 0.5
+RainIntensity: 1
+RumbleIntensity: 1
+WaveSpeed: 0.75
+WaveLength: 0.5
+WaveAmplitude: 0
+SecondWaveLength: 0.1666667
+SecondWaveAmplitude: 0
+Clouds: 1
+Grime: 0.5
+BkgDroneVolume: 0.3
+BkgDroneNoThreatVolume: 1
+RandomItemDensity: 0.5
+RandomItemSpearChance: 0.2
+WaterReflectionAlpha: 1
+Palette: 23
+EffectColorA: 12
+EffectColorB: 0
+Effects: ElectricStorm-0.5-28-70, BrokenZeroG-1-20-20, SunBlock-0-292-11, 
+AmbientSounds: OMNI><AM_ENV-CityTone.ogg><748.0986><566.3693><0.3586957><1, OMNI><AM_IND-Factory01.ogg><718.4092><220.1211><0.7065217><1, OMNI><SO_SFX-Escape.ogg><-90.81409><-2.560486><0.1086956><1, OMNI><AM_IND-SuperStructure.ogg><720.0767><406.1503><0.5><1, OMNI><SO_SFX-AlienScythe.ogg><707.1603><350.8696><0.3804348><1, OMNI><SO_SFX-Data1.ogg><713.1001><295.9232><0.2391304><1, OMNI><SO_SFX-DataTones.ogg><698.0441><208.1951><0.1521739><1, 

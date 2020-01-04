@@ -1,0 +1,12 @@
+Template: NONE
+Clouds: 0.07608695
+Grime: 0.3586957
+BkgDroneVolume: 0.2769565
+WaterReflectionAlpha: 0.2717391
+Palette: 9
+EffectColorB: 13
+Effects: RockFlea-0.09782609-20-20, 
+PlacedObjects: WaterNut><2829.829><308.353><0~0~2~3, WaterNut><2798.431><316.6874><0~0~2~3, WaterNut><2762.687><294.5726><0~0~2~3, WaterNut><3067.801><281.228><18~-102~2~3, WaterNut><3099.55><275.2491><-12~-170~2~3, DataPearl><3186.181><250.3358><-101~-260~0~0~0~0, InsectGroup><2138.148><364.8657><0~100~0~0~RockFlea~0.6086956, InsectGroup><3535.551><344.7354><-19~113~24~-142~StandardFly~0.06521739, InsectGroup><126.6938><366.942><0~80~0~0~Ant~0.75, CustomDecal><2885.945><170.4534><-25~388~906~417~822~0~460~-219~0.6195652~1~0~zGWMarks - A12~0.5652174~0~1~0~0.6521739~0.3152174~0~0, DeadTokenStalk><3272.127><375.6581><-6~80, BlueToken><3627.865><363.8977><2~70~0~0~1~WaterNut~111, 
+AmbientSounds: SPOT><SO_NAT-LilDrips.ogg><42.3197><492.8365><0.3152174><1><1395.32><330.8365><-140.3553><-89.35535><0><0.4152175, SPOT><SO_WAT-LilDrips.ogg><229.8019><490.5276><0.2608696><1><2058.802><360.5276><-115.3553><-42.35535><0><0.2739132, SPOT><waterGurgleLOOP3.wav><46.80493><372.7059><0.2173913><0.823913><1468.805><220.7059><-159.3553><-71.35535><0><0.3717393, SPOT><SO_NAT-LilDrips.ogg><228.8><365.9989><0.3478261><1><459.8><226.9989><-219.3553><-39.35535><0><0.3608697, SPOT><waterGurgleLOOP3.wav><52.81641><237.9387><0.2065217><1><647.8164><185.9387><-109.3553><-39.35535><0><0.2956523, SPOT><SO_WAT-OpenFlow.ogg><228.5527><242.9676><0.2282609><1><70.55267><338.9676><-74.35535><-149.3553><0><0.6000001, OMNI><waterGurgleLOOP2.wav><830.8516><642.134><0.326087><1, SPOT><SO_WAT-DripTap.ogg><57.59192><119.0724><0.5><1><2855.592><239.0724><-199.3553><-47.35535><0><0.3717393, SPOT><SO_WAT-ProperDrips.ogg><230.2578><117.0501><0.423913><1><3476.258><211.0501><-214.3553><-54.35535><0><0.328261, 
+Triggers: Spot<tA>event<tB>MusicEvent<eA>songName<eB>RW_39 - Lack of Comfort<eA>vol<eB>0.1913047<eA>prio<eB>0.5<eA>mxThrt<eB>1<eA>loop<eB>0<eA>droneTol<eB>0<eA>rooms<eB>7<eA>rest<eB>5<eA>fadeIn<eB>104.3478<eA>oneSongPerCycle<eB>0<eA>stopAtDeath<eB>0<eA>stopAtGate<eB>0<tA>multiUse<tB>0<tA>toCycle<tB>-1<tA>fromCycle<tB>0<tA>delay<tB>0<tA>panPos<tB>660.4412<tB>473.1912<tA>fireChance<tB>1<tA>entrance<tB>-1<tA>karma<tB>0<tA>pos<tB>1374.438<tB>288.1939<tA>handlePos<tB>-212.3553<tB>-180.3553, 
+FadePalette: 8, 0.1413043, 0.1847826, 0.2065217, 0.2173913

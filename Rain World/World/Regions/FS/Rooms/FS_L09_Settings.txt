@@ -1,0 +1,6 @@
+RainIntensity: 0.01086957
+RumbleIntensity: 0.05434782
+Clouds: 0.4565217
+AmbientSounds: OMNI><AM_IND-Fabrik02.ogg><761.5895><232.6307><0.3152174><1, OMNI><AM_SUB-MysticCave2.ogg><721.3389><218.3208><0.1630435><1, SPOT><AM_SUB-CaveTone.ogg><750.6115><245.666><0.5><1><304.6115><398.666><108.6447><-166.3553><0><0.1, 
+FadePalette: 10, 0.1086956
+WetTerrain: OFF

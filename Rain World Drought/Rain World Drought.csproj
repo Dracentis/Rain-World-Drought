@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6AB9AF57-A6F5-49DF-B460-15EB9D521B9D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rain_World_Drought</RootNamespace>
+    <AssemblyName>Rain World Drought</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\References\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\References\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="GoKit">
+      <HintPath>..\References\GoKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>..\References\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod">
+      <HintPath>..\References\MonoMod.exe</HintPath>
+    </Reference>
+    <Reference Include="Partiality">
+      <HintPath>..\References\Partiality.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System1">
+      <HintPath>..\References\System1.dll</HintPath>
+    </Reference>
+    <Reference Include="System2">
+      <HintPath>..\References\System2.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\References\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\References\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Creature\OverseerDroughtTutorialBehavior.cs" />
+    <Compile Include="Creature\patch_CreatureSymbol.cs" />
+    <Compile Include="Creature\patch_CreatureTemplate.cs" />
+    <Compile Include="Creature\patch_AbstractCreature.cs" />
+    <Compile Include="Creature\patch_AImap.cs" />
+    <Compile Include="Creature\patch_LizardAI.cs" />
+    <Compile Include="Creature\patch_LizardBreedParams.cs" />
+    <Compile Include="Creature\GreyLizardBreed.cs" />
+    <Compile Include="Creature\patch_MapPage.cs" />
+    <Compile Include="Creature\patch_Lizard.cs" />
+    <Compile Include="Creature\patch_MultiplayerUnlocks.cs" />
+    <Compile Include="Creature\patch_NoiseTracker.cs" />
+    <Compile Include="Creature\patch_Overseer.cs" />
+    <Compile Include="Creature\patch_OverseerAbstractAI.cs" />
+    <Compile Include="Creature\patch_OverseerGraphics.cs" />
+    <Compile Include="Creature\patch_RainTracker.cs" />
+    <Compile Include="Creature\patch_RoomRealizer.cs" />
+    <Compile Include="Creature\patch_SandboxSettingsInterface.cs" />
+    <Compile Include="Creature\patch_SandboxEditorSelector.cs" />
+    <Compile Include="Creature\patch_Spear.cs" />
+    <Compile Include="Creature\patch_Weapon.cs" />
+    <Compile Include="Creature\patch_WorldLoader.cs" />
+    <Compile Include="Creature\WalkerBeast.cs" />
+    <Compile Include="Creature\WalkerBeastAbstractAI.cs" />
+    <Compile Include="Creature\WalkerBeastAI.cs" />
+    <Compile Include="Creature\WalkerBeastGraphics.cs" />
+    <Compile Include="Creature\WalkerBeastPather.cs" />
+    <Compile Include="Creature\WalkerBeastTentacle.cs" />
+    <Compile Include="Creature\SeaDrakeGraphics.cs" />
+    <Compile Include="Creature\SeaDrakeAI.cs" />
+    <Compile Include="Creature\SeaDrake.cs" />
+    <Compile Include="DroughtMod.cs" />
+    <Compile Include="Creature\LightWorm.cs" />
+    <Compile Include="Creature\LightWormAI.cs" />
+    <Compile Include="Creature\LightWormGraphics.cs" />
+    <Compile Include="Creature\StaticWorldPatch.cs" />
+    <Compile Include="Effects\ElectricStorm.cs" />
+    <Compile Include="Effects\GravityPulse.cs" />
+    <Compile Include="Effects\patch_CoralNeuronSystem.cs" />
+    <Compile Include="Effects\patch_RoomSettings.cs" />
+    <Compile Include="Effects\PulseEffect.cs" />
+    <Compile Include="Effects\DrainEffect.cs" />
+    <Compile Include="Effects\TankRoomView.cs" />
+    <Compile Include="PlacedObjects\GravityAmplifyer.cs" />
+    <Compile Include="PlacedObjects\patch_AbstractPhysicalObject.cs" />
+    <Compile Include="PlacedObjects\patch_BodyChunk.cs" />
+    <Compile Include="PlacedObjects\patch_Conversation.cs" />
+    <Compile Include="PlacedObjects\patch_DataPearl.cs" />
+    <Compile Include="PlacedObjects\patch_PlacedObject.cs" />
+    <Compile Include="PlacedObjects\LargePiston.cs" />
+    <Compile Include="PlacedObjects\GiantPiston.cs" />
+    <Compile Include="PlacedObjects\SmallPiston.cs" />
+    <Compile Include="PlacedObjects\TreeFruit.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\FAtlas.cs" />
+    <Compile Include="Slugcat\MessageScreen.cs" />
+    <Compile Include="Slugcat\patch_DreamScreen.cs" />
+    <Compile Include="Slugcat\patch_DreamsState.cs" />
+    <Compile Include="Slugcat\patch_FoodMeter.cs" />
+    <Compile Include="Slugcat\patch_HUD.cs" />
+    <Compile Include="Slugcat\patch_HUDCircle.cs" />
+    <Compile Include="Slugcat\patch_MenuScene.cs" />
+    <Compile Include="Slugcat\patch_Player.cs" />
+    <Compile Include="Slugcat\patch_PlayerGraphics.cs" />
+    <Compile Include="Slugcat\patch_SaveState.cs" />
+    <Compile Include="Slugcat\patch_SlideShow.cs" />
+    <Compile Include="Slugcat\patch_SlugcatSelectMenu.cs" />
+    <Compile Include="Slugcat\patch_SlugcatStats.cs" />
+    <Compile Include="Slugcat\PearlConversation.cs" />
+    <Compile Include="Slugcat\PlayerCosmetics.cs" />
+    <Compile Include="World\FPOracleBehavior.cs" />
+    <Compile Include="World\FPOracleBehaviorHasMark.cs" />
+    <Compile Include="World\FPOracleState.cs" />
+    <Compile Include="World\LMOracleBehavior.cs" />
+    <Compile Include="World\LMOracleBehaviorHasMark.cs" />
+    <Compile Include="World\LMOracleSwamer.cs" />
+    <Compile Include="World\MoonPearl.cs" />
+    <Compile Include="World\patch_ScavengerOutpost.cs" />
+    <Compile Include="World\patch_AboveCloudsView.cs" />
+    <Compile Include="World\patch_BulletDrip.cs" />
+    <Compile Include="World\patch_Creature.cs" />
+    <Compile Include="World\patch_GlobalRain.cs" />
+    <Compile Include="World\patch_KarmaMeter.cs" />
+    <Compile Include="World\patch_MiscWorldSaveData.cs" />
+    <Compile Include="World\patch_Oracle.cs" />
+    <Compile Include="World\patch_OracleGraphics.cs" />
+    <Compile Include="Creature\patch_OverseerAI.cs" />
+    <Compile Include="World\patch_PlayerProgression.cs" />
+    <Compile Include="World\patch_ProcessManager.cs" />
+    <Compile Include="World\patch_RainMeter.cs" />
+    <Compile Include="World\patch_RainWorld.cs" />
+    <Compile Include="World\patch_RainWorldGame.cs" />
+    <Compile Include="World\patch_RedLight.cs" />
+    <Compile Include="World\patch_Room.cs" />
+    <Compile Include="World\patch_RoomRain.cs" />
+    <Compile Include="World\patch_SleepAndDeathScreen.cs" />
+    <Compile Include="World\patch_SLOrcacleState.cs" />
+    <Compile Include="World\patch_MusicPiece.cs" />
+    <Compile Include="World\patch_Water.cs" />
+    <Compile Include="World\patch_RainCycle.cs" />
+    <Compile Include="World\patch_World.cs" />
+    <Compile Include="World\patch_VoidSeaScene.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

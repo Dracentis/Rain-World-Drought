@@ -1,0 +1,144 @@
+ROOMS
+GATE_SU_DS : SU_B14, DISCONNECTED : GATE
+GATE_SU_HI : SU_B13, DISCONNECTED : GATE
+GATE_LF_SU : DISCONNECTED, SU_A45 : GATE
+SU_B13 : GATE_SU_HI, SU_A33
+SU_A33 : SU_B13, SU_B04, SU_A20
+SU_B04 : SU_A33, SU_A37, SU_A34
+SU_A34 : SU_A20, SU_B04
+SU_A37 : SU_S04, SU_B04, SU_A63, SU_A39
+SU_S04 : SU_A37 : SHELTER
+SU_A63 : SU_B12, SU_A37, DISCONNECTED
+SU_B12 : SU_A63, SU_A17
+SU_A17 : SU_A40, SU_B12
+SU_A40 : SU_A17, SU_B07 : SWARMROOM
+SU_B07 : SU_A40, SU_A02
+SU_A02 : SU_A53, SU_B07
+SU_A53 : SU_A39, SU_A02, SU_A38, SU_A25
+SU_A39 : SU_A37, SU_A06, SU_A53
+SU_A38 : SU_A06, SU_A53, SU_A25
+SU_A25 : SU_A38, SU_A53, SU_A23, SU_A24
+SU_A24 : SU_A25, SU_A23 : SWARMROOM
+SU_A23 : SU_A25, SU_A24, SU_A22
+SU_A22 : SU_A43, SU_A23, SU_S01
+SU_C04 : SU_A41
+SU_A41 : SU_A42, SU_A43, SU_C04, SU_A44
+SU_A42 : SU_A41 : SWARMROOM
+SU_A43 : SU_A41, SU_A22
+SU_A44 : SU_A41
+SU_S01 : SU_A22 : SHELTER
+SU_A06 : SU_A39, SU_A36, SU_A38 : SWARMROOM
+SU_A36 : SU_A06, SU_B08
+SU_B08 : SU_B09, SU_A36
+SU_B09 : SU_A31, SU_A35, SU_B08, SU_B10
+SU_A35 : SU_B09, SU_A20
+SU_A20 : SU_A33, SU_A29, SU_A34, SU_A35
+SU_A31 : SU_B02, SU_B09, SU_A32
+SU_A32 : SU_A31, SU_B05
+SU_B05 : SU_B06, SU_A07, SU_A32
+SU_A07 : SU_B05, SU_C02 : SWARMROOM
+SU_A45 : SU_C02, GATE_LF_SU
+SU_C02 : SU_A45, SU_A07 : SCAVOUTPOST
+SU_B06 : SU_B11, SU_A12, SU_B05
+SU_B11 : SU_A13, SU_B06, SU_A12
+SU_A12 : SU_B11, SU_B06, SU_B02
+SU_A13 : SU_B11, SU_B02 : SWARMROOM
+SU_B02 : SU_A13, SU_A12, SU_A29, SU_A31 : SWARMROOM
+SU_A29 : SU_B02, SU_A20
+SU_B10 : SU_B09, SU_A10
+SU_A10 : SU_B01, SU_B10
+SU_B01 : SU_A10, SU_A04, SU_S03, SU_A30
+SU_S03 : SU_B01 : SHELTER
+SU_A04 : SU_B01, SU_C01
+SU_C01 : SU_A04, SU_A30, SU_B14 : SWARMROOM
+SU_B14 : SU_C01, GATE_SU_DS
+SU_A30 : SU_B01, SU_C01
+END ROOMS
+
+CREATURES
+//all
+SU_B11 : 4-CicadaB, 5-CicadaA
+SU_B02 : 4-CicadaB, 5-CicadaB
+SU_B06 : 6-CicadaB, 7-CicadaB
+SU_A07 : 4-Green, 5-Pink
+LINEAGE : SU_A30 : 2 : NONE-0.3, EggBug-0
+LINEAGE : SU_A31 : 3 : NONE-0.1, Small Centipede-1.0, Centipede-{0.3}-1.0, Centipede-{0.5}-1.0, Centipede-{0.7}-0
+
+//Wanderer
+(0)OFFSCREEN : 0-Scavenger-6
+(0)OFFSCREEN : 0-KingVulture-1, 0-Vulture-2
+(0)SU_B09 : 4-DropBug-2
+(0)SU_A17 : 2-White
+(0)SU_A20 : 6-Centipede-5
+(0)SU_B04 : 3-DropBug-2, 4-DropBug, 5-DropBug
+(0)SU_B05 : 5-Pink
+(0)SU_B01 : 6-TentaclePlant
+(0)SU_A10 : 2-TentaclePlant, 3-Green
+(0)SU_A30 : 2-DropBug
+(0)SU_B07 : 3-Green
+(0)SU_B02 : 7-Centipede, 8-Centipede-2
+(0)SU_A32 : 2-DropBug
+(0)SU_B08 : 3-Red
+(0)SU_A13 : 4-DropBug, 3-CicadaB
+(0)LINEAGE : SU_A06 : 4 : Red-1, NONE-0.001, Red-0
+(0)LINEAGE : SU_A06 : 3 : DropBug-0.1, NONE-0.5, BigSpider-0.5, SpitterSpider-0
+(0)LINEAGE : SU_B08 : 2 : Green-0.3, Red-0
+(0)LINEAGE : SU_B12 : 3 : Pink-0.4, Blue-0.15, Red-0
+(0)LINEAGE : SU_A40 : 2 : Green-0.5, Blue-0.4, Cyan-0
+(0)LINEAGE : SU_B07 : 2 : Green-0.5, Pink-0.4, Cyan-0
+(0)LINEAGE : SU_C02 : 4 : Green-0.5, Yellow-0.9, Cyan-0
+(0)LINEAGE : SU_A04 : 4 : Blue-0.1, White-0.5, Cyan-0
+(0)LINEAGE : SU_B11 : 6 : Blue-0.1, White-0.5, Cyan-0
+(0)LINEAGE : SU_B11 : 7 : Blue-0.1, White-0.5, Cyan-0
+(0)LINEAGE : SU_B06 : 4 : Blue-0.8, White-0.5, Cyan-0
+(0)LINEAGE : SU_B06 : 5 : Blue-0.8, White-0.5, Cyan-0
+(0)LINEAGE : SU_A04 : 5 : NONE-0.05, TentaclePlant-0
+(0)LINEAGE : SU_A06 : 3 : Green-0.1, NONE-0.5, Pink-0.5, Cyan-0.5, Red-0
+(0)SU_B04 : 3-Pink, 4-Green
+(0)SU_C02 : 5-Pink
+(0)SU_B05 : 5-Green
+(0)SU_B01 : 6-Mimic-{24}
+(0)SU_A10 : 2-Mimic-{21}, 3-Green
+
+//[Other cat]
+(1)OFFSCREEN : 0-Scavenger-6
+(1)OFFSCREEN : 0-KingVulture-1, 0-Vulture-2
+(1)SU_B09 : 4-DropBug-2
+(1)SU_A17 : 2-White
+(1)SU_A20 : 6-Centipede-5
+(1)SU_B04 : 3-DropBug-2, 4-DropBug, 5-DropBug
+(1)SU_B05 : 5-Pink
+(1)SU_B01 : 6-TentaclePlant
+(1)SU_A10 : 2-TentaclePlant, 3-Green
+(1)SU_A30 : 2-DropBug
+(1)SU_B07 : 3-Green
+(1)SU_B02 : 7-Centipede, 8-Centipede-2
+(1)SU_A32 : 2-DropBug
+(1)SU_B08 : 3-Red
+(1)SU_A13 : 4-DropBug, 3-CicadaB
+(1)LINEAGE : SU_A06 : 4 : Red-1, NONE-0.001, Red-0
+(1)LINEAGE : SU_A06 : 3 : DropBug-0.1, NONE-0.5, BigSpider-0.5, SpitterSpider-0
+(1)LINEAGE : SU_B08 : 2 : Green-0.3, Red-0
+(1)LINEAGE : SU_B12 : 3 : Pink-0.4, Blue-0.15, Red-0
+(1)LINEAGE : SU_A40 : 2 : Green-0.5, Blue-0.4, Cyan-0
+(1)LINEAGE : SU_B07 : 2 : Green-0.5, Pink-0.4, Cyan-0
+(1)LINEAGE : SU_C02 : 4 : Green-0.5, Yellow-0.9, Cyan-0
+(1)LINEAGE : SU_A04 : 4 : Blue-0.1, White-0.5, Cyan-0
+(1)LINEAGE : SU_B11 : 6 : Blue-0.1, White-0.5, Cyan-0
+(1)LINEAGE : SU_B11 : 7 : Blue-0.1, White-0.5, Cyan-0
+(1)LINEAGE : SU_B06 : 4 : Blue-0.8, White-0.5, Cyan-0
+(1)LINEAGE : SU_B06 : 5 : Blue-0.8, White-0.5, Cyan-0
+(1)LINEAGE : SU_A04 : 5 : NONE-0.05, TentaclePlant-0
+
+//Wanderer and [Other cat]
+(0,1)SU_B12 : 2-Green
+(0,1)LINEAGE : SU_A02 : 2 : NONE-0.05, Mimic-{16}-0.4, Mimic-{18}-0.4, TentaclePlant-0
+(0,1)LINEAGE : SU_A02 : 3 : NONE-0.05, Mimic-{18}-0.4, Mimic-{14}-0.4, TentaclePlant-0
+(0,1)LINEAGE : SU_B05 : 5 : NONE-0.05, Mimic-{14}-0.4, TentaclePlant-0
+(0,1)SU_A04 : 4-Pink-2, 2-CicadaB, 3-CicadaB
+(0,1)SU_C02 : 2-BigNeedleWorm, 3-SmallNeedleWorm-3
+END CREATURES
+
+BAT MIGRATION BLOCKAGES
+SU_A22
+END BAT MIGRATION BLOCKAGES

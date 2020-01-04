@@ -1,0 +1,6 @@
+Clouds: 0.1521739
+Effects: Pulse-0.07608695-30-30, 
+PlacedObjects: LightFixture><1882.728><625.4487><RedLight~9.320557~38~39, LightFixture><2810.55><564.2391><RedLight~-215.6795~-152~65, LightFixture><2498.784><591.0529><RedLight~17.32051~-10~55, LightFixture><632.9166><510.6106><RedLight~17.32051~-10~18, LightFixture><273.4467><463.4637><RedLight~17.32051~-10~35, LightSource><291.0525><274.7183><0.3804348~EffectColor1~42~151~50~86.60254~0~0, WaterNut><1411.162><528.8671><0~0~2~3, WaterNut><1459.193><537.697><0~0~2~3, WaterNut><1429.818><537.8328><0~0~2~3, Mushroom><2888.938><251.5598><0~0~2~3, JellyFish><2789.248><219.3><0~0~2~3, JellyFish><2017.545><222.8051><0~0~2~3, 
+AmbientSounds: SPOT><SO_IND-Survey.ogg><747.6956><523.7919><0.5><1><1552.696><191.7919><16.64465><81.64471><0><0.1, 
+FadePalette: 10, 0.5434783, 0.5652174, 0.5108696
+WetTerrain: OFF

@@ -1,0 +1,6 @@
+Clouds: 0
+Palette: 25
+Effects: SuperStructureProjector-0-30-30, ProjectedScanLines-0.4565217-277-181, LMSwarmers-0.1086956-321-102, SunBlock-1-286-37, ZeroG-0.4891304-535-135, 
+PlacedObjects: LightSource><552.6165><522.101><1~Environment~-185~-241~50~86.60254~0~0, LightFixture><712.0468><134.8056><RedLight~17.32051~-10~36, LightFixture><168.8289><107.1036><RedLight~17.32051~-10~95, LightFixture><98.87054><614.1525><RedLight~17.32051~-10~88, 
+AmbientSounds: OMNI><AM_ENV-NatWind.ogg><482.8504><487.577><0.2391304><1, OMNI><AM_IND-SuperStructure.ogg><738.5344><491.303><0.3043478><1, OMNI><Noise Wind.wav><440.6362><349.6644><0.1521739><1, OMNI><SO_IND-WeirdVent.ogg><733.1138><370.3355><0.2826087><1, 
+FadePalette: 10, 0.5217391

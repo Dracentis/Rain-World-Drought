@@ -1,0 +1,7 @@
+Template: NONE
+Palette: 22
+EffectColorA: 18
+EffectColorB: 18
+AmbientSounds: OMNI><AM_ENV-CityTone.ogg><764.7994><566.3062><0.2934783><1, OMNI><AM_IND-Fabrik02.ogg><769.8038><229.711><0.2065217><1, OMNI><AM_IND-Midsex01.ogg><752.8964><163.8863><0.2826087><1, 
+FadePalette: 23, 0.6630435
+WetTerrain: OFF

@@ -1,0 +1,2 @@
+PlacedObjects: BlueToken><502.5674><409.0617><17~-59~0~0~1~RedLizard~111, 
+WetTerrain: OFF

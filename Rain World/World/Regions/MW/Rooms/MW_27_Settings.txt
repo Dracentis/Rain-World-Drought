@@ -1,0 +1,13 @@
+Template: NONE
+DangerType: Thunder
+RumbleIntensity: 0.2391304
+Clouds: 0.2608696
+RandomItemDensity: 0.7934783
+RandomItemSpearChance: 0.623913
+Palette: 16
+EffectColorA: 4
+Effects: Lightning-0.5-20-20, ExtraLoudThunder-0.2282609-20-78, GreenSparks-0.6413044-19-130, ElectricDeath-1-240-104, 
+PlacedObjects: LightSource><726.0533><1884.214><0.2934783~EffectColor1~-153~44~50~86.60254~0~0, LightSource><731.3856><2090.104><0.3258574~EffectColor1~59~-147~50~86.60254~0~0, LightSource><721.9452><1207.943><0.5~EffectColor1~-36~140~-409~-15.39746~0~0, LightSource><450.3078><1144.442><0.3804348~EffectColor1~-10~67~50~86.60254~1~0, LightSource><349.9464><1211.288><0.4130435~EffectColor1~3~67~50~86.60254~0~0, CustomDecal><138.6174><1862.088><-20~265~364~257~366~-12~15~-335~0.3043478~0.5869565~0.25~GodOfEyes~0.9021739~0.2282609~0.9021739~0.2282609~0.9021739~0.2282609~0.9021739~0.2282609, ReliableSpear><634.5922><761.6271><, ReliableSpear><619.7265><1860.551><, 
+AmbientSounds: OMNI><AM_WIN-HowlingWnd.ogg><736.1271><552.4078><0.6086956><1, SPOT><Mech Active.wav><716.056><397.558><0.5><1><156.056><1778.558><205.6447><-53.35535><0><0.1, SPOT><Mech Active.wav><881.8503><393.6173><0.326087><1><565.8503><1771.617><-207.3553><18.64465><0><0.1, OMNI><AM_RAIN-RollingThunder.ogg><725.7085><306.0544><0.5><1, OMNI><AM_RAIN-Rumbles.ogg><552.6932><531.4485><0.3695652><1, 
+FadePalette: 17, 0.5543478, 0.5543478, 0.5543478
+WetTerrain: OFF

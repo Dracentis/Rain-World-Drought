@@ -1,0 +1,3 @@
+DangerType: None
+Palette: 25
+Effects: ProjectedScanLines-0.4021739-20-20, SunBlock-1-23-79, ZeroG-1-261-138, 

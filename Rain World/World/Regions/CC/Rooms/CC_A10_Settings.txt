@@ -1,0 +1,10 @@
+Clouds: 0.4021739
+Grime: 0.3369565
+BkgDroneVolume: 0.2869565
+Palette: 6
+EffectColorB: 2
+Effects: Fog-0.173913-20-20, Flies-0.1413043-21-73, 
+PlacedObjects: BlueToken><419.0155><412.9494><-1~59~-4~29~1~WhiteLizard~111, DeadTokenStalk><832.1953><83.4574><-8~39, Rainbow><557.8529><80.42151><-402~555~-481~190~0,0,0.5978261,0.6304348,0.8369565,0.3913043, 
+AmbientSounds: SPOT><SO_IND-Generator.ogg><858.8719><50.90363><0.1413043><1><661.8719><220.9036><-130.3553><35.64465><0><0.502174, 
+FadePalette: 15, 0.4565217
+WetTerrain: OFF

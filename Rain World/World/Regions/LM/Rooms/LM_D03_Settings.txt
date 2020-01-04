@@ -1,0 +1,10 @@
+Template: LM_SettingsTemplate_Transform
+DangerType: None
+Clouds: 1
+Grime: 0
+BkgDroneVolume: 0.326087
+Palette: 23
+Effects: ZeroGSpecks-0.2717391-21-73, ElectricStorm-0.5217391-280-93, BrokenZeroG-1-20-20, 
+PlacedObjects: ZapCoil><637.7101><111.304><37~335, ZapCoil><433.9921><113.5502><34~334, ZapCoil><874.4265><111.436><37~331, LightSource><770.9246><86.81479><1~Environment~-52~197~50~86.60254~0~0, LightSource><84.43121><584.9154><1~Environment~-120~-85~50~86.60254~1~0, LightFixture><437.4677><370.6262><ZapCoilLight~17.32051~-10~6, LightFixture><890.5726><341.8425><ZapCoilLight~17.32051~-10~19, LightFixture><71.56415><88.42638><RedLight~17.32051~-10~66, LightFixture><531.6063><444.4214><RedLight~17.32051~-10~18, LightFixture><243.6949><607.7048><RedLight~17.32051~-10~29, LightFixture><915.151><658.5948><RedLight~17.32051~-10~72, 
+AmbientSounds: OMNI><AM_ENV-WallHum.ogg><549.3017><616.6932><0.3586957><0.8043478, OMNI><AM_IND-SuperStructure.ogg><754.8706><493.9025><0.5><1, 
+FadePalette: 17, 0.3804348

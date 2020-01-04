@@ -1,0 +1,6 @@
+Template: SL_SettingsTemplate_Sewer
+Effects: Drain-0.3043478-20-20, 
+PlacedObjects: WaterNut><347.0549><374.956><-519~137~2~3, WaterNut><616.3771><379.0922><-565~36.99997~1~5, WaterNut><368.678><391.4366><-547~-91~2~5, InsectGroup><598.4346><360.0769><3~119~-30~257~RockFlea~0.3913043, GoldToken><425.1996><456.4874><9~-63~-196~-358~0~SL~111, BlueToken><489.0685><444.916><-10~-63~7~-343~1~SeaLeech~101, 
+AmbientSounds: SPOT><AM_IND-DeepHum.ogg><782.9499><310.7432><0.326087><1><494.9499><260.7432><-90.35535><-22.35535><0><0.3608697, SPOT><SO_WAT-MoreDrips.ogg><777.3867><491.6648><0.4130435><1><472.3867><411.6648><-97.35535><-64.35535><0><0.2304349, 
+Triggers: Spot<tA>event<tB>MusicEvent<eA>songName<eB>NA_21 - New Terra<eA>vol<eB>0.31087<eA>prio<eB>0.5<eA>mxThrt<eB>1<eA>loop<eB>0<eA>droneTol<eB>0<eA>rooms<eB>3<eA>rest<eB>5<eA>fadeIn<eB>156.5217<eA>oneSongPerCycle<eB>0<eA>stopAtDeath<eB>0<eA>stopAtGate<eB>0<tA>multiUse<tB>0<tA>toCycle<tB>-1<tA>fromCycle<tB>0<tA>delay<tB>0<tA>panPos<tB>732.6407<tB>216.8579<tA>fireChance<tB>1<tA>entrance<tB>-1<tA>karma<tB>0<tA>slugcats<tB>111<tA>pos<tB>668.6407<tB>385.8578<tA>handlePos<tB>-161.3553<tB>-223.3553, 
+FadePalette: 10, 0.04347826

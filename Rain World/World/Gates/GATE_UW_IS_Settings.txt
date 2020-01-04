@@ -1,0 +1,12 @@
+Template: NONE
+DangerType: Flood
+CeilingDrips: 0.6521739
+Clouds: 0.1847826
+Grime: 0
+BkgDroneVolume: 0
+Palette: 16
+EffectColorB: 3
+Effects: Lightning-0.4565217-11-96, 
+PlacedObjects: NoSpearStickZone><489.1862><248.6895><-255~103, 
+AmbientSounds: OMNI><AM_ENV-NatWind.ogg><468.5649><633.5609><0.3478261><1, OMNI><AM_ENV-WallHum.ogg><662.5624><634.5695><0.3695652><0.8434783, OMNI><SO_WAT-RainishDrips.ogg><847.0666><637.8298><0.3695652><0.9413043, SPOT><AM_IND-DeepHum.ogg><71.91913><486.1432><0.3913043><1><482.9191><-20.85681><-190.3553><-29.35534><0><0.252174, 
+FadePalette: 17, 0.3804348

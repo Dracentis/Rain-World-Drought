@@ -1,0 +1,11 @@
+Template: NONE
+CeilingDrips: 0.1630435
+RainIntensity: 0
+RumbleIntensity: 0
+Palette: 19
+EffectColorA: 5
+EffectColorB: 13
+Effects: AboveCloudsView-1-20-76, 
+AmbientSounds: OMNI><AM_ENV-NatWind.ogg><721.9318><490.938><0.25><1, OMNI><AM_ENV-CityTone.ogg><770.8873><561.1046><0.6413044><1, OMNI><AM_IND-Utility01.ogg><750.6494><469.883><0.1956522><1, SPOT><AM_IND-SuperStructure.ogg><748.1573><486.8228><0.5><1><829.1572><450.8228><-251.3553><-70.35535><0><0.1, 
+FadePalette: 15, 0.3478261
+WetTerrain: OFF

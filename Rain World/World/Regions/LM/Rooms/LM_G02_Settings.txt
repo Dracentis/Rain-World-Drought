@@ -1,0 +1,7 @@
+RainIntensity: 1
+Palette: 25
+Effects: ZeroG-1-29-97, LMSwarmers-0.1521739-20-20, SunBlock-1-30-30, SuperStructureProjector-0.6956522-344-128, 
+PlacedObjects: CoralNeuron><535.2><856.9969><-94~251, WallMycelia><456.0747><1399.564><0~100, 
+AmbientSounds: OMNI><SO_SFX-DataTrans.ogg><712.4276><187.6579><0.3043478><1, OMNI><SO_SFX-DataStream.ogg><712.1782><111.8409><0.2826087><1, OMNI><AM_SFX-RandomGods.ogg><342.3><257.7491><0.07608695><1, OMNI><SO_SFX-Gutleut.ogg><718.1759><487.9358><0.3043478><1, OMNI><AM_IND-SuperStructure.ogg><710.4028><398.621><0.6739131><1, 
+FadePalette: 10, 0.4565217, 0.4782609
+WetTerrain: OFF

@@ -1,0 +1,11 @@
+Template: NONE
+DangerType: Thunder
+RumbleIntensity: 0.1956522
+Clouds: 0.3586957
+Palette: 16
+EffectColorA: 4
+Effects: Lightning-0.6086956-20-20, BkgOnlyLightning-0-0-0, GreenSparks-0.4456522-22-113, ExtraLoudThunder-0.2608696-46-73, ElectricDeath-1-30-30, 
+PlacedObjects: LightFixture><382.3156><1740.827><RedLight~17.32051~-10~45, LightFixture><635.6942><1746.048><RedLight~17.32051~-10~45, LightFixture><259.05><1153.75><RedLight~17.32051~-10~91, LightFixture><680.4326><1156.668><RedLight~17.32051~-10~91, LightFixture><238.6853><732.8252><RedLight~17.32051~-10~47, LightFixture><500.0978><732.8256><RedLight~17.32051~-10~47, DangleFruit><487.5491><1997.281><0~0~2~3, DangleFruit><159.7254><2023.198><0~0~2~3, DangleFruit><346.561><1877.934><0~0~2~3, DangleFruit><218.5875><1946.117><0~0~2~3, 
+AmbientSounds: OMNI><AM_ENV-CityTone.ogg><710.878><566.6537><0.3804348><1, OMNI><AM_ENV-LightWind.ogg><732.3118><521.5679><0.1956522><1, OMNI><AM_IND-DeepHum.ogg><740.5514><307.0234><0.3695652><1, OMNI><AM_RAIN-Rumbles.ogg><778.1142><294.1032><0.1630435><1, OMNI><AM_RAIN-QuietThunder.ogg><707.9498><328.7581><0.5><1, OMNI><AM_WIN-HowlingWnd.ogg><726.5273><548.3019><0.1304348><1, 
+FadePalette: 17, 0.5543478, 0.5543478, 0.5543478
+WetTerrain: OFF

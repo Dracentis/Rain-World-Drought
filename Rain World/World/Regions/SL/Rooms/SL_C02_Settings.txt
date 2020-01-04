@@ -1,0 +1,8 @@
+Clouds: 0.3369565
+Grime: 0.3043478
+BkgDroneVolume: 0.2769565
+Palette: 13
+EffectColorB: 6
+Effects: Fog-0.5652174-20-20, 
+PlacedObjects: DangleFruit><2338.09><363.6198><-627~194~2~3, DangleFruit><2211.094><385.8751><-849~4~2~3, DangleFruit><2272.703><372.5557><-930~106~2~3, FirecrackerPlant><2165.581><521.4329><-227~52~2~3, FirecrackerPlant><2151.998><519.05><-790~-211~2~3, InsectGroup><2324.712><589.0505><-36~120~0~0~TinyDragonFly~0.173913, InsectGroup><2863.076><287.5653><-50~133~0~0~RockFlea~0.1521739, InsectGroup><1190.953><496.6945><-111~97~0~0~TinyDragonFly~0.2717391, 
+AmbientSounds: OMNI><AM_WAT-Sea01.ogg><649.5367><644.3034><0><1, OMNI><AM_ENV-Outside.ogg><474.2638><644.4495><0.4456522><1, 

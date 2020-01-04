@@ -1,0 +1,4 @@
+DangerType: Flood
+Clouds: 0.2173913
+AmbientSounds: OMNI><AM_ENV-LightWind.ogg><828.85><643.6732><0.2608696><0.823913, OMNI><SO_WAT-LilDrips.ogg><650.6083><644.3912><0.1847826><1, 
+FadePalette: 8, 0.2826087

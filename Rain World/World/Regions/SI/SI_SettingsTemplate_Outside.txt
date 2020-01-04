@@ -1,0 +1,15 @@
+DangerType: Rain
+CeilingDrips: 0.5
+WaveSpeed: 0.75
+WaveLength: 0.5
+WaveAmplitude: 0
+SecondWaveLength: 0.1666667
+SecondWaveAmplitude: 0
+Clouds: 0.2717391
+Grime: 0.3043478
+BkgDroneVolume: 0.2608696
+Palette: 2
+EffectColorA: 10
+EffectColorB: 2
+Effects: Flies-0.0326087-101-342, SkyDandelions-0.5-102-287,
+AmbientSounds: OMNI><AM_ENV-NatWind.ogg><859.5842><582.1382><0.3008696><1, 

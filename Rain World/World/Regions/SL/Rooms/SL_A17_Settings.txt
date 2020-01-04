@@ -1,0 +1,6 @@
+Template: SL_SettingsTemplate_Sewer
+DangerType: Flood
+Clouds: 0.7391304
+EffectColorB: 6
+Effects: Drain-0.3043478-20-20, 
+FadePalette: 8, 0.1630435

@@ -1,0 +1,9 @@
+DangerType: None
+Clouds: 0
+EffectColorA: 9
+EffectColorB: 18
+Effects: AboveCloudsView-1-20-20, SkyDandelions-0-30-30, Flies-0-40-40, 
+PlacedObjects: LightSource><419.5992><1801.826><1~EffectColor2~-66~-73~49~-48.39746~1~0, UniqueDataPearl><515.4421><1444.444><0~0~0~0~26~0, 
+AmbientSounds: OMNI><AM_WIN-StrongWnd2.ogg><772.8636><507.1037><1><1.03913, 
+FadePalette: 18, 0.5978261, 0.5978261, 0.5978261
+WetTerrain: OFF

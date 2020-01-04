@@ -1,0 +1,6 @@
+RainIntensity: 0.01086957
+RumbleIntensity: 0
+Clouds: 0.2717391
+PlacedObjects: KarmaFlower><796.1471><329.5785><-247~246~5~7, VoidSpawnEgg><309.05><281.6937><0~0~2~3~0, VoidSpawnEgg><580.1244><327.5944><-20~123~2~3~0, 
+AmbientSounds: OMNI><AM_ENV-SubTerr.ogg><711.5923><448.1775><0.173913><1, OMNI><AM_ENV-NatWind.ogg><694.4471><493.716><0.1086956><1, OMNI><AM_ENV-LushNight.ogg><733.8004><502.7376><0.3478261><1, 
+FadePalette: 6, 0.3043478

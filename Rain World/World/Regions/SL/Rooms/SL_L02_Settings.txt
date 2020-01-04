@@ -1,0 +1,6 @@
+Template: SL_SettingsTemplate_Sewer
+Clouds: 1
+Effects: Pulse-0.1521739-20-20, 
+PlacedObjects: LightSource><454.6324><65.0882><1~Environment~-308~389~50~86.60254~1~0, LargePiston><766.9446><324.2036><, LargePiston><205.8846><326.1021><, 
+AmbientSounds: OMNI><AM_IND-Fabrik01.ogg><706.8481><248.3699><0.5108696><1, OMNI><SO_IND-Humm.ogg><707.8801><189.402><0.6521739><1, SPOT><SO_IND-NoiseMech.ogg><721.8124><531.9308><0.5869565><1><471.8124><62.93079><-78.35535><211.6447><0><0.1, 
+FadePalette: 10, 0.6413044

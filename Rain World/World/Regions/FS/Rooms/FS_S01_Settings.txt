@@ -1,0 +1,3 @@
+Template: FS_SettingsTemplate_Forest
+Clouds: 0.4130435
+AmbientSounds: OMNI><AM_ENV-NatWind.ogg><731.6245><489.8443><0.1195652><1, OMNI><AM_ENV-Pasture.ogg><778.7994><332.0562><0.3369565><1, OMNI><AM_ENV-WallHum.ogg><717.4586><431.3043><0.5><1, 

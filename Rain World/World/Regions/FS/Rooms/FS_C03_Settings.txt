@@ -1,0 +1,9 @@
+Template: FS_SettingsTemplate_Forest
+RumbleIntensity: 0
+Clouds: 0.1413043
+EffectColorA: 2
+EffectColorB: 13
+Effects: TinyDragonFly-0.2065217-20-20, 
+PlacedObjects: SeedCob><759.0502><258.7402><0~0~7~10, 
+AmbientSounds: OMNI><AM_ENV-Pasture.ogg><733.7994><407.0562><0.326087><1, OMNI><AM_ENV-WinterHum.ogg><737.8494><318.3685><0.5108696><1, 
+FadePalette: 14, 0.2065217, 0.3586957

@@ -1,0 +1,8 @@
+Template: GW_SettingsTemplate_Inside
+Clouds: 0.1195652
+BkgDroneVolume: 0.2769565
+EffectColorA: 13
+EffectColorB: 6
+PlacedObjects: InsectGroup><299.7532><405.7><3~53~0~0~Ant~0.7173913, InsectGroup><595.2607><129.6997><-233~216~0~0~RockFlea~1, ReliableSpear><537.1844><76.92256><, 
+AmbientSounds: OMNI><AM_IND-Midsex01.ogg><721.0634><160.8221><0.05434782><1, 
+FadePalette: 8, 0.2391304

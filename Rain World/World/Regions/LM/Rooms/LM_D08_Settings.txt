@@ -1,0 +1,9 @@
+Template: NONE
+DangerType: None
+Clouds: 1
+Grime: 0
+Palette: 23
+Effects: ZeroG-1-30-30, SunBlock-1-24-86, ProjectedScanLines-0-33-149, 
+PlacedObjects: LightFixture><634.8307><430.067><RedLight~17.32051~-10~32, LightSource><448.5431><272.4453><1~Environment~104~145~50~86.60254~1~0, 
+AmbientSounds: OMNI><AM_ENV-WallHum.ogg><672.2808><665.4476><0.6086956><0.6869565, 
+FadePalette: 17, 0.2934783

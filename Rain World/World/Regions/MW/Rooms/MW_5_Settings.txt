@@ -1,0 +1,8 @@
+Template: NONE
+Palette: 18
+EffectColorB: 8
+Effects: AboveCloudsView-1-20-20, 
+PlacedObjects: UniqueDataPearl><453.9248><485.9353><0~0~0~0~0~0, 
+AmbientSounds: OMNI><AM_WIN-StrongWnd2.ogg><725.9294><501.1615><0.3804348><1, OMNI><AM_WIN-MedWind.ogg><747.3118><594.4402><0.4347826><1, 
+FadePalette: 8, 0.3369565
+WetTerrain: OFF

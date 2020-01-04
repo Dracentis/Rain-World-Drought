@@ -1,0 +1,52 @@
+Palette: 5
+batDepleteCyclesMin: 2
+batDepleteCyclesMax: 7
+batDepleteCyclesMaxIfLessThanTwoLeft: 3
+batDepleteCyclesMaxIfLessThanFiveLeft: 4
+overseersSpawnChance: 0.5
+overseersMin: 0
+overseersMax: 4
+playerGuideOverseerSpawnChance: 0.7
+Subregion: Industrial Complex
+Broken Shelters: 2: HI_S03
+Room Setting Templates: Outside, Inside
+Room_Attr: HI_C13: CyanLizard-2,
+Room_Attr: HI_B04: CyanLizard-2,Vulture-2,DropBug-2,KingVulture-2,
+Room_Attr: HI_B12: CyanLizard-2,
+Room_Attr: HI_B13: Vulture-3,KingVulture-3,
+Room_Attr: HI_A15: PinkLizard-2,GreenLizard-2,BlueLizard-2,YellowLizard-2,WhiteLizard-2,RedLizard-2,BlackLizard-2,Salamander-2,CyanLizard-2,EggBug-3,DropBug-2,
+Room_Attr: HI_A20: CyanLizard-2,EggBug-3,DropBug-2,
+Room_Attr: HI_A14: CyanLizard-2,EggBug-3,
+Room_Attr: HI_A07: PinkLizard-2,GreenLizard-2,BlueLizard-2,YellowLizard-2,WhiteLizard-2,RedLizard-2,BlackLizard-2,Salamander-2,CyanLizard-2,EggBug-3,
+Room_Attr: HI_C02: PinkLizard-3,GreenLizard-3,BlueLizard-3,YellowLizard-3,RedLizard-3,BlackLizard-3,Salamander-3,EggBug-3,
+Room_Attr: HI_B02: Vulture-3,KingVulture-3,
+Room_Attr: HI_A22: DropBug-3,
+Room_Attr: HI_C01: PinkLizard-3,BlueLizard-3,YellowLizard-3,WhiteLizard-3,RedLizard-3,BlackLizard-3,Salamander-3,DropBug-3,
+Room_Attr: HI_B03: WhiteLizard-3,Vulture-3,DropBug-2,KingVulture-3,
+Room_Attr: HI_B08: GreenLizard-3,EggBug-3,DropBug-3,
+Room_Attr: HI_C04: GreenLizard-2,BlueLizard-3,Snail-3,
+Room_Attr: HI_A25: Snail-3,DropBug-3,
+Room_Attr: HI_A21: Snail-3,DropBug-2,
+Room_Attr: HI_B06: PinkLizard-3,GreenLizard-3,DropBug-3,
+Room_Attr: HI_A10: Vulture-3,DropBug-2,KingVulture-3,
+Room_Attr: HI_C11: GreenLizard-1,BlueLizard-3,WhiteLizard-3,CyanLizard-3,EggBug-3,
+Room_Attr: HI_B09: BlueLizard-3,WhiteLizard-3,CyanLizard-2,EggBug-3,DropBug-3,
+Room_Attr: HI_B07: PinkLizard-3,CyanLizard-2,Vulture-3,KingVulture-3,
+Room_Attr: HI_B14: PinkLizard-2,GreenLizard-2,CyanLizard-2,
+Room_Attr: HI_D01: CyanLizard-2,DropBug-3,
+Room_Attr: HI_C03: BlueLizard-3,WhiteLizard-3,DropBug-3,
+Room_Attr: HI_A11: CyanLizard-2,
+Room_Attr: HI_B15: CyanLizard-2,Centipede-4,SmallCentipede-4,BigSpider-3,DropBug-2,
+Room_Attr: HI_A04: CyanLizard-2,Vulture-3,KingVulture-3,
+Room_Attr: HI_A26: CyanLizard-2,BigSpider-3,DropBug-2,
+Room_Attr: HI_B05: BlueLizard-3,WhiteLizard-3,CyanLizard-2,DropBug-3,
+Room_Attr: HI_A16: PinkLizard-2,GreenLizard-2,BlueLizard-2,YellowLizard-2,WhiteLizard-2,RedLizard-2,BlackLizard-2,Salamander-2,
+Room_Attr: HI_A17: PinkLizard-2,GreenLizard-2,BlueLizard-2,YellowLizard-2,WhiteLizard-2,RedLizard-2,BlackLizard-2,Salamander-2,
+Room_Attr: HI_A27: CyanLizard-2,DropBug-2,
+Room_Attr: HI_A23: PinkLizard-2,GreenLizard-2,BlueLizard-2,YellowLizard-2,WhiteLizard-2,RedLizard-2,BlackLizard-2,Salamander-2,
+Room_Attr: HI_A18: PinkLizard-3,GreenLizard-3,BlueLizard-2,YellowLizard-3,WhiteLizard-2,BlackLizard-3,Salamander-3,Vulture-3,DropBug-2,KingVulture-3,
+Room_Attr: HI_C05: PinkLizard-3,GreenLizard-3,BlueLizard-2,YellowLizard-3,WhiteLizard-2,BlackLizard-3,Salamander-3,Vulture-3,KingVulture-3,
+Room_Attr: HI_A06: PinkLizard-3,GreenLizard-3,YellowLizard-3,BlackLizard-3,Salamander-3,Vulture-2,KingVulture-2,
+Room_Attr: HI_A24: WhiteLizard-2,CyanLizard-2,
+Room_Attr: HI_S04: StandardGroundCreature-1,Slugcat-1,LizardTemplate-1,PinkLizard-1,GreenLizard-1,BlueLizard-1,YellowLizard-1,WhiteLizard-1,RedLizard-1,BlackLizard-1,Salamander-1,Fly-1,Leech-1,SeaLeech-1,Snail-1,Vulture-1,GarbageWorm-1,LanternMouse-1,CicadaA-1,CicadaB-1,Spider-1,JetFish-1,BigEel-1,Deer-1,TubeWorm-1,DaddyLongLegs-1,BrotherLongLegs-1,TentaclePlant-1,PoleMimic-1,MirosBird-1,TempleGuard-1,Centipede-1,Centiwing-1,SmallCentipede-1,Scavenger-1,Overseer-1,
+Room_Attr: HI_A19: CyanLizard-2,

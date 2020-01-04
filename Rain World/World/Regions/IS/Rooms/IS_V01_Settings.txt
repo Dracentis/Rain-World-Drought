@@ -1,0 +1,5 @@
+Palette: 35
+Effects: Pulse-0.0326087-30-30, 
+PlacedObjects: LightSource><1924.943><482.5527><1~EffectColor1~-73~-63~-422~45.60254~0~0, LightSource><1803.751><476.3><1~EffectColor1~-84~-84~-163~145.6025~0~0, LightFixture><1877.95><186.9879><RedLight~17.32051~-10~9, LightFixture><1007.785><397.8031><RedLight~17.32051~-10~17, LightFixture><1352.943><613.0516><RedLight~17.32051~-10~86, LightSource><245.7579><77.88242><0.5978261~Environment~569~493~50~86.60254~0~0, 
+FadePalette: 10, 0.6413044, 0.4565217
+WetTerrain: OFF

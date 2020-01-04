@@ -1,0 +1,9 @@
+Template: NONE
+Clouds: 1
+Palette: 16
+EffectColorA: 8
+Effects: Lightning-0.1630435-284-85, 
+PlacedObjects: LightSource><544.3047><438.5432><1~EffectColor1~0~100~50~86.60254~0~0, LightSource><400.1222><433.5962><0.4021739~EffectColor2~0~100~50~86.60254~0~0, LightSource><260.1824><443.5618><0.4021739~EffectColor1~0~100~50~86.60254~0~0, LightFixture><614.1995><609.3065><SlimeMoldLight~17.32051~-10~45, LightFixture><183.386><612.6467><RedLight~17.32051~-10~84, CosmeticSlimeMold2><619.6989><611.0211><0~100, CosmeticSlimeMold><626.9014><617.6307><0~100, SlimeMold><584.902><615.88><0~0~2~3, SlimeMold><653.04><595.5541><0~0~2~3, 
+AmbientSounds: OMNI><AM_IND-Utility02.ogg><739.147><457.9215><0.5><1, OMNI><AM_RAIN-Rumbles.ogg><726.6776><294.158><0.25><1, OMNI><AM_WIN-HowlingWnd.ogg><733.0507><553.0169><0.25><1, OMNI><Mech Basic.wav><721.9845><387.8006><0.5><1, SPOT><SO_IND-FlourLight.ogg><680.1729><250.6494><0.3913043><1><406.1729><420.6494><-27.35535><-116.3553><0><0.1, 
+FadePalette: 17, 0.5
+WetTerrain: OFF

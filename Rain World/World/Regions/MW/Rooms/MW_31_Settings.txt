@@ -1,0 +1,11 @@
+Template: NONE
+DangerType: Thunder
+RumbleIntensity: 0.2173913
+Clouds: 0.4782609
+Palette: 16
+EffectColorA: 8
+Effects: Lightning-0.5-20-20, GreenSparks-0.6739131-34-85, ElectricDeath-1-40-132, 
+PlacedObjects: KarmaFlower><474.0938><369.6766><-252~-108~5~7, DangleFruit><374.4913><281.6998><-295~-160~2~3, DangleFruit><430.8449><209.1263><-290~-125~2~3, DangleFruit><506.1234><193.3452><-299~-158~2~3, DangleFruit><600.7754><177.9484><-335~-209~2~3, DangleFruit><666.1093><204.1675><-284~-256~2~3, DangleFruit><724.7851><246.6969><-378~-209~2~3, DangleFruit><775.6821><322.8327><-303~-288~2~3, DataPearl><905.6792><1099.563><0~0~0~0~1~0, LightFixture><796.4438><1378.701><RedLight~17.32051~-10~90, LightFixture><222.4039><1395.622><RedLight~17.32051~-10~98, BlueToken><632.4159><212.3883><-12~51~201~-182~1~GreyLizard~111, DeadTokenStalk><626.4574><175.3081><-25~76, 
+AmbientSounds: OMNI><AM_WIN-StrongWnd2.ogg><760.8511><506.6336><0.2282609><1, OMNI><AM_WIN-HowlingWnd.ogg><755.8928><544.61><0.5><1, OMNI><Deep Weird Wind.wav><718.0612><420.1839><0.173913><1, OMNI><AM_RAIN-Rumbles.ogg><743.1687><293.6074><0.2608696><1, OMNI><AM_RAIN-RollingThunder.ogg><733.2564><310.9499><0.5><1, 
+FadePalette: 17, 0.5543478, 0.5543478
+WetTerrain: OFF

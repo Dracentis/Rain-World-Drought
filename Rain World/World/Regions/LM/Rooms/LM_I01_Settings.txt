@@ -1,0 +1,9 @@
+Template: NONE
+DangerType: None
+Clouds: 0
+Grime: 0.1630435
+Palette: 25
+Effects: ZeroGSpecks-0.3478261-18-91, SunBlock-1-321-90, ProjectedScanLines-0.75-341-43, LMSwarmers-0.07608695-453-275, ZeroG-1-322-193, 
+PlacedObjects: LightFixture><1378.14><731.0096><RedLight~17.32051~-10~82, LightFixture><2084.178><1416.091><RedLight~17.32051~-10~0, LightFixture><2645.695><2193.208><RedLight~17.32051~-10~34, LightFixture><2757.3><961.245><RedLight~17.32051~-10~63, LightFixture><2884.113><268.8352><RedLight~17.32051~-10~54, LightFixture><943.421><2228.646><RedLight~17.32051~-10~86, LightFixture><136.4487><2248.772><RedLight~17.32051~-10~39, LightFixture><2036.943><2245.192><RedLight~17.32051~-10~75, LightFixture><763.1588><1851.428><RedLight~17.32051~-10~31, WallMycelia><95.04944><2323.012><66~-28, CoralNeuron><639.627><934.6151><-127~205, WallMycelia><800.2><914.4791><0~100, LightFixture><73.60352><569.5789><RedLight~17.32051~-10~88, DeepProcessing><1857.701><245.0226><-78~1006~1165~1016~1069~0~0~0~0.7941855~1~0, LightSource><1570.4><2188.133><1~Environment~128~-89~50~86.60254~1~0, 
+AmbientSounds: OMNI><AM_IND-SuperStructure.ogg><773.5687><490.8344><0.6086956><0.9021739, OMNI><OM.wav><770.9452><341.4565><0.3804348><1, OMNI><SO_SFX-Data1.ogg><722.196><295.0397><0.2826087><1, 
+FadePalette: 10, 0.3804348, 0.3804348, 0.3804348, 0.3804348, 0.3804348, 0.3804348, 0.3804348, 0.3804348, 0.3804348

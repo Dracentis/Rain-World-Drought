@@ -1,0 +1,6 @@
+Template: FS_SettingsTemplate_Forest
+EffectColorB: 13
+Effects: Moth-0.2173913-20-20, TinyDragonFly-0.2282609-23-70, BorderPushBack-1-30-30, 
+AmbientSounds: OMNI><AM_ENV-NatWind.ogg><731.6245><489.8443><0.5978261><1, OMNI><AM_ENV-Pasture.ogg><733.7994><407.0562><0.5><1, OMNI><AM_ENV-Outside.ogg><717.9368><319.3215><0.5><1, OMNI><AM_ENV-CricketsWnd.ogg><755.9006><546.1183><0.2826087><1, 
+FadePalette: 10, 0.2717391, 0.2826087, 0.2608696, 0.2608696
+WetTerrain: OFF

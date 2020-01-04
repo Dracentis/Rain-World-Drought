@@ -1,0 +1,17 @@
+Palette: 15
+batDepleteCyclesMin: 2
+batDepleteCyclesMax: 7
+batDepleteCyclesMaxIfLessThanTwoLeft: 3
+batDepleteCyclesMaxIfLessThanFiveLeft: 4
+batsPerActiveSwarmRoom: 4
+overseersSpawnChance: 0.8
+overseersMin: 0
+overseersMax: 4
+playerGuideOverseerSpawnChance: 1.0
+Subregion: Forest Sanctuary
+Room Setting Templates: Cave, Forest
+Room_Attr: FS_A01: Vulture-1,KingVulture-1,
+Room_Attr: FS_L05: WalkerBeast-1,
+Room_Attr: FS_L04: WalkerBeast-1,
+Room_Attr: FS_L02: WalkerBeast-1,
+Room_Attr: FS_L03: WalkerBeast-1,

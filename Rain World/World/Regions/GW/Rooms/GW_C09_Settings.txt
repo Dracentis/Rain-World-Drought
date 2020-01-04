@@ -1,0 +1,12 @@
+Template: NONE
+Clouds: 0.3695652
+Grime: 0.326087
+BkgDroneVolume: 0.2769565
+WaterReflectionAlpha: 0.4456522
+Palette: 9
+EffectColorA: 13
+EffectColorB: 18
+Effects: CorruptionSpores-1-20-20, ZeroGSpecks-1-30-30, 
+PlacedObjects: DataPearl><252.0289><1486.698><0~0~0~0~12~0, FirecrackerPlant><891.6584><1393.678><-911~3~2~3, FirecrackerPlant><819.6746><1388.685><-857~95~2~3, FirecrackerPlant><836.8731><1395.346><-852~-85~2~3, CustomDecal><378.9559><589.3729><-120~1724~404~1784~405~-21~-421~392~0~1~0~RustB2~0~1~0~1~1~1~1~1, CustomDecal><848.1987><2082.978><-240~37~244~571~401~356~-557~-103~0.326087~1~0~zGWMarks - A01~0.5652174~0~0.4565217~0~0.4565217~0~0.4565217~0.3043478, BlueToken><324.2708><1124.694><-26~-71~-153~59~1~BrotherLongLegs~111, DeadTokenStalk><357.9771><1104.199><-26~-45, 
+FadePalette: 8, 0.25, 0.2608696, 0.25
+WetTerrain: OFF

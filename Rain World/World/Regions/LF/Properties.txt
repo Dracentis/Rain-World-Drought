@@ -1,0 +1,47 @@
+Palette: 14
+batDepleteCyclesMin: 2
+batDepleteCyclesMax: 7
+batDepleteCyclesMaxIfLessThanTwoLeft: 3
+batDepleteCyclesMaxIfLessThanFiveLeft: 4
+overseersSpawnChance: 0.8
+overseersMin: 0
+overseersMax: 6
+Subregion: Farm Arrays
+playerGuideOverseerSpawnChance: 0.4
+Broken Shelters: 2: LF_S07
+Room Setting Templates: Underground, Farms
+Room_Attr: LF_C05: SmallNeedleWorm-1,BigNeedleWorm-1,
+Room_Attr: LF_A07: SmallNeedleWorm-2,BigNeedleWorm-2,
+Room_Attr: LF_F02: Vulture-3,Centiwing-4,SmallNeedleWorm-4,BigNeedleWorm-4,KingVulture-3,
+Room_Attr: LF_A04: PinkLizard-2,CicadaA-1,CicadaB-1,Centipede-1,RedCentipede-2,Centiwing-1,SmallCentipede-3,SmallNeedleWorm-2,BigNeedleWorm-2,
+Room_Attr: LF_A06: CicadaA-1,CicadaB-1,Centipede-2,RedCentipede-2,Centiwing-1,SmallNeedleWorm-2,BigNeedleWorm-2,
+Room_Attr: LF_E04: Vulture-3,SmallNeedleWorm-2,BigNeedleWorm-2,KingVulture-3,
+Room_Attr: LF_A03: PinkLizard-2,CicadaA-1,CicadaB-1,SmallCentipede-4,SmallNeedleWorm-2,BigNeedleWorm-2,
+Room_Attr: LF_H01: Vulture-2,BigSpider-1,SpitterSpider-1,SmallNeedleWorm-2,BigNeedleWorm-2,KingVulture-2,
+Room_Attr: LF_A15: SmallNeedleWorm-2,BigNeedleWorm-2,
+Room_Attr: LF_A05: YellowLizard-2,CyanLizard-1,CicadaA-1,CicadaB-1,Centiwing-2,SmallCentipede-3,BigSpider-2,SpitterSpider-2,SmallNeedleWorm-2,BigNeedleWorm-2,
+Room_Attr: LF_J01: Vulture-2,BigSpider-1,SpitterSpider-1,SmallNeedleWorm-1,BigNeedleWorm-1,KingVulture-2,
+Room_Attr: LF_C03: SmallNeedleWorm-1,BigNeedleWorm-1,
+Room_Attr: LF_D03: Vulture-3,SmallNeedleWorm-4,BigNeedleWorm-4,KingVulture-3,
+Room_Attr: LF_E03: Vulture-3,SmallNeedleWorm-2,BigNeedleWorm-2,KingVulture-3,
+Room_Attr: LF_D06: SmallCentipede-3,SmallNeedleWorm-1,BigNeedleWorm-1,
+Room_Attr: LF_S01: SmallCentipede-1,
+Room_Attr: LF_E01: Vulture-3,KingVulture-3,
+Room_Attr: LF_D01: Vulture-3,KingVulture-3,
+Room_Attr: LF_B02: SmallNeedleWorm-2,BigNeedleWorm-2,
+Room_Attr: LF_A17: SmallNeedleWorm-1,BigNeedleWorm-1,
+Room_Attr: LF_C01: Vulture-3,KingVulture-3,
+Room_Attr: LF_B03: Centipede-3,RedCentipede-3,
+Room_Attr: LF_B05: GreenLizard-2,Centipede-3,RedCentipede-3,
+Room_Attr: LF_D04: GreenLizard-2,
+Room_Attr: LF_A11: GreenLizard-1,CicadaA-2,CicadaB-2,Centipede-2,RedCentipede-2,SmallNeedleWorm-1,BigNeedleWorm-1,
+Room_Attr: LF_A13: GreenLizard-1,CicadaA-2,CicadaB-2,Centipede-2,RedCentipede-2,SmallNeedleWorm-1,BigNeedleWorm-1,
+Room_Attr: LF_A12: GreenLizard-1,CicadaA-2,CicadaB-2,Centipede-2,RedCentipede-2,SmallNeedleWorm-1,BigNeedleWorm-1,
+Room_Attr: LF_B01: Vulture-3,Centipede-1,RedCentipede-1,SmallNeedleWorm-1,BigNeedleWorm-1,KingVulture-3,
+Room_Attr: LF_D07: Vulture-3,Centipede-1,RedCentipede-1,SmallNeedleWorm-1,BigNeedleWorm-1,KingVulture-3,
+Room_Attr: LF_C02: Vulture-3,KingVulture-3,
+Room_Attr: LF_H02: Vulture-3,SmallNeedleWorm-2,BigNeedleWorm-2,KingVulture-3,
+Room_Attr: LF_E05: Vulture-3,BigSpider-1,SpitterSpider-1,SmallNeedleWorm-2,BigNeedleWorm-2,KingVulture-3,
+Room_Attr: LF_B04: CicadaA-1,CicadaB-1,SmallCentipede-3,SmallNeedleWorm-1,BigNeedleWorm-1,
+Room_Attr: LF_D08: YellowLizard-4,CyanLizard-4,CicadaA-1,CicadaB-1,SmallCentipede-3,BigSpider-3,SpitterSpider-3,SmallNeedleWorm-2,BigNeedleWorm-2,
+Room_Attr: LF_S03: CyanLizard-1,

@@ -1,0 +1,11 @@
+Template: NONE
+DangerType: None
+Clouds: 1
+Grime: 0.04347826
+BkgDroneVolume: 0
+Palette: 24
+Effects: ZeroG-1-20-20, ZeroGSpecks-0.3152174-19-80, Bloom-0-18-142, LMSwarmers-0.5-30-30, 
+PlacedObjects: LightSource><243.6856><520.5607><1~Environment~204~-30~50~86.60254~1~0, LightSource><604.1802><626.0867><1~White~-162~-52~50~86.60254~1~0, LightSource><137.7286><229.8011><1~Environment~-106~89~50~86.60254~1~0, LightSource><408.681><96.33493><1~Environment~-143~35~50~86.60254~1~0, LightSource><2873.915><41.13708><1~White~-245~-48~50~86.60254~1~0, LightSource><2016.317><79.66882><1~White~-96~111~50~86.60254~1~0, LightSource><1680.835><398.4309><0.25~Environment~-147~122~50~86.60254~1~0, LightSource><1086.68><274.6873><0.1630435~White~10~204~50~86.60254~1~0, LightSource><1480.583><679.8899><1~Environment~-97~-149~50~86.60254~1~0, LightSource><2641.868><164.9114><0.1630435~Environment~-78~108~50~86.60254~1~0, SuperStructureFuses><5.16394><383.0695><409~40, LightFixture><314.316><124.6888><RedLight~17.32051~-10~63, LightSource><2287.3><512.5175><1~White~-128~122~50~86.60254~1~0, LightSource><945.3479><613.1201><1~White~0~100~50~86.60254~1~0, LightFixture><276.1259><658.8431><RedLight~17.32051~-10~35, SpotLight><2266.83><243.5667><62~292~465~242~430~-121, CoralNeuron><2420.612><269.6446><182~169, WallMycelia><2814.802><298.8068><-56~124, 
+AmbientSounds: OMNI><SO_SFX-Drowning.ogg><831.4493><655.7332><0.4347826><1, SPOT><SO_SFX-Data1.ogg><66.44122><384.1914><0.2173913><1><228.4412><407.1914><56.64465><-91.35535><0><0.328261, SPOT><AM_IND-DeepHum.ogg><719.1041><307.5793><0.5><1><40.10413><568.5792><312.6447><-205.3553><0><0.1, SPOT><AM_IND-Fabrik01.ogg><715.3851><248.6474><0.5><1><245.3851><190.6474><155.6447><123.6447><0><0.1, 
+FadePalette: 17, 0.7282609, 0.5108696, 0.1195652
+WetTerrain: OFF

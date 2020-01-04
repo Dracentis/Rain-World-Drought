@@ -1,0 +1,12 @@
+Template: NONE
+DangerType: None
+Clouds: 1
+Grime: 0.09782609
+BkgDroneVolume: 0
+Palette: 22
+EffectColorA: 18
+EffectColorB: 18
+Effects: ZeroG-0.6195652-20-20, BkgOnlyLightning-0.4130435-20-75, 
+PlacedObjects: LightSource><1548.881><857.5895><1~Environment~0~100~50~86.60254~1~0, LightSource><1696.054><1467.21><0.2391304~Environment~0~100~-522~-288.3975~1~0, LightSource><1479.555><1481.296><0.3043478~Environment~0~100~-320~-137.3975~1~0, LightSource><114.0739><1481.655><0.5326087~Environment~0~100~-188~-292.3975~1~0, LightSource><535.4675><1470.553><0.5108696~Environment~0~100~-53~-410.3975~1~0, LightSource><102.8896><884.6667><0.4456522~Environment~0~100~-268~-261.3975~1~0, LightSource><933.6702><631.8166><0.5~Environment~0~100~-321~-181.3975~1~0, DangleFruit><1613.694><1373.7><21~-265~2~3, DangleFruit><1593.808><1397.944><-291~-282~2~3, DangleFruit><1897.896><1422.863><-174~-160~2~3, LightSource><1599.608><1376.109><1~Environment~49~136~50~86.60254~1~0, SlimeMold><1935.495><955.95><-219~-140~1~2, SlimeMold><1901.943><957.8043><-779~-104~1~2, SlimeMold><1870.301><957.2296><-738~-18~1~2, SlimeMold><2024.076><989.3148><-382~41~1~2, SlimeMold><1997.036><988.9467><-679~24~1~2, CosmeticSlimeMold2><1963.449><977.0203><-34~127, LightFixture><1043.721><842.3021><RedLight~17.32051~-10~75, LightFixture><119.6852><934.6892><RedLight~17.32051~-10~30, LightFixture><296.603><1445.364><RedLight~17.32051~-10~19, LightFixture><1516.964><1255.197><RedLight~17.32051~-10~60, 
+AmbientSounds: OMNI><AM_ENV-WallHum.ogg><828.056><651.808><0.4021739><0.726087, SPOT><AM_IND-DeepHum.ogg><58.80713><496.6971><0.423913><1><1195.807><436.6971><-206.3553><-289.3553><0><0.2847827, OMNI><AM_IND-SuperStructure.ogg><754.076><489.9015><0.2065217><1, OMNI><AM_IND-12thFloor.ogg><722.1891><350.5651><0.3586957><1, 
+FadePalette: 23, 0, 0, 0, 0

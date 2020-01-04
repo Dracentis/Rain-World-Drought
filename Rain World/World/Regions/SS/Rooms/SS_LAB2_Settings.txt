@@ -1,0 +1,11 @@
+Template: NONE
+DangerType: None
+Clouds: 1
+Grime: 0
+Palette: 24
+EffectColorB: 12
+Effects: ZeroG-1-20-20, ZeroGSpecks-0.2608696-19-86, CorruptionSpores-0-286-81, 
+PlacedObjects: LightSource><45.69092><143.8095><1~Environment~-9~139~50~86.60254~1~0, LightSource><617.9244><55.59792><1~Environment~-21~143~50~86.60254~1~0, Filter><622.0575><40.19562><-12~-31~128~-61~101, Corruption><971.801><251.4793><-146~124, Filter><984.3561><239.1696><-16~-26~0~0~010, 
+AmbientSounds: OMNI><SO_SFX-Drowning.ogg><831.45><648.5001><0.4456522><1, 
+FadePalette: 17, 0
+WetTerrain: OFF

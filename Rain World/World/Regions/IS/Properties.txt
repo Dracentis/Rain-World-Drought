@@ -1,0 +1,35 @@
+Palette: 36
+batDepleteCyclesMin: 2
+batDepleteCyclesMax: 7
+batDepleteCyclesMaxIfLessThanTwoLeft: 3
+batDepleteCyclesMaxIfLessThanFiveLeft: 4
+overseersSpawnChance: 0.2
+overseersMin: 0
+overseersMax: 4
+playerGuideOverseerSpawnChance: 0.1
+Subregion: Intake System
+Subregion: Gravity Pump
+Subregion: Water Reservoir
+Room Setting Templates: SurfaceSystems, GravityPump
+Room_Attr: GATE_SL_IS: BigEel-1,
+Room_Attr: IS_B01: BigEel-1,SeaDrake-3,
+Room_Attr: IS_B02: SeaDrake-3,
+Room_Attr: IS_Drain: BigEel-1,
+Room_Attr: IS_V06: BigEel-1,
+Room_Attr: IS_V04: BigEel-3,SeaDrake-3,
+Room_Attr: IS_V01: BigEel-1,
+Room_Attr: IS_G04: BigEel-1,SeaDrake-2,
+Room_Attr: IS_B03: BigEel-1,
+Room_Attr: IS_A05: BigEel-1,
+Room_Attr: IS_B05: BigEel-1,
+Room_Attr: IS_V07: BigEel-3,SeaDrake-3,
+Room_Attr: IS_V05: BigEel-1,SeaDrake-3,
+Room_Attr: IS_B04: BigEel-1,
+Room_Attr: IS_CORE: SeaDrake-2,
+Room_Attr: IS_F01a: BigEel-1,
+Room_Attr: IS_F03: BigEel-2,
+Room_Attr: IS_F04: BigEel-2,
+Room_Attr: IS_G01: BigEel-1,
+Room_Attr: IS_G02: BigEel-1,
+Room_Attr: IS_G03: BigEel-1,SeaDrake-2,
+Room_Attr: IS_S01: BigEel-1,

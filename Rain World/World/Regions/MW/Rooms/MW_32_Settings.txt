@@ -1,0 +1,12 @@
+Template: NONE
+DangerType: Thunder
+RumbleIntensity: 0.1413043
+Clouds: 0.5326087
+Palette: 16
+EffectColorA: 10
+EffectColorB: 10
+Effects: Lightning-0.6304348-24-125, ExtraLoudThunder-0.25-22-67, GreenSparks-0.6956522-20-20, ElectricDeath-1-311-227, 
+PlacedObjects: DangleFruit><274.7585><458.9499><0~0~2~3, DangleFruit><365.1278><419.0917><0~0~2~3, DangleFruit><549.7122><481.0537><0~0~2~3, DangleFruit><685.5989><387.381><0~0~2~3, DangleFruit><837.9382><483.9326><0~0~2~3, DangleFruit><233.3904><420.1425><0~0~2~3, DataPearl><200.0953><269.3242><168.9753~-29.95094~0~0~0~0, LightSource><777.3115><1406.569><0.4347826~EffectColor1~2~39~50~86.60254~0~0, LightSource><79.30693><1670.552><0.4347826~EffectColor1~0~100~50~86.60254~0~0, LightSource><80.30157><1522.475><0.5217391~EffectColor1~0~100~50~86.60254~0~0, LightSource><551.4472><1290.533><0.4673807~EffectColor1~0~56~50~86.60254~0~0, LightSource><75.9007><1811.826><0.3664557~EffectColor1~0~100~50~86.60254~0~0, LightSource><83.03839><1945.803><0.3664557~EffectColor1~0~100~50~86.60254~0~0, LightSource><287.9752><2118.194><0.2903668~EffectColor1~0~100~50~86.60254~0~0, LightSource><542.9019><2118.825><0.3695652~EffectColor1~0~100~50~86.60254~0~0, LightSource><194.0704><297.662><0.3695652~EffectColor1~-3~46~50~86.60254~0~0, LightSource><876.1813><588.9379><0.3695652~EffectColor1~-7~46~50~86.60254~0~0, LightSource><629.2831><393.5634><0.3695652~EffectColor1~-8~48~50~86.60254~0~0, LightSource><654.0776><567.8516><0.3695652~EffectColor1~-4~50~50~86.60254~0~0, LightSource><472.0502><547.7596><0.3695652~EffectColor1~-2~47~50~86.60254~0~0, 
+AmbientSounds: OMNI><AM_WIN-HowlingWnd.ogg><749.1727><551.6008><0.5><1, OMNI><AM_RAIN-RollingThunder.ogg><721.3927><309.8599><0.5><1, OMNI><AM_RAIN-Rumbles.ogg><718.8179><294.1673><0.3478261><1, SPOT><AM_IND-Utility04.ogg><722.6802><427.5626><0.8043478><1><741.7072><2116.58><-117.3553><150.6447><0><0.1, SPOT><SO_IND-Boiler.ogg><709.288><311.6964><0.5><1><-57.71204><1861.696><342.6447><-34.35535><0><0.1, SPOT><AM_IND-DeepHum.ogg><739.8611><306.856><0.5><1><307.8932><617.8049><233.6447><57.64465><0><0.1, 
+FadePalette: 17, 0.5543478, 0.5543478, 0.5543478
+WetTerrain: OFF

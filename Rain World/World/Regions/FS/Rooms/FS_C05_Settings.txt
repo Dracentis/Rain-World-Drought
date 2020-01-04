@@ -1,0 +1,7 @@
+RainIntensity: 0.2934783
+RumbleIntensity: 0.1195652
+Clouds: 0.4565217
+PlacedObjects: FirecrackerPlant><1016.588><100.0703><0~0~2~3, FirecrackerPlant><1095.31><93.31129><0~0~2~3, FirecrackerPlant><905.9347><60.06099><0~0~2~3, ReliableSpear><1497.872><51.65865><, ReliableSpear><1708.889><352.6439><, CustomDecal><1783.562><324.1832><-34~329~247~362~255~-11~-536~-75~0~1~0~moon_prop~0.5~0~0.5~0~0.5~0~0.5~0, ReliableIggyDirection><1377.291><56.80415><0~100~50~50~1~0~0~5~1~010, ReliableSpear><217.1118><108.3555><, 
+AmbientSounds: OMNI><AM_ENV-CityTone.ogg><741.4271><562.9362><0.326087><1, OMNI><AM_ENV-WinterHum.ogg><711.694><399.9515><0.7282609><1, OMNI><AM_RAIN-Rumbles.ogg><702.4174><337.8594><0.173913><1, 
+FadePalette: 14, 0.5, 0.7173913
+WetTerrain: OFF

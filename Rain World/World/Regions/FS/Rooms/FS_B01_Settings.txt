@@ -1,0 +1,11 @@
+Template: FS_SettingsTemplate_Forest
+RainIntensity: 0.01086957
+RumbleIntensity: 0
+Palette: 15
+EffectColorA: 2
+EffectColorB: 7
+Effects: Bloom-0.2826087-536-277, TinyDragonFly-0.5326087-709-89, Ant-0.5108696-691-155, Moth-0.7173913-630-215, 
+PlacedObjects: Mushroom><1827.894><321.1116><-507~185~2~3, Mushroom><1717.788><304.0536><-396~279~2~3, Mushroom><1644.766><323.4494><-320~113~2~3, ReliableSpear><1442.196><360.29><, ReliableSpear><1453.988><53.44965><, NeedleEgg><1478.891><186.0822><0~0~4~9, 
+AmbientSounds: OMNI><AM_ENV-NatWind.ogg><731.6245><489.8443><0.5><0.6673913, OMNI><AM_ENV-Pasture.ogg><733.7994><407.0562><1><1, 
+FadePalette: 11, 0.2173913, 0.2173913
+WetTerrain: OFF

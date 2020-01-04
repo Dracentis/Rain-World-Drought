@@ -1,0 +1,11 @@
+Template: NONE
+DangerType: Thunder
+RumbleIntensity: 0.173913
+Clouds: 0.6847826
+Palette: 16
+EffectColorA: 8
+Effects: Lightning-0.3913043-33-127, ElectricDeath-0.4347826-20-20, BkgOnlyLightning-0.4021739-30-30, ExtraLoudThunder-0.4130435-40-40, 
+PlacedObjects: DangleFruit><158.4613><1998.554><-363~-35~2~3, DangleFruit><199.0583><1931.693><51~-224~2~3, DangleFruit><277.5861><1996.181><-197~-231~2~3, DangleFruit><352.7645><1982.949><202~-96~2~3, LightFixture><364.603><1718.829><RedLight~17.32051~-10~26, LightFixture><823.3505><1955.867><RedLight~17.32051~-10~40, LightFixture><496.6357><2149.147><RedLight~17.32051~-10~77, LightSource><229.6604><1166.38><0.2934783~EffectColor1~0~100~50~86.60254~0~0, LightSource><113.4474><1172.307><0.3478261~EffectColor1~0~100~50~86.60254~0~0, 
+AmbientSounds: OMNI><AM_IND-Utility04.ogg><733.9179><429.4324><0.5><1, OMNI><SO_NAT-WindTunnel.ogg><726.3579><400.1407><0.08695652><1, OMNI><AM_RAIN-MehThunder.ogg><728.8249><339.0645><0.5><1, OMNI><AM_IND-Midsex02.ogg><740.7842><562.1971><0.3913043><1, 
+FadePalette: 17, 0.5543478, 0.5543478, 0.5543478
+WetTerrain: OFF

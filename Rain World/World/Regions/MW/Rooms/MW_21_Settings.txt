@@ -1,0 +1,11 @@
+Template: NONE
+DangerType: Thunder
+RumbleIntensity: 0.326087
+Clouds: 0.6086956
+Palette: 16
+EffectColorA: 8
+Effects: Lightning-0.7065217-20-20, ExtraLoudThunder-0.4565217-4-82, GreenSparks-0.8478261-39-134, ElectricDeath-1-30-30, 
+PlacedObjects: LightSource><2217.948><681.8043><0.5776832~EffectColor1~78~-116~-68~-262.3975~0~0, LightSource><2370.86><353.586><0.4255092~EffectColor1~-81~97~50~86.60254~0~0, LightSource><2787.689><449.3146><0.4673488~EffectColor1~0~100~50~86.60254~0~0, LightSource><493.3447><610.626><0.6847614~EffectColor1~0~100~50~86.60254~0~0, LightSource><194.6912><458.4488><0.6086791~EffectColor1~-93~128~50~86.60254~0~0, 
+AmbientSounds: OMNI><AM_WIN-HowlingWnd.ogg><740.7176><544.5526><0.5><1, OMNI><AM_RAIN-RollingThunder.ogg><733.1495><307.5771><0.5><0.6086956, OMNI><AM_RAIN-Rumbles.ogg><732.3136><293.5725><0.2826087><1, SPOT><AM_IND-SuperStructure.ogg><734.8991><486.8667><0.5><1><2617.887><690.8002><-81.35535><-74.35535><0><0.1, SPOT><AM_IND-Utility03.ogg><746.5508><446.5175><0.5><1><1410.401><621.399><-65.35535><-547.3553><0><0.1, SPOT><SO_IND-Humm.ogg><716.8679><186.4116><0.5><1><188.8679><462.4116><-175.3553><-163.3553><0><0.1, 
+FadePalette: 17, 0.5543478, 0.5543478, 0.5543478
+WetTerrain: OFF

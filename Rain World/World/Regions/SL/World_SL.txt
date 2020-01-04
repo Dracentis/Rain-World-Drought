@@ -1,0 +1,119 @@
+ROOMS
+GATE_SB_SL : DISCONNECTED, SL_D05 : GATE
+GATE_SH_SL : DISCONNECTED, SL_C11, DISCONNECTED, SL_S02 : GATE
+GATE_GW_SL : DISCONNECTED, DISCONNECTED, SL_A08 : GATE
+GATE_SL_IS : SL_L02, DISCONNECTED : GATE
+GATE_SL_MW : DISCONNECTED, SL_H03 : GATE
+SL_S02 : GATE_SH_SL : SHELTER
+SL_A08 : GATE_GW_SL, SL_S07, SL_C12
+SL_S07 : SL_A08 : SHELTER
+SL_C12 : SL_A08, SL_F01
+SL_B02 : SL_A02, SL_C11, SL_A14
+SL_C11 : GATE_SH_SL, SL_B02
+SL_A14 : SL_B02, SL_A17, SL_E03
+SL_E03 : SL_H03, SL_A14, SL_S11, SL_L03
+SL_A02 : SL_C01, SL_B02, SL_A17
+SL_A17 : SL_A02, SL_A14
+SL_C01 : SL_A02, SL_B01, SL_A13
+SL_A13 : SL_C01, SL_A04
+SL_B01 : SL_C01, SL_D06 : SWARMROOM
+SL_F01 : SL_C12, SL_C08, SL_C02
+SL_C02 : SL_F01, SL_D06, SL_C10, SL_F02 : SWARMROOM
+SL_C10 : SL_C02, SL_A10
+SL_A10 : SL_C10, SL_D02
+SL_F02 : SL_S05, SL_D06, SL_C02, SL_D04
+SL_S05 : SL_F02 : SHELTER
+SL_D06 : SL_C02, SL_F02, SL_B01 : SWARMROOM
+SL_D04 : SL_H02, SL_F02, SL_A12 : SWARMROOM
+SL_A12 : SL_D04, SL_A04
+SL_H02 : SL_D04, SL_H03, DISCONNECTED : SWARMROOM
+SL_H03 : GATE_SL_MW, SL_C07, SL_E03, SL_H02
+SL_C08 : SL_F01, SL_C05
+SL_C05 : SL_C08, SL_S09, SL_C04
+SL_S09 : SL_C05 : SHELTER
+SL_C04 : SL_D01, SL_C05
+SL_D01 : SL_C04, SL_D02
+SL_D02 : SL_D01, SL_A10, SL_D03, DISCONNECTED, SL_L01
+SL_D03 : SL_A04, SL_A03, SL_A07, SL_D02, SL_L01
+SL_A07 : SL_E01, SL_D03
+SL_A04 : SL_S03, SL_A12, SL_A13, SL_A11, SL_D03
+SL_S03 : SL_A04 : SHELTER
+SL_E01 : SL_B04, SL_C03, SL_A07, SL_A05, SL_L01
+SL_B04 : SL_E01, SL_C03 : SWARMROOM
+SL_C03 : SL_B04, SL_E01, SL_A11
+SL_A11 : SL_C03, SL_A04
+SL_A05 : DISCONNECTED, SL_E02, SL_E01
+SL_E02 : DISCONNECTED, SL_S08, SL_A05, SL_C07
+SL_S08 : SL_E02 : SHELTER
+SL_C07 : SL_H03, SL_E02
+SL_A03 : SL_C06, SL_D03
+SL_C06 : SL_S04, SL_A03, SL_A06, DISCONNECTED
+SL_S04 : SL_C06 : SHELTER
+SL_A06 : SL_D05, SL_C06
+SL_D05 : GATE_SB_SL, DISCONNECTED, SL_A06
+SL_S11 : SL_E03 : SHELTER
+SL_L01 : SL_D02, SL_E01, SL_D03, SL_L02
+SL_L02 : SL_L01, SL_L03, GATE_SL_IS
+SL_L03 : SL_E03, SL_L02
+END ROOMS
+
+CREATURES
+SL_A14 : 1-Tentacle Plant
+SL_A02 : 3-Salamander, 4-Sea Leech-10
+SL_D06 : 5-Salamander, 6-Salamander, 8-Tentacle Plant
+SL_F02 : 16-Garbage Worm-5, 4-Salamander, 6-Jet Fish, 7-Jet Fish, 5-Tentacle Plant
+SL_C02 : 6-Salamander
+SL_H02 : 5-Jet Fish, 7-Jet Fish, 8-Jet Fish, 3-Tentacle Plant
+SL_C03 : 3-Jet Fish, 5-Jet Fish
+SL_E01 : 4-Jet Fish
+SL_D03 : 3-Jet Fish, 4-Jet Fish
+SL_D01 : 3-Jet Fish, 4-Jet Fish, 5-Jet Fish
+SL_C05 : 3-Jet Fish
+SL_C11 : 2-Sea Leech-4, 3-Sea Leech-3, 4-Tentacle Plant, 5-Tentacle Plant
+SL_A03 : 2-Snail-2, 3-Snail-3
+SL_C06 : 3-Jet Fish, 4-Jet Fish
+SL_D05 : 7-Snail, 8-Snail, 4-Jetfish
+LINEAGE : SL_B04 : 3 : NONE-0.05, White-0.2, Red-0
+LINEAGE : SL_D05 : 5 : NONE-0.05, Salamander-0
+LINEAGE : SL_D05 : 6 : NONE-0.02, Salamander-0
+
+//Wanderer
+(0)OFFSCREEN : 0-Vulture-3, 0-KingVulture-2, 0-Leviathan-3
+(0)SL_F01 : 4-Sea Leech-8, 7-Jet Fish, 6-Jet Fish-2
+(0)SL_H03 : 7-Sea Leech-8, 5-Jet Fish, 7-Jet Fish, 9-Tentacle Plant
+(0)SL_C04 : 3-Sea Leech-8
+(0)SL_D01 : 3-Jet Fish
+(0)SL_D04 : 6-Jet Fish
+(0)SL_H02 : 5-Jet Fish, 7-Jet Fish
+(0)LINEAGE : SL_F01 : 3 : White-0.5, Cyan-0
+(0)LINEAGE : SL_B04 : 2 : White-0.5, Cyan-0
+(0)LINEAGE : SL_B04 : 3 : White-0.5, Cyan-0
+(0)SL_F01 : 4-Jet Fish, 5-Jet Fish, 6-Jet Fish
+(0)SL_C04 : 3-Sea Leech-5
+(0)SL_B04 : 2-White
+
+//[Other cat]
+(1)OFFSCREEN : 0-Vulture-3, 0-KingVulture-2, 0-Leviathan-3
+(1)SL_F01 : 4-Sea Leech-8, 7-Jet Fish, 6-Jet Fish-2
+(1)SL_H03 : 7-Sea Leech-8, 5-Jet Fish, 7-Jet Fish, 9-Tentacle Plant
+(1)SL_C10 : 2-Bro
+(1)SL_C04 : 3-Sea Leech-8
+(1)SL_D01 : 3-Jet Fish
+(1)SL_D04 : 6-Jet Fish
+(1)SL_H02 : 5-Jet Fish, 7-Jet Fish
+(1)LINEAGE : SL_F01 : 3 : White-0.5, Cyan-0
+(1)LINEAGE : SL_B04 : 2 : White-0.5, Cyan-0
+(1)LINEAGE : SL_B04 : 3 : White-0.5, Cyan-0
+
+//Wanderer and [Other cat]
+(0,1)SL_B02 : 8-Sea Leech-5, 5-Sea Leech-5, 9-Tentacle Plant
+(0,1)SL_E02 : 4-Jet Fish, 5-Jet Fish, 6-Sea Leech-7, 7-Sea Leech-7, 8-Sea Leech-7
+(0,1)SL_A10 : 3-Sea Leech-6
+(0,1)SL_D06 : 7-Salamander
+(0,1)SL_C02 : 5-Salamander
+(0,1)SL_H02 : 9-Sea Leech-15
+(0,1)SL_D04 : 4-Salamander, 5-Sea Leech-10, 7-Sea Leech-15
+END CREATURES
+
+BAT MIGRATION BLOCKAGES
+END BAT MIGRATION BLOCKAGES

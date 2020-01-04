@@ -1,0 +1,5 @@
+Template: GW_SettingsTemplate_Inside
+Clouds: 0.1847826
+BkgDroneVolume: 0.2769565
+PlacedObjects: KarmaFlower><445.0549><351.7938><0~0~5~7, WaterNut><866.2004><293.5562><48~281~2~3, WaterNut><846.6814><289.9157><68~213~2~3, 
+FadePalette: 8, 0.1521739

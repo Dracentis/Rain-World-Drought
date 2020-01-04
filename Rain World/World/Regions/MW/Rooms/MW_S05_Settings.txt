@@ -1,0 +1,10 @@
+Template: NONE
+DangerType: None
+Clouds: 0.6086956
+Grime: 0.3369565
+Palette: 16
+EffectColorA: 10
+Effects: Lightning-0.7065217-20-20, ExtraLoudThunder-0.4565217-4-82, 
+AmbientSounds: OMNI><AM_RAIN-Rumbles.ogg><745.9037><295.1753><0.1847826><1, OMNI><AM_RAIN-RollingThunder.ogg><506.9628><300.4465><0.1956522><1, OMNI><Basic Mech.wav><713.713><428.6965><0.2282609><1, OMNI><SO_IND-Humm.ogg><726.6617><193.1177><0.5><1, 
+FadePalette: 17, 0.5543478, 0.5543478, 0.5543478
+WetTerrain: OFF

@@ -1,0 +1,5 @@
+Template: NONE
+Palette: 18
+EffectColorB: 8
+Effects: AboveCloudsView-1-20-20, 
+FadePalette: 8, 0.3369565, 0.3369565, 0.3369565, 0.3369565, 0.3369565, 0.3369565

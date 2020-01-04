@@ -1,0 +1,9 @@
+DangerType: Flood
+Grime: 0
+BkgDroneVolume: 0
+Palette: 16
+Effects: BkgOnlyLightning-0.5760869-219-77, Lightning-0.4347826-227-133, ExtraLoudThunder-0.1521739-232-201, GravityPulse-0-30-30, 
+PlacedObjects: NoSpearStickZone><483.5829><238.318><-236~137, 
+AmbientSounds: SPOT><AM_IND-DeepHum.ogg><78.57001><473.1873><0.3369565><1><464.57><-39.81265><-201.3553><43.64466><0><0.3173914, OMNI><AM_SUB-BlankState.ogg><829.9221><646.3518><0.326087><1, OMNI><SO_IND-NoiseMech.ogg><749.8287><535.1838><0.1195652><1, 
+FadePalette: 17, 0.3369565
+WetTerrain: OFF

@@ -1,0 +1,4 @@
+Template: LM_SettingsTemplate_General
+Effects: LMSwarmers-0.4565217-20-20, 
+PlacedObjects: CoralNeuron><386.8354><442.6364><84~105, 
+WetTerrain: OFF

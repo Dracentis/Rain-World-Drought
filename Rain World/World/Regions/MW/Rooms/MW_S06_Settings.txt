@@ -1,0 +1,10 @@
+Template: NONE
+DangerType: None
+Clouds: 0.2934783
+Palette: 16
+EffectColorA: 3
+Effects: Lightning-0.4021739-20-20, 
+PlacedObjects: LightFixture><644.3923><357.3315><RedLight~17.32051~-10~24, 
+AmbientSounds: OMNI><AM_ENV-CityTone.ogg><714.322><561.1588><0.2065217><1, OMNI><AM_IND-Utility01.ogg><730.8><470.4946><0.5><1, OMNI><AM_IND-SuperStructure.ogg><729.6849><491.5761><0.2173913><1, OMNI><AM_WIN-HowlingWnd.ogg><736.074><548.405><0.1413043><1, OMNI><Mech Active.wav><703.4485><395.4753><0.1630435><1, 
+FadePalette: 17, 0.5543478, 0.5543478, 0.5543478, 0.5543478
+WetTerrain: OFF

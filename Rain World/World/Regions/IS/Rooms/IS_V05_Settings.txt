@@ -1,0 +1,5 @@
+Clouds: 0.1521739
+Effects: Pulse-0.09782609-30-30, 
+PlacedObjects: LightFixture><1036.913><684.3197><RedLight~17.32051~-10~59, LightFixture><371.817><371.5806><RedLight~17.32051~-10~12, LightFixture><625.0359><640.3032><RedLight~17.32051~-10~70, LightFixture><1768.623><343.1542><RedLight~17.32051~-10~67, LightFixture><1004.928><348.9084><RedLight~17.32051~-10~14, LightFixture><1545.55><553.0009><RedLight~17.32051~-10~93, LightSource><2421.652><381.6743><0.2282609~Environment~-196~-58~50~86.60254~1~0, LightFixture><2838.807><558.7135><RedLight~17.32051~-10~93, LightFixture><2720.772><373.7052><RedLight~17.32051~-10~22, LightSource><354.5732><143.6565><0.3152174~Environment~105~274~50~86.60254~0~0, 
+FadePalette: 10, 0.4456522, 0.4565217, 0.4565217
+WetTerrain: OFF

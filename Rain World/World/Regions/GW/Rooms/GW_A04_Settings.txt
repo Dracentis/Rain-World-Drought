@@ -1,0 +1,10 @@
+Template: NONE
+Clouds: 0.1956522
+Grime: 0.423913
+BkgDroneVolume: 0.2769565
+Palette: 9
+EffectColorA: 13
+EffectColorB: 8
+PlacedObjects: CentipedeAttractor><391.6626><165.3665><-186~56, CustomDecal><73.58228><371.6411><0~201.89~874.1045~201.89~874.1045~0~-186~-358~0.2826087~1~0~zGWMarks - A04~1~0~0.8260869~0~0.7391304~0.4130435~0~0.2173913, 
+AmbientSounds: OMNI><AM_ENV-LightWind.ogg><829.4735><645.6982><0.5><0.9413043, OMNI><SO_WAT-LilDrips.ogg><656.3374><646.8835><0.2391304><1, 
+FadePalette: 8, 0.1847826

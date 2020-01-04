@@ -1,0 +1,5 @@
+Template: LM_SettingsTemplate_General
+Clouds: 0
+Effects: LMSwarmers-0.1195652-20-20, 
+PlacedObjects: WallMycelia><417.7062><1124.805><0~100, WallMycelia><1648.181><1193.166><0~100, SuperStructureFuses><1731.552><1130.275><43~177, SuperStructureFuses><1451.56><1228.188><119~79, ZapCoil><986.5286><1315.552><300~33, WallMycelia><2813.13><622.652><0~100, CoralNeuron><2325.583><599.8901><338~77, SuperStructureFuses><839.4324><968.3118><109~56, CoralStemWithNeurons><543.9187><1314.357><66~-87, LightFixture><1113.197><1321.213><ZapCoilLight~-181.6795~-201~59, LightSource><1614.946><1294.712><0.423913~Environment~-437~-518~50~86.60254~1~0, 
+AmbientSounds: OMNI><SO_SFX-Data1.ogg><823.196><247.0397><0><1, OMNI><SO_SFX-Corrosion.ogg><835.0745><163.096><0.3586957><1, OMNI><SO_SFX-AlienScythe.ogg><851.5654><311.5769><0.09782609><1, OMNI><SO_IND-WinFan.ogg><847.6603><378.6303><0.1413043><1, SPOT><SO_SFX-Gutleut.ogg><730.2192><486.4476><0.25><1><1613.219><1259.448><-98.35535><-441.3553><0><0.1, 

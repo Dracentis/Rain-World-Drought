@@ -1,0 +1,5 @@
+Template: LM_SettingsTemplate_Memory
+Effects: LMSwarmers-0.5326087-20-20, 
+PlacedObjects: CoralCircuit><508.8551><291.5798><-53~114, CoralNeuron><267.3706><506.3475><452~-284, WallMycelia><820.6526><115.9247><-130~110, WallMycelia><185.5581><457.8065><42~175, CoralStem><521.6979><599.0292><32~-57, CoralStem><200.5318><451.8026><193~-51, CoralStem><748.2241><39.5517><15~93, WallMycelia><480.4486><560.9765><0~100, SpotLight><145.7334><190.4493><21~472~590~458~663~-32, 
+AmbientSounds: OMNI><SO_SFX-Data1.ogg><722.196><295.0397><0><1, 
+WetTerrain: OFF

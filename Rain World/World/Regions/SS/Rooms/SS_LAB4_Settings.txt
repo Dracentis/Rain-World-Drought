@@ -1,0 +1,12 @@
+Template: NONE
+DangerType: None
+Clouds: 1
+Grime: 0
+BkgDroneVolume: 0.326087
+Palette: 24
+EffectColorB: 12
+Effects: ZeroG-1-20-20, ZeroGSpecks-0.5760869-20-89, SSSwarmers-0.4130435-30-30, 
+PlacedObjects: LightFixture><901.3467><543.1284><RedLight~17.32051~-10~50, LightFixture><27.80139><172.0236><RedLight~17.32051~-10~97, LightSource><515.5697><36.31256><1~Environment~0~100~50~86.60254~1~0, LightSource><833.3918><39.35907><0.5760869~Environment~0~100~50~86.60254~1~0, SpotLight><326.3773><215.6543><-27~320~559~239~231~-69, 
+AmbientSounds: OMNI><SO_SFX-Drowning.ogg><831.1999><649.4939><0.5><1, SPOT><SO_SFX-Heartbeat2.ogg><70.83344><504.8607><0><0.9217392><512.8334><357.8607><-269.3553><-222.3553><0><0.3065219, 
+FadePalette: 24, 0
+WetTerrain: OFF

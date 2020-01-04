@@ -1,0 +1,10 @@
+Template: NONE
+DangerType: Thunder
+RumbleIntensity: 0.3804348
+Clouds: 0.3152174
+Palette: 16
+EffectColorA: 11
+Effects: Lightning-0.7608696-20-20, GreenSparks-0.8152174-13-82, ExtraLoudThunder-0.5652174-2-138, ElectricDeath-1-373-184, 
+AmbientSounds: OMNI><AM_IND-Factory01.ogg><716.9307><221.4143><0.5><1, OMNI><AM_IND-Fabrik01.ogg><728.1993><248.517><0.5><1, OMNI><AM_IND-DeepHum.ogg><744.6733><310.8499><0.2934783><1, OMNI><AM_IND-SuperStructure.ogg><743.1178><491.3384><0.5><1, 
+FadePalette: 17, 0.5652174, 0.5652174
+WetTerrain: OFF

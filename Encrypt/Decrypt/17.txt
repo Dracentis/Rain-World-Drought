@@ -1,0 +1,10 @@
+0-17
+It's about the local aquifer - it must be quite old, from when Five Pebbles was in the planning phase. 
+
+Water is the most important resource for our basic function. Most of our processing is outsourced to<LINE>microbe strata which need a flow of clean water or else slag builds up, our processes seize, and<LINE>eventually we die. It is... very painful. They used to say that an iterator drinks a river, but neither<LINE>of us two have seen a natural river so I suppose the analogy is lost on us, <PlayerName>!
+
+Originally water supply was very important when placing iterators. Later there would be a great equalizer - the fact that we breathe out as much<LINE>vapor as we inhale water led to there being water available everywhere, and the latest few generations could be placed almost completely freely.
+
+Building Pebbles so close to me was believed to be a risky choice, but the groundwater was<LINE>finally deemed as sufficient.<LINE>Since he's a newer iterator, he also has a filtration chamber for seawater, so<LINE>in any case water shouldn't be a problem for both of us!
+
+Have you seen the local sea water level?<LINE>It's clear that he is making good use of it.

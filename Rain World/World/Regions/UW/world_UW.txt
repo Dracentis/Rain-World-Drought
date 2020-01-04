@@ -1,0 +1,113 @@
+ROOMS
+GATE_UW_SS : DISCONNECTED, UW_C08 : GATE
+GATE_CC_UW : DISCONNECTED, UW_D07 : GATE
+GATE_SH_UW : UW_D02, DISCONNECTED : GATE
+GATE_SS_UW : UW_C07, DISCONNECTED : GATE
+GATE_UW_IS : DISCONNECTED, UW_D02 : GATE
+UW_C08 : UW_I01, GATE_UW_SS
+UW_C07 : UW_H01, GATE_SS_UW
+UW_H01 : UW_C07, UW_A12
+UW_A14 : UW_A12
+UW_A12 : UW_A14, UW_H01, UW_F01, DISCONNECTED
+UW_F01 : UW_A12, UW_A13
+UW_A13 : UW_F01, UW_S03, UW_E01
+UW_S03 : UW_A13 : SHELTER
+UW_E01 : UW_A13, UW_A02
+UW_A02 : UW_E01, UW_J01 : SWARMROOM
+UW_J01 : UW_A02, DISCONNECTED, UW_A01
+UW_A01 : UW_J01, UW_D01 : SWARMROOM
+UW_D01 : UW_A01, UW_D07
+UW_D07 : UW_D01, UW_S04, GATE_CC_UW, UW_C05
+UW_S04 : UW_D07 : SHELTER
+UW_C05 : UW_D07, UW_D06
+UW_D06 : UW_C04, UW_S01, UW_C05
+UW_S01 : UW_D06 : SHELTER
+UW_C04 : UW_D05, UW_D06
+UW_D05 : UW_C04, UW_A04
+UW_A04 : UW_D05, UW_C02
+UW_C02 : UW_A05, UW_A04
+UW_A05 : UW_C02, UW_C01
+UW_C01 : UW_A03, UW_A05
+UW_A03 : UW_A10, UW_C01, UW_J02
+UW_J02 : UW_A03, UW_I01, UW_A06
+UW_I01 : UW_C08, UW_A10, UW_A11, UW_S02, UW_J02
+UW_S02 : UW_I01 : SHELTER
+UW_A10 : UW_I01, UW_A03
+UW_A11 : UW_I01, UW_A06
+UW_A06 : UW_A11, UW_J02, UW_E04
+UW_E04 : UW_A06, UW_A08
+UW_A08 : UW_E04, UW_C03
+UW_C03 : UW_A08, UW_D04
+UW_D04 : UW_C03, UW_B01, UW_D03
+UW_B01 : UW_S07, UW_D04
+UW_S07 : UW_B01 : SHELTER
+UW_D03 : UW_D04, UW_E03
+UW_A09 : UW_E03, UW_S06, UW_C06
+UW_S06 : UW_A09 : SHELTER
+UW_E03 : UW_D03, UW_A09, UW_E02
+UW_E02 : UW_E03, UW_A07, UW_D02
+UW_A07 : UW_C06, UW_E02
+UW_C06 : UW_A09, UW_A07
+UW_D02 : UW_E02, UW_S05, GATE_SH_UW, GATE_UW_IS
+UW_S05 : UW_D02 : SHELTER
+END ROOMS
+
+CREATURES
+//all
+OFFSCREEN : 0-KingVulture-1
+UW_I01 : 5-Cyan-2, 6-Cyan-2
+UW_J02 : 16-Yellow, 19-Yellow, 17-Yellow-2, 13-Tube, 14-Tube
+UW_J01 : 3-Yellow, 4-Yellow, 5-Yellow, 6-Yellow-2
+UW_E03 : 8-White-{Mean:1.0}, 3-SpitterSpider, 4-SpitterSpider-2, 5-SpitterSpider, 6-SpitterSpider, 7-SpitterSpider, 9-SpitterSpider
+UW_D02 : 3-White-{Mean:1.0}, 4-SpitterSpider
+UW_E02 : 3-SpitterSpider, 4-SpitterSpider, 6-White-{Mean:1.0}
+UW_D03 : 2-Cyan-2, 3-SpitterSpider
+UW_D04 : 4-Dropbug, 3-Dropbug, 5-Tube, 6-Tube, 7-Tube
+LINEAGE : UW_D02 : 4 : Dropbug-0.5, White-{1.0}-0
+UW_J02 : 16-Cyan, 19-Cyan, 17-Cyan, 13-Tube, 14-Tube
+UW_E04 : 3-White, 6-Tube, 7-Tube
+UW_D06 : 3-Tube
+UW_C04 : 3-White-{Mean:0.7}
+UW_A09 : 4-White-{Mean:0.7}
+LINEAGE : UW_D07 : 4 : NONE-0.4, Dropbug-0
+
+//Wanderer
+(0)OFFSCREEN : 0-KingVulture-1
+(0)UW_I01 : 5-Cyan-2, 6-Cyan-2\
+(0)UW_E03 : 8-White-{Mean:1.0}, 3-SpitterSpider, 4-SpitterSpider-2, 5-SpitterSpider, 6-SpitterSpider, 7-SpitterSpider, 9-SpitterSpider
+(0)UW_D02 : 3-White-{Mean:1.0}, 4-SpitterSpider
+(0)UW_E02 : 3-SpitterSpider, 4-SpitterSpider, 6-White-{Mean:1.0}
+(0)UW_D03 : 2-Cyan-2, 3-SpitterSpider
+(0)UW_D04 : 4-Dropbug, 3-Dropbug, 5-Tube, 6-Tube, 7-Tube
+(0)LINEAGE : UW_D02 : 4 : Dropbug-0.5, White-{1.0}-0
+(0)UW_E04 : 3-White, 6-Tube, 7-Tube
+(0)UW_D06 : 3-Tube
+(0)UW_C04 : 3-White-{Mean:0.7}
+(0)UW_A09 : 4-White-{Mean:0.7}
+(0)LINEAGE : UW_D07 : 4 : NONE-0.4, Dropbug-0
+(0)UW_D04 : 5-Tube, 6-Tube, 7-Tube
+
+//[Other cat]
+(1)OFFSCREEN : 0-KingVulture-1
+(1)UW_I01 : 5-Cyan-2, 6-Cyan-2
+(1)UW_J01 : 3-Cyan, 4-Cyan, 5-Cyan, 6-Cyan-2
+(1)UW_E03 : 8-White-{Mean:1.0}, 3-SpitterSpider, 4-SpitterSpider-2, 5-SpitterSpider, 6-SpitterSpider, 7-SpitterSpider, 9-SpitterSpider
+(1)UW_D02 : 3-White-{Mean:1.0}, 4-SpitterSpider
+(1)UW_E02 : 3-SpitterSpider, 4-SpitterSpider, 6-White-{Mean:1.0}
+(1)UW_D03 : 2-Cyan-2, 3-SpitterSpider
+(1)UW_D04 : 4-Dropbug, 3-Dropbug, 5-Tube, 6-Tube, 7-Tube
+(1)LINEAGE : UW_D02 : 4 : Dropbug-0.5, White-{1.0}-0
+(1)UW_J02 : 16-Cyan, 19-Cyan, 17-Cyan, 13-Tube, 14-Tube
+(1)UW_E04 : 3-White, 6-Tube, 7-Tube
+(1)UW_D06 : 3-Tube
+(1)UW_C04 : 3-White-{Mean:0.7}
+(1)UW_A09 : 4-White-{Mean:0.7}
+(1)LINEAGE : UW_D07 : 4 : NONE-0.4, Dropbug-0
+
+//Wanderer and [Other cat]
+(0,1)UW_D01 : 2-Dropbug
+
+END CREATURES
+
+BAT MIGRATION BLOCKAGES
+END BAT MIGRATION BLOCKAGES

@@ -1,0 +1,8 @@
+Template: SS_SettingsTemplate_Corrupt
+Clouds: 1
+Grime: 0
+BkgDroneVolume: 0
+Effects: Bloom-0.1630435-30-30, 
+PlacedObjects: SpotLight><251.3102><185.3093><-110~300~525~441~594~74, 
+FadePalette: 17, 0
+WetTerrain: OFF

@@ -1,0 +1,8 @@
+Template: NONE
+Palette: 18
+EffectColorA: 0
+EffectColorB: 8
+PlacedObjects: LightBeam><323.8021><76.97101><-216~640~189~641~395~2~0~0~0.5304347~0~1~1, DangleFruit><647.0605><610.9361><-93~6~2~3, DangleFruit><787.4259><625.4048><0~0~2~3, DangleFruit><837.8853><603.0862><0~0~2~3, 
+AmbientSounds: OMNI><AM_ENV-CricketsWnd.ogg><767.9383><550.6826><0.6086956><1, OMNI><AM_ENV-CityTone.ogg><735.3409><565.8712><0.5><1, 
+FadePalette: 8, 0.3369565
+WetTerrain: OFF

@@ -1,0 +1,127 @@
+ROOMS
+GATE_HI_CC : DISCONNECTED, HI_C11 : GATE
+GATE_HI_GW : DISCONNECTED, HI_A19, DISCONNECTED : GATE
+GATE_SU_HI : DISCONNECTED, HI_B04 : GATE
+GATE_HI_SH : HI_C13, DISCONNECTED, DISCONNECTED : GATE
+HI_C13 : HI_D01, GATE_HI_SH, HI_S06
+HI_S06 : HI_C13 : SHELTER
+HI_B04 : HI_B12, HI_A07, GATE_SU_HI, HI_S03
+HI_S03 : HI_B04 : SHELTER
+HI_B12 : HI_B13, HI_B04
+HI_B13 : HI_A15, HI_B12 : SWARMROOM
+HI_A15 : HI_B13, HI_A20, HI_A14
+HI_A20 : HI_S01, HI_A15
+HI_S01 : HI_A20 : SHELTER
+HI_A14 : HI_A15, HI_C02, HI_A07
+HI_A07 : HI_A14, HI_B04, HI_C02
+HI_C02 : HI_A14, HI_B08, HI_A07, HI_A23, DISCONNECTED
+HI_B02 : HI_C01, HI_A22 : SWARMROOM
+HI_A22 : HI_B02, HI_C14
+HI_C14 : HI_A22, HI_B05
+HI_C01 : HI_B02, HI_B03, HI_B08
+HI_B03 : HI_C01, HI_C04
+HI_B08 : HI_C01, HI_C04, HI_C02
+HI_C04 : HI_B03, HI_B08, HI_B06, HI_A21, HI_A25
+HI_A25 : HI_C04, HI_A16
+HI_A21 : HI_C04, HI_S02
+HI_S02 : HI_A21 : SHELTER
+HI_B06 : HI_A10, HI_C04, HI_A11
+HI_A10 : HI_C11, HI_S05, HI_B06
+HI_S05 : HI_A10 : SHELTER
+HI_C11 : GATE_HI_CC, HI_B09, HI_A10
+HI_B09 : HI_C11, HI_B07 : SWARMROOM
+HI_B07 : HI_B09, HI_B14
+HI_B14 : HI_B07, HI_C03, HI_D01
+HI_D01 : HI_C13, HI_B14
+HI_C03 : HI_B14, HI_A11, HI_B15
+HI_A11 : HI_B06, HI_C03
+HI_B15 : HI_C03, HI_A04
+HI_A04 : HI_A26, HI_B15
+HI_A26 : HI_B05, HI_A04
+HI_B05 : HI_C14, HI_A26, HI_A16
+HI_A16 : HI_A25, HI_B05, HI_A17, HI_A27
+HI_A17 : HI_A18, HI_A23, HI_A16
+HI_A27 : HI_A16
+HI_A23 : HI_C02, HI_A17
+HI_A18 : HI_C05, HI_A17
+HI_C05 : HI_A06, HI_A18
+HI_A06 : HI_A24, HI_C05 : SWARMROOM
+HI_A24 : HI_A06, HI_A19, HI_S04
+HI_S04 : HI_A24 : SHELTER
+HI_A19 : HI_A24, GATE_HI_GW
+END ROOMS
+
+CREATURES
+//all
+HI_B12 : 2-Blue
+HI_A18 : 2-Green
+HI_A06 : 2-Green
+HI_A19 : 4-Garbage Worm-2
+LINEAGE : HI_B06 : 4 : NONE-0.05, Mimic-{16}-1.0, Mimic-{14}-1.0, NONE-0
+LINEAGE : HI_C01 : 5 : Pink-0.2, Blue-0.5, White-0.3, Red-0
+LINEAGE : HI_B03 : 3 : NONE-0.05, Blue-0.2, Red-0
+LINEAGE : HI_B13 : 2 : Pink-0.2, NONE-0.5, Blue-0.2, Cyan-0.3, Red-0
+LINEAGE : HI_C02 : 5 : Pink-0.2, Blue-0.5, Cyan-0.3, Red-0
+
+//Wanderer
+(0)OFFSCREEN : 0-Vulture-2, 0-KingVulture-1, 0-Scavenger-7
+(0)LINEAGE : OFFSCREEN : 0 : Vulture-0.65, KingVulture-0
+(0)LINEAGE : OFFSCREEN : 0 : Vulture-0.7, KingVulture-0
+(0)HI_B09 : 3-Dropwig, 2-White
+(0)HI_B05 : 3-Dropwig
+(0)HI_C11 : 3-Cyan
+(0)HI_A16 : 4-Blue
+(0)HI_A17 : 3-Green
+(0)HI_B12 : 3-EggBug
+(0)HI_B07 : 3-Pink-2, 2-EggBug
+(0)HI_A25 : 2-Dropbug
+(0)HI_B15 : 2-Small Centipede-2, 3-Centipede-{0.55}, 2-Centipede-{0.72}, 3-Centipede-{0.68}
+(0)HI_C04 : 5-Cyan
+(0)HI_B06 : 3-Cyan, 4-Red
+(0)LINEAGE : HI_B03 : 3 : Blue-1, White-1, Cyan-0
+(0)LINEAGE : HI_C11 : 4 : Blue-0.4, Dropwig-1, Cyan-0
+(0)LINEAGE : HI_C01 : 3 : NONE-0.07, Blue-0.4, NONE-0.1, Cyan-0
+(0)LINEAGE : HI_C02 : 6 : Dropwig-0.2, BigSpider-0.5, SpitterSpider-0
+(0)LINEAGE : HI_C01 : 4 : Cyan-0.3, Red-0
+(0)LINEAGE : HI_A04 : 2 : Mimic-{18}-0.7, TentaclePlant-0
+(0)LINEAGE : HI_C03 : 3 : White-0.2, Cyan-0
+(0)LINEAGE : HI_C04 : 5 : Blue-0.5, NONE-0.2, White-0.5, NONE-0.5, Cyan-0
+(0)HI_A04 : 2-Mimic-{18}
+(0)HI_C11 : 3-Blue
+(0)HI_C03 : 3-White
+(0)HI_B05 : 3-White
+(0)HI_A16 : 3-Green
+(0)HI_C04 : 5-Blue, 6-Snail, 7-Snail-2
+(0)LINEAGE : HI_C01 : 4 : Blue-0.1, Cyan-0.2, Red-0
+(0)LINEAGE : HI_C02 : 6 : Green-0.2, Blue-0.5, Red-0
+(0)LINEAGE : HI_B06 : 3 : Green-0.2, Blue-0.5, White-0.2, Red-0
+
+
+//[Other cat]
+(1)OFFSCREEN : 0-Vulture-2, 0-KingVulture-1, 0-Scavenger-7
+(1)LINEAGE : OFFSCREEN : 0 : Vulture-0.65, KingVulture-0
+(1)LINEAGE : OFFSCREEN : 0 : Vulture-0.7, KingVulture-0
+(1)HI_B09 : 3-Dropwig, 2-White
+(1)HI_B05 : 3-Dropwig
+(1)HI_C11 : 3-Cyan
+(1)HI_A16 : 4-Blue
+(1)HI_A17 : 3-Green
+(1)HI_B12 : 3-EggBug
+(1)HI_B07 : 3-Pink-2, 2-EggBug
+(1)HI_A25 : 2-Dropbug
+(1)HI_B15 : 2-Small Centipede-2, 3-Centipede-{0.55}, 2-Centipede-{0.72}, 3-Centipede-{0.68}
+(1)HI_C04 : 5-Cyan
+(1)HI_B06 : 3-Cyan, 4-Red
+(1)LINEAGE : HI_B03 : 3 : Blue-1, White-1, Cyan-0
+(1)LINEAGE : HI_C11 : 4 : Blue-0.4, Dropwig-1, Cyan-0
+(1)LINEAGE : HI_C01 : 3 : NONE-0.07, Blue-0.4, NONE-0.1, Cyan-0
+(1)LINEAGE : HI_C02 : 6 : Dropwig-0.2, BigSpider-0.5, SpitterSpider-0
+(1)LINEAGE : HI_C01 : 4 : Cyan-0.3, Red-0
+(1)LINEAGE : HI_A04 : 2 : Mimic-{18}-0.7, TentaclePlant-0
+(1)LINEAGE : HI_C03 : 3 : White-0.2, Cyan-0
+(1)LINEAGE : HI_C04 : 5 : Blue-0.5, NONE-0.2, White-0.5, NONE-0.5, Cyan-0
+
+END CREATURES
+
+BAT MIGRATION BLOCKAGES
+END BAT MIGRATION BLOCKAGES

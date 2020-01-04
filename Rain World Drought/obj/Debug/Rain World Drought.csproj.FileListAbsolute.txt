@@ -1,0 +1,16 @@
+C:\Users\kaedo\Source\Repos\Rain World Drought\Rain World Drought\bin\Debug\Rain World Drought.dll
+C:\Users\kaedo\Source\Repos\Rain World Drought\Rain World Drought\bin\Debug\Rain World Drought.pdb
+C:\Users\kaedo\Source\Repos\Rain World Drought\Rain World Drought\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\kaedo\Source\Repos\Rain World Drought\Rain World Drought\bin\Debug\Assembly-CSharp.dll
+C:\Users\kaedo\Source\Repos\Rain World Drought\Rain World Drought\bin\Debug\GoKit.dll
+C:\Users\kaedo\Source\Repos\Rain World Drought\Rain World Drought\bin\Debug\Mono.Security.dll
+C:\Users\kaedo\Source\Repos\Rain World Drought\Rain World Drought\bin\Debug\MonoMod.exe
+C:\Users\kaedo\Source\Repos\Rain World Drought\Rain World Drought\bin\Debug\Partiality.dll
+C:\Users\kaedo\Source\Repos\Rain World Drought\Rain World Drought\bin\Debug\System1.dll
+C:\Users\kaedo\Source\Repos\Rain World Drought\Rain World Drought\bin\Debug\UnityEngine.dll
+C:\Users\kaedo\Source\Repos\Rain World Drought\Rain World Drought\bin\Debug\UnityEngine.UI.dll
+C:\Users\kaedo\Source\Repos\Rain World Drought\Rain World Drought\obj\Debug\Rain World Drought.csprojAssemblyReference.cache
+C:\Users\kaedo\Source\Repos\Rain World Drought\Rain World Drought\obj\Debug\Rain World Drought.csproj.CoreCompileInputs.cache
+C:\Users\kaedo\Source\Repos\Rain World Drought\Rain World Drought\obj\Debug\Rain World Drought.csproj.CopyComplete
+C:\Users\kaedo\Source\Repos\Rain World Drought\Rain World Drought\obj\Debug\Rain World Drought.dll
+C:\Users\kaedo\Source\Repos\Rain World Drought\Rain World Drought\obj\Debug\Rain World Drought.pdb

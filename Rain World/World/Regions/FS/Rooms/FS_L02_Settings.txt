@@ -1,0 +1,11 @@
+DangerType: Flood
+RainIntensity: 0.01086957
+RumbleIntensity: 0
+Clouds: 0.6847826
+Grime: 0.3913043
+WaterReflectionAlpha: 1
+EffectColorA: 14
+EffectColorB: 7
+AmbientSounds: OMNI><AM_ENV-LightWind.ogg><720.6959><514.7905><0.1413043><1, OMNI><AM_ENV-WallHum.ogg><753.5992><425.3264><0.2391304><1, OMNI><AM_IND-Warehouse03.ogg><745.2369><382.1996><0.173913><1, SPOT><SO_WAT-RainishDrips.ogg><757.8013><201.2724><0.5><1><504.8013><438.2724><65.64465><-79.35535><0><0.1, SPOT><SO_WAT-RunningWater.ogg><727.2036><186.4445><0.5><1><503.2036><430.4445><32.64465><-86.35535><0><0.1, 
+FadePalette: 10, 0.3695652, 0.5434783
+WetTerrain: OFF

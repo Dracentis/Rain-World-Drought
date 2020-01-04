@@ -1,0 +1,118 @@
+ROOMS
+GATE_SI_LF : DISCONNECTED, LF_C05, DISCONNECTED : GATE
+GATE_LF_SB : LF_C03, DISCONNECTED, LF_S04 : GATE
+GATE_LF_SU : LF_A14, DISCONNECTED : GATE
+GATE_LF_FS : LF_Z01, DISCONNECTED, DISCONNECTED : GATE
+LF_S04 : GATE_LF_SB : SHELTER
+LF_C05 : GATE_SI_LF, LF_A07
+LF_A07 : LF_C05, LF_F02
+LF_F02 : LF_A07, LF_A04, LF_A06
+LF_A04 : LF_E04, LF_F02, DISCONNECTED
+LF_S02 : LF_A06 : SHELTER
+LF_A06 : LF_F02, LF_D03, LF_S02
+LF_E04 : LF_A03, LF_A04
+LF_A03 : LF_H01, LF_E04
+LF_H01 : LF_A03, LF_A05, LF_A15, DISCONNECTED : PERF_HEAVY
+LF_A15 : LF_H01, LF_S06
+LF_S06 : LF_A15 : SHELTER
+LF_A05 : LF_J01, LF_H01, LF_D08
+LF_J01 : LF_Z01, LF_A05, LF_C03 : PERF_HEAVY
+LF_C03 : GATE_LF_SB, LF_J01
+LF_Z01 : GATE_LF_FS, LF_J01
+LF_D03 : LF_A06, LF_E02
+LF_E02 : LF_E03, LF_D03 : PERF_HEAVY
+LF_E03 : LF_A10, LF_E02 : SCAVOUTPOST
+LF_A10 : LF_E03, LF_D02 : SWARMROOM
+LF_D02 : LF_A10, LF_D06, LF_E01
+LF_D06 : LF_S01, LF_D02, LF_A01 : SWARMROOM
+LF_S01 : LF_D06 : SHELTER
+LF_E01 : LF_D02, LF_D01
+LF_D01 : LF_E01, LF_B02 : SWARMROOM
+LF_B02 : LF_D01, LF_S07, LF_A17, LF_C01
+LF_S07 : LF_B02 : SHELTER
+LF_A17 : LF_B02
+LF_C01 : LF_B03, LF_B02
+LF_B03 : LF_C02, LF_C01, LF_B05
+LF_B05 : LF_B03, LF_D04
+LF_D04 : LF_A14, LF_B05, LF_A11
+LF_A14 : GATE_LF_SU, LF_D04, LF_S05
+LF_S05 : LF_A14 : SHELTER
+LF_A11 : LF_A13, LF_D04, LF_A12
+LF_A13 : LF_C02, LF_A12, LF_A11
+LF_A12 : LF_B01, LF_A13, LF_A11
+LF_B01 : LF_D07, LF_A12
+LF_D07 : DISCONNECTED, LF_B01 : PERF_HEAVY
+LF_C02 : LF_A02, LF_B03, LF_A13 : SWARMROOM
+LF_A02 : LF_C02, LF_H02
+LF_H02 : LF_A01, LF_A02 : PERF_HEAVY
+LF_A01 : LF_E05, LF_H02, LF_D06
+LF_E05 : LF_A01, LF_B04 : PERF_HEAVY
+LF_B04 : LF_D08, LF_S03, LF_E05
+LF_D08 : LF_A05, LF_B04
+LF_S03 : LF_B04 : SHELTER
+END ROOMS
+
+CREATURES
+//all
+LF_D04 : 3-CicadaA-3
+LF_C01 : 2-Green
+LF_C03 : 2-Small Centipede-2, 3-Small Centipede-2
+LF_E02 : 2-Green
+LF_A13 : 3-Mimic-{10}, 4-Mimic-{8}, 5-Eggbug
+LF_A05 : 3-Small Centipede-2
+LF_B04 : 4-Small Centipede, 5-Small Centipede-2
+LF_A03 : 2-Small Centipede-2
+LF_D06 : 3-Small Centipede-2, 4-Small Centipede-2
+LF_D02 : 3-BigNeedleWorm, 3-SmallNeedleWorm-2
+LF_F02 : 3-BigNeedleWorm, 3-SmallNeedleWorm-3
+LF_A04 : 2-Small Centipede-3
+LINEAGE : LF_A03 : 3 : Small Centipede-0.5, Centipede-{4}-0.5, Centipede-{6}-0.5, Centipede-{8}-0.5, NONE-0
+LINEAGE : LF_A05 : 4 : Small Centipede-0.5, Centipede-{3}-0.5, Centipede-{5}-0.5, Centipede-{7}-0.5, NONE-0
+LINEAGE : LF_C03 : 4 : Small Centipede-0.5, Centipede-{4}-0.5, Centipede-{6}-0.5, Centipede-{8}-0.5, NONE-0
+
+
+//Wanderer
+(0)OFFSCREEN : 0-Deer-6, 0-Vulture-2, 0-KingVulture, 0-Scavenger-14, 0-WalkerBeast-2
+(0)LF_D08 : 6-Mimic-{13}, 2-Mimic-{10}, 4-Mimic-{15}, 7-SpitterSpider-2, 8-SpitterSpider, 8-BigSpider-2
+(0)LF_C02 : 6-Green, 3-CicadaA-2
+(0)LF_E04 : 3-Centipede
+(0)LF_C03 : 2-Centipede-2
+(0)LF_D06 : 3-Centipede
+(0)LF_F02 : 5-Centipede
+(0)LF_D03 : 5-CicadaA, 6-Centipede
+(0)LINEAGE : LF_D03 : 2 : Blue-0.5, Cyan-0
+(0)LINEAGE : LF_D03 : 3 : Blue-0.5, Cyan-0
+(0)LINEAGE : LF_B03 : 3 : Centipede-0.3, Centipede-0.3, Centipede-{0.75}-0.2, RedCentipede-0
+(0)LINEAGE : LF_C02 : 6 : Pink-0.5, Cyan-0
+(0)LINEAGE : LF_F02 : 4 : Centipede-{0.65}-0.5, Centipede-{0.75}-0.5, Centipede-{0.9}-1.0, RedCentipede-0
+(0)LINEAGE : LF_E02 : 3 : Pink-0.5, Cyan-0.3, Red-0
+(0)LINEAGE : LF_E04 : 5 : Pink-0.3, Pink-0.3, GreyLizard-0
+(0)LF_C02 : 6-Green, 6-Blue, 3-CicadaA-2
+(0)LF_D03 : 2-CicadaB, 3-CicadaA-2
+(0)LINEAGE : LF_E01 : 4 : Blue-0.3, White-0.3, Red-0
+(0)LINEAGE : LF_E03 : 2 : Blue-0.5, GreyLizard-0
+
+//[Other cat]
+(1)OFFSCREEN : 0-Deer-6, 0-Vulture-2, 0-KingVulture, 0-Scavenger-14
+(1)LF_D08 : 6-Mimic-{13}, 2-Mimic-{10}, 4-Mimic-{15}, 7-SpitterSpider-2, 8-SpitterSpider, 8-BigSpider-2
+(1)LF_C02 : 6-Green, 3-CicadaA-2
+(1)LF_E04 : 3-Centipede
+(1)LF_C03 : 2-Centipede-2
+(1)LF_D06 : 3-Centipede
+(1)LF_F02 : 5-Centipede
+(1)LF_D03 : 5-CicadaA, 6-Centipede
+(1)LINEAGE : LF_D03 : 2 : Blue-0.5, Cyan-0
+(1)LINEAGE : LF_D03 : 3 : Blue-0.5, Cyan-0
+(1)LINEAGE : LF_B03 : 3 : Centipede-0.3, Centipede-0.3, Centipede-{0.75}-0.2, RedCentipede-0
+(1)LINEAGE : LF_C02 : 6 : Pink-0.5, Cyan-0
+(1)LINEAGE : LF_F02 : 4 : Centipede-{0.65}-0.5, Centipede-{0.75}-0.5, Centipede-{0.9}-1.0, RedCentipede-0
+(1)LINEAGE : LF_E02 : 3 : Pink-0.5, Cyan-0.3, Red-0
+(1)LINEAGE : LF_E04 : 5 : Pink-0.3, Pink-0.3, Red-0
+
+
+
+
+END CREATURES
+
+BAT MIGRATION BLOCKAGES
+END BAT MIGRATION BLOCKAGES

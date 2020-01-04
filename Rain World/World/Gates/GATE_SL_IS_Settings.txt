@@ -1,0 +1,6 @@
+DangerType: Flood
+Grime: 0
+BkgDroneVolume: 0
+PlacedObjects: NoSpearStickZone><483.5829><238.318><-236~137, LightSource><203.8248><435.6536><1~Environment~220~-162~50~86.60254~1~0, LightSource><732.6858><121.9259><1~Environment~-121~121~50~86.60254~1~0, 
+AmbientSounds: SPOT><AM_IND-DeepHum.ogg><78.57001><473.1873><0.3369565><1><464.57><-39.81265><-201.3553><43.64466><0><0.3173914, OMNI><AM_SUB-BlankState.ogg><829.9221><646.3518><0.326087><1, OMNI><SO_IND-NoiseMech.ogg><749.8287><535.1838><0.3913043><1, 
+FadePalette: 8, 0.8695652

@@ -1,0 +1,4 @@
+Template: LM_SettingsTemplate_General
+PlacedObjects: ZapCoil><505.0183><448.5508><228~42, ZapCoil><507.1274><132.9041><222~37, LightFixture><612.3006><466.7332><ZapCoilLight~17.32051~-10~36, LightFixture><614.4269><148.5638><ZapCoilLight~17.32051~-10~26, 
+FadePalette: 10, 0.3804348
+WetTerrain: OFF

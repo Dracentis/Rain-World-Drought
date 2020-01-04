@@ -1,0 +1,11 @@
+Template: NONE
+DangerType: Flood
+BkgDroneVolume: 0.4195653
+BkgDroneNoThreatVolume: 0
+Palette: 12
+EffectColorA: 6
+EffectColorB: 5
+Effects: Pulse-0.09782609-20-20, 
+PlacedObjects: LightSource><151.0981><545.3801><1~Environment~166~-114~50~86.60254~1~0, LightFixture><793.5518><256.0266><RedLight~-193.6795~-34~47, LightFixture><1370.657><562.4271><RedLight~-300.6795~41~25, LightFixture><1780.742><381.4498><RedLight~-126.6795~139~97, LightSource><1451.182><59.06201><1~Environment~376~255~50~86.60254~1~0, DangleFruit><1470.948><516.7771><190~102~2~3, DangleFruit><1591.861><514.9165><0~0~2~3, DangleFruit><1711.908><495.6274><0~0~2~3, DeadTokenStalk><739.7811><540.0524><-44~13, 
+AmbientSounds: OMNI><SO_IND-Turbine.ogg><747.3107><449.8145><0.3804348><1, OMNI><SO_IND-Survey.ogg><828.1773><352.5925><0.1956522><1, OMNI><SO_IND-NoiseMech.ogg><737.7364><536.3005><0.1956522><1, SPOT><SO_IND-MechHum02.ogg><709.2236><562.9482><0.5><1><582.2236><288.9482><-86.35535><40.64465><0><0.1, SPOT><SO_IND-MechHum03.ogg><527.4028><565.129><0.5><1><307.4028><290.129><-93.35535><66.64465><0><0.1, OMNI><AM_IND-Factory01.ogg><740.1993><215.4829><0.4456522><1, OMNI><AM_IND-Midsex02.ogg><750.4299><566.3127><0.2065217><1, 
+FadePalette: 10, 0.75, 0.75

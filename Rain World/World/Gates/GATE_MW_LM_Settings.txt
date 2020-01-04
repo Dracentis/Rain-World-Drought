@@ -1,0 +1,13 @@
+Template: NONE
+DangerType: None
+RumbleIntensity: 0.2717391
+Clouds: 0.2826087
+Grime: 0
+BkgDroneVolume: 0
+Palette: 16
+EffectColorB: 4
+Effects: Lightning-0.6413044-25-68, ZeroGSpecks-0.1630435-20-20, 
+PlacedObjects: LightFixture><701.6505><370.6033><RedLight~-122.6795~-19~92, LightFixture><229.3084><125.7456><RedLight~-339.6795~-364~3, NoSpearStickZone><484.4697><229.7156><-251~100, 
+AmbientSounds: SPOT><AM_IND-DeepHum.ogg><67.55426><500.7911><0.5><1><478.0962><-12.64191><-100.3553><-40.35535><0><0.2304349, OMNI><SO_WAT-RainishDrips.ogg><829.1453><647.1125><0.3586957><1, SPOT><AM_IND-SuperStructure.ogg><793.1928><489.8083><0.2934783><0.9021739><968.1939><235.8147><-144.3553><-81.35535><0><0.3065219, OMNI><AM_IND-Utility01.ogg><738.5837><478.1817><0.2173913><1, OMNI><AM_RAIN-RollingThunder.ogg><704.7912><307.9457><0.2934783><1, OMNI><AM_WIN-HowlingWnd.ogg><731.6572><551.6771><0.1630435><1, 
+FadePalette: 17, 0.7065217
+WetTerrain: OFF

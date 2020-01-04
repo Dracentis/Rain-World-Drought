@@ -1,0 +1,9 @@
+RainIntensity: 0.2608696
+RumbleIntensity: 0.2717391
+Clouds: 0.06521739
+BkgDroneVolume: 0.2608696
+Effects: AboveCloudsView-1-20-20, Flies-0-18-92, SkyDandelions-0.173913-285-101, 
+PlacedObjects: BlueToken><478.648><331.1155><0~-59~70~197~1~KingVulture~111, DeadTokenStalk><452.0966><315.1283><11~-53, DeadTokenStalk><522.5503><303.2612><-29~-36, UniqueDataPearl><313.0572><167.4724><0~0~0~0~4~0, 
+AmbientSounds: OMNI><AM_ENV-LightWind.ogg><749.2><521.5049><0.3043478><0.8826087, SPOT><AM_WIN-StrongWnd2.ogg><786.4443><219.0579><0.2282609><1.03913><51.44434><142.0579><-277.3553><53.64465><0><0.3826088, 
+FadePalette: 18, 0.3586957
+WetTerrain: OFF

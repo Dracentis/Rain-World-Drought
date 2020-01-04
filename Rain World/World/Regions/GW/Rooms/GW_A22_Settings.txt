@@ -1,0 +1,8 @@
+Template: GW_SettingsTemplate_Inside
+Grime: 0.2934783
+EffectColorA: 13
+EffectColorB: 6
+PlacedObjects: DataPearl><157.5823><132.5677><-207~247~0~0~0~0, ScavTradeInstruction><547.6972><293.5332><-16~-208, CustomDecal><25.81354><45.56038><0~499~813~499~813~0~-127~46~0.3043478~0.3369565~0~zGWMarks - C05b~0.2717391~0~0~0~0.2391304~0.1413043~0.5108696~0.1195652, CustomDecal><471.1724><-23.35147><-8~409~262~475~266~-11~-266~94~0~0.5434783~0~RustB3~1~1~0.7717391~1~0~1~0~1, 
+AmbientSounds: OMNI><AM_ENV-LightWind.ogg><831.6879><651.4315><0.2608696><0.9217392, OMNI><SO_NAT-LilDrips.ogg><654.3043><650.7914><0.1847826><1, SPOT><Weird Deep Hole.wav><755.9395><505.8139><0.2173913><1><860.9395><201.8139><-76.35535><-93.35535><0><0.1108697, 
+Triggers: Spot<tA>event<tB>BringPlayerGuideToRoom<tA>multiUse<tB>0<tA>toCycle<tB>-1<tA>fromCycle<tB>0<tA>delay<tB>0<tA>panPos<tB>32.81897<tB>318.1876<tA>fireChance<tB>1<tA>entrance<tB>0<tA>karma<tB>0<tA>pos<tB>337.8192<tB>505.1876<tA>handlePos<tB>-157.3553<tB>-38.35535, 
+FadePalette: 8, 0.326087

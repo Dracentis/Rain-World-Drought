@@ -1,0 +1,7 @@
+RainIntensity: 0.01086957
+RumbleIntensity: 0
+Clouds: 0.8043478
+EffectColorA: 22
+AmbientSounds: OMNI><AM_ENV-CityTone.ogg><739.8126><561.32><0.326087><1, OMNI><AM_ENV-SubTerr.ogg><719.1988><443.5219><0.2391304><1, OMNI><AM_IND-12thFloor.ogg><733.4369><355.6788><0.2608696><1, SPOT><SO_WAT-RunningWater.ogg><712.8809><188.3393><0.5><1><239.8809><266.3394><-111.3553><89.64465><0><0.1, 
+FadePalette: 10, 0.3369565, 0.3913043, 0.4456522
+WetTerrain: OFF

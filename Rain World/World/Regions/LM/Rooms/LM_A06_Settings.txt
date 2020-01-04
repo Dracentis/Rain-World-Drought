@@ -1,0 +1,11 @@
+Template: NONE
+DangerType: None
+Clouds: 1
+Grime: 0.06521739
+BkgDroneVolume: 0.326087
+Palette: 32
+Effects: ZeroGSpecks-0.5760869-20-20, ZeroG-0-23-91, Bloom-0.3043478-20-161, 
+PlacedObjects: SuperStructureFuses><-81.67499><635.1854><123~32, SuperStructureFuses><-102.8685><96.91113><137~64, 
+AmbientSounds: OMNI><AM_ENV-CityTone.ogg><689.6033><570.386><0.5326087><1, OMNI><AM_ENV-LightWind.ogg><729.5834><515.3182><0.5><1, SPOT><AM_ENV-WallHum.ogg><709.9188><433.1828><0.5><1><64.91882><392.1828><-69.35535><-65.35535><0><0.1, 
+FadePalette: 10, 0.3478261
+WetTerrain: OFF

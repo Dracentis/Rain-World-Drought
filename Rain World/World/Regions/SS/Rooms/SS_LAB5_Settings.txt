@@ -1,0 +1,11 @@
+Template: SS_SettingsTemplate_Corrupt
+DangerType: None
+Clouds: 1
+Grime: 0
+BkgDroneVolume: 0.326087
+Palette: 24
+EffectColorB: 12
+Effects: ZeroG-1-20-20, ZeroGSpecks-0.5760869-18-75, SSSwarmers-0.4891304-30-30, 
+PlacedObjects: LightSource><457.8805><355.9104><1~Environment~-244~205~50~86.60254~1~0, LightFixture><80.68927><233.6906><RedLight~17.32051~-10~29, LightFixture><869.5593><572.309><RedLight~17.32051~-10~36, LightSource><430.4128><-26.86615><0.5326087~Environment~0~100~-347.8286~33.03931~1~0, LightSource><13.46521><441.303><0.7608696~Environment~0~100~50~86.60254~1~0, SpotLight><368.6837><157.4208><-89~380~432~362~338~2, CoralStemWithNeurons><182.3094><374.6893><287~-46, 
+FadePalette: 17, 0.09782609
+WetTerrain: OFF

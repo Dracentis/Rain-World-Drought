@@ -1,0 +1,5 @@
+RumbleIntensity: 1
+Effects: Pulse-0-30-30, 
+PlacedObjects: LightFixture><385.7336><559.5507><RedLight~17.32051~-10~21, LightFixture><552.8579><120.3593><SlimeMoldLight~17.32051~-10~99, CosmeticSlimeMold><553.1793><122.1613><0~100, CosmeticSlimeMold2><554.9211><118.6838><0~95, SlimeMold><528.1495><79.63281><0~0~2~3, SlimeMold><551.0363><104.6967><0~0~2~3, SlimeMold><569.1859><142.4261><0~0~2~3, ReliableSpear><427.4214><452.647><, Hazer><513.55><253.3063><0~0~7~10, 
+FadePalette: 10, 0.4891304
+WetTerrain: OFF

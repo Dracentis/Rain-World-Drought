@@ -1,0 +1,11 @@
+Template: NONE
+DangerType: Thunder
+RumbleIntensity: 0.2173913
+Clouds: 1
+Palette: 16
+EffectColorA: 8
+Effects: GreenSparks-0.7717391-267-190, Lightning-0.5108696-261-249, ElectricDeath-1-20-20, 
+PlacedObjects: DangleFruit><686.7523><437.45><0~0~2~3, DangleFruit><750.5545><398.2922><0~0~2~3, DangleFruit><844.5743><372.3457><0~0~2~3, DangleFruit><946.8003><431.2405><0~0~2~3, LightSource><1045.882><1308.848><0.4347826~Environment~0~100~50~86.60254~1~0, LightSource><1198.556><739.0508><0.3913043~EffectColor1~7~190~50~86.60254~0~0, LightSource><610.3773><1431.587><0.4673913~EffectColor1~0~100~50~86.60254~0~0, LightSource><-88.64038><1416.604><0.4673913~EffectColor1~0~100~50~86.60254~0~0, LightFixture><678.0595><1329.189><RedLight~17.32051~-10~43, LightFixture><265.0972><1432.377><RedLight~17.32051~-10~25, LightFixture><2066.106><1075.83><RedLight~17.32051~-10~54, LightFixture><2364.036><1375.803><RedLight~17.32051~-10~52, LightFixture><2746.201><1349.002><RedLight~17.32051~-10~0, LightFixture><1223.369><1426.09><RedLight~17.32051~-10~76, LightFixture><1592.101><1408.384><RedLight~17.32051~-10~22, ReliableSpear><2219.581><565.6495><, ReliableSpear><2359.902><569.6201><, ReliableSpear><2145.884><559.8508><, 
+AmbientSounds: OMNI><AM_WIN-HowlingWnd.ogg><750.699><547.73><0.5><1, OMNI><AM_SUB-BlankState.ogg><709.1475><265.1717><0.1630435><1, OMNI><AM_RAIN-RollingThunder.ogg><718.8179><308.4174><0.5><1, OMNI><AM_RAIN-Rumbles.ogg><705.3158><377.1889><0.5><1, OMNI><AM_WIN-StrongWnd2.ogg><726.3915><501.832><0.1956522><1, 
+FadePalette: 17, 0.6630435, 0.6630435, 0.6630435, 0.6630435, 0.6739131, 0.6630435
+WetTerrain: OFF

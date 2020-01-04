@@ -1,0 +1,13 @@
+Template: NONE
+Clouds: 0.1847826
+Grime: 0.3152174
+BkgDroneVolume: 0.2769565
+WaterReflectionAlpha: 0.2934783
+Palette: 9
+EffectColorA: 18
+EffectColorB: 13
+Effects: CorruptionSpores-1-20-20, ZeroGSpecks-1-30-30, 
+PlacedObjects: ReliableSpear><2492.597><484.3713><, DataPearl><290.0972><384.4248><-356~-126~0~0~0~0, DangleFruit><1378.895><472.6703><0~0~2~3, DangleFruit><1901.198><486.4686><37~-498~2~3, DangleFruit><1973.14><482.3575><0~0~2~3, DangleFruit><1933.802><451.526><-10~-357~2~3, 
+AmbientSounds: OMNI><AM_ENV-Forest.ogg><763.3685><535.1611><0.5><1, 
+FadePalette: 10, 0.5108696, 0.5, 0.4891304
+WetTerrain: OFF

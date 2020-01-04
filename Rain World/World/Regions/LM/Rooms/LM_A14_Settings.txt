@@ -1,0 +1,8 @@
+Template: LM_SettingsTemplate_Memory
+Clouds: 0
+Grime: 0
+BkgDroneVolume: 0.326087
+Effects: LMSwarmers-0.7173913-30-30, 
+PlacedObjects: SpotLight><220.5841><139.8618><-9~437~623~434~668~-8, LightSource><633.1842><303.578><1~Environment~-100~38~-154~94.60254~1~0, LightSource><163.1639><482.3853><1~Environment~77~87~50~86.60254~1~0, WallMycelia><857.8293><120.8957><-140~124, WallMycelia><191.808><461.944><0~100, CoralNeuron><322.9447><241.2959><336~261, CoralStem><189.3535><442.4211><92~10, CoralStemWithNeurons><845.8291><321.396><-86~87, 
+FadePalette: 17, 0
+WetTerrain: OFF

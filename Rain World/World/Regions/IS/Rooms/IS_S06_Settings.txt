@@ -1,0 +1,3 @@
+PlacedObjects: LightSource><458.8116><482.3171><0.3043478~Environment~19~-469~50~86.60254~0~0, 
+FadePalette: 10, 0.6630435
+WetTerrain: OFF

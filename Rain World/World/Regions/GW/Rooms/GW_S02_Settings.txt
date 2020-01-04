@@ -1,0 +1,3 @@
+Template: GW_SettingsTemplate_Inside
+AmbientSounds: SPOT><AM_IND-Utility02.ogg><760.8157><456.3276><0.4347826><1><399.8157><344.3276><-207.3553><-73.35535><0><0.328261, 
+FadePalette: 8, 0.2934783

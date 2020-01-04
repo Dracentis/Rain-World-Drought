@@ -1,0 +1,9 @@
+Template: SS_SettingsTemplate_Corrupt
+DangerType: None
+Clouds: 1
+Grime: 0
+Palette: 24
+EffectColorB: 12
+Effects: ZeroG-1-20-20, ZeroGSpecks-0.3152174-19-80, 
+PlacedObjects: LightFixture><245.3011><223.9434><RedLight~17.32051~-10~11, LightFixture><783.0575><92.55429><RedLight~17.32051~-10~100, LightSource><90.31158><579.933><0.7608696~Environment~-99~-68~59~-163.3975~1~0, LightSource><805.8076><642.1953><0.7826087~Environment~-25~116~-246~-122.3975~1~0, CorruptionTube><-223.6615><204.6794><0~100, 
+WetTerrain: OFF

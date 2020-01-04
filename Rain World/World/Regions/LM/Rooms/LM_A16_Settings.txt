@@ -1,0 +1,10 @@
+Template: NONE
+DangerType: None
+Clouds: 1
+Grime: 0
+BkgDroneVolume: 0
+Palette: 18
+Effects: ZeroGSpecks-1-25-72, SunBlock-1-230-73, BrokenZeroG-1-30-30, ZeroG-0.6847826-270-228, 
+PlacedObjects: SuperStructureFuses><400.7468><50.05002><368~31, VoidSpawnEgg><127.626><175.5947><-236~358~2~3~2, VoidSpawnEgg><247.5965><177.4252><-355~257~2~3~2, LightFixture><542.4084><540.8222><RedLight~17.32051~-10~23, LightFixture><420.6288><257.6591><RedLight~-279.6795~69~33, 
+AmbientSounds: OMNI><AM_IND-SuperStructure.ogg><829.1597><647.1296><0.2826087><1, 
+FadePalette: 17, 0.6630435

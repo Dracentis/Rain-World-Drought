@@ -1,0 +1,120 @@
+ROOMS
+GATE_GW_SL : GW_B08, GW_S04, DISCONNECTED : GATE
+GATE_HI_GW : GW_S03, DISCONNECTED, GW_B01 : GATE
+GATE_DS_GW : GW_S05, DISCONNECTED, GW_B09 : GATE
+GW_S05 : GATE_DS_GW : SHELTER
+GW_S04 : GATE_GW_SL : SHELTER
+GW_S03 : GATE_HI_GW : SHELTER
+GW_C06 : GW_E02, GW_S02, GW_A10
+GW_S02 : GW_C06 : SHELTER
+GW_E02 : GW_C06, GW_B02 : SWARMROOM
+GW_B02 : GW_C03, GW_E02, GW_B05, GW_A19
+GW_C03 : GW_B02, GW_C05, GW_A20
+GW_C05 : GW_A24, GW_C03 : SCAVOUTPOST
+GW_A24 : GW_C05
+GW_B05 : GW_A20, GW_B02, GW_S07, GW_C09
+GW_A20 : GW_C03, GW_B05, GW_A21
+GW_A21 : GW_A20
+GW_S07 : GW_B05 : SHELTER
+GW_A19 : GW_A11, GW_B02
+GW_B01 : GW_A01, GATE_HI_GW
+GW_A01 : GW_C01, GW_B01, GW_A05
+GW_C01 : GW_A01, GW_B04
+GW_B04 : GW_A12, GW_C01, GW_D01
+GW_A12 : GW_B04, GW_C07 : SCAVTRADER
+GW_A05 : GW_A01, GW_A08
+GW_A08 : GW_A05, GW_A06
+GW_A06 : GW_S01, GW_A07, GW_A08
+GW_S01 : GW_A06 : SHELTER
+GW_A07 : GW_A06, GW_A10
+GW_A10 : GW_D01, GW_A07, GW_C06
+GW_D01 : GW_B03, GW_B04, GW_A10 : SWARMROOM
+GW_B03 : GW_D01, GW_C02, GW_B07, GW_A14
+GW_A14 : GW_B03, DISCONNECTED
+GW_B07 : GW_A04, GW_B03
+GW_A04 : GW_B07, GW_S06, GW_C08
+GW_S06 : GW_A04 : SHELTER
+GW_C08 : GW_A04, GW_B06, GW_C09
+GW_C02 : GW_B03, GW_A13
+GW_A13 : GW_A11, GW_C02, GW_B06
+GW_A11 : GW_A19, GW_A13, GW_S08
+GW_S08 : GW_A11 : SHELTER
+GW_B06 : GW_A13, GW_A22, GW_C08
+GW_A22 : GW_B06, GW_A23
+GW_A23 : GW_A22, GW_C11
+GW_C11 : GW_C04, GW_A23 : SCAVOUTPOST
+GW_C04 : GW_B08, GW_C11
+GW_B08 : GW_C04, GATE_GW_SL
+GW_B09 : GW_D02, GATE_DS_GW
+GW_D02 : GW_C07, GW_B09, GW_C10
+GW_C07 : GW_A12, GW_D02
+GW_C10 : GW_D02, GW_E01
+GW_E01 : GW_C09, GW_C10 : SWARMROOM
+GW_C09 : GW_C08, GW_B05, GW_E01
+END ROOMS
+
+CREATURES
+//all
+GW_B01 : 9-Garbage Worm-2
+GW_C01 : 10-Garbage Worm-4
+GW_D01 : 18-Garbage Worm-5
+GW_C02 : 13-Garbage Worm-4
+GW_E02 : 7-Pink, 8-GreyLizard, 9-Mimic-{14}, 3-CicadaB-2, 4-CicadaB-1, 17-Garbage Worm-3
+GW_B09 : 3-Snail-2, 4-Garbage Worm-2
+GW_D02 : 3-Snail, 4-Snail, 5-Snail
+GW_E01 : 2-CicadaB, 3-CicadaB, 5-GreyLizard-2
+GW_C10 : 3-Snail-3
+GW_C08 : 5-Snail-4
+GW_C04 : 13-Garbage Worm-2
+GW_B08 : 2-CicadaB-1, 3-CicadaA-2
+GW_A08 : 2-Snail-2, 3-Snail-3
+GW_A04 : 3-Small Centipede-3
+LINEAGE : GW_C03 : 5 : Green-0.2, Yellow-0.5, GreyLizard-0
+LINEAGE : GW_E02 : 6 : NONE-0.05, Mimic-{17}-0.5, Mimic-{21}-0.5, TentaclePlant-0
+LINEAGE : GW_E02 : 11 : NONE-0.04, Mimic-{21}-0.5, Mimic-{24}-0.4, NONE-0
+LINEAGE : GW_C09 : 5 : NONE-0.07, GreyLizard-0.5, NONE-0.07, GreyLizard-0
+LINEAGE : GW_C09 : 6 : NONE-0.07, GreyLizard-0.5, NONE-0.07, GreyLizard-0
+LINEAGE : GW_C06 : 4 : Small Centipede-0.5, Centipede-{0.3}-0.5, Centipede-{0.6}-0.5, Centipede-{0.9}-0.5, Red Centipede-0
+
+//white
+(0)OFFSCREEN : 0-Vulture-3, 0-KingVulture, 0-Scavenger-26
+(0)GW_A11 : 5-Mimic-{12}
+(0)GW_A11 : 4-Centipede-2
+(0)GW_C06 : 3-Mimic, 4-Dropbug
+(0)GW_C03 : 4-DropBug-2
+(0)GW_A12 : 2-DropBug
+(0)GW_D01 : 6-Cyan-2
+(0)GW_C02 : 2-CicadaB-3, 3-Cyan
+(0)GW_A04 : 3-Centipede
+(0)GW_B08 : 4-DropBug
+(0)GW_B02 : 4-RedCentipede
+(0)GW_A10 : 3-TentaclePlant
+(0)GW_C09 : 3-Centipede-1, 4-GreyLizard-1
+(0)LINEAGE : GW_A11 : 3 : Centipede-0.5, Centipede-{0.7}-0.5, RedCentipede-0
+(0)LINEAGE : GW_C04 : 2 : EggBug-1.0, Cyan-0.5, GreyLizard-0
+(0)OFFSCREEN : 0-Vulture-3, 0-Scavenger-26
+(0)GW_C02 : 2-CicadaB-2, 3-CicadaB-1
+(0)GW_C06 : 3-Mimic, 4-Small Centipede-2
+(0)GW_C09 : 3-GreyLizard-2
+
+//[Other cat]
+(1)OFFSCREEN : 0-Vulture-3, 0-KingVulture, 0-Scavenger-26
+(1)GW_A11 : 5-Mimic-{12}
+(1)GW_A11 : 4-Centipede-2
+(1)GW_C06 : 3-Mimic, 4-Dropbug
+(1)GW_C03 : 4-DropBug-2
+(1)GW_A12 : 2-DropBug
+(1)GW_D01 : 6-Cyan-2
+(1)GW_C02 : 2-CicadaB-3, 3-Cyan
+(1)GW_A04 : 3-Centipede
+(1)GW_B08 : 4-DropBug
+(1)GW_B02 : 4-RedCentipede
+(1)GW_A10 : 3-TentaclePlant
+(1)GW_C09 : 3-Bro, 4-Daddy
+(1)LINEAGE : GW_A11 : 3 : Centipede-0.5, Centipede-{0.7}-0.5, RedCentipede-0
+(1)LINEAGE : GW_C04 : 2 : EggBug-1.0, Cyan-0
+
+END CREATURES
+
+BAT MIGRATION BLOCKAGES
+END BAT MIGRATION BLOCKAGES

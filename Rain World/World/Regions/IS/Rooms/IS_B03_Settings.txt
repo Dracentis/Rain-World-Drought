@@ -1,0 +1,5 @@
+Effects: Pulse-0.173913-30-30, 
+PlacedObjects: LightSource><370.0623><166.681><1~Environment~-80~142~50~86.60254~1~0, WaterNut><743.0935><463.6245><-126~68~2~4, WaterNut><260.4135><383.3848><54~133~2~4, WaterNut><238.8735><390.1549><86~212~1~3, DandelionPatch><487.4236><479.6506><0~100, 
+AmbientSounds: SPOT><SO_WAT-OpenFlow.ogg><714.3159><254.5781><0.6956522><1><493.3159><369.5781><-270.3553><71.64465><0><0.1, 
+FadePalette: 10, 0.5434783
+WetTerrain: OFF

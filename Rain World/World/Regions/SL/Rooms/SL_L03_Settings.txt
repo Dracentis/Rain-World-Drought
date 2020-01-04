@@ -1,0 +1,6 @@
+Template: SL_SettingsTemplate_Sewer
+EffectColorA: 12
+Effects: Pulse-0.1521739-2-78, Ant-0.08695652-271-55, 
+PlacedObjects: LightSource><466.8026><498.4677><1~Environment~164~-10~50~86.60254~1~0, LightSource><1589.381><548.3394><1~EffectColor1~-89~-140~50~86.60254~1~0, SmallPiston><-213.9145><256.0692><, SmallPiston><-214.0679><256.0619><, SmallPiston><987.5583><209.8071><, SmallPiston><691.1301><211.5981><, SmallPiston><788.8832><215.9124><, SmallPiston><888.0371><212.5535><, ReliableIggyDirection><710.6384><493.6056><-120~128~50~50~1~5~0~5~1~111, LargePistonDeathMode><961.6863><504.3225><, LargePistonDeathMode><767.355><502.3879><, 
+AmbientSounds: OMNI><SO_IND-Carwash.ogg><713.1939><296.549><0.3152174><1, OMNI><SO_IND-Humm.ogg><712.4421><191.4446><0.4021739><1, SPOT><SO_IND-FactoryM.ogg><719.6361><261.4144><0.5><1><336.6362><153.4144><-85.35535><70.64465><0><0.1, SPOT><SO_IND-Fridge.ogg><1089.308><430.5586><0.2826087><1><1056.308><135.5586><-96.35535><52.64465><0><0.1, 
+FadePalette: 10, 0.4456522, 0.3152174

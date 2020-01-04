@@ -1,0 +1,6 @@
+Clouds: 1
+Effects: Pulse-0.1086956-30-30, 
+PlacedObjects: LightSource><231.0555><566.2031><1~Environment~0~100~50~86.60254~1~0, LightFixture><1155.732><556.1323><RedLight~17.32051~-10~7, LightFixture><597.5502><556.9266><RedLight~17.32051~-10~68, LightFixture><105.6052><298.1704><RedLight~17.32051~-10~51, LightFixture><1617.434><560.4293><RedLight~17.32051~-10~49, DangleFruit><492.5364><475.3024><0~0~2~3, DangleFruit><544.5434><462.3043><0~0~2~3, DangleFruit><442.6956><500.5405><0~0~2~3, 
+AmbientSounds: SPOT><SO_WAT-OpenFlow.ogg><696.5234><245.6986><0.5><1><1016.21><307.3785><260.6447><-69.35535><0><0.1, 
+FadePalette: 10, 0.6847826, 0.6413044
+WetTerrain: OFF

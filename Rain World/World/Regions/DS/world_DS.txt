@@ -1,0 +1,95 @@
+ROOMS
+GATE_DS_SB : DS_D02, DISCONNECTED, DS_S03 : GATE
+GATE_SU_DS : DISCONNECTED, DS_B02 : GATE
+GATE_DS_GW : DISCONNECTED, DS_B10, DISCONNECTED : GATE
+DS_S03 : GATE_DS_SB : SHELTER
+DS_B02 : GATE_SU_DS, DS_A22
+DS_A22 : DS_A15, DS_B02, DS_A06
+DS_A06 : DS_A22, DS_A02, DS_A01
+DS_A02 : DISCONNECTED, DS_A06, DS_B03
+DS_A01 : DS_A06 : SWARMROOM
+DS_A20 : DS_S01r, DS_B03
+DS_S01r : DS_A20 : SHELTER
+DS_B03 : DS_A02, DS_A16, DS_A20, DS_A14, DS_A10
+DS_A15 : DS_A23, DS_A22
+DS_A23 : DS_A09, DS_A15
+DS_A09 : DS_A19, DS_A23
+DS_A19 : DS_B04, DS_A09 : SWARMROOM
+DS_B04 : DS_A19, DS_A08
+DS_A08 : DS_B07, DS_B04, DS_S04
+DS_S04 : DS_A08 : SHELTER
+DS_B07 : DS_A08, DS_C04, DS_A24 : SWARMROOM
+DS_A16 : DS_B03, DS_A07
+DS_A07 : DS_A16, DS_A17
+DS_A17 : DS_A24, DS_A07
+DS_A24 : DS_B07, DS_A11, DS_A17
+DS_A11 : DS_A24
+DS_C04 : DS_B07, DS_C01, DS_B08
+DS_A14 : DS_B03, DS_B01
+DS_B01 : DS_A14, DS_A25, DS_D01
+DS_A25 : DS_B01, DISCONNECTED, DS_B08
+DS_B08 : DS_C04, DS_A25
+DS_C01 : DISCONNECTED, DS_A21, DS_C04, DS_S02l, DS_D01, DS_C03
+DS_S02l : DS_C01 : SHELTER
+DS_A21 : DS_C01
+DS_C03 : DS_B10, DS_C01
+DS_B10 : GATE_DS_GW, DS_C03
+DS_D01 : DS_B01, DS_C01, DS_A05
+DS_A05 : DS_D03, DS_D01 : SWARMROOM
+DS_D03 : DS_A27, DISCONNECTED, DS_A05
+DS_A27 : DS_C02, DS_D03
+DS_C02 : DS_A26, DS_D02, DS_A27
+DS_D02 : DS_C02, GATE_DS_SB
+DS_A26 : DS_B06, DS_C02
+DS_B06 : DS_A26, DS_A13
+DS_A13 : DS_B06, DS_A10
+DS_A10 : DS_B03, DS_A13
+END ROOMS
+
+CREATURES
+//all
+OFFSCREEN : 0-Scavenger-3
+DS_D02 : 2-TentaclePlant
+DS_A27 : 2-TentaclePlant
+DS_A05 : 3-Leech-15, 4-Leech-10, 2-Snail-3
+DS_A21 : 1-Mimic-{14}, 2-Snail-2, 3-Snail-2
+DS_C01 : 6-Leech-15, 7-Leech-10
+DS_A07 : 2-Snail, 2-Leech-5
+DS_A17 : 2-Snail
+DS_A13 : 2-Leech-5, 3-Leech-5
+DS_A14 : 2-Leech-5, 3-Leech-5
+DS_B01 : 3-Leech-5, 4-Leech-5, 5-Snail-3
+DS_A25 : 3-Leech-5, 4-Leech-7, 5-Snail-2
+DS_C04 : 3-TentaclePlant
+
+//Wanderer
+(0)DS_B07 : 4-Salamander, 5-Snail, 6-Snail, 7-Snail
+(0)DS_A16 : 3-Snail, 4-Snail-2, 5-Leech-5
+(0)DS_A08 : 3-Snail-2, 5-Snail-2
+(0)LINEAGE : DS_A08 : 4 : Mimic-{14}-0.5, Mimic-{16}-0.5, TentaclePlant-0
+(0)LINEAGE : DS_A06 : 3 : Green-0.2, Salamander-0.5, Blue-0.3, Red-0
+(0)LINEAGE : DS_A02 : 4 : Pink-0.2, Salamander-0.5, Blue-0.3, Red-0
+(0)LINEAGE : DS_A22 : 3 : Green-0.2, Salamander-0.2, White-0
+(0)LINEAGE : DS_A09 : 2 : Salamander-0.2, Blue-0.5, White-0.5, Red-0
+(0)LINEAGE : DS_A16 : 2 : Salamander-0.2, Blue-0.2, White-0
+
+//[Other cat]
+(1)DS_A02 : 3-Centipede-4, 4-Centipede-5
+(1)DS_A22 : 4-DropBug-2
+(1)DS_B07 : 3-DropBug-3, 4-Cyan-3, 5-Snail, 6-Snail, 7-Snail
+(1)DS_A13 : 2-Leech-5
+(1)DS_A25 : 4-Leech-5
+(1)DS_A16 : 3-Snail, 4-Snail-2, 5-Leech-8
+(1)DS_A09 : 2-DropBug-2
+(1)DS_A08 : 3-TentaclePlant, 4-Snail-2, 5-Snail-2
+(1)LINEAGE : DS_A02 : 4 : Centipede-0.6, Centipede-{1.0}-1.0, RedCentipede-0
+(1)LINEAGE : DS_A16 : 2 : DropBug-1.0, Salamander-1.0, Cyan-0.1, Red-0
+(1)LINEAGE : DS_A06 : 3 : Salamander-1.0, Cyan-0.1, Red-0
+(1)LINEAGE : DS_A22 : 3 : Green-0.5, Salamander-1, White-1, Cyan-0
+(1)LINEAGE : DS_A09 : 2 : Salamander-0.2, Cyan-0.1, Red-0
+
+
+END CREATURES
+
+BAT MIGRATION BLOCKAGES
+END BAT MIGRATION BLOCKAGES

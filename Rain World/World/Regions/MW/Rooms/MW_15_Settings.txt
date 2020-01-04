@@ -1,0 +1,6 @@
+Template: NONE
+DangerType: None
+Palette: 18
+EffectColorA: 5
+Effects: RoofTopView-1-20-20, 
+FadePalette: 8, 0.3478261, 0.3586957, 0.3478261, 0.3586957, 0.3478261
