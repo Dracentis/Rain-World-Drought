@@ -41,7 +41,6 @@ IS_B04 : 2-PoleMimic, 3-Snail-4
 IS_V08 : 3-BigSpider
 IS_V02 : 3-Blue, 4-, 5-White, 6-Centipede-2
 IS_V03 : 2-Yellow-4, 3-Dropbug
-IS_V04 : 3-Salamander
 IS_V07 : 3-Jet Fish, 4-Jet Fish, 5-, 6-SeaDrake, 7-SeaDrake, 10-Jet Fish, 11-Salamander
 IS_V01 : 2-Snail-3, 3-SeaDrake
 IS_V05 : 3-White, 4-Leech-7, 5-SeaDrake
