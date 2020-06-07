@@ -110,7 +110,6 @@ LINEAGE : GW_C06 : 4 : Small Centipede-0.5, Centipede-{0.3}-0.5, Centipede-{0.6}
 (1)GW_B08 : 4-DropBug
 (1)GW_B02 : 4-RedCentipede
 (1)GW_A10 : 3-TentaclePlant
-(1)GW_C09 : 3-Bro, 4-Daddy
 (1)LINEAGE : GW_A11 : 3 : Centipede-0.5, Centipede-{0.7}-0.5, RedCentipede-0
 (1)LINEAGE : GW_C04 : 2 : EggBug-1.0, Cyan-0
 
