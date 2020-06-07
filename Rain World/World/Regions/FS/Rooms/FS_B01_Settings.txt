@@ -1,6 +1,6 @@
 Template: FS_SettingsTemplate_Forest
-RainIntensity: 0.01086957
-RumbleIntensity: 0
+RainIntensity: 1
+RumbleIntensity: 1
 Palette: 15
 EffectColorA: 2
 EffectColorB: 7

@@ -1,4 +1,6 @@
 Template: FS_SettingsTemplate_Forest
+RainIntensity: 1
+RumbleIntensity: 1
 Clouds: 0.5108696
 Grime: 0.326087
 EffectColorA: 15

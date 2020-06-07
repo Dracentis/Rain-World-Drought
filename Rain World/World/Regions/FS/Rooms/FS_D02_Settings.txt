@@ -1,0 +1,15 @@
+DangerType: FloodAndRain
+WaveSpeed: 0.4891304
+WaveLength: 1
+WaveAmplitude: 0
+SecondWaveLength: 0
+SecondWaveAmplitude: 0
+Clouds: 0.8152174
+Grime: 0.1521739
+Palette: 15
+EffectColorA: 9
+EffectColorB: 6
+Effects: Ant-0.2934783-20-20, Beetle-0.3586957-28-86, 
+AmbientSounds: OMNI><AM_ENV-LightWind.ogg><771.6714><519.353><0.2826087><1, OMNI><AM_ENV-Outside.ogg><682.3735><478.1573><0.3695652><1, 
+FadePalette: 10, 0.3152174, 0.3152174, 0.3152174
+WetTerrain: OFF

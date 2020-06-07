@@ -1,5 +1,6 @@
-RainIntensity: 0.01086957
-RumbleIntensity: 0
+DangerType: Flood
+RainIntensity: 1
+RumbleIntensity: 1
 Clouds: 0.09782609
 EffectColorB: 13
 AmbientSounds: OMNI><AM_ENV-CityTone.ogg><724.072><564.3412><0.3043478><1, OMNI><AM_ENV-LushNight.ogg><698.1892><502.0647><0.326087><1, OMNI><AM_IND-DeepHum.ogg><720.6279><305.6537><0.2608696><1, OMNI><AM_IND-Warehouse01.ogg><741.5244><411.0515><0.423913><1, 

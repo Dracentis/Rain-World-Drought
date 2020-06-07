@@ -1,3 +1,5 @@
 Template: FS_SettingsTemplate_Forest
-RumbleIntensity: 0
+RainIntensity: 1
+RumbleIntensity: 0.9673913
 PlacedObjects: BlueToken><1554.55><122.2417><-25~56~0~0~1~WalkerBeast~111, DeadTokenStalk><1471.187><121.5706><12~58, 
+WetTerrain: OFF

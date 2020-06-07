@@ -1,3 +1,5 @@
 Template: FS_SettingsTemplate_Forest
-RumbleIntensity: 0
+RainIntensity: 1
+RumbleIntensity: 1
 EffectColorB: 13
+WetTerrain: OFF

@@ -1,5 +1,6 @@
 Template: FS_SettingsTemplate_Forest
-RumbleIntensity: 0.04347826
+RainIntensity: 1
+RumbleIntensity: 1
 EffectColorA: 2
 EffectColorB: 13
 Effects: BorderPushBack-1-20-20, TinyDragonFly-0.173913-145-118, Moth-0.2391304-77-56, 

@@ -1,0 +1,10 @@
+Template: FS_SettingsTemplate_Forest
+RainIntensity: 1
+RumbleIntensity: 1
+Clouds: 0.75
+Grime: 0.3043478
+EffectColorA: 3
+EffectColorB: 7
+PlacedObjects: CustomDecal><3555.364><643.9142><1~68~69~68~69~0~83~-333~0~1~0~JackalopeSkull~0.5652174~0.4782609~0.5652174~0.4782609~0.5652174~0.4782609~0.5652174~0.4782609, CustomDecal><3490.019><247.5509><2~47~296~47~296~-1~-357~-101~0.1956522~1~0~junkGraffiti5~1~0.07608695~1~0.07608695~1~0.07608695~1~0.07608695, 
+FadePalette: 10, 0.326087, 0.3152174, 0.3152174, 0.3043478
+WetTerrain: OFF

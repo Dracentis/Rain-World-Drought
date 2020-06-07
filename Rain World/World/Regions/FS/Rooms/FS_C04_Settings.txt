@@ -1,3 +1,5 @@
 Template: FS_SettingsTemplate_Forest
-RumbleIntensity: 0
+RainIntensity: 1
+RumbleIntensity: 1
 PlacedObjects: DangleFruit><1398.412><524.6326><0~0~2~3, DangleFruit><1462.392><544.6088><0~0~2~3, 
+WetTerrain: OFF
