@@ -19,6 +19,6 @@ GATE_SL_IS : 3 : 2
 GATE_SL_MW : 1 : 1
 GATE_IS_MW : 3 : 2
 GATE_MW_LM : 5 : 1
-GATE_LM_MW : 1 : 5
-GATE_LF_FS : 3 : 2
+GATE_LM_MW : 1 : 1
+GATE_LF_FS : 2 : 4
 GATE_UW_IS : 5 : 1

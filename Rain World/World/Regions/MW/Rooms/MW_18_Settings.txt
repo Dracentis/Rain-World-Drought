@@ -1,10 +1,12 @@
 Template: NONE
+RainIntensity: 0.1847826
+RumbleIntensity: 0.25
 Clouds: 0.3804348
 Palette: 8
 EffectColorA: 8
 EffectColorB: 6
 Effects: AboveCloudsView-1-20-20, Fog-0.75-30-75, 
-PlacedObjects: UniqueDataPearl><793.4031><1024.121><0~0~0~39~23~0, 
+PlacedObjects: UniqueDataPearl><793.4031><1024.121><0~0~0~39~23~0, DangleFruit><755.3215><746.0902><64~75~2~3, DangleFruit><846.9409><753.0594><0~0~2~3, DangleFruit><804.3357><733.1816><51~-93~2~3, 
 AmbientSounds: OMNI><AM_ENV-CityTone.ogg><711.4926><562.9499><0.5><1, OMNI><AM_ENV-CricketsWnd.ogg><775.0798><549.145><0.5><1, OMNI><AM_WIN-StrongWnd2.ogg><719.564><509.4266><0.5><1, 
 FadePalette: 18, 0.5543478, 0.5543478
 WetTerrain: OFF

@@ -1,6 +1,15 @@
 Template: NONE
-DangerType: None
-Palette: 18
-EffectColorA: 5
+RainIntensity: 0
+RumbleIntensity: 0
+Clouds: 0
+Grime: 0
+RandomItemDensity: 0.5
+RandomItemSpearChance: 0.1021738
+Palette: 30
+EffectColorA: 9
+EffectColorB: 4
 Effects: RoofTopView-1-20-20, 
-FadePalette: 8, 0.3478261, 0.3586957, 0.3478261, 0.3586957, 0.3478261
+PlacedObjects: NoSpearStickZone><-2.9328><331.5811><56~247, 
+Triggers: Spot<tA>event<tB>MusicEvent<eA>songName<eB>NA_02 - Dustcloud<eA>vol<eB>0.3<eA>prio<eB>0.5<eA>mxThrt<eB>1<eA>loop<eB>0<eA>droneTol<eB>0<eA>rooms<eB>-1<eA>rest<eB>5<eA>fadeIn<eB>0<eA>oneSongPerCycle<eB>0<eA>stopAtDeath<eB>0<eA>stopAtGate<eB>0<tA>multiUse<tB>0<tA>toCycle<tB>-1<tA>fromCycle<tB>0<tA>delay<tB>0<tA>panPos<tB>466.437<tB>359.9398<tA>fireChance<tB>1<tA>entrance<tB>0<tA>karma<tB>0<tA>slugcats<tB>111<tA>pos<tB>7800.437<tB>148.9398<tA>handlePos<tB>-35.35534<tB>-35.35534, 
+FadePalette: 18, 0.3695652, 0.3695652, 0.3586957, 0.3695652, 0.3695652, 0.3695652, 0.3695652, 0.3695652
+WetTerrain: OFF

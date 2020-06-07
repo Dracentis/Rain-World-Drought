@@ -1,0 +1,10 @@
+Template: NONE
+RainIntensity: 0
+RumbleIntensity: 0
+Grime: 0.05434782
+Palette: 8
+EffectColorB: 8
+Effects: SkyBloom-0.5543478-20-20, Fog-0.6630435-131-74, AboveCloudsView-1-199-125, 
+AmbientSounds: OMNI><AM_ENV-CricketsWnd.ogg><731.1758><546.9048><0.5><1, OMNI><AM_WIN-StrongWnd2.ogg><732.8945><477.3618><0.6304348><1, OMNI><AM_ENV-CityTone.ogg><553.484><572.9493><0.3695652><1, 
+FadePalette: 18, 0.5652174
+WetTerrain: OFF

@@ -1,4 +1,5 @@
 Template: NONE
+Clouds: 0.9239131
 Palette: 18
 EffectColorB: 8
 Effects: AboveCloudsView-1-20-20, 

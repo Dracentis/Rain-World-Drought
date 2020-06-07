@@ -1,0 +1,10 @@
+Template: NONE
+DangerType: None
+Clouds: 1
+Grime: 0
+Palette: 18
+EffectColorB: 0
+Effects: ZeroG-0.6847826-20-20, SunBlock-1-32-102, ZeroGSpecks-1-370-71, BrokenZeroG-1-239-151, 
+PlacedObjects: LightFixture><467.379><322.4092><RedLight~13.3205~62~38, LightFixture><218.8532><171.8286><RedLight~17.32051~-10~10, 
+FadePalette: 17, 0.7826087
+WetTerrain: OFF

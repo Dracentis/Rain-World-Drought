@@ -1,0 +1,4 @@
+Grime: 0.2391304
+Palette: 8
+PlacedObjects: ExitSymbolShelter><913.1998><269.9436><, NoSpearStickZone><483.6084><243.3913><-147~221, 
+FadePalette: 4, 0.7173913

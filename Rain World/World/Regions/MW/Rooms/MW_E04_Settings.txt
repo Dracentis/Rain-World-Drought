@@ -1,0 +1,13 @@
+Template: NONE
+RainIntensity: 0
+RumbleIntensity: 0
+Grime: 0.05434782
+RandomItemDensity: 0.1413043
+RandomItemSpearChance: 0.1347825
+Palette: 8
+EffectColorA: 9
+EffectColorB: 8
+Effects: Fog-0.7065217-444-91, Bloom-0.7391304-422-172, AboveCloudsView-1-408-34, 
+AmbientSounds: OMNI><AM_ENV-CityTone.ogg><703.2273><566.6987><0.5><1, OMNI><AM_ENV-CricketsWnd.ogg><704.9297><497.6873><0.2282609><1, OMNI><AM_WIN-StrongWnd2.ogg><670.6728><401.3993><0.7391304><1, 
+FadePalette: 18, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75
+WetTerrain: OFF
