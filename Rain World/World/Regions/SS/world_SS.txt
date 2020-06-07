@@ -70,14 +70,6 @@ SS_D05 : SS_E05, SS_A13, SS_B04
 END ROOMS
 
 CREATURES
-
-//[Other cat]
-(1)SS_C02 : 3-Daddy
-(1)SS_F03 : 3-Daddy
-(1)SS_I02 : 8-Daddy
-(1)SS_H01 : 2-Daddy
-
-
 END CREATURES
 
 BAT MIGRATION BLOCKAGES

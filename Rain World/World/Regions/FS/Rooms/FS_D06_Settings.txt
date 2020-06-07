@@ -1,0 +1,15 @@
+DangerType: Flood
+CeilingDrips: 0.1086956
+Clouds: 0
+Grime: 0.5652174
+BkgDroneNoThreatVolume: 1
+RandomItemDensity: 0.2065217
+RandomItemSpearChance: 0.1021738
+EffectColorA: 3
+EffectColorB: 6
+Effects: Flies-0.326087-20-20, Beetle-0.25-30-95, 
+PlacedObjects: VultureGrub><1548.329><659.8162><-402~-139~1~9, DeadVultureGrub><1815.057><652.449><-436~-217~1~10, DeadVultureGrub><1449.292><658.3044><-71~-135~1~10, CustomDecal><1104.946><376.7908><0~225~315~225~314~0~539~11~0.6086956~1~0~BigGreen~1~0.09782609~1~0.09782609~1~0.09782609~1~0.09782609, CustomDecal><118.5551><923.9552><1~142~95~142~95~0~363~64~0~1~0~CuteGhost~0.5326087~0.75~0.5326087~0.75~0.5326087~0.75~0.5326087~0.75, CustomDecal><224.7074><611.1954><1~49~67~49~67~0~119~-29~0~1~0~CrackDweller1~1~0~1~0~1~0~1~0, 
+AmbientSounds: OMNI><AM_IND-Fabrik01.ogg><737.651><251.3262><0.2608696><1, OMNI><AM_SUB-MysticCave1.ogg><758.9112><141.0708><0.173913><1, 
+Triggers: Spot<tA>event<tB>MusicEvent<eA>songName<eB>RW_61 - Forest Sanctuary<eA>vol<eB>0.3<eA>prio<eB>0.5<eA>mxThrt<eB>1<eA>loop<eB>0<eA>droneTol<eB>0<eA>rooms<eB>-1<eA>rest<eB>5<eA>fadeIn<eB>0<eA>oneSongPerCycle<eB>0<eA>stopAtDeath<eB>0<eA>stopAtGate<eB>0<tA>multiUse<tB>0<tA>toCycle<tB>-1<tA>fromCycle<tB>0<tA>delay<tB>0<tA>panPos<tB>669.0259<tB>401.0517<tA>fireChance<tB>1<tA>entrance<tB>-1<tA>karma<tB>0<tA>slugcats<tB>111<tA>pos<tB>452.0259<tB>1078.052<tA>handlePos<tB>-100.3553<tB>-37.35535, 
+FadePalette: 10, 0.4673913, 0.4673913, 0.4673913, 0.4673913
+WetTerrain: OFF

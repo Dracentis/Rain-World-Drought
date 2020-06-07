@@ -1,0 +1,10 @@
+Template: NONE
+Clouds: 0.1847826
+Grime: 0.2282609
+BkgDroneVolume: 0
+Palette: 5
+EffectColorA: 2
+EffectColorB: 2
+PlacedObjects: NoSpearStickZone><477.519><248.0509><-244~98, 
+AmbientSounds: OMNI><AM_ENV-LightWind.ogg><760.437><518.571><0.326087><0.5695652, SPOT><AM_IND-DeepHum.ogg><773.1953><307.7929><0.3695652><1><481.1953><-31.20709><-111.3553><-34.35534><0><0.328261, 
+FadePalette: 20, 0.25

@@ -1,5 +1,5 @@
 Template: SL_SettingsTemplate_Sewer
 DangerType: Flood
 Effects: Drain-0.3043478-20-20, 
-PlacedObjects: LightSource><757.0532><229.5358><1~Environment~-647~344~-346~229.6025~0~0, 
+PlacedObjects: LightSource><757.0532><229.5358><1~Environment~-647~344~-346~229.6025~0~0, BlueToken><821.6384><778.6443><19~-84~-356~62~1~BigEel~111, DeadTokenStalk><774.9962><726.45><18~-80, DeadTokenStalk><141.1117><760.3555><-18~-71, DeadTokenStalk><245.6985><667.976><-25~-73,
 FadePalette: 10, 0, 0.06521739, 0.173913, 0.2934783, 0.4130435, 0.5108696

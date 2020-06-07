@@ -1,0 +1,10 @@
+Template: NONE
+DangerType: Flood
+Clouds: 0.1304348
+Grime: 0.1521739
+BkgDroneVolume: 0
+Palette: 13
+Effects: LightBurn-0.5108696-4-52, 
+PlacedObjects: ExitSymbolShelter><226.3011><116.4434><, ExitSymbolShelter><732.3175><119.8118><, NoSpearStickZone><483.9456><244.5417><-91~250, 
+AmbientSounds: OMNI><AM_ENV-LightWind.ogg><755.1403><524.6425><0.2826087><0.9217392, SPOT><AM_IND-DeepHum.ogg><767.1991><307.769><0.326087><1><478.1991><4.769043><-85.35535><6.644653><0><0.3826088, 
+FadePalette: 10, 0.6521739

@@ -1,0 +1,10 @@
+Template: NONE
+DangerType: None
+Clouds: 0
+Grime: 0.06521739
+RandomItemDensity: 0
+RandomItemSpearChance: 0
+Palette: 18
+EffectColorA: 9
+FadePalette: 8, 0.5326087, 0.5326087, 0.5326087
+WetTerrain: OFF

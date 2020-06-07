@@ -1,0 +1,12 @@
+DangerType: Flood
+CeilingDrips: 0.3369565
+WaveSpeed: 0.5
+Clouds: 1
+Grime: 0.5217391
+RandomItemDensity: 0.173913
+WaterReflectionAlpha: 0
+Palette: 15
+EffectColorB: 6
+Effects: Flies-0.25-20-20, Beetle-0.1630435-28-70, 
+FadePalette: 10, 0.3586957, 0.3586957
+WetTerrain: OFF

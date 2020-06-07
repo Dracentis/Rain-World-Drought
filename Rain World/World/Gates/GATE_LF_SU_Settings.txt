@@ -1,0 +1,8 @@
+DangerType: FloodAndRain
+Clouds: 0.4130435
+Grime: 0.2282609
+Palette: 0
+EffectColorA: 2
+EffectColorB: 18
+PlacedObjects: CustomDecal><115.6615><186.618><-31~94~55~126~74~14~137~-323~0.2826087~1~0~ScavMark Deer~1~0~1~0~1~0~1~0.8913044, CustomDecal><115.177><186.5638><-31~94~55~126~74~14~-121~-321~0.3152174~1~0~ScavMark Deer~1~0~1~0~0~0~1~0.5978261, NoSpearStickZone><464.6483><241.8658><-244~118, 
+FadePalette: 14, 0.7173913

@@ -1,0 +1,9 @@
+DangerType: Flood
+Clouds: 0.4130435
+Grime: 0.2282609
+BkgDroneVolume: 0
+Palette: 14
+Effects: SkyDandelions-0-20-20, Flies-0-19-75, 
+PlacedObjects: ExitSymbolShelter><231.653><115.8788><, NoSpearStickZone><478.1694><252.067><-243~113, 
+AmbientSounds: OMNI><AM_ENV-LightWind.ogg><832.1634><650.9303><0.3043478><0.6869565, SPOT><AM_IND-Utility02.ogg><869.4351><128.3259><0.423913><1><980.4351><293.3259><-229.3553><-131.3553><0><0.2739132, SPOT><AM_IND-Utility02.ogg><57.0235><120.4486><0.4130435><1><-54.9765><284.4486><183.6447><-182.3553><0><0.3173913, SPOT><SO_IND-Deep50hz.ogg><734.5713><357.3398><0.4130435><1><467.5713><-60.66019><-132.3553><-44.35534><0><0.3391306, 
+FadePalette: 3, 0.4673913

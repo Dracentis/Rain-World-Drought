@@ -1,4 +1,6 @@
 Template: NONE
+RainIntensity: 0.5
+RumbleIntensity: 0.5108696
 Clouds: 0.4673913
 Palette: 8
 EffectColorB: 8

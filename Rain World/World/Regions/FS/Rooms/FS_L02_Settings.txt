@@ -1,6 +1,6 @@
 DangerType: Flood
-RainIntensity: 0.01086957
-RumbleIntensity: 0
+RainIntensity: 1
+RumbleIntensity: 1
 Clouds: 0.6847826
 Grime: 0.3913043
 WaterReflectionAlpha: 1

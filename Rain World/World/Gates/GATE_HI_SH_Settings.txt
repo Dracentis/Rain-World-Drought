@@ -1,0 +1,9 @@
+Template: NONE
+DangerType: FloodAndRain
+Clouds: 0.2608696
+Grime: 0.08695652
+Palette: 35
+Effects: LightBurn-0.08695652-20-20, 
+PlacedObjects: ExitSymbolShelter><738.5825><118.5678><, NoSpearStickZone><466.7273><241.1987><-232~175, 
+AmbientSounds: OMNI><AM_ENV-LightWind.ogg><833.9388><637.9342><0.326087><0.7847826, OMNI><SO_WAT-LilDrips.ogg><830.2545><559.05><0.1847826><1, 
+FadePalette: 5, 0.3695652

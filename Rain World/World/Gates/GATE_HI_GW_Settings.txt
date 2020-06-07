@@ -1,0 +1,6 @@
+DangerType: FloodAndRain
+Clouds: 0.2173913
+Grime: 0.2391304
+Palette: 9
+PlacedObjects: ExitSymbolShelter><911.8006><226.0081><, CustomDecal><412.5989><19.86902><0~570~671~288~518~-142~-383~-239~0.326087~0.4347826~0~zGWMarks - B07~0.8043478~0~0.9021739~0~0.2608696~0.173913~0.1847826~0.7282609, NoSpearStickZone><475.7291><262.4489><-251~104, 
+FadePalette: 8, 0.2065217
