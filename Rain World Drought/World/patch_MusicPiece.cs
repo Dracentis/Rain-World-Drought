@@ -32,6 +32,20 @@ class patch_MusicPiece : MusicPiece
                         WWW www = new WWW("file://" + filepath);
                         this.source.clip = www.GetAudioClip(false, true, AudioType.OGGVORBIS);
                     }
+                    else if (this.trackName.StartsWith("TH_FS"))
+                    {
+                        string rootpath = Application.dataPath;
+                        string filepath = rootpath.Substring(0, rootpath.LastIndexOf("/")) + "/Assets/Futile/Resources/Music/Procedural/" + this.trackName + ".ogg";
+                        WWW www = new WWW("file://" + filepath);
+                        this.source.clip = www.GetAudioClip(false, true, AudioType.OGGVORBIS);
+                    }
+                    else if (this.trackName.StartsWith("TH_MW"))
+                    {
+                        string rootpath = Application.dataPath;
+                        string filepath = rootpath.Substring(0, rootpath.LastIndexOf("/")) + "/Assets/Futile/Resources/Music/Procedural/" + this.trackName + ".ogg";
+                        WWW www = new WWW("file://" + filepath);
+                        this.source.clip = www.GetAudioClip(false, true, AudioType.OGGVORBIS);
+                    }
                     else if (this.piece.IsProcedural)
                     {
                         this.source.clip = (Resources.Load("Music/Procedural/" + this.trackName, typeof(AudioClip)) as AudioClip);
