@@ -126,6 +126,7 @@
     <Compile Include="Slugcat\MessageScreen.cs" />
     <Compile Include="Slugcat\patch_DreamScreen.cs" />
     <Compile Include="Slugcat\patch_DreamsState.cs" />
+    <Compile Include="Slugcat\patch_FastTravelScreen.cs" />
     <Compile Include="Slugcat\patch_FoodMeter.cs" />
     <Compile Include="Slugcat\patch_HUD.cs" />
     <Compile Include="Slugcat\patch_HUDCircle.cs" />
