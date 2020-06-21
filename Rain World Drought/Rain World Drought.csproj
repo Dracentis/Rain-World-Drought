@@ -126,9 +126,11 @@
     <Compile Include="Slugcat\MessageScreen.cs" />
     <Compile Include="Slugcat\patch_DreamScreen.cs" />
     <Compile Include="Slugcat\patch_DreamsState.cs" />
+    <Compile Include="Slugcat\patch_FastTravelScreen.cs" />
     <Compile Include="Slugcat\patch_FoodMeter.cs" />
     <Compile Include="Slugcat\patch_HUD.cs" />
     <Compile Include="Slugcat\patch_HUDCircle.cs" />
+    <Compile Include="Slugcat\patch_MainMenu.cs" />
     <Compile Include="Slugcat\patch_MenuScene.cs" />
     <Compile Include="Slugcat\patch_Player.cs" />
     <Compile Include="Slugcat\patch_PlayerGraphics.cs" />
@@ -136,6 +138,7 @@
     <Compile Include="Slugcat\patch_SlideShow.cs" />
     <Compile Include="Slugcat\patch_SlugcatSelectMenu.cs" />
     <Compile Include="Slugcat\patch_SlugcatStats.cs" />
+    <Compile Include="Slugcat\patch_WinState.cs" />
     <Compile Include="Slugcat\PearlConversation.cs" />
     <Compile Include="Slugcat\PlayerCosmetics.cs" />
     <Compile Include="World\FPOracleBehavior.cs" />
