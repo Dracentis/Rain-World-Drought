@@ -6,6 +6,7 @@ using System.IO;
 using System.Text.RegularExpressions;
 using RWCustom;
 using UnityEngine;
+using Menu;
 
 [MonoModPatch("global::Menu.MenuScene")]
 abstract class patch_MenuScene : Menu.MenuScene
@@ -14,18 +15,16 @@ abstract class patch_MenuScene : Menu.MenuScene
     public patch_MenuScene(Menu.Menu menu, MenuObject owner, Menu.MenuScene.SceneID sceneID) : base(menu, owner, sceneID)
     {
     }
+
+
     private extern void orig_BuildScene();
 
     private void BuildScene()
     {
-        orig_BuildScene();
-
-        Vector2 vector = new Vector2(0f, 0f);
-
         switch (this.sceneID)
         {
             // Intake System
-            case (MenuScene.SceneID)SceneID.Landscape_IS:
+            case (MenuScene.SceneID)patch_MenuScene.SceneID.Landscape_IS:
                 this.sceneFolder = "Scenes" + Path.DirectorySeparatorChar + "Landscape - IS";
                 if (this.flatMode)
                 {
@@ -47,7 +46,8 @@ abstract class patch_MenuScene : Menu.MenuScene
 
                 break;
             // Forest Sanctuary
-            case (MenuScene.SceneID)SceneID.Landscape_FS:
+            case (MenuScene.SceneID)patch_MenuScene.SceneID.Landscape_FS:
+                Debug.Log("Loading forest sanctuary");
                 this.sceneFolder = "Scenes" + Path.DirectorySeparatorChar + "Landscape - FS";
                 if (this.flatMode)
                 {
@@ -72,7 +72,7 @@ abstract class patch_MenuScene : Menu.MenuScene
 
                 break;
             // The Fragmented Exterior
-            case (MenuScene.SceneID)SceneID.Landscape_MW:
+            case (MenuScene.SceneID)patch_MenuScene.SceneID.Landscape_MW:
                 this.sceneFolder = "Scenes" + Path.DirectorySeparatorChar + "Landscape - MW";
                 if (this.flatMode)
                 {
@@ -94,7 +94,7 @@ abstract class patch_MenuScene : Menu.MenuScene
 
                 break;
             // Looks To The Moon
-            case (MenuScene.SceneID)SceneID.Landscape_LM:
+            case (MenuScene.SceneID)patch_MenuScene.SceneID.Landscape_LM:
                 this.sceneFolder = "Scenes" + Path.DirectorySeparatorChar + "Landscape - LM";
                 if (this.flatMode)
                 {
@@ -118,12 +118,17 @@ abstract class patch_MenuScene : Menu.MenuScene
                 }
                 break;
 
+
+
+
             case (MenuScene.SceneID)patch_MenuScene.SceneID.Dream_Message:
+
                 if ((this as MenuScene) is InteractiveMenuScene)
                 {
                     ((this as MenuScene) as InteractiveMenuScene).idleDepths = new List<float>();
                 }
-                
+                Vector2 vector = new Vector2(0f, 0f);
+
                 this.sceneFolder = "Scenes" + Path.DirectorySeparatorChar + "Dream - Message";
                 if (this.flatMode)
                 {
@@ -146,21 +151,31 @@ abstract class patch_MenuScene : Menu.MenuScene
                     MenuIllustration menuIllustration = this.flatIllustrations[this.flatIllustrations.Count - 1];
                     menuIllustration.pos.x = menuIllustration.pos.x - this.flatIllustrations[this.flatIllustrations.Count - 1].size.x / 2f;
                 }
+                /*string path = Custom.RootFolderDirectory() + Path.DirectorySeparatorChar + "Assets" + Path.DirectorySeparatorChar + "Futile" + Path.DirectorySeparatorChar + "Resources" + Path.DirectorySeparatorChar + this.sceneFolder + Path.DirectorySeparatorChar + "positions.txt";
+
+                if (this.sceneFolder != string.Empty && File.Exists(path))
+                {
+                    string[] array = File.ReadAllLines(path);
+                    int num2 = 0;
+                    while (num2 < array.Length && num2 < this.depthIllustrations.Count)
+                    {
+                        this.depthIllustrations[num2].pos.x = float.Parse(Regex.Split(array[num2], ", ")[0]) + vector.x;
+                        this.depthIllustrations[num2].pos.y = float.Parse(Regex.Split(array[num2], ", ")[1]) + vector.y;
+                        this.depthIllustrations[num2].lastPos = this.depthIllustrations[num2].pos;
+                        num2++;
+                    }
+                }*/
                 break;
         }
-        string path = Custom.RootFolderDirectory() + Path.DirectorySeparatorChar + "Assets" + Path.DirectorySeparatorChar + "Futile" + Path.DirectorySeparatorChar + "Resources" + Path.DirectorySeparatorChar + this.sceneFolder + Path.DirectorySeparatorChar + "positions.txt";
 
-        if (this.sceneFolder != string.Empty && File.Exists(path))
+        try
         {
-            string[] array = File.ReadAllLines(path);
-            int num2 = 0;
-            while (num2 < array.Length && num2 < this.depthIllustrations.Count)
-            {
-                this.depthIllustrations[num2].pos.x = float.Parse(Regex.Split(array[num2], ", ")[0]) + vector.x;
-                this.depthIllustrations[num2].pos.y = float.Parse(Regex.Split(array[num2], ", ")[1]) + vector.y;
-                this.depthIllustrations[num2].lastPos = this.depthIllustrations[num2].pos;
-                num2++;
-            }
+
+            orig_BuildScene();
+        }
+        catch (Exception e)
+        {
+            Debug.Log("NEW REGION EXCEPTION: " + e);
         }
 
 
