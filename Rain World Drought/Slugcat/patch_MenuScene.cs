@@ -35,7 +35,7 @@ abstract class patch_MenuScene : Menu.MenuScene
                     this.AddIllustration(new MenuDepthIllustration(this.menu, this, this.sceneFolder, "IS_Landscape - 4", new Vector2(0, 0), 7f, MenuDepthIllustration.MenuShader.Normal));
                     this.AddIllustration(new MenuDepthIllustration(this.menu, this, this.sceneFolder, "IS_Landscape - 3", new Vector2(0, 0), 4.2f, MenuDepthIllustration.MenuShader.Normal));
                     this.AddIllustration(new MenuDepthIllustration(this.menu, this, this.sceneFolder, "IS_Landscape - 2", new Vector2(0, 0), 3.7f, MenuDepthIllustration.MenuShader.Normal));
-                    this.AddIllustration(new MenuDepthIllustration(this.menu, this, this.sceneFolder, "IS_Landscape - 1", new Vector2(0, 0), 0.5f, MenuDepthIllustration.MenuShader.Normal));
+                    this.AddIllustration(new MenuDepthIllustration(this.menu, this, this.sceneFolder, "IS_Landscape - 1", new Vector2(0, 0), 0.75f, MenuDepthIllustration.MenuShader.Normal));
                 }
                 if (this.menu.ID == ProcessManager.ProcessID.FastTravelScreen || this.menu.ID == ProcessManager.ProcessID.RegionsOverviewScreen)
                 {
@@ -61,7 +61,7 @@ abstract class patch_MenuScene : Menu.MenuScene
                     this.AddIllustration(new MenuDepthIllustration(this.menu, this, this.sceneFolder, "FS_Landscape - 4", new Vector2(0, 0), 7f, MenuDepthIllustration.MenuShader.Normal));
                     this.AddIllustration(new MenuDepthIllustration(this.menu, this, this.sceneFolder, "FS_Landscape - 3", new Vector2(0, 0), 4.2f, MenuDepthIllustration.MenuShader.Normal));
                     this.AddIllustration(new MenuDepthIllustration(this.menu, this, this.sceneFolder, "FS_Landscape - 2", new Vector2(0, 0), 3.7f, MenuDepthIllustration.MenuShader.Normal));
-                    this.AddIllustration(new MenuDepthIllustration(this.menu, this, this.sceneFolder, "FS_Landscape - 1", new Vector2(0, 0), 0.5f, MenuDepthIllustration.MenuShader.Normal));
+                    this.AddIllustration(new MenuDepthIllustration(this.menu, this, this.sceneFolder, "FS_Landscape - 1", new Vector2(0, 0), 0.75f, MenuDepthIllustration.MenuShader.Normal));
                 }
                 if (this.menu.ID == ProcessManager.ProcessID.FastTravelScreen || this.menu.ID == ProcessManager.ProcessID.RegionsOverviewScreen)
                 {
@@ -83,7 +83,7 @@ abstract class patch_MenuScene : Menu.MenuScene
                     this.AddIllustration(new MenuDepthIllustration(this.menu, this, this.sceneFolder, "MW_Landscape - 4", new Vector2(0, 0), 7f, MenuDepthIllustration.MenuShader.Normal));
                     this.AddIllustration(new MenuDepthIllustration(this.menu, this, this.sceneFolder, "MW_Landscape - 3", new Vector2(0, 0), 4.2f, MenuDepthIllustration.MenuShader.Normal));
                     this.AddIllustration(new MenuDepthIllustration(this.menu, this, this.sceneFolder, "MW_Landscape - 2", new Vector2(0, 0), 3.7f, MenuDepthIllustration.MenuShader.Normal));
-                    this.AddIllustration(new MenuDepthIllustration(this.menu, this, this.sceneFolder, "MW_Landscape - 1", new Vector2(0, 0), 0.5f, MenuDepthIllustration.MenuShader.Normal));
+                    this.AddIllustration(new MenuDepthIllustration(this.menu, this, this.sceneFolder, "MW_Landscape - 1", new Vector2(0, 0), 0.75f, MenuDepthIllustration.MenuShader.Normal));
                 }
                 if (this.menu.ID == ProcessManager.ProcessID.FastTravelScreen || this.menu.ID == ProcessManager.ProcessID.RegionsOverviewScreen)
                 {
@@ -108,7 +108,7 @@ abstract class patch_MenuScene : Menu.MenuScene
                     this.AddIllustration(new MenuDepthIllustration(this.menu, this, this.sceneFolder, "LM_Landscape - 4", new Vector2(0, 0), 7f, MenuDepthIllustration.MenuShader.Normal));
                     this.AddIllustration(new MenuDepthIllustration(this.menu, this, this.sceneFolder, "LM_Landscape - 3", new Vector2(0, 0), 4.2f, MenuDepthIllustration.MenuShader.Normal));
                     this.AddIllustration(new MenuDepthIllustration(this.menu, this, this.sceneFolder, "LM_Landscape - 2", new Vector2(0, 0), 3.7f, MenuDepthIllustration.MenuShader.Normal));
-                    this.AddIllustration(new MenuDepthIllustration(this.menu, this, this.sceneFolder, "LM_Landscape - 1", new Vector2(0, 0), 0.5f, MenuDepthIllustration.MenuShader.Normal));
+                    this.AddIllustration(new MenuDepthIllustration(this.menu, this, this.sceneFolder, "LM_Landscape - 1", new Vector2(0, 0), 0.75f, MenuDepthIllustration.MenuShader.Normal));
                 }
                 if (this.menu.ID == ProcessManager.ProcessID.FastTravelScreen || this.menu.ID == ProcessManager.ProcessID.RegionsOverviewScreen)
                 {
