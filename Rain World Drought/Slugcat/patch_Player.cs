@@ -297,10 +297,7 @@ class patch_Player : Player
         }
         else
         {
-            if (this.energy != null)
-            {
-                energy = 0f;
-            }
+            energy = 0f;
         }
         orig_Update(eu);
         if (this.Consious && !Malnourished && this.room != null && this.room.game != null && this.room.game.IsStorySession)
