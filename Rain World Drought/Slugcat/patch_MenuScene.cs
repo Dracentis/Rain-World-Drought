@@ -6,7 +6,6 @@ using System.IO;
 using System.Text.RegularExpressions;
 using RWCustom;
 using UnityEngine;
-using Menu;
 
 [MonoModPatch("global::Menu.MenuScene")]
 abstract class patch_MenuScene : Menu.MenuScene
