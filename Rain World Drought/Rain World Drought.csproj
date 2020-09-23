@@ -32,21 +32,27 @@
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\References\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
       <HintPath>..\References\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="GoKit">
       <HintPath>..\References\GoKit.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Mono.Security">
       <HintPath>..\References\Mono.Security.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="MonoMod">
       <HintPath>..\References\MonoMod.exe</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Partiality">
       <HintPath>..\References\Partiality.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -56,15 +62,18 @@
     <Reference Include="System.Xml" />
     <Reference Include="System1">
       <HintPath>..\References\System1.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System2">
       <HintPath>..\References\System2.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine">
       <HintPath>..\References\UnityEngine.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>..\References\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -99,7 +108,6 @@
     <Compile Include="Creature\SeaDrakeGraphics.cs" />
     <Compile Include="Creature\SeaDrakeAI.cs" />
     <Compile Include="Creature\SeaDrake.cs" />
-    <Compile Include="DroughtMod.cs" />
     <Compile Include="Creature\LightWorm.cs" />
     <Compile Include="Creature\LightWormAI.cs" />
     <Compile Include="Creature\LightWormGraphics.cs" />
