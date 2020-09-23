@@ -64,9 +64,6 @@
       <HintPath>..\References\System1.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="System2">
-      <HintPath>..\References\System2.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine">
       <HintPath>..\References\UnityEngine.dll</HintPath>
       <Private>False</Private>
