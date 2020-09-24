@@ -292,6 +292,9 @@ public class WalkerBeast : Creature
         {
             Carry();
         }
+
+        // Don't die from rain
+        rainDeath = 0f;
     }
 
     // Token: 0x06001C02 RID: 7170 RVA: 0x0018EC4C File Offset: 0x0018CE4C

@@ -195,7 +195,7 @@ public class WalkerBeastAI : ArtificialIntelligence, IUseARelationshipTracker, I
 
     public override bool WantToStayInDenUntilEndOfCycle()
     {
-        return rainTracker.Utility() > 0.01f;
+        return creature.world.rainCycle.TimeUntilRain < (creature.world.game.IsStorySession ? 60 : 15) * 40;
     }
     
     public override void CreatureSpotted(bool firstSpot, Tracker.CreatureRepresentation creatureRep)

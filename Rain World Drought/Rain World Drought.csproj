@@ -81,6 +81,8 @@
     <Compile Include="Creature\patch_CreatureTemplate.cs" />
     <Compile Include="Creature\patch_AbstractCreature.cs" />
     <Compile Include="Creature\patch_AImap.cs" />
+    <Compile Include="Creature\patch_Deer.cs" />
+    <Compile Include="Creature\patch_DeerAI.cs" />
     <Compile Include="Creature\patch_LizardAI.cs" />
     <Compile Include="Creature\patch_LizardBreedParams.cs" />
     <Compile Include="Creature\GreyLizardBreed.cs" />
