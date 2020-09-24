@@ -296,19 +296,19 @@ public class WalkerBeast : Creature
         // Don't die from rain
         rainDeath = 0f;
 
-        // Instead, get stunned for anywhere between 1 and 1.5 minutes if caught
+        // Instead, get stunned for anywhere between 0.75 and 1 minute if caught
         patch_RainCycle rc = abstractCreature.world.rainCycle as patch_RainCycle;
         if (rc != null) {
             int timeUntilBurst = rc.TimeUntilBurst(rc.CurrentBurst());
             if (timeUntilBurst > -600 && timeUntilBurst < -500 && (rainStun < 800))
             {
-                rainStun = UnityEngine.Random.Range(20 * 60, 20 * 90);
+                rainStun = UnityEngine.Random.Range(40 * 45, 40 * 60);
             }
         }
-        if(rainStun > 150)
+        if(rainStun > 300)
         {
             // Full stun
-            stun = Math.Max(stun, rainStun - 150);
+            stun = Math.Max(stun, rainStun - 300);
         } else if(rainStun > 0)
         {
             // Last 7.5 seconds are partially stunned
