@@ -91,6 +91,19 @@ class patch_AbstractCreature : AbstractCreature
         }
     }
 
+    public extern void orig_InDenUpdate(int time);
+
+    public void InDenUpdate(int time)
+    {
+        if(remainInDenCounter == -1)
+        {
+            // Allow creatures to abort staying in den for the rest of the cycle
+            if (!WantToStayInDenUntilEndOfCycle())
+                remainInDenCounter = 500;
+        } else
+            orig_InDenUpdate(time);
+    }
+
     public override void Realize()
     {
         if (realizedCreature != null)
