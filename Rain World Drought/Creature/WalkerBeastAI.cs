@@ -190,7 +190,9 @@ public class WalkerBeastAI : ArtificialIntelligence, IUseARelationshipTracker, I
     
     public bool DoIWantToBiteCreature(AbstractCreature creature)
     {
-        return creature.creatureTemplate.type != (CreatureTemplate.Type)patch_CreatureTemplate.Type.WalkerBeast && !creature.creatureTemplate.smallCreature;
+        return (creature.creatureTemplate.type != (CreatureTemplate.Type)patch_CreatureTemplate.Type.WalkerBeast)
+            && !creature.creatureTemplate.smallCreature &&
+            (creature.creatureTemplate.type != (CreatureTemplate.Type)patch_CreatureTemplate.Type.Deer);
     }
 
     public override bool WantToStayInDenUntilEndOfCycle()
