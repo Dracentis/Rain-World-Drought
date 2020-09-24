@@ -1,0 +1,1 @@
+[#nm:"Cabinet plants", #tp:"variedSoft", #pxlSize:point(100, 180), #vars:5, #random:0, #depth:6, #round:0, #contourExp:1, #selfShade:1, #highLightBorder:1.0, #depthAffectHilites:0.6, #shadowBorder:0.8, #smoothShading:5, #colorize:1, #tags:["postEffects"], #notes:[]]
