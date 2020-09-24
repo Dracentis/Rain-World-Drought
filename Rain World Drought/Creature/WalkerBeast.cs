@@ -300,20 +300,22 @@ public class WalkerBeast : Creature
         patch_RainCycle rc = abstractCreature.world.rainCycle as patch_RainCycle;
         if (rc != null) {
             int timeUntilBurst = rc.TimeUntilBurst(rc.CurrentBurst());
-            if (timeUntilBurst > 0 && timeUntilBurst < 100 && (AI.rainStun < 800))
+            if (timeUntilBurst > -600 && timeUntilBurst < -500 && (rainStun < 800))
             {
-                AI.rainStun = UnityEngine.Random.Range(20 * 60, 20 * 90);
+                rainStun = UnityEngine.Random.Range(20 * 60, 20 * 90);
             }
         }
-        if(AI.rainStun > 150)
+        if(rainStun > 150)
         {
             // Full stun
-            stun = Math.Max(stun, AI.rainStun - 150);
-        } else if(AI.rainStun > 0)
+            stun = Math.Max(stun, rainStun - 150);
+        } else if(rainStun > 0)
         {
             // Last 7.5 seconds are partially stunned
-            blind = Mathf.Max(blind, AI.rainStun);
+            blind = Mathf.Max(blind, rainStun);
         }
+
+        if (rainStun > 0) rainStun--;
     }
 
     // Token: 0x06001C02 RID: 7170 RVA: 0x0018EC4C File Offset: 0x0018CE4C
@@ -795,6 +797,10 @@ public class WalkerBeast : Creature
     }
 
     public WalkerBeastAI AI;
+    
+    // How many updates this creature should remain stunned for after the rain
+    // The last few ticks are slightly stunned - it isn't allowed to attack
+    public int rainStun;
 
     public Vector2 bodDir;//This vector represents the orientation of the body could be used for head things
 
