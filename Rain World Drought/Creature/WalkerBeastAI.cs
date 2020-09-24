@@ -79,7 +79,10 @@ public class WalkerBeastAI : ArtificialIntelligence, IUseARelationshipTracker, I
     public override void Update()
     {
         base.Update();
-        
+
+        if (rainStun > 0)
+            rainStun--;
+
         creatureLooker.Update();
         for (int i = tracker.CreaturesCount - 1; i >= 0; i--)
         {
@@ -191,8 +194,9 @@ public class WalkerBeastAI : ArtificialIntelligence, IUseARelationshipTracker, I
     public bool DoIWantToBiteCreature(AbstractCreature creature)
     {
         return (creature.creatureTemplate.type != (CreatureTemplate.Type)patch_CreatureTemplate.Type.WalkerBeast)
-            && !creature.creatureTemplate.smallCreature &&
-            (creature.creatureTemplate.type != (CreatureTemplate.Type)patch_CreatureTemplate.Type.Deer);
+            && !creature.creatureTemplate.smallCreature
+            && (creature.creatureTemplate.type != (CreatureTemplate.Type)patch_CreatureTemplate.Type.Deer)
+            && (rainStun > 0);
     }
 
     public override bool WantToStayInDenUntilEndOfCycle()
@@ -271,6 +275,9 @@ public class WalkerBeastAI : ArtificialIntelligence, IUseARelationshipTracker, I
     public int seriouslyStuck;
     public int boredofroom;
 
+    // How many updates this creature should remain stunned for after the rain
+    // The last few ticks are slightly stunned - it isn't allowed to attack
+    public int rainStun;
 
     public WorldCoordinate inRoomDestination;
 
