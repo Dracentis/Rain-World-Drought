@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <NoWarn>CS0108;CS0114;CS0626;CS0649;CS0414;CS0169;CS0219</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -28,25 +29,32 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <NoWarn>CS0108;CS0114;CS0626;CS0649;CS0414;CS0169;CS0219</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\References\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
       <HintPath>..\References\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="GoKit">
       <HintPath>..\References\GoKit.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Mono.Security">
       <HintPath>..\References\Mono.Security.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="MonoMod">
       <HintPath>..\References\MonoMod.exe</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Partiality">
       <HintPath>..\References\Partiality.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -56,15 +64,15 @@
     <Reference Include="System.Xml" />
     <Reference Include="System1">
       <HintPath>..\References\System1.dll</HintPath>
-    </Reference>
-    <Reference Include="System2">
-      <HintPath>..\References\System2.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine">
       <HintPath>..\References\UnityEngine.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>..\References\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +81,8 @@
     <Compile Include="Creature\patch_CreatureTemplate.cs" />
     <Compile Include="Creature\patch_AbstractCreature.cs" />
     <Compile Include="Creature\patch_AImap.cs" />
+    <Compile Include="Creature\patch_Deer.cs" />
+    <Compile Include="Creature\patch_DeerAI.cs" />
     <Compile Include="Creature\patch_LizardAI.cs" />
     <Compile Include="Creature\patch_LizardBreedParams.cs" />
     <Compile Include="Creature\GreyLizardBreed.cs" />
@@ -99,7 +109,6 @@
     <Compile Include="Creature\SeaDrakeGraphics.cs" />
     <Compile Include="Creature\SeaDrakeAI.cs" />
     <Compile Include="Creature\SeaDrake.cs" />
-    <Compile Include="DroughtMod.cs" />
     <Compile Include="Creature\LightWorm.cs" />
     <Compile Include="Creature\LightWormAI.cs" />
     <Compile Include="Creature\LightWormGraphics.cs" />

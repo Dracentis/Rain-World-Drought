@@ -367,7 +367,9 @@ public class LMOracleSwarmer : OracleSwarmer
             dom = UnityEngine.Random.value;
             idealDistance = Mathf.Lerp(10f, 300f, UnityEngine.Random.value * UnityEngine.Random.value);
             life = 1f;
+#pragma warning disable CS0618 // Type or member is obsolete
             if (UnityEngine.Random.RandomRange(0f, 1f) > 0.9f)
+#pragma warning restore CS0618 // Type or member is obsolete
             {
                 life = 0f;
             }

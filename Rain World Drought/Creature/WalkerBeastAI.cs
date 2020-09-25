@@ -79,7 +79,7 @@ public class WalkerBeastAI : ArtificialIntelligence, IUseARelationshipTracker, I
     public override void Update()
     {
         base.Update();
-        
+
         creatureLooker.Update();
         for (int i = tracker.CreaturesCount - 1; i >= 0; i--)
         {
@@ -190,12 +190,15 @@ public class WalkerBeastAI : ArtificialIntelligence, IUseARelationshipTracker, I
     
     public bool DoIWantToBiteCreature(AbstractCreature creature)
     {
-        return creature.creatureTemplate.type != (CreatureTemplate.Type)patch_CreatureTemplate.Type.WalkerBeast && !creature.creatureTemplate.smallCreature;
+        if (WalkerBeast.rainStun > 0) return false;
+        return (creature.creatureTemplate.type != (CreatureTemplate.Type)patch_CreatureTemplate.Type.WalkerBeast)
+            && !creature.creatureTemplate.smallCreature
+            && (creature.creatureTemplate.type != (CreatureTemplate.Type)patch_CreatureTemplate.Type.Deer);
     }
 
     public override bool WantToStayInDenUntilEndOfCycle()
     {
-        return rainTracker.Utility() > 0.01f;
+        return creature.world.rainCycle.TimeUntilRain < (creature.world.game.IsStorySession ? 60 : 15) * 40;
     }
     
     public override void CreatureSpotted(bool firstSpot, Tracker.CreatureRepresentation creatureRep)
@@ -268,7 +271,6 @@ public class WalkerBeastAI : ArtificialIntelligence, IUseARelationshipTracker, I
     public float currentUtility;
     public int seriouslyStuck;
     public int boredofroom;
-
 
     public WorldCoordinate inRoomDestination;
 

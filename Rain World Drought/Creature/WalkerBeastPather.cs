@@ -30,7 +30,7 @@ public class WalkerBeastPather : BorderExitPather
 
     public override PathCost CheckConnectionCost(PathFinder.PathingCell start, PathFinder.PathingCell goal, MovementConnection connection, bool followingPath)
     {
-        if (start != null && goal != null && connection != null && followingPath != null){
+        if (start != null && goal != null && connection != null){
             return base.CheckConnectionCost(start, goal, connection, followingPath);
         }else{
             return new PathCost(1f, PathCost.Legality.Unallowed);

@@ -10,7 +10,7 @@ public class patch_RainWorld : RainWorld
 {
     public void HandleLog(string logString, string stackTrace, LogType type)
     {
-        if (type == null || type == UnityEngine.LogType.Exception || type == UnityEngine.LogType.Error)
+        if (type == UnityEngine.LogType.Exception || type == UnityEngine.LogType.Error)
         {
             File.AppendAllText("exceptionLog.txt", logString + Environment.NewLine);
             File.AppendAllText("exceptionLog.txt", stackTrace + Environment.NewLine);

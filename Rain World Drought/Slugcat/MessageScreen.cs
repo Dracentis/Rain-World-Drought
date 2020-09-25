@@ -7,7 +7,6 @@ using RWCustom;
 using UnityEngine;
 using System;
 using System.Runtime.CompilerServices;
-using RWCustom;
 
 class MessageScreen : patch_DreamScreen, IOwnAHUD, Conversation.IOwnAConversation
 {

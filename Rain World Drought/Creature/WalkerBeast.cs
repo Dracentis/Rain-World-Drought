@@ -292,6 +292,30 @@ public class WalkerBeast : Creature
         {
             Carry();
         }
+
+        // Don't die from rain
+        rainDeath = 0f;
+
+        // Instead, get stunned for anywhere between 0.75 and 1 minute if caught
+        patch_RainCycle rc = abstractCreature.world.rainCycle as patch_RainCycle;
+        if (rc != null) {
+            int timeUntilBurst = rc.TimeUntilBurst(rc.CurrentBurst());
+            if (timeUntilBurst > -600 && timeUntilBurst < -500 && (rainStun < 800))
+            {
+                rainStun = UnityEngine.Random.Range(40 * 45, 40 * 60);
+            }
+        }
+        if(rainStun > 300)
+        {
+            // Full stun
+            stun = Math.Max(stun, rainStun - 300);
+        } else if(rainStun > 0)
+        {
+            // Last 7.5 seconds are partially stunned
+            blind = Mathf.Max(blind, rainStun);
+        }
+
+        if (rainStun > 0) rainStun--;
     }
 
     // Token: 0x06001C02 RID: 7170 RVA: 0x0018EC4C File Offset: 0x0018CE4C
@@ -774,6 +798,10 @@ public class WalkerBeast : Creature
 
     public WalkerBeastAI AI;
     
+    // How many updates this creature should remain stunned for after the rain
+    // The last few ticks are slightly stunned - it isn't allowed to attack
+    public int rainStun;
+
     public Vector2 bodDir;//This vector represents the orientation of the body could be used for head things
 
     public float flipDir;//Variable for the process of changing the bodDir

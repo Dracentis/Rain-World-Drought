@@ -930,7 +930,9 @@ public class FPOracleBehaviorHasMark : FPOracleBehavior, Conversation.IOwnAConve
         }
         else
         {
+#pragma warning disable CS0618 // Type or member is obsolete
             switch (UnityEngine.Random.RandomRange(0, 3))
+#pragma warning restore CS0618 // Type or member is obsolete
             {
                 case 0:
                     currentConversation.ForceAddMessage(Translate("As I tried to say to you..."), 10);
