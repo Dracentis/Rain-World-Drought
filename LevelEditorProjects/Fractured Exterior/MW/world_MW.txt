@@ -1,0 +1,86 @@
+ROOMS
+GATE_MW_LM : DISCONNECTED, MW_28 : GATE
+GATE_LM_MW : MW_D04, DISCONNECTED : GATE
+GATE_SL_MW : MW_24, DISCONNECTED : GATE
+GATE_IS_MW : DISCONNECTED, MW_L02 : GATE
+MW_5 : MW_3, MW_14
+MW_3 : MW_2, DISCONNECTED, MW_5
+MW_2 : MW_1, MW_3
+MW_1 : MW_18, MW_S01, MW_2
+MW_18 : MW_1
+MW_14 : MW_5, DISCONNECTED , DISCONNECTED, MW_13
+MW_13 : MW_S02, MW_14, MW_19
+MW_19 : DISCONNECTED, MW_13, MW_9, MW_7
+MW_9 : MW_17, MW_19
+MW_17 : MW_9, MW_20
+MW_20 : MW_17, MW_21
+MW_21 : MW_25, MW_12, MW_S05, MW_20, MW_31
+MW_31 : MW_21, MW_11
+MW_11 : MW_31, MW_8
+MW_8 : MW_11, MW_D04, MW_27
+MW_D04 : MW_8, MW_S11, GATE_LM_MW
+MW_S11 : MW_D04 : SHELTER
+MW_27 : MW_8, MW_29
+MW_29 : MW_27, MW_33
+MW_33 : MW_29, MW_32
+MW_32 : MW_33, MW_30
+MW_30 : MW_32, MW_S06, MW_L01
+MW_L01 : MW_30, MW_L02
+MW_L02 : MW_L01, GATE_IS_MW
+MW_25 : MW_28, MW_26, MW_21
+MW_12 : MW_26, DISCONNECTED, MW_21
+MW_26 : MW_25, MW_12
+MW_28 : GATE_MW_LM, MW_25
+MW_7 : MW_19, MW_6
+MW_6 : MW_7, DISCONNECTED, MW_16
+MW_16 : MW_6, MW_S03, MW_22
+MW_22 : MW_16, MW_23
+MW_23 : MW_22, MW_24
+MW_24 : MW_23, MW_S04, GATE_SL_MW
+MW_S01 : MW_1 : SHELTER
+MW_S02 : MW_13 : SHELTER
+MW_S03 : MW_16 : SHELTER
+MW_S04 : MW_24 : SHELTER
+MW_S05 : MW_21 : SHELTER
+MW_S06 : MW_30 : SHELTER
+END ROOMS
+
+CREATURES
+//all
+MW_1 : 3-White
+MW_2 : 2-White
+MW_3 : 3-Blue
+MW_5 : 2-White 
+MW_18 : 1-Cyan-2
+MW_13 : 2-White
+MW_19 : 4-Cyan, 5-Cyan
+MW_7 : 2-White, 3-Mimic-{16}
+MW_6 : 3-White
+MW_22 : 2-Blue, 3-White, 5-Mimic-{20}, 6-Mimic-{16}
+MW_11 : 2-Tube-2
+MW_12 : 4-Tube, 5-Tube
+MW_8 : 4-Orange-5, 5-White, 6-White
+MW_17 : 2-Yellow-3, 5-White, 4-Tube
+MW_33 : 3-White, 4-Dropbug
+MW_20 : 5-Yellow, 6-Yellow, 7-Yellow, 4-Yellow-2
+MW_22 : 2-White, 4-Tube-3, 5-Mimic-{16}
+MW_23 : 2-Yellow-2, 3-Yellow, 4-Yellow, 5-Yellow
+MW_24 : 4-White, 6-Dropbug
+MW_25 : 3-White
+MW_26 : 2-Yellow, 3-Yellow, 4-Yellow, 5-Yellow
+MW_27 : 2-White, 4-Tube-2, 5-Blue, 6-Mimic-{20}, 7-Mimic-{20}
+MW_29 : 2-Blue-{Mean:0}, 4-White, 3-SpitterSpider
+//sad, lost and lonely blue just wanting a friend (warning: will still gnaw your face off though)
+MW_30 : 6-White, 5-Tube, 7-Dropbug, 3-BigSpider, 4-Tube
+MW_31 : 2-SpitterSpider
+MW_32 : 2-White, 3-Cyan
+MW_L02 : 4-Tube-2, 5-Tube, 6-Salamander
+MW_L01 : 5-Dropbug, 4-SpitterSpider-2, 2-Cyan
+
+
+//[Other cat]
+
+END CREATURES
+
+BAT MIGRATION BLOCKAGES
+END BAT MIGRATION BLOCKAGES

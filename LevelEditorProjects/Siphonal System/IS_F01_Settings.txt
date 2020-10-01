@@ -1,0 +1,11 @@
+Template: NONE
+DangerType: Flood
+Clouds: 0.6630435
+Palette: 36
+EffectColorA: 18
+EffectColorB: 6
+Effects: SkyBloom-0.3804348-308-253, Bloom-0.5543478-278-197, Fog-0.7065217-247-140, TinyDragonFly-0.9456522-300-331, LightBurn-0-167-67, Pulse-0.05434782-20-20, 
+PlacedObjects: LightSource><482.4129><1546.32><1~Environment~-111~157~50~86.60254~0~0, KarmaFlower><490.8849><1716.602><-309~13~5~7, WaterNut><755.3507><1886.827><0~0~2~3, WaterNut><714.8825><1875.9><0~0~2~3, WaterNut><728.674><1896.565><0~0~2~3, WaterNut><232.7485><1899.95><0~0~2~3, WaterNut><207.7677><1885.949><0~0~2~3, LightSource><474.8341><104.6815><1~Environment~20~486~50~86.60254~0~0, 
+AmbientSounds: OMNI><AM_IND-Midsex02.ogg><737.7507><563.3><0.2608696><1, OMNI><AM_IND-Warehouse01.ogg><753.3624><418.1451><0.3586957><1, OMNI><AM_RAIN-QuietThunder.ogg><715.8074><321.304><0.5><1, 
+FadePalette: 10, 0.6956522, 0.6956522, 0.6956522
+WetTerrain: OFF

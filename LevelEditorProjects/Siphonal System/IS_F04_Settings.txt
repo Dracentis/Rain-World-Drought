@@ -1,0 +1,9 @@
+DangerType: Flood
+CeilingDrips: 0.7065217
+Clouds: 0.6086956
+Palette: 36
+EffectColorB: 5
+Effects: Fog-0.6847826-386-316, Flies-0.3369565-30-30, TinyDragonFly-0.7391304-325-199, Lightning-0.6956522-43-124, LightBurn-0.4130435-317-143, Pulse-0.6413044-220-75, 
+PlacedObjects: LightFixture><332.4115><1686.179><RedLight~17.32051~-10~44, LightFixture><633.864><1665.104><RedLight~17.32051~-10~59, Hazer><313.8226><1832.908><0~0~7~10, Hazer><487.1075><1835.419><0~0~7~10, Hazer><648.0275><1831.698><0~0~7~10, Hazer><539.05><2355.501><0~0~7~10, Hazer><682.2177><2354.553><0~0~7~10, LightSource><827.8326><216.1857><1~Environment~157~206~50~86.60254~0~0, 
+FadePalette: 10, 0.6956522, 0.6956522, 0.6956522, 0.6956522
+WetTerrain: OFF

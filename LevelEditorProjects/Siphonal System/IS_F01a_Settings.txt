@@ -1,0 +1,6 @@
+Template: IS_SettingsTemplate_GravityPump
+RumbleIntensity: 0.3586957
+Effects: GravityPulse-0.3152174-30-30, 
+PlacedObjects: LightFixture><333.3536><631.1498><RedLight~17.32051~-10~53, LightFixture><266.9279><392.2205><RedLight~17.32051~-10~77, LightFixture><672.7619><177.7272><RedLight~17.32051~-10~30, SlimeMold><585.9138><1137.364><0~0~2~3, SlimeMold><591.6091><1220.359><0~0~2~3, SlimeMold><585.2152><1274.664><0~0~2~3, CosmeticSlimeMold><589.6527><1206.879><0~100, CosmeticSlimeMold2><578.9147><1197.319><0~100, 
+FadePalette: 10, 0.5869565, 0.7282609
+WetTerrain: OFF

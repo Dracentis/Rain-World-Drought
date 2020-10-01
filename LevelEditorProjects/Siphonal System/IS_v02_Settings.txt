@@ -1,0 +1,8 @@
+Clouds: 0.6195652
+Palette: 36
+EffectColorA: 12
+Effects: LightBurn-0.3913043-297-263, BkgOnlyLightning-0-304-198, Bloom-0.5326087-282-139, SkyAndLightBloom-0-275-69, 
+PlacedObjects: LightSource><304.1341><3136.648><1~Environment~-22~125~50~86.60254~0~0, LightSource><663.0505><3135.986><1~Environment~-20~126~50~86.60254~1~0, 
+Triggers: Spot<tA>event<tB>MusicEvent<eA>songName<eB>RW_53 - Leviathan<eA>vol<eB>1<eA>prio<eB>0.5<eA>mxThrt<eB>1<eA>loop<eB>0<eA>droneTol<eB>0<eA>rooms<eB>-1<eA>rest<eB>5<eA>fadeIn<eB>0<eA>oneSongPerCycle<eB>1<eA>stopAtDeath<eB>0<eA>stopAtGate<eB>0<tA>multiUse<tB>1<tA>toCycle<tB>-1<tA>fromCycle<tB>0<tA>delay<tB>0<tA>panPos<tB>222.0519<tB>331.0275<tA>fireChance<tB>1<tA>entrance<tB>-1<tA>karma<tB>0<tA>slugcats<tB>111<tA>pos<tB>481.0519<tB>2864.029<tA>handlePos<tB>-268.3553<tB>-18.35535, 
+FadePalette: 10, 0.6956522, 0.6956522, 0.6956522, 0.6956522, 0.6956522, 0.6956522
+WetTerrain: OFF

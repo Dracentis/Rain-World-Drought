@@ -1,0 +1,4 @@
+Effects: GravityPulse-0.1195652-25-72, Pulse-0.06521739-30-30, 
+PlacedObjects: LightFixture><874.8067><880.6993><RedLight~17.32051~-10~97, LightFixture><70.18164><1238.666><RedLight~17.32051~-10~90, WaterNut><496.6275><1380.67><0~0~2~3, WaterNut><671.2013><1331.292><0~0~2~3, WaterNut><688.9686><1315.428><-217~-80~2~3, LightSource><455.9179><1239.859><0.4951258~Environment~-91~62~50~86.60254~1~0, LightSource><797.9597><226.8683><0.6195652~White~-44~1341~50~86.60254~1~0, 
+FadePalette: 10, 0.3804348, 0.3695652, 0.4130435
+WetTerrain: OFF

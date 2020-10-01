@@ -1,0 +1,9 @@
+DangerType: Flood
+Clouds: 0.6413044
+Palette: 36
+EffectColorA: 19
+EffectColorB: 16
+Effects: Fog-0.6739131-143-122, TinyDragonFly-0.8152174-89-63, Bloom-0.1521739-240-239, Pulse-0-30-30, 
+PlacedObjects: SuperStructureFuses><310.8033><1521.286><327~267, Hazer><333.6556><1834.124><0~0~7~10, Hazer><607.0559><1824.548><0~0~7~10, DeadHazer><462.8381><1825.633><0~0~7~10, WaterNut><665.3005><2016.235><0~0~2~3, WaterNut><629.3678><2021.85><0~0~2~3, WaterNut><568.609><2016.392><0~0~2~3, WaterNut><434.236><2017.551><0~0~2~3, LightSource><547.3473><1326.175><1~Environment~-159~34~50~86.60254~0~0, LightSource><386.5868><1327.366><1~Environment~-92~101~50~86.60254~1~0, 
+FadePalette: 10, 0.6956522, 0.6956522, 0.6956522
+WetTerrain: OFF

@@ -1,0 +1,7 @@
+Template: NONE
+DangerType: None
+Grime: 0.09782609
+Palette: 18
+PlacedObjects: LightSource><176.1324><189.6498><1~Environment~0~100~-295~361.6025~1~0, 
+AmbientSounds: SPOT><SO_IND-Turbine.ogg><60.32385><491.1859><0.4347826><0.9021739><249.3239><235.1859><-186.3553><-79.35535><0><0.2086958, OMNI><AM_ENV-WallHum.ogg><788.7346><637.9494><0.5><0.6869565, OMNI><SO_SFX-DeepLake.ogg><743.0146><158.6995><0.3695652><1, 
+FadePalette: 17, 0.8043478

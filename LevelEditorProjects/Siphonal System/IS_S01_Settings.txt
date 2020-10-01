@@ -1,0 +1,4 @@
+Clouds: 1
+PlacedObjects: LightSource><470.8989><306.5775><0.3695652~Environment~-328~113~50~86.60254~0~0, 
+FadePalette: 10, 0.06521739
+WetTerrain: OFF

@@ -1,0 +1,4 @@
+Effects: WaterGlowworm-0.05434782-318-44, Pulse-0.06521739-30-30, 
+PlacedObjects: LightSource><292.5616><592.8173><1~Environment~64~-124~187~-11.39746~1~0, CustomDecal><370.7014><436.944><-1~-61~47~-62~46~1~-465~-168~0~1~0~UWshelter~1~0~1~0~1~0~1~0, LightFixture><767.1621><161.8829><RedLight~17.32051~-10~49, LightFixture><239.0482><375.8059><RedLight~17.32051~-10~63, 
+FadePalette: 10, 0.6956522
+WetTerrain: OFF

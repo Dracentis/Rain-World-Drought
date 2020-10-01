@@ -1,0 +1,4 @@
+Template: IS_SettingsTemplate_GravityPump
+Effects: Pulse-0.1086956-30-30, GravityPulse-0.3586957-32-83, 
+PlacedObjects: LightFixture><547.0156><281.5507><RedLight~17.32051~-10~53, LightFixture><695.8677><456.9><RedLight~17.32051~-10~90, LightFixture><612.9876><820.5626><RedLight~17.32051~-10~42, LightFixture><666.183><1148.169><RedLight~17.32051~-10~62, LightFixture><429.506><740.6997><RedLight~17.32051~-10~62, 
+FadePalette: 10, 0.6086956, 0.4456522

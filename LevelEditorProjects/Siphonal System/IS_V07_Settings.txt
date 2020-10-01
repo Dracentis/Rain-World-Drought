@@ -1,0 +1,12 @@
+Template: NONE
+RumbleIntensity: 0.3586957
+Clouds: 1
+WaterReflectionAlpha: 0
+Palette: 37
+EffectColorA: 4
+EffectColorB: 21
+Effects: WaterGlowworm-1-20-20, TankRoomView-1-20-20, 
+PlacedObjects: LightSource><2475.26><275.3003><0.1630435~Environment~0~100~50~86.60254~1~0, LightFixture><2779.066><176.4209><RedLight~17.32051~-10~71, 
+AmbientSounds: OMNI><AM_WIN-SubWnd.ogg><742.8367><488.3845><0.5><1, OMNI><SO_SFX-LakeBottom.ogg><711.5517><430.9432><0.2934783><1, 
+FadePalette: 10, 0.6630435, 0.6630435, 0.6630435
+WetTerrain: OFF
