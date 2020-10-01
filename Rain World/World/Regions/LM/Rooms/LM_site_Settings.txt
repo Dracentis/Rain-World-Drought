@@ -1,0 +1,4 @@
+Clouds: 1
+Palette: 19
+FadePalette: 25, 0.6195652, 0.6195652, 0.6195652
+WetTerrain: OFF

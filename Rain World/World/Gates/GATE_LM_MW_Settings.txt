@@ -1,3 +1,5 @@
+Template: NONE
+DangerType: None
 Clouds: 1
 Grime: 0
 RandomItemDensity: 0

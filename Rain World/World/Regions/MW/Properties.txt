@@ -10,6 +10,7 @@ playerGuideOverseerSpawnChance: 0.0
 Subregion: The Fragmented Exterior
 Subregion: The East Leg
 Subregion: The West Leg
+Subregion: The Wall
 Room_Attr: GATE_MW_LM: Vulture-1,KingVulture-1,
 Room_Attr: GATE_LM_MW: Vulture-1,KingVulture-1,
 Room_Attr: GATE_SL_MW: Vulture-1,KingVulture-1,
@@ -35,8 +36,6 @@ Room_Attr: MW_21: Vulture-1,KingVulture-1,
 Room_Attr: MW_31: Vulture-1,KingVulture-1,
 Room_Attr: MW_11: Vulture-1,KingVulture-1,
 Room_Attr: MW_8: Vulture-1,KingVulture-1,
-Room_Attr: MW_D04: Vulture-1,KingVulture-1,
-Room_Attr: MW_S11: Vulture-1,KingVulture-1,
 Room_Attr: MW_27: Vulture-1,KingVulture-1,
 Room_Attr: MW_29: Vulture-1,KingVulture-1,
 Room_Attr: MW_33: Vulture-1,KingVulture-1,

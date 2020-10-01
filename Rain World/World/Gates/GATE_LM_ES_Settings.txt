@@ -1,0 +1,11 @@
+Template: NONE
+DangerType: None
+Clouds: 1
+Grime: 0.1304348
+Palette: 25
+EffectColorA: 0
+EffectColorB: 25
+Effects: ZeroG-1-20-20, ZeroGSpecks-1-25-100, 
+AmbientSounds: OMNI><AM_IND-SuperStructure.ogg><740.8897><487.1431><0.6086956><1, OMNI><OM.wav><750.606><339.0804><0.2826087><1, OMNI><SO_SFX-Data1.ogg><718.3965><265.6711><0.1521739><1, 
+FadePalette: 19, 0.2608696
+WetTerrain: OFF

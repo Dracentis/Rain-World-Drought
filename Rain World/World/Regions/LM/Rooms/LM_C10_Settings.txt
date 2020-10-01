@@ -1,0 +1,2 @@
+Template: LM_SettingsTemplate_General
+WetTerrain: OFF

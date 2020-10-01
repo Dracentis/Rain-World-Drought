@@ -1,0 +1,3 @@
+Template: LM_SettingsTemplate_Memory
+PlacedObjects: WallMycelia><91.90204><167.88><62~189, WallMycelia><550.0669><590.1885><-8~-111, CoralNeuron><551.4398><268.3093><-181~169, CoralNeuron><703.8007><404.0158><29~75, SuperStructureFuses><71.55365><47.21191><82~39, SuperStructureFuses><871.1506><585.1185><56~98, WallMycelia><545.0895><107.6308><0~100, WallMycelia><844.1387><289.8338><-29~142, LightSource><516.6619><338.8674><0.06521739~White~-511~291~50~86.60254~1~1, 
+WetTerrain: OFF

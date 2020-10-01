@@ -1,0 +1,5 @@
+Template: LM_SettingsTemplate_Memory
+Effects: LMSwarmers-0.2065217-313-24, 
+PlacedObjects: WallMycelia><284.6965><88.78735><2~155, WallMycelia><149.9481><429.2223><125~15, WallMycelia><720.9211><618.3535><-1~-108, CoralNeuron><433.5956><433.4257><182~-161, SpotLight><228.8692><276.9013><-12~373~542~461~460~-132, 
+AmbientSounds: SPOT><SO_SFX-Celia.ogg><724.4067><335.6242><0.5><1><526.4067><351.6242><-93.35535><-105.3553><0><0.154348, 
+WetTerrain: OFF

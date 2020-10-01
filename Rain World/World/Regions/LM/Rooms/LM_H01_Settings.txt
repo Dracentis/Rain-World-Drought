@@ -1,0 +1,4 @@
+Template: LM_SettingsTemplate_General
+Effects: ProjectedScanLines-0.7391304-20-20, 
+PlacedObjects: WallMycelia><1412.683><1423.061><-209~-12, WallMycelia><189.1795><1418.412><89~-165, SuperStructureFuses><592.1995><1091.265><39~179, CoralStemWithNeurons><759.6868><1427.322><46~-115, CoralNeuron><2101.913><1033.82><0~100, CoralNeuron><2370.67><224.8555><-410~457, CoralStem><631.0681><142.3331><49~156, WallMycelia><234.1117><154.8341><51~118, CoralStem><1421.661><133.6308><36~262, CoralStemWithNeurons><1092.557><1413.554><42~-274, 
+WetTerrain: OFF

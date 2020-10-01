@@ -1,0 +1,7 @@
+Template: LM_SettingsTemplate_Memory
+Clouds: 1
+Effects: LMSwarmers-0-337-32, 
+PlacedObjects: CoralCircuit><474.6334><332.6624><-3~64, CoralCircuit><558.1918><398.3068><-14~42, CoralCircuit><567.6921><326.556><-2~31, WallMycelia><143.6945><372.7032><170~47, WallMycelia><285.2018><36.55592><8~168, WallMycelia><558.3422><604.1272><-4~-163, WallMycelia><860.7115><58.05373><-120~187, SuperStructureFuses><871.1855><302.9393><22~120, SuperStructureFuses><-23.61267><1.084793><150~61, SuperStructureFuses><-32.14709><341.9215><80~40, SuperStructureFuses><128.5887><343.6317><20~37, SuperStructureFuses><411.4453><623.5436><85~137, 
+AmbientSounds: SPOT><SO_SFX-Celia.ogg><693.316><338.5785><0.2065217><1.293478><487.316><378.5785><-78.35535><-86.35535><0><0.154348, 
+FadePalette: 17, 0.3043478
+WetTerrain: OFF

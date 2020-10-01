@@ -2,6 +2,7 @@ Template: NONE
 DangerType: Thunder
 RumbleIntensity: 0.2173913
 Clouds: 0.2065217
+Grime: 0.2065217
 Palette: 16
 EffectColorA: 2
 EffectColorB: 12

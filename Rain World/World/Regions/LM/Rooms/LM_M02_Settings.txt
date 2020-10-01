@@ -1,0 +1,3 @@
+Template: LM_SettingsTemplate_Memory
+PlacedObjects: CoralCircuit><535.3989><349.8665><-5~134, SuperStructureFuses><851.1848><25.1891><56~79, SuperStructureFuses><104.912><603.1796><63~96, SuperStructureFuses><949.9399><227.9375><84~197, WallMycelia><827.8394><349.6191><9~87, WallMycelia><393.8766><61.65482><0~100, WallMycelia><392.9482><622.2234><35~-54, WallMycelia><176.4812><428.6991><0~100, 
+WetTerrain: OFF

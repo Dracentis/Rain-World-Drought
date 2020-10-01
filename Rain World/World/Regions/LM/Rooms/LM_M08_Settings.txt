@@ -1,0 +1,7 @@
+Template: LM_SettingsTemplate_Memory
+Clouds: 0
+RandomItemDensity: 0
+Effects: LMSwarmers-0-381-17, 
+PlacedObjects: CoralCircuit><470.7079><343.9455><-33~31, CoralCircuit><521.6978><408.9431><10~36, WallMycelia><304.8483><78.88034><4~136, WallMycelia><89.55054><571.7351><0~100, WallMycelia><832.0826><235.8594><0~100, CoralStem><467.1785><605.8402><-3~-68, LightSource><470.9488><387.772><0.07608695~White~-681~-404~50~86.60254~1~1, SpotLight><225.8209><297.813><52~307~519~329~406~-122, 
+AmbientSounds: SPOT><SO_SFX-Celia.ogg><713.1058><343.1697><0.3043478><1.254348><482.1058><369.1697><-64.35535><-83.35535><0><0.2195653, 
+WetTerrain: OFF

@@ -1,0 +1,4 @@
+Template: LM_SettingsTemplate_Memory
+Effects: LMSwarmers-0-30-30, 
+PlacedObjects: CoralCircuit><507.8068><362.6985><-2~136, WallMycelia><158.0848><117.4312><63~159, WallMycelia><826.317><83.58081><-72~145, SuperStructureFuses><876.9998><388.95><20~82, SuperStructureFuses><478.5884><631.3679><32~91, SuperStructureFuses><-46.60944><449.8923><80~82, SuperStructureFuses><134.8728><448.0956><19~83, SuperStructureFuses><-46.88684><246.3541><81~81, SuperStructureFuses><-27.80157><5.025269><98~63, 
+WetTerrain: OFF
