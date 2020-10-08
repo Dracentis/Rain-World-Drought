@@ -1,54 +1,81 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Partiality.Modloader;
-using UnityEngine;
+﻿using Partiality.Modloader;
+using Rain_World_Drought.Creatures;
+using Rain_World_Drought.Effects;
+using Rain_World_Drought.Enums;
+using Rain_World_Drought.OverWorld;
+using Rain_World_Drought.PlacedObjects;
+using Rain_World_Drought.Resources;
+using Rain_World_Drought.Slugcat;
 
-
-public class DroughtMod : PartialityMod
+namespace Rain_World_Drought
 {
-    public DroughtMod()
+    public class DroughtMod : PartialityMod
     {
-        ModID = "Rain World Drought";
-        Version = "0100";
-        author = "Rain World Drought Team";
-    }
-
-    //public static DroughtScript script;
-    public override void OnLoad()
-    {
-        base.OnLoad();
-        //GameObject obj = new GameObject();
-        //script = obj.AddComponent<DroughtScript>();
-        //DroughtScript.mod = this;
-
-    }
-}
-/*
-public class DroughtScript : MonoBehaviour
-{
-    public void ApplyPatch()
-    {
-        StaticWorldPatch.AddCreatureTemplate();
-        StaticWorldPatch.ModifyRelationship();
-
-    }
-
-    public RainWorld rw;
-    public static DroughtMod mod;
-    public void Update()
-    {
-        if(rw == null)
+        public DroughtMod()
         {
-            rw = FindObjectOfType<RainWorld>();
+            this.Version = "2000";
+            this.ModID = "Rain World Drought";
+        }
 
-            if (rw != null)
-            { //Rain World has been Initialized
-                ApplyPatch();
-            }
+        public override void OnEnable()
+        {
+            base.OnEnable();
+
+            #region Creatures
+            // namespaces must be 'Rain_World_Drought.Creatures', not 'Creature' without s, which confuses the compiler with global::Creature
+            AbstractCreatureHK.Patch();
+            AImapHK.Patch();
+            CreatureSymbolHK.Patch();
+            CreatureTemplateHK.Patch();
+            DeerHK.Patch();
+            DevMapPageHK.Patch();
+            LizardHK.Patch();
+            MultiplayerUnlocksHK.Patch();
+            OverseerHK.Patch();
+            TrackersHK.Patch(); //WIP
+            WorldLoaderHK.Patch();
+            #endregion Creatures
+
+            // Effects
+            CoralNeuronSystemHK.Patch();
+            // RoomSettingsHK.Patch(); // Not needed
+
+            // Patch PlacedObjs
+            AbstractPhysicalObjectHK.Patch();
+
+            // Patch Resources
+            FutileHK.Patch();
+
+            #region Slugcat
+            DreamsStateHK.Patch();
+            FoodMeterHK.Patch();
+            PlayerGraphicsHK.Patch();
+            PlayerHK.Patch();
+            SaveStateHK.Patch();
+            #endregion Slugcat
+
+            #region OverWorld
+            // namespaces must be 'Rain_World_Drought.OverWorld', not 'World', which confuses the compiler with global::World
+            AboveCloudsViewHK.Patch();
+            ProcessManagerHK.Patch();
+            RainCycleHK.Patch();
+            RainMeterHK.Patch();
+            RainWorldGameHK.Patch();
+            RoomHK.Patch();
+            RoomRainHK.Patch();
+            WorldHK.Patch();
+            #endregion OverWorld
+
+            On.RainWorld.Start += new On.RainWorld.hook_Start(RainWorldHK);
+        }
+
+        public static bool EnumExt => (int)EnumExt_Drought.LightWorm > 10;
+
+        private static void RainWorldHK(On.RainWorld.orig_Start orig, RainWorld self)
+        {
+            orig.Invoke(self);
+            StaticWorldPatch.AddCreatureTemplate();
+            StaticWorldPatch.ModifyRelationship();
         }
     }
-    
 }
-*/

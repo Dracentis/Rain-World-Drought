@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Rain_World_Drought</RootNamespace>
     <AssemblyName>Rain World Drought</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -44,6 +45,9 @@
       <HintPath>..\References\GoKit.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="HOOKS-Assembly-CSharp">
+      <HintPath>..\References\HOOKS-Assembly-CSharp.dll</HintPath>
+    </Reference>
     <Reference Include="Mono.Security">
       <HintPath>..\References\Mono.Security.dll</HintPath>
       <Private>False</Private>
@@ -51,6 +55,10 @@
     <Reference Include="MonoMod">
       <HintPath>..\References\MonoMod.exe</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="MonoMod.RuntimeDetour, Version=18.6.0.33006, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\MonoMod.RuntimeDetour.dll</HintPath>
     </Reference>
     <Reference Include="Partiality">
       <HintPath>..\References\Partiality.dll</HintPath>
@@ -76,30 +84,61 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Creature\AbstractCreatureHK.cs" />
+    <Compile Include="Creature\AImapHK.cs" />
+    <Compile Include="Creature\CreatureSymbolHK.cs" />
+    <Compile Include="Creature\CreatureTemplateHK.cs" />
+    <Compile Include="Creature\DeerHK.cs" />
+    <Compile Include="Creature\DevMapPageHK.cs" />
+    <Compile Include="Creature\LizardHK.cs" />
+    <Compile Include="Creature\MultiplayerUnlocksHK.cs" />
     <Compile Include="Creature\OverseerDroughtTutorialBehavior.cs" />
-    <Compile Include="Creature\patch_CreatureSymbol.cs" />
-    <Compile Include="Creature\patch_CreatureTemplate.cs" />
-    <Compile Include="Creature\patch_AbstractCreature.cs" />
-    <Compile Include="Creature\patch_AImap.cs" />
-    <Compile Include="Creature\patch_Deer.cs" />
-    <Compile Include="Creature\patch_DeerAI.cs" />
-    <Compile Include="Creature\patch_LizardAI.cs" />
-    <Compile Include="Creature\patch_LizardBreedParams.cs" />
+    <Compile Include="Creature\OverseerHK.cs" />
+    <Compile Include="PlacedObjects\AbstractPhysicalObjectHK.cs" />
+    <Compile Include="PlacedObjects\PistonPhysics.cs" />
+    <Compile Include="PublicBee.cs" />
+    <Compile Include="Resources\FutileHK.cs" />
+    <Compile Include="Slugcat\DreamsStateHK.cs" />
+    <Compile Include="Slugcat\FoodMeterHK.cs" />
+    <Compile Include="Slugcat\PlayerGraphicsHK.cs" />
+    <Compile Include="Slugcat\PlayerHK.cs" />
+    <Compile Include="Slugcat\SaveStateHK.cs" />
+    <Compile Include="Slugcat\WandererSupplement.cs" />
+    <Compile Include="World\AboveCloudsViewHK.cs" />
+    <Compile Include="World\NextKarmaMeter.cs" />
+    <Compile Include="World\NextRainMeter.cs" />
+    <Compile Include="World\ProcessManagerHK.cs" />
+    <Compile Include="World\RainCycleHK.cs" />
+    <Compile Include="World\RainMeterHK.cs" />
+    <Compile Include="World\RainWorldGameHK.cs" />
+    <Compile Include="World\RoomHK.cs" />
+    <Compile Include="World\RoomRainHK.cs" />
+    <Compile Include="World\WorldHK.cs" />
+    <None Include="Patches_old\Creature\patch_CreatureSymbol.cs" />
+    <None Include="Patches_old\Creature\patch_CreatureTemplate.cs" />
+    <None Include="Patches_old\Creature\patch_AbstractCreature.cs" />
+    <Compile Include="Creature\TrackersHK.cs" />
+    <Compile Include="Creature\WorldLoaderHK.cs" />
+    <None Include="Patches_old\Creature\patch_AImap.cs" />
+    <None Include="Patches_old\Creature\patch_Deer.cs" />
+    <None Include="Patches_old\Creature\patch_DeerAI.cs" />
+    <None Include="Patches_old\Creature\patch_LizardAI.cs" />
+    <None Include="Patches_old\Creature\patch_LizardBreedParams.cs" />
     <Compile Include="Creature\GreyLizardBreed.cs" />
-    <Compile Include="Creature\patch_MapPage.cs" />
-    <Compile Include="Creature\patch_Lizard.cs" />
-    <Compile Include="Creature\patch_MultiplayerUnlocks.cs" />
-    <Compile Include="Creature\patch_NoiseTracker.cs" />
-    <Compile Include="Creature\patch_Overseer.cs" />
-    <Compile Include="Creature\patch_OverseerAbstractAI.cs" />
-    <Compile Include="Creature\patch_OverseerGraphics.cs" />
-    <Compile Include="Creature\patch_RainTracker.cs" />
-    <Compile Include="Creature\patch_RoomRealizer.cs" />
-    <Compile Include="Creature\patch_SandboxSettingsInterface.cs" />
-    <Compile Include="Creature\patch_SandboxEditorSelector.cs" />
-    <Compile Include="Creature\patch_Spear.cs" />
-    <Compile Include="Creature\patch_Weapon.cs" />
-    <Compile Include="Creature\patch_WorldLoader.cs" />
+    <None Include="Patches_old\Creature\patch_MapPage.cs" />
+    <None Include="Patches_old\Creature\patch_Lizard.cs" />
+    <None Include="Patches_old\Creature\patch_MultiplayerUnlocks.cs" />
+    <None Include="Patches_old\Creature\patch_NoiseTracker.cs" />
+    <None Include="Patches_old\Creature\patch_Overseer.cs" />
+    <None Include="Patches_old\Creature\patch_OverseerAbstractAI.cs" />
+    <None Include="Patches_old\Creature\patch_OverseerGraphics.cs" />
+    <None Include="Patches_old\Creature\patch_RainTracker.cs" />
+    <None Include="Patches_old\Creature\patch_RoomRealizer.cs" />
+    <None Include="Patches_old\Creature\patch_SandboxSettingsInterface.cs" />
+    <None Include="Patches_old\Creature\patch_SandboxEditorSelector.cs" />
+    <None Include="Patches_old\Creature\patch_Spear.cs" />
+    <None Include="Patches_old\Creature\patch_Weapon.cs" />
+    <None Include="Patches_old\Creature\patch_WorldLoader.cs" />
     <Compile Include="Creature\WalkerBeast.cs" />
     <Compile Include="Creature\WalkerBeastAbstractAI.cs" />
     <Compile Include="Creature\WalkerBeastAI.cs" />
@@ -113,41 +152,44 @@
     <Compile Include="Creature\LightWormAI.cs" />
     <Compile Include="Creature\LightWormGraphics.cs" />
     <Compile Include="Creature\StaticWorldPatch.cs" />
+    <Compile Include="DroughtMod.cs" />
+    <Compile Include="Effects\CoralNeuronSystemHK.cs" />
     <Compile Include="Effects\ElectricStorm.cs" />
     <Compile Include="Effects\GravityPulse.cs" />
-    <Compile Include="Effects\patch_CoralNeuronSystem.cs" />
-    <Compile Include="Effects\patch_RoomSettings.cs" />
+    <Compile Include="EnumExt_Drought.cs" />
+    <None Include="Patches_old\Effects\patch_CoralNeuronSystem.cs" />
+    <None Include="Patches_old\Effects\patch_RoomSettings.cs" />
     <Compile Include="Effects\PulseEffect.cs" />
     <Compile Include="Effects\DrainEffect.cs" />
     <Compile Include="Effects\TankRoomView.cs" />
     <Compile Include="PlacedObjects\GravityAmplifyer.cs" />
-    <Compile Include="PlacedObjects\patch_AbstractPhysicalObject.cs" />
-    <Compile Include="PlacedObjects\patch_BodyChunk.cs" />
-    <Compile Include="PlacedObjects\patch_Conversation.cs" />
-    <Compile Include="PlacedObjects\patch_DataPearl.cs" />
-    <Compile Include="PlacedObjects\patch_PlacedObject.cs" />
+    <None Include="Patches_old\PlacedObjects\patch_AbstractPhysicalObject.cs" />
+    <None Include="Patches_old\PlacedObjects\patch_BodyChunk.cs" />
+    <Compile Include="Patches_old\PlacedObjects\patch_Conversation.cs" />
+    <Compile Include="Patches_old\PlacedObjects\patch_DataPearl.cs" />
+    <None Include="Patches_old\PlacedObjects\patch_PlacedObject.cs" />
     <Compile Include="PlacedObjects\LargePiston.cs" />
     <Compile Include="PlacedObjects\GiantPiston.cs" />
     <Compile Include="PlacedObjects\SmallPiston.cs" />
     <Compile Include="PlacedObjects\TreeFruit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resources\FAtlas.cs" />
+    <None Include="Patches_old\FAtlas.cs" />
     <Compile Include="Slugcat\MessageScreen.cs" />
-    <Compile Include="Slugcat\patch_DreamScreen.cs" />
-    <Compile Include="Slugcat\patch_DreamsState.cs" />
-    <Compile Include="Slugcat\patch_FastTravelScreen.cs" />
-    <Compile Include="Slugcat\patch_FoodMeter.cs" />
-    <Compile Include="Slugcat\patch_HUD.cs" />
-    <Compile Include="Slugcat\patch_HUDCircle.cs" />
-    <Compile Include="Slugcat\patch_MainMenu.cs" />
-    <Compile Include="Slugcat\patch_MenuScene.cs" />
-    <Compile Include="Slugcat\patch_Player.cs" />
-    <Compile Include="Slugcat\patch_PlayerGraphics.cs" />
-    <Compile Include="Slugcat\patch_SaveState.cs" />
-    <Compile Include="Slugcat\patch_SlideShow.cs" />
-    <Compile Include="Slugcat\patch_SlugcatSelectMenu.cs" />
-    <Compile Include="Slugcat\patch_SlugcatStats.cs" />
-    <Compile Include="Slugcat\patch_WinState.cs" />
+    <Compile Include="Patches_old\Slugcat\patch_DreamScreen.cs" />
+    <None Include="Patches_old\Slugcat\patch_DreamsState.cs" />
+    <Compile Include="Patches_old\Slugcat\patch_FastTravelScreen.cs" />
+    <None Include="Patches_old\Slugcat\patch_FoodMeter.cs" />
+    <None Include="Patches_old\Slugcat\patch_HUD.cs" />
+    <None Include="Patches_old\Slugcat\patch_HUDCircle.cs" />
+    <Compile Include="Patches_old\Slugcat\patch_MainMenu.cs" />
+    <Compile Include="Patches_old\Slugcat\patch_MenuScene.cs" />
+    <None Include="Patches_old\Slugcat\patch_Player.cs" />
+    <None Include="Patches_old\Slugcat\patch_PlayerGraphics.cs" />
+    <None Include="Patches_old\Slugcat\patch_SaveState.cs" />
+    <Compile Include="Patches_old\Slugcat\patch_SlideShow.cs" />
+    <Compile Include="Patches_old\Slugcat\patch_SlugcatSelectMenu.cs" />
+    <None Include="Patches_old\Slugcat\patch_SlugcatStats.cs" />
+    <Compile Include="Patches_old\Slugcat\patch_WinState.cs" />
     <Compile Include="Slugcat\PearlConversation.cs" />
     <Compile Include="Slugcat\PlayerCosmetics.cs" />
     <Compile Include="World\FPOracleBehavior.cs" />
@@ -157,33 +199,32 @@
     <Compile Include="World\LMOracleBehaviorHasMark.cs" />
     <Compile Include="World\LMOracleSwamer.cs" />
     <Compile Include="World\MoonPearl.cs" />
-    <Compile Include="World\patch_ScavengerOutpost.cs" />
-    <Compile Include="World\patch_AboveCloudsView.cs" />
-    <Compile Include="World\patch_BulletDrip.cs" />
-    <Compile Include="World\patch_Creature.cs" />
-    <Compile Include="World\patch_GlobalRain.cs" />
-    <Compile Include="World\patch_KarmaMeter.cs" />
-    <Compile Include="World\patch_MiscWorldSaveData.cs" />
-    <Compile Include="World\patch_Oracle.cs" />
-    <Compile Include="World\patch_OracleGraphics.cs" />
-    <Compile Include="Creature\patch_OverseerAI.cs" />
-    <Compile Include="World\patch_PlayerProgression.cs" />
-    <Compile Include="World\patch_ProcessManager.cs" />
-    <Compile Include="World\patch_RainMeter.cs" />
-    <Compile Include="World\patch_RainWorld.cs" />
-    <Compile Include="World\patch_RainWorldGame.cs" />
-    <Compile Include="World\patch_RedLight.cs" />
-    <Compile Include="World\patch_Room.cs" />
-    <Compile Include="World\patch_RoomRain.cs" />
-    <Compile Include="World\patch_SleepAndDeathScreen.cs" />
-    <Compile Include="World\patch_SLOrcacleState.cs" />
-    <Compile Include="World\patch_MusicPiece.cs" />
-    <Compile Include="World\patch_Water.cs" />
-    <Compile Include="World\patch_RainCycle.cs" />
-    <Compile Include="World\patch_World.cs" />
-    <Compile Include="World\patch_VoidSeaScene.cs" />
+    <Compile Include="Patches_old\World\patch_ScavengerOutpost.cs" />
+    <None Include="Patches_old\World\patch_AboveCloudsView.cs" />
+    <None Include="Patches_old\World\patch_BulletDrip.cs" />
+    <None Include="Patches_old\World\patch_Creature.cs" />
+    <Compile Include="Patches_old\World\patch_GlobalRain.cs" />
+    <None Include="Patches_old\World\patch_KarmaMeter.cs" />
+    <None Include="Patches_old\World\patch_MiscWorldSaveData.cs" />
+    <Compile Include="Patches_old\World\patch_Oracle.cs" />
+    <Compile Include="Patches_old\World\patch_OracleGraphics.cs" />
+    <None Include="Patches_old\Creature\patch_OverseerAI.cs" />
+    <None Include="Patches_old\World\patch_PlayerProgression.cs" />
+    <None Include="Patches_old\World\patch_ProcessManager.cs" />
+    <None Include="Patches_old\World\patch_RainMeter.cs" />
+    <None Include="Patches_old\World\patch_RainWorld.cs" />
+    <None Include="Patches_old\World\patch_RainWorldGame.cs" />
+    <None Include="Patches_old\PlacedObjects\patch_RedLight.cs" />
+    <None Include="Patches_old\World\patch_Room.cs" />
+    <None Include="Patches_old\World\patch_RoomRain.cs" />
+    <None Include="Patches_old\World\patch_SleepAndDeathScreen.cs" />
+    <None Include="Patches_old\World\patch_SLOrcacleState.cs" />
+    <Compile Include="Patches_old\World\patch_MusicPiece.cs" />
+    <None Include="Patches_old\World\patch_Water.cs" />
+    <None Include="Patches_old\World\patch_RainCycle.cs" />
+    <None Include="Patches_old\World\patch_World.cs" />
+    <Compile Include="Patches_old\World\patch_VoidSeaScene.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
