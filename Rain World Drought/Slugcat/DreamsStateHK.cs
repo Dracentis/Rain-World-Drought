@@ -1,4 +1,5 @@
-﻿using Rain_World_Drought.Enums;
+﻿using Menu;
+using Rain_World_Drought.Enums;
 using RWCustom;
 using System;
 using System.Text.RegularExpressions;
@@ -14,13 +15,14 @@ namespace Rain_World_Drought.Slugcat
             On.DreamsState.EndOfCycleProgress += new On.DreamsState.hook_EndOfCycleProgress(EndOfCycleProgressHK);
             On.DreamsState.StaticEndOfCycleProgress += new On.DreamsState.hook_StaticEndOfCycleProgress(StaticEndOfCycleProgressHK);
             On.DreamsState.InitiateEventDream += new On.DreamsState.hook_InitiateEventDream(InitiateEventDreamHK);
+            On.Menu.DreamScreen.SceneFromDream += new On.Menu.DreamScreen.hook_SceneFromDream(SceneFromDreamHK);
         }
 
         private static void CtorHK(On.DreamsState.orig_ctor orig, DreamsState self)
         {
             orig.Invoke(self);
             origIntegers = self.integers.Length;
-            droughtIntegers = Enum.GetNames(typeof(EnumSwitch.DreamsStateID)).Length - 1;
+            droughtIntegers = Enum.GetNames(typeof(EnumSwitch.DreamsStateID)).Length - 1; // remove DEFAULT
             self.integers = new int[origIntegers + droughtIntegers];
         }
 
@@ -171,6 +173,16 @@ namespace Rain_World_Drought.Slugcat
                     };
                     foreach (EnumSwitch.DreamsStateID id in all) { SetEverReadMessage(self, id, true); }
                     break;
+            }
+        }
+
+        private static MenuScene.SceneID SceneFromDreamHK(On.Menu.DreamScreen.orig_SceneFromDream orig, DreamScreen self, DreamsState.DreamID dreamID)
+        {
+            switch (EnumSwitch.GetDreamsStateID(dreamID))
+            {
+                case EnumSwitch.DreamsStateID.DEFAULT: return orig.Invoke(self, dreamID);
+
+                default: return EnumExt_Drought.Dream_Message;
             }
         }
     }

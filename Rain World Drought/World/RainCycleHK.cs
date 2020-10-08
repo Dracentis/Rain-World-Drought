@@ -77,7 +77,7 @@ namespace Rain_World_Drought.OverWorld
 
         private static void BurstRainHit(RainCycle self)
         {
-            (self.world.game.globalRain as patch_GlobalRain).InitBurstRain();
+            GlobalRainHK.InitBurstRain(self.world.game.globalRain);
             Debug.Log("Burst Rain Hit");
         }
 

@@ -95,6 +95,7 @@
     <Compile Include="Creature\OverseerDroughtTutorialBehavior.cs" />
     <Compile Include="Creature\OverseerHK.cs" />
     <Compile Include="PlacedObjects\AbstractPhysicalObjectHK.cs" />
+    <Compile Include="PlacedObjects\DataPearlHK.cs" />
     <Compile Include="PlacedObjects\PistonPhysics.cs" />
     <Compile Include="PublicBee.cs" />
     <Compile Include="Resources\FutileHK.cs" />
@@ -105,8 +106,11 @@
     <Compile Include="Slugcat\SaveStateHK.cs" />
     <Compile Include="Slugcat\WandererSupplement.cs" />
     <Compile Include="World\AboveCloudsViewHK.cs" />
+    <Compile Include="World\BurstRain.cs" />
+    <Compile Include="World\GlobalRainHK.cs" />
     <Compile Include="World\NextKarmaMeter.cs" />
     <Compile Include="World\NextRainMeter.cs" />
+    <Compile Include="World\OracleHK.cs" />
     <Compile Include="World\ProcessManagerHK.cs" />
     <Compile Include="World\RainCycleHK.cs" />
     <Compile Include="World\RainMeterHK.cs" />
@@ -166,7 +170,7 @@
     <None Include="Patches_old\PlacedObjects\patch_AbstractPhysicalObject.cs" />
     <None Include="Patches_old\PlacedObjects\patch_BodyChunk.cs" />
     <Compile Include="Patches_old\PlacedObjects\patch_Conversation.cs" />
-    <Compile Include="Patches_old\PlacedObjects\patch_DataPearl.cs" />
+    <None Include="Patches_old\PlacedObjects\patch_DataPearl.cs" />
     <None Include="Patches_old\PlacedObjects\patch_PlacedObject.cs" />
     <Compile Include="PlacedObjects\LargePiston.cs" />
     <Compile Include="PlacedObjects\GiantPiston.cs" />
@@ -175,7 +179,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="Patches_old\FAtlas.cs" />
     <Compile Include="Slugcat\MessageScreen.cs" />
-    <Compile Include="Patches_old\Slugcat\patch_DreamScreen.cs" />
+    <None Include="Patches_old\Slugcat\patch_DreamScreen.cs" />
     <None Include="Patches_old\Slugcat\patch_DreamsState.cs" />
     <Compile Include="Patches_old\Slugcat\patch_FastTravelScreen.cs" />
     <None Include="Patches_old\Slugcat\patch_FoodMeter.cs" />
@@ -199,11 +203,11 @@
     <Compile Include="World\LMOracleBehaviorHasMark.cs" />
     <Compile Include="World\LMOracleSwamer.cs" />
     <Compile Include="World\MoonPearl.cs" />
-    <Compile Include="Patches_old\World\patch_ScavengerOutpost.cs" />
+    <None Include="Patches_old\World\patch_ScavengerOutpost.cs" />
     <None Include="Patches_old\World\patch_AboveCloudsView.cs" />
     <None Include="Patches_old\World\patch_BulletDrip.cs" />
     <None Include="Patches_old\World\patch_Creature.cs" />
-    <Compile Include="Patches_old\World\patch_GlobalRain.cs" />
+    <None Include="Patches_old\World\patch_GlobalRain.cs" />
     <None Include="Patches_old\World\patch_KarmaMeter.cs" />
     <None Include="Patches_old\World\patch_MiscWorldSaveData.cs" />
     <Compile Include="Patches_old\World\patch_Oracle.cs" />
@@ -223,7 +227,7 @@
     <None Include="Patches_old\World\patch_Water.cs" />
     <None Include="Patches_old\World\patch_RainCycle.cs" />
     <None Include="Patches_old\World\patch_World.cs" />
-    <Compile Include="Patches_old\World\patch_VoidSeaScene.cs" />
+    <None Include="Patches_old\World\patch_VoidSeaScene.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

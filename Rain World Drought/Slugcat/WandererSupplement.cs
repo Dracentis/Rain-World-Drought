@@ -35,17 +35,18 @@ namespace Rain_World_Drought.Slugcat
 
         public static WandererSupplement GetSub(Player self)
         {
+            if (fields[self.playerState.playerNumber] == null) { CreateSub(self); }
             return fields[self.playerState.playerNumber];
         }
 
-        public static void CreateSub(Player self)
+        private static void CreateSub(Player self)
         {
             if (fields[self.playerState.playerNumber] != null && fields[self.playerState.playerNumber].self.abstractCreature == self.abstractCreature)
             { return; }
             fields[self.playerState.playerNumber] = new WandererSupplement(self);
         }
 
-        // Wanderer replaces orig slugcat
+        // Wanderer replaces orig slugcat: this can be changed with enumext but
         public const int SlugcatCharacter = 1;
         public const int StoryCharacter = 0;
 
@@ -58,11 +59,13 @@ namespace Rain_World_Drought.Slugcat
         public const float PARRY_COST = 0.5f;
         public const int MAX_USES = 30;
         public const int ENERGY_PER_HUNGER = 10;
-        //Ending code
+
+        #region Ending Supplement
         public bool voidEnergy = false; //true if the void effects are controlling the maxEnergy
         public bool past22000 = false; //true if the player is in the void past -22000 y
         public bool past25000 = false; //true if the player is in the void past -25000 y
-        //-------------------
+        #endregion Ending Supplement
+
         public int hibernationPenalty;
         // public bool hibernation1;
         // public bool hibernation2;
@@ -82,12 +85,10 @@ namespace Rain_World_Drought.Slugcat
         }
 
         #region Graphics
-
         public float tailLength;
         public List<PlayerCosmetics> cosmetics;
         public int origSprites = 12;
         public int extraSprites;
-
         #endregion Graphics
     }
 }

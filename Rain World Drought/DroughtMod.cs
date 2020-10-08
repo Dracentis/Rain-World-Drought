@@ -42,6 +42,7 @@ namespace Rain_World_Drought
 
             // Patch PlacedObjs
             AbstractPhysicalObjectHK.Patch();
+            DataPearlHK.Patch();
 
             // Patch Resources
             FutileHK.Patch();
@@ -57,6 +58,8 @@ namespace Rain_World_Drought
             #region OverWorld
             // namespaces must be 'Rain_World_Drought.OverWorld', not 'World', which confuses the compiler with global::World
             AboveCloudsViewHK.Patch();
+            GlobalRainHK.Patch();
+            OracleHK.Patch();
             ProcessManagerHK.Patch();
             RainCycleHK.Patch();
             RainMeterHK.Patch();

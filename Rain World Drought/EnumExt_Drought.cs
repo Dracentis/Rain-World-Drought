@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Menu;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -276,6 +277,7 @@ namespace Rain_World_Drought.Enums
 
     public static class EnumExt_Drought
     {
+        public const int CreatureTemplateTypeExtended = 5;
         public static CreatureTemplate.Type LightWorm;
         public static CreatureTemplate.Type CrossBat;
         /// <summary>
@@ -298,6 +300,8 @@ namespace Rain_World_Drought.Enums
         public static AbstractPhysicalObject.AbstractObjectType LMOracleSwarmer;
 
         public static ProcessManager.ProcessID MessageScreen;
+
+        public static HUD.HUD.OwnerType DreamScreen;
 
         public static DreamsState.DreamID SRSDreamPearlLF;
         public static DreamsState.DreamID SRSDreamPearlLF2;
@@ -379,6 +383,13 @@ namespace Rain_World_Drought.Enums
         /// No Text
         /// </summary>
         public static DataPearl.AbstractDataPearl.DataPearlType WipedPearl;
+
+        public static MenuScene.SceneID Dream_Message;
+        // NEW LANDSCAPES
+        public static MenuScene.SceneID Landscape_IS; // Intake System
+        public static MenuScene.SceneID Landscape_FS; // Forest Sanctuary
+        public static MenuScene.SceneID Landscape_MW; // The Fragmented Exterior
+        public static MenuScene.SceneID Landscape_LM; // Looks To The Moon
     }
 
     /// <summary>

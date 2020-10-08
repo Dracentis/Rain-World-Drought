@@ -2,6 +2,7 @@
 using Rain_World_Drought.Creatures;
 using RWCustom;
 using UnityEngine;
+using VoidSea;
 
 namespace Rain_World_Drought.Slugcat
 {
@@ -19,12 +20,13 @@ namespace Rain_World_Drought.Slugcat
             On.Player.GrabUpdate += new On.Player.hook_GrabUpdate(GrabUpdateHK);
             On.Player.Grabbed += new On.Player.hook_Grabbed(GrabbedHK);
             On.Player.LungUpdate += new On.Player.hook_LungUpdate(LungUpdateHK);
+            On.VoidSea.VoidSeaScene.VoidSeaTreatment += new On.VoidSea.VoidSeaScene.hook_VoidSeaTreatment(VoidSeaTreatmentHK);
         }
 
         private static void CtorHK(On.Player.orig_ctor orig, Player self, AbstractCreature abstractCreature, World world)
         {
             orig.Invoke(self, abstractCreature, world);
-            WandererSupplement.CreateSub(self);
+            WandererSupplement.GetSub(self);
         }
 
         private static void SwallowObjectHK(On.Player.orig_SwallowObject orig, Player self, int grasp)
@@ -367,6 +369,20 @@ namespace Rain_World_Drought.Slugcat
             if (patchedAirInLungs > 0f) { self.airInLungs = Mathf.Max(self.airInLungs, 0.2f); } // prevents drowning early
             orig.Invoke(self);
             if (patchedAirInLungs > 0f) { self.airInLungs = patchedAirInLungs; }
+        }
+
+        private static void VoidSeaTreatmentHK(On.VoidSea.VoidSeaScene.orig_VoidSeaTreatment orig, VoidSeaScene self, Player player, float swimSpeed)
+        {
+            orig.Invoke(self, player, swimSpeed);
+            if (player.room != self.room) { return; }
+
+            WandererSupplement sub = WandererSupplement.GetSub(player);
+            sub.voidEnergy = true;
+            sub.maxEnergy = Custom.LerpMap(player.mainBodyChunk.pos.y, -1000f, -5000f, 1f, 0f);
+            if (player.mainBodyChunk.pos.y < -22000)
+            { sub.past22000 = true; }
+            if (player.mainBodyChunk.pos.y < -25000 || self.deepDivePhase == VoidSeaScene.DeepDivePhase.EggScenario)
+            { sub.past25000 = true; }
         }
     }
 }
