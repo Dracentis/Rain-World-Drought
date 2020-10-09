@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 
 namespace Rain_World_Drought.Enums
 {
@@ -11,6 +12,14 @@ namespace Rain_World_Drought.Enums
     /// </summary>
     public static class EnumSwitch
     {
+        public static int GetMaxCreatureTemplateType()
+        {
+            return Mathf.Max((int)EnumExt_Drought.LightWorm, (int)EnumExt_Drought.CrossBat, (int)EnumExt_Drought.WalkerBeast,
+                (int)EnumExt_Drought.GreyLizard, (int)EnumExt_Drought.SeaDrake);
+        }
+
+        public const int SandboxUnlockIDExtend = 3;
+
         public static CreatureTemplateType GetCreatureTemplateType(CreatureTemplate.Type type)
         {
             if (!DroughtMod.EnumExt) { return CreatureTemplateType.DEFAULT; }
@@ -121,6 +130,7 @@ namespace Rain_World_Drought.Enums
             if (type == EnumExt_Drought.LargePiston) { return AbstractPhysicalObjectType.LargePiston; }
             if (type == EnumExt_Drought.GiantPiston) { return AbstractPhysicalObjectType.GiantPiston; }
             if (type == EnumExt_Drought.LMOracleSwarmer) { return AbstractPhysicalObjectType.LMOracleSwarmer; }
+            if (type == EnumExt_Drought.MoonPearl) { return AbstractPhysicalObjectType.MoonPearl; }
             return AbstractPhysicalObjectType.DEFAULT;
         }
 
@@ -133,7 +143,8 @@ namespace Rain_World_Drought.Enums
             SmallPiston,
             LargePiston,
             GiantPiston,
-            LMOracleSwarmer
+            LMOracleSwarmer,
+            MoonPearl
         };
 
         public static DreamsStateID GetDreamsStateID(DreamsState.DreamID id)
@@ -232,14 +243,14 @@ namespace Rain_World_Drought.Enums
         public static AbstractDataPearlType GetAbstractDataPearlType(DataPearl.AbstractDataPearl.DataPearlType type)
         {
             if (!DroughtMod.EnumExt) { return AbstractDataPearlType.DEFAULT; }
-            if (type == EnumExt_Drought.MoonPearl) { return AbstractDataPearlType.MoonPearl; }
-            if (type == EnumExt_Drought.DroughtPearl1) { return AbstractDataPearlType.DroughtPearl1; }
-            if (type == EnumExt_Drought.DroughtPearl2) { return AbstractDataPearlType.DroughtPearl2; }
-            if (type == EnumExt_Drought.DroughtPearl3) { return AbstractDataPearlType.DroughtPearl3; }
-            if (type == EnumExt_Drought.SI_Spire1) { return AbstractDataPearlType.SI_Spire1; }
-            if (type == EnumExt_Drought.SI_Spire2) { return AbstractDataPearlType.SI_Spire2; }
-            if (type == EnumExt_Drought.SI_Spire3) { return AbstractDataPearlType.SI_Spire3; }
-            if (type == EnumExt_Drought.WipedPearl) { return AbstractDataPearlType.WipedPearl; }
+            if (type == EnumExt_DroughtPlaced.MoonPearl) { return AbstractDataPearlType.MoonPearl; }
+            if (type == EnumExt_DroughtPlaced.DroughtPearl1) { return AbstractDataPearlType.DroughtPearl1; }
+            if (type == EnumExt_DroughtPlaced.DroughtPearl2) { return AbstractDataPearlType.DroughtPearl2; }
+            if (type == EnumExt_DroughtPlaced.DroughtPearl3) { return AbstractDataPearlType.DroughtPearl3; }
+            if (type == EnumExt_DroughtPlaced.SI_Spire1) { return AbstractDataPearlType.SI_Spire1; }
+            if (type == EnumExt_DroughtPlaced.SI_Spire2) { return AbstractDataPearlType.SI_Spire2; }
+            if (type == EnumExt_DroughtPlaced.SI_Spire3) { return AbstractDataPearlType.SI_Spire3; }
+            if (type == EnumExt_DroughtPlaced.WipedPearl) { return AbstractDataPearlType.WipedPearl; }
             return AbstractDataPearlType.DEFAULT;
         }
 
@@ -273,11 +284,77 @@ namespace Rain_World_Drought.Enums
             /// </summary>
             WipedPearl
         }
+
+        public static MenuSceneID GetMenuSceneID(MenuScene.SceneID id)
+        {
+            if (!DroughtMod.EnumExt) { return MenuSceneID.DEFAULT; }
+            if (id == EnumExt_Drought.Dream_Message) { return MenuSceneID.Dream_Message; }
+            if (id == EnumExt_Drought.Landscape_IS) { return MenuSceneID.Landscape_IS; }
+            if (id == EnumExt_Drought.Landscape_FS) { return MenuSceneID.Landscape_FS; }
+            if (id == EnumExt_Drought.Landscape_MW) { return MenuSceneID.Landscape_MW; }
+            if (id == EnumExt_Drought.Landscape_LM) { return MenuSceneID.Landscape_LM; }
+            return MenuSceneID.DEFAULT;
+        }
+
+        public enum MenuSceneID
+        {
+            /// <summary>
+            /// Vanilla or other mod
+            /// </summary>
+            DEFAULT = -1,
+            Dream_Message,
+            /// <summary>
+            /// Intake System
+            /// </summary>
+            Landscape_IS,
+            /// <summary>
+            /// Forest Sanctuary
+            /// </summary>
+            Landscape_FS,
+            /// <summary>
+            /// The Fragmented Exterior
+            /// </summary>
+            Landscape_MW,
+            /// <summary>
+            /// Looks To The Moon
+            /// </summary>
+            Landscape_LM
+        };
+
+        public static ConversationID GetConversationID(Conversation.ID id)
+        {
+            if (!DroughtMod.EnumExt) { return ConversationID.DEFAULT; }
+            if (id == EnumExt_Drought.Moon_Pearl_MoonPearl) { return ConversationID.Moon_Pearl_MoonPearl; }
+            if (id == EnumExt_Drought.Moon_Pearl_Drought1) { return ConversationID.Moon_Pearl_Drought1; }
+            if (id == EnumExt_Drought.Moon_Pearl_Drought2) { return ConversationID.Moon_Pearl_Drought2; }
+            if (id == EnumExt_Drought.Moon_Pearl_Drought3) { return ConversationID.Moon_Pearl_Drought3; }
+            if (id == EnumExt_Drought.SI_Spire1) { return ConversationID.SI_Spire1; }
+            if (id == EnumExt_Drought.SI_Spire2) { return ConversationID.SI_Spire2; }
+            if (id == EnumExt_Drought.SI_Spire3) { return ConversationID.SI_Spire3; }
+            if (id == EnumExt_Drought.MoonPostMark) { return ConversationID.MoonPostMark; }
+            return ConversationID.DEFAULT;
+        }
+
+        public enum ConversationID
+        {
+            DEFAULT = -1,
+            Moon_Pearl_MoonPearl,
+            Moon_Pearl_Drought1,
+            Moon_Pearl_Drought2,
+            Moon_Pearl_Drought3,
+            SI_Spire1,
+            SI_Spire2,
+            SI_Spire3,
+            MoonPostMark
+        };
     }
 
     public static class EnumExt_Drought
     {
-        public const int CreatureTemplateTypeExtended = 5;
+        /// <summary>
+        /// <see cref="EnumSwitch.CreatureTemplateTypeExtended"/>
+        /// </summary>
+
         public static CreatureTemplate.Type LightWorm;
         public static CreatureTemplate.Type CrossBat;
         /// <summary>
@@ -298,6 +375,7 @@ namespace Rain_World_Drought.Enums
         public static AbstractPhysicalObject.AbstractObjectType LargePiston;
         public static AbstractPhysicalObject.AbstractObjectType GiantPiston;
         public static AbstractPhysicalObject.AbstractObjectType LMOracleSwarmer;
+        public static AbstractPhysicalObject.AbstractObjectType MoonPearl;
 
         public static ProcessManager.ProcessID MessageScreen;
 
@@ -360,6 +438,67 @@ namespace Rain_World_Drought.Enums
         public static DreamsState.DreamID SRSDreamTraitor;
         public static DreamsState.DreamID SRSDreamMissonComplete;
 
+        public static MenuScene.SceneID Dream_Message;
+        // NEW LANDSCAPES
+        /// <summary>
+        /// Intake System
+        /// </summary>
+        public static MenuScene.SceneID Landscape_IS;
+        /// <summary>
+        /// Forest Sanctuary
+        /// </summary>
+        public static MenuScene.SceneID Landscape_FS;
+        /// <summary>
+        /// The Fragmented Exterior
+        /// </summary>
+        public static MenuScene.SceneID Landscape_MW;
+        /// <summary>
+        /// Looks To The Moon
+        /// </summary>
+        public static MenuScene.SceneID Landscape_LM;
+
+        public static Conversation.ID Moon_Pearl_MoonPearl;
+        public static Conversation.ID Moon_Pearl_Drought1;
+        public static Conversation.ID Moon_Pearl_Drought2;
+        public static Conversation.ID Moon_Pearl_Drought3;
+        public static Conversation.ID SI_Spire1;
+        public static Conversation.ID SI_Spire2;
+        public static Conversation.ID SI_Spire3;
+        public static Conversation.ID MoonPostMark;
+    }
+
+    /// <summary>
+    /// PlacedObjects, because these names are the duplicate of AbstractPhysicalObject.AbstractObjectType
+    /// </summary>
+    public static class EnumExt_DroughtPlaced
+    {
+        /// <summary>
+        /// Placed Object type for radios on the Spire
+        /// </summary>
+        public static PlacedObject.Type Radio;
+        // Placed Object type for different types of Pistons
+        public static PlacedObject.Type SmallPiston;
+        public static PlacedObject.Type LargePiston;
+        public static PlacedObject.Type GiantPiston;
+        public static PlacedObject.Type SmallPistonTopDeathMode;
+        public static PlacedObject.Type SmallPistonBotDeathMode;
+        public static PlacedObject.Type SmallPistonDeathMode;
+        public static PlacedObject.Type LargePistonTopDeathMode;
+        public static PlacedObject.Type LargePistonBotDeathMode;
+        public static PlacedObject.Type LargePistonDeathMode;
+        public static PlacedObject.Type GiantPistonTopDeathMode;
+        public static PlacedObject.Type GiantPistonBotDeathMode;
+        public static PlacedObject.Type GiantPistonDeathMode;
+        public static PlacedObject.Type GravityAmplifyer;
+        public static PlacedObject.Type ImprovementTrigger;
+        /// <summary>
+        /// New fruit
+        /// </summary>
+        public static PlacedObject.Type TreeFruit;
+
+        public static SLOracleBehaviorHasMark.MiscItemType LMOracleSwarmer;
+        public static SLOracleBehaviorHasMark.MiscItemType SSOracleSwarmer;
+
         /// <summary>
         /// Any of moons pearls
         /// </summary>
@@ -383,46 +522,6 @@ namespace Rain_World_Drought.Enums
         /// No Text
         /// </summary>
         public static DataPearl.AbstractDataPearl.DataPearlType WipedPearl;
-
-        public static MenuScene.SceneID Dream_Message;
-        // NEW LANDSCAPES
-        public static MenuScene.SceneID Landscape_IS; // Intake System
-        public static MenuScene.SceneID Landscape_FS; // Forest Sanctuary
-        public static MenuScene.SceneID Landscape_MW; // The Fragmented Exterior
-        public static MenuScene.SceneID Landscape_LM; // Looks To The Moon
-    }
-
-    /// <summary>
-    /// PlacedObjects, because these names are the duplicate of AbstractPhysicalObject.AbstractObjectType
-    /// </summary>
-    public static class EnumExt_DroughtPlaced
-    {
-        /// <summary>
-        /// Placed Object type for radios on the Spire
-        /// </summary>
-        public static PlacedObject.Type Radio; //
-        // Placed Object type for different types of Pistons
-        public static PlacedObject.Type SmallPiston;
-        public static PlacedObject.Type LargePiston;
-        public static PlacedObject.Type GiantPiston;
-        public static PlacedObject.Type SmallPistonTopDeathMode;
-        public static PlacedObject.Type SmallPistonBotDeathMode;
-        public static PlacedObject.Type SmallPistonDeathMode;
-        public static PlacedObject.Type LargePistonTopDeathMode;
-        public static PlacedObject.Type LargePistonBotDeathMode;
-        public static PlacedObject.Type LargePistonDeathMode;
-        public static PlacedObject.Type GiantPistonTopDeathMode;
-        public static PlacedObject.Type GiantPistonBotDeathMode;
-        public static PlacedObject.Type GiantPistonDeathMode;
-        public static PlacedObject.Type GravityAmplifyer;
-        public static PlacedObject.Type ImprovementTrigger;
-        /// <summary>
-        /// New fruit
-        /// </summary>
-        public static PlacedObject.Type TreeFruit;
-
-        public static SLOracleBehaviorHasMark.MiscItemType LMOracleSwarmer;
-        public static SLOracleBehaviorHasMark.MiscItemType SSOracleSwarmer;
     }
 
     /// <summary>
@@ -430,7 +529,10 @@ namespace Rain_World_Drought.Enums
     /// </summary>
     public static class EnumExt_Unlocks
     {
-        public const int SandboxUnlockIDExtend = 3;
+        /// <summary>
+        /// <see cref="EnumSwitch.SandboxUnlockIDExtend"/>
+        /// </summary>
+
         public static MultiplayerUnlocks.SandboxUnlockID WalkerBeast;
         public static MultiplayerUnlocks.SandboxUnlockID GreyLizard;
         public static MultiplayerUnlocks.SandboxUnlockID SeaDrake;

@@ -1,10 +1,11 @@
-﻿using System;
+﻿using RWCustom;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
-namespace Rain_World_Drought.Resources
+namespace Rain_World_Drought.Resource
 {
     internal static class FutileHK
     {
@@ -19,12 +20,13 @@ namespace Rain_World_Drought.Resources
 
         public static string RootFolderDirectory()
         {
-            string directory = System.Reflection.Assembly.GetExecutingAssembly().Location;
-            var pathParts = directory.Split(Path.DirectorySeparatorChar);
-            string newPath = "";
-            for (int i = 0; i < pathParts.Length - 3; i++)
-                newPath = newPath + pathParts[i] + Path.DirectorySeparatorChar;
-            return newPath;
+            //string directory = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            //var pathParts = directory.Split(Path.DirectorySeparatorChar);
+            //string newPath = "";
+            //for (int i = 0; i < pathParts.Length - 3; i++)
+            //{ newPath = newPath + pathParts[i] + Path.DirectorySeparatorChar; }
+            //return newPath;
+            return Custom.RootFolderDirectory();
         }
 
 #pragma warning disable IDE0060

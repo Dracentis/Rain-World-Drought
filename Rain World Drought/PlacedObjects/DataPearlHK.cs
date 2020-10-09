@@ -61,7 +61,7 @@ namespace Rain_World_Drought.PlacedObjects
 
         public static void ClearPearl(DataPearl self)
         {
-            (self.abstractPhysicalObject as DataPearl.AbstractDataPearl).dataPearlType = EnumExt_Drought.WipedPearl;
+            (self.abstractPhysicalObject as DataPearl.AbstractDataPearl).dataPearlType = EnumExt_DroughtPlaced.WipedPearl;
             self.color = new Color(0.01f, 0.01f, 0.01f);
             self.highlightColor = new Color(1f, 1f, 1f);
             self.glimmerWait = 40;

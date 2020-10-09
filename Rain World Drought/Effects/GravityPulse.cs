@@ -1,5 +1,5 @@
 ﻿using System;
-using RWCustom;
+using Rain_World_Drought.Enums;
 using UnityEngine;
 
 namespace Rain_World_Drought.Effects
@@ -46,11 +46,11 @@ namespace Rain_World_Drought.Effects
                 {
                     if (this.room.abstractRoom.name.Equals(this.room.game.cameras[j].room.abstractRoom.name))
                     {
-                        this.room.game.cameras[j].room.ScreenMovement(null, new Vector2(0f, 0f), delta * this.room.roomSettings.GetEffectAmount((RoomSettings.RoomEffect.Type)patch_RoomSettings.patch_RoomEffect.Type.GravityPulse));
+                        this.room.game.cameras[j].room.ScreenMovement(null, new Vector2(0f, 0f), delta * this.room.roomSettings.GetEffectAmount(EnumExt_Drought.GravityPulse));
                     }
                 }
             }
-            this.room.gravity = Mathf.Lerp(1f, state, this.room.roomSettings.GetEffectAmount((RoomSettings.RoomEffect.Type)patch_RoomSettings.patch_RoomEffect.Type.GravityPulse));
+            this.room.gravity = Mathf.Lerp(1f, state, this.room.roomSettings.GetEffectAmount(EnumExt_Drought.GravityPulse));
         }
 
         public bool active;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Rain_World_Drought.Enums;
+using System;
 using UnityEngine;
 
 namespace Rain_World_Drought.PlacedObjects
@@ -203,7 +204,7 @@ namespace Rain_World_Drought.PlacedObjects
 
         public class AbstractSmallPiston : AbstractPhysicalObject
         {
-            public AbstractSmallPiston(World world, PhysicalObject realizedObject, WorldCoordinate pos, EntityID ID, int originRoom, int placedIndex, bool db, bool dt) : base(world, (AbstractPhysicalObject.AbstractObjectType)patch_AbstractPhysicalObject.AbstractObjectType.SmallPiston, realizedObject, pos, ID)
+            public AbstractSmallPiston(World world, PhysicalObject realizedObject, WorldCoordinate pos, EntityID ID, int originRoom, int placedIndex, bool db, bool dt) : base(world, EnumExt_Drought.SmallPiston, realizedObject, pos, ID)
             {
                 this.originRoom = originRoom;
                 placedObjectIndex = placedIndex;

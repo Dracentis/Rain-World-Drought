@@ -1,4 +1,6 @@
 ﻿using System;
+using Rain_World_Drought.Enums;
+using Rain_World_Drought.Slugcat;
 using RWCustom;
 using UnityEngine;
 
@@ -45,7 +47,7 @@ namespace Rain_World_Drought.Effects
         public override void Update(bool eu)
         {
             base.Update(eu);
-            if (((this.room.game.session as StoryGameSession).saveState.miscWorldSaveData as patch_MiscWorldSaveData).isImproved || eu || !this.room.abstractRoom.name.Equals("IS_V04"))
+            if (MiscWorldSaveDroughtData.GetData((this.room.game.session as StoryGameSession).saveState.miscWorldSaveData).isImproved || eu || !this.room.abstractRoom.name.Equals("IS_V04"))
             {
                 return;
             }
@@ -53,7 +55,7 @@ namespace Rain_World_Drought.Effects
             {
                 for (int j = 0; j < this.room.roomSettings.placedObjects.Count; j++)
                 {
-                    if ((this.room.roomSettings.placedObjects[j].type) == ((PlacedObject.Type)patch_PlacedObject.Type.ImprovementTrigger))
+                    if (this.room.roomSettings.placedObjects[j].type == EnumExt_DroughtPlaced.ImprovementTrigger)
                     {
                         for (int k = 0; k < this.room.physicalObjects.Length; k++)
                         {
@@ -63,7 +65,7 @@ namespace Rain_World_Drought.Effects
                                 {
                                     if (this.room.physicalObjects[k][l].bodyChunks[m].pos.x > this.room.roomSettings.placedObjects[j].pos.x - 150f && this.room.physicalObjects[k][l].bodyChunks[m].pos.x < this.room.roomSettings.placedObjects[j].pos.x + 150f && this.room.physicalObjects[k][l].bodyChunks[m].pos.y > this.room.roomSettings.placedObjects[j].pos.y - 150f && this.room.physicalObjects[k][l].bodyChunks[m].pos.y < this.room.roomSettings.placedObjects[j].pos.y + 150f && this.room.physicalObjects[k][l] is Player && !(this.room.physicalObjects[k][l] as Creature).dead)
                                     {
-                                        Debug.Log("Improvment Activated");
+                                        Debug.Log("Drought) Improvment Activated");
                                         (this.room.physicalObjects[k][l] as Player).Stun(20);
                                         (this.room.physicalObjects[k][l] as Player).airInLungs = 1f;
                                         player = (this.room.physicalObjects[k][l] as Player);
@@ -93,7 +95,7 @@ namespace Rain_World_Drought.Effects
                             player.room.PlaySound(SoundID.Player_Coral_Circuit_Swim, 0f, 1f, 1f);
                             player.room.PlaySound(SoundID.Thunder_Close, 0f, 1f, 1f);
                             this.imStage = 3;
-                            ((player.room.game.session as StoryGameSession).saveState.miscWorldSaveData as patch_MiscWorldSaveData).isImproved = true;
+                            MiscWorldSaveDroughtData.GetData((this.room.game.session as StoryGameSession).saveState.miscWorldSaveData).isImproved = true;
                         }
                         break;
 

@@ -29,12 +29,13 @@ namespace Rain_World_Drought.Slugcat
         private static void InitiateSpritesHK(On.PlayerGraphics.orig_InitiateSprites orig, PlayerGraphics self,
             RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam)
         {
-            orig.Invoke(self, sLeaser, rCam);
-            if (!WandererSupplement.IsWanderer(self.player)) { return; }
             WandererSupplement sub = WandererSupplement.GetSub(self.player);
+            sub.cosmetics = new List<PlayerCosmetics>();
+            orig.Invoke(self, sLeaser, rCam);
+
+            if (!WandererSupplement.IsWanderer(self.player)) { return; }
             for (int i = 0; i < sLeaser.sprites.Length; i++) { sLeaser.sprites[i].RemoveFromContainer(); }
 
-            sub.cosmetics = new List<PlayerCosmetics>();
             sub.origSprites = sLeaser.sprites.Length;
             int num = sub.origSprites;
             sub.extraSprites = 0; sub.tailLength = 0f;

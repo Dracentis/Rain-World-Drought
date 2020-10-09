@@ -8,7 +8,7 @@ namespace Rain_World_Drought.Creatures
     {
         public static void Patch()
         {
-            MultiplayerUnlocks.CreaturesUnlocks += EnumExt_Unlocks.SandboxUnlockIDExtend;
+            MultiplayerUnlocks.CreaturesUnlocks += EnumSwitch.SandboxUnlockIDExtend;
             On.MultiplayerUnlocks.LevelLockID += new On.MultiplayerUnlocks.hook_LevelLockID(LevelLockIDHK);
             On.Menu.SandboxSettingsInterface.AddScoreButton += new On.Menu.SandboxSettingsInterface.hook_AddScoreButton(SandboxSIAddButtonHK);
             On.Menu.SandboxSettingsInterface.AddScoreButton_1 += new On.Menu.SandboxSettingsInterface.hook_AddScoreButton_1(SandboxSIAddButton1HK);
@@ -72,7 +72,7 @@ namespace Rain_World_Drought.Creatures
             orig.Invoke(self, menu, owner, overlayOwner);
             wait = false;
             int counter = 3; // clearall + 2 gap
-            int crits = MultiplayerUnlocks.CreaturesUnlocks - EnumExt_Unlocks.SandboxUnlockIDExtend;
+            int crits = MultiplayerUnlocks.CreaturesUnlocks - EnumSwitch.SandboxUnlockIDExtend;
             // Item
             for (int j = crits; j < crits + MultiplayerUnlocks.ItemsUnlocks; j++)
             {
@@ -98,7 +98,7 @@ namespace Rain_World_Drought.Creatures
                 }
             }
             // Drought Creatures
-            for (int j = crits + MultiplayerUnlocks.ItemsUnlocks; j < crits + MultiplayerUnlocks.ItemsUnlocks + EnumExt_Unlocks.SandboxUnlockIDExtend; j++)
+            for (int j = crits + MultiplayerUnlocks.ItemsUnlocks; j < crits + MultiplayerUnlocks.ItemsUnlocks + EnumSwitch.SandboxUnlockIDExtend; j++)
             {
                 if (self.unlocks.SandboxItemUnlocked((MultiplayerUnlocks.SandboxUnlockID)j))
                 {

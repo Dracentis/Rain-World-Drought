@@ -15,7 +15,7 @@ namespace Rain_World_Drought.Creatures
             On.Overseer.TryAddHologram += new On.Overseer.hook_TryAddHologram(TryAddHologramHK);
             On.OverseerAI.Update += new On.OverseerAI.hook_Update(AIUpdateHK);
             On.OverseerAbstractAI.ctor += new On.OverseerAbstractAI.hook_ctor(AbsAICtorHK);
-            IDetour hkMC = new Hook(typeof(Overseer).GetProperty("MainColor", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic).GetGetMethod(),
+            IDetour hkMC = new Hook(typeof(OverseerGraphics).GetProperty("MainColor", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic).GetGetMethod(),
                 typeof(OverseerHK).GetMethod("MainColorHK", BindingFlags.Static | BindingFlags.Public));
         }
 

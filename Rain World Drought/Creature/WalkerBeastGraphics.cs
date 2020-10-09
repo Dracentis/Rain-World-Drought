@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Rain_World_Drought.Slugcat;
 using RWCustom;
 using UnityEngine;
 
@@ -256,7 +257,7 @@ namespace Rain_World_Drought.Creatures
             }
             for (int k = internalContainerObjects.Count - 1; k >= 0; k--)
             {
-                if (!(internalContainerObjects[k].obj is PlayerGraphics) || ((internalContainerObjects[k].obj as PlayerGraphics).owner as Player).playerInAntlers == null || ((internalContainerObjects[k].obj as PlayerGraphics).owner as patch_Player).playerInAnt.walkerBeast != WalkerBeast)
+                if (!(internalContainerObjects[k].obj is PlayerGraphics) || ((internalContainerObjects[k].obj as PlayerGraphics).owner as Player).playerInAntlers == null || WandererSupplement.GetSub((internalContainerObjects[k].obj as PlayerGraphics).player).playerInAnt.walkerBeast != WalkerBeast)
                 {
                     ReleaseSpecificInternallyContainedObjectSprites(k);
                 }

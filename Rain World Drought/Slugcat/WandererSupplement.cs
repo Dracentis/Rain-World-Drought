@@ -27,6 +27,7 @@ namespace Rain_World_Drought.Slugcat
         public readonly Player self;
 
         private static WandererSupplement[] fields = new WandererSupplement[4];
+        private static Dictionary<Player, WandererSupplement> ghostFields = new Dictionary<Player, WandererSupplement>();
 
         public static bool IsWanderer(Player self)
         {
@@ -35,8 +36,18 @@ namespace Rain_World_Drought.Slugcat
 
         public static WandererSupplement GetSub(Player self)
         {
-            if (fields[self.playerState.playerNumber] == null) { CreateSub(self); }
-            return fields[self.playerState.playerNumber];
+            if (self.playerState.isGhost)
+            { // for ending
+                if (ghostFields.TryGetValue(self, out WandererSupplement sub)) { return sub; }
+                WandererSupplement newSub = new WandererSupplement(self);
+                ghostFields.Add(self, newSub);
+                return newSub;
+            }
+            else
+            {
+                if (fields[self.playerState.playerNumber] == null) { CreateSub(self); }
+                return fields[self.playerState.playerNumber];
+            }
         }
 
         private static void CreateSub(Player self)
@@ -47,7 +58,7 @@ namespace Rain_World_Drought.Slugcat
         }
 
         // Wanderer replaces orig slugcat: this can be changed with enumext but
-        public const int SlugcatCharacter = 1;
+        public const int SlugcatCharacter = 0;
         public const int StoryCharacter = 0;
 
         public bool bashing;

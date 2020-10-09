@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Rain_World_Drought.Enums;
+using System;
 using UnityEngine;
 
 namespace Rain_World_Drought.Effects
@@ -8,7 +9,7 @@ namespace Rain_World_Drought.Effects
         public DrainEffect(Room room)
         {
             this.room = room;
-            room.roomSettings.GetEffectAmount((RoomSettings.RoomEffect.Type)patch_RoomSettings.patch_RoomEffect.Type.Drain);
+            room.roomSettings.GetEffectAmount(EnumExt_Drought.Drain);
         }
 
         public override void Update(bool eu)
@@ -26,7 +27,7 @@ namespace Rain_World_Drought.Effects
                 }
                 return;
             }
-            float effectAmount = room.roomSettings.GetEffectAmount((RoomSettings.RoomEffect.Type)patch_RoomSettings.patch_RoomEffect.Type.Drain);
+            // float effectAmount = room.roomSettings.GetEffectAmount(EnumExt_Drought.Drain);
             float num2 = (float)room.world.rainCycle.timer % 2500f / 2500f;
             float from = 0f;
             if (room.world != null & room.world.region.name != null & room.world.region.name.Equals("SL"))

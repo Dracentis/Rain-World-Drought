@@ -5,6 +5,7 @@ using System.Text;
 using UnityEngine;
 using RWCustom;
 using MonoMod;
+using Rain_World_Drought.Enums;
 
 namespace Rain_World_Drought.Creatures
 {
@@ -163,9 +164,9 @@ namespace Rain_World_Drought.Creatures
     {
         public AbstractLightWorm(World world, CreatureTemplate creatureTemplate, Creature realizedCreature, WorldCoordinate pos, EntityID ID) : base(world, creatureTemplate, realizedCreature, pos, ID)
         {
-            if ((int)this.creatureTemplate.type != (int)patch_CreatureTemplate.Type.LightWorm)
+            if (this.creatureTemplate.type != EnumExt_Drought.LightWorm)
             {
-                this.creatureTemplate = StaticWorld.creatureTemplates[(int)patch_CreatureTemplate.Type.LightWorm] as patch_CreatureTemplate;
+                this.creatureTemplate = StaticWorld.creatureTemplates[(int)EnumExt_Drought.LightWorm];
             }
             this.creatureTemplate.name = "LightWorm";
         }

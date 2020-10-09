@@ -368,7 +368,7 @@ namespace Rain_World_Drought.Slugcat
             }
             if (patchedAirInLungs > 0f) { self.airInLungs = Mathf.Max(self.airInLungs, 0.2f); } // prevents drowning early
             orig.Invoke(self);
-            if (patchedAirInLungs > 0f) { self.airInLungs = patchedAirInLungs; }
+            if (patchedAirInLungs > self.airInLungs) { self.airInLungs = patchedAirInLungs; }
         }
 
         private static void VoidSeaTreatmentHK(On.VoidSea.VoidSeaScene.orig_VoidSeaTreatment orig, VoidSeaScene self, Player player, float swimSpeed)

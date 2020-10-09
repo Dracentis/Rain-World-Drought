@@ -9,7 +9,7 @@ namespace Rain_World_Drought.OverWorld
         public static void Patch()
         {
             On.RainCycle.ctor += new On.RainCycle.hook_ctor(CtorHK);
-            IDetour hkLCBOR = new Hook(typeof(RainCycle).GetProperty("LightChangeBecauseOfRain", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic).GetGetMethod(),
+            IDetour hkLCBOR = new Hook(typeof(RainCycle).GetProperty("LightChangeBecauseOfRain", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic).GetGetMethod(true),
                 typeof(RainCycleHK).GetMethod("LightChangeBecauseOfRainHK", BindingFlags.Static | BindingFlags.Public));
             IDetour hkRGO = new Hook(typeof(RainCycle).GetProperty("RainGameOver", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic).GetGetMethod(),
                 typeof(RainCycleHK).GetMethod("RainGameOverHK", BindingFlags.Static | BindingFlags.Public));

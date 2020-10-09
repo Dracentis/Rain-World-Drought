@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using CoralBrain;
 using HUD;
 using Music;
+using Rain_World_Drought.Slugcat;
 using RWCustom;
 using UnityEngine;
 
@@ -39,7 +40,7 @@ namespace Rain_World_Drought.OverWorld
             {
                 if (oracle.room.game.session is StoryGameSession)
                 {
-                    return ((oracle.room.game.session as StoryGameSession).saveState.miscWorldSaveData as patch_MiscWorldSaveData).FPOracleState;
+                    return SaveStateHK.GetFPState((oracle.room.game.session as StoryGameSession).saveState.miscWorldSaveData);
                 }
                 if (DEBUGSTATE == null)
                 {

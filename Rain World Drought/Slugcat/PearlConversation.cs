@@ -2,6 +2,7 @@
 using System.Text;
 using System.Text.RegularExpressions;
 using HUD;
+using Rain_World_Drought.Enums;
 using UnityEngine;
 
 namespace Rain_World_Drought.Slugcat
@@ -161,87 +162,88 @@ namespace Rain_World_Drought.Slugcat
                     {
                         Debug.LogError("Pearl Conversation Started.");
                         Conversation.ID id = Conversation.ID.None;
-                        switch ((item as DataPearl).AbstractPearl.dataPearlType)
+                        switch (EnumSwitch.GetAbstractDataPearlType((item as DataPearl).AbstractPearl.dataPearlType))
                         {
-                            case DataPearl.AbstractDataPearl.DataPearlType.CC:
-                                this.player.room.game.rainWorld.progression.currentSaveState.miscWorldSaveData.moonRevived = true;
-                                id = Conversation.ID.Moon_Pearl_CC;
+                            default:
+                            case EnumSwitch.AbstractDataPearlType.DEFAULT:
+                                switch ((item as DataPearl).AbstractPearl.dataPearlType)
+                                {
+                                    case DataPearl.AbstractDataPearl.DataPearlType.CC:
+                                        this.player.room.game.rainWorld.progression.currentSaveState.miscWorldSaveData.moonRevived = true;
+                                        id = Conversation.ID.Moon_Pearl_CC;
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.SI_west:
+                                        id = Conversation.ID.Moon_Pearl_SI_west;
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.SI_top:
+                                        id = Conversation.ID.Moon_Pearl_SI_top;
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.LF_west:
+                                        id = Conversation.ID.Moon_Pearl_LF_west;
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.LF_bottom:
+                                        id = Conversation.ID.Moon_Pearl_LF_bottom;
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.HI:
+                                        id = Conversation.ID.Moon_Pearl_HI;
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.SH:
+                                        id = Conversation.ID.Moon_Pearl_SH;
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.DS:
+                                        id = Conversation.ID.Moon_Pearl_DS;
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.SB_filtration:
+                                        id = Conversation.ID.Moon_Pearl_SB_filtration;
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.SB_ravine:
+                                        id = Conversation.ID.Moon_Pearl_SB_ravine;
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.GW:
+                                        id = Conversation.ID.Moon_Pearl_GW;
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.SL_bridge:
+                                        id = Conversation.ID.Moon_Pearl_SL_bridge;
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.SL_moon:
+                                        id = Conversation.ID.Moon_Pearl_SL_moon;
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.SU:
+                                        id = Conversation.ID.Moon_Pearl_SU;
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.UW:
+                                        id = Conversation.ID.Moon_Pearl_UW;
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.SL_chimney:
+                                        id = Conversation.ID.Moon_Pearl_SL_chimney;
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.Red_stomach:
+                                        id = Conversation.ID.Moon_Pearl_Red_stomach;
+                                        break;
+                                }
                                 break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.SI_west:
-                                id = Conversation.ID.Moon_Pearl_SI_west;
-                                break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.SI_top:
-                                id = Conversation.ID.Moon_Pearl_SI_top;
-                                break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.LF_west:
-                                id = Conversation.ID.Moon_Pearl_LF_west;
-                                break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.LF_bottom:
-                                id = Conversation.ID.Moon_Pearl_LF_bottom;
-                                break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.HI:
-                                id = Conversation.ID.Moon_Pearl_HI;
-                                break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.SH:
-                                id = Conversation.ID.Moon_Pearl_SH;
-                                break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.DS:
-                                id = Conversation.ID.Moon_Pearl_DS;
-                                break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.SB_filtration:
-                                id = Conversation.ID.Moon_Pearl_SB_filtration;
-                                break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.SB_ravine:
-                                id = Conversation.ID.Moon_Pearl_SB_ravine;
-                                break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.GW:
-                                id = Conversation.ID.Moon_Pearl_GW;
-                                break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.SL_bridge:
-                                id = Conversation.ID.Moon_Pearl_SL_bridge;
-                                break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.SL_moon:
-                                id = Conversation.ID.Moon_Pearl_SL_moon;
-                                break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.SU:
-                                id = Conversation.ID.Moon_Pearl_SU;
-                                break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.UW:
-                                id = Conversation.ID.Moon_Pearl_UW;
-                                break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.SL_chimney:
-                                id = Conversation.ID.Moon_Pearl_SL_chimney;
-                                break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.Red_stomach:
-                                id = Conversation.ID.Moon_Pearl_Red_stomach;
-                                break;
-                            case (DataPearl.AbstractDataPearl.DataPearlType)patch_DataPearl.patch_AbstractDataPearl.DataPearlType.MoonPearl:
-                                id = (Conversation.ID)patch_Conversation.ID.Moon_Pearl_MoonPearl;
-                                break;
-                            case (DataPearl.AbstractDataPearl.DataPearlType)patch_DataPearl.patch_AbstractDataPearl.DataPearlType.DroughtPearl1:
-                                id = (Conversation.ID)patch_Conversation.ID.Moon_Pearl_Drought1;
-                                break;
-                            case (DataPearl.AbstractDataPearl.DataPearlType)patch_DataPearl.patch_AbstractDataPearl.DataPearlType.DroughtPearl2:
-                                id = (Conversation.ID)patch_Conversation.ID.Moon_Pearl_Drought2;
-                                break;
-                            case (DataPearl.AbstractDataPearl.DataPearlType)patch_DataPearl.patch_AbstractDataPearl.DataPearlType.DroughtPearl3:
-                                id = (Conversation.ID)patch_Conversation.ID.Moon_Pearl_Drought3;
-                                break;
-                            case (DataPearl.AbstractDataPearl.DataPearlType)patch_DataPearl.patch_AbstractDataPearl.DataPearlType.SI_Spire1:
-                                id = (Conversation.ID)patch_Conversation.ID.SI_Spire1;
-                                break;
-                            case (DataPearl.AbstractDataPearl.DataPearlType)patch_DataPearl.patch_AbstractDataPearl.DataPearlType.SI_Spire2:
-                                id = (Conversation.ID)patch_Conversation.ID.SI_Spire2;
-                                break;
-                            case (DataPearl.AbstractDataPearl.DataPearlType)patch_DataPearl.patch_AbstractDataPearl.DataPearlType.SI_Spire3:
-                                id = (Conversation.ID)patch_Conversation.ID.SI_Spire3;
-                                break;
+
+                            case EnumSwitch.AbstractDataPearlType.MoonPearl:
+                                id = EnumExt_Drought.Moon_Pearl_MoonPearl; break;
+                            case EnumSwitch.AbstractDataPearlType.DroughtPearl1:
+                                id = EnumExt_Drought.Moon_Pearl_Drought1; break;
+                            case EnumSwitch.AbstractDataPearlType.DroughtPearl2:
+                                id = EnumExt_Drought.Moon_Pearl_Drought2; break;
+                            case EnumSwitch.AbstractDataPearlType.DroughtPearl3:
+                                id = EnumExt_Drought.Moon_Pearl_Drought3; break;
+                            case EnumSwitch.AbstractDataPearlType.SI_Spire1:
+                                id = EnumExt_Drought.SI_Spire1; break;
+                            case EnumSwitch.AbstractDataPearlType.SI_Spire2:
+                                id = EnumExt_Drought.SI_Spire2; break;
+                            case EnumSwitch.AbstractDataPearlType.SI_Spire3:
+                                id = EnumExt_Drought.SI_Spire3; break;
                         }
+
                         currentConversation = new PearlConversation.MoonConversation(id, this);
                         talking = true;
                         State.significantPearls[(int)(item as DataPearl).AbstractPearl.dataPearlType] = true;
                         State.totalPearlsBrought++;
-                        Debug.LogError("pearls brought up: " + State.totalPearlsBrought);
+                        Debug.LogError("Drought) Total pearls brought up: " + State.totalPearlsBrought);
                     }
                     State.totalItemsBrought++;
                     State.AddItemToAlreadyTalkedAbout(item.abstractPhysicalObject.ID);
@@ -329,128 +331,135 @@ namespace Rain_World_Drought.Slugcat
             public override void AddEvents()
             {
                 Debug.Log(id.ToString() + " " + State.neuronsLeft);
-                switch (id)
+                switch (EnumSwitch.GetConversationID(id))
                 {
-                    case ID.Moon_Pearl_Misc:
-                        PearlIntro();
-                        MiscPearl(false);
+                    default:
+                    case EnumSwitch.ConversationID.DEFAULT:
+                        switch (id)
+                        {
+                            case ID.Moon_Pearl_Misc:
+                                PearlIntro();
+                                MiscPearl(false);
+                                break;
+                            case ID.MoonRecieveSwarmer:
+                                events.Add(new Conversation.TextEvent(this, 50, DroughtMod.Translate("You're reaching the end of your journey, little friend."), 40));
+                                events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Thank you, for helping me."), 10));
+                                break;
+                            case ID.Moon_Pearl_Misc2:
+                                PearlIntro();
+                                MiscPearl(true);
+                                break;
+                            case ID.Moon_Pebbles_Pearl:
+                                PebblesPearl();
+                                break;
+                            case ID.Moon_Pearl_CC:
+                                State.InfluenceLike(1f);
+                                LoadEventsFromFile(7);
+                                break;
+                            case ID.Moon_Pearl_SI_west:
+                                PearlIntro();
+                                LoadEventsFromFile(20);
+                                break;
+                            case ID.Moon_Pearl_SI_top:
+                                PearlIntro();
+                                LoadEventsFromFile(21);
+                                break;
+                            case ID.Moon_Pearl_LF_west:
+                                PearlIntro();
+                                LoadEventsFromFile(10);
+                                break;
+                            case ID.Moon_Pearl_LF_bottom:
+                                PearlIntro();
+                                LoadEventsFromFile(11);
+                                break;
+                            case ID.Moon_Pearl_HI:
+                                PearlIntro();
+                                LoadEventsFromFile(12);
+                                break;
+                            case ID.Moon_Pearl_SH:
+                                PearlIntro();
+                                LoadEventsFromFile(13);
+                                break;
+                            case ID.Moon_Pearl_DS:
+                                PearlIntro();
+                                LoadEventsFromFile(14);
+                                break;
+                            case ID.Moon_Pearl_SB_filtration:
+                                PearlIntro();
+                                LoadEventsFromFile(15);
+                                break;
+                            case ID.Moon_Pearl_GW:
+                                PearlIntro();
+                                LoadEventsFromFile(16);
+                                break;
+                            case ID.Moon_Pearl_SL_bridge:
+                                PearlIntro();
+                                LoadEventsFromFile(17);
+                                break;
+                            case ID.Moon_Pearl_SL_moon:
+                                PearlIntro();
+                                LoadEventsFromFile(18);
+                                break;
+                            case ID.Moon_Pearl_SU:
+                                PearlIntro();
+                                LoadEventsFromFile(41);
+                                break;
+                            case ID.Moon_Pearl_SB_ravine:
+                                PearlIntro();
+                                LoadEventsFromFile(43);
+                                break;
+                            case ID.Moon_Pearl_UW:
+                                PearlIntro();
+                                LoadEventsFromFile(42);
+                                break;
+                            case ID.Moon_Pearl_SL_chimney:
+                                PearlIntro();
+                                LoadEventsFromFile(54);
+                                break;
+                        }
                         break;
-                    case ID.MoonRecieveSwarmer:
-                        events.Add(new Conversation.TextEvent(this, 50, Translate("You're reaching the end of your journey, little friend."), 40));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("Thank you, for helping me."), 10));
+
+                    case EnumSwitch.ConversationID.Moon_Pearl_Drought1:// IS
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("It's an old pearl related to our local intake system."), 3));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Specifically, it details the designed microorganisms used in the main reservoir."), 5));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("The complete report is thousands of entries long, discussing everything from the <LINE>central gravity-amplifier-style intake solution to the interactions with the developed fauna."), 18));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I\'ll give you the gist of it."), 2));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Back when the major cities were closer to the surface, filtered water reservoirs<LINE>were created as bioreactors to purify water and remove unwanted contaminants."), 16));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("The organisms used in these tanks were not very well controlled and many different<LINE>unwanted strains of filter tissue corrupted early tanks."), 14));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Some strains were even observed blending with the natural fauna, creating extremely<LINE>resilient organisms of a very large scale."), 12));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I hope you didn’t go down there to get this, I’m not sure how the tank would react to your biology."), 10));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I suppose the mark Suns\' gave you would help."), 3));
                         break;
-                    case ID.Moon_Pearl_Misc2:
-                        PearlIntro();
-                        MiscPearl(true);
+                    case EnumSwitch.ConversationID.Moon_Pearl_Drought2:// FS
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("This is..."), 3));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("..."), 5));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("...It has data written on it to be sure, but the format is nothing like I’ve ever seen before."), 6));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("It bears some resemblance to the creature logs created by the overseers."), 5));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Most iterators simply ignore it, as it has little importance towards the Task."), 6));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I occasionally look back on those files, as it reminds me of the time back when I worked on the<LINE>tasks of an entire lively city. It was a much more complex time; I worked on everything<LINE>from coordinating farming systems to individuals’ problems or inquiries. "), 20));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I do miss the days when they visited my chamber."), 3));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Anyways, back to the pearl. It appears that someone used that data format as the basis to create a<LINE>new log of individual creatures’ karmic properties and social relationships."), 10));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("There is a section written in internal language as well. I can try my best to translate it."), 6));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("\"...organizations of the fourth axiom of karmic staging, It can be ascertained that the quintessence of<LINE>an organic body can never be entirely sequestered from the continuous flow of related<LINE>materials. I propose a contemporary project to aggregate coordinated karmic<LINE>networking\" or perhaps... \"encompassment of an overall site\""), 25));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I am sorry little creature, are you understanding this?"), 3));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I would say this is the remnants or perhaps an older log of a far-reaching project by one of the iterators in the local group."), 10));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("It is hard to say which iterator, although some of the internal language suggests a slightly cynical<LINE>or humorous tone, which could narrow the possiblities."), 10));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Without knowing where it came from, I’m afraid I can’t tell you much more."), 3));
                         break;
-                    case ID.Moon_Pebbles_Pearl:
-                        PebblesPearl();
+                    case EnumSwitch.ConversationID.Moon_Pearl_Drought3:// MW
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Oh, wow! I didn\'t think I would ever see this again!"), 3));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("It is an old qualia that I recorded from one of the sky-sail journeys long ago."), 4));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I lost it back when one of my capacitor coils burst a few thousand cycle ago. Secondary systems and my biological<LINE>components did their best to bring it back online, but the damage shut down a few disruptors<LINE>leading to some more serious collapses."), 13));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I do not remember much of the subject, but this pearl always held an importance to me."), 5));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Thank You, <PlayerName>"), 0));
                         break;
-                    case ID.Moon_Pearl_CC:
-                        State.InfluenceLike(1f);
-                        LoadEventsFromFile(7);
-                        break;
-                    case ID.Moon_Pearl_SI_west:
-                        PearlIntro();
-                        LoadEventsFromFile(20);
-                        break;
-                    case ID.Moon_Pearl_SI_top:
-                        PearlIntro();
-                        LoadEventsFromFile(21);
-                        break;
-                    case ID.Moon_Pearl_LF_west:
-                        PearlIntro();
-                        LoadEventsFromFile(10);
-                        break;
-                    case ID.Moon_Pearl_LF_bottom:
-                        PearlIntro();
-                        LoadEventsFromFile(11);
-                        break;
-                    case ID.Moon_Pearl_HI:
-                        PearlIntro();
-                        LoadEventsFromFile(12);
-                        break;
-                    case ID.Moon_Pearl_SH:
-                        PearlIntro();
-                        LoadEventsFromFile(13);
-                        break;
-                    case ID.Moon_Pearl_DS:
-                        PearlIntro();
-                        LoadEventsFromFile(14);
-                        break;
-                    case ID.Moon_Pearl_SB_filtration:
-                        PearlIntro();
-                        LoadEventsFromFile(15);
-                        break;
-                    case ID.Moon_Pearl_GW:
-                        PearlIntro();
-                        LoadEventsFromFile(16);
-                        break;
-                    case ID.Moon_Pearl_SL_bridge:
-                        PearlIntro();
-                        LoadEventsFromFile(17);
-                        break;
-                    case ID.Moon_Pearl_SL_moon:
-                        PearlIntro();
-                        LoadEventsFromFile(18);
-                        break;
-                    case ID.Moon_Pearl_SU:
-                        PearlIntro();
-                        LoadEventsFromFile(41);
-                        break;
-                    case ID.Moon_Pearl_SB_ravine:
-                        PearlIntro();
-                        LoadEventsFromFile(43);
-                        break;
-                    case ID.Moon_Pearl_UW:
-                        PearlIntro();
-                        LoadEventsFromFile(42);
-                        break;
-                    case ID.Moon_Pearl_SL_chimney:
-                        PearlIntro();
-                        LoadEventsFromFile(54);
-                        break;
-                    case (ID)patch_Conversation.ID.Moon_Pearl_Drought1:// IS
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("It's an old pearl related to our local intake system."), 3));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("Specifically, it details the designed microorganisms used in the main reservoir."), 5));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("The complete report is thousands of entries long, discussing everything from the <LINE>central gravity-amplifier-style intake solution to the interactions with the developed fauna."), 18));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("I\'ll give you the gist of it."), 2));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("Back when the major cities were closer to the surface, filtered water reservoirs<LINE>were created as bioreactors to purify water and remove unwanted contaminants."), 16));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("The organisms used in these tanks were not very well controlled and many different<LINE>unwanted strains of filter tissue corrupted early tanks."), 14));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("Some strains were even observed blending with the natural fauna, creating extremely<LINE>resilient organisms of a very large scale."), 12));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("I hope you didn’t go down there to get this, I’m not sure how the tank would react to your biology."), 10));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("I suppose the mark Suns\' gave you would help."), 3));
-                        break;
-                    case (ID)patch_Conversation.ID.Moon_Pearl_Drought2:// FS
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("This is..."), 3));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("..."), 5));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("...It has data written on it to be sure, but the format is nothing like I’ve ever seen before."), 6));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("It bears some resemblance to the creature logs created by the overseers."), 5));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("Most iterators simply ignore it, as it has little importance towards the Task."), 6));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("I occasionally look back on those files, as it reminds me of the time back when I worked on the<LINE>tasks of an entire lively city. It was a much more complex time; I worked on everything<LINE>from coordinating farming systems to individuals’ problems or inquiries. "), 20));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("I do miss the days when they visited my chamber."), 3));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("Anyways, back to the pearl. It appears that someone used that data format as the basis to create a<LINE>new log of individual creatures’ karmic properties and social relationships."), 10));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("There is a section written in internal language as well. I can try my best to translate it."), 6));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("\"...organizations of the fourth axiom of karmic staging, It can be ascertained that the quintessence of<LINE>an organic body can never be entirely sequestered from the continuous flow of related<LINE>materials. I propose a contemporary project to aggregate coordinated karmic<LINE>networking\" or perhaps... \"encompassment of an overall site\""), 25));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("I am sorry little creature, are you understanding this?"), 3));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("I would say this is the remnants or perhaps an older log of a far-reaching project by one of the iterators in the local group."), 10));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("It is hard to say which iterator, although some of the internal language suggests a slightly cynical<LINE>or humorous tone, which could narrow the possiblities."), 10));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("Without knowing where it came from, I’m afraid I can’t tell you much more."), 3));
-                        break;
-                    case (ID)patch_Conversation.ID.Moon_Pearl_Drought3:// MW
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("Oh, wow! I didn\'t think I would ever see this again!"), 3));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("It is an old qualia that I recorded from one of the sky-sail journeys long ago."), 4));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("I lost it back when one of my capacitor coils burst a few thousand cycle ago. Secondary systems and my biological<LINE>components did their best to bring it back online, but the damage shut down a few disruptors<LINE>leading to some more serious collapses."), 13));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("I do not remember much of the subject, but this pearl always held an importance to me."), 5));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("Thank You, <PlayerName>"), 0));
-                        break;
-                    case (ID)patch_Conversation.ID.SI_Spire1:
+                    case EnumSwitch.ConversationID.SI_Spire1:
                         LoadEventsFromFile(22);
                         break;
-                    case (ID)patch_Conversation.ID.SI_Spire2:
+                    case EnumSwitch.ConversationID.SI_Spire2:
                         LoadEventsFromFile(23);
                         break;
-                    case (ID)patch_Conversation.ID.SI_Spire3:
+                    case EnumSwitch.ConversationID.SI_Spire3:
                         LoadEventsFromFile(24);
                         break;
                 }

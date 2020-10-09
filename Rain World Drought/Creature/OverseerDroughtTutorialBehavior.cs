@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using OverseerHolograms;
+using Rain_World_Drought.Slugcat;
 using RWCustom;
 using ScavTradeInstruction;
 using UnityEngine;
@@ -9,14 +10,11 @@ namespace Rain_World_Drought.Creatures
 {
     public class OverseerDroughtTutorialBehavior : AIModule
     {
-        // Token: 0x060024B8 RID: 9400 RVA: 0x00239F20 File Offset: 0x00238120
         public OverseerDroughtTutorialBehavior(OverseerAI AI) : base(AI)
         {
             this.encounterCounter = 40;
         }
 
-        // Token: 0x170005CE RID: 1486
-        // (get) Token: 0x060024B9 RID: 9401 RVA: 0x0022DE0F File Offset: 0x0022C00F
         public OverseerAI overseerAI
         {
             get
@@ -25,8 +23,6 @@ namespace Rain_World_Drought.Creatures
             }
         }
 
-        // Token: 0x170005CF RID: 1487
-        // (get) Token: 0x060024BA RID: 9402 RVA: 0x00239F5D File Offset: 0x0023815D
         public Overseer overseer
         {
             get
@@ -35,8 +31,6 @@ namespace Rain_World_Drought.Creatures
             }
         }
 
-        // Token: 0x170005D0 RID: 1488
-        // (get) Token: 0x060024BB RID: 9403 RVA: 0x00239F6F File Offset: 0x0023816F
         public Room room
         {
             get
@@ -45,8 +39,6 @@ namespace Rain_World_Drought.Creatures
             }
         }
 
-        // Token: 0x170005D1 RID: 1489
-        // (get) Token: 0x060024BC RID: 9404 RVA: 0x00239F84 File Offset: 0x00238184
         public Player player
         {
             get
@@ -55,7 +47,6 @@ namespace Rain_World_Drought.Creatures
             }
         }
 
-        // Token: 0x060024BD RID: 9405 RVA: 0x00239FB4 File Offset: 0x002381B4
         public override void Update()
         {
             if (this.room == null || this.playerHasMadeSuperJump)
@@ -108,8 +99,8 @@ namespace Rain_World_Drought.Creatures
                 case "FS_A01":
                     if (!displayBashInstructions)
                     {
-                        this.TutorialText("While in the air, hold GRAB and then press JUMP to start boosting.", 200, 500, true);
-                        this.TutorialText("Then hold a DIRECTION and press JUMP to finish the boost.", 0, 270, true);
+                        this.TutorialText(DroughtMod.Translate("While in the air, hold GRAB and then press JUMP to start boosting."), 200, 500, true);
+                        this.TutorialText(DroughtMod.Translate("Then hold a DIRECTION and press JUMP to finish the boost."), 0, 270, true);
                         this.overseer.TryAddHologram(OverseerHologram.Message.SuperJump, this.player, float.MaxValue);
                         displayBashInstructions = true;
                     }
@@ -123,8 +114,8 @@ namespace Rain_World_Drought.Creatures
                     }
                     if (this.superJumpTrouble > 2000)
                     {
-                        this.TutorialText("While in the air, hold GRAB and then press JUMP to start boosting.", 800, 500, true);
-                        this.TutorialText("Then hold a DIRECTION and press JUMP to finish the boost.", 0, 270, true);
+                        this.TutorialText(DroughtMod.Translate("While in the air, hold GRAB and then press JUMP to start boosting."), 800, 500, true);
+                        this.TutorialText(DroughtMod.Translate("Then hold a DIRECTION and press JUMP to finish the boost."), 0, 270, true);
                         this.overseer.TryAddHologram(OverseerHologram.Message.SuperJump, this.player, float.MaxValue);
                         this.superJumpTrouble = 0;
                         this.encounterCounter++;
@@ -132,9 +123,9 @@ namespace Rain_World_Drought.Creatures
                     if (this.player.mainBodyChunk.pos.x > jumpThreshold)
                     {
                         this.playerHasMadeSuperJump = true;
-                        Debug.Log("Yay! Superjump done!");
+                        Debug.Log("Drought) Yay! Superjump done!");
                     }
-                        (this.player as patch_Player).uses = 30;
+                    WandererSupplement.GetSub(this.player).uses = 30;
                     break;
             }
         }
@@ -170,7 +161,7 @@ namespace Rain_World_Drought.Creatures
                     switch (message)
                     {
                         case OverseerHologram.Message.SuperJump:
-                            this.controller = new OverseerDroughtTutorialBehavior.SuperJump(this, (overseer.AI as patch_OverseerAI).droughtTutorialBehavior, true);
+                            this.controller = new OverseerDroughtTutorialBehavior.SuperJump(this, OverseerHK.droughtTutorialBehavior, true);
                             break;
                     }
                 }
@@ -256,13 +247,11 @@ namespace Rain_World_Drought.Creatures
 
         public class SuperJump : OverseerDroughtTutorialBehavior.InputInstruction.InputInstructionController
         {
-            // Token: 0x060024D7 RID: 9431 RVA: 0x0023BD3B File Offset: 0x00239F3B
             public SuperJump(OverseerDroughtTutorialBehavior.InputInstruction instructionHologram, OverseerDroughtTutorialBehavior tutBehavior, bool inTuturialSection) : base(instructionHologram, tutBehavior)
             {
                 this.inTuturialSection = inTuturialSection;
             }
 
-            // Token: 0x060024D8 RID: 9432 RVA: 0x0023BD6C File Offset: 0x00239F6C
             public override void Update()
             {
                 base.Update();
@@ -283,18 +272,16 @@ namespace Rain_World_Drought.Creatures
                 }
                 if (this.inTuturialSection)
                 {
-                    //this.instructionHologram.closeToPos = new Vector2(480f, 540f);
                     this.instructionHologram.stillRelevant = (this.instructionHologram.stillRelevant && !this.tutBehavior.playerHasMadeSuperJump && OverseerDroughtTutorialBehavior.SuperJump.InZone(base.player.bodyChunks[1].pos));
                     if (base.player.bodyChunks[1].pos.x > jumpThreshold)
                     {
-                        Debug.Log("Yay! Superjump done!");
+                        Debug.Log("Drought) Yay! Superjump done!");
                         this.tutBehavior.playerHasMadeSuperJump = true;
                     }
                 }
                 this.instructionHologram.direction = new IntVector2(1, 1);
             }
 
-            // Token: 0x060024D9 RID: 9433 RVA: 0x0023C420 File Offset: 0x0023A620
             public static bool InZone(Vector2 testPos)
             {
                 return testPos.x < jumpThreshold;
@@ -305,7 +292,6 @@ namespace Rain_World_Drought.Creatures
 
         public abstract class ButtonOrKey : OverseerHologram.HologramPart
         {
-            // Token: 0x060024DA RID: 9434 RVA: 0x0023C430 File Offset: 0x0023A630
             public ButtonOrKey(OverseerHologram hologram, int firstSprite) : base(hologram, firstSprite)
             {
                 this.timeUp = 10;
@@ -314,8 +300,6 @@ namespace Rain_World_Drought.Creatures
                 this.totalSprites++;
             }
 
-            // Token: 0x170005D6 RID: 1494
-            // (get) Token: 0x060024DB RID: 9435 RVA: 0x0023C470 File Offset: 0x0023A670
             public override Color GetToColor
             {
                 get
@@ -328,7 +312,6 @@ namespace Rain_World_Drought.Creatures
                 }
             }
 
-            // Token: 0x060024DC RID: 9436 RVA: 0x0023C4A0 File Offset: 0x0023A6A0
             public override void Update()
             {
                 base.Update();
@@ -349,7 +332,6 @@ namespace Rain_World_Drought.Creatures
                 this.transform = Custom.LerpAndTick(this.transform, (!this.down) ? 0f : 1f, 0.14f, 0.125f);
             }
 
-            // Token: 0x060024DD RID: 9437 RVA: 0x0023C53C File Offset: 0x0023A73C
             public override void InitiateSprites(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam)
             {
                 base.InitiateSprites(sLeaser, rCam);
@@ -357,7 +339,6 @@ namespace Rain_World_Drought.Creatures
                 sLeaser.sprites[this.firstSprite + this.symbolSprite].rotation = this.symbolRotation;
             }
 
-            // Token: 0x060024DE RID: 9438 RVA: 0x0023C5B0 File Offset: 0x0023A7B0
             public override void DrawSprites(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, float timeStacker, Vector2 camPos, Vector2 partPos, Vector2 headPos, float useFade, float popOut, Color useColor)
             {
                 base.DrawSprites(sLeaser, rCam, timeStacker, camPos, partPos, headPos, useFade, popOut, useColor);
@@ -376,50 +357,34 @@ namespace Rain_World_Drought.Creatures
                 sLeaser.sprites[this.firstSprite + this.symbolSprite].color = useColor;
             }
 
-            // Token: 0x040027E1 RID: 10209
             public bool pulsate;
-
-            // Token: 0x040027E2 RID: 10210
             public int counter;
-
-            // Token: 0x040027E3 RID: 10211
             public bool down;
-
-            // Token: 0x040027E4 RID: 10212
             public int symbolSprite;
-
-            // Token: 0x040027E5 RID: 10213
             public string symbol;
-
-            // Token: 0x040027E6 RID: 10214
             public float symbolRotation;
-
-            // Token: 0x040027E7 RID: 10215
             public int timeUp;
-
-            // Token: 0x040027E8 RID: 10216
             public int timeDown;
         }
 
         public class KeyBoardKey : OverseerDroughtTutorialBehavior.ButtonOrKey
         {
-            // Token: 0x060024DF RID: 9439 RVA: 0x0023C728 File Offset: 0x0023A928
             public KeyBoardKey(OverseerHologram hologram, int firstSprite) : base(hologram, firstSprite)
             {
                 float num = 15f;
                 float num2 = 3f;
                 float num3 = 5f;
                 base.AddClosed3DPolygon(new List<Vector2>
-            {
-                new Vector2(-num + num2, -num),
-                new Vector2(-num, -num + num2),
-                new Vector2(-num, num - num2),
-                new Vector2(-num + num2, num),
-                new Vector2(num - num2, num),
-                new Vector2(num, num - num2),
-                new Vector2(num, -num + num2),
-                new Vector2(num - num2, -num)
-            }, num3);
+                    {
+                        new Vector2(-num + num2, -num),
+                        new Vector2(-num, -num + num2),
+                        new Vector2(-num, num - num2),
+                        new Vector2(-num + num2, num),
+                        new Vector2(num - num2, num),
+                        new Vector2(num, num - num2),
+                        new Vector2(num, -num + num2),
+                        new Vector2(num - num2, -num)
+                    }, num3);
                 for (int i = 0; i < this.lines.Count; i++)
                 {
                     if (this.lines[i].A.z < 0f)
@@ -443,7 +408,6 @@ namespace Rain_World_Drought.Creatures
                 }
             }
 
-            // Token: 0x060024E0 RID: 9440 RVA: 0x0023C9F4 File Offset: 0x0023ABF4
             public void MakeWider(float add)
             {
                 for (int i = 0; i < this.lines.Count; i++)
@@ -494,7 +458,6 @@ namespace Rain_World_Drought.Creatures
 
         public class GamePadSilhouette : OverseerHologram.HologramPart
         {
-            // Token: 0x060024E1 RID: 9441 RVA: 0x0023CB8C File Offset: 0x0023AD8C
             public GamePadSilhouette(OverseerDroughtTutorialBehavior.GamePadInstruction hologram, int firstSprite) : base(hologram, firstSprite)
             {
                 this.totalSprites += 4;
@@ -526,13 +489,11 @@ namespace Rain_World_Drought.Creatures
                 base.AddClosedPolygon(list);
             }
 
-            // Token: 0x060024E2 RID: 9442 RVA: 0x0023514A File Offset: 0x0023334A
             public override void Update()
             {
                 base.Update();
             }
 
-            // Token: 0x060024E3 RID: 9443 RVA: 0x0023CD74 File Offset: 0x0023AF74
             public override void InitiateSprites(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam)
             {
                 base.InitiateSprites(sLeaser, rCam);
@@ -542,7 +503,6 @@ namespace Rain_World_Drought.Creatures
                 }
             }
 
-            // Token: 0x060024E4 RID: 9444 RVA: 0x0023CDB0 File Offset: 0x0023AFB0
             public override void DrawSprites(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, float timeStacker, Vector2 camPos, Vector2 partPos, Vector2 headPos, float useFade, float popOut, Color useColor)
             {
                 base.DrawSprites(sLeaser, rCam, timeStacker, camPos, partPos, headPos, useFade, popOut, useColor);
@@ -588,7 +548,6 @@ namespace Rain_World_Drought.Creatures
 
         public class GamePadStickSocket : OverseerHologram.HologramPart
         {
-            // Token: 0x060024E5 RID: 9445 RVA: 0x0023D004 File Offset: 0x0023B204
             public GamePadStickSocket(OverseerHologram hologram, int firstSprite) : base(hologram, firstSprite)
             {
                 this.scale = 0.6f;
@@ -601,19 +560,16 @@ namespace Rain_World_Drought.Creatures
                 }
             }
 
-            // Token: 0x060024E6 RID: 9446 RVA: 0x0023514A File Offset: 0x0023334A
             public override void Update()
             {
                 base.Update();
             }
 
-            // Token: 0x040027E9 RID: 10217
             public float scale;
         }
 
         public class GamePadStick : OverseerHologram.HologramPart
         {
-            // Token: 0x060024E7 RID: 9447 RVA: 0x0023D080 File Offset: 0x0023B280
             public GamePadStick(OverseerDroughtTutorialBehavior.GamePadInstruction hologram, int firstSprite, OverseerDroughtTutorialBehavior.GamePadStickSocket socket) : base(hologram, firstSprite)
             {
                 this.socket = socket;
@@ -632,8 +588,6 @@ namespace Rain_World_Drought.Creatures
                 }
             }
 
-            // Token: 0x170005D7 RID: 1495
-            // (get) Token: 0x060024E8 RID: 9448 RVA: 0x0023D228 File Offset: 0x0023B428
             public Vector2 showDirection
             {
                 get
@@ -642,8 +596,6 @@ namespace Rain_World_Drought.Creatures
                 }
             }
 
-            // Token: 0x170005D8 RID: 1496
-            // (get) Token: 0x060024E9 RID: 9449 RVA: 0x0023D254 File Offset: 0x0023B454
             public override Color GetToColor
             {
                 get
@@ -656,7 +608,6 @@ namespace Rain_World_Drought.Creatures
                 }
             }
 
-            // Token: 0x060024EA RID: 9450 RVA: 0x0023D284 File Offset: 0x0023B484
             public override void Update()
             {
                 base.Update();
@@ -690,25 +641,15 @@ namespace Rain_World_Drought.Creatures
                 this.visible = this.socket.visible;
             }
 
-            // Token: 0x040027EA RID: 10218
             private OverseerDroughtTutorialBehavior.GamePadStickSocket socket;
-
-            // Token: 0x040027EB RID: 10219
             public int counter;
-
-            // Token: 0x040027EC RID: 10220
             public bool outToSide;
-
-            // Token: 0x040027ED RID: 10221
             public Vector2 stickPos;
-
-            // Token: 0x040027EE RID: 10222
             public Vector2 stickVel;
         }
 
         public class GamePadButton : OverseerDroughtTutorialBehavior.ButtonOrKey
         {
-            // Token: 0x060024EB RID: 9451 RVA: 0x0023D420 File Offset: 0x0023B620
             public GamePadButton(OverseerHologram hologram, int firstSprite) : base(hologram, firstSprite)
             {
                 float d = 18f;
@@ -742,8 +683,6 @@ namespace Rain_World_Drought.Creatures
                 }
             }
 
-            // Token: 0x170005D9 RID: 1497
-            // (get) Token: 0x060024EC RID: 9452 RVA: 0x0023D6B0 File Offset: 0x0023B8B0
             public override Color GetToColor
             {
                 get
@@ -756,13 +695,11 @@ namespace Rain_World_Drought.Creatures
                 }
             }
 
-            // Token: 0x040027EF RID: 10223
             public Color buttonColor;
         }
 
         public class KeyBoardInstruction : OverseerDroughtTutorialBehavior.InputInstruction
         {
-            // Token: 0x060024ED RID: 9453 RVA: 0x0023D6E0 File Offset: 0x0023B8E0
             public KeyBoardInstruction(Overseer overseer, OverseerHologram.Message message, Creature communicateWith, float importance) : base(overseer, message, communicateWith, importance)
             {
                 this.keys = new OverseerDroughtTutorialBehavior.KeyBoardKey[7];
@@ -790,8 +727,6 @@ namespace Rain_World_Drought.Creatures
                 this.Throw.symbol = "X";
             }
 
-            // Token: 0x170005DA RID: 1498
-            // (get) Token: 0x060024EE RID: 9454 RVA: 0x0023D88B File Offset: 0x0023BA8B
             public OverseerDroughtTutorialBehavior.KeyBoardKey Left
             {
                 get
@@ -800,8 +735,6 @@ namespace Rain_World_Drought.Creatures
                 }
             }
 
-            // Token: 0x170005DB RID: 1499
-            // (get) Token: 0x060024EF RID: 9455 RVA: 0x0023D895 File Offset: 0x0023BA95
             public OverseerDroughtTutorialBehavior.KeyBoardKey Right
             {
                 get
@@ -810,8 +743,6 @@ namespace Rain_World_Drought.Creatures
                 }
             }
 
-            // Token: 0x170005DC RID: 1500
-            // (get) Token: 0x060024F0 RID: 9456 RVA: 0x0023D89F File Offset: 0x0023BA9F
             public OverseerDroughtTutorialBehavior.KeyBoardKey Up
             {
                 get
@@ -820,8 +751,6 @@ namespace Rain_World_Drought.Creatures
                 }
             }
 
-            // Token: 0x170005DD RID: 1501
-            // (get) Token: 0x060024F1 RID: 9457 RVA: 0x0023D8A9 File Offset: 0x0023BAA9
             public OverseerDroughtTutorialBehavior.KeyBoardKey Down
             {
                 get
@@ -830,8 +759,6 @@ namespace Rain_World_Drought.Creatures
                 }
             }
 
-            // Token: 0x170005DE RID: 1502
-            // (get) Token: 0x060024F2 RID: 9458 RVA: 0x0023D8B3 File Offset: 0x0023BAB3
             public OverseerDroughtTutorialBehavior.KeyBoardKey PickUp
             {
                 get
@@ -840,8 +767,6 @@ namespace Rain_World_Drought.Creatures
                 }
             }
 
-            // Token: 0x170005DF RID: 1503
-            // (get) Token: 0x060024F3 RID: 9459 RVA: 0x0023D8BD File Offset: 0x0023BABD
             public OverseerDroughtTutorialBehavior.KeyBoardKey Jump
             {
                 get
@@ -850,8 +775,6 @@ namespace Rain_World_Drought.Creatures
                 }
             }
 
-            // Token: 0x170005E0 RID: 1504
-            // (get) Token: 0x060024F4 RID: 9460 RVA: 0x0023D8C7 File Offset: 0x0023BAC7
             public OverseerDroughtTutorialBehavior.KeyBoardKey Throw
             {
                 get
@@ -860,7 +783,6 @@ namespace Rain_World_Drought.Creatures
                 }
             }
 
-            // Token: 0x060024F5 RID: 9461 RVA: 0x0023D8D4 File Offset: 0x0023BAD4
             public override void Update(bool eu)
             {
                 base.Update(eu);
@@ -880,7 +802,6 @@ namespace Rain_World_Drought.Creatures
                 this.Throw.pulsate = this.showThrow;
             }
 
-            // Token: 0x060024F6 RID: 9462 RVA: 0x0023DA2C File Offset: 0x0023BC2C
             public override float DisplayPosScore(IntVector2 testPos)
             {
                 float num = base.DisplayPosScore(testPos);
@@ -891,13 +812,11 @@ namespace Rain_World_Drought.Creatures
                 return num;
             }
 
-            // Token: 0x040027F0 RID: 10224
             public OverseerDroughtTutorialBehavior.KeyBoardKey[] keys;
         }
 
         public class GamePadInstruction : OverseerDroughtTutorialBehavior.InputInstruction
         {
-            // Token: 0x060024F7 RID: 9463 RVA: 0x0023DA8C File Offset: 0x0023BC8C
             public GamePadInstruction(Overseer overseer, OverseerHologram.Message message, Creature communicateWith, float importance) : base(overseer, message, communicateWith, importance)
             {
                 this.socket = new OverseerDroughtTutorialBehavior.GamePadStickSocket(this, this.totalSprites);
@@ -937,8 +856,6 @@ namespace Rain_World_Drought.Creatures
                 this.parts[3] = this.buttons[2];
             }
 
-            // Token: 0x170005E1 RID: 1505
-            // (get) Token: 0x060024F8 RID: 9464 RVA: 0x0023DCE7 File Offset: 0x0023BEE7
             public OverseerDroughtTutorialBehavior.GamePadButton PickUp
             {
                 get
@@ -947,8 +864,6 @@ namespace Rain_World_Drought.Creatures
                 }
             }
 
-            // Token: 0x170005E2 RID: 1506
-            // (get) Token: 0x060024F9 RID: 9465 RVA: 0x0023DCF1 File Offset: 0x0023BEF1
             public OverseerDroughtTutorialBehavior.GamePadButton Jump
             {
                 get
@@ -957,8 +872,6 @@ namespace Rain_World_Drought.Creatures
                 }
             }
 
-            // Token: 0x170005E3 RID: 1507
-            // (get) Token: 0x060024FA RID: 9466 RVA: 0x0023DCFB File Offset: 0x0023BEFB
             public OverseerDroughtTutorialBehavior.GamePadButton Throw
             {
                 get
@@ -967,7 +880,6 @@ namespace Rain_World_Drought.Creatures
                 }
             }
 
-            // Token: 0x060024FB RID: 9467 RVA: 0x0023DD08 File Offset: 0x0023BF08
             public override void Update(bool eu)
             {
                 base.Update(eu);
@@ -1046,7 +958,6 @@ namespace Rain_World_Drought.Creatures
                 this.Throw.pulsate = this.showThrow;
             }
 
-            // Token: 0x060024FC RID: 9468 RVA: 0x0023E05C File Offset: 0x0023C25C
             public override float DisplayPosScore(IntVector2 testPos)
             {
                 float num = base.DisplayPosScore(testPos);
@@ -1057,24 +968,12 @@ namespace Rain_World_Drought.Creatures
                 return num;
             }
 
-            // Token: 0x040027F1 RID: 10225
             public OverseerDroughtTutorialBehavior.GamePadSilhouette silhouette;
-
-            // Token: 0x040027F2 RID: 10226
             public OverseerDroughtTutorialBehavior.GamePadStickSocket socket;
-
-            // Token: 0x040027F3 RID: 10227
             public OverseerDroughtTutorialBehavior.GamePadButton[] buttons;
-
-            // Token: 0x040027F4 RID: 10228
             public bool directionAlwaysVisible;
-
-            // Token: 0x040027F5 RID: 10229
             public float horizontalOffset;
-
-            // Token: 0x040027F6 RID: 10230
             public new OverseerHologram.HologramPart[] parts;
-
             // Token: 0x040027F7 RID: 10231
             public int[] partsRemainVisible;
         }

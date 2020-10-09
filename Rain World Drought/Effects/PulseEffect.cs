@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Rain_World_Drought.Enums;
+using System;
 using UnityEngine;
 
 namespace Rain_World_Drought.Effects
@@ -8,7 +9,7 @@ namespace Rain_World_Drought.Effects
         public PulseEffect(Room room)
         {
             this.room = room;
-            room.roomSettings.GetEffectAmount((RoomSettings.RoomEffect.Type)patch_RoomSettings.patch_RoomEffect.Type.Pulse);
+            room.roomSettings.GetEffectAmount(EnumExt_Drought.Pulse);
         }
 
         public override void Update(bool eu)
@@ -34,7 +35,7 @@ namespace Rain_World_Drought.Effects
                 }
                 return;
             }
-            float effectAmount = room.roomSettings.GetEffectAmount((RoomSettings.RoomEffect.Type)patch_RoomSettings.patch_RoomEffect.Type.Pulse);
+            float effectAmount = room.roomSettings.GetEffectAmount(EnumExt_Drought.Pulse);
             float num = (600f * effectAmount) * (float)Math.Sin((double)((float)room.world.rainCycle.timer % 2500f / 397.887257729f));
             room.waterObject.fWaterLevel = room.waterObject.originalWaterLevel + num + this.room.roomRain.globalRain.flood;
             room.waterObject.GeneralUpsetSurface((float)Math.Sin((double)((float)room.world.rainCycle.timer % 5000f / 801.5f)) * 2f);

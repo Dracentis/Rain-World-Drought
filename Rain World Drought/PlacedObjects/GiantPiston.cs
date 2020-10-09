@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Rain_World_Drought.Enums;
+using System;
 using UnityEngine;
 
 namespace Rain_World_Drought.PlacedObjects
@@ -197,7 +198,7 @@ namespace Rain_World_Drought.PlacedObjects
 
         public class AbstractGiantPiston : AbstractPhysicalObject
         {
-            public AbstractGiantPiston(World world, PhysicalObject realizedObject, WorldCoordinate pos, EntityID ID, int originRoom, int placedIndex, bool dt, bool db) : base(world, (AbstractPhysicalObject.AbstractObjectType)patch_AbstractPhysicalObject.AbstractObjectType.GiantPiston, realizedObject, pos, ID)
+            public AbstractGiantPiston(World world, PhysicalObject realizedObject, WorldCoordinate pos, EntityID ID, int originRoom, int placedIndex, bool dt, bool db) : base(world, EnumExt_Drought.GiantPiston, realizedObject, pos, ID)
             {
                 this.originRoom = originRoom;
                 placedObjectIndex = placedIndex;

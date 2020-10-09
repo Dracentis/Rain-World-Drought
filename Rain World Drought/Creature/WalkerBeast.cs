@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using Rain_World_Drought.OverWorld;
+using Rain_World_Drought.Slugcat;
 using RWCustom;
 using UnityEngine;
 
@@ -297,10 +299,9 @@ namespace Rain_World_Drought.Creatures
             rainDeath = 0f;
 
             // Instead, get stunned for anywhere between 0.75 and 1 minute if caught
-            patch_RainCycle rc = abstractCreature.world.rainCycle as patch_RainCycle;
-            if (rc != null)
+            if (abstractCreature.world.rainCycle != null)
             {
-                int timeUntilBurst = rc.TimeUntilBurst(rc.CurrentBurst());
+                int timeUntilBurst = RainCycleHK.TimeUntilBurst(abstractCreature.world.rainCycle, RainCycleHK.CurrentBurst(abstractCreature.world.rainCycle));
                 if (timeUntilBurst > -600 && timeUntilBurst < -500 && (rainStun < 800))
                 {
                     rainStun = UnityEngine.Random.Range(40 * 45, 40 * 60);
@@ -320,7 +321,6 @@ namespace Rain_World_Drought.Creatures
             if (rainStun > 0) rainStun--;
         }
 
-        // Token: 0x06001C02 RID: 7170 RVA: 0x0018EC4C File Offset: 0x0018CE4C
         private void Act(bool eu, float support, float forwardPower)
         {
             AI.Update();
@@ -978,7 +978,7 @@ namespace Rain_World_Drought.Creatures
                 }
                 if (Custom.DistLess(player.mainBodyChunk.pos, antlerChunk.pos, antlerChunk.rad + 100f))
                 {
-                    (player as patch_Player).playerInAnt = this;
+                    WandererSupplement.GetSub(player).playerInAnt = this;
                     if (Mathf.Abs(FaceDir) > 0.5f && stance.upper.side != -Mathf.Sign(FaceDir))
                     {
                         forceSideChange = true;

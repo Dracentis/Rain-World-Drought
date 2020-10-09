@@ -6,6 +6,9 @@ using RWCustom;
 using UnityEngine;
 using CoralBrain;
 using Music;
+using Rain_World_Drought.Slugcat;
+using Rain_World_Drought.Enums;
+using Rain_World_Drought.Resource;
 
 namespace Rain_World_Drought.OverWorld
 {
@@ -192,7 +195,7 @@ namespace Rain_World_Drought.OverWorld
                         InitateConversation();
                         if (!conversationAdded && oracle.room.game.session is StoryGameSession)
                         {
-                            ((oracle.room.game.session as StoryGameSession).saveState.miscWorldSaveData as patch_MiscWorldSaveData).FPOracleState.playerEncounters++;
+                            SaveStateHK.GetFPState((oracle.room.game.session as StoryGameSession).saveState.miscWorldSaveData).playerEncounters++;
                             Debug.Log("player encounter with SS AI logged");
                             conversationAdded = true;
                         }
@@ -296,7 +299,7 @@ namespace Rain_World_Drought.OverWorld
                                     moveToAndPickUpItem = null;
                                     break;
                                 }
-                                if (moveToAndPickUpItem != null && moveToAndPickUpItem is DataPearl && (patch_DataPearl.patch_AbstractDataPearl.DataPearlType)(moveToAndPickUpItem as DataPearl).AbstractPearl.dataPearlType == patch_DataPearl.patch_AbstractDataPearl.DataPearlType.wipedPearl)
+                                if (moveToAndPickUpItem != null && moveToAndPickUpItem is DataPearl && (moveToAndPickUpItem as DataPearl).AbstractPearl.dataPearlType == EnumExt_DroughtPlaced.WipedPearl)
                                 {
                                     moveToAndPickUpItem = null;
                                     break;
@@ -419,7 +422,7 @@ namespace Rain_World_Drought.OverWorld
                     }
                     if (this.actionCounter >= 500)
                     {
-                        currentConversation = new FPOracleBehaviorHasMark.PebblesConversation((Conversation.ID)patch_Conversation.ID.MoonPostMark, this, MiscItemType.NA);
+                        currentConversation = new FPOracleBehaviorHasMark.PebblesConversation(EnumExt_Drought.MoonPostMark, this, MiscItemType.NA);
                         this.NewAction(Action.General_PostGiveMark);
                     }
                     break;
@@ -456,10 +459,10 @@ namespace Rain_World_Drought.OverWorld
                     break;
                 case Action.General_ReceiveCCPearl:
                     workingGrav = false;
-                    if (currentConversation == null && this.holdingObject != null && ((this.holdingObject as DataPearl) as patch_DataPearl).AbstractPearl.dataPearlType == DataPearl.AbstractDataPearl.DataPearlType.CC)
+                    if (currentConversation == null && this.holdingObject != null && (this.holdingObject as DataPearl).AbstractPearl.dataPearlType == DataPearl.AbstractDataPearl.DataPearlType.CC)
                     {
                         //this.oracle.room.AddObject(new Spark(this.holdingObject.bodyChunks[0].pos, Custom.RNV() * UnityEngine.Random.value * 40f, new Color(1f, 1f, 1f), null, 30, 120));
-                        ((this.holdingObject as DataPearl) as patch_DataPearl).Destroy();//Five Pebbles slides the porl into his pocky. ^o^
+                        (this.holdingObject as DataPearl).Destroy();//Five Pebbles slides the porl into his pocky. ^o^
                         this.holdingObject = null;
                         this.NewAction(Action.General_GiveMark);
                     }
@@ -1062,7 +1065,7 @@ namespace Rain_World_Drought.OverWorld
                     {
                         currentConversation = new FPOracleBehaviorHasMark.PebblesConversation(Conversation.ID.Moon_Pearl_Misc2, this, MiscItemType.NA);
                     }
-                    else if ((item as DataPearl).AbstractPearl.dataPearlType == (DataPearl.AbstractDataPearl.DataPearlType)patch_DataPearl.patch_AbstractDataPearl.DataPearlType.MoonPearl)
+                    else if ((item as DataPearl).AbstractPearl.dataPearlType == EnumExt_DroughtPlaced.MoonPearl)
                     {
                         currentConversation = new FPOracleBehaviorHasMark.PebblesConversation(Conversation.ID.Moon_Pebbles_Pearl, this, MiscItemType.NA);
                     }
@@ -1080,83 +1083,83 @@ namespace Rain_World_Drought.OverWorld
                             currentConversation = null;
                         }
                         Conversation.ID id = Conversation.ID.None;
-                        switch ((item as DataPearl).AbstractPearl.dataPearlType)
+                        switch (EnumSwitch.GetAbstractDataPearlType((item as DataPearl).AbstractPearl.dataPearlType))
                         {
-                            case DataPearl.AbstractDataPearl.DataPearlType.CC:
-                                id = Conversation.ID.Moon_Pearl_CC;
-                                State.InfluenceLike(1f);
+                            case EnumSwitch.AbstractDataPearlType.DEFAULT:
+                            default:
+                                switch ((item as DataPearl).AbstractPearl.dataPearlType)
+                                {
+                                    case DataPearl.AbstractDataPearl.DataPearlType.CC:
+                                        id = Conversation.ID.Moon_Pearl_CC;
+                                        State.InfluenceLike(1f);
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.SI_west:
+                                        id = Conversation.ID.Moon_Pearl_SI_west;
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.SI_top:
+                                        id = Conversation.ID.Moon_Pearl_SI_top;
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.LF_west:
+                                        id = Conversation.ID.Moon_Pearl_LF_west;
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.LF_bottom:
+                                        id = Conversation.ID.Moon_Pearl_LF_bottom;
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.HI:
+                                        id = Conversation.ID.Moon_Pearl_HI;
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.SH:
+                                        id = Conversation.ID.Moon_Pearl_SH;
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.DS:
+                                        id = Conversation.ID.Moon_Pearl_DS;
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.SB_filtration:
+                                        id = Conversation.ID.Moon_Pearl_SB_filtration;
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.SB_ravine:
+                                        id = Conversation.ID.Moon_Pearl_SB_ravine;
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.GW:
+                                        id = Conversation.ID.Moon_Pearl_GW;
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.SL_bridge:
+                                        id = Conversation.ID.Moon_Pearl_SL_bridge;
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.SL_moon:
+                                        id = Conversation.ID.Moon_Pearl_SL_moon;
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.SU:
+                                        id = Conversation.ID.Moon_Pearl_SU;
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.UW:
+                                        id = Conversation.ID.Moon_Pearl_UW;
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.SL_chimney:
+                                        id = Conversation.ID.Moon_Pearl_SL_chimney;
+                                        break;
+                                    case DataPearl.AbstractDataPearl.DataPearlType.Red_stomach:
+                                        id = Conversation.ID.Moon_Pearl_Red_stomach;
+                                        break;
+                                }
+                                break;
 
-                                break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.SI_west:
-                                id = Conversation.ID.Moon_Pearl_SI_west;
-                                break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.SI_top:
-                                id = Conversation.ID.Moon_Pearl_SI_top;
-                                break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.LF_west:
-                                id = Conversation.ID.Moon_Pearl_LF_west;
-                                break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.LF_bottom:
-                                id = Conversation.ID.Moon_Pearl_LF_bottom;
-                                break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.HI:
-                                id = Conversation.ID.Moon_Pearl_HI;
-                                break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.SH:
-                                id = Conversation.ID.Moon_Pearl_SH;
-                                break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.DS:
-                                id = Conversation.ID.Moon_Pearl_DS;
-                                break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.SB_filtration:
-                                id = Conversation.ID.Moon_Pearl_SB_filtration;
-                                break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.SB_ravine:
-                                id = Conversation.ID.Moon_Pearl_SB_ravine;
-                                break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.GW:
-                                id = Conversation.ID.Moon_Pearl_GW;
-                                break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.SL_bridge:
-                                id = Conversation.ID.Moon_Pearl_SL_bridge;
-                                break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.SL_moon:
-                                id = Conversation.ID.Moon_Pearl_SL_moon;
-                                break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.SU:
-                                id = Conversation.ID.Moon_Pearl_SU;
-                                break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.UW:
-                                id = Conversation.ID.Moon_Pearl_UW;
-                                break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.SL_chimney:
-                                id = Conversation.ID.Moon_Pearl_SL_chimney;
-                                break;
-                            case DataPearl.AbstractDataPearl.DataPearlType.Red_stomach:
-                                id = Conversation.ID.Moon_Pearl_Red_stomach;
-                                break;
-                            case (DataPearl.AbstractDataPearl.DataPearlType)patch_DataPearl.patch_AbstractDataPearl.DataPearlType.MoonPearl:
-                                id = (Conversation.ID)patch_Conversation.ID.Moon_Pearl_MoonPearl;
-                                break;
-                            case (DataPearl.AbstractDataPearl.DataPearlType)patch_DataPearl.patch_AbstractDataPearl.DataPearlType.DroughtPearl1:
-                                id = (Conversation.ID)patch_Conversation.ID.Moon_Pearl_Drought1;
-                                break;
-                            case (DataPearl.AbstractDataPearl.DataPearlType)patch_DataPearl.patch_AbstractDataPearl.DataPearlType.DroughtPearl2:
-                                id = (Conversation.ID)patch_Conversation.ID.Moon_Pearl_Drought2;
-                                break;
-                            case (DataPearl.AbstractDataPearl.DataPearlType)patch_DataPearl.patch_AbstractDataPearl.DataPearlType.DroughtPearl3:
-                                id = (Conversation.ID)patch_Conversation.ID.Moon_Pearl_Drought3;
-                                break;
-                            case (DataPearl.AbstractDataPearl.DataPearlType)patch_DataPearl.patch_AbstractDataPearl.DataPearlType.SI_Spire1:
-                                id = (Conversation.ID)patch_Conversation.ID.SI_Spire1;
-                                break;
-                            case (DataPearl.AbstractDataPearl.DataPearlType)patch_DataPearl.patch_AbstractDataPearl.DataPearlType.SI_Spire2:
-                                id = (Conversation.ID)patch_Conversation.ID.SI_Spire2;
-                                break;
-                            case (DataPearl.AbstractDataPearl.DataPearlType)patch_DataPearl.patch_AbstractDataPearl.DataPearlType.SI_Spire3:
-                                id = (Conversation.ID)patch_Conversation.ID.SI_Spire3;
-                                break;
+                            case EnumSwitch.AbstractDataPearlType.MoonPearl:
+                                id = EnumExt_Drought.Moon_Pearl_MoonPearl; break;
+                            case EnumSwitch.AbstractDataPearlType.DroughtPearl1:
+                                id = EnumExt_Drought.Moon_Pearl_Drought1; break;
+                            case EnumSwitch.AbstractDataPearlType.DroughtPearl2:
+                                id = EnumExt_Drought.Moon_Pearl_Drought2; break;
+                            case EnumSwitch.AbstractDataPearlType.DroughtPearl3:
+                                id = EnumExt_Drought.Moon_Pearl_Drought3; break;
+                            case EnumSwitch.AbstractDataPearlType.SI_Spire1:
+                                id = EnumExt_Drought.SI_Spire1; break;
+                            case EnumSwitch.AbstractDataPearlType.SI_Spire2:
+                                id = EnumExt_Drought.SI_Spire2; break;
+                            case EnumSwitch.AbstractDataPearlType.SI_Spire3:
+                                id = EnumExt_Drought.SI_Spire3; break;
                         }
+
                         currentConversation = new FPOracleBehaviorHasMark.PebblesConversation(id, this, MiscItemType.NA);
                         if (id == Conversation.ID.Moon_Pearl_CC)
                         {
@@ -1591,244 +1594,247 @@ namespace Rain_World_Drought.OverWorld
 
             public override void AddEvents()
             {
-                switch (id)
+                switch (EnumSwitch.GetConversationID(id))
                 {
-                    case (ID)patch_Conversation.ID.MoonPostMark:
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("Go to the west past the Farm Arrays, and then down into the<LINE>earth where the land fissures, as deep as you can reach, where the ancients<LINE>built their temples and danced their silly rituals. The mark I gave you will let you through."), 25));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("Good luck, <PlayerName>."), 5));
-                        break;
-                    case ID.MoonFirstPostMarkConversation:
-                        if ((this.interfaceOwner as FPOracleBehaviorHasMark).rainWorld.progression.currentSaveState.miscWorldSaveData.moonRevived)
-                        {
-                            events.Add(new Conversation.TextEvent(this, 0, Translate("It's you."), 1));
-                            events.Add(new Conversation.TextEvent(this, 0, Translate("How could you betray me like this!"), 5));
-                            events.Add(new Conversation.TextEvent(this, 0, Translate("All this work, cycles and cycles of efforts put to waste!"), 5));
-                            events.Add(new Conversation.TextEvent(this, 0, Translate("..."), 5));
-                            events.Add(new Conversation.TextEvent(this, 0, Translate("No, I need not be angry with you. Afterall, you couldn't have known the importance of what you were delivering."), 5));
-                            events.Add(new Conversation.TextEvent(this, 0, Translate("Perhaps, Moon was right about all this. I have been a bit hasty in my recent endevors."), 5));
-                            break;
-                        }
-                        else
-                        {
-                            events.Add(new Conversation.TextEvent(this, 4, Translate("Hello <PlayerName>. "), 6));
-                            events.Add(new Conversation.TextEvent(this, 0, Translate("Welcome back!"), 5));
-                            events.Add(new Conversation.TextEvent(this, 0, Translate("Do you have another message for me?"), 7));
-                            events.Add(new Conversation.TextEvent(this, 0, Translate("Or are you passing through here for another delivery?"), 7));
-                            events.Add(new Conversation.TextEvent(this, 0, Translate("Unless you have something for me, I must return to my work."), 10));
-                        }//LoadEventsFromFile(37);
-                        break;
-                    case ID.MoonSecondPostMarkConversation:
-                        if ((this.interfaceOwner as FPOracleBehaviorHasMark).rainWorld.progression.currentSaveState.miscWorldSaveData.moonRevived)
-                        {
-                            events.Add(new Conversation.TextEvent(this, 0, Translate("You're back."), 1));
-                            events.Add(new Conversation.TextEvent(this, 0, Translate("I know I shouldn't be angry with you."), 5));
-                            events.Add(new Conversation.TextEvent(this, 0, Translate("I suppose, we both gained something out of this. Even, if I lost some of my efforts."), 5));
-                            events.Add(new Conversation.TextEvent(this, 0, Translate("Afterall, you couldn't have known the importance of what you were delivering."), 5));
-                            events.Add(new Conversation.TextEvent(this, 0, Translate("Perhaps, Moon was right about all this. I have been a bit hasty in my recent endevors."), 5));
-                            break;
-                        }
-                        else
-                        {
-                            if (State.GetOpinion == FPOracleState.PlayerOpinion.Dislikes)
-                            {
-                                events.Add(new Conversation.TextEvent(this, 0, Translate("You again."), 10));
-                                FPOracleBehaviorHasMark.talking += TEN;
-                            }
-                            else
-                            {
-                                events.Add(new Conversation.TextEvent(this, 0, Translate("Hello messenger."), 10));
-                                FPOracleBehaviorHasMark.talking += TEN;
-                                events.Add(new Conversation.TextEvent(this, 0, Translate("Do you have that pearl Suns was talking about?"), 15));
-                                FPOracleBehaviorHasMark.talking += TEN;
-                                if (State.GetOpinion != FPOracleState.PlayerOpinion.Dislikes)
+                    default:
+                    case EnumSwitch.ConversationID.DEFAULT:
+                        switch (id)
+                        { // To do: Replace all new events to txt file
+                            case ID.MoonFirstPostMarkConversation:
+                                if ((this.interfaceOwner as FPOracleBehaviorHasMark).rainWorld.progression.currentSaveState.miscWorldSaveData.moonRevived)
                                 {
-                                    events.Add(new Conversation.TextEvent(this, 0, Translate("You are welcome stay here, but I must return to my work."), 8));
-                                    FPOracleBehaviorHasMark.talking += TEN;
+                                    events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("It's you."), 1));
+                                    events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("How could you betray me like this!"), 5));
+                                    events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("All this work, cycles and cycles of efforts put to waste!"), 5));
+                                    events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("..."), 5));
+                                    events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("No, I need not be angry with you. Afterall, you couldn't have known the importance of what you were delivering."), 5));
+                                    events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Perhaps, Moon was right about all this. I have been a bit hasty in my recent endevors."), 5));
+                                    break;
                                 }
-                            }
-                        }
-                        break;
-                    case ID.Moon_Pearl_Misc:
-                        PearlIntro();
-                        MiscPearl(false);
-                        break;
-                    case ID.Moon_Pearl_Misc2:
-                        PearlIntro();
-                        MiscPearl(true);
-                        break;
-                    case ID.Moon_Pebbles_Pearl:
-                        PebblesPearl();
-                        break;
-                    case ID.Moon_Pearl_CC:
-                        LoadEventsFromFile(8);
-                        break;
-                    case ID.Moon_Pearl_SI_west:
-                        PearlIntro();
-                        LoadEventsFromFile(64);
-                        break;
-                    case ID.Moon_Pearl_SI_top:
-                        PearlIntro();
-                        LoadEventsFromFile(65);
-                        break;
-                    case ID.Moon_Pearl_LF_west:
-                        PearlIntro();
-                        LoadEventsFromFile(55);
-                        break;
-                    case ID.Moon_Pearl_LF_bottom:
-                        PearlIntro();
-                        LoadEventsFromFile(56);
-                        break;
-                    case ID.Moon_Pearl_HI:
-                        PearlIntro();
-                        LoadEventsFromFile(57);
-                        break;
-                    case ID.Moon_Pearl_SH:
-                        PearlIntro();
-                        LoadEventsFromFile(58);
-                        break;
-                    case ID.Moon_Pearl_DS:
-                        PearlIntro();
-                        LoadEventsFromFile(59);
-                        break;
-                    case ID.Moon_Pearl_SB_filtration:
-                        PearlIntro();
-                        LoadEventsFromFile(60);
-                        break;
-                    case ID.Moon_Pearl_GW:
-                        PearlIntro();
-                        LoadEventsFromFile(61);
-                        break;
-                    case ID.Moon_Pearl_SL_bridge:
-                        PearlIntro();
-                        LoadEventsFromFile(62);
-                        break;
-                    case ID.Moon_Pearl_SL_moon:
-                        PearlIntro();
-                        LoadEventsFromFile(63);
-                        break;
+                                else
+                                {
+                                    events.Add(new Conversation.TextEvent(this, 4, DroughtMod.Translate("Hello <PlayerName>. "), 6));
+                                    events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Welcome back!"), 5));
+                                    events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Do you have another message for me?"), 7));
+                                    events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Or are you passing through here for another delivery?"), 7));
+                                    events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Unless you have something for me, I must return to my work."), 10));
+                                }//LoadEventsFromFile(37);
+                                break;
+                            case ID.MoonSecondPostMarkConversation:
+                                if ((this.interfaceOwner as FPOracleBehaviorHasMark).rainWorld.progression.currentSaveState.miscWorldSaveData.moonRevived)
+                                {
+                                    events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("You're back."), 1));
+                                    events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I know I shouldn't be angry with you."), 5));
+                                    events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I suppose, we both gained something out of this. Even, if I lost some of my efforts."), 5));
+                                    events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Afterall, you couldn't have known the importance of what you were delivering."), 5));
+                                    events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Perhaps, Moon was right about all this. I have been a bit hasty in my recent endevors."), 5));
+                                    break;
+                                }
+                                else
+                                {
+                                    if (State.GetOpinion == FPOracleState.PlayerOpinion.Dislikes)
+                                    {
+                                        events.Add(new Conversation.TextEvent(this, 0, Translate("You again."), 10)); // This one is in vanilla dialogue so no need to use custom translator
+                                        FPOracleBehaviorHasMark.talking += TEN;
+                                    }
+                                    else
+                                    {
+                                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Hello messenger."), 10));
+                                        FPOracleBehaviorHasMark.talking += TEN;
+                                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Do you have that pearl Suns was talking about?"), 15));
+                                        FPOracleBehaviorHasMark.talking += TEN;
+                                        if (State.GetOpinion != FPOracleState.PlayerOpinion.Dislikes)
+                                        {
+                                            events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("You are welcome stay here, but I must return to my work."), 8));
+                                            FPOracleBehaviorHasMark.talking += TEN;
+                                        }
+                                    }
+                                }
+                                break;
+                            case ID.Moon_Pearl_Misc:
+                                PearlIntro();
+                                MiscPearl(false);
+                                break;
+                            case ID.Moon_Pearl_Misc2:
+                                PearlIntro();
+                                MiscPearl(true);
+                                break;
+                            case ID.Moon_Pebbles_Pearl:
+                                PebblesPearl();
+                                break;
+                            case ID.Moon_Pearl_CC:
+                                LoadEventsFromFile(8);
+                                break;
+                            case ID.Moon_Pearl_SI_west:
+                                PearlIntro();
+                                LoadEventsFromFile(64);
+                                break;
+                            case ID.Moon_Pearl_SI_top:
+                                PearlIntro();
+                                LoadEventsFromFile(65);
+                                break;
+                            case ID.Moon_Pearl_LF_west:
+                                PearlIntro();
+                                LoadEventsFromFile(55);
+                                break;
+                            case ID.Moon_Pearl_LF_bottom:
+                                PearlIntro();
+                                LoadEventsFromFile(56);
+                                break;
+                            case ID.Moon_Pearl_HI:
+                                PearlIntro();
+                                LoadEventsFromFile(57);
+                                break;
+                            case ID.Moon_Pearl_SH:
+                                PearlIntro();
+                                LoadEventsFromFile(58);
+                                break;
+                            case ID.Moon_Pearl_DS:
+                                PearlIntro();
+                                LoadEventsFromFile(59);
+                                break;
+                            case ID.Moon_Pearl_SB_filtration:
+                                PearlIntro();
+                                LoadEventsFromFile(60);
+                                break;
+                            case ID.Moon_Pearl_GW:
+                                PearlIntro();
+                                LoadEventsFromFile(61);
+                                break;
+                            case ID.Moon_Pearl_SL_bridge:
+                                PearlIntro();
+                                LoadEventsFromFile(62);
+                                break;
+                            case ID.Moon_Pearl_SL_moon:
+                                PearlIntro();
+                                LoadEventsFromFile(63);
+                                break;
 
-                    case (Conversation.ID)patch_Conversation.ID.Moon_Pearl_MoonPearl:
-                        break;
-                    case ID.Moon_Misc_Item:
-                        switch (describeItem)
-                        {
-                            case MiscItemType.Rock:
-                                events.Add(new Conversation.TextEvent(this, 10, Translate("It's a rock. I have no use for this."), 0));
+                            case ID.Moon_Misc_Item:
+                                switch (describeItem)
+                                {
+                                    case MiscItemType.Rock:
+                                        events.Add(new Conversation.TextEvent(this, 10, DroughtMod.Translate("It's a rock. I have no use for this."), 0));
+                                        break;
+                                    case MiscItemType.SSOracleSwarmer:
+                                        events.Add(new Conversation.TextEvent(this, 10, DroughtMod.Translate("This is one of my processing neurons, don't eat any."), 3));
+                                        break;
+                                    case MiscItemType.Spear:
+                                        events.Add(new Conversation.TextEvent(this, 10, DroughtMod.Translate("It's a piece of sharpened rebar... What is it you want to know?<LINE>I've see you used them very effectively."), 0));
+                                        break;
+                                    case MiscItemType.FireSpear:
+                                        events.Add(new Conversation.TextEvent(this, 10, DroughtMod.Translate("It's a weapon made with fire powder. Did the scavengers give this to you?<LINE>It could be very dangerous if used incorrectly!"), 0));
+                                        break;
+                                    case MiscItemType.WaterNut:
+                                        events.Add(new Conversation.TextEvent(this, 10, DroughtMod.Translate("It's an edible plant. You could use the energy!"), 0));
+                                        break;
+                                    case MiscItemType.KarmaFlower:
+                                        LoadEventsFromFile(35);
+                                        break;
+                                    case MiscItemType.LMOracleSwarmer:
+                                        events.Add(new Conversation.TextEvent(this, 10, DroughtMod.Translate("Is this one of Moon's neurons?"), 3));
+                                        events.Add(new Conversation.TextEvent(this, 10, DroughtMod.Translate("Why bring it to me? I already have plenty."), 3));
+                                        break;
+                                    case MiscItemType.DangleFruit:
+                                        LoadEventsFromFile(36);
+                                        break;
+                                    case MiscItemType.FlareBomb:
+                                        LoadEventsFromFile(37);
+                                        break;
+                                    case MiscItemType.VultureMask:
+                                        LoadEventsFromFile(39);
+                                        break;
+                                    case MiscItemType.PuffBall:
+                                        LoadEventsFromFile(45);
+                                        break;
+                                    case MiscItemType.JellyFish:
+                                        LoadEventsFromFile(46);
+                                        break;
+                                    case MiscItemType.Lantern:
+                                        LoadEventsFromFile(47);
+                                        break;
+                                    case MiscItemType.Mushroom:
+                                        LoadEventsFromFile(48);
+                                        break;
+                                    case MiscItemType.FirecrackerPlant:
+                                        LoadEventsFromFile(49);
+                                        break;
+                                    case MiscItemType.SlimeMold:
+                                        LoadEventsFromFile(50);
+                                        break;
+                                    case MiscItemType.ScavBomb:
+                                        LoadEventsFromFile(75);
+                                        break;
+                                    case MiscItemType.BubbleGrass:
+                                        LoadEventsFromFile(53);
+                                        break;
+                                    case MiscItemType.OverseerRemains:
+                                        LoadEventsFromFile(52);
+                                        break;
+                                }
                                 break;
-                            case MiscItemType.SSOracleSwarmer:
-                                events.Add(new Conversation.TextEvent(this, 10, Translate("This is one of my processing neurons, don't eat any."), 3));
+                            case ID.Moon_Pearl_SU:
+                                PearlIntro();
+                                LoadEventsFromFile(69);
                                 break;
-                            case MiscItemType.Spear:
-                                events.Add(new Conversation.TextEvent(this, 10, Translate("It's a piece of sharpened rebar... What is it you want to know?<LINE>I've see you used them very effectively."), 0));
+                            case ID.Moon_Pearl_SB_ravine:
+                                PearlIntro();
+                                LoadEventsFromFile(60);
                                 break;
-                            case MiscItemType.FireSpear:
-                                events.Add(new Conversation.TextEvent(this, 10, Translate("It's a weapon made with fire powder. Did the scavengers give this to you?<LINE>It could be very dangerous if used incorrectly!"), 0));
+                            case ID.Moon_Pearl_UW:
+                                PearlIntro();
+                                LoadEventsFromFile(70);
                                 break;
-                            case MiscItemType.WaterNut:
-                                events.Add(new Conversation.TextEvent(this, 10, Translate("It's an edible plant. You could use the energy!"), 0));
+                            case ID.Moon_Pearl_SL_chimney:
+                                PearlIntro();
+                                LoadEventsFromFile(62);
                                 break;
-                            case MiscItemType.KarmaFlower:
-                                LoadEventsFromFile(35);
+                            case ID.Moon_Pearl_Red_stomach:
+                                PearlIntro();
+                                LoadEventsFromFile(51);
                                 break;
-                            case MiscItemType.LMOracleSwarmer:
-                                events.Add(new Conversation.TextEvent(this, 10, Translate("Is this one of Moon's neurons?"), 3));
-                                events.Add(new Conversation.TextEvent(this, 10, Translate("Why bring it to me? I already have plenty."), 3));
-                                break;
-                            case MiscItemType.DangleFruit:
-                                LoadEventsFromFile(36);
-                                break;
-                            case MiscItemType.FlareBomb:
-                                LoadEventsFromFile(37);
-                                break;
-                            case MiscItemType.VultureMask:
-                                LoadEventsFromFile(39);
-                                break;
-                            case MiscItemType.PuffBall:
-                                LoadEventsFromFile(45);
-                                break;
-                            case MiscItemType.JellyFish:
-                                LoadEventsFromFile(46);
-                                break;
-                            case MiscItemType.Lantern:
-                                LoadEventsFromFile(47);
-                                break;
-                            case MiscItemType.Mushroom:
-                                LoadEventsFromFile(48);
-                                break;
-                            case MiscItemType.FirecrackerPlant:
-                                LoadEventsFromFile(49);
-                                break;
-                            case MiscItemType.SlimeMold:
+                            case ID.Moon_Red_First_Conversation:
                                 LoadEventsFromFile(50);
                                 break;
-                            case MiscItemType.ScavBomb:
-                                LoadEventsFromFile(75);
+                            case ID.Moon_Red_Second_Conversation:
+                                LoadEventsFromFile(55);
                                 break;
-                            case MiscItemType.BubbleGrass:
-                                LoadEventsFromFile(53);
-                                break;
-                            case MiscItemType.OverseerRemains:
-                                LoadEventsFromFile(52);
+                            case ID.Moon_Yellow_First_Conversation:
+                                LoadEventsFromFile(49);
                                 break;
                         }
                         break;
-                    case ID.Moon_Pearl_SU:
-                        PearlIntro();
-                        LoadEventsFromFile(69);
+                    case EnumSwitch.ConversationID.Moon_Pearl_MoonPearl:
                         break;
-                    case ID.Moon_Pearl_SB_ravine:
-                        PearlIntro();
-                        LoadEventsFromFile(60);
+                    case EnumSwitch.ConversationID.MoonPostMark:
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Go to the west past the Farm Arrays, and then down into the<LINE>earth where the land fissures, as deep as you can reach, where the ancients<LINE>built their temples and danced their silly rituals. The mark I gave you will let you through."), 25));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Good luck, <PlayerName>."), 5));
                         break;
-                    case ID.Moon_Pearl_UW:
-                        PearlIntro();
-                        LoadEventsFromFile(70);
+                    case EnumSwitch.ConversationID.Moon_Pearl_Drought1: // IS
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("This is a lengthy report on the unwanted organism strains that developed<LINE>in the old water filtration systems."), 13));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Back when cities were closer to the surface many of the cities relied on old bioreactor<LINE>reservoirs for a clean water supply."), 14));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("This was early in the development of the genetic sciences, so some unwanted strains developed."), 10));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("In attempts to mediate the damage, they biult a small<LINE>intelligent organic network tasked with controlling or at least mediating any organisms that developed."), 10));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("It was similar in design to modern iterators. There are rumors of murmurs comming from the depths"), 8));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I don’t suppose you crawled down there yourself. It would be quite dangerous."), 8));
                         break;
-                    case ID.Moon_Pearl_SL_chimney:
-                        PearlIntro();
-                        LoadEventsFromFile(62);
+                    case EnumSwitch.ConversationID.Moon_Pearl_Drought2: // FS
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("This one is strange; it looks to be the data from an offhand project by one of the local iterators."), 10));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("It has sections referencing interactions with local fauna, and some<LINE>unconventional data tables related to the local fauna."), 12));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("The section in internal language represents an interesting insight about<LINE>the embedding of karmic energy in matter and more specifically how it can affect other organizations."), 20));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I’m not sure what else to say about it. Based on the amount of data in this pearl I find it likely that the project is still ongoing."), 0));
                         break;
-                    case ID.Moon_Pearl_Red_stomach:
-                        PearlIntro();
-                        LoadEventsFromFile(51);
+                    case EnumSwitch.ConversationID.Moon_Pearl_Drought3: // MW
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("It's qualia, or a moment – this one is longer than most. Someone is dragging and tying a decorated rope from a sky-sail, while glancing towards the rest of their group."), 15));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("It has decent resolution, although its emotional value seem much more significant."), 5));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("The original memory was probably collected from Moon’s city."), 3));
                         break;
-                    case ID.Moon_Red_First_Conversation:
-                        LoadEventsFromFile(50);
-                        break;
-                    case ID.Moon_Red_Second_Conversation:
-                        LoadEventsFromFile(55);
-                        break;
-                    case ID.Moon_Yellow_First_Conversation:
-                        LoadEventsFromFile(49);
-                        break;
-                    case (ID)patch_Conversation.ID.Moon_Pearl_Drought1: // IS
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("This is a lengthy report on the unwanted organism strains that developed<LINE>in the old water filtration systems."), 13));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("Back when cities were closer to the surface many of the cities relied on old bioreactor<LINE>reservoirs for a clean water supply."), 14));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("This was early in the development of the genetic sciences, so some unwanted strains developed."), 10));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("In attempts to mediate the damage, they biult a small<LINE>intelligent organic network tasked with controlling or at least mediating any organisms that developed."), 10));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("It was similar in design to modern iterators. There are rumors of murmurs comming from the depths"), 8));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("I don’t suppose you crawled down there yourself. It would be quite dangerous."), 8));
-                        break;
-                    case (ID)patch_Conversation.ID.Moon_Pearl_Drought2: // FS
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("This one is strange; it looks to be the data from an offhand project by one of the local iterators."), 10));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("It has sections referencing interactions with local fauna, and some<LINE>unconventional data tables related to the local fauna."), 12));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("The section in internal language represents an interesting insight about<LINE>the embedding of karmic energy in matter and more specifically how it can affect other organizations."), 20));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("I’m not sure what else to say about it. Based on the amount of data in this pearl I find it likely that the project is still ongoing."), 0));
-                        break;
-                    case (ID)patch_Conversation.ID.Moon_Pearl_Drought3: // MW
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("It's qualia, or a moment – this one is longer than most. Someone is dragging and tying a decorated rope from a sky-sail, while glancing towards the rest of their group."), 15));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("It has decent resolution, although its emotional value seem much more significant."), 5));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("The original memory was probably collected from Moon’s city."), 3));
-                        break;
-                    case (ID)patch_Conversation.ID.SI_Spire1:
-                        LoadEventsFromFile(66);
-                        break;
-                    case (ID)patch_Conversation.ID.SI_Spire2:
-                        LoadEventsFromFile(67);
-                        break;
-                    case (ID)patch_Conversation.ID.SI_Spire3:
-                        LoadEventsFromFile(68);
-                        break;
+                    case EnumSwitch.ConversationID.SI_Spire1:
+                        TextManager.LoadEventsFromFile(this, 66); break;
+                    case EnumSwitch.ConversationID.SI_Spire2:
+                        TextManager.LoadEventsFromFile(this, 67); break;
+                    case EnumSwitch.ConversationID.SI_Spire3:
+                        TextManager.LoadEventsFromFile(this, 68); break;
                 }
             }
 

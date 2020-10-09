@@ -1,4 +1,5 @@
-﻿using Rain_World_Drought.Enums;
+﻿using Menu;
+using Rain_World_Drought.Enums;
 using Rain_World_Drought.Slugcat;
 using RWCustom;
 using UnityEngine;
@@ -66,7 +67,7 @@ namespace Rain_World_Drought.OverWorld
                     vector = Custom.RestrictInRect(vector, self.Players[0].realizedCreature.room.RoomRect.Grow(50f));
                 }
                 KarmaLadderScreen.SleepDeathScreenDataPackage package = new KarmaLadderScreen.SleepDeathScreenDataPackage((nextProcess.ID != ProcessManager.ProcessID.SleepScreen && nextProcess.ID != ProcessManager.ProcessID.Dream) ? self.cameras[0].hud.textPrompt.foodInStomach : self.GetStorySession.saveState.food, new IntVector2(karma, self.GetStorySession.saveState.deathPersistentSaveData.karmaCap), self.GetStorySession.saveState.deathPersistentSaveData.reinforcedKarma, num2, vector, self.cameras[0].hud.map.mapData, self.GetStorySession.saveState, self.GetStorySession.characterStats, self.GetStorySession.playerSessionRecords[0], self.GetStorySession.saveState.lastMalnourished, self.GetStorySession.saveState.malnourished);
-                (nextProcess as MessageScreen).GetDataFromGame(((self.GetStorySession.saveState.dreamsState as patch_DreamsState).everSeenMissonComplete), ((self.GetStorySession.saveState.dreamsState as patch_DreamsState).everSeenTraitor), self.GetStorySession.saveState.dreamsState.UpcomingDreamID, package);
+                (nextProcess as MessageScreen).GetDataFromGame(DreamsStateHK.GetEverReadMessage(self.GetStorySession.saveState.dreamsState, EnumSwitch.DreamsStateID.SRSDreamMissonComplete), DreamsStateHK.GetEverReadMessage(self.GetStorySession.saveState.dreamsState, EnumSwitch.DreamsStateID.SRSDreamTraitor), self.GetStorySession.saveState.dreamsState.UpcomingDreamID, package);
             }
         }
 

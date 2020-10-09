@@ -30,7 +30,7 @@ namespace Rain_World_Drought.Effects
                 LMOracleSwarmer.Behavior behavior = null;
                 for (int j = 0; j < list.Count; j++)
                 {
-                    LMOracleSwarmer LMOracleSwarmer = new LMOracleSwarmer(new AbstractPhysicalObject(self.room.world, (AbstractPhysicalObject.AbstractObjectType)patch_AbstractPhysicalObject.AbstractObjectType.LMOracleSwarmer, null, self.room.GetWorldCoordinate(list[j]), self.room.game.GetNewID()), self.room.world);
+                    LMOracleSwarmer LMOracleSwarmer = new LMOracleSwarmer(new AbstractPhysicalObject(self.room.world, EnumExt_Drought.LMOracleSwarmer, null, self.room.GetWorldCoordinate(list[j]), self.room.game.GetNewID()), self.room.world);
                     LMOracleSwarmer.abstractPhysicalObject.destroyOnAbstraction = true;
                     LMOracleSwarmer.firstChunk.HardSetPosition(self.room.MiddleOfTile(list[j]));
                     LMOracleSwarmer.system = self;

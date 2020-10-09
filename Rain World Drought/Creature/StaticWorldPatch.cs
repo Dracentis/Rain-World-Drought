@@ -10,7 +10,7 @@ namespace Rain_World_Drought.Creatures
             if (!DroughtMod.EnumExt) { return; } // :(
 
             CreatureTemplate[] backup = StaticWorld.creatureTemplates.Clone() as CreatureTemplate[]; //Backup original Creature Template
-            CreatureTemplate[] extendedList = new CreatureTemplate[backup.Length + EnumExt_Drought.CreatureTemplateTypeExtended]; //Extend the maximum creature number
+            CreatureTemplate[] extendedList = new CreatureTemplate[EnumSwitch.GetMaxCreatureTemplateType() + 1]; //Extend the maximum creature number
             for (int i = 0; i < extendedList.Length; i++)
             { //Fill them with Placeholder Creature to prevent NullRefException
                 extendedList[i] = backup[0];

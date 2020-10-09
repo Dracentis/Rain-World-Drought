@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Rain_World_Drought.Enums;
 using RWCustom;
 using UnityEngine;
 
@@ -192,9 +193,9 @@ namespace Rain_World_Drought.Creatures
         public bool DoIWantToBiteCreature(AbstractCreature creature)
         {
             if (WalkerBeast.rainStun > 0) return false;
-            return (creature.creatureTemplate.type != (CreatureTemplate.Type)patch_CreatureTemplate.Type.WalkerBeast)
+            return (creature.creatureTemplate.type != EnumExt_Drought.WalkerBeast)
                 && !creature.creatureTemplate.smallCreature
-                && (creature.creatureTemplate.type != (CreatureTemplate.Type)patch_CreatureTemplate.Type.Deer);
+                && (creature.creatureTemplate.type != CreatureTemplate.Type.Deer);
         }
 
         public override bool WantToStayInDenUntilEndOfCycle()

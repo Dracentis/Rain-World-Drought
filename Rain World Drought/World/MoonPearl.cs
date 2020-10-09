@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using RWCustom;
 using UnityEngine;
 using MonoMod;
+using Rain_World_Drought.Enums;
 
 namespace Rain_World_Drought.OverWorld
 {
@@ -159,7 +160,7 @@ namespace Rain_World_Drought.OverWorld
 
         public class AbstractMoonPearl : DataPearl.AbstractDataPearl
         {
-            public AbstractMoonPearl(World world, PhysicalObject realizedObject, WorldCoordinate pos, EntityID ID, int originRoom, int placedObjectIndex, PlacedObject.ConsumableObjectData consumableData, int color, int number) : base(world, (AbstractPhysicalObject.AbstractObjectType)patch_AbstractPhysicalObject.AbstractObjectType.MoonPearl, realizedObject, pos, ID, originRoom, placedObjectIndex, consumableData, (DataPearl.AbstractDataPearl.DataPearlType)patch_DataPearl.patch_AbstractDataPearl.DataPearlType.MoonPearl)
+            public AbstractMoonPearl(World world, PhysicalObject realizedObject, WorldCoordinate pos, EntityID ID, int originRoom, int placedObjectIndex, PlacedObject.ConsumableObjectData consumableData, int color, int number) : base(world, EnumExt_Drought.MoonPearl, realizedObject, pos, ID, originRoom, placedObjectIndex, consumableData, EnumExt_DroughtPlaced.MoonPearl)
             {
                 this.color = color;
                 this.number = number;
