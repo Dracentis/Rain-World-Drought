@@ -67,11 +67,6 @@ namespace Rain_World_Drought.Resource
 
         #region AddLandscape
 
-        /// <summary>
-        /// Add this to load Drought Scene separately in MenuIllust.LoadFile
-        /// </summary>
-        public const string key = "";
-
         private static void BuildSceneHK(On.Menu.MenuScene.orig_BuildScene orig, MenuScene self)
         {
             EnumSwitch.MenuSceneID id = EnumSwitch.GetMenuSceneID(self.sceneID);
@@ -82,7 +77,7 @@ namespace Rain_World_Drought.Resource
             {
                 // Intake System
                 case EnumSwitch.MenuSceneID.Landscape_IS:
-                    self.sceneFolder = key + "Scenes" + Path.DirectorySeparatorChar + "Landscape - IS";
+                    self.sceneFolder = "Scenes" + Path.DirectorySeparatorChar + "Landscape - IS";
                     if (self.flatMode)
                     {
                         self.AddIllustration(new MenuIllustration(self.menu, self, self.sceneFolder, "Landscape - IS - Flat", new Vector2(683f, 384f), false, true));
@@ -104,7 +99,7 @@ namespace Rain_World_Drought.Resource
                 // Forest Sanctuary
                 case EnumSwitch.MenuSceneID.Landscape_FS:
                     // Debug.Log("Loading forest sanctuary");
-                    self.sceneFolder = key + "Scenes" + Path.DirectorySeparatorChar + "Landscape - FS";
+                    self.sceneFolder = "Scenes" + Path.DirectorySeparatorChar + "Landscape - FS";
                     if (self.flatMode)
                     {
                         self.AddIllustration(new MenuIllustration(self.menu, self, self.sceneFolder, "Landscape - FS - Flat", new Vector2(683f, 384f), false, true));
@@ -128,7 +123,7 @@ namespace Rain_World_Drought.Resource
                     break;
                 // The Fragmented Exterior
                 case EnumSwitch.MenuSceneID.Landscape_MW:
-                    self.sceneFolder = key + "Scenes" + Path.DirectorySeparatorChar + "Landscape - MW";
+                    self.sceneFolder = "Scenes" + Path.DirectorySeparatorChar + "Landscape - MW";
                     if (self.flatMode)
                     {
                         self.AddIllustration(new MenuIllustration(self.menu, self, self.sceneFolder, "Landscape - MW - Flat", new Vector2(683f, 384f), false, true));
@@ -203,10 +198,7 @@ namespace Rain_World_Drought.Resource
         public static void SetScenePos(MenuScene self)
         {
             string filePath = string.Concat(
-                Custom.RootFolderDirectory(),
-                Path.DirectorySeparatorChar,
-                "Assets",
-                Path.DirectorySeparatorChar,
+                ResourceManager.assetDir,
                 "Futile",
                 Path.DirectorySeparatorChar,
                 "Resources",
@@ -214,7 +206,7 @@ namespace Rain_World_Drought.Resource
                 self.sceneFolder,
                 Path.DirectorySeparatorChar,
                 "positions.txt"
-            );
+                );
             if (self.sceneFolder != string.Empty && File.Exists(filePath))
             {
                 string[] array = File.ReadAllLines(filePath);
