@@ -3,6 +3,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using HUD;
 using Rain_World_Drought.Enums;
+using Rain_World_Drought.Resource;
 using UnityEngine;
 
 namespace Rain_World_Drought.Slugcat
@@ -354,67 +355,67 @@ namespace Rain_World_Drought.Slugcat
                                 break;
                             case ID.Moon_Pearl_CC:
                                 State.InfluenceLike(1f);
-                                LoadEventsFromFile(7);
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.PC_Moon_Pearl_CC);
                                 break;
                             case ID.Moon_Pearl_SI_west:
                                 PearlIntro();
-                                LoadEventsFromFile(20);
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.PC_Moon_Pearl_SI_west);
                                 break;
                             case ID.Moon_Pearl_SI_top:
                                 PearlIntro();
-                                LoadEventsFromFile(21);
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.PC_Moon_Pearl_SI_top);
                                 break;
                             case ID.Moon_Pearl_LF_west:
                                 PearlIntro();
-                                LoadEventsFromFile(10);
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.PC_Moon_Pearl_LF_west);
                                 break;
                             case ID.Moon_Pearl_LF_bottom:
                                 PearlIntro();
-                                LoadEventsFromFile(11);
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.PC_Moon_Pearl_LF_bottom);
                                 break;
                             case ID.Moon_Pearl_HI:
                                 PearlIntro();
-                                LoadEventsFromFile(12);
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.PC_Moon_Pearl_HI);
                                 break;
                             case ID.Moon_Pearl_SH:
                                 PearlIntro();
-                                LoadEventsFromFile(13);
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.PC_Moon_Pearl_SH);
                                 break;
                             case ID.Moon_Pearl_DS:
                                 PearlIntro();
-                                LoadEventsFromFile(14);
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.PC_Moon_Pearl_DS);
                                 break;
                             case ID.Moon_Pearl_SB_filtration:
                                 PearlIntro();
-                                LoadEventsFromFile(15);
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.PC_Moon_Pearl_SB_filtration);
                                 break;
                             case ID.Moon_Pearl_GW:
                                 PearlIntro();
-                                LoadEventsFromFile(16);
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.PC_Moon_Pearl_GW);
                                 break;
                             case ID.Moon_Pearl_SL_bridge:
                                 PearlIntro();
-                                LoadEventsFromFile(17);
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.PC_Moon_Pearl_SL_bridge);
                                 break;
                             case ID.Moon_Pearl_SL_moon:
                                 PearlIntro();
-                                LoadEventsFromFile(18);
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.PC_Moon_Pearl_SL_moon);
                                 break;
                             case ID.Moon_Pearl_SU:
                                 PearlIntro();
-                                LoadEventsFromFile(41);
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.PC_Moon_Pearl_SU);
                                 break;
                             case ID.Moon_Pearl_SB_ravine:
                                 PearlIntro();
-                                LoadEventsFromFile(43);
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.PC_Moon_Pearl_SB_ravine);
                                 break;
                             case ID.Moon_Pearl_UW:
                                 PearlIntro();
-                                LoadEventsFromFile(42);
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.PC_Moon_Pearl_UW);
                                 break;
                             case ID.Moon_Pearl_SL_chimney:
                                 PearlIntro();
-                                LoadEventsFromFile(54);
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.PC_Moon_Pearl_SL_chimney);
                                 break;
                         }
                         break;
@@ -454,14 +455,11 @@ namespace Rain_World_Drought.Slugcat
                         events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Thank You, <PlayerName>"), 0));
                         break;
                     case EnumSwitch.ConversationID.SI_Spire1:
-                        LoadEventsFromFile(22);
-                        break;
+                        TextManager.LoadEventsFromFile(this, TextManager.EventID.PC_SI_Spire1); break;
                     case EnumSwitch.ConversationID.SI_Spire2:
-                        LoadEventsFromFile(23);
-                        break;
+                        TextManager.LoadEventsFromFile(this, TextManager.EventID.PC_SI_Spire2); break;
                     case EnumSwitch.ConversationID.SI_Spire3:
-                        LoadEventsFromFile(24);
-                        break;
+                        TextManager.LoadEventsFromFile(this, TextManager.EventID.PC_SI_Spire3); break;
                 }
             }
 
@@ -518,7 +516,7 @@ namespace Rain_World_Drought.Slugcat
 
             private void MiscPearl(bool miscPearl2)
             {
-                LoadEventsFromFile(38, true, (pearlConversation.currentPearl == null) ? UnityEngine.Random.Range(0, 100000) : pearlConversation.currentPearl.abstractPhysicalObject.ID.RandomSeed);
+                TextManager.LoadEventsFromFile(this, TextManager.EventID.PC_MiscPearl, true, (pearlConversation.currentPearl == null) ? UnityEngine.Random.Range(0, 100000) : pearlConversation.currentPearl.abstractPhysicalObject.ID.RandomSeed);
                 State.miscPearlCounter++;
             }
 
@@ -550,7 +548,7 @@ namespace Rain_World_Drought.Slugcat
                         events.Add(new Conversation.TextEvent(this, 0, Translate("And this one is fresh! It was not long ago this data was written to it!"), 10));
                         break;
                 }
-                LoadEventsFromFile(40, true, (pearlConversation.currentPearl == null) ? UnityEngine.Random.Range(0, 100000) : pearlConversation.currentPearl.abstractPhysicalObject.ID.RandomSeed);
+                TextManager.LoadEventsFromFile(this, TextManager.EventID.PC_PebblesPearl, true, (pearlConversation.currentPearl == null) ? UnityEngine.Random.Range(0, 100000) : pearlConversation.currentPearl.abstractPhysicalObject.ID.RandomSeed);
             }
 
             public PearlConversation pearlConversation;

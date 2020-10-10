@@ -1,4 +1,5 @@
-﻿using Partiality.Modloader;
+﻿using Menu;
+using Partiality.Modloader;
 using Rain_World_Drought.Creatures;
 using Rain_World_Drought.Effects;
 using Rain_World_Drought.Enums;
@@ -7,6 +8,8 @@ using Rain_World_Drought.PlacedObjects;
 using Rain_World_Drought.Resource;
 using Rain_World_Drought.Slugcat;
 using System;
+using System.IO;
+using UnityEngine;
 
 namespace Rain_World_Drought
 {
@@ -21,6 +24,7 @@ namespace Rain_World_Drought
         public override void OnEnable()
         {
             base.OnEnable();
+            ResourceReady = false;
 
             #region Creatures
             // namespaces must be 'Rain_World_Drought.Creatures', not 'Creature' without s, which confuses the compiler with global::Creature
@@ -46,9 +50,10 @@ namespace Rain_World_Drought
             DataPearlHK.Patch();
 
             #region Resource
-            FutileHK.Patch(); // This must be reworked later to import sprite without replacing vanilla resource
+            //FutileHK.Patch(); // Replaced with ResourceManager
             MenuSceneHK.Patch(); // Check this after CRS implement
             MusicPieceHK.Patch();
+            TextManager.Patch();
             #endregion Resource
 
             #region Slugcat
@@ -79,12 +84,45 @@ namespace Rain_World_Drought
         }
 
         public static bool EnumExt => (int)EnumExt_Drought.LightWorm > 10;
+        public static bool ResourceReady;
+        public static bool Enabled => EnumExt && ResourceReady;
 
         private static void RainWorldHK(On.RainWorld.orig_Start orig, RainWorld self)
         {
             orig.Invoke(self);
+
+            ResourceManager.assetDir = string.Concat(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location),
+                Path.DirectorySeparatorChar, "Language");
+            error = "";
+
+            bool check = ResourceManager.LoadAtlases();
+            if (!check) { error = ResourceManager.error; goto handleError; }
+
+        handleError:
+            if (!EnumExt) { error = "EnumExtender is missing! Download EnumExtender from RainDB - Tools Category."; }
+            if (!string.IsNullOrEmpty(error))
+            {
+                ResourceReady = false;
+                On.Menu.MainMenu.ctor += new On.Menu.MainMenu.hook_ctor(DisplayErrorHK);
+            }
+            else { ResourceReady = true; }
+
             StaticWorldPatch.AddCreatureTemplate();
             StaticWorldPatch.ModifyRelationship();
+        }
+
+        public static string error;
+
+        private static void DisplayErrorHK(On.Menu.MainMenu.orig_ctor orig, MainMenu self, ProcessManager manager, bool showRegionSpecificBkg)
+        {
+            orig.Invoke(self, manager, showRegionSpecificBkg);
+
+            foreach (MenuObject o in self.pages[0].subObjects)
+            { if (o is SimpleButton s && s.signalText == "SINGLE PLAYER") { s.buttonBehav.greyedOut = true; } }
+
+            MenuLabel l = new MenuLabel(self, self.pages[0], error, new Vector2(483f, 740f), new Vector2(400f, 15f), false);
+            l.label.color = Color.red;
+            self.pages[0].subObjects.Add(l);
         }
 
         /// <summary>

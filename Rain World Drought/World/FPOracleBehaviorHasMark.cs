@@ -1663,51 +1663,51 @@ namespace Rain_World_Drought.OverWorld
                                 PebblesPearl();
                                 break;
                             case ID.Moon_Pearl_CC:
-                                LoadEventsFromFile(8);
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_Moon_Pearl_CC);
                                 break;
                             case ID.Moon_Pearl_SI_west:
                                 PearlIntro();
-                                LoadEventsFromFile(64);
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_Moon_Pearl_SI_west);
                                 break;
                             case ID.Moon_Pearl_SI_top:
                                 PearlIntro();
-                                LoadEventsFromFile(65);
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_Moon_Pearl_SI_top);
                                 break;
                             case ID.Moon_Pearl_LF_west:
                                 PearlIntro();
-                                LoadEventsFromFile(55);
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_Moon_Pearl_LF_west);
                                 break;
                             case ID.Moon_Pearl_LF_bottom:
                                 PearlIntro();
-                                LoadEventsFromFile(56);
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_Moon_Pearl_LF_bottom);
                                 break;
                             case ID.Moon_Pearl_HI:
                                 PearlIntro();
-                                LoadEventsFromFile(57);
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_Moon_Pearl_HI);
                                 break;
                             case ID.Moon_Pearl_SH:
                                 PearlIntro();
-                                LoadEventsFromFile(58);
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_Moon_Pearl_SH);
                                 break;
                             case ID.Moon_Pearl_DS:
                                 PearlIntro();
-                                LoadEventsFromFile(59);
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_Moon_Pearl_DS);
                                 break;
                             case ID.Moon_Pearl_SB_filtration:
                                 PearlIntro();
-                                LoadEventsFromFile(60);
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_Moon_Pearl_SB_filtration);
                                 break;
                             case ID.Moon_Pearl_GW:
                                 PearlIntro();
-                                LoadEventsFromFile(61);
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_Moon_Pearl_GW);
                                 break;
                             case ID.Moon_Pearl_SL_bridge:
                                 PearlIntro();
-                                LoadEventsFromFile(62);
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_Moon_Pearl_SL_bridge);
                                 break;
                             case ID.Moon_Pearl_SL_moon:
                                 PearlIntro();
-                                LoadEventsFromFile(63);
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_Moon_Pearl_SL_moon);
                                 break;
 
                             case ID.Moon_Misc_Item:
@@ -1729,79 +1729,58 @@ namespace Rain_World_Drought.OverWorld
                                         events.Add(new Conversation.TextEvent(this, 10, DroughtMod.Translate("It's an edible plant. You could use the energy!"), 0));
                                         break;
                                     case MiscItemType.KarmaFlower:
-                                        LoadEventsFromFile(35);
-                                        break;
+                                        TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_KarmaFlower); break;
                                     case MiscItemType.LMOracleSwarmer:
                                         events.Add(new Conversation.TextEvent(this, 10, DroughtMod.Translate("Is this one of Moon's neurons?"), 3));
                                         events.Add(new Conversation.TextEvent(this, 10, DroughtMod.Translate("Why bring it to me? I already have plenty."), 3));
                                         break;
                                     case MiscItemType.DangleFruit:
-                                        LoadEventsFromFile(36);
-                                        break;
+                                        TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_DangleFruit); break;
                                     case MiscItemType.FlareBomb:
-                                        LoadEventsFromFile(37);
-                                        break;
+                                        TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_FlareBomb); break;
                                     case MiscItemType.VultureMask:
-                                        LoadEventsFromFile(39);
-                                        break;
+                                        TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_VultureMask); break;
                                     case MiscItemType.PuffBall:
-                                        LoadEventsFromFile(45);
-                                        break;
+                                        TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_PuffBall); break;
                                     case MiscItemType.JellyFish:
-                                        LoadEventsFromFile(46);
-                                        break;
+                                        TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_JellyFish); break;
                                     case MiscItemType.Lantern:
-                                        LoadEventsFromFile(47);
-                                        break;
+                                        TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_Lantern); break;
                                     case MiscItemType.Mushroom:
-                                        LoadEventsFromFile(48);
-                                        break;
+                                        TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_Mushroom); break;
                                     case MiscItemType.FirecrackerPlant:
-                                        LoadEventsFromFile(49);
-                                        break;
+                                        TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_FirecrackerPlant); break;
                                     case MiscItemType.SlimeMold:
-                                        LoadEventsFromFile(50);
-                                        break;
+                                        TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_SlimeMold); break;
                                     case MiscItemType.ScavBomb:
-                                        LoadEventsFromFile(75);
-                                        break;
+                                        TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_ScavBomb); break;
                                     case MiscItemType.BubbleGrass:
-                                        LoadEventsFromFile(53);
-                                        break;
+                                        TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_BubbleGrass); break;
                                     case MiscItemType.OverseerRemains:
-                                        LoadEventsFromFile(52);
-                                        break;
+                                        TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_OverseerRemains); break;
                                 }
                                 break;
                             case ID.Moon_Pearl_SU:
                                 PearlIntro();
-                                LoadEventsFromFile(69);
-                                break;
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_Moon_Pearl_SU); break;
                             case ID.Moon_Pearl_SB_ravine:
                                 PearlIntro();
-                                LoadEventsFromFile(60);
-                                break;
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_Moon_Pearl_SB_ravine); break;
                             case ID.Moon_Pearl_UW:
                                 PearlIntro();
-                                LoadEventsFromFile(70);
-                                break;
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_Moon_Pearl_UW); break;
                             case ID.Moon_Pearl_SL_chimney:
                                 PearlIntro();
-                                LoadEventsFromFile(62);
-                                break;
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_Moon_Pearl_SL_chimney); break;
                             case ID.Moon_Pearl_Red_stomach:
                                 PearlIntro();
-                                LoadEventsFromFile(51);
-                                break;
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_Moon_Pearl_Red_stomach); break;
                             case ID.Moon_Red_First_Conversation:
-                                LoadEventsFromFile(50);
-                                break;
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_Moon_Red_First_Conversation); break;
                             case ID.Moon_Red_Second_Conversation:
-                                LoadEventsFromFile(55);
-                                break;
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_Moon_Red_Second_Conversation); break;
                             case ID.Moon_Yellow_First_Conversation:
-                                LoadEventsFromFile(49);
-                                break;
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_Moon_Yellow_First_Conversation); break;
                         }
                         break;
                     case EnumSwitch.ConversationID.Moon_Pearl_MoonPearl:
@@ -1830,11 +1809,11 @@ namespace Rain_World_Drought.OverWorld
                         events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("The original memory was probably collected from Moon’s city."), 3));
                         break;
                     case EnumSwitch.ConversationID.SI_Spire1:
-                        TextManager.LoadEventsFromFile(this, 66); break;
+                        TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_SI_Spire1); break;
                     case EnumSwitch.ConversationID.SI_Spire2:
-                        TextManager.LoadEventsFromFile(this, 67); break;
+                        TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_SI_Spire2); break;
                     case EnumSwitch.ConversationID.SI_Spire3:
-                        TextManager.LoadEventsFromFile(this, 68); break;
+                        TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_SI_Spire3); break;
                 }
             }
 
@@ -1882,7 +1861,7 @@ namespace Rain_World_Drought.OverWorld
 
             private void MiscPearl(bool miscPearl2)
             {
-                LoadEventsFromFile((!miscPearl2) ? 74 : 74, true, (FPOracleBehaviorHasMark.holdingObject == null) ? UnityEngine.Random.Range(0, 100000) : FPOracleBehaviorHasMark.holdingObject.abstractPhysicalObject.ID.RandomSeed);
+                TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_MiscPearl, true, (FPOracleBehaviorHasMark.holdingObject == null) ? UnityEngine.Random.Range(0, 100000) : FPOracleBehaviorHasMark.holdingObject.abstractPhysicalObject.ID.RandomSeed);
                 State.miscPearlCounter++;
             }
 
@@ -1909,7 +1888,7 @@ namespace Rain_World_Drought.OverWorld
                         events.Add(new Conversation.TextEvent(this, 0, Translate("And this one is sharp! It was not long ago this data was written to it!"), 10));
                         break;
                 }
-                LoadEventsFromFile(73, true, (FPOracleBehaviorHasMark.holdingObject == null) ? UnityEngine.Random.Range(0, 100000) : FPOracleBehaviorHasMark.holdingObject.abstractPhysicalObject.ID.RandomSeed);
+                TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_PebblesPearl, true, (FPOracleBehaviorHasMark.holdingObject == null) ? UnityEngine.Random.Range(0, 100000) : FPOracleBehaviorHasMark.holdingObject.abstractPhysicalObject.ID.RandomSeed);
             }
 
             public int GetARandomChatLog(bool whichPearl)

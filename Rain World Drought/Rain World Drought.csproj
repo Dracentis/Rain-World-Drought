@@ -96,9 +96,10 @@
     <Compile Include="PlacedObjects\DataPearlHK.cs" />
     <Compile Include="PlacedObjects\PistonPhysics.cs" />
     <Compile Include="PublicBee.cs" />
-    <Compile Include="Resource\FutileHK.cs" />
+    <None Include="Resource\FutileHK.cs" />
     <Compile Include="Resource\MenuSceneHK.cs" />
     <Compile Include="Resource\MusicPieceHK.cs" />
+    <Compile Include="Resource\ResourceManager.cs" />
     <Compile Include="Resource\TextManager.cs" />
     <Compile Include="Slugcat\DreamsStateHK.cs" />
     <Compile Include="Slugcat\FoodMeterHK.cs" />
