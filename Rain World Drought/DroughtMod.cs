@@ -50,6 +50,7 @@ namespace Rain_World_Drought
             DataPearlHK.Patch();
 
             #region Resource
+            // namespaces must be 'Rain_World_Drought.Resource', not 'Resources' with s, which confuses the compiler with UnityEngine.Resources
             //FutileHK.Patch(); // Replaced with ResourceManager
             MenuSceneHK.Patch(); // Check this after CRS implement
             MusicPieceHK.Patch();
@@ -92,9 +93,10 @@ namespace Rain_World_Drought
             orig.Invoke(self);
 
             ResourceManager.assetDir = string.Concat(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location),
-                Path.DirectorySeparatorChar, "Language");
+                Path.DirectorySeparatorChar, "DroughtAssets", Path.DirectorySeparatorChar);
             error = "";
 
+            if (!Directory.Exists(ResourceManager.assetDir)) { error = "DroughtAssets folder is missing! Put DroughtAssets with [Rain World Drought.dll]!"; goto handleError; }
             bool check = ResourceManager.LoadAtlases();
             if (!check) { error = ResourceManager.error; goto handleError; }
 

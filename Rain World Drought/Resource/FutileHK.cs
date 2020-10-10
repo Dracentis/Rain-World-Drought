@@ -7,6 +7,9 @@ using UnityEngine;
 
 namespace Rain_World_Drought.Resource
 {
+    /// <summary>
+    /// UNUSED
+    /// </summary>
     internal static class FutileHK
     {
         public static void Patch()

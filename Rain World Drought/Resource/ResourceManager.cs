@@ -8,6 +8,16 @@ namespace Rain_World_Drought.Resource
 {
     public static class ResourceManager
     {
+        /* To do List to be moved
+         * Load Drought Decals
+         * Load Drought Illustrations
+         * Load Drought Songs (Not procedural)
+         * Load Drought Palette
+         * Load Drought Scene
+         *
+         * CRS support later
+         */
+
         public static string assetDir;
         public static string error;
 
@@ -20,15 +30,15 @@ namespace Rain_World_Drought.Resource
 
             foreach (string name in names)
             {
-                string file = assetDir + "Futile" + Path.DirectorySeparatorChar + "Resources" + Path.DirectorySeparatorChar + "Atlases" + name + ".txt";
+                string file = assetDir + "Futile" + Path.DirectorySeparatorChar + "Resources" + Path.DirectorySeparatorChar + "Atlases" + Path.DirectorySeparatorChar + name + ".txt";
                 try
                 {
-                    if (!File.Exists(file)) { error = $"File [{assetDir}] is missing!"; return false; }
+                    if (!File.Exists(file)) { error = $"File [{file}] is missing!"; return false; }
                     string data = File.ReadAllText(file);
                     UnloadDuplicate(data);
 
-                    file = assetDir + "Futile" + Path.DirectorySeparatorChar + "Resources" + Path.DirectorySeparatorChar + "Atlases" + name + ".png";
-                    if (!File.Exists(file)) { error = $"File [{assetDir}] is missing!"; return false; }
+                    file = assetDir + "Futile" + Path.DirectorySeparatorChar + "Resources" + Path.DirectorySeparatorChar + "Atlases" + Path.DirectorySeparatorChar + name + ".png";
+                    if (!File.Exists(file)) { error = $"File [{file}] is missing!"; return false; }
                     WWW www = new WWW("file:///" + file);
                     Texture2D texture = new Texture2D(1, 1, TextureFormat.ARGB32, false) { anisoLevel = 0, filterMode = FilterMode.Point };
                     www.LoadImageIntoTexture(texture);
