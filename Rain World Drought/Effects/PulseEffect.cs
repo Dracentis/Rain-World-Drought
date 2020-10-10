@@ -1,42 +1,45 @@
-﻿using System;
+﻿using Rain_World_Drought.Enums;
+using System;
 using UnityEngine;
 
-public class PulseEffect : UpdatableAndDeletable
+namespace Rain_World_Drought.Effects
 {
-    public PulseEffect(Room room)
+    public class PulseEffect : UpdatableAndDeletable
     {
-        this.room = room;
-        room.roomSettings.GetEffectAmount((RoomSettings.RoomEffect.Type)patch_RoomSettings.patch_RoomEffect.Type.Pulse);
-    }
+        public PulseEffect(Room room)
+        {
+            this.room = room;
+            room.roomSettings.GetEffectAmount(EnumExt_Drought.Pulse);
+        }
 
-    public override void Update(bool eu)
-    {
-        base.Update(eu);
-        if (room == null || room.roomSettings == null || room.waterObject == null)
+        public override void Update(bool eu)
         {
-            return;
-        }
-        if (room.world.rainCycle.TimeUntilRain <= 1000)
-        {
-            if (room.world.rainCycle.TimeUntilRain > 0 && room.waterObject.fWaterLevel < room.waterObject.originalWaterLevel + this.room.roomRain.globalRain.flood)
+            base.Update(eu);
+            if (room == null || room.roomSettings == null || room.waterObject == null)
             {
-                room.waterObject.fWaterLevel = room.waterObject.fWaterLevel + room.waterObject.originalWaterLevel / 300f;
+                return;
             }
-            else if (room.world.rainCycle.TimeUntilRain > 0 && room.waterObject.fWaterLevel > room.waterObject.originalWaterLevel + this.room.roomRain.globalRain.flood)
+            if (room.world.rainCycle.TimeUntilRain <= 1000)
             {
-                room.waterObject.fWaterLevel = room.waterObject.fWaterLevel - room.waterObject.originalWaterLevel / 300f;
+                if (room.world.rainCycle.TimeUntilRain > 0 && room.waterObject.fWaterLevel < room.waterObject.originalWaterLevel + this.room.roomRain.globalRain.flood)
+                {
+                    room.waterObject.fWaterLevel = room.waterObject.fWaterLevel + room.waterObject.originalWaterLevel / 300f;
+                }
+                else if (room.world.rainCycle.TimeUntilRain > 0 && room.waterObject.fWaterLevel > room.waterObject.originalWaterLevel + this.room.roomRain.globalRain.flood)
+                {
+                    room.waterObject.fWaterLevel = room.waterObject.fWaterLevel - room.waterObject.originalWaterLevel / 300f;
+                }
+                else
+                {
+                    room.waterObject.fWaterLevel = Mathf.Lerp(room.waterObject.fWaterLevel, room.waterObject.originalWaterLevel + this.room.roomRain.globalRain.flood, 0.1f);
+                }
+                return;
             }
-            else
-            {
-                room.waterObject.fWaterLevel = Mathf.Lerp(room.waterObject.fWaterLevel, room.waterObject.originalWaterLevel + this.room.roomRain.globalRain.flood, 0.1f);
-            }
-            return;
-        }
-        float effectAmount = room.roomSettings.GetEffectAmount((RoomSettings.RoomEffect.Type)patch_RoomSettings.patch_RoomEffect.Type.Pulse);
-            float num = (600f*effectAmount) * (float)Math.Sin((double)((float)room.world.rainCycle.timer % 2500f / 397.887257729f));
+            float effectAmount = room.roomSettings.GetEffectAmount(EnumExt_Drought.Pulse);
+            float num = (600f * effectAmount) * (float)Math.Sin((double)((float)room.world.rainCycle.timer % 2500f / 397.887257729f));
             room.waterObject.fWaterLevel = room.waterObject.originalWaterLevel + num + this.room.roomRain.globalRain.flood;
             room.waterObject.GeneralUpsetSurface((float)Math.Sin((double)((float)room.world.rainCycle.timer % 5000f / 801.5f)) * 2f);
             return;
-        
+        }
     }
 }
