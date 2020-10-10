@@ -1,22 +1,21 @@
-﻿using System;
+﻿using Menu;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UnityEngine;
 
 namespace Rain_World_Drought.Resource
 {
     public static class ResourceManager
     {
-        /* To do List to be moved
-         * Load Drought Decals
-         * Load Drought Illustrations
-         * Load Drought Songs (Not procedural)
-         * Load Drought Palette
-         * Load Drought Scene
-         *
-         * CRS support later
-         */
+        public static void Patch()
+        {
+            On.Menu.MenuIllustration.LoadFile_1 += new On.Menu.MenuIllustration.hook_LoadFile_1(MenuIllustrationLoadFileHK);
+            On.CustomDecal.LoadFile += new On.CustomDecal.hook_LoadFile(CustomDecalLoadFileHK);
+            On.RoomCamera.LoadPalette += new On.RoomCamera.hook_LoadPalette(RoomCameraLoadPaletteHK);
+        }
 
         public static string assetDir;
         public static string error;
@@ -139,7 +138,7 @@ namespace Rain_World_Drought.Resource
                 fatlasElement.sourceRect = new Rect(left, top, width, height);
                 atlas._elements.Add(fatlasElement);
                 atlas._elementsByName.Add(fatlasElement.name, fatlasElement);
-                Debug.Log(fatlasElement.name);
+                // Debug.Log(fatlasElement.name);
 
                 fatlasElement.atlas = atlas;
                 Futile.atlasManager.AddElement(fatlasElement);
@@ -150,21 +149,126 @@ namespace Rain_World_Drought.Resource
 
         #region Music
 
+        private static string[] droughtSongs = new string[] { "TH_IS", "TH_FS", "TH_MW", "RW_60" };
+
         public static bool IsDroughtTrack(string trackName)
         {
             trackName = trackName.ToUpper();
-            if (trackName.StartsWith("TH_IS")) { return true; }
-            if (trackName.StartsWith("TH_FS")) { return true; }
-            if (trackName.StartsWith("TH_MW")) { return true; }
+            foreach (string test in droughtSongs)
+            { if (trackName.StartsWith(test)) { return true; } }
             return false;
         }
 
-        public static AudioClip LoadSubTrack(string trackName)
+        public static AudioClip LoadSubTrack(string trackName, bool procedural)
         {
-            WWW www = new WWW("file://" + assetDir + "Futile" + Path.DirectorySeparatorChar + "Resources" + Path.DirectorySeparatorChar + "Music" + Path.DirectorySeparatorChar + "Procedural" + Path.DirectorySeparatorChar + trackName + ".ogg");
+            WWW www = new WWW(string.Concat(
+                "file://",
+                assetDir,
+                "Futile",
+                Path.DirectorySeparatorChar,
+                "Resources",
+                Path.DirectorySeparatorChar,
+                "Music",
+                Path.DirectorySeparatorChar,
+                procedural ? "Procedural" : "Songs",
+                Path.DirectorySeparatorChar,
+                trackName,
+                procedural ? ".ogg" : ".mp3"));
             return www.GetAudioClip(false, true, AudioType.OGGVORBIS);
         }
 
         #endregion Music
+
+        #region Replacer
+
+        /// <summary>
+        /// Try loading Drought Resources first, then try original files
+        /// </summary>
+        private static void MenuIllustrationLoadFileHK(On.Menu.MenuIllustration.orig_LoadFile_1 orig, MenuIllustration self, string folder)
+        {
+            string path = string.Concat(
+                assetDir,
+                "Futile",
+                Path.DirectorySeparatorChar,
+                "Resources",
+                Path.DirectorySeparatorChar,
+                folder,
+                Path.DirectorySeparatorChar,
+                self.fileName,
+                ".png"
+                );
+            //Debug.Log($"Drought Checks {path}: {File.Exists(path)}");
+            if (!File.Exists(path)) { orig.Invoke(self, folder); return; }
+
+            self.www = new WWW("file:///" + path);
+            self.texture = new Texture2D(1, 1, TextureFormat.ARGB32, false);
+            self.texture.wrapMode = TextureWrapMode.Clamp;
+            if (self.crispPixels)
+            {
+                self.texture.anisoLevel = 0;
+                self.texture.filterMode = FilterMode.Point;
+            }
+            self.www.LoadImageIntoTexture(self.texture);
+            HeavyTexturesCache.LoadAndCacheAtlasFromTexture(self.fileName, self.texture);
+            self.www = null;
+        }
+
+        private static void CustomDecalLoadFileHK(On.CustomDecal.orig_LoadFile orig, CustomDecal self, string fileName)
+        {
+            if (Futile.atlasManager.GetAtlasWithName(fileName) != null) { return; }
+            string path = string.Concat(
+                assetDir,
+                "Futile",
+                Path.DirectorySeparatorChar,
+                "Resources",
+                Path.DirectorySeparatorChar,
+                "Decals",
+                Path.DirectorySeparatorChar,
+                fileName,
+                ".png"
+                );
+            if (!File.Exists(path)) { orig.Invoke(self, fileName); return; }
+
+            WWW www = new WWW("file:///" + path);
+            Texture2D texture2D = new Texture2D(1, 1, TextureFormat.ARGB32, false);
+            texture2D.wrapMode = TextureWrapMode.Clamp;
+            texture2D.anisoLevel = 0;
+            texture2D.filterMode = FilterMode.Point;
+            www.LoadImageIntoTexture(texture2D);
+            HeavyTexturesCache.LoadAndCacheAtlasFromTexture(fileName, texture2D);
+        }
+
+        public static int[] droughtPalettes = new int[] { 36, 37 };
+
+        private static void RoomCameraLoadPaletteHK(On.RoomCamera.orig_LoadPalette orig, RoomCamera self, int pal, ref Texture2D texture)
+        {
+            if (!droughtPalettes.Contains(pal)) { orig.Invoke(self, pal, ref texture); return; }
+
+            texture = new Texture2D(32, 16, TextureFormat.ARGB32, false);
+            texture.anisoLevel = 0;
+            texture.filterMode = FilterMode.Point;
+            self.www = new WWW(string.Concat(
+                "file:///",
+                assetDir,
+                Path.DirectorySeparatorChar,
+                "Futile",
+                Path.DirectorySeparatorChar,
+                "Resources",
+                Path.DirectorySeparatorChar,
+                "Palettes",
+                Path.DirectorySeparatorChar,
+                "palette",
+                pal,
+                ".png"
+                ));
+            self.www.LoadImageIntoTexture(texture);
+            if (self.room != null)
+            { self.ApplyEffectColorsToPaletteTexture(ref texture, self.room.roomSettings.EffectColorA, self.room.roomSettings.EffectColorB); }
+            else
+            { self.ApplyEffectColorsToPaletteTexture(ref texture, -1, -1); }
+            texture.Apply(false);
+        }
+
+        #endregion Replacer
     }
 }

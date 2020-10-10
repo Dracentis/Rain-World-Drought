@@ -25,6 +25,8 @@ namespace Rain_World_Drought
         {
             base.OnEnable();
             ResourceReady = false;
+            ResourceManager.assetDir = string.Concat(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location),
+                Path.DirectorySeparatorChar, "DroughtAssets", Path.DirectorySeparatorChar);
 
             #region Creatures
             // namespaces must be 'Rain_World_Drought.Creatures', not 'Creature' without s, which confuses the compiler with global::Creature
@@ -54,6 +56,7 @@ namespace Rain_World_Drought
             //FutileHK.Patch(); // Replaced with ResourceManager
             MenuSceneHK.Patch(); // Check this after CRS implement
             MusicPieceHK.Patch();
+            ResourceManager.Patch();
             TextManager.Patch();
             #endregion Resource
 
@@ -92,8 +95,6 @@ namespace Rain_World_Drought
         {
             orig.Invoke(self);
 
-            ResourceManager.assetDir = string.Concat(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location),
-                Path.DirectorySeparatorChar, "DroughtAssets", Path.DirectorySeparatorChar);
             error = "";
 
             if (!Directory.Exists(ResourceManager.assetDir)) { error = "DroughtAssets folder is missing! Put DroughtAssets with [Rain World Drought.dll]!"; goto handleError; }
