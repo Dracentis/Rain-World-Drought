@@ -14,6 +14,7 @@ namespace Rain_World_Drought.OverWorld
             On.HUD.HUD.InitSleepHud += new On.HUD.HUD.hook_InitSleepHud(InitSleepHudHK);
             On.Menu.SleepAndDeathScreen.GetDataFromGame += new On.Menu.SleepAndDeathScreen.hook_GetDataFromGame(GetDataFromGameHK);
             On.HUD.KarmaMeter.KarmaSymbolSprite += new On.HUD.KarmaMeter.hook_KarmaSymbolSprite(KarmaSymbolSpriteHK);
+            On.HUD.HUD.InitSinglePlayerHud += new On.HUD.HUD.hook_InitSinglePlayerHud(InitSinglePlayerHudHK);
         }
 
         public static bool[] danger;
@@ -85,6 +86,15 @@ namespace Rain_World_Drought.OverWorld
         {
             if (k.y == NextKarmaSymbol) { return string.Concat("smallKarma", k.x, "-", k.y); }
             return orig.Invoke(small, k);
+        }
+
+        private static void InitSinglePlayerHudHK(On.HUD.HUD.orig_InitSinglePlayerHud orig, HUD.HUD self, RoomCamera cam)
+        {
+            orig(self, cam);
+            if(self.owner is Player ply && Slugcat.WandererSupplement.IsWanderer(ply))
+            {
+                self.AddPart(new FocusMeter(self, self.fContainers[1]));
+            }
         }
     }
 }

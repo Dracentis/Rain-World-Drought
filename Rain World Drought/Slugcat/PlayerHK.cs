@@ -465,7 +465,7 @@ namespace Rain_World_Drought.Slugcat
                             worm.swishCounter = 0;
                             worm.swishDir = null;
                             worm.attackReady *= 0.5f;
-                            worm.Violence(null, localPos.normalized * 100f, worm.mainBodyChunk, null, DamageType.Blunt, 0.15f, 30f);
+                            worm.Violence(null, localPos.normalized * 100f, worm.mainBodyChunk, null, Creature.DamageType.Blunt, 0.15f, 30f);
                             worm.lameCounter = 60;
                         }
                         break;
