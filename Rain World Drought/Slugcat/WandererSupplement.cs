@@ -1,5 +1,6 @@
 ﻿using Rain_World_Drought.Creatures;
 using System.Collections.Generic;
+using RWCustom;
 
 namespace Rain_World_Drought.Slugcat
 {
@@ -8,19 +9,9 @@ namespace Rain_World_Drought.Slugcat
         public WandererSupplement(Player self)
         {
             this.self = self;
-            this.bashing = false;
-            this.jmpDwn = false;
-            this.parry = 0;
-            // this.lastAnimation = Player.AnimationIndex.None;
-            this.energy = 1f;
-            this.maxEnergy = 1f;
-            this.uses = MAX_USES;
-            this.hibernationPenalty = 2;
-            // this.hibernation1 = false;
-            // this.hibernation2 = false;
+            this.energy = maxEnergy;
             this.pearlConversation = new PearlConversation(self);
             this.voidEnergy = false;
-
             this.rad = 0;
         }
 
@@ -61,27 +52,51 @@ namespace Rain_World_Drought.Slugcat
         public const int SlugcatCharacter = 0;
         public const int StoryCharacter = 0;
 
-        public bool bashing;
-        public bool jmpDwn;
-        public float energy; //varies from 0f to 1f
-        public float maxEnergy = 1f;
-        public const float BASH_COST = 0.4f;
-        public const float RECHARGE_RATE = 0.002f;
-        public const float PARRY_COST = 0.5f;
-        public const int MAX_USES = 30;
-        public const int ENERGY_PER_HUNGER = 10;
+        #region Ability Suppliments
+        // Number of ability uses per food pip
+        public const int maxEnergy = 9;
+        // Duration of initial focus, in updates
+        internal const int focusDuration = 60;
+        // Duration of slowdown before a double-jump, in updates
+        internal const int slowdownDuration = 40;
+        // Maximum distance of weapons to parry, in pixels
+        internal const float parryRadius = 120f;
+        // Number of jumps allowed after the first double-jump
+        internal const int maxExtraJumps = 2;
+        // Change in velocity that a maximum force double-jump apples, in pixels per update
+        internal const float jumpForce = 15f;
+        // Number of updates after a double-jump that a parry will still apply
+        internal const int parryLength = 3;
+
+        internal int jumpsSinceGrounded = 0;
+        public int energy;
+        public bool hasHalfEnergyPip;
+        internal int focusLeft;
+        internal int slowdownLeft;
+        internal bool panicSlowdown;
+        internal float ticksUntilPanicHit;
+        internal bool canTripleJump;
+        internal int noFocusJumpCounter;
+        internal int wantToParry;
+        public bool jumpQueued;
+
+        internal int jumpForbidden;
+        internal int mapHeld;
+        #endregion Ability Suppliments
+
+        public float Focus => focusLeft / (float)focusDuration;
+        public float Slowdown => slowdownLeft / (float)slowdownDuration;
+        public float PanicSlowdown => (slowdownLeft == 0 || !panicSlowdown) ? 0f : Custom.LerpMap(ticksUntilPanicHit, 6f, 1f, 0f, 1f);
+        public float Energy => (energy + (hasHalfEnergyPip ? 0f : 0.5f)) / maxEnergy;
+        public int AirJumpsLeft => maxExtraJumps + 1 - jumpsSinceGrounded;
 
         #region Ending Supplement
         public bool voidEnergy = false; //true if the void effects are controlling the maxEnergy
+        public float voidEnergyAmount = 0f;
         public bool past22000 = false; //true if the player is in the void past -22000 y
         public bool past25000 = false; //true if the player is in the void past -25000 y
         #endregion Ending Supplement
-
-        public int hibernationPenalty;
-        // public bool hibernation1;
-        // public bool hibernation2;
-        public int uses;
-        public float parry; //varies from 45f to 0f
+        
         public WalkerBeast.PlayerInAntlers playerInAnt;
         // public Player.AnimationIndex lastAnimation; // not needed/
 
