@@ -11,6 +11,7 @@ namespace Rain_World_Drought
         {
         }
 
+        // I'll just believe in Slime_Cubed for implementing CM support without making it dependency
         public static CultureInfo GetCultureInfo(OptionInterface self) => return self.GetCultureInfo();
     }
 }

@@ -149,7 +149,6 @@ namespace Rain_World_Drought.Creatures
 
         public abstract class InputInstruction : OverseerHologram
         {
-            // Token: 0x060024C1 RID: 9409 RVA: 0x0023ACE8 File Offset: 0x00238EE8
             public InputInstruction(Overseer overseer, OverseerHologram.Message message, Creature communicateWith, float importance) : base(overseer, message, communicateWith, importance)
             {
                 if (overseer.AI.tutorialBehavior == null && message != OverseerHologram.Message.InWorldSuperJump && message != OverseerHologram.Message.PickupObject && message != OverseerHologram.Message.ScavengerTrade)

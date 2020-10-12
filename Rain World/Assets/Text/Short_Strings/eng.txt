@@ -1,0 +1,178 @@
+0 // Flag to check whether this file is encrypted (0 = raw, 1 = encrypted)
+// Add | at the end of each line and add translation. anything after '//' will be ignored.
+
+/// Character Screen ///
+THE WANDERER
+Curious and calm, with a deep desire to discover the ancient mysteries around it.<LINE>In tune with the events of the world, your journey will have a significant impact on things much greater than yourself.
+
+/// Region Name ///
+Intake System
+Looks to the Moon
+The Fragmented Exterior
+Forest Sanctuary
+
+/// Error Messages ///
+DroughtAssets folder is missing! Put DroughtAssets with [Rain World Drought.dll]!
+EnumExtender is missing! Download EnumExtender from RainDB - Tools Category.
+Directory [<assetDir>] is missing: Reinstall DroughtAssets.
+File [<file>] is missing: Reinstall DroughtAssets.
+Error occured while loading Drought Atlas [<file>]: Reinstall DroughtAssets.
+
+/// Tutorial ///
+While in the air, hold GRAB and then press JUMP to start boosting.
+Then hold a DIRECTION and press JUMP to finish the boost.
+
+/// PlayerName ///
+// occasionally by moon
+Little creature
+little creature
+// occasionally by pebbles
+Little messenger
+little messenger
+// disliked by moon
+Little tormentor
+little tormentor
+// disliked by pebbles
+Little annoyance
+little annoyance
+// liked by any, brought pearl 10+
+Little archaeologist
+little archaeologist
+// liked by moon
+Little friend
+little friend
+// liked by pebbles
+Little helper
+little helper
+
+/// PearlConversation ~ Distant connect to LTTM with Moon Mark ///
+// MoonReceiveSwarmer
+You're reaching the end of your journey, little friend.
+Thank you, for helping me.
+// Pearl Intake System
+It's an old pearl related to our local intake system.
+Specifically, it details the designed microorganisms used in the main reservoir.
+The complete report is thousands of entries long, discussing everything from the <LINE>central gravity-amplifier-style intake solution to the interactions with the developed fauna.
+I'll give you the gist of it.
+Back when the major cities were closer to the surface, filtered water reservoirs<LINE>were created as bioreactors to purify water and remove unwanted contaminants.
+The organisms used in these tanks were not very well controlled and many different<LINE>unwanted strains of filter tissue corrupted early tanks.
+Some strains were even observed blending with the natural fauna, creating extremely<LINE>resilient organisms of a very large scale.
+I hope you didn’t go down there to get this, I’m not sure how the tank would react to your biology.
+I suppose the mark Suns' gave you would help.
+// Pearl Forest Santuary
+This is...
+// ...
+...It has data written on it to be sure, but the format is nothing like I’ve ever seen before.
+It bears some resemblance to the creature logs created by the overseers.
+Most iterators simply ignore it, as it has little importance towards the Task.
+I occasionally look back on those files, as it reminds me of the time back when I worked on the<LINE>tasks of an entire lively city. It was a much more complex time; I worked on everything<LINE>from coordinating farming systems to individuals’ problems or inquiries.
+I do miss the days when they visited my chamber.
+Anyways, back to the pearl. It appears that someone used that data format as the basis to create a<LINE>new log of individual creatures’ karmic properties and social relationships.
+There is a section written in internal language as well. I can try my best to translate it.
+"...organizations of the fourth axiom of karmic staging, It can be ascertained that the quintessence of<LINE>an organic body can never be entirely sequestered from the continuous flow of related<LINE>materials. I propose a contemporary project to aggregate coordinated karmic<LINE>networking" or perhaps... "encompassment of an overall site"
+I am sorry little creature, are you understanding this?
+I would say this is the remnants or perhaps an older log of a far-reaching project by one of the iterators in the local group.
+It is hard to say which iterator, although some of the internal language suggests a slightly cynical<LINE>or humorous tone, which could narrow the possiblities.
+Without knowing where it came from, I’m afraid I can’t tell you much more.
+// Pearl Fragmented Exterior
+Oh, wow! I didn't think I would ever see this again!
+It is an old qualia that I recorded from one of the sky-sail journeys long ago.
+I lost it back when one of my capacitor coils burst a few thousand cycle ago. Secondary systems and my biological<LINE>components did their best to bring it back online, but the damage shut down a few disruptors<LINE>leading to some more serious collapses.
+I do not remember much of the subject, but this pearl always held an importance to me.
+Thank You, <PlayerName>.
+
+/// Moon Conversation ///
+// Moon Initial Conversation
+Oh...
+Hello, <PlayerName>.
+You must be Seven Red Suns' little messenger.
+I have heard a lot about you. How is Seven Red Suns?
+I am glad to see you safe and sound, it's clear that your tail is working as intended.
+I have considered tinkering with creatures too. More messengers could be useful.
+Communications have always been spotty, even back when our cities were still populated.
+Soon enough, messengers like you might be our only way of communicating.
+I... I've been holding you here for a while, little creature. I'm sorry! I'm aware that you have to go.
+Thank you for visiting me! Good luck on your way to Five Pebbles!
+// Moon Second+ Conversation, when she doesn't dislike you
+// I wonder what it is that you want? // The following line comes after this vanilla dialogue
+I have very little to give you.
+// When you give Moon her own Neuron
+This is one of my processing neurons, I need them for continued operation.
+Please don't eat too many of these.
+// Moon Conversation after MoonMark
+Head west. Towards No Significant Harassment.
+Deep down, there's an old subway system. And below that, an ancient temple.
+Search your way deeper. The mark I gave you will let you through.
+Good luck, <PlayerName>.
+
+/// Pebbles Conversation ///
+// Pebbles Initial Conversation (Delieved CC to Moon)
+It's you.
+How could you betray me like this!
+All this work, cycles and cycles of efforts put to waste!
+// ...
+No, I need not be angry with you. Afterall, you couldn't have known the importance of what you were delivering.
+Perhaps, Moon was right about all this. I have been a bit hasty in my recent endevors.
+// Pebbles Initial Conversation (Didn't delieved CC to Moon)
+Hello <PlayerName>.
+Welcome back!
+Do you have another message for me?
+Or are you passing through here for another delivery?
+Unless you have something for me, I must return to my work.
+// Pebbles Second+ Conversation (Delieved CC to Moon)
+You're back.
+I know I shouldn't be angry with you.
+I suppose, we both gained something out of this. Even, if I lost some of my efforts.
+Afterall, you couldn't have known the importance of what you were delivering.
+// Perhaps, Moon was right about all this. I have been a bit hasty in my recent endevors. (duplicate)
+// Pebbles Second+ Conversation (Didn't delieved CC to Moon)
+You again. // dislikes
+Hello messenger. // neutral or likes
+Do you have that pearl Suns was talking about?
+You are welcome stay here, but I must return to my work. // likes remark
+// Misc Item Reaction
+It's a rock. I have no use for this. // Rock
+This is one of my processing neurons, don't eat any. // Pebbles' Neuron
+It's a piece of sharpened rebar... What is it you want to know?<LINE>I've see you used them very effectively. // Spear
+It's a weapon made with fire powder. Did the scavengers give this to you?<LINE>It could be very dangerous if used incorrectly! // Explosive Spear
+It's an edible plant. You could use the energy! // Waternut
+Is this one of Moon's neurons? // Moon's Neuron
+Why bring it to me? I already have plenty.
+// Dialogue after Pebbles gave you mark
+Go to the west past the Farm Arrays, and then down into the<LINE>earth where the land fissures, as deep as you can reach, where the ancients<LINE>built their temples and danced their silly rituals. The mark I gave you will let you through.
+Best of luck to you, <PlayerName>.
+// Pearl Intake System
+This is a lengthy report on the unwanted organism strains that developed<LINE>in the old water filtration systems.
+Back when cities were closer to the surface many of the cities relied on old bioreactor<LINE>reservoirs for a clean water supply.
+This was early in the development of the genetic sciences, so some unwanted strains developed.
+In attempts to mediate the damage, they biult a small<LINE>intelligent organic network tasked with controlling or at least mediating any organisms that developed.
+It was similar in design to modern iterators. There are rumors of murmurs coming from the depths
+I don’t suppose you crawled down there yourself. It would be quite dangerous.
+// Pearl Forest Santuary
+This one is strange; it looks to be the data from an offhand project by one of the local iterators.
+It has sections referencing interactions with local fauna, and some<LINE>unconventional data tables related to the local fauna.
+The section in internal language represents an interesting insight about<LINE>the embedding of karmic energy in matter and more specifically how it can affect other organizations.
+I’m not sure what else to say about it. Based on the amount of data in this pearl I find it likely that the project is still ongoing.
+// Pearl Fragmented Exterior
+It's qualia, or a moment – this one is longer than most. Someone is dragging and tying a decorated rope from a sky-sail, while glancing towards the rest of their group.
+It has decent resolution, although its emotional value seem much more significant.
+The original memory was probably collected from Moon’s city.
+// Any Pearl Intro
+Ah, a pearl. Not a message though. Would you like me to read it to you? // 1st
+Another pearl! You want me to read this one too? Just a moment... // 2nd
+And yet another one! I will read it to you. // 3rd
+Another? You're no better than the scavengers! // 4th
+Let us see... to be honest, I'm as curious to see it as you are. // 4th, extra remark when 5p likes
+The scavengers must be jealous of you, finding all these // 5th or later random
+Here we go again, little archeologist. Let's read your pearl.
+... You're getting quite good at this you know. A little archeologist beast.<LINE>Now, let's see what it says.
+And yet another one! I will read it to you.
+// Pebbles Pearl Intro (random)
+You would like me to read this? // 0
+This pearl must have been used recently. You can still feel the heat.
+A pearl... This one is crystal clear - it was used recently. // 1
+Would you like me to read this pearl? // 2
+It has been recently written to.
+This pearl has been written to just now! // 3
+Let's see... A pearl... // 4
+And this one is sharp! It was not long ago this data was written to it!

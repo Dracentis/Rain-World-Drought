@@ -133,6 +133,8 @@ namespace Rain_World_Drought
 
             StaticWorldPatch.AddCreatureTemplate();
             StaticWorldPatch.ModifyRelationship();
+
+            // TextManager.DecryptAllDialogue();
         }
 
         public static string error;
