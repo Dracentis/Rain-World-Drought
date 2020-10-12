@@ -15,7 +15,48 @@ namespace Rain_World_Drought.Resource
         {
             On.GhostConversation.AddEvents += new On.GhostConversation.hook_AddEvents(TextManager.GhostEvents);
             On.Menu.CreditsTextAndImage.ctor += new On.Menu.CreditsTextAndImage.hook_ctor(CreditReplace);
+            On.Menu.OptionsMenu.ShutDownProcess += new On.Menu.OptionsMenu.hook_ShutDownProcess(UpdateLanguage);
         }
+
+        #region LanguageHandler
+
+        public static LanguageID curLang, lastLang;
+
+        public static Dictionary<int, TextManager.LanguageID> OptionToID;
+
+        public enum LanguageID
+        {
+            English, French, Italian, German, Spanish, Portuguese, Japanese, Korean, Russian
+        }
+
+        /// <summary>
+        /// Converts <see cref="LanguageID"/> to three lettered ID that's used for naming files
+        /// </summary>
+        private static string IDtoShort(LanguageID id)
+        {
+            switch (id)
+            {
+                default:
+                case LanguageID.English: return "Eng";
+                case LanguageID.French: return "Fre";
+                case LanguageID.Italian: return "Ita";
+                case LanguageID.German: return "Ger";
+                case LanguageID.Spanish: return "Spa";
+                case LanguageID.Portuguese: return "Por";
+                case LanguageID.Japanese: return "Jpn";
+                case LanguageID.Korean: return "Kor";
+                case LanguageID.Russian: return "Rus";
+            }
+        }
+
+        private static void UpdateLanguage(On.Menu.OptionsMenu.orig_ShutDownProcess orig, OptionsMenu self)
+        {
+            orig.Invoke(self);
+            // Use ConfigMachine curLang if possible
+            if (OptionToID.TryGetValue((int)self.CurrLang, out LanguageID newID)) { curLang = newID; }
+        }
+
+        #endregion LanguageHandler
 
         private static void CreditReplace(On.Menu.CreditsTextAndImage.orig_ctor orig, CreditsTextAndImage self,
            Menu.Menu menu, MenuObject owner, EndCredits.Stage stage)
@@ -50,8 +91,15 @@ namespace Rain_World_Drought.Resource
             }
         }
 
+        /// <summary>
+        /// Translator for ShortStrings
+        /// </summary>
         public static string Translate(string text)
         { // Add Translator Here!
+            if (lastLang != curLang)
+            { // Reload Translation
+                lastLang = curLang;
+            }
             return text.Replace("\\n", Environment.NewLine);
         }
 
@@ -91,7 +139,7 @@ namespace Rain_World_Drought.Resource
                 "Text",
                 Path.DirectorySeparatorChar,
                 "Text_",
-                "Eng", // Change this!
+                IDtoShort(curLang),
                 Path.DirectorySeparatorChar,
                 (int)id,
                 ".txt"
