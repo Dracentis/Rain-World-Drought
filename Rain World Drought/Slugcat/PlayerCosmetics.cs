@@ -148,8 +148,6 @@ namespace Rain_World_Drought.Slugcat
             focus = Custom.LerpAndTick(focus, (sub.Focus + sub.Slowdown > 0f) ? 1f : 0f, 0.15f, 0.05f);
         }
 
-        public override string OverrideContainer => "Bloom";
-
         public override void InitiateSprites(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam)
         {
             if (spotDesaturate == null)
@@ -166,6 +164,13 @@ namespace Rain_World_Drought.Slugcat
             {
                 shader = rCam.game.rainWorld.Shaders["FlatLight"]
             };
+        }
+
+        public override void AddToContainer(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, FContainer newContainer)
+        {
+            newContainer = rCam.ReturnFContainer("Bloom");
+            newContainer.AddChild(sLeaser.sprites[startSprite + 0]);
+            newContainer.AddChild(sLeaser.sprites[startSprite + 1]);
         }
 
         public override void DrawSprites(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, float timeStacker, Vector2 camPos)
@@ -355,9 +360,7 @@ namespace Rain_World_Drought.Slugcat
             this.startSprite = startSprite;
             this.init = false;
         }
-
-        public virtual string OverrideContainer => null;
-
+        
         public virtual void Update()
         {
         }
@@ -380,13 +383,9 @@ namespace Rain_World_Drought.Slugcat
             this.palette = palette;
         }
 
-        public void AddToContainer(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, FContainer newContainer)
+        public virtual void AddToContainer(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, FContainer newContainer)
         {
             if (!init) { return; }
-            if(!string.IsNullOrEmpty(OverrideContainer))
-            {
-                newContainer = rCam.ReturnFContainer(OverrideContainer);
-            }
             if (newContainer == null)
             {
                 newContainer = rCam.ReturnFContainer("Midground");

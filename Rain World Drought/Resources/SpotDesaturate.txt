@@ -1,4 +1,4 @@
-// Compiled shader for all platforms, uncompressed size: 14.7KB
+// Compiled shader for all platforms, uncompressed size: 14.8KB
 
 Shader "Custom/SpotDesaturate" {
 Properties {
@@ -7,6 +7,7 @@ Properties {
 SubShader { 
  Tags { "QUEUE"="Transparent" "IGNOREPROJECTOR"="true" "RenderType"="Transparent" }
  GrabPass {
+  "_DesaturateTexture"
  }
 
 
@@ -166,7 +167,7 @@ void main ()
 #endif
 #ifdef FRAGMENT
 
-uniform sampler2D _GrabTexture;
+uniform sampler2D _DesaturateTexture;
 varying highp vec2 xlv_TEXCOORD0;
 varying highp vec4 xlv_TEXCOORD1;
 varying highp vec4 xlv_COLOR;
@@ -186,7 +187,7 @@ void main ()
     (1.0 - centerDist_2)
   , 1.5) * 2.0), 0.0, 1.0);
   lowp vec4 tmpvar_6;
-  tmpvar_6 = texture2DProj (_GrabTexture, xlv_TEXCOORD1);
+  tmpvar_6 = texture2DProj (_DesaturateTexture, xlv_TEXCOORD1);
   clr_1 = tmpvar_6;
   lowp vec3 c_7;
   c_7 = clr_1.xyz;
@@ -244,7 +245,7 @@ void main ()
 #endif
 #ifdef FRAGMENT
 
-uniform sampler2D _GrabTexture;
+uniform sampler2D _DesaturateTexture;
 varying highp vec2 xlv_TEXCOORD0;
 varying highp vec4 xlv_TEXCOORD1;
 varying highp vec4 xlv_COLOR;
@@ -264,7 +265,7 @@ void main ()
     (1.0 - centerDist_2)
   , 1.5) * 2.0), 0.0, 1.0);
   lowp vec4 tmpvar_6;
-  tmpvar_6 = texture2DProj (_GrabTexture, xlv_TEXCOORD1);
+  tmpvar_6 = texture2DProj (_DesaturateTexture, xlv_TEXCOORD1);
   clr_1 = tmpvar_6;
   lowp vec3 c_7;
   c_7 = clr_1.xyz;
@@ -325,7 +326,7 @@ void main ()
 
 
 layout(location=0) out mediump vec4 _glesFragData[4];
-uniform sampler2D _GrabTexture;
+uniform sampler2D _DesaturateTexture;
 in highp vec2 xlv_TEXCOORD0;
 in highp vec4 xlv_TEXCOORD1;
 in highp vec4 xlv_COLOR;
@@ -345,7 +346,7 @@ void main ()
     (1.0 - centerDist_2)
   , 1.5) * 2.0), 0.0, 1.0);
   lowp vec4 tmpvar_6;
-  tmpvar_6 = textureProj (_GrabTexture, xlv_TEXCOORD1);
+  tmpvar_6 = textureProj (_DesaturateTexture, xlv_TEXCOORD1);
   clr_1 = tmpvar_6;
   lowp vec3 c_7;
   c_7 = clr_1.xyz;
@@ -420,7 +421,7 @@ vertex xlatMtlShaderOutput xlatMtlMain (xlatMtlShaderInput _mtl_i [[stage_in]], 
 Program "fp" {
 SubProgram "opengl " {
 // Stats: 12 math, 1 textures
-SetTexture 0 [_GrabTexture] 2D 0
+SetTexture 0 [_DesaturateTexture] 2D 0
 "3.0-!!ARBfp1.0
 OPTION ARB_fragment_program_shadow;
 PARAM c[2] = { { 1, 0.5, 2, 1.5 },
@@ -444,7 +445,7 @@ END
 }
 SubProgram "d3d9 " {
 // Stats: 13 math, 1 textures
-SetTexture 0 [_GrabTexture] 2D 0
+SetTexture 0 [_DesaturateTexture] 2D 0
 "ps_3_0
 dcl_2d s0
 def c0, 0.50000000, 2.00000000, 1.00000000, 1.50000000
@@ -468,7 +469,7 @@ dp3_pp oC0.xyz, r0, c1
 }
 SubProgram "d3d11 " {
 // Stats: 14 math, 1 textures
-SetTexture 0 [_GrabTexture] 2D 0
+SetTexture 0 [_DesaturateTexture] 2D 0
 "ps_4_0
 eefiecedklejdhmpbkfpihmcplajhibnmjifaeohabaaaaaabiadaaaaadaaaaaa
 cmaaaaaaliaaaaaaomaaaaaaejfdeheoieaaaaaaaeaaaaaaaiaaaaaagiaaaaaa
@@ -507,7 +508,7 @@ SubProgram "gles3 " {
 }
 SubProgram "metal " {
 // Stats: 11 math, 1 textures
-SetTexture 0 [_GrabTexture] 2D 0
+SetTexture 0 [_DesaturateTexture] 2D 0
 "metal_fs
 #include <metal_stdlib>
 using namespace metal;
@@ -522,7 +523,7 @@ struct xlatMtlShaderOutput {
 struct xlatMtlShaderUniform {
 };
 fragment xlatMtlShaderOutput xlatMtlMain (xlatMtlShaderInput _mtl_i [[stage_in]], constant xlatMtlShaderUniform& _mtl_u [[buffer(0)]]
-  ,   texture2d<half> _GrabTexture [[texture(0)]], sampler _mtlsmp__GrabTexture [[sampler(0)]])
+  ,   texture2d<half> _DesaturateTexture [[texture(0)]], sampler _mtlsmp__DesaturateTexture [[sampler(0)]])
 {
   xlatMtlShaderOutput _mtl_o;
   half4 clr_1;
@@ -539,7 +540,7 @@ fragment xlatMtlShaderOutput xlatMtlMain (xlatMtlShaderInput _mtl_i [[stage_in]]
     ((half)1.0 - centerDist_2)
   , (half)1.5) * (half)2.0), (half)0.0, (half)1.0);
   half4 tmpvar_6;
-  tmpvar_6 = _GrabTexture.sample(_mtlsmp__GrabTexture, ((float2)(_mtl_i.xlv_TEXCOORD1).xy / (float)(_mtl_i.xlv_TEXCOORD1).w));
+  tmpvar_6 = _DesaturateTexture.sample(_mtlsmp__DesaturateTexture, ((float2)(_mtl_i.xlv_TEXCOORD1).xy / (float)(_mtl_i.xlv_TEXCOORD1).w));
   clr_1 = tmpvar_6;
   half3 c_7;
   c_7 = clr_1.xyz;

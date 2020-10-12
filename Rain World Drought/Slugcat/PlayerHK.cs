@@ -26,7 +26,7 @@ namespace Rain_World_Drought.Slugcat
         private static void CtorHK(On.Player.orig_ctor orig, Player self, AbstractCreature abstractCreature, World world)
         {
             orig.Invoke(self, abstractCreature, world);
-            WandererSupplement.GetSub(self);
+            WandererSupplement.GetSub(self, true);
         }
 
         private static void SwallowObjectHK(On.Player.orig_SwallowObject orig, Player self, int grasp)
@@ -174,10 +174,15 @@ namespace Rain_World_Drought.Slugcat
         private static Parryable FindClosestParryable(Player self, out float ticksUntilContact)
         {
             int minTicksUntilContact = int.MaxValue;
+            ticksUntilContact = minTicksUntilContact;
             Parryable closestParryable = default(Parryable);
+            if (self.room == null) return closestParryable;
+
             for (int layer = self.room.physicalObjects.Length - 1; layer >= 0; layer--)
             {
                 List<PhysicalObject> objs = self.room.physicalObjects[layer];
+                if (objs == null) continue;
+
                 for (int i = objs.Count - 1; i >= 0; i--)
                 {
                     if (Parryable.IsParryable(objs[i], out Parryable parryable))
@@ -258,7 +263,7 @@ namespace Rain_World_Drought.Slugcat
 
         private static bool RechargeFocus(WandererSupplement sub)
         {
-            if (sub.self.playerState.foodInStomach > 0)
+            if (sub.self.FoodInStomach > 0)
             {
                 // Intentionally do not reset half pip, so it isn't wasted
                 // This means you can have .5 energy more than the max

@@ -24,8 +24,8 @@ namespace Rain_World_Drought.Slugcat
         {
             return DroughtMod.EnumExt && self.playerState.slugcatCharacter == SlugcatCharacter;
         }
-
-        public static WandererSupplement GetSub(Player self)
+        
+        public static WandererSupplement GetSub(Player self, bool makeNewSub = false)
         {
             if (self.playerState.isGhost)
             { // for ending
@@ -36,15 +36,15 @@ namespace Rain_World_Drought.Slugcat
             }
             else
             {
-                if (fields[self.playerState.playerNumber] == null) { CreateSub(self); }
+                if (fields[self.playerState.playerNumber] == null || makeNewSub) { CreateSub(self); }
                 return fields[self.playerState.playerNumber];
             }
         }
 
         private static void CreateSub(Player self)
         {
-            if (fields[self.playerState.playerNumber] != null && fields[self.playerState.playerNumber].self.abstractCreature == self.abstractCreature)
-            { return; }
+            //if (fields[self.playerState.playerNumber] != null && fields[self.playerState.playerNumber].self.abstractCreature == self.abstractCreature)
+            //{ return; }
             fields[self.playerState.playerNumber] = new WandererSupplement(self);
         }
 

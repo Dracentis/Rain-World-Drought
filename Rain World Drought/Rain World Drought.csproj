@@ -257,4 +257,7 @@
     <None Include="Resources\SpotDesaturate.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if defined RWMods (copy /Y "$(TargetPath)" "$(RWMods)")</PostBuildEvent>
+  </PropertyGroup>
 </Project>
