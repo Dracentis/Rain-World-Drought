@@ -21,6 +21,11 @@ namespace Rain_World_Drought.OverWorld
 
         private static void CtorHK(On.HUD.RainMeter.orig_ctor orig, RainMeter self, HUD.HUD hud, FContainer fContainer)
         {
+            if(hud.owner.GetOwnerType() != HUD.HUD.OwnerType.Player)
+            {
+                self.hud = hud;
+                return;
+            }
             orig.Invoke(self, hud, fContainer);
             danger = new bool[self.circles.Length];
             for (int q = 0; q < 3; q++)
@@ -54,12 +59,12 @@ namespace Rain_World_Drought.OverWorld
                 NextKarmaMeter karmaMeter = new NextKarmaMeter(self, self.fContainers[1], new IntVector2(dayType, NextKarmaSymbol), false);
                 self.AddPart(karmaMeter);
                 karmaMeter.pos = new Vector2(self.rainWorld.options.ScreenSize.x - 280f + 105f * i, self.rainWorld.options.ScreenSize.y - 70f);
-                karmaMeter.lastPos = self.karmaMeter.pos;
+                karmaMeter.lastPos = karmaMeter.pos;
 
                 NextRainMeter rainMeter = new NextRainMeter(self, self.fContainers[1], i);
                 self.AddPart(rainMeter);
                 rainMeter.pos = new Vector2(self.rainWorld.options.ScreenSize.x - 280f + 105f * i, self.rainWorld.options.ScreenSize.y - 70f);
-                rainMeter.lastPos = self.rainMeter.pos;
+                rainMeter.lastPos = rainMeter.pos;
             }
         }
 
