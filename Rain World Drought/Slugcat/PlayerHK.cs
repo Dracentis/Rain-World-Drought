@@ -21,6 +21,7 @@ namespace Rain_World_Drought.Slugcat
             On.Player.Grabbed += new On.Player.hook_Grabbed(GrabbedHK);
             On.Player.LungUpdate += new On.Player.hook_LungUpdate(LungUpdateHK);
             On.VoidSea.VoidSeaScene.VoidSeaTreatment += new On.VoidSea.VoidSeaScene.hook_VoidSeaTreatment(VoidSeaTreatmentHK);
+            On.TubeWorm.JumpButton += new On.TubeWorm.hook_JumpButton(JumpButtonHK);
         }
 
         private static void CtorHK(On.Player.orig_ctor orig, Player self, AbstractCreature abstractCreature, World world)
@@ -715,6 +716,17 @@ namespace Rain_World_Drought.Slugcat
             { sub.past22000 = true; }
             if (player.mainBodyChunk.pos.y < -25000 || self.deepDivePhase == VoidSeaScene.DeepDivePhase.EggScenario)
             { sub.past25000 = true; }
+        }
+
+        private static bool JumpButtonHK(On.TubeWorm.orig_JumpButton orig, TubeWorm self, Player plr)
+        {
+            if (WandererSupplement.IsWanderer(plr))
+            {
+                WandererSupplement sub = WandererSupplement.GetSub(plr);
+                if (sub.jumpForbidden > 0)
+                    return true;
+            }
+            return orig(self, plr);
         }
     }
 }
