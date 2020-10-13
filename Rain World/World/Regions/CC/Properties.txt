@@ -1,0 +1,43 @@
+Palette: 6
+batDepleteCyclesMin: 2
+batDepleteCyclesMax: 7
+batDepleteCyclesMaxIfLessThanTwoLeft: 3
+batDepleteCyclesMaxIfLessThanFiveLeft: 4
+overseersSpawnChance: 0.5
+overseersMin: 0
+overseersMax: 4
+playerGuideOverseerSpawnChance: 0.0
+ghostRelKarmaReq: 4
+Subregion: Chimney Canopy
+Room Setting Templates: Outside, Inside
+Room_Attr: CC_C09: WhiteLizard-3,CyanLizard-3,Vulture-3,SmallNeedleWorm-3,BigNeedleWorm-3,KingVulture-3,
+Room_Attr: CC_C12: WhiteLizard-3,Vulture-3,KingVulture-3,
+Room_Attr: CC_A06: WhiteLizard-3,CyanLizard-3,Vulture-3,SmallNeedleWorm-3,BigNeedleWorm-3,KingVulture-3,
+Room_Attr: CC_H01: CyanLizard-4,Vulture-3,SmallNeedleWorm-3,BigNeedleWorm-3,KingVulture-3,
+Room_Attr: CC_C07: WhiteLizard-3,CyanLizard-3,Vulture-3,SmallNeedleWorm-3,BigNeedleWorm-3,KingVulture-3,
+Room_Attr: CC_B04: WhiteLizard-3,Vulture-3,SmallNeedleWorm-3,BigNeedleWorm-3,KingVulture-3,
+Room_Attr: CC_D01: Vulture-1,KingVulture-1,
+Room_Attr: CC_C13: BigSpider-4,SpitterSpider-4,SmallNeedleWorm-2,BigNeedleWorm-2,
+Room_Attr: CC_A15: BlueLizard-2,Vulture-3,KingVulture-3,
+Room_Attr: CC_B08: PinkLizard-3,WhiteLizard-3,
+Room_Attr: CC_B05: PinkLizard-3,WhiteLizard-3,SmallNeedleWorm-3,BigNeedleWorm-3,
+Room_Attr: CC_A10: WhiteLizard-3,Vulture-3,SmallNeedleWorm-3,BigNeedleWorm-3,KingVulture-3,
+Room_Attr: CC_B01: PinkLizard-3,WhiteLizard-3,SmallNeedleWorm-3,BigNeedleWorm-3,
+Room_Attr: CC_B06: PinkLizard-2,WhiteLizard-2,CyanLizard-2,BigSpider-3,SpitterSpider-3,SmallNeedleWorm-2,BigNeedleWorm-2,
+Room_Attr: CC_C04: WhiteLizard-3,Vulture-3,SmallNeedleWorm-3,BigNeedleWorm-3,KingVulture-3,
+Room_Attr: CC_B13: SmallNeedleWorm-3,BigNeedleWorm-3,
+Room_Attr: CC_C05: StandardGroundCreature-1,Slugcat-1,LizardTemplate-1,PinkLizard-1,GreenLizard-1,BlueLizard-1,YellowLizard-1,WhiteLizard-1,RedLizard-1,BlackLizard-1,Salamander-1,Fly-1,Leech-1,SeaLeech-1,Snail-1,Vulture-3,GarbageWorm-1,LanternMouse-1,CicadaA-1,CicadaB-1,Spider-1,JetFish-1,BigEel-1,Deer-1,TubeWorm-1,DaddyLongLegs-1,BrotherLongLegs-1,TentaclePlant-1,PoleMimic-1,MirosBird-1,TempleGuard-1,Centipede-1,Centiwing-1,SmallCentipede-1,Scavenger-1,Overseer-1,SmallNeedleWorm-3,BigNeedleWorm-3,KingVulture-3,
+Room_Attr: CC_B10: BlueLizard-2,WhiteLizard-2,Vulture-1,BigSpider-3,SpitterSpider-3,SmallNeedleWorm-2,BigNeedleWorm-2,KingVulture-1,
+Room_Attr: CC_A12: SmallNeedleWorm-2,BigNeedleWorm-2,
+Room_Attr: CC_A02: CyanLizard-2,BigSpider-2,SpitterSpider-2,
+Room_Attr: CC_A16: SmallNeedleWorm-2,BigNeedleWorm-2,
+Room_Attr: CC_C08: PinkLizard-3,CyanLizard-3,BigSpider-2,SpitterSpider-2,
+Room_Attr: CC_A07: PinkLizard-3,CyanLizard-3,BigSpider-2,SpitterSpider-2,
+Room_Attr: CC_C11: PinkLizard-2,CyanLizard-3,SmallNeedleWorm-3,BigNeedleWorm-3,
+Room_Attr: CC_B12: CyanLizard-2,SmallNeedleWorm-3,BigNeedleWorm-3,
+Room_Attr: CC_F01: SmallNeedleWorm-3,BigNeedleWorm-3,
+Room_Attr: CC_C03: PinkLizard-2,GreenLizard-3,CyanLizard-1,BigSpider-2,SpitterSpider-2,SmallNeedleWorm-2,BigNeedleWorm-2,
+Room_Attr: CC_A17: BigSpider-2,SpitterSpider-2,SmallNeedleWorm-2,BigNeedleWorm-2,
+Room_Attr: CC_S03: StandardGroundCreature-1,Slugcat-1,LizardTemplate-1,PinkLizard-1,GreenLizard-1,BlueLizard-1,YellowLizard-1,WhiteLizard-1,RedLizard-1,BlackLizard-1,Salamander-1,Fly-1,Leech-1,SeaLeech-1,Snail-1,Vulture-1,GarbageWorm-1,LanternMouse-1,CicadaA-1,CicadaB-1,Spider-1,JetFish-1,BigEel-1,Deer-1,TubeWorm-1,DaddyLongLegs-1,BrotherLongLegs-1,TentaclePlant-1,PoleMimic-1,MirosBird-1,TempleGuard-1,Centipede-1,Centiwing-1,SmallCentipede-1,Scavenger-1,Overseer-1,KingVulture-1,
+Room_Attr: CC_B11: PinkLizard-2,GreenLizard-3,WhiteLizard-2,CyanLizard-2,BigSpider-4,SpitterSpider-4,SmallNeedleWorm-2,BigNeedleWorm-2,
+Room_Attr: CC_B14: SmallNeedleWorm-3,BigNeedleWorm-3,
