@@ -74,6 +74,7 @@ namespace Rain_World_Drought
             // namespaces must be 'Rain_World_Drought.OverWorld', not 'World', which confuses the compiler with global::World
             AboveCloudsViewHK.Patch();
             GlobalRainHK.Patch();
+            MainLoopProcessHK.Patch();
             OracleGraphicsHK.Patch();
             OracleHK.Patch();
             ProcessManagerHK.Patch();

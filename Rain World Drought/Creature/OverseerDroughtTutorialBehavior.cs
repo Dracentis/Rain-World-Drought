@@ -99,7 +99,7 @@ namespace Rain_World_Drought.Creatures
                 case "FS_A01":
                     if (!displayBashInstructions)
                     {
-                        this.TutorialText(DroughtMod.Translate("While in the air, hold GRAB and then press JUMP to start boosting."), 200, 500, true);
+                        this.TutorialText(DroughtMod.Translate("While on the ground, tap MAP and then press JUMP to slow down time."), 200, 500, true);
                         this.TutorialText(DroughtMod.Translate("Then hold a DIRECTION and press JUMP to finish the boost."), 0, 270, true);
                         this.overseer.TryAddHologram(OverseerHologram.Message.SuperJump, this.player, float.MaxValue);
                         displayBashInstructions = true;
@@ -125,7 +125,10 @@ namespace Rain_World_Drought.Creatures
                         this.playerHasMadeSuperJump = true;
                         Debug.Log("Drought) Yay! Superjump done!");
                     }
-                    WandererSupplement.GetSub(this.player).uses = 30;
+
+                    WandererSupplement sub = WandererSupplement.GetSub(player);
+                    if(sub.energy == 0)
+                        sub.energy = WandererSupplement.maxEnergy;
                     break;
             }
         }

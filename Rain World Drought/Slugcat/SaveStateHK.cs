@@ -26,7 +26,7 @@ namespace Rain_World_Drought.Slugcat
         private static void LoadGameHK(On.SaveState.orig_LoadGame orig, SaveState self, string str, RainWorldGame game)
         {
             orig.Invoke(self, str, game);
-            if (self.saveStateNumber == WandererSupplement.StoryCharacter) //self.denPosition.Equals("SU_C04")
+            if (self.saveStateNumber == WandererSupplement.StoryCharacter && self.denPosition.Equals("SU_C04"))
             {
                 Debug.Log("Drought) New Save File Created. Change starting room.");
                 self.denPosition = "FS_A01";

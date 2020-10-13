@@ -4,10 +4,11 @@ using UnityEngine;
 
 namespace Rain_World_Drought.OverWorld
 {
-    public class NextRainMeter : HudPart
+    public class NextRainMeter : RainMeter
     {
-        public NextRainMeter(HUD.HUD hud, FContainer fContainer, int index) : base(hud)
+        public NextRainMeter(HUD.HUD hud, FContainer fContainer, int index) : base(hud, fContainer)
         {
+            this.index = index;
             this.lastPos = this.pos;
             this.circles = new HUDCircle[nextcycleLength[index] / 1200];
             this.danger = new bool[this.circles.Length];
@@ -18,10 +19,12 @@ namespace Rain_World_Drought.OverWorld
             }
 
             // Add red marker
+            Debug.Log($"Cycle {index} has {burstNum[index]} bursts");
             for (int q = 0; q < 3; q++)
             {
                 int b = GetBurstIndex(index, q);
-                if (b < this.circles.Length) { danger[b] = true; }
+                Debug.Log($"Trying to add rain marker {q}: Rain at index {b}");
+                if (b < this.circles.Length) { danger[b] = true; Debug.Log($"Affected circle {b}"); }
             }
             /*
             for (int i = 1; i < 3; i++)
@@ -32,6 +35,7 @@ namespace Rain_World_Drought.OverWorld
         }
 
         private const int disableBurst = 99999999;
+        private int index;
 
         public static int GetBurstIndex(int index, int burst)
         {
@@ -47,10 +51,15 @@ namespace Rain_World_Drought.OverWorld
         {
             this.lastPos = this.pos;
             this.pos = this.hud.karmaMeter.pos;
-            if ((this.hud.owner as Player).room != null)
+
+            pos.x -= 105f * (3f - index) - 0.5f;
+
+            if ((this.hud.owner as Player)?.room != null)
             {
-                this.fRain = (this.hud.owner as Player).room.world.rainCycle.AmountLeft;
+                fRain = (this.hud.owner as Player).room.world.rainCycle.AmountLeft;
             }
+            else
+                fRain = 1f;
             for (int i = 0; i < this.circles.Length; i++)
             {
                 this.circles[i].Update();
@@ -73,15 +82,10 @@ namespace Rain_World_Drought.OverWorld
                     this.circles[i].snapThickness = 1f;
                 }
                 this.circles[i].pos = this.pos + Custom.DegToVec((1f - (float)i / (float)this.circles.Length) * 360f) * (this.hud.karmaMeter.Radius + 8.5f + num2);
-                if (danger[i]) { this.circles[i].sprite.color = Color.red; }
+                if (danger[i]) { this.circles[i].color = 1; }
             }
         }
-
-        public Vector2 DrawPos(float timeStacker)
-        {
-            return Vector2.Lerp(this.lastPos, this.pos, timeStacker);
-        }
-
+        
         public override void Draw(float timeStacker)
         {
             for (int i = 0; i < this.circles.Length; i++)
@@ -89,9 +93,5 @@ namespace Rain_World_Drought.OverWorld
                 this.circles[i].Draw(timeStacker);
             }
         }
-
-        public Vector2 pos, lastPos;
-        public HUDCircle[] circles;
-        private float fRain;
     }
 }

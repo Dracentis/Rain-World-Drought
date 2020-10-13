@@ -49,31 +49,28 @@ namespace Rain_World_Drought.Slugcat
         {
             float voidInEffect = 0f;
             WandererSupplement sub = WandererSupplement.GetSub(pGraphics.player);
+
             if (sub.voidEnergy)
-            {
-                voidInEffect = (1f - sub.maxEnergy) / 1.2f;
-            }
-            Color color = Color.Lerp(PlayerGraphics.SlugcatColor(pGraphics.player.playerState.slugcatCharacter), Color.white, voidInEffect);
+                voidInEffect = sub.voidEnergyAmount / 1.2f;
+            Color color = Color.Lerp(PlayerGraphics.SlugcatColor(sub.self.playerState.slugcatCharacter), Color.white, voidInEffect);
             int order = -tailSegment;
-            float alpha;
-            if (sub.energy < sub.maxEnergy && !sub.bashing)
+            float alpha = 1f;
+            if (sub.Slowdown == 0f)
             {
-                alpha = sub.energy * Mathf.Abs((float)Math.Sin((double)((float)rCam.room.world.rainCycle.timer % 250f / 20.0375f + order)) / 2f);
+                alpha = sub.Energy * Mathf.Abs(Mathf.Sin(rCam.room.game.clock / 20.0375f + order * 0.5f) / 2f);
+                alpha = alpha * 0.8f + 0.2f;
             }
-            else if (sub.bashing)
+            else if (sub.Slowdown > 0f)
             {
                 alpha = 1f;
             }
             else
             {
-                alpha = sub.energy * Mathf.Abs((float)Math.Sin((double)((float)rCam.room.world.rainCycle.timer % 250f / 40.075f)) / 1.2f);
+                alpha = sub.Energy * Mathf.Abs(Mathf.Sin(rCam.room.game.clock / 40.075f)) / 1.2f;
             }
-            if (sub.maxEnergy < 0.1)
-            {
+            if ((2 - tailSegment) >= sub.AirJumpsLeft)
                 alpha = 0f;
-                sLeaser.sprites[startSprite].isVisible = false;
-                sLeaser.sprites[startSprite + 1].isVisible = false;
-            }
+
             //pGraphics.owner.room.world.rainCycle.timer;
             sLeaser.sprites[startSprite].alpha = alpha;
             sLeaser.sprites[startSprite + 1].alpha = alpha;
@@ -134,7 +131,88 @@ namespace Rain_World_Drought.Slugcat
             public float rad;
         }
     }
+    
+    public class FocusHalo : PlayerCosmetics
+    {
+        public FocusHalo(PlayerGraphics pGraphics, int startSprite) : base(pGraphics, startSprite)
+        {
+            spritesOverlap = SpritesOverlap.InFront;
+            numberOfSprites = 2;
+        }
 
+        public override void Update()
+        {
+            lastFocus = focus;
+            Player ply = (Player)pGraphics.owner;
+            WandererSupplement sub = WandererSupplement.GetSub(ply);
+            focus = Custom.LerpAndTick(focus, (sub.Focus + sub.Slowdown > 0f) ? 1f : 0f, 0.15f, 0.05f);
+        }
+
+        public override void InitiateSprites(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam)
+        {
+            if (spotDesaturate == null)
+            {
+                Material mat = new Material(Resource.Shaders.SpotDesaturate);
+                spotDesaturate = FShader.CreateShader("SpotDesaturate", mat.shader);
+            }
+
+            sLeaser.sprites[startSprite] = new FSprite("Futile_White")
+            {
+                shader = spotDesaturate
+            };
+            sLeaser.sprites[startSprite + 1] = new FSprite("Futile_White")
+            {
+                shader = rCam.game.rainWorld.Shaders["FlatLight"]
+            };
+        }
+
+        public override void AddToContainer(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, FContainer newContainer)
+        {
+            newContainer = rCam.ReturnFContainer("Bloom");
+            newContainer.AddChild(sLeaser.sprites[startSprite + 0]);
+            newContainer.AddChild(sLeaser.sprites[startSprite + 1]);
+        }
+
+        public override void DrawSprites(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, float timeStacker, Vector2 camPos)
+        {
+            base.DrawSprites(sLeaser, rCam, timeStacker, camPos);
+
+            Vector2 drawPos = Vector2.Lerp(
+                Vector2.Lerp(pGraphics.drawPositions[0, 1], pGraphics.drawPositions[0, 0], timeStacker),
+                Vector2.Lerp(pGraphics.drawPositions[1, 1], pGraphics.drawPositions[1, 0], timeStacker),
+                0.5f);
+
+            float alpha = Mathf.Lerp(lastFocus, focus, timeStacker);
+            if (alpha < 0.01f)
+            {
+                sLeaser.sprites[startSprite + 0].isVisible = false;
+                sLeaser.sprites[startSprite + 1].isVisible = false;
+            }
+            else
+            {
+                sLeaser.sprites[startSprite + 0].SetPosition(drawPos - camPos);
+                sLeaser.sprites[startSprite + 0].isVisible = true;
+                sLeaser.sprites[startSprite + 0].alpha = alpha * 0.75f;
+                sLeaser.sprites[startSprite + 0].scale = 100f * alpha / 8f;
+                sLeaser.sprites[startSprite + 1].SetPosition(drawPos - camPos);
+                sLeaser.sprites[startSprite + 1].isVisible = true;
+                sLeaser.sprites[startSprite + 1].alpha = alpha * 0.15f;
+                sLeaser.sprites[startSprite + 1].scale = 150f * alpha / 8f;
+            }
+        }
+
+        public override void ApplyPalette(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, RoomPalette palette)
+        {
+            sLeaser.sprites[startSprite + 0].color = Color.white;
+            sLeaser.sprites[startSprite + 1].color = Color.Lerp(PlayerGraphics.SlugcatColor(0), Color.white, 0.9f);
+            base.ApplyPalette(sLeaser, rCam, palette);
+        }
+
+        public static FShader spotDesaturate;
+        private float focus;
+        private float lastFocus;
+    }
+    
     public class MoonMark : PlayerCosmetics
     {
         public MoonMark(PlayerGraphics pGraphics, int startSprite) : base(pGraphics, startSprite)
@@ -282,7 +360,7 @@ namespace Rain_World_Drought.Slugcat
             this.startSprite = startSprite;
             this.init = false;
         }
-
+        
         public virtual void Update()
         {
         }
@@ -305,7 +383,7 @@ namespace Rain_World_Drought.Slugcat
             this.palette = palette;
         }
 
-        public void AddToContainer(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, FContainer newContainer)
+        public virtual void AddToContainer(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, FContainer newContainer)
         {
             if (!init) { return; }
             if (newContainer == null)
