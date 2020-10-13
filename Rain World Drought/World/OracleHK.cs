@@ -11,6 +11,7 @@ namespace Rain_World_Drought.OverWorld
             On.Oracle.Collide += new On.Oracle.hook_Collide(CollideHK);
             On.Oracle.HitByWeapon += new On.Oracle.hook_HitByWeapon(HitByWeaponHK);
             On.Oracle.ctor += new On.Oracle.hook_ctor(CtorHK);
+            On.Oracle.SetUpSwarmers += Oracle_SetUpSwarmers;
             On.Oracle.OracleArm.ctor += new On.Oracle.OracleArm.hook_ctor(ArmCtorHK);
             On.Oracle.OracleArm.Update += new On.Oracle.OracleArm.hook_Update(ArmUpdateHK);
             On.Oracle.OracleArm.BaseDir += new On.Oracle.OracleArm.hook_BaseDir(ArmBaseDirHK);
@@ -132,6 +133,11 @@ namespace Rain_World_Drought.OverWorld
                 self.arm = new Oracle.OracleArm(self);
                 room.gravity = 0f;
             }
+        }
+
+        private static void Oracle_SetUpSwarmers(On.Oracle.orig_SetUpSwarmers orig, Oracle self)
+        {
+            self.health = 1f;
         }
 
         #endregion Oracle

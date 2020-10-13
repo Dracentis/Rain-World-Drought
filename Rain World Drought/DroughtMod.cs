@@ -85,6 +85,9 @@ namespace Rain_World_Drought
             WorldHK.Patch();
             #endregion OverWorld
 
+            // Debugging!
+            Debugging.Patch();
+
             On.RainWorld.Start += new On.RainWorld.hook_Start(RainWorldHK);
         }
 

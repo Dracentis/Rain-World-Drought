@@ -52,7 +52,7 @@ namespace Rain_World_Drought.OverWorld
             this.lastPos = this.pos;
             this.pos = this.hud.karmaMeter.pos;
 
-            pos.x -= 105f * (3f - index) - 0.5f;
+            pos.x -= 105f * (2 - index) - 0.5f;
 
             if ((this.hud.owner as Player)?.room != null)
             {

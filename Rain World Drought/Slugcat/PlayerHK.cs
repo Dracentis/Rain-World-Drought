@@ -41,9 +41,12 @@ namespace Rain_World_Drought.Slugcat
         public static bool IsGrounded(Player self, bool feetMustBeGrounded)
         {
             if (self.canJump > 0 && self.canWallJump == 0) return true;
+            if (self.animation == Player.AnimationIndex.AntlerClimb) return true;
+            if (self.animation == Player.AnimationIndex.VineGrab) return true;
             if (self.animation == Player.AnimationIndex.SurfaceSwim) return true;
             if (self.bodyMode == Player.BodyModeIndex.ClimbingOnBeam) return true;
             if (self.animation == Player.AnimationIndex.StandOnBeam) return true;
+            if (self.animation == Player.AnimationIndex.ZeroGPoleGrab) return true;
             if (self.animation == Player.AnimationIndex.Roll) return true;
             if (feetMustBeGrounded) return false;
             if (self.canWallJump != 0) return true;
@@ -329,7 +332,8 @@ namespace Rain_World_Drought.Slugcat
                     jumpDir.Normalize();
                 }
             }
-            jumpDir.y += 0.25f;
+
+            jumpDir.y += 0.25f * self.gravity;
 
             if (jumpDir.x == 0 && jumpDir.y == 0) jumpDir.y = 1;
 
@@ -590,6 +594,16 @@ namespace Rain_World_Drought.Slugcat
             if (!WandererSupplement.IsWanderer(self)) return;
 
             WandererSupplement sub = WandererSupplement.GetSub(self);
+
+            // Kick out of focus when unconsious
+            if(!self.Consious)
+            {
+                sub.focusLeft = 0;
+                sub.slowdownLeft = 0;
+                sub.canTripleJump = false;
+                sub.noFocusJumpCounter = 0;
+            }
+
             if (sub.focusLeft > 0)
             {
                 sub.focusLeft--;
@@ -617,7 +631,7 @@ namespace Rain_World_Drought.Slugcat
 
             sub.jumpQueued = false;
 
-            if (WandererSupplement.IsWanderer(self) && self.Consious && !self.Malnourished && self.room != null && self.room.game != null && self.room.game.IsStorySession)
+            if (self.Consious && !self.Malnourished && self.room != null && self.room.game != null && self.room.game.IsStorySession && sub.pearlConversation != null)
             { sub.pearlConversation.Update(eu); }
         }
 

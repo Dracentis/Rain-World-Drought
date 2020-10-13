@@ -95,6 +95,7 @@
     <Compile Include="Creature\MultiplayerUnlocksHK.cs" />
     <Compile Include="Creature\OverseerDroughtTutorialBehavior.cs" />
     <Compile Include="Creature\OverseerHK.cs" />
+    <Compile Include="Debugging.cs" />
     <Compile Include="PlacedObjects\AbstractPhysicalObjectHK.cs" />
     <Compile Include="PlacedObjects\DataPearlHK.cs" />
     <Compile Include="PlacedObjects\PistonPhysics.cs" />
