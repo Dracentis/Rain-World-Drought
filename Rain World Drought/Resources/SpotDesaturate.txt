@@ -1,0 +1,564 @@
+// Compiled shader for all platforms, uncompressed size: 14.8KB
+
+Shader "Custom/SpotDesaturate" {
+Properties {
+ _MainTex ("Base (RGB) Trans (A)", 2D) = "white" {}
+}
+SubShader { 
+ Tags { "QUEUE"="Transparent" "IGNOREPROJECTOR"="true" "RenderType"="Transparent" }
+ GrabPass {
+  "_DesaturateTexture"
+ }
+
+
+ // Stats for Vertex shader:
+ //       d3d11 : 7 math
+ //        d3d9 : 11 math
+ //        gles : 11 math, 1 texture
+ //       gles3 : 11 math, 1 texture
+ //   glesdesktop : 11 math, 1 texture
+ //       metal : 6 math
+ //      opengl : 10 math
+ // Stats for Fragment shader:
+ //       d3d11 : 14 math, 1 texture
+ //        d3d9 : 13 math, 1 texture
+ //       metal : 11 math, 1 texture
+ //      opengl : 12 math, 1 texture
+ Pass {
+  Tags { "QUEUE"="Transparent" "IGNOREPROJECTOR"="true" "RenderType"="Transparent" }
+  ZWrite Off
+  Cull Off
+  Fog {
+   Color (0,0,0,0)
+  }
+  Blend SrcAlpha OneMinusSrcAlpha
+Program "vp" {
+SubProgram "opengl " {
+// Stats: 10 math
+Bind "vertex" Vertex
+Bind "color" Color
+Bind "texcoord" TexCoord0
+Vector 5 [_MainTex_ST]
+"3.0-!!ARBvp1.0
+PARAM c[6] = { { 0.5 },
+		state.matrix.mvp,
+		program.local[5] };
+TEMP R0;
+TEMP R1;
+DP4 R0.w, vertex.position, c[4];
+DP4 R0.z, vertex.position, c[3];
+DP4 R0.x, vertex.position, c[1];
+DP4 R0.y, vertex.position, c[2];
+MUL R1.xyz, R0.xyww, c[0].x;
+MOV result.position, R0;
+MOV result.texcoord[1].zw, R0;
+ADD result.texcoord[1].xy, R1, R1.z;
+MOV result.color, vertex.color;
+MAD result.texcoord[0].xy, vertex.texcoord[0], c[5], c[5].zwzw;
+END
+# 10 instructions, 2 R-regs
+"
+}
+SubProgram "d3d9 " {
+// Stats: 11 math
+Bind "vertex" Vertex
+Bind "color" Color
+Bind "texcoord" TexCoord0
+Matrix 0 [glstate_matrix_mvp]
+Vector 4 [_MainTex_ST]
+"vs_3_0
+dcl_position o0
+dcl_texcoord0 o1
+dcl_texcoord1 o2
+dcl_color0 o3
+def c5, 0.50000000, 0, 0, 0
+dcl_position0 v0
+dcl_texcoord0 v1
+dcl_color0 v2
+dp4 r0.w, v0, c3
+dp4 r0.z, v0, c2
+dp4 r0.x, v0, c0
+dp4 r0.y, v0, c1
+mul r1.xyz, r0.xyww, c5.x
+mov r1.y, -r1
+add o2.xy, r1, r1.z
+mov o0, r0
+mov o2.zw, r0
+mov o3, v2
+mad o1.xy, v1, c4, c4.zwzw
+"
+}
+SubProgram "d3d11 " {
+// Stats: 7 math
+Bind "vertex" Vertex
+Bind "color" Color
+Bind "texcoord" TexCoord0
+ConstBuffer "$Globals" 80
+Vector 64 [_MainTex_ST]
+ConstBuffer "UnityPerDraw" 336
+Matrix 0 [glstate_matrix_mvp]
+BindCB  "$Globals" 0
+BindCB  "UnityPerDraw" 1
+"vs_4_0
+eefiecedmfnhlckoodfkdhjdcaibnlhhipopdhekabaaaaaafiadaaaaadaaaaaa
+cmaaaaaapeaaaaaaiaabaaaaejfdeheomaaaaaaaagaaaaaaaiaaaaaajiaaaaaa
+aaaaaaaaaaaaaaaaadaaaaaaaaaaaaaaapapaaaakbaaaaaaaaaaaaaaaaaaaaaa
+adaaaaaaabaaaaaaapaaaaaakjaaaaaaaaaaaaaaaaaaaaaaadaaaaaaacaaaaaa
+ahaaaaaalaaaaaaaaaaaaaaaaaaaaaaaadaaaaaaadaaaaaaapadaaaalaaaaaaa
+abaaaaaaaaaaaaaaadaaaaaaaeaaaaaaapaaaaaaljaaaaaaaaaaaaaaaaaaaaaa
+adaaaaaaafaaaaaaapapaaaafaepfdejfeejepeoaafeebeoehefeofeaaeoepfc
+enebemaafeeffiedepepfceeaaedepemepfcaaklepfdeheoieaaaaaaaeaaaaaa
+aiaaaaaagiaaaaaaaaaaaaaaabaaaaaaadaaaaaaaaaaaaaaapaaaaaaheaaaaaa
+aaaaaaaaaaaaaaaaadaaaaaaabaaaaaaadamaaaaheaaaaaaabaaaaaaaaaaaaaa
+adaaaaaaacaaaaaaapaaaaaahnaaaaaaaaaaaaaaaaaaaaaaadaaaaaaadaaaaaa
+apaaaaaafdfgfpfaepfdejfeejepeoaafeeffiedepepfceeaaedepemepfcaakl
+fdeieefcnaabaaaaeaaaabaaheaaaaaafjaaaaaeegiocaaaaaaaaaaaafaaaaaa
+fjaaaaaeegiocaaaabaaaaaaaeaaaaaafpaaaaadpcbabaaaaaaaaaaafpaaaaad
+dcbabaaaadaaaaaafpaaaaadpcbabaaaafaaaaaaghaaaaaepccabaaaaaaaaaaa
+abaaaaaagfaaaaaddccabaaaabaaaaaagfaaaaadpccabaaaacaaaaaagfaaaaad
+pccabaaaadaaaaaagiaaaaacacaaaaaadiaaaaaipcaabaaaaaaaaaaafgbfbaaa
+aaaaaaaaegiocaaaabaaaaaaabaaaaaadcaaaaakpcaabaaaaaaaaaaaegiocaaa
+abaaaaaaaaaaaaaaagbabaaaaaaaaaaaegaobaaaaaaaaaaadcaaaaakpcaabaaa
+aaaaaaaaegiocaaaabaaaaaaacaaaaaakgbkbaaaaaaaaaaaegaobaaaaaaaaaaa
+dcaaaaakpcaabaaaaaaaaaaaegiocaaaabaaaaaaadaaaaaapgbpbaaaaaaaaaaa
+egaobaaaaaaaaaaadgaaaaafpccabaaaaaaaaaaaegaobaaaaaaaaaaadcaaaaal
+dccabaaaabaaaaaaegbabaaaadaaaaaaegiacaaaaaaaaaaaaeaaaaaaogikcaaa
+aaaaaaaaaeaaaaaadiaaaaakhcaabaaaabaaaaaamgabbaaaaaaaaaaaaceaaaaa
+aaaaaadpaaaaaadpaaaaaalpaaaaaaaadgaaaaafmccabaaaacaaaaaakgaobaaa
+aaaaaaaaaaaaaaahdccabaaaacaaaaaafgafbaaaabaaaaaaigaabaaaabaaaaaa
+dgaaaaafpccabaaaadaaaaaaegbobaaaafaaaaaadoaaaaab"
+}
+SubProgram "gles " {
+// Stats: 11 math, 1 textures
+"!!GLES
+
+
+#ifdef VERTEX
+
+attribute vec4 _glesVertex;
+attribute vec4 _glesColor;
+attribute vec4 _glesMultiTexCoord0;
+uniform highp mat4 glstate_matrix_mvp;
+uniform highp vec4 _MainTex_ST;
+varying highp vec2 xlv_TEXCOORD0;
+varying highp vec4 xlv_TEXCOORD1;
+varying highp vec4 xlv_COLOR;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  tmpvar_1 = _glesColor;
+  highp vec4 tmpvar_2;
+  highp vec4 tmpvar_3;
+  tmpvar_3 = (glstate_matrix_mvp * _glesVertex);
+  highp vec4 o_4;
+  highp vec4 tmpvar_5;
+  tmpvar_5 = (tmpvar_3 * 0.5);
+  o_4.xy = (tmpvar_5.xy + tmpvar_5.w);
+  o_4.zw = tmpvar_3.zw;
+  tmpvar_2 = tmpvar_1;
+  gl_Position = tmpvar_3;
+  xlv_TEXCOORD0 = ((_glesMultiTexCoord0.xy * _MainTex_ST.xy) + _MainTex_ST.zw);
+  xlv_TEXCOORD1 = o_4;
+  xlv_COLOR = tmpvar_2;
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+uniform sampler2D _DesaturateTexture;
+varying highp vec2 xlv_TEXCOORD0;
+varying highp vec4 xlv_TEXCOORD1;
+varying highp vec4 xlv_COLOR;
+void main ()
+{
+  mediump vec4 clr_1;
+  mediump float centerDist_2;
+  highp vec2 tmpvar_3;
+  tmpvar_3 = (xlv_TEXCOORD0 - vec2(0.5, 0.5));
+  highp float tmpvar_4;
+  tmpvar_4 = clamp ((sqrt(
+    dot (tmpvar_3, tmpvar_3)
+  ) * 2.0), 0.0, 1.0);
+  centerDist_2 = tmpvar_4;
+  mediump float tmpvar_5;
+  tmpvar_5 = clamp ((pow (
+    (1.0 - centerDist_2)
+  , 1.5) * 2.0), 0.0, 1.0);
+  lowp vec4 tmpvar_6;
+  tmpvar_6 = texture2DProj (_DesaturateTexture, xlv_TEXCOORD1);
+  clr_1 = tmpvar_6;
+  lowp vec3 c_7;
+  c_7 = clr_1.xyz;
+  lowp float tmpvar_8;
+  tmpvar_8 = dot (c_7, vec3(0.22, 0.707, 0.071));
+  clr_1.x = tmpvar_8;
+  clr_1.y = tmpvar_8;
+  clr_1.z = tmpvar_8;
+  highp float tmpvar_9;
+  tmpvar_9 = (xlv_COLOR.w * tmpvar_5);
+  clr_1.w = tmpvar_9;
+  gl_FragData[0] = clr_1;
+}
+
+
+
+#endif"
+}
+SubProgram "glesdesktop " {
+// Stats: 11 math, 1 textures
+"!!GLES
+
+
+#ifdef VERTEX
+
+attribute vec4 _glesVertex;
+attribute vec4 _glesColor;
+attribute vec4 _glesMultiTexCoord0;
+uniform highp mat4 glstate_matrix_mvp;
+uniform highp vec4 _MainTex_ST;
+varying highp vec2 xlv_TEXCOORD0;
+varying highp vec4 xlv_TEXCOORD1;
+varying highp vec4 xlv_COLOR;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  tmpvar_1 = _glesColor;
+  highp vec4 tmpvar_2;
+  highp vec4 tmpvar_3;
+  tmpvar_3 = (glstate_matrix_mvp * _glesVertex);
+  highp vec4 o_4;
+  highp vec4 tmpvar_5;
+  tmpvar_5 = (tmpvar_3 * 0.5);
+  o_4.xy = (tmpvar_5.xy + tmpvar_5.w);
+  o_4.zw = tmpvar_3.zw;
+  tmpvar_2 = tmpvar_1;
+  gl_Position = tmpvar_3;
+  xlv_TEXCOORD0 = ((_glesMultiTexCoord0.xy * _MainTex_ST.xy) + _MainTex_ST.zw);
+  xlv_TEXCOORD1 = o_4;
+  xlv_COLOR = tmpvar_2;
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+uniform sampler2D _DesaturateTexture;
+varying highp vec2 xlv_TEXCOORD0;
+varying highp vec4 xlv_TEXCOORD1;
+varying highp vec4 xlv_COLOR;
+void main ()
+{
+  mediump vec4 clr_1;
+  mediump float centerDist_2;
+  highp vec2 tmpvar_3;
+  tmpvar_3 = (xlv_TEXCOORD0 - vec2(0.5, 0.5));
+  highp float tmpvar_4;
+  tmpvar_4 = clamp ((sqrt(
+    dot (tmpvar_3, tmpvar_3)
+  ) * 2.0), 0.0, 1.0);
+  centerDist_2 = tmpvar_4;
+  mediump float tmpvar_5;
+  tmpvar_5 = clamp ((pow (
+    (1.0 - centerDist_2)
+  , 1.5) * 2.0), 0.0, 1.0);
+  lowp vec4 tmpvar_6;
+  tmpvar_6 = texture2DProj (_DesaturateTexture, xlv_TEXCOORD1);
+  clr_1 = tmpvar_6;
+  lowp vec3 c_7;
+  c_7 = clr_1.xyz;
+  lowp float tmpvar_8;
+  tmpvar_8 = dot (c_7, vec3(0.22, 0.707, 0.071));
+  clr_1.x = tmpvar_8;
+  clr_1.y = tmpvar_8;
+  clr_1.z = tmpvar_8;
+  highp float tmpvar_9;
+  tmpvar_9 = (xlv_COLOR.w * tmpvar_5);
+  clr_1.w = tmpvar_9;
+  gl_FragData[0] = clr_1;
+}
+
+
+
+#endif"
+}
+SubProgram "gles3 " {
+// Stats: 11 math, 1 textures
+"!!GLES3#version 300 es
+
+
+#ifdef VERTEX
+
+
+in vec4 _glesVertex;
+in vec4 _glesColor;
+in vec4 _glesMultiTexCoord0;
+uniform highp mat4 glstate_matrix_mvp;
+uniform highp vec4 _MainTex_ST;
+out highp vec2 xlv_TEXCOORD0;
+out highp vec4 xlv_TEXCOORD1;
+out highp vec4 xlv_COLOR;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  tmpvar_1 = _glesColor;
+  highp vec4 tmpvar_2;
+  highp vec4 tmpvar_3;
+  tmpvar_3 = (glstate_matrix_mvp * _glesVertex);
+  highp vec4 o_4;
+  highp vec4 tmpvar_5;
+  tmpvar_5 = (tmpvar_3 * 0.5);
+  o_4.xy = (tmpvar_5.xy + tmpvar_5.w);
+  o_4.zw = tmpvar_3.zw;
+  tmpvar_2 = tmpvar_1;
+  gl_Position = tmpvar_3;
+  xlv_TEXCOORD0 = ((_glesMultiTexCoord0.xy * _MainTex_ST.xy) + _MainTex_ST.zw);
+  xlv_TEXCOORD1 = o_4;
+  xlv_COLOR = tmpvar_2;
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+
+layout(location=0) out mediump vec4 _glesFragData[4];
+uniform sampler2D _DesaturateTexture;
+in highp vec2 xlv_TEXCOORD0;
+in highp vec4 xlv_TEXCOORD1;
+in highp vec4 xlv_COLOR;
+void main ()
+{
+  mediump vec4 clr_1;
+  mediump float centerDist_2;
+  highp vec2 tmpvar_3;
+  tmpvar_3 = (xlv_TEXCOORD0 - vec2(0.5, 0.5));
+  highp float tmpvar_4;
+  tmpvar_4 = clamp ((sqrt(
+    dot (tmpvar_3, tmpvar_3)
+  ) * 2.0), 0.0, 1.0);
+  centerDist_2 = tmpvar_4;
+  mediump float tmpvar_5;
+  tmpvar_5 = clamp ((pow (
+    (1.0 - centerDist_2)
+  , 1.5) * 2.0), 0.0, 1.0);
+  lowp vec4 tmpvar_6;
+  tmpvar_6 = textureProj (_DesaturateTexture, xlv_TEXCOORD1);
+  clr_1 = tmpvar_6;
+  lowp vec3 c_7;
+  c_7 = clr_1.xyz;
+  lowp float tmpvar_8;
+  tmpvar_8 = dot (c_7, vec3(0.22, 0.707, 0.071));
+  clr_1.x = tmpvar_8;
+  clr_1.y = tmpvar_8;
+  clr_1.z = tmpvar_8;
+  highp float tmpvar_9;
+  tmpvar_9 = (xlv_COLOR.w * tmpvar_5);
+  clr_1.w = tmpvar_9;
+  _glesFragData[0] = clr_1;
+}
+
+
+
+#endif"
+}
+SubProgram "metal " {
+// Stats: 6 math
+Bind "vertex" ATTR0
+Bind "color" ATTR1
+Bind "texcoord" ATTR2
+ConstBuffer "$Globals" 80
+Matrix 0 [glstate_matrix_mvp]
+Vector 64 [_MainTex_ST]
+"metal_vs
+#include <metal_stdlib>
+using namespace metal;
+struct xlatMtlShaderInput {
+  float4 _glesVertex [[attribute(0)]];
+  float4 _glesColor [[attribute(1)]];
+  float4 _glesMultiTexCoord0 [[attribute(2)]];
+};
+struct xlatMtlShaderOutput {
+  float4 gl_Position [[position]];
+  float2 xlv_TEXCOORD0;
+  float4 xlv_TEXCOORD1;
+  float4 xlv_COLOR;
+};
+struct xlatMtlShaderUniform {
+  float4x4 glstate_matrix_mvp;
+  float4 _MainTex_ST;
+};
+vertex xlatMtlShaderOutput xlatMtlMain (xlatMtlShaderInput _mtl_i [[stage_in]], constant xlatMtlShaderUniform& _mtl_u [[buffer(0)]])
+{
+  xlatMtlShaderOutput _mtl_o;
+  half4 tmpvar_1;
+  tmpvar_1 = half4(_mtl_i._glesColor);
+  float4 tmpvar_2;
+  float4 tmpvar_3;
+  tmpvar_3 = (_mtl_u.glstate_matrix_mvp * _mtl_i._glesVertex);
+  float4 o_4;
+  float4 tmpvar_5;
+  tmpvar_5 = (tmpvar_3 * 0.5);
+  float2 tmpvar_6;
+  tmpvar_6.x = tmpvar_5.x;
+  tmpvar_6.y = -(tmpvar_5.y);
+  o_4.xy = (tmpvar_6 + tmpvar_5.w);
+  o_4.zw = tmpvar_3.zw;
+  tmpvar_2 = float4(tmpvar_1);
+  _mtl_o.gl_Position = tmpvar_3;
+  _mtl_o.xlv_TEXCOORD0 = ((_mtl_i._glesMultiTexCoord0.xy * _mtl_u._MainTex_ST.xy) + _mtl_u._MainTex_ST.zw);
+  _mtl_o.xlv_TEXCOORD1 = o_4;
+  _mtl_o.xlv_COLOR = tmpvar_2;
+  return _mtl_o;
+}
+
+"
+}
+}
+Program "fp" {
+SubProgram "opengl " {
+// Stats: 12 math, 1 textures
+SetTexture 0 [_DesaturateTexture] 2D 0
+"3.0-!!ARBfp1.0
+OPTION ARB_fragment_program_shadow;
+PARAM c[2] = { { 1, 0.5, 2, 1.5 },
+		{ 0.2199707, 0.70703125, 0.070983887 } };
+TEMP R0;
+ADD R0.xy, -fragment.texcoord[0], c[0].y;
+MUL R0.xy, R0, R0;
+ADD R0.x, R0, R0.y;
+RSQ R0.x, R0.x;
+RCP R0.x, R0.x;
+MUL_SAT R0.x, R0, c[0].z;
+ADD R0.x, -R0, c[0];
+POW R0.w, R0.x, c[0].w;
+TXP R0.xyz, fragment.texcoord[1], texture[0], SHADOW2D;
+MUL_SAT R0.w, R0, c[0].z;
+DP3 result.color.xyz, R0, c[1];
+MUL result.color.w, fragment.color.primary, R0;
+END
+# 12 instructions, 1 R-regs
+"
+}
+SubProgram "d3d9 " {
+// Stats: 13 math, 1 textures
+SetTexture 0 [_DesaturateTexture] 2D 0
+"ps_3_0
+dcl_2d s0
+def c0, 0.50000000, 2.00000000, 1.00000000, 1.50000000
+def c1, 0.21997070, 0.70703125, 0.07098389, 0
+dcl_texcoord0 v0.xy
+dcl_texcoord1 v1
+dcl_color0 v2.xyzw
+add r0.xy, -v0, c0.x
+mul r0.xy, r0, r0
+add r0.x, r0, r0.y
+rsq r0.x, r0.x
+rcp r0.x, r0.x
+mul_sat r0.x, r0, c0.y
+add_pp r1.x, -r0, c0.z
+pow_pp r0, r1.x, c0.w
+mul_pp_sat r0.w, r0.x, c0.y
+texldp r0.xyz, v1, s0
+mul oC0.w, v2, r0
+dp3_pp oC0.xyz, r0, c1
+"
+}
+SubProgram "d3d11 " {
+// Stats: 14 math, 1 textures
+SetTexture 0 [_DesaturateTexture] 2D 0
+"ps_4_0
+eefiecedklejdhmpbkfpihmcplajhibnmjifaeohabaaaaaabiadaaaaadaaaaaa
+cmaaaaaaliaaaaaaomaaaaaaejfdeheoieaaaaaaaeaaaaaaaiaaaaaagiaaaaaa
+aaaaaaaaabaaaaaaadaaaaaaaaaaaaaaapaaaaaaheaaaaaaaaaaaaaaaaaaaaaa
+adaaaaaaabaaaaaaadadaaaaheaaaaaaabaaaaaaaaaaaaaaadaaaaaaacaaaaaa
+apalaaaahnaaaaaaaaaaaaaaaaaaaaaaadaaaaaaadaaaaaaapaiaaaafdfgfpfa
+epfdejfeejepeoaafeeffiedepepfceeaaedepemepfcaaklepfdeheocmaaaaaa
+abaaaaaaaiaaaaaacaaaaaaaaaaaaaaaaaaaaaaaadaaaaaaaaaaaaaaapaaaaaa
+fdfgfpfegbhcghgfheaaklklfdeieefcceacaaaaeaaaaaaaijaaaaaafkaaaaad
+aagabaaaaaaaaaaafibiaaaeaahabaaaaaaaaaaaffffaaaagcbaaaaddcbabaaa
+abaaaaaagcbaaaadlcbabaaaacaaaaaagcbaaaadicbabaaaadaaaaaagfaaaaad
+pccabaaaaaaaaaaagiaaaaacacaaaaaaaaaaaaakdcaabaaaaaaaaaaaegbabaaa
+abaaaaaaaceaaaaaaaaaaalpaaaaaalpaaaaaaaaaaaaaaaaapaaaaahbcaabaaa
+aaaaaaaaegaabaaaaaaaaaaaegaabaaaaaaaaaaaelaaaaafbcaabaaaaaaaaaaa
+akaabaaaaaaaaaaaaaaaaaahbcaabaaaaaaaaaaaakaabaaaaaaaaaaaakaabaaa
+aaaaaaaaddaaaaahbcaabaaaaaaaaaaaakaabaaaaaaaaaaaabeaaaaaaaaaiadp
+aaaaaaaibcaabaaaaaaaaaaaakaabaiaebaaaaaaaaaaaaaaabeaaaaaaaaaiadp
+cpaaaaafbcaabaaaaaaaaaaaakaabaaaaaaaaaaadiaaaaahbcaabaaaaaaaaaaa
+akaabaaaaaaaaaaaabeaaaaaaaaamadpbjaaaaafbcaabaaaaaaaaaaaakaabaaa
+aaaaaaaaaaaaaaahbcaabaaaaaaaaaaaakaabaaaaaaaaaaaakaabaaaaaaaaaaa
+ddaaaaahbcaabaaaaaaaaaaaakaabaaaaaaaaaaaabeaaaaaaaaaiadpdiaaaaah
+ccaabaaaaaaaaaaaakaabaaaaaaaaaaadkbabaaaadaaaaaaaoaaaaahmcaabaaa
+aaaaaaaaagbebaaaacaaaaaapgbpbaaaacaaaaaaefaaaaajpcaabaaaabaaaaaa
+ogakbaaaaaaaaaaaeghobaaaaaaaaaaaaagabaaaaaaaaaaabaaaaaakbcaabaaa
+aaaaaaaaegacbaaaabaaaaaaaceaaaaakoehgbdopepndedphdgijbdnaaaaaaaa
+dgaaaaafpccabaaaaaaaaaaaagaebaaaaaaaaaaadoaaaaab"
+}
+SubProgram "gles " {
+"!!GLES"
+}
+SubProgram "glesdesktop " {
+"!!GLES"
+}
+SubProgram "gles3 " {
+"!!GLES3"
+}
+SubProgram "metal " {
+// Stats: 11 math, 1 textures
+SetTexture 0 [_DesaturateTexture] 2D 0
+"metal_fs
+#include <metal_stdlib>
+using namespace metal;
+struct xlatMtlShaderInput {
+  float2 xlv_TEXCOORD0;
+  float4 xlv_TEXCOORD1;
+  float4 xlv_COLOR;
+};
+struct xlatMtlShaderOutput {
+  half4 _glesFragData_0 [[color(0)]];
+};
+struct xlatMtlShaderUniform {
+};
+fragment xlatMtlShaderOutput xlatMtlMain (xlatMtlShaderInput _mtl_i [[stage_in]], constant xlatMtlShaderUniform& _mtl_u [[buffer(0)]]
+  ,   texture2d<half> _DesaturateTexture [[texture(0)]], sampler _mtlsmp__DesaturateTexture [[sampler(0)]])
+{
+  xlatMtlShaderOutput _mtl_o;
+  half4 clr_1;
+  half centerDist_2;
+  float2 tmpvar_3;
+  tmpvar_3 = (_mtl_i.xlv_TEXCOORD0 - float2(0.5, 0.5));
+  float tmpvar_4;
+  tmpvar_4 = clamp ((sqrt(
+    dot (tmpvar_3, tmpvar_3)
+  ) * 2.0), 0.0, 1.0);
+  centerDist_2 = half(tmpvar_4);
+  half tmpvar_5;
+  tmpvar_5 = clamp ((pow (
+    ((half)1.0 - centerDist_2)
+  , (half)1.5) * (half)2.0), (half)0.0, (half)1.0);
+  half4 tmpvar_6;
+  tmpvar_6 = _DesaturateTexture.sample(_mtlsmp__DesaturateTexture, ((float2)(_mtl_i.xlv_TEXCOORD1).xy / (float)(_mtl_i.xlv_TEXCOORD1).w));
+  clr_1 = tmpvar_6;
+  half3 c_7;
+  c_7 = clr_1.xyz;
+  half tmpvar_8;
+  tmpvar_8 = dot (c_7, (half3)float3(0.22, 0.707, 0.071));
+  clr_1.x = tmpvar_8;
+  clr_1.y = tmpvar_8;
+  clr_1.z = tmpvar_8;
+  float tmpvar_9;
+  tmpvar_9 = (_mtl_i.xlv_COLOR.w * (float)tmpvar_5);
+  clr_1.w = half(tmpvar_9);
+  _mtl_o._glesFragData_0 = clr_1;
+  return _mtl_o;
+}
+
+"
+}
+}
+ }
+}
+}

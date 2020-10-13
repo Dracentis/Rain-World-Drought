@@ -46,6 +46,7 @@ namespace Rain_World_Drought.Slugcat
             num = AddCosmetics(sub, num, new TailRing(self, num, 0));
             num = AddCosmetics(sub, num, new TailRing(self, num, 1));
             num = AddCosmetics(sub, num, new TailRing(self, num, 2));
+            num = AddCosmetics(sub, num, new FocusHalo(self, num));
 
             Array.Resize(ref sLeaser.sprites, num);
             for (int l = 0; l < sub.cosmetics.Count; l++) { sub.cosmetics[l].InitiateSprites(sLeaser, rCam); }
@@ -114,7 +115,7 @@ namespace Rain_World_Drought.Slugcat
             WandererSupplement sub = WandererSupplement.GetSub(self.player);
 
             float voidInEffect = 0f;
-            if (sub.voidEnergy) { voidInEffect = (1f - sub.maxEnergy) / 1.2f; }
+            if (sub.voidEnergy) { voidInEffect = (1f - WandererSupplement.maxEnergy) / 1.2f; }
             Color body = Color.Lerp(PlayerGraphics.SlugcatColor(self.player.playerState.slugcatCharacter), Color.white, voidInEffect);
             Color eye = palette.blackColor;
             if (self.malnourished > 0f)

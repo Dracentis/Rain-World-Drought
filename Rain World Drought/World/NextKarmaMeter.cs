@@ -5,37 +5,12 @@ using UnityEngine;
 
 namespace Rain_World_Drought.OverWorld
 {
-    public class NextKarmaMeter : HudPart
+    public class NextKarmaMeter : KarmaMeter
     {
-        public NextKarmaMeter(HUD.HUD hud, FContainer fContainer, IntVector2 displayKarma, bool showAsReinforced) : base(hud)
+        public NextKarmaMeter(HUD.HUD hud, FContainer fContainer, IntVector2 displayKarma, bool showAsReinforced) : base(hud, fContainer, displayKarma, showAsReinforced)
         {
-            this.displayKarma = displayKarma;
-            this.showAsReinforced = showAsReinforced;
-            displayKarma.x = Custom.IntClamp(displayKarma.x, 0, displayKarma.y);
-            this.pos = new Vector2(55.01f, 45.01f);
-            this.lastPos = this.pos;
-            this.rad = 22.5f;
-            this.lastRad = this.rad;
-            this.darkFade = new FSprite("Futile_White", true);
-            this.darkFade.shader = hud.rainWorld.Shaders["FlatLight"];
-            this.darkFade.color = new Color(0f, 0f, 0f);
-            fContainer.AddChild(this.darkFade);
-            this.karmaSprite = new FSprite(KarmaMeter.KarmaSymbolSprite(true, displayKarma), true);
-            this.karmaSprite.color = new Color(1f, 1f, 1f);
-            fContainer.AddChild(this.karmaSprite);
-            this.glowSprite = new FSprite("Futile_White", true);
-            this.glowSprite.shader = hud.rainWorld.Shaders["FlatLight"];
-            fContainer.AddChild(this.glowSprite);
         }
-
-        public float Radius
-        {
-            get
-            {
-                return this.rad + ((!this.showAsReinforced) ? 0f : (8f * (1f - Mathf.InverseLerp(0.2f, 0.4f, this.hud.foodMeter.forceSleep))));
-            }
-        }
-
+        
         public override void Update()
         {
             this.lastPos = this.pos;
@@ -49,11 +24,6 @@ namespace Rain_World_Drought.OverWorld
             this.karmaSprite.color = new Color(1f, 1f, 1f);
             if (this.ringSprite != null) { this.ringSprite.color = new Color(1f, 1f, 1f); }
             this.glowSprite.color = new Color(1f, 1f, 1f);
-        }
-
-        public Vector2 DrawPos(float timeStacker)
-        {
-            return Vector2.Lerp(this.lastPos, this.pos, timeStacker);
         }
 
         public override void Draw(float timeStacker)
@@ -123,31 +93,5 @@ namespace Rain_World_Drought.OverWorld
             this.glowSprite.scale = (60f + 10f * num5) * num6 / 8f;
             this.glowSprite.alpha = (0.2f + 0.2f * num5) * num6;
         }
-
-        public override void ClearSprites()
-        {
-            base.ClearSprites();
-            this.darkFade.RemoveFromContainer();
-            this.karmaSprite.RemoveFromContainer();
-            if (this.ringSprite != null) { this.ringSprite.RemoveFromContainer(); }
-            if (this.vectorRingSprite != null) { this.vectorRingSprite.RemoveFromContainer(); }
-        }
-
-        public FSprite karmaSprite;
-        public FSprite darkFade;
-        public FSprite ringSprite;
-        public FSprite vectorRingSprite;
-        public FSprite glowSprite;
-        public Vector2 pos;
-        public Vector2 lastPos;
-        public float rad, lastRad;
-        public IntVector2 displayKarma;
-        public bool showAsReinforced;
-        public float glowyFac;
-        public float lastGlowyFac;
-        public float reinforcementCycle;
-        public float lastReinforcementCycle;
-        public int timer;
-        private bool symbolDirty;
     }
 }

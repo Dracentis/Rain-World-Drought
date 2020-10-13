@@ -14,12 +14,18 @@ namespace Rain_World_Drought.OverWorld
             On.HUD.HUD.InitSleepHud += new On.HUD.HUD.hook_InitSleepHud(InitSleepHudHK);
             On.Menu.SleepAndDeathScreen.GetDataFromGame += new On.Menu.SleepAndDeathScreen.hook_GetDataFromGame(GetDataFromGameHK);
             On.HUD.KarmaMeter.KarmaSymbolSprite += new On.HUD.KarmaMeter.hook_KarmaSymbolSprite(KarmaSymbolSpriteHK);
+            On.HUD.HUD.InitSinglePlayerHud += new On.HUD.HUD.hook_InitSinglePlayerHud(InitSinglePlayerHudHK);
         }
 
         public static bool[] danger;
 
         private static void CtorHK(On.HUD.RainMeter.orig_ctor orig, RainMeter self, HUD.HUD hud, FContainer fContainer)
         {
+            if(hud.owner.GetOwnerType() != HUD.HUD.OwnerType.Player)
+            {
+                self.hud = hud;
+                return;
+            }
             orig.Invoke(self, hud, fContainer);
             danger = new bool[self.circles.Length];
             for (int q = 0; q < 3; q++)
@@ -34,7 +40,7 @@ namespace Rain_World_Drought.OverWorld
             orig.Invoke(self);
             for (int i = 0; i < self.circles.Length; i++)
             {
-                if (danger[i]) { self.circles[i].sprite.color = Color.red; }
+                if (danger[i]) { self.circles[i].color = 1; }
             }
         }
 
@@ -53,12 +59,12 @@ namespace Rain_World_Drought.OverWorld
                 NextKarmaMeter karmaMeter = new NextKarmaMeter(self, self.fContainers[1], new IntVector2(dayType, NextKarmaSymbol), false);
                 self.AddPart(karmaMeter);
                 karmaMeter.pos = new Vector2(self.rainWorld.options.ScreenSize.x - 280f + 105f * i, self.rainWorld.options.ScreenSize.y - 70f);
-                karmaMeter.lastPos = self.karmaMeter.pos;
+                karmaMeter.lastPos = karmaMeter.pos;
 
                 NextRainMeter rainMeter = new NextRainMeter(self, self.fContainers[1], i);
                 self.AddPart(rainMeter);
                 rainMeter.pos = new Vector2(self.rainWorld.options.ScreenSize.x - 280f + 105f * i, self.rainWorld.options.ScreenSize.y - 70f);
-                rainMeter.lastPos = self.rainMeter.pos;
+                rainMeter.lastPos = rainMeter.pos;
             }
         }
 
@@ -85,6 +91,15 @@ namespace Rain_World_Drought.OverWorld
         {
             if (k.y == NextKarmaSymbol) { return string.Concat("smallKarma", k.x, "-", k.y); }
             return orig.Invoke(small, k);
+        }
+
+        private static void InitSinglePlayerHudHK(On.HUD.HUD.orig_InitSinglePlayerHud orig, HUD.HUD self, RoomCamera cam)
+        {
+            orig(self, cam);
+            if(self.owner is Player ply && Slugcat.WandererSupplement.IsWanderer(ply))
+            {
+                self.AddPart(new FocusMeter(self, self.fContainers[1]));
+            }
         }
     }
 }
