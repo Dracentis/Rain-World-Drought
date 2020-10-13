@@ -28,7 +28,7 @@ class JumpPulse : CosmeticSprite
             newContatiner = rCam.ReturnFContainer("ForegroundLights");
         for (int i = 1; i < sLeaser.sprites.Length; i++)
             newContatiner.AddChild(sLeaser.sprites[i]);
-        newContatiner.AddChild(sLeaser.sprites[0]);
+        rCam.ReturnFContainer("Water").AddChild(sLeaser.sprites[0]);
     }
 
     public override void ApplyPalette(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, RoomPalette palette)
