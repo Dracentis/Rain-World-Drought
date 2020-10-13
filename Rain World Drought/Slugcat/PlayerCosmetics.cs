@@ -183,7 +183,7 @@ namespace Rain_World_Drought.Slugcat
                 0.5f);
 
             float alpha = Mathf.Lerp(lastFocus, focus, timeStacker);
-            if (alpha == 0f)
+            if (alpha < 0.01f)
             {
                 sLeaser.sprites[startSprite + 0].isVisible = false;
                 sLeaser.sprites[startSprite + 1].isVisible = false;

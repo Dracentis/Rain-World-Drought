@@ -40,7 +40,7 @@ namespace Rain_World_Drought.OverWorld
             orig.Invoke(self);
             for (int i = 0; i < self.circles.Length; i++)
             {
-                if (danger[i]) { self.circles[i].sprite.color = Color.red; }
+                if (danger[i]) { self.circles[i].color = 1; }
             }
         }
 
