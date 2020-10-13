@@ -19,7 +19,7 @@ File [<file>] is missing: Reinstall DroughtAssets.
 Error occured while loading Drought Atlas [<file>]: Reinstall DroughtAssets.
 
 /// Tutorial ///
-While in the air, hold GRAB and then press JUMP to start boosting.
+While on the ground, tap MAP and then press JUMP to slow down time.
 Then hold a DIRECTION and press JUMP to finish the boost.
 
 /// PlayerName ///

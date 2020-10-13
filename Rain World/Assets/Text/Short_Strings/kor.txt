@@ -19,7 +19,7 @@ File [<file>] is missing: Reinstall DroughtAssets.|[<file>] 파일이 없습니�
 Error occured while loading Drought Atlas [<file>]: Reinstall DroughtAssets.|스프라이트 시트 [<file>]을 불러오는 중 오류가 발생했습니다. DroughtAssets을 다시 설치해주세요.
 
 /// Tutorial ///
-While in the air, hold GRAB and then press JUMP to start boosting.|공중에서 잡기 버튼을 꾹 누르고 도약 버튼을 누른다.
+While on the ground, tap MAP and then press JUMP to slow down time.|바닥에서 지도 버튼을 살짝 누르고 도약 버튼을 눌러 시간을 늦춘다.
 Then hold a DIRECTION and press JUMP to finish the boost.|그리고 방향을 가리키며 도약 버튼을 다시 눌러 가속한다.
 
 /// PlayerName ///
