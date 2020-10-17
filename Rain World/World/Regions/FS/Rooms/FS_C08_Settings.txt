@@ -1,0 +1,6 @@
+Template: FS_SettingsTemplate_Industrial
+Clouds: 0.8478261
+Grime: 0.5
+PlacedObjects: ScavengerTreasury><458.4307><179.5624><-196~166, LanternOnStick><282.1992><263.0182><-32~-156, LanternOnStick><618.9409><297.1911><-29~-131, LanternOnStick><455.6467><382.4213><33~-213, 
+FadePalette: 10, 0.5434783
+WetTerrain: OFF

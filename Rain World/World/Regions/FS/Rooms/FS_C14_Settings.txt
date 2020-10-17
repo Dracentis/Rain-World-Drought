@@ -1,0 +1,4 @@
+Template: FS_SettingsTemplate_Industrial
+Clouds: 0.8152174
+FadePalette: 10, 0.6630435
+WetTerrain: OFF

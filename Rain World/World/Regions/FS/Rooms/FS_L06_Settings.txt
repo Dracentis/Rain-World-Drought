@@ -2,6 +2,7 @@ Template: FS_SettingsTemplate_Forest
 RainIntensity: 1
 RumbleIntensity: 1
 Effects: TinyDragonFly-0-20-20, Moth-0-30-30, 
+PlacedObjects: DangleFruit><397.0901><199.3701><222~-112~2~3, DangleFruit><438.3268><193.1847><207~-179~2~3, DangleFruit><326.2611><226.5503><131~-58~2~3, DangleFruit><371.5797><156.6048><109~119~2~3, 
 AmbientSounds: OMNI><AM_ENV-NatWind.ogg><731.6245><489.8443><0.5><1, OMNI><AM_ENV-Pasture.ogg><733.7994><407.0562><0.1521739><1, OMNI><AM_ENV-CityTone.ogg><706.3985><567.866><0.3152174><1, 
 FadePalette: 10, 0.2391304
 WetTerrain: OFF

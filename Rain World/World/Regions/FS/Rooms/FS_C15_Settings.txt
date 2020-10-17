@@ -1,0 +1,4 @@
+Template: FS_SettingsTemplate_Industrial
+EffectColorA: 3
+FadePalette: 10, 0.3369565
+WetTerrain: OFF

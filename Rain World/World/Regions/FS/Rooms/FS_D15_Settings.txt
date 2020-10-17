@@ -1,0 +1,5 @@
+Template: FS_SettingsTemplate_Sub
+BkgDroneVolume: 0
+PlacedObjects: CustomDecal><97.81482><534.9244><-44~92~16~111~46~20~157~-127~0~1~0~UWshelter~0.2934783~0.09782609~0.2934783~0.09782609~0.2934783~0.09782609~0.2934783~0.09782609, 
+FadePalette: 20, 0.6413044, 0.6847826, 0.7282609
+WetTerrain: OFF

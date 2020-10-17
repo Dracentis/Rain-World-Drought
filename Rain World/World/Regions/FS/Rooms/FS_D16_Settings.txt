@@ -1,0 +1,5 @@
+Template: FS_SettingsTemplate_Sub
+BkgDroneVolume: 0
+PlacedObjects: KarmaFlower><468.1296><522.4023><-17~-146~5~7, 
+FadePalette: 20, 0.7282609
+WetTerrain: OFF

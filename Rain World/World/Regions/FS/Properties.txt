@@ -3,7 +3,7 @@ batDepleteCyclesMin: 2
 batDepleteCyclesMax: 7
 batDepleteCyclesMaxIfLessThanTwoLeft: 3
 batDepleteCyclesMaxIfLessThanFiveLeft: 4
-batsPerActiveSwarmRoom: 4
+batsPerActiveSwarmRoom: 7
 overseersSpawnChance: 0.8
 overseersMin: 0
 overseersMax: 4
@@ -11,12 +11,18 @@ playerGuideOverseerSpawnChance: 1.0
 Broken Shelters: 0: FS_S01
 Subregion: Forest Sanctuary
 Subregion: Preservation Facility
-Room Setting Templates: Cave, Forest, Industrial, Fridge
+Room Setting Templates: Cave, Forest, Industrial, Fridge, Sub
 Room_Attr: FS_A01: Vulture-1,KingVulture-1,
 Room_Attr: FS_D05: Vulture-3,KingVulture-3,
 Room_Attr: FS_D06: GreenLizard-1,RedCentipede-4,
 Room_Attr: FS_D07: Vulture-2,KingVulture-2,
 Room_Attr: FS_D11: Vulture-2,KingVulture-2,
+Room_Attr: FS_D12: Vulture-1,KingVulture-1,
+Room_Attr: FS_D13: Vulture-1,KingVulture-1,
+Room_Attr: FS_D14: Vulture-1,Overseer-1,KingVulture-1,
+Room_Attr: FS_D15: Vulture-1,Overseer-1,KingVulture-1,
+Room_Attr: FS_D16: Overseer-1,
+Room_Attr: FS_D17: Vulture-1,Overseer-1,KingVulture-1,
 Room_Attr: FS_C06: Overseer-1,
 Room_Attr: FS_C08: Overseer-2,
 Room_Attr: FS_C13: Overseer-1,
@@ -38,3 +44,4 @@ Room_Attr: FS_L02: WalkerBeast-1,
 Room_Attr: FS_L03: Vulture-1,KingVulture-1,WalkerBeast-1,
 Room_Attr: FS_L06: Vulture-1,KingVulture-1,WalkerBeast-1,
 Room_Attr: FS_S07: PinkLizard-1,GreenLizard-1,BlueLizard-1,YellowLizard-1,WhiteLizard-1,RedLizard-1,BlackLizard-1,Salamander-1,CyanLizard-1,
+Room_Attr: FS_S08: Overseer-1,

@@ -1,0 +1,6 @@
+DangerType: Flood
+Clouds: 0.9130435
+Grime: 0.2173913
+EffectColorA: 2
+FadePalette: 10, 0.3369565, 0.4673913
+WetTerrain: OFF

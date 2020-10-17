@@ -1,0 +1,9 @@
+DangerType: FloodAndRain
+Clouds: 0.7717391
+Grime: 0.2065217
+EffectColorA: 2
+EffectColorB: 6
+PlacedObjects: CustomDecal><2529.579><189.8962><0~252~626~252~625~1~467~-274~0.6086956~1~0~YellowFrog~0.7065217~0.08695652~0.7065217~0.08695652~0.7065217~0.08695652~0.7065217~0.08695652, DataPearl><3840.552><227.2255><52~-192~0~0~0~0, ReliableSpear><1228.91><267.6196><, 
+AmbientSounds: OMNI><AM_ENV-LightWind.ogg><639.8661><604.6486><0.326087><1, OMNI><AM_ENV-LushNight.ogg><503.5533><423.2862><0.3043478><1, 
+FadePalette: 6, 0.423913, 0.3586957, 0.2608696, 0.2065217
+WetTerrain: OFF

@@ -10,6 +10,7 @@ Palette: 15
 EffectColorA: 9
 EffectColorB: 6
 Effects: Ant-0.2934783-20-20, Beetle-0.3586957-28-86, 
+PlacedObjects: LightBeam><1934.651><306.6193><179~436~784~466~169~-35~119~-276~0.7913042~1~0~1, 
 AmbientSounds: OMNI><AM_ENV-LightWind.ogg><771.6714><519.353><0.2826087><1, OMNI><AM_ENV-Outside.ogg><682.3735><478.1573><0.3695652><1, 
 FadePalette: 10, 0.3152174, 0.3152174, 0.3152174
 WetTerrain: OFF

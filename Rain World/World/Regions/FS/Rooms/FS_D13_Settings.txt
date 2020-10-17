@@ -1,0 +1,6 @@
+Clouds: 0.9565217
+BkgDroneVolume: 0
+EffectColorA: 7
+AmbientSounds: OMNI><AM_ENV-CityTone.ogg><682.8915><566.332><0.4021739><1, OMNI><AM_SUB-CaveTone.ogg><750.356><246.8612><0.5><1, OMNI><AM_SUB-MysticCave1.ogg><701.3582><343.359><0.2065217><1, 
+FadePalette: 20, 0.5326087
+WetTerrain: OFF

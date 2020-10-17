@@ -1,0 +1,9 @@
+Template: FS_SettingsTemplate_Forest
+Clouds: 0.9021739
+Palette: 15
+EffectColorA: 7
+EffectColorB: 6
+Effects: Moth-0.4673913-21-96, Bloom-0.5543478-20-20, TinyDragonFly-0.25-274-46, 
+AmbientSounds: SPOT><AM_WAT-Lakeside.ogg><299.6839><373.8286><1><1><283.6839><362.8286><1119.645><-9.355347><0><0.08695652, SPOT><AM_WAT-Lakeside.ogg><306.3384><253.1179><1><1><282.3384><362.1179><1123.645><-5.355347><0><0.08695652, SPOT><AM_WAT-Lakeside.ogg><308.301><144.4434><1><1><281.301><362.4434><1128.645><-3.355347><0><0.08913057, OMNI><AM_ENV-Pasture.ogg><733.7994><407.0562><0><1, 
+FadePalette: 6, 0.326087
+WetTerrain: OFF
