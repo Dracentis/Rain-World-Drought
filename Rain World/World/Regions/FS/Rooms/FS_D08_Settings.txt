@@ -1,0 +1,4 @@
+Grime: 0.3152174
+EffectColorB: 13
+FadePalette: 10, 0.3369565
+WetTerrain: OFF

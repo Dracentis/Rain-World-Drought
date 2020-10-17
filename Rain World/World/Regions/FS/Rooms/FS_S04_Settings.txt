@@ -1,0 +1,3 @@
+Grime: 0.4891304
+FadePalette: 10, 0.6739131
+WetTerrain: OFF

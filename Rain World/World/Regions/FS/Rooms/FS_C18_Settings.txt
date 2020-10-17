@@ -1,0 +1,5 @@
+Template: FS_SettingsTemplate_Fridge
+BkgDroneVolume: 0.3043478
+PlacedObjects: ExitSymbolHidden><1244.315><137.3258><, 
+FadePalette: 10, 0.6086956, 0.6739131
+WetTerrain: OFF

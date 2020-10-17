@@ -1,0 +1,7 @@
+Template: FS_SettingsTemplate_Forest
+EffectColorA: 2
+EffectColorB: 7
+Effects: Bloom-0.4130435-20-20, 
+PlacedObjects: DataPearl><1953.807><2825.055><-146~47~0~13~0~0, 
+FadePalette: 6, 0.3913043, 0.3913043, 0.3913043, 0.3913043, 0.3913043, 0.3913043, 0.3913043, 0.3913043, 0.3913043, 0.3913043
+WetTerrain: OFF

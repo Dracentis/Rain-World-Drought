@@ -1,0 +1,10 @@
+Template: FS_SettingsTemplate_Forest
+Clouds: 0.7826087
+Grime: 0.6413044
+EffectColorA: 6
+EffectColorB: 7
+Effects: Bloom-0.4347826-20-20, 
+PlacedObjects: LightBeam><258.8994><216.0772><-45~719~517~720~442~-12~212~-118~0.1173912~1~0~1, 
+AmbientSounds: OMNI><AM_ENV-Pasture.ogg><733.7994><407.0562><0><1, 
+FadePalette: 6, 0.3586957, 0.3695652
+WetTerrain: OFF

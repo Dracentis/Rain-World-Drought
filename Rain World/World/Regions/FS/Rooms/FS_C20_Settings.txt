@@ -1,0 +1,3 @@
+Template: FS_SettingsTemplate_Industrial
+FadePalette: 10, 0.5543478
+WetTerrain: OFF

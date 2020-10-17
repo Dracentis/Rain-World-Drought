@@ -1,0 +1,67 @@
+Palette: 10
+batDepleteCyclesMin: 2
+batDepleteCyclesMax: 7
+batDepleteCyclesMaxIfLessThanTwoLeft: 3
+batDepleteCyclesMaxIfLessThanFiveLeft: 4
+overseersSpawnChance: 0.2
+overseersMin: 0
+overseersMax: 3
+Subregion: Shaded Citadel
+Subregion: Memory Crypts
+playerGuideOverseerSpawnChance: 0.0
+Room Setting Templates: PitchBlack, DarkSun
+Room_Attr: SH_C11: BigSpider-2,SpitterSpider-2,
+Room_Attr: SH_D01: DropBug-2,
+Room_Attr: SH_A25: DropBug-3,
+Room_Attr: SH_A13: LanternMouse-3,DropBug-3,
+Room_Attr: SH_A14: LanternMouse-3,DropBug-3,
+Room_Attr: SH_C02: DropBug-2,
+Room_Attr: SH_B08: DropBug-3,
+Room_Attr: SH_A11: LanternMouse-3,DropBug-3,
+Room_Attr: SH_A15: DropBug-2,
+Room_Attr: SH_A12: LanternMouse-3,DropBug-3,
+Room_Attr: SH_B09: BigSpider-2,SpitterSpider-2,DropBug-2,
+Room_Attr: SH_A05: LanternMouse-4,BigSpider-2,SpitterSpider-2,DropBug-2,
+Room_Attr: SH_B01: DropBug-2,
+Room_Attr: SH_C10: LanternMouse-3,BigSpider-2,SpitterSpider-2,DropBug-2,
+Room_Attr: SH_A21: LanternMouse-3,BigSpider-2,SpitterSpider-2,DropBug-2,
+Room_Attr: SH_C03: BigSpider-2,
+Room_Attr: SH_B15: BigSpider-2,SpitterSpider-2,DropBug-2,
+Room_Attr: SH_C07: DropBug-3,
+Room_Attr: SH_B17: BigSpider-3,
+Room_Attr: SH_C09: BigSpider-3,
+Room_Attr: SH_C01: BigSpider-2,SpitterSpider-2,DropBug-2,
+Room_Attr: SH_B06: BigSpider-3,SpitterSpider-3,DropBug-2,
+Room_Attr: SH_A17: BigSpider-3,DropBug-2,
+Room_Attr: SH_A16: BigSpider-3,DropBug-2,
+Room_Attr: SH_A24: DropBug-2,
+Room_Attr: SH_B13: DropBug-2,
+Room_Attr: SH_B11: DropBug-2,
+Room_Attr: SH_D02: Centipede-1,BigSpider-2,SpitterSpider-2,DropBug-2,
+Room_Attr: SH_B10: Centipede-1,BigSpider-2,SpitterSpider-2,DropBug-2,
+Room_Attr: SH_A06: LanternMouse-4,BigSpider-2,SpitterSpider-2,DropBug-2,
+Room_Attr: SH_B02: LanternMouse-3,SpitterSpider-3,
+Room_Attr: SH_B03: LanternMouse-3,BigSpider-2,SpitterSpider-2,DropBug-2,
+Room_Attr: SH_C04: LanternMouse-3,
+Room_Attr: SH_A10: BigSpider-2,SpitterSpider-2,DropBug-2,
+Room_Attr: SH_C05: SpitterSpider-3,DropBug-3,
+Room_Attr: SH_E05: LanternMouse-2,BigSpider-2,SpitterSpider-2,
+Room_Attr: SH_C13: DropBug-3,
+Room_Attr: SH_A07: EggBug-2,
+Room_Attr: SH_B04: EggBug-4,SpitterSpider-3,DropBug-3,
+Room_Attr: SH_A04: EggBug-2,
+Room_Attr: SH_A26: LanternMouse-1,Overseer-1,BigSpider-1,SpitterSpider-1,
+Room_Attr: SH_A19: LanternMouse-2,EggBug-1,
+Room_Attr: SH_B05: SpitterSpider-3,DropBug-3,
+Room_Attr: SH_C08: BlackLizard-3,DropBug-2,
+Room_Attr: SH_C12: EggBug-2,BigSpider-2,SpitterSpider-2,DropBug-2,
+Room_Attr: SH_A09: EggBug-2,
+Room_Attr: SH_A08: EggBug-2,DropBug-2,
+Room_Attr: SH_E02: Centipede-1,BigSpider-1,SpitterSpider-1,DropBug-2,
+Room_Attr: SH_B12: Centipede-4,BigSpider-1,SpitterSpider-1,
+Room_Attr: SH_S09: Centipede-1,
+Room_Attr: SH_E03: Centipede-1,BigSpider-1,SpitterSpider-1,DropBug-1,
+Room_Attr: SH_E01: Centipede-1,BigSpider-1,SpitterSpider-1,DropBug-1,
+Room_Attr: SH_H01: Centipede-4,BigSpider-1,SpitterSpider-1,
+Room_Attr: SH_E04: Centipede-1,BigSpider-1,SpitterSpider-1,
+Room_Attr: SH_D03: Centipede-1,BigSpider-1,SpitterSpider-1,

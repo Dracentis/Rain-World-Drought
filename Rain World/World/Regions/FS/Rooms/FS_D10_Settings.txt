@@ -1,0 +1,7 @@
+DangerType: Flood
+EffectColorB: 13
+Effects: Beetle-0.1956522-140-41, Moth-0.2391304-163-102, Ant-0.2173913-178-157, 
+PlacedObjects: DangleFruit><222.4675><1187.197><0~0~2~3, DangleFruit><195.3026><1208.968><0~0~2~3, DangleFruit><576.7324><1185.801><0~0~2~3, DangleFruit><619.6731><1209.185><0~0~2~3, DangleFruit><409.0787><1137.353><0~0~2~3, DangleFruit><367.0626><1161.18><0~0~2~3, 
+AmbientSounds: OMNI><AM_ENV-LushNight.ogg><742.2953><503.3052><0.1956522><1, OMNI><AM_IND-DeepHum.ogg><733.9858><306.4495><0.1304348><1, OMNI><AM_IND-Warehouse01.ogg><719.7048><411.4448><0.1847826><1, OMNI><AM_ENV-CityTone.ogg><740.1435><564.1107><0.423913><1, 
+FadePalette: 10, 0.3478261, 0.2391304
+WetTerrain: OFF

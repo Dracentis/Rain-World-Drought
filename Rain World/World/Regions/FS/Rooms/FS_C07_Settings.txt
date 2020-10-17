@@ -1,0 +1,5 @@
+Template: FS_SettingsTemplate_Industrial
+Clouds: 0.9130435
+PlacedObjects: CustomDecal><824.1785><500.4098><0~40~41~20~44~-24~-724~-248~0.5~1~0~ScavMark Arrow~0.5978261~0.423913~0.5978261~0.423913~0.5978261~0.423913~0.5978261~0.423913, ExitSymbolHidden><903.9497><495.4908><, DangleFruit><443.2793><494.8022><-483~-305~2~3, DangleFruit><503.3257><504.1852><-176~-218~2~3, DangleFruit><293.449><503.5197><4~-307~2~3, DangleFruit><359.9482><492.223><39~-197~2~3, 
+FadePalette: 10, 0.4347826
+WetTerrain: OFF

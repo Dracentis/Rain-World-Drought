@@ -1,0 +1,31 @@
+Palette: 4batDepleteCyclesMin: 2
+batDepleteCyclesMax: 7
+batDepleteCyclesMaxIfLessThanTwoLeft: 3
+batDepleteCyclesMaxIfLessThanFiveLeft: 4
+overseersSpawnChance: 0.2
+overseersMin: 0
+overseersMax: 2
+playerGuideOverseerSpawnChance: 0.0
+Subregion: Drainage System
+Room Setting Templates: Inside
+Room_Attr: DS_B02: DropBug-3,
+Room_Attr: DS_A22: DropBug-2,
+Room_Attr: DS_A02: DropBug-2,
+Room_Attr: DS_B03: Snail-1,
+Room_Attr: DS_A15: DropBug-3,
+Room_Attr: DS_A23: DropBug-3,
+Room_Attr: DS_A19: DropBug-3,
+Room_Attr: DS_B04: Snail-3,DropBug-3,
+Room_Attr: DS_A08: Snail-3,
+Room_Attr: DS_B07: Salamander-3,Snail-4,DropBug-3,
+Room_Attr: DS_A24: DropBug-2,
+Room_Attr: DS_A11: DropBug-2,
+Room_Attr: DS_C04: DropBug-2,
+Room_Attr: DS_A14: Snail-1,DropBug-2,
+Room_Attr: DS_B08: DropBug-2,
+Room_Attr: DS_D01: DropBug-2,
+Room_Attr: DS_A05: Snail-4,DropBug-2,
+Room_Attr: DS_D03: DropBug-2,
+Room_Attr: DS_B06: Snail-1,
+Room_Attr: DS_A13: Snail-1,
+Room_Attr: DS_A10: Snail-1,DropBug-2,

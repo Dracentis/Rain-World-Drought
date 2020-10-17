@@ -7,7 +7,7 @@ batsPerActiveSwarmRoom: 7
 overseersSpawnChance: 0.8
 overseersMin: 0
 overseersMax: 4
-playerGuideOverseerSpawnChance: 1.0
+playerGuideOverseerSpawnChance: 0.0
 Subregion: Outskirts
 Room Setting Templates: Outside, Inside
 Room_Attr: GATE_SU_HI: Vulture-1,SmallNeedleWorm-1,BigNeedleWorm-1,KingVulture-1,

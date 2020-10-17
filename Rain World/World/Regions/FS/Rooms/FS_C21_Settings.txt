@@ -1,0 +1,7 @@
+Template: FS_SettingsTemplate_Industrial
+DangerType: Rain
+Clouds: 0.5
+BkgDroneVolume: 0.3043478
+AmbientSounds: OMNI><AM_ENV-Outside.ogg><477.6962><530.9614><0.4021739><1, OMNI><AM_ENV-LightWind.ogg><620.3755><359.3435><0.5><1, SPOT><AM_ENV-NatWind.ogg><709.4458><528.5407><0.5><1><22.45258><349.5407><449.6447><-53.35535><0><0.328261, 
+FadePalette: 6, 0.2826087, 0.2826087, 0.2826087, 0.2826087
+WetTerrain: OFF

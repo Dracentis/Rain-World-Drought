@@ -1,0 +1,6 @@
+Template: FS_SettingsTemplate_Industrial
+Palette: 13
+Effects: RockFlea-0.6086956-245-89, 
+PlacedObjects: Hazer><430.474><219.1983><0~0~7~10, Hazer><736.3889><232.1663><0~0~7~10, Hazer><914.3004><244.9867><0~0~7~10, Hazer><1321.586><229.8196><0~0~7~10, 
+FadePalette: 10, 0.6739131, 0.6847826, 0.6956522, 0.6847826, 0.6847826, 0.6739131
+WetTerrain: OFF

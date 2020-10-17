@@ -1,0 +1,5 @@
+Template: FS_SettingsTemplate_Industrial
+Palette: 15
+AmbientSounds: OMNI><SO_SFX-ColdNight.ogg><712.4405><324.939><0.1086956><1, 
+FadePalette: 10, 0.75
+WetTerrain: OFF

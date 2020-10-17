@@ -1,0 +1,8 @@
+DangerType: Flood
+Clouds: 0.9565217
+BkgDroneVolume: 0
+EffectColorA: 7
+PlacedObjects: DataPearl><834.8945><167.1699><-122~31.99997~0~0~0~0, 
+AmbientSounds: OMNI><AM_SUB-CaveTone.ogg><735.5798><246.4334><0.5><1, OMNI><AM_SUB-MysticCave1.ogg><713.1774><382.0637><0.3586957><1, OMNI><AM_ENV-CityTone.ogg><790.8204><561.3379><0.4021739><1, OMNI><AM_SUB-BlankState.ogg><737.0743><302.8456><0.6086956><1, 
+FadePalette: 20, 0.423913, 0.5326087, 0.6413044
+WetTerrain: OFF

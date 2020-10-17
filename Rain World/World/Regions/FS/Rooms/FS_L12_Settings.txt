@@ -1,0 +1,6 @@
+Template: FS_SettingsTemplate_Forest
+Clouds: 0.6739131
+PlacedObjects: SeedCob><827.9314><501.4158><64~78.99997~7~10, DeadSeedCob><367.9001><536.8679><, SeedCob><403.3831><525.1007><0~0~7~10, 
+AmbientSounds: OMNI><AM_ENV-NatWind.ogg><731.6245><489.8443><0.6086956><1, OMNI><AM_ENV-Pasture.ogg><733.7994><407.0562><0.2065217><1, 
+FadePalette: 14, 0.423913
+WetTerrain: OFF

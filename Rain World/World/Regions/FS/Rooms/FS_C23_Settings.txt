@@ -1,0 +1,8 @@
+Template: FS_SettingsTemplate_Industrial
+DangerType: Rain
+Clouds: 0.5
+BkgDroneVolume: 0.3043478
+PlacedObjects: DangleFruit><614.948><471.8069><-171~-146~2~3, DangleFruit><568.1334><446.851><-454~-181~2~3, DangleFruit><517.082><469.1824><-363~-1~2~3, 
+AmbientSounds: OMNI><AM_ENV-NatWind.ogg><703.6395><352.6667><0.6521739><1, 
+FadePalette: 10, 0.2826087, 0.2826087
+WetTerrain: OFF
