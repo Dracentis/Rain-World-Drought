@@ -25,19 +25,19 @@ namespace Rain_World_Drought.Resource
         public static bool LoadAtlases()
         {
             string[] names = new string[] { "rainWorld", "uiSprites" };
-            if (!Directory.Exists(assetDir)) { error = $"Directory [{assetDir}] is missing!"; return false; }
+            if (!Directory.Exists(assetDir)) { error = DroughtMod.Translate("Directory [<assetDir>] is missing: Reinstall DroughtAssets.").Replace("<assetDir>", assetDir); return false; }
 
             foreach (string name in names)
             {
                 string file = assetDir + "Futile" + Path.DirectorySeparatorChar + "Resources" + Path.DirectorySeparatorChar + "Atlases" + Path.DirectorySeparatorChar + name + ".txt";
                 try
                 {
-                    if (!File.Exists(file)) { error = $"File [{file}] is missing!"; return false; }
+                    if (!File.Exists(file)) { error = DroughtMod.Translate("File [<file>] is missing: Reinstall DroughtAssets.").Replace("<file>", file); return false; }
                     string data = File.ReadAllText(file);
                     UnloadDuplicate(data);
 
                     file = assetDir + "Futile" + Path.DirectorySeparatorChar + "Resources" + Path.DirectorySeparatorChar + "Atlases" + Path.DirectorySeparatorChar + name + ".png";
-                    if (!File.Exists(file)) { error = $"File [{file}] is missing!"; return false; }
+                    if (!File.Exists(file)) { error = DroughtMod.Translate("File [<file>] is missing: Reinstall DroughtAssets.").Replace("<file>", file); return false; }
                     WWW www = new WWW("file:///" + file);
                     Texture2D texture = new Texture2D(1, 1, TextureFormat.ARGB32, false) { anisoLevel = 0, filterMode = FilterMode.Point };
                     www.LoadImageIntoTexture(texture);
@@ -47,7 +47,7 @@ namespace Rain_World_Drought.Resource
                 }
                 catch (Exception e)
                 {
-                    error = $"Error occured while loading Drought Atlas [{file}]: Reinstall DroughtAssets.";
+                    error = DroughtMod.Translate("Error occured while loading Drought Atlas [<file>]: Reinstall DroughtAssets.").Replace("<file>", file);
                     Debug.LogError(error);
                     Debug.LogException(e);
                     return false;

@@ -114,7 +114,7 @@ namespace Rain_World_Drought.Creatures
                     }
                     if (this.superJumpTrouble > 2000)
                     {
-                        this.TutorialText(DroughtMod.Translate("While in the air, hold GRAB and then press JUMP to start boosting."), 800, 500, true);
+                        this.TutorialText(DroughtMod.Translate("While on the ground, tap MAP and then press JUMP to slow down time."), 800, 500, true);
                         this.TutorialText(DroughtMod.Translate("Then hold a DIRECTION and press JUMP to finish the boost."), 0, 270, true);
                         this.overseer.TryAddHologram(OverseerHologram.Message.SuperJump, this.player, float.MaxValue);
                         this.superJumpTrouble = 0;
@@ -127,7 +127,7 @@ namespace Rain_World_Drought.Creatures
                     }
 
                     WandererSupplement sub = WandererSupplement.GetSub(player);
-                    if(sub.energy == 0)
+                    if (sub.energy == 0)
                         sub.energy = WandererSupplement.maxEnergy;
                     break;
             }
@@ -152,7 +152,6 @@ namespace Rain_World_Drought.Creatures
 
         public abstract class InputInstruction : OverseerHologram
         {
-            // Token: 0x060024C1 RID: 9409 RVA: 0x0023ACE8 File Offset: 0x00238EE8
             public InputInstruction(Overseer overseer, OverseerHologram.Message message, Creature communicateWith, float importance) : base(overseer, message, communicateWith, importance)
             {
                 if (overseer.AI.tutorialBehavior == null && message != OverseerHologram.Message.InWorldSuperJump && message != OverseerHologram.Message.PickupObject && message != OverseerHologram.Message.ScavengerTrade)
