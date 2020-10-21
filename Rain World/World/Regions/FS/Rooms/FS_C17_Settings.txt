@@ -4,6 +4,5 @@ Clouds: 1
 BkgDroneVolume: 0.3043478
 RandomItemDensity: 0.2065217
 AmbientSounds: SPOT><SO_SFX-ColdNight.ogg><792.579><367.0663><0.2065217><1><469.579><481.0663><-41.35535><-73.35535><0><0.2630436, 
-Triggers: Spot<tA>event<tB>MusicEvent<eA>songName<eB>RW_60 - Dark Ambience<eA>vol<eB>0.3<eA>prio<eB>0.5<eA>mxThrt<eB>1<eA>loop<eB>0<eA>droneTol<eB>0<eA>rooms<eB>-1<eA>rest<eB>5<eA>fadeIn<eB>0<eA>oneSongPerCycle<eB>0<eA>stopAtDeath<eB>0<eA>stopAtGate<eB>0<tA>multiUse<tB>0<tA>toCycle<tB>-1<tA>fromCycle<tB>0<tA>delay<tB>0<tA>panPos<tB>831.8643<tB>274.6031<tA>fireChance<tB>1<tA>entrance<tB>-1<tA>karma<tB>0<tA>slugcats<tB>111<tA>pos<tB>665.8643<tB>231.6031<tA>handlePos<tB>-35.35534<tB>-35.35534, 
 FadePalette: 10, 0.6739131, 0.6739131, 0.6739131
 WetTerrain: OFF
