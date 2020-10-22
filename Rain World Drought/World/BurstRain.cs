@@ -6,7 +6,7 @@ namespace Rain_World_Drought.OverWorld
     {
         public BurstRain(GlobalRain globalRain) : base(globalRain)
         {
-            this.deathRainMode = DeathRainMode.None;
+            this.deathRainMode = DeathRainMode.GradeABuildUp;
             this.burstRainMode = BurstRainMode.BurstCalmBeforeStorm;
             this.timeInThisMode = Mathf.Lerp(300f, 500f, Random.value);
             this.calmBeforeStormSunlight = ((Random.value >= 0.5f) ? Random.value : 0f);

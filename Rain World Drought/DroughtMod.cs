@@ -28,6 +28,9 @@ namespace Rain_World_Drought
             ResourceManager.assetDir = string.Concat(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location),
                 Path.DirectorySeparatorChar, "DroughtAssets", Path.DirectorySeparatorChar);
 
+            // Debugging!
+            Debugging.Patch();
+
             #region Creatures
             // namespaces must be 'Rain_World_Drought.Creatures', not 'Creature' without s, which confuses the compiler with global::Creature
             AbstractCreatureHK.Patch();
@@ -84,9 +87,6 @@ namespace Rain_World_Drought
             RoomRainHK.Patch();
             WorldHK.Patch();
             #endregion OverWorld
-
-            // Debugging!
-            Debugging.Patch();
 
             On.RainWorld.Start += new On.RainWorld.hook_Start(RainWorldHK);
         }

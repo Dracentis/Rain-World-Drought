@@ -15,9 +15,10 @@ namespace Rain_World_Drought
         }
 
         private static FLabel logs;
-        private const int logLength = 10;
+        private const int logLength = 20;
         private static Queue<string> logLines;
 
+        // Create log display
         private static void RainWorld_Start(On.RainWorld.orig_Start orig, RainWorld self)
         {
             orig(self);
@@ -28,6 +29,7 @@ namespace Rain_World_Drought
             Futile.stage.AddChild(logs);
         }
 
+        // Move log display
         private static void RainWorld_Update(On.RainWorld.orig_Update orig, RainWorld self)
         {
             orig(self);
@@ -39,14 +41,22 @@ namespace Rain_World_Drought
         public static void Log(object msg) => Log(msg.ToString());
         public static void Log(string msg)
         {
-            string[] lines = msg.Split('\n');
-            for(int i = 0; i < lines.Length; i++)
-                logLines.Enqueue(lines[i]);
-            while (logLines.Count > logLength)
-                logLines.Dequeue();
-            logs.text = string.Join("\n", logLines.ToArray());
+            try
+            {
+                string[] lines = msg.Split('\n');
+                for (int i = 0; i < lines.Length; i++)
+                    logLines.Enqueue(lines[i]);
+                while (logLines.Count > logLength)
+                    logLines.Dequeue();
+                logs.text = string.Join("\n", logLines.ToArray());
+            }
+            catch (Exception e) {
+                Debug.LogError($"Failed to log message: {msg}");
+                Debug.LogError(e);
+            }
         }
-
+        
+        // Remove limit of one update per frame
         private static void MainLoopProcess_RawUpdate(On.MainLoopProcess.orig_RawUpdate orig, MainLoopProcess self, float dt)
         {
             self.myTimeStacker += dt * self.framesPerSecond;
