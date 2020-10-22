@@ -149,7 +149,60 @@ namespace Rain_World_Drought.Resource
 
         #region Music
 
-        private static string[] droughtSongs = new string[] { "TH_IS", "TH_FS", "TH_MW", "RW_60" };
+        public static bool CheckDroughtSongs()
+        {
+            Debug.Log("Drought) CheckDroughtSongs");
+            List<string> songs = new List<string>();
+            // Procedural: ogg
+            DirectoryInfo dir = new DirectoryInfo(string.Concat(
+                assetDir,
+                "Futile",
+                Path.DirectorySeparatorChar,
+                "Resources",
+                Path.DirectorySeparatorChar,
+                "Music",
+                Path.DirectorySeparatorChar,
+                "Procedural",
+                Path.DirectorySeparatorChar));
+            if (!dir.Exists) { error = DroughtMod.Translate("Directory [<assetDir>] is missing: Reinstall DroughtAssets.").Replace("<assetDir>", dir.FullName); return false; }
+            foreach (FileInfo f in dir.GetFiles())
+            {
+                if (f.Name.ToLower().EndsWith(".ogg"))
+                {
+                    string name = f.Name.Length > 5 ? f.Name.ToUpper().Substring(0, 5) : f.Name.ToUpper();
+                    if (!songs.Contains(name)) { songs.Add(name); }
+                }
+            }
+            // Song: mp3
+            dir = new DirectoryInfo(string.Concat(
+                assetDir,
+                "Futile",
+                Path.DirectorySeparatorChar,
+                "Resources",
+                Path.DirectorySeparatorChar,
+                "Music",
+                Path.DirectorySeparatorChar,
+                "Songs",
+                Path.DirectorySeparatorChar));
+            if (!dir.Exists) { error = DroughtMod.Translate("Directory [<assetDir>] is missing: Reinstall DroughtAssets.").Replace("<assetDir>", dir.FullName); return false; }
+            foreach (FileInfo f in dir.GetFiles())
+            {
+                if (f.Name.ToLower().EndsWith(".mp3"))
+                {
+                    string name = f.Name.Length > 5 ? f.Name.ToUpper().Substring(0, 5) : f.Name.ToUpper();
+                    if (!songs.Contains(name)) { songs.Add(name); }
+                }
+            }
+            droughtSongs = songs.ToArray();
+
+            string dbg = string.Empty;
+            for (int i = 0; i < droughtSongs.Length; i++)
+            { dbg += droughtSongs[i]; if (i < droughtSongs.Length - 1) { dbg += ", "; } }
+            Debug.Log(dbg);
+            return true;
+        }
+
+        private static string[] droughtSongs = new string[0]; // assuming that we won't replace title song, which comes before initializing this
 
         public static bool IsDroughtTrack(string trackName)
         {
