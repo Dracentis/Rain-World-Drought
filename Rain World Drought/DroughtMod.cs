@@ -120,8 +120,8 @@ namespace Rain_World_Drought
             error = "";
 
             if (!Directory.Exists(ResourceManager.assetDir)) { error = Translate("DroughtAssets folder is missing! Put DroughtAssets with [Rain World Drought.dll]!"); goto handleError; }
-            bool check = ResourceManager.LoadAtlases();
-            if (!check) { error = ResourceManager.error; goto handleError; }
+            if (!ResourceManager.LoadAtlases()) { error = ResourceManager.error; goto handleError; }
+            if (!ResourceManager.CheckDroughtSongs()) { error = ResourceManager.error; goto handleError; }
 
         handleError:
             if (!EnumExt) { error = Translate("EnumExtender is missing! Download EnumExtender from RainDB - Tools Category."); }

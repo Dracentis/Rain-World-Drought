@@ -67,7 +67,7 @@ namespace Rain_World_Drought.OverWorld
                 this.globalRain.MicroScreenShake = 0f;
                 return;
             }
-            this.deathRainMode++;
+            this.burstRainMode++;
 
             this.progression = 0f;
             switch (this.burstRainMode)
