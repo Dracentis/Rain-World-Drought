@@ -66,7 +66,7 @@ namespace Rain_World_Drought.Creatures
                             Vector2 jawDir = Custom.DirVec(jawDir10, vector.Value);
                             if (self.graphicsModule != null)
                             {
-                                if (self.AI.redSpitAI.delay < (UnityEngine.Random.value - 0.8f) * greySpitDelay * 0.8f)
+                                if (self.AI.redSpitAI.delay < (UnityEngine.Random.value - 0.5f) * greySpitDelay * 0.8f)
                                 { // add bubbles
                                     self.room.AddObject(new LizardBubble(self.graphicsModule as LizardGraphics, 1f, 0f, (self.graphicsModule as LizardGraphics).blackLizardLightUpHead * 10f));
                                 }
