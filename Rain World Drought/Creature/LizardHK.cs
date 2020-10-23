@@ -1,6 +1,7 @@
 ﻿using Rain_World_Drought.Enums;
 using RWCustom;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Rain_World_Drought.Creatures
@@ -13,6 +14,7 @@ namespace Rain_World_Drought.Creatures
             On.LizardAI.ctor += new On.LizardAI.hook_ctor(AICtorHK);
             On.LizardAI.Update += new On.LizardAI.hook_Update(AIUpdateHK);
             On.Spear.Update += new On.Spear.hook_Update(SpearUpdateHK);
+            On.LizardVoice.GetMyVoiceTrigger += new On.LizardVoice.hook_GetMyVoiceTrigger(GetMyVoiceTriggerHK);
         }
 
         private static void SpearUpdateHK(On.Spear.orig_Update orig, Spear self, bool eu)
@@ -46,6 +48,8 @@ namespace Rain_World_Drought.Creatures
                         Vector2? vector = self.AI.redSpitAI.AimPos();
                         if (vector != null)
                         {
+                            (self.graphicsModule as LizardGraphics).blackLizardLightUpHead = Mathf.Clamp01((greySpitDelay / 2 - self.AI.redSpitAI.delay) / (float)greySpitDelay);
+
                             if (self.AI.redSpitAI.AtSpitPos)
                             {
                                 Vector2 fromPos = self.room.MiddleOfTile(self.AI.redSpitAI.spitFromPos);
@@ -58,6 +62,11 @@ namespace Rain_World_Drought.Creatures
                                 self.bodyChunks[1].vel -= Custom.DirVec(self.mainBodyChunk.pos, vector.Value) * 2f * (float)self.LegsGripping;
                                 self.bodyChunks[2].vel -= Custom.DirVec(self.mainBodyChunk.pos, vector.Value) * 2f * (float)self.LegsGripping;
                             }
+                            if (self.AI.redSpitAI.delay < (UnityEngine.Random.value - 0.8f) * greySpitDelay * 0.8f)
+                            {
+                                self.room.AddObject(new LizardBubble(self.graphicsModule as LizardGraphics, 1f, 0f, (self.graphicsModule as LizardGraphics).blackLizardLightUpHead * 10f));
+                            }
+
                             if (self.AI.redSpitAI.delay < 1)
                             {
                                 Vector2 jawDir10 = self.bodyChunks[0].pos + Custom.DirVec(self.bodyChunks[1].pos, self.bodyChunks[0].pos) * 10f;
@@ -73,7 +82,7 @@ namespace Rain_World_Drought.Creatures
                                     self.room.abstractRoom.AddEntity(abstractSpear);
                                     abstractSpear.RealizeInRoom();
                                     LaunchSpear(abstractSpear.realizedObject as Spear, self, jawDir10 + jawDir, jawDir10, jawDir, 0.9f, false);
-                                    self.AI.redSpitAI.delay = 98;
+                                    self.AI.redSpitAI.delay = greySpitDelay;
                                     self.bodyChunks[2].pos -= jawDir * 8f;
                                     self.bodyChunks[1].pos -= jawDir * 4f;
                                     self.bodyChunks[2].vel -= jawDir * 2f;
@@ -85,9 +94,11 @@ namespace Rain_World_Drought.Creatures
                     }
                     return num;
                 }
-                else if (self.AI.runSpeed > 0.1f)
+                else
                 {
-                    return Mathf.Lerp(orig.Invoke(self), 1f, Mathf.Lerp(0.2f, 0.7f, self.AI.hunger));
+                    (self.graphicsModule as LizardGraphics).blackLizardLightUpHead = Mathf.Max(0f, (self.graphicsModule as LizardGraphics).blackLizardLightUpHead - 0.05f);
+                    if (self.AI.runSpeed > 0.1f)
+                    { return Mathf.Lerp(orig.Invoke(self), 1f, Mathf.Lerp(0.2f, 0.7f, self.AI.hunger)); }
                 }
             }
             return orig.Invoke(self);
@@ -136,8 +147,38 @@ namespace Rain_World_Drought.Creatures
             orig.Invoke(self);
             if (DroughtMod.EnumExt && self.creature.creatureTemplate.type == EnumExt_Drought.GreyLizard && self.redSpitAI.spitting)
             {
+                if (self.lizard.animation != Lizard.Animation.Spit)
+                {
+                    self.redSpitAI.delay = greySpitDelay;
+                    self.lizard.voice.MakeSound(LizardVoice.Emotion.BloodLust);
+                }
                 self.lizard.EnterAnimation(Lizard.Animation.Spit, false);
+                self.lizard.bubble = 10;
+                self.lizard.bubbleIntensity = 1f;
             }
+        }
+
+        public const int greySpitDelay = 98;
+
+        private static SoundID GetMyVoiceTriggerHK(On.LizardVoice.orig_GetMyVoiceTrigger orig, LizardVoice self)
+        {
+            if (DroughtMod.EnumExt && self.lizard.Template.type == EnumExt_Drought.GreyLizard)
+            {
+                string str = "Green"; // for now
+                string[] array = new string[] { "A", "B", "C", "D", "E" };
+                List<SoundID> list = new List<SoundID>();
+                for (int i = 0; i < 5; i++)
+                {
+                    SoundID soundID;
+                    try { soundID = Custom.ParseEnum<SoundID>("Lizard_Voice_" + str + "_" + array[i]); }
+                    catch { soundID = SoundID.None; }
+                    if (self.lizard.abstractCreature.world.game.soundLoader.workingTriggers[(int)soundID])
+                    { list.Add(soundID); }
+                }
+                if (list.Count == 0) { return SoundID.None; }
+                return list[UnityEngine.Random.Range(0, list.Count)];
+            }
+            else { return orig.Invoke(self); }
         }
     }
 }
