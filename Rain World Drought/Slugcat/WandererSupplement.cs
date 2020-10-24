@@ -1,6 +1,8 @@
 ﻿using Rain_World_Drought.Creatures;
 using System.Collections.Generic;
 using RWCustom;
+using System;
+using MonoMod;
 
 namespace Rain_World_Drought.Slugcat
 {
@@ -13,18 +15,21 @@ namespace Rain_World_Drought.Slugcat
             this.pearlConversation = new PearlConversation(self);
             this.voidEnergy = false;
             this.rad = 0;
+            this.cosmetics = new List<PlayerCosmetics>(); // to prevent crash with monkland
         }
 
         public readonly Player self;
 
         private static WandererSupplement[] fields = new WandererSupplement[4];
         private static Dictionary<Player, WandererSupplement> ghostFields = new Dictionary<Player, WandererSupplement>();
+        private static Dictionary<AbstractCreature, WandererSupplement> monkFields;
+        protected static bool monkland = false;
 
         public static bool IsWanderer(Player self)
         {
             return DroughtMod.EnumExt && self.playerState.slugcatCharacter == SlugcatCharacter;
         }
-        
+
         public static WandererSupplement GetSub(Player self, bool makeNewSub = false)
         {
             if (self.playerState.isGhost)
@@ -36,8 +41,29 @@ namespace Rain_World_Drought.Slugcat
             }
             else
             {
-                if (fields[self.playerState.playerNumber] == null || makeNewSub) { CreateSub(self); }
-                return fields[self.playerState.playerNumber];
+                if (!monkland && self.playerState.playerNumber < 0 || self.playerState.playerNumber > 4)
+                {
+                    monkland = true;
+                    monkFields = new Dictionary<AbstractCreature, WandererSupplement>();
+                    for (int i = 0; i < 4; i++)
+                    {
+                        if (fields[i] != null && fields[i].self?.abstractCreature != null)
+                        { monkFields.Add(fields[i].self.abstractCreature, fields[i]); }
+                    }
+                }
+                if (monkland)
+                {
+                    if (makeNewSub) { if (monkFields.ContainsKey(self.abstractCreature)) { monkFields.Remove(self.abstractCreature); } }
+                    if (monkFields.TryGetValue(self.abstractCreature, out WandererSupplement sub)) { return sub; }
+                    WandererSupplement newSub = new WandererSupplement(self);
+                    monkFields.Add(self.abstractCreature, newSub);
+                    return newSub;
+                }
+                else
+                {
+                    if (fields[self.playerState.playerNumber] == null || makeNewSub) { CreateSub(self); }
+                    return fields[self.playerState.playerNumber];
+                }
             }
         }
 
@@ -96,7 +122,7 @@ namespace Rain_World_Drought.Slugcat
         public bool past22000 = false; //true if the player is in the void past -22000 y
         public bool past25000 = false; //true if the player is in the void past -25000 y
         #endregion Ending Supplement
-        
+
         public WalkerBeast.PlayerInAntlers playerInAnt;
         // public Player.AnimationIndex lastAnimation; // not needed/
 
