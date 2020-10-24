@@ -39,7 +39,7 @@ namespace Rain_World_Drought.Creatures
                     return orig.Invoke(iconData);
 
                 case EnumSwitch.CreatureTemplateType.GreyLizard:
-                    return new Color(0.755f, 0.768f, 0.707f); // new Color(0.686f * 1.1f, 0.698f * 1.1f, 0.643f * 1.1f);
+                    return new Color(0.725f, 0.748f, 0.807f); // new Color(0.686f * 1.1f, 0.698f * 1.1f, 0.643f * 1.1f);
 
                 case EnumSwitch.CreatureTemplateType.WalkerBeast:
                     return new Color(0.368627459f, 0.368627459f, 0.435294122f);

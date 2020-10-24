@@ -393,7 +393,6 @@ namespace Rain_World_Drought.Creatures
             base.InitiateSprites(sLeaser, rCam);
         }
 
-        // Token: 0x06001E28 RID: 7720 RVA: 0x001BE108 File Offset: 0x001BC308
         public override void ApplyPalette(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, RoomPalette palette)
         {
             Color color = palette.blackColor;
@@ -420,13 +419,11 @@ namespace Rain_World_Drought.Creatures
             }
         }
 
-        // Token: 0x06001E29 RID: 7721 RVA: 0x001BE334 File Offset: 0x001BC534
         public override void AddToContainer(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, FContainer newContatiner)
         {
             base.AddToContainer(sLeaser, rCam, newContatiner);
         }
 
-        // Token: 0x06001E2A RID: 7722 RVA: 0x001BE340 File Offset: 0x001BC540
         public override void DrawSprites(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, float timeStacker, Vector2 camPos)
         {
             base.DrawSprites(sLeaser, rCam, timeStacker, camPos);
@@ -678,59 +675,29 @@ namespace Rain_World_Drought.Creatures
             return value;
         }
 
-        // Token: 0x060028D1 RID: 10449 RVA: 0x002A04D8 File Offset: 0x0029E6D8
         public Dangler.DanglerProps Props(int index)
         {
             return this.danglerVals;
         }
 
         public Dangler[] danglers;
-
         public float[,] danglerProps;
-
         public int[] danglerSeeds;
-
         public Dangler.DanglerProps danglerVals;
-
         public int headDanglers;
-
         public int neckDanglers;
-
         public int wingDanglers;
-
-        // Token: 0x040020B6 RID: 8374
         private SeaDrake fish;
-
-        // Token: 0x040020B7 RID: 8375
         public TailSegment[] tail;
-
         public TailSegment[,] wings;
-
-        // Token: 0x040020B8 RID: 8376
         public GenericBodyPart[] flippers;
-
-        // Token: 0x040020B9 RID: 8377
         public GenericBodyPart[,] whiskers;
-
-        // Token: 0x040020BA RID: 8378
         public Vector2[] whiskerDirections;
-
-        // Token: 0x040020BB RID: 8379
         public float[,] whiskerProps;
-
-        // Token: 0x040020BC RID: 8380
         public float swim;
-
-        // Token: 0x040020BD RID: 8381
         public Vector2 zRotation;
-
-        // Token: 0x040020BE RID: 8382
         private Vector2 lastZRotation;
-
-        // Token: 0x040020BF RID: 8383
         private float airEyes;
-
-        // Token: 0x040020C0 RID: 8384
         private static float[] flipperGraphConPointHeights = new float[]
         {
         10f,
@@ -740,7 +707,6 @@ namespace Rain_World_Drought.Creatures
         9f
         };
 
-        // Token: 0x040020C1 RID: 8385
         private float flipperGraphWidth;
     }
 }

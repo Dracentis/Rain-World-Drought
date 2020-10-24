@@ -102,6 +102,7 @@
     <Compile Include="PlacedObjects\PistonPhysics.cs" />
     <Compile Include="PublicBee.cs" />
     <None Include="Resource\FutileHK.cs" />
+    <Compile Include="Creature\GreySpear.cs" />
     <Compile Include="Resource\MenuSceneHK.cs" />
     <Compile Include="Resource\MusicPieceHK.cs" />
     <Compile Include="Resource\ResourceManager.cs" />

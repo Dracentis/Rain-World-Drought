@@ -145,6 +145,54 @@ namespace Rain_World_Drought.Resource
             }
         }
 
+        public static bool LoadSprites()
+        {
+            DirectoryInfo dir = new DirectoryInfo(string.Concat(
+                assetDir,
+                "Futile",
+                Path.DirectorySeparatorChar,
+                "Resources",
+                Path.DirectorySeparatorChar,
+                "Sprites",
+                Path.DirectorySeparatorChar
+                ));
+            if (!dir.Exists) { Debug.Log($"Drought) Directory [{dir.FullName}] is missing. Not loading extra Sprites."); return true; }
+            // { error = DroughtMod.Translate("Directory [<assetDir>] is missing: Reinstall DroughtAssets.").Replace("<assetDir>", dir.FullName); return false; }
+            Debug.Log($"Drought Loading Sprites from [{dir}]");
+            string dbg = "";
+            foreach (FileInfo f in dir.GetFiles())
+            {
+                if (f.Name.ToLower().EndsWith(".png"))
+                {
+                    string name = f.Name.Substring(0, f.Name.Length - 4);
+                    if (Futile.atlasManager.DoesContainAtlas(name)) { Futile.atlasManager.UnloadAtlas(name); } // Replace duplicate
+                    if (Futile.atlasManager.DoesContainElementWithName(name)) { Futile.atlasManager._allElementsByName.Remove(name); }
+                    byte[] data = File.ReadAllBytes(f.FullName);
+                    Texture2D tex = new Texture2D(0, 0, TextureFormat.ARGB32, false, false)
+                    { wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Point };
+                    tex.LoadImage(data);
+                    Futile.atlasManager.LoadAtlasFromTexture(name, tex);
+                    dbg += name + "; ";
+                }
+            }
+            Debug.Log(dbg);
+            return true;
+        }
+
+        /*
+        /// <summary>
+        /// Try grabbing sprites, and use vanilla replacement instead
+        /// </summary>
+        /// <param name="drought"></param>
+        /// <param name="vanilla"></param>
+        /// <returns></returns>
+        public static FAtlasElement GetSprite(string drought, string vanilla = "")
+        {
+            if (Futile.atlasManager.DoesContainElementWithName(drought)) { return Futile.atlasManager.GetElementWithName(drought); }
+            if (string.IsNullOrEmpty(vanilla)) { return Futile.atlasManager.GetElementWithName("Futile_White"); }
+            return Futile.atlasManager.GetElementWithName(vanilla);
+        }*/
+
         #endregion Atlases
 
         #region Music
@@ -227,7 +275,7 @@ namespace Rain_World_Drought.Resource
                 Path.DirectorySeparatorChar,
                 trackName,
                 procedural ? ".ogg" : ".mp3"));
-            return www.GetAudioClip(false, true, AudioType.OGGVORBIS);
+            return www.GetAudioClip(false, true, procedural ? AudioType.OGGVORBIS : AudioType.MPEG);
         }
 
         #endregion Music

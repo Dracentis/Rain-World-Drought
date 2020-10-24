@@ -68,7 +68,6 @@ namespace Rain_World_Drought.Creatures
             Reset();
         }
 
-        // Token: 0x06001C38 RID: 7224 RVA: 0x001939B4 File Offset: 0x00191BB4
         static WalkerBeastGraphics()
         {
             // Note: this type is marked as 'beforefieldinit'.
@@ -84,8 +83,6 @@ namespace Rain_World_Drought.Creatures
             legGraphicAnchors = array;
         }
 
-        // Token: 0x17000463 RID: 1123
-        // (get) Token: 0x06001C39 RID: 7225 RVA: 0x00013167 File Offset: 0x00011367
         private WalkerBeast WalkerBeast
         {
             get
@@ -94,8 +91,6 @@ namespace Rain_World_Drought.Creatures
             }
         }
 
-        // Token: 0x17000464 RID: 1124
-        // (get) Token: 0x06001C3A RID: 7226 RVA: 0x00004DEC File Offset: 0x00002FEC
         private int AntlerSprite
         {
             get
@@ -104,8 +99,6 @@ namespace Rain_World_Drought.Creatures
             }
         }
 
-        // Token: 0x17000465 RID: 1125
-        // (get) Token: 0x06001C3B RID: 7227 RVA: 0x00004EEA File Offset: 0x000030EA
         private int FirstAntlerSprite
         {
             get
@@ -114,8 +107,6 @@ namespace Rain_World_Drought.Creatures
             }
         }
 
-        // Token: 0x17000466 RID: 1126
-        // (get) Token: 0x06001C3C RID: 7228 RVA: 0x00013174 File Offset: 0x00011374
         private int LastAntlerSprite
         {
             get
@@ -124,14 +115,11 @@ namespace Rain_World_Drought.Creatures
             }
         }
 
-        // Token: 0x06001C3D RID: 7229 RVA: 0x0001318A File Offset: 0x0001138A
         private int BodySprite(int chunk)
         {
             return LastAntlerSprite + 1 + chunk;
         }
 
-        // Token: 0x17000467 RID: 1127
-        // (get) Token: 0x06001C3E RID: 7230 RVA: 0x00013196 File Offset: 0x00011396
         private int FirstDanglerSprite
         {
             get
@@ -140,8 +128,6 @@ namespace Rain_World_Drought.Creatures
             }
         }
 
-        // Token: 0x17000468 RID: 1128
-        // (get) Token: 0x06001C3F RID: 7231 RVA: 0x000131A2 File Offset: 0x000113A2
         private int LastDanglerSprite
         {
             get
@@ -168,7 +154,6 @@ namespace Rain_World_Drought.Creatures
             }
         }
 
-        // Token: 0x06001C40 RID: 7232 RVA: 0x000131B5 File Offset: 0x000113B5
         private int LegSprite(int leg, int part)
         {
             return LastDanglerSprite + 1 + leg * 3 + part;
@@ -182,7 +167,6 @@ namespace Rain_World_Drought.Creatures
             }
         }
 
-        // Token: 0x06001C43 RID: 7235 RVA: 0x00193A90 File Offset: 0x00191C90
         private float LegPartLength(int pos, int part, bool includeExtension)
         {
             if (pos == 0)
@@ -192,7 +176,6 @@ namespace Rain_World_Drought.Creatures
             return ((part != 0) ? 45f : 60f) * ((!includeExtension) ? 1f : (WalkerBeast.preferredHeight / 15f));
         }
 
-        // Token: 0x06001C44 RID: 7236 RVA: 0x00193B14 File Offset: 0x00191D14
         public override void Reset()
         {
             base.Reset();
@@ -202,7 +185,6 @@ namespace Rain_World_Drought.Creatures
             }
         }
 
-        // Token: 0x06001C45 RID: 7237 RVA: 0x00193B50 File Offset: 0x00191D50
         public override void Update()
         {
             lastHeadFlip = headFlip;
@@ -290,7 +272,6 @@ namespace Rain_World_Drought.Creatures
             }
         }
 
-        // Token: 0x06001C46 RID: 7238 RVA: 0x001941DC File Offset: 0x001923DC
         public override void InitiateSprites(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam)
         {
             sLeaser.sprites = new FSprite[TotalSprites];
@@ -340,7 +321,6 @@ namespace Rain_World_Drought.Creatures
             base.InitiateSprites(sLeaser, rCam);
         }
 
-        // Token: 0x06001C47 RID: 7239 RVA: 0x001945CC File Offset: 0x001927CC
         public override void ApplyPalette(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, RoomPalette palette)
         {
             bodyColor = Color.Lerp(palette.blackColor, palette.texture.GetPixel(5, 4), 0.2f);
@@ -367,7 +347,6 @@ namespace Rain_World_Drought.Creatures
             }
         }
 
-        // Token: 0x06001C48 RID: 7240 RVA: 0x00194728 File Offset: 0x00192928
         private void ReColorLegs(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, RoomPalette palette)
         {
             Color pixel = palette.texture.GetPixel(5, 4);
@@ -382,7 +361,6 @@ namespace Rain_World_Drought.Creatures
             }
         }
 
-        // Token: 0x06001C49 RID: 7241 RVA: 0x00194800 File Offset: 0x00192A00
         public override void AddToContainer(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, FContainer newContatiner)
         {
             sLeaser.RemoveAllSpritesFromContainer();
@@ -404,19 +382,16 @@ namespace Rain_World_Drought.Creatures
             }
         }
 
-        // Token: 0x06001C4A RID: 7242 RVA: 0x001948E0 File Offset: 0x00192AE0
         public float CurrentFaceDir(float timeStacker)
         {
             return Mathf.Lerp(lastFlip, flip, timeStacker) * 0.85f + Mathf.Lerp(lastAntlerRandomMovement, antlerRandomMovement, timeStacker) * 0.25f * (1f - Mathf.Abs(Mathf.Lerp(lastFlip, flip, timeStacker)) * 0.7f);
         }
 
-        // Token: 0x06001C4B RID: 7243 RVA: 0x000131E7 File Offset: 0x000113E7
         public Color CurrentFoggedHornColor(float timeStacker)
         {
             return Color.Lerp(bodyColor, fogCol, Mathf.Clamp(Mathf.Abs(CurrentFaceDir(timeStacker)), 0f, 1f) * 0.35f);
         }
 
-        // Token: 0x06001C4C RID: 7244 RVA: 0x00194944 File Offset: 0x00192B44
         public override void DrawSprites(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, float timeStacker, Vector2 camPos)
         {
             base.DrawSprites(sLeaser, rCam, timeStacker, camPos);
@@ -592,7 +567,6 @@ namespace Rain_World_Drought.Creatures
             sLeaser.sprites[AntlerSprite].alpha = 0f;
         }
 
-        // Token: 0x06001C4D RID: 7245 RVA: 0x00195998 File Offset: 0x00193B98
         public Vector2 DanglerConnection(int index, float timeStacker)
         {
             if (index < bodyDanglers)
@@ -608,112 +582,55 @@ namespace Rain_World_Drought.Creatures
             return antlers.TransformToHeadRotat(antlers.parts[hornDanglerPositions[index, 0]].GetTransoformedPos(hornDanglerPositions[index, 1], (float)hornDanglerPositions[index, 2]), vector3, Custom.AimFromOneVectorToAnother(Vector2.Lerp(WalkerBeast.mainBodyChunk.lastPos, WalkerBeast.mainBodyChunk.pos, timeStacker), vector3), (float)hornDanglerPositions[index, 2], CurrentFaceDir(timeStacker));
         }
 
-        // Token: 0x06001C4E RID: 7246 RVA: 0x0001321B File Offset: 0x0001141B
         public Dangler.DanglerProps Props(int index)
         {
             return danglerVals;
         }
 
-        // Token: 0x06001C4F RID: 7247 RVA: 0x00004DC0 File Offset: 0x00002FC0
         public float CreatureInterestBonus(Tracker.CreatureRepresentation crit, float score)
         {
             return score;
         }
 
-        // Token: 0x06001C50 RID: 7248 RVA: 0x00008DF0 File Offset: 0x00006FF0
         public Tracker.CreatureRepresentation ForcedLookCreature()
         {
             return null;
         }
 
-        // Token: 0x06001C51 RID: 7249 RVA: 0x000024FC File Offset: 0x000006FC
         public void LookAtNothing()
         {
         }
 
-        // Token: 0x04001E8B RID: 7819
         private Dangler.DanglerProps danglerVals;
-
-        // Token: 0x04001E8E RID: 7822
         private static Vector2[,,] legGraphicAnchors;
-
-        // Token: 0x04001E8F RID: 7823
         private float lastFlip;
-
-        // Token: 0x04001E90 RID: 7824
         private float flip;
-
-        // Token: 0x04001E91 RID: 7825
         private float antlerRandomMovement;
-
-        // Token: 0x04001E92 RID: 7826
         private float lastAntlerRandomMovement;
-
-        // Token: 0x04001E93 RID: 7827
         private float antlerRandomMovementVel;
-
-        // Token: 0x04001E94 RID: 7828
         private float[] chunksRotat;
-
-        // Token: 0x04001E95 RID: 7829
         public WalkerBeastGraphics.Antlers antlers;
-
-        // Token: 0x04001E96 RID: 7830
         private Color fogCol;
-
-        // Token: 0x04001E97 RID: 7831
         private Dangler[] danglers;
-
-        // Token: 0x04001E98 RID: 7832
         public int[,] bodyDanglerPositions;
-
-        // Token: 0x04001E99 RID: 7833
         public float[,] bodyDanglerOrientations;
-
-        // Token: 0x04001E9A RID: 7834
         public int bodyDanglers;
-
-        // Token: 0x04001E9B RID: 7835
         public int hornDanglers;
-
-        // Token: 0x04001E9C RID: 7836
         public int[,] hornDanglerPositions;
-
-        // Token: 0x04001E9D RID: 7837
         public CreatureLooker looker;
-
-        // Token: 0x04001E9E RID: 7838
         public Vector2[] lookPoint;
-
-        // Token: 0x04001E9F RID: 7839
         public int blink;
-
-        // Token: 0x04001EA0 RID: 7840
         public int lastBlink;
-
-        // Token: 0x04001EA1 RID: 7841
         public Color bodyColor;
-
-        // Token: 0x0400236F RID: 9071
         public float headFlip;
-
-        // Token: 0x04002370 RID: 9072
         public float lastHeadFlip;
-
-        // Token: 0x0400236D RID: 9069
         public float eyeSize;
-
-        // Token: 0x04002365 RID: 9061
         public float neckFatness;
-
-        // Token: 0x0400235E RID: 9054
         public WalkerBeastGraphics.BeakGraphic[] beak;
-
         public float beakFatness;
 
         public class Antlers
         {
-            // Token: 0x06001C52 RID: 7250 RVA: 0x00195C00 File Offset: 0x00193E00
             public Antlers(float rad, float thickness)
             {
                 this.rad = rad;
@@ -801,8 +718,6 @@ namespace Rain_World_Drought.Creatures
                 }
             }
 
-            // Token: 0x1700046A RID: 1130
-            // (get) Token: 0x06001C53 RID: 7251 RVA: 0x00013223 File Offset: 0x00011423
             public int SpritesClaimed
             {
                 get
@@ -811,7 +726,6 @@ namespace Rain_World_Drought.Creatures
                 }
             }
 
-            // Token: 0x06001C54 RID: 7252 RVA: 0x0019608C File Offset: 0x0019428C
             private WalkerBeastGraphics.Antlers.Part GeneratePart(bool spine, float startRad, Vector3? beforeStart, Vector3 start, Vector3 goal, Vector3 initDir, WalkerBeastGraphics.Antlers.GenerateValues genVals)
             {
                 List<Vector3> list = new List<Vector3>();
@@ -868,7 +782,6 @@ namespace Rain_World_Drought.Creatures
                 return null;
             }
 
-            // Token: 0x06001C55 RID: 7253 RVA: 0x00196410 File Offset: 0x00194610
             public Vector2 TransformToHeadRotat(Vector3 dpPos, Vector2 antlerPos, float rotation, float flip, float WalkerBeastFaceDir)
             {
                 float degAng = Mathf.Lerp(-116.999992f, 116.999992f, Mathf.InverseLerp(-1.3f, 1.3f, WalkerBeastFaceDir));
@@ -879,7 +792,6 @@ namespace Rain_World_Drought.Creatures
                 return vector;
             }
 
-            // Token: 0x06001C56 RID: 7254 RVA: 0x00196490 File Offset: 0x00194690
             public void InitiateSprites(int firstAntlerSprite, RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam)
             {
                 for (int i = 0; i < 2; i++)
@@ -891,7 +803,6 @@ namespace Rain_World_Drought.Creatures
                 }
             }
 
-            // Token: 0x06001C57 RID: 7255 RVA: 0x001964F4 File Offset: 0x001946F4
             public void DrawSprites(int firstAntlerSprite, RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, float timeStacker, Vector2 camPos, Vector2 headPos, Vector2 antlerPos, float WalkerBeastFaceDir, Color blackCol, Color foggedCol)
             {
                 float rotation = Custom.AimFromOneVectorToAnother(headPos, antlerPos);
@@ -932,32 +843,23 @@ namespace Rain_World_Drought.Creatures
                 }
             }
 
-            // Token: 0x04001EA2 RID: 7842
             public WalkerBeastGraphics.Antlers.Part[] parts;
-
-            // Token: 0x04001EA3 RID: 7843
             public float rad;
-
-            // Token: 0x04001EA4 RID: 7844
             public float thickness;
 
-            // Token: 0x02000463 RID: 1123
             public class Part
             {
-                // Token: 0x06001C58 RID: 7256 RVA: 0x0001322F File Offset: 0x0001142F
                 public Part(Vector3[] positions, float[] rads)
                 {
                     this.positions = positions;
                     this.rads = rads;
                 }
 
-                // Token: 0x06001C59 RID: 7257 RVA: 0x0001324C File Offset: 0x0001144C
                 public Vector3 GetTransoformedPos(int pos, float flip)
                 {
                     return positions[pos] + indPos[(flip >= 0f) ? 1 : 0, pos];
                 }
 
-                // Token: 0x06001C5A RID: 7258 RVA: 0x0019679C File Offset: 0x0019499C
                 public void GenerateInds(float rad)
                 {
                     indPos = new Vector3[2, positions.Length];
@@ -973,23 +875,14 @@ namespace Rain_World_Drought.Creatures
                     }
                 }
 
-                // Token: 0x04001EA5 RID: 7845
                 public int lastBranchingSegment = 2;
-
-                // Token: 0x04001EA6 RID: 7846
                 public Vector3[] positions;
-
-                // Token: 0x04001EA7 RID: 7847
                 public float[] rads;
-
-                // Token: 0x04001EA8 RID: 7848
                 public Vector3[,] indPos;
             }
 
-            // Token: 0x02000464 RID: 1124
             public class GenerateValues
             {
-                // Token: 0x06001C5B RID: 7259 RVA: 0x00196860 File Offset: 0x00194A60
                 public GenerateValues(float rad)
                 {
                     attractRad = rad * Mathf.Lerp(0.7f, 1f, UnityEngine.Random.value);
@@ -1001,25 +894,12 @@ namespace Rain_World_Drought.Creatures
                     randomTendChange = Mathf.Lerp(-1f, 1f, UnityEngine.Random.value) * 0.1f * 0.5f;
                 }
 
-                // Token: 0x04001EA9 RID: 7849
                 public float circumferenceTend;
-
-                // Token: 0x04001EAA RID: 7850
                 public float goalTend;
-
-                // Token: 0x04001EAB RID: 7851
                 public float randomTend;
-
-                // Token: 0x04001EAC RID: 7852
                 public float circumferenceTendChange;
-
-                // Token: 0x04001EAD RID: 7853
                 public float goalTendChange;
-
-                // Token: 0x04001EAE RID: 7854
                 public float randomTendChange;
-
-                // Token: 0x04001EAF RID: 7855
                 public float attractRad;
             }
         }
@@ -1124,9 +1004,7 @@ namespace Rain_World_Drought.Creatures
             }
 
             private WalkerBeastGraphics owner;
-
             public int firstSprite;
-
             public int index;
         }
     }
