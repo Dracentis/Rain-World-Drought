@@ -37,6 +37,7 @@ namespace Rain_World_Drought
             CreatureTemplateHK.Patch();
             DeerHK.Patch();
             DevMapPageHK.Patch();
+            LizardGraphicsHK.Patch();
             LizardHK.Patch();
             MultiplayerUnlocksHK.Patch();
             OverseerHK.Patch();
