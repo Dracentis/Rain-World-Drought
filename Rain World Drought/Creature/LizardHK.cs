@@ -102,9 +102,10 @@ namespace Rain_World_Drought.Creatures
                                     self.room.PlaySound(SoundID.Red_Lizard_Spit, jawDir10);
                                     //this.room.AddObject(new LizardSpit(vector3, vector4 * 40f, this));
                                     AbstractSpear abstractSpear = new AbstractSpear(self.room.world, null, self.room.GetWorldCoordinate(jawDir10), self.room.game.GetNewID(), false);
+                                    abstractSpear.type = EnumExt_Drought.GreySpear;
                                     self.room.abstractRoom.AddEntity(abstractSpear);
                                     abstractSpear.RealizeInRoom();
-                                    LaunchSpear(abstractSpear.realizedObject as Spear, self, jawDir10 + jawDir, jawDir10, jawDir, 0.9f, false);
+                                    LaunchSpear(abstractSpear.realizedObject as GreySpear, self, jawDir10 + jawDir, jawDir10, jawDir, 0.9f, false);
                                     self.AI.redSpitAI.delay = greySpitDelay;
                                     self.bodyChunks[2].pos -= jawDir * 8f;
                                     self.bodyChunks[1].pos -= jawDir * 4f;
@@ -127,8 +128,9 @@ namespace Rain_World_Drought.Creatures
             return orig.Invoke(self);
         }
 
-        public static void LaunchSpear(Spear self, Creature thrownBy, Vector2 thrownPos, Vector2? firstFrameTraceFromPos, Vector2 throwDir, float frc, bool eu)
+        public static void LaunchSpear(GreySpear self, Lizard thrownBy, Vector2 thrownPos, Vector2? firstFrameTraceFromPos, Vector2 throwDir, float frc, bool eu)
         {
+            self.effectColor = thrownBy.effectColor;
             self.thrownBy = thrownBy;
             self.thrownPos = thrownPos;
             self.throwDir = new IntVector2((int)(throwDir.x * 2), (int)(throwDir.y * 2));

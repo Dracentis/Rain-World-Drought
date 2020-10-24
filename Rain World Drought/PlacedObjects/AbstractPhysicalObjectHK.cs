@@ -1,4 +1,5 @@
-﻿using Rain_World_Drought.Enums;
+﻿using Rain_World_Drought.Creatures;
+using Rain_World_Drought.Enums;
 using Rain_World_Drought.OverWorld;
 
 namespace Rain_World_Drought.PlacedObjects
@@ -27,6 +28,8 @@ namespace Rain_World_Drought.PlacedObjects
                     self.realizedObject = new LargePiston(self); break;
                 case EnumSwitch.AbstractPhysicalObjectType.GiantPiston:
                     self.realizedObject = new GiantPiston(self); break;
+                case EnumSwitch.AbstractPhysicalObjectType.GreySpear:
+                    self.realizedObject = new GreySpear(self, self.world); break;
             }
             for (int i = 0; i < self.stuckObjects.Count; i++)
             {

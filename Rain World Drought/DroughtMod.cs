@@ -122,6 +122,7 @@ namespace Rain_World_Drought
 
             if (!Directory.Exists(ResourceManager.assetDir)) { error = Translate("DroughtAssets folder is missing! Put DroughtAssets with [Rain World Drought.dll]!"); goto handleError; }
             if (!ResourceManager.LoadAtlases()) { error = ResourceManager.error; goto handleError; }
+            if (!ResourceManager.LoadSprites()) { error = ResourceManager.error; goto handleError; }
             if (!ResourceManager.CheckDroughtSongs()) { error = ResourceManager.error; goto handleError; }
 
         handleError:
