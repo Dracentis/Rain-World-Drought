@@ -155,7 +155,11 @@ namespace Rain_World_Drought.Creatures
             EstablishRelationship(EnumExt_Drought.GreyLizard, CreatureTemplate.Type.KingVulture, new CreatureTemplate.Relationship(CreatureTemplate.Relationship.Type.Attacks, 0.2f));
             EstablishRelationship(EnumExt_Drought.GreyLizard, CreatureTemplate.Type.MirosBird, new CreatureTemplate.Relationship(CreatureTemplate.Relationship.Type.Attacks, 0.4f));
             EstablishRelationship(EnumExt_Drought.GreyLizard, CreatureTemplate.Type.DaddyLongLegs, new CreatureTemplate.Relationship(CreatureTemplate.Relationship.Type.Afraid, 0.2f));
-            EstablishRelationship(EnumExt_Drought.GreyLizard, EnumExt_Drought.GreyLizard, new CreatureTemplate.Relationship(CreatureTemplate.Relationship.Type.Attacks, 1f));
+            EstablishRelationship(EnumExt_Drought.GreyLizard, CreatureTemplate.Type.LizardTemplate, new CreatureTemplate.Relationship(CreatureTemplate.Relationship.Type.AgressiveRival, 0.2f));
+            EstablishRelationship(EnumExt_Drought.GreyLizard, CreatureTemplate.Type.BlueLizard, new CreatureTemplate.Relationship(CreatureTemplate.Relationship.Type.Eats, 0.25f));
+            EstablishRelationship(EnumExt_Drought.GreyLizard, EnumExt_Drought.GreyLizard, new CreatureTemplate.Relationship(CreatureTemplate.Relationship.Type.AgressiveRival, 0.8f));
+            EstablishRelationship(CreatureTemplate.Type.LizardTemplate, EnumExt_Drought.GreyLizard, new CreatureTemplate.Relationship(CreatureTemplate.Relationship.Type.AgressiveRival, 0.1f));
+            EstablishRelationship(CreatureTemplate.Type.BlueLizard, EnumExt_Drought.GreyLizard, new CreatureTemplate.Relationship(CreatureTemplate.Relationship.Type.Afraid, 0.25f));
             EstablishRelationship(CreatureTemplate.Type.BigSpider, EnumExt_Drought.GreyLizard, new CreatureTemplate.Relationship(CreatureTemplate.Relationship.Type.Afraid, 0.4f));
             EstablishRelationship(CreatureTemplate.Type.DropBug, EnumExt_Drought.GreyLizard, new CreatureTemplate.Relationship(CreatureTemplate.Relationship.Type.Afraid, 0.4f));
 

@@ -10,11 +10,24 @@ namespace Rain_World_Drought.Creatures
     {
         public static void Patch()
         {
+            On.Lizard.ctor += new On.Lizard.hook_ctor(CtorHK);
             On.Lizard.ActAnimation += new On.Lizard.hook_ActAnimation(ActAnimationHK);
             On.LizardAI.ctor += new On.LizardAI.hook_ctor(AICtorHK);
             On.LizardAI.Update += new On.LizardAI.hook_Update(AIUpdateHK);
             On.Spear.Update += new On.Spear.hook_Update(SpearUpdateHK);
             On.LizardVoice.GetMyVoiceTrigger += new On.LizardVoice.hook_GetMyVoiceTrigger(GetMyVoiceTriggerHK);
+        }
+
+        private static void CtorHK(On.Lizard.orig_ctor orig, Lizard self, AbstractCreature abstractCreature, World world)
+        {
+            orig.Invoke(self, abstractCreature, world);
+            int seed = UnityEngine.Random.seed;
+            UnityEngine.Random.seed = abstractCreature.ID.RandomSeed;
+            if (DroughtMod.EnumExt && self.Template.type == EnumExt_Drought.GreyLizard)
+            {
+                self.effectColor = Custom.HSL2RGB(Custom.WrappedRandomVariation(0.42f, 0.15f, 0.6f), Custom.WrappedRandomVariation(0.1f, 0.08f, 0.6f), Custom.ClampedRandomVariation(0.5f, 0.15f, 0.2f));
+            }
+            UnityEngine.Random.seed = seed;
         }
 
         private static void SpearUpdateHK(On.Spear.orig_Update orig, Spear self, bool eu)
