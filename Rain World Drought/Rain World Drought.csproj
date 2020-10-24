@@ -91,7 +91,6 @@
     <Compile Include="Creature\CreatureTemplateHK.cs" />
     <Compile Include="Creature\DeerHK.cs" />
     <Compile Include="Creature\DevMapPageHK.cs" />
-    <Compile Include="Creature\LizardGraphicsHK.cs" />
     <Compile Include="Creature\LizardHK.cs" />
     <Compile Include="Creature\MultiplayerUnlocksHK.cs" />
     <Compile Include="Creature\OverseerDroughtTutorialBehavior.cs" />

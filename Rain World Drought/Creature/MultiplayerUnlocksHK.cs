@@ -94,7 +94,6 @@ namespace Rain_World_Drought.Creatures
             // if (button == null) { return; } // Remove gap between kill score buttons & action score buttons
             IntVector2 psb = ps;
             orig.Invoke(self, button, ref ps);
-            if (button != null) { button.pos.y += 30f; } // move buttons by one row
             psb.y++;
             if (psb.y > 9) // extend the row by 1
             {
@@ -122,10 +121,7 @@ namespace Rain_World_Drought.Creatures
             wait = true;
             orig.Invoke(self, menu, owner, overlayOwner);
             wait = false;
-            int counter = 0;
-            // Add ClearAll Button
-            self.AddButton(new SandboxEditorSelector.RectButton(menu, self, SandboxEditorSelector.ActionButton.Action.ClearAll), ref counter);
-            counter += 2; // 2 gap
+            int counter = 3; // clearall + 2 gap
             // Item
             for (int j = MultiplayerUnlocks.CreaturesUnlocks; j < MultiplayerUnlocks.CreaturesUnlocks + MultiplayerUnlocks.ItemsUnlocks; j++)
             {
