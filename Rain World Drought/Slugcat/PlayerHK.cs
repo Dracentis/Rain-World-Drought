@@ -707,15 +707,16 @@ namespace Rain_World_Drought.Slugcat
 
         private static void LungUpdateHK(On.Player.orig_LungUpdate orig, Player self)
         {
-            float lastAirInLungs = self.airInLungs;
-            float patchedAirInLungs = -1f;
-            if (self.room.game.IsStorySession && WandererSupplement.IsWanderer(self))
+            if (WandererSupplement.IsWanderer(self) && MiscWorldSaveDroughtData.GetData((self.room.game.session as StoryGameSession).saveState.miscWorldSaveData).isImproved)
             {
-                patchedAirInLungs = lastAirInLungs - 1f / (((MiscWorldSaveDroughtData.GetData((self.room.game.session as StoryGameSession).saveState.miscWorldSaveData).isImproved ? 3f : 1f) * 40f * ((!self.lungsExhausted) ? 9f : 4.5f) * ((self.input[0].y != 1 || self.input[0].x != 0 || self.airInLungs >= 0.333333343f) ? 1f : 1.5f) * ((float)self.room.game.setupValues.lungs / 100f)) * self.slugcatStats.lungsFac);
+                // Divide the rate that air leaves the lungs by 3
+                float lastAirInLungs = self.airInLungs;
+                orig.Invoke(self);
+                if (self.airInLungs > 0f && self.airInLungs < lastAirInLungs) self.airInLungs = Mathf.Lerp(lastAirInLungs, self.airInLungs, 0.333f);
+            } else
+            {
+                orig(self);
             }
-            if (patchedAirInLungs > 0f) { self.airInLungs = Mathf.Max(self.airInLungs, 0.2f); } // prevents drowning early
-            orig.Invoke(self);
-            if (patchedAirInLungs > self.airInLungs) { self.airInLungs = patchedAirInLungs; }
         }
 
         private static void VoidSeaTreatmentHK(On.VoidSea.VoidSeaScene.orig_VoidSeaTreatment orig, VoidSeaScene self, Player player, float swimSpeed)
