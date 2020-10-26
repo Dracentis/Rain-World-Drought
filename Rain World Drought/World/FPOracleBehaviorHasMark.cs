@@ -282,7 +282,7 @@ namespace Rain_World_Drought.OverWorld
                 {
                     for (int j = 0; j < oracle.room.socialEventRecognizer.ownedItemsOnGround.Count; j++)
                     {
-                        if (Custom.DistLess(oracle.room.socialEventRecognizer.ownedItemsOnGround[j].item.firstChunk.pos, oracle.firstChunk.pos, 300f) && WillingToInspectItem(oracle.room.socialEventRecognizer.ownedItemsOnGround[j].item))
+                        if (WillingToInspectItem(oracle.room.socialEventRecognizer.ownedItemsOnGround[j].item))
                         {
                             bool flag2 = true;
                             for (int k = 0; k < pickedUpItemsThisRealization.Count; k++)
