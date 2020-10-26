@@ -707,7 +707,7 @@ namespace Rain_World_Drought.Slugcat
 
         private static void LungUpdateHK(On.Player.orig_LungUpdate orig, Player self)
         {
-            if (WandererSupplement.IsWanderer(self) && MiscWorldSaveDroughtData.GetData((self.room.game.session as StoryGameSession).saveState.miscWorldSaveData).isImproved)
+            if (WandererSupplement.IsWanderer(self) && self.room.game.IsStorySession && MiscWorldSaveDroughtData.GetData((self.room.game.session as StoryGameSession).saveState.miscWorldSaveData).isImproved)
             {
                 // Divide the rate that air leaves the lungs by 3
                 float lastAirInLungs = self.airInLungs;
