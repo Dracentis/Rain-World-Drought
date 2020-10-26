@@ -43,11 +43,11 @@ namespace Rain_World_Drought.OverWorld
             {
                 if (self.oracleBehavior is FPOracleBehaviorHasMark fpOB)
                 {
-                    fpOB.playerAnnoyingCounter = Custom.IntClamp(fpOB.playerAnnoyingCounter + 80, 0, 150);
+                    fpOB.playerAnnoyingCounter = Custom.IntClamp(fpOB.playerAnnoyingCounter + 100, 0, 150);
                 }
                 else if (self.oracleBehavior is LMOracleBehaviorHasMark lmOB)
                 {
-                    lmOB.playerAnnoyingCounter = Custom.IntClamp(lmOB.playerAnnoyingCounter + 80, 0, 150);
+                    lmOB.playerAnnoyingCounter = Custom.IntClamp(lmOB.playerAnnoyingCounter + 100, 0, 150);
                 }
             }
         }
