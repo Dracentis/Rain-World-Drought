@@ -42,7 +42,7 @@ namespace Rain_World_Drought.Resource
                     Texture2D texture = new Texture2D(1, 1, TextureFormat.ARGB32, false) { anisoLevel = 0, filterMode = FilterMode.Point };
                     www.LoadImageIntoTexture(texture);
 
-                    FAtlas atlas = Futile.atlasManager.LoadAtlasFromTexture(file, texture);
+                    FAtlas atlas = Futile.atlasManager.LoadAtlasFromTexture(name, texture);
                     LoadAtlasDataFromString(ref atlas, data);
                 }
                 catch (Exception e)
@@ -92,6 +92,7 @@ namespace Rain_World_Drought.Resource
             Dictionary<string, object> dictionary2 = (Dictionary<string, object>)dictionary["frames"];
             float resourceScaleInverse = Futile.resourceScaleInverse;
             int num = 0;
+            //Debug.Log($"{atlas.name}: w {atlas._textureSize.x}, h {atlas._textureSize.y}");
             foreach (KeyValuePair<string, object> keyValuePair in dictionary2)
             {
                 FAtlasElement fatlasElement = new FAtlasElement
@@ -142,6 +143,30 @@ namespace Rain_World_Drought.Resource
 
                 fatlasElement.atlas = atlas;
                 Futile.atlasManager.AddElement(fatlasElement);
+
+                /*
+
+                #region Export
+                Texture2D tex = new Texture2D(Mathf.RoundToInt(num5), Mathf.RoundToInt(num6), TextureFormat.ARGB32, false)
+                { filterMode = FilterMode.Point, wrapMode = TextureWrapMode.Clamp };
+                int x = Mathf.RoundToInt(num3);
+                int y = Mathf.RoundToInt(atlas._textureSize.y - num4 - num6);
+                Debug.Log($"{fatlasElement.name}: x {x}, y {y}; w {num5}, h {num6}");
+                for (int v = 0; v < tex.height; v++)
+                {
+                    for (int u = 0; u < tex.width; u++)
+                    {
+                        tex.SetPixel(u, v, (atlas.texture as Texture2D).GetPixel(x + u, y + v));
+                    }
+                }
+                tex.Apply();
+                byte[] d = tex.EncodeToPNG();
+                string path = string.Concat(assetDir, "Futile", Path.DirectorySeparatorChar, "Export", Path.DirectorySeparatorChar);
+                if (!Directory.Exists(path)) { Directory.CreateDirectory(path); }
+                File.WriteAllBytes(path + fatlasElement.name + ".png", d);
+                #endregion Export
+
+                */
             }
         }
 

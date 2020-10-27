@@ -121,7 +121,7 @@ namespace Rain_World_Drought.Creatures
             EstablishRelationship(EnumExt_Drought.WalkerBeast, CreatureTemplate.Type.SpitterSpider, new CreatureTemplate.Relationship(CreatureTemplate.Relationship.Type.Eats, 0.6f));
             EstablishRelationship(EnumExt_Drought.WalkerBeast, CreatureTemplate.Type.BigSpider, new CreatureTemplate.Relationship(CreatureTemplate.Relationship.Type.Eats, 0.6f));
             EstablishRelationship(EnumExt_Drought.WalkerBeast, CreatureTemplate.Type.DaddyLongLegs, new CreatureTemplate.Relationship(CreatureTemplate.Relationship.Type.Afraid, 0.7f));
-            EstablishRelationship(EnumExt_Drought.WalkerBeast, CreatureTemplate.Type.Deer, new CreatureTemplate.Relationship(CreatureTemplate.Relationship.Type.Ignores, 1f));
+            EstablishRelationship(EnumExt_Drought.WalkerBeast, CreatureTemplate.Type.Deer, new CreatureTemplate.Relationship(CreatureTemplate.Relationship.Type.Afraid, 1f));
             EstablishRelationship(EnumExt_Drought.WalkerBeast, CreatureTemplate.Type.Centipede, new CreatureTemplate.Relationship(CreatureTemplate.Relationship.Type.Eats, 0.8f));
             EstablishRelationship(EnumExt_Drought.WalkerBeast, CreatureTemplate.Type.SmallCentipede, new CreatureTemplate.Relationship(CreatureTemplate.Relationship.Type.Ignores, 0f));
             EstablishRelationship(EnumExt_Drought.WalkerBeast, CreatureTemplate.Type.RedCentipede, new CreatureTemplate.Relationship(CreatureTemplate.Relationship.Type.Eats, 0.8f));
