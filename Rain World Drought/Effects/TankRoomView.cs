@@ -1,5 +1,7 @@
 ﻿using System;
+using System.IO;
 using Rain_World_Drought.Enums;
+using Rain_World_Drought.Resource;
 using Rain_World_Drought.Slugcat;
 using RWCustom;
 using UnityEngine;
@@ -152,11 +154,8 @@ namespace Rain_World_Drought.Effects
                             newContatiner = rCam.ReturnFContainer("ForegroundLights");
                             break;
 
-                        case "Tr_TankShadow":
-                            newContatiner = rCam.ReturnFContainer("Shortcuts");
-                            break;
-
                         default:
+                        case "Tr_TankShadow":
                             newContatiner = rCam.ReturnFContainer("Shortcuts");
                             break;
                     }
@@ -212,11 +211,8 @@ namespace Rain_World_Drought.Effects
                             newContatiner = rCam.ReturnFContainer("ForegroundLights");
                             break;
 
-                        case "Tr_PipesC":
-                            newContatiner = rCam.ReturnFContainer("Shortcuts");
-                            break;
-
                         default:
+                        case "Tr_PipesC":
                             newContatiner = rCam.ReturnFContainer("Shortcuts");
                             break;
                     }
