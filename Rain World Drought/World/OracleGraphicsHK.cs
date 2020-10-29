@@ -11,6 +11,7 @@ namespace Rain_World_Drought.OverWorld
         {
             On.OracleGraphics.ctor += new On.OracleGraphics.hook_ctor(CtorHK);
             On.OracleGraphics.InitiateSprites += new On.OracleGraphics.hook_InitiateSprites(InitiateSpritesHK);
+            On.OracleGraphics.AddToContainer += new On.OracleGraphics.hook_AddToContainer(AddToContainerHK);
             On.OracleGraphics.Update += new On.OracleGraphics.hook_Update(UpdateHK);
             On.OracleGraphics.DrawSprites += new On.OracleGraphics.hook_DrawSprites(DrawSpritesHK);
             On.OracleGraphics.ApplyPalette += new On.OracleGraphics.hook_ApplyPalette(ApplyPaletteHK);
@@ -76,6 +77,7 @@ namespace Rain_World_Drought.OverWorld
         private static void InitiateSpritesHK(On.OracleGraphics.orig_InitiateSprites orig, OracleGraphics self,
             RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam)
         {
+            orig.Invoke(self, sLeaser, rCam);
             if (self.oracle.ID == Oracle.OracleID.SL)
             {
                 sLeaser.sprites[self.killSprite] = new FSprite("MoonMark", true);
@@ -84,7 +86,15 @@ namespace Rain_World_Drought.OverWorld
                 sLeaser.sprites[self.killSprite].scaleY = 1f;
                 sLeaser.sprites[self.killSprite].alpha = 1f;
             }
-            orig.Invoke(self, sLeaser, rCam);
+            self.AddToContainer(sLeaser, rCam, null);
+        }
+
+        private static void AddToContainerHK(On.OracleGraphics.orig_AddToContainer orig, OracleGraphics self, RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, FContainer newContainer)
+        {
+            // Skip adding to container if not all sprites have been initialized
+            for(int i = 0; i < sLeaser.sprites.Length; i++)
+                if (sLeaser.sprites[i] == null) return;
+            orig(self, sLeaser, rCam, newContainer);
         }
 
         private static void UpdateHK(On.OracleGraphics.orig_Update orig, OracleGraphics self)

@@ -19,12 +19,10 @@ namespace Rain_World_Drought.OverWorld
             }
 
             // Add red marker
-            Debug.Log($"Cycle {index} has {burstNum[index]} bursts");
             for (int q = 0; q < 3; q++)
             {
                 int b = GetBurstIndex(index, q);
-                Debug.Log($"Trying to add rain marker {q}: Rain at index {b}");
-                if (b < this.circles.Length) { danger[b] = true; Debug.Log($"Affected circle {b}"); }
+                if (b < this.circles.Length) danger[b] = true;
             }
             /*
             for (int i = 1; i < 3; i++)
@@ -40,7 +38,7 @@ namespace Rain_World_Drought.OverWorld
         public static int GetBurstIndex(int index, int burst)
         {
             if (burstNum[index] <= burst) { return disableBurst; }
-            return Mathf.FloorToInt((nextcycleLength[index] / ((burstNum[index] + 1) * (burstNum[index] - burst))) / 1200f);
+            return Mathf.FloorToInt(((float)nextcycleLength[index] / (burstNum[index] + 1) * (burstNum[index] - burst)) / 1200f);
         }
 
         public bool[] danger;
@@ -52,7 +50,7 @@ namespace Rain_World_Drought.OverWorld
             this.lastPos = this.pos;
             this.pos = this.hud.karmaMeter.pos;
 
-            pos.x -= 105f * (3f - index) - 0.5f;
+            pos.x -= 105f * (2 - index) - 0.5f;
 
             if ((this.hud.owner as Player)?.room != null)
             {

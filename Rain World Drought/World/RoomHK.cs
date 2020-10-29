@@ -45,35 +45,8 @@ namespace Rain_World_Drought.OverWorld
                     break;
                 }
             }
-            orig.Invoke(self);
-            if (self.abstractRoom.gate)
-            {
-                if (self.abstractRoom.name == "GATE_SL_MW" || self.abstractRoom.name == "GATE_MW_LM" || self.abstractRoom.name == "GATE_LM_MW")
-                {
-                    self.regionGate.RemoveFromRoom();
-                    self.regionGate.Destroy();
-                    self.regionGate = new ElectricGate(self);
-                    self.AddObject(self.regionGate);
-                }
-            }
-            for (int k = 0; k < self.roomSettings.effects.Count; k++)
-            {
-                switch (EnumSwitch.GetRoomEffectType(self.roomSettings.effects[k].type))
-                {
-                    case EnumSwitch.RoomEffectType.DEFAULT:
-                    default:
-                        continue;
 
-                    case EnumSwitch.RoomEffectType.ElectricStorm:
-                        self.AddObject(new ElectricStorm(self.roomSettings.effects[k], self)); break;
-                    case EnumSwitch.RoomEffectType.GravityPulse:
-                        self.AddObject(new GravityPulse(self)); break;
-                    case EnumSwitch.RoomEffectType.Drain:
-                        self.AddObject(new DrainEffect(self)); break;
-                    case EnumSwitch.RoomEffectType.Pulse:
-                        self.AddObject(new PulseEffect(self)); break;
-                }
-            }
+            // Spawn in custom placed objects
             for (int l = 0; l < self.roomSettings.placedObjects.Count; l++)
             {
                 if (self.roomSettings.placedObjects[l].active)
@@ -115,6 +88,40 @@ namespace Rain_World_Drought.OverWorld
                             }
                             break;
                     }
+                }
+            }
+
+            orig.Invoke(self);
+            
+            // Change some gates to be electric
+            if (self.abstractRoom.gate)
+            {
+                if (self.abstractRoom.name == "GATE_SL_MW" || self.abstractRoom.name == "GATE_MW_LM" || self.abstractRoom.name == "GATE_LM_MW")
+                {
+                    self.regionGate.RemoveFromRoom();
+                    self.regionGate.Destroy();
+                    self.regionGate = new ElectricGate(self);
+                    self.AddObject(self.regionGate);
+                }
+            }
+            
+            // Initialize custom room effects
+            for (int k = 0; k < self.roomSettings.effects.Count; k++)
+            {
+                switch (EnumSwitch.GetRoomEffectType(self.roomSettings.effects[k].type))
+                {
+                    case EnumSwitch.RoomEffectType.DEFAULT:
+                    default:
+                        continue;
+
+                    case EnumSwitch.RoomEffectType.ElectricStorm:
+                        self.AddObject(new ElectricStorm(self.roomSettings.effects[k], self)); break;
+                    case EnumSwitch.RoomEffectType.GravityPulse:
+                        self.AddObject(new GravityPulse(self)); break;
+                    case EnumSwitch.RoomEffectType.Drain:
+                        self.AddObject(new DrainEffect(self)); break;
+                    case EnumSwitch.RoomEffectType.Pulse:
+                        self.AddObject(new PulseEffect(self)); break;
                 }
             }
         }
