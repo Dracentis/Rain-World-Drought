@@ -36,8 +36,7 @@ namespace HUD
             {
                 pips[i] = new FSprite("Futile_White")
                 {
-                    shader = hud.rainWorld.Shaders["VectorCircleFadable"],
-                    color = new Color(0f, 0f, 0f, 0f)
+                    shader = hud.rainWorld.Shaders["VectorCircleFadable"]
                 };
                 fContainer.AddChild(pips[i]);
             }
