@@ -105,7 +105,7 @@ namespace Rain_World_Drought.OverWorld
                         break;
                 }
             }
-            return text;
+            return DroughtMod.Translate(text);
         }
 
         private void NewAction(Action newAction)
@@ -1605,18 +1605,18 @@ namespace Rain_World_Drought.OverWorld
                         { // To do: Replace all new events to txt file
                             case ID.MoonFirstPostMarkConversation:
                                 if ((this.interfaceOwner as FPOracleBehaviorHasMark).rainWorld.progression.currentSaveState.miscWorldSaveData.moonRevived)
-                                {
+                                { // Delivered CC to Moon
                                     events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("It's you."), 1));
                                     events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("How could you betray me like this!"), 5));
                                     events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("All this work, cycles and cycles of efforts put to waste!"), 5));
-                                    events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("..."), 5));
+                                    events.Add(new Conversation.TextEvent(this, 0, Translate("..."), 5));
                                     events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("No, I need not be angry with you. Afterall, you couldn't have known the importance of what you were delivering."), 5));
                                     events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Perhaps, Moon was right about all this. I have been a bit hasty in my recent endevors."), 5));
                                     break;
                                 }
                                 else
                                 {
-                                    events.Add(new Conversation.TextEvent(this, 4, DroughtMod.Translate("Hello <PlayerName>. "), 6));
+                                    events.Add(new Conversation.TextEvent(this, 4, DroughtMod.Translate("Hello <PlayerName>."), 6));
                                     events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Welcome back!"), 5));
                                     events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Do you have another message for me?"), 7));
                                     events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Or are you passing through here for another delivery?"), 7));
@@ -1637,7 +1637,7 @@ namespace Rain_World_Drought.OverWorld
                                 {
                                     if (State.GetOpinion == FPOracleState.PlayerOpinion.Dislikes)
                                     {
-                                        events.Add(new Conversation.TextEvent(this, 0, Translate("You again."), 10)); // This one is in vanilla dialogue so no need to use custom translator
+                                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("You again."), 10));
                                         FPOracleBehaviorHasMark.talking += TEN;
                                     }
                                     else
@@ -1646,7 +1646,7 @@ namespace Rain_World_Drought.OverWorld
                                         FPOracleBehaviorHasMark.talking += TEN;
                                         events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Do you have that pearl Suns was talking about?"), 15));
                                         FPOracleBehaviorHasMark.talking += TEN;
-                                        if (State.GetOpinion != FPOracleState.PlayerOpinion.Dislikes)
+                                        if (State.GetOpinion == FPOracleState.PlayerOpinion.Likes) // not dislike doesn't make sense here, logically
                                         {
                                             events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("You are welcome stay here, but I must return to my work."), 8));
                                             FPOracleBehaviorHasMark.talking += TEN;
@@ -1662,8 +1662,8 @@ namespace Rain_World_Drought.OverWorld
                                 PearlIntro();
                                 MiscPearl(true);
                                 break;
-                            case ID.Moon_Pebbles_Pearl:
-                                PebblesPearl();
+                            case ID.Moon_Pebbles_Pearl: // Used for Moon's Pearl
+                                MoonPearl();
                                 break;
                             case ID.Moon_Pearl_CC:
                                 TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_Moon_Pearl_CC);
@@ -1790,14 +1790,14 @@ namespace Rain_World_Drought.OverWorld
                         break;
                     case EnumSwitch.ConversationID.MoonPostMark:
                         events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Go to the west past the Farm Arrays, and then down into the<LINE>earth where the land fissures, as deep as you can reach, where the ancients<LINE>built their temples and danced their silly rituals. The mark I gave you will let you through."), 25));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Good luck, <PlayerName>."), 5));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Best of luck to you, <PlayerName>."), 5)); // cuz [Good luck] was dupe of Moon's dialogue, which confuses translator
                         break;
                     case EnumSwitch.ConversationID.Moon_Pearl_Drought1: // IS
                         events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("This is a lengthy report on the unwanted organism strains that developed<LINE>in the old water filtration systems."), 13));
                         events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Back when cities were closer to the surface many of the cities relied on old bioreactor<LINE>reservoirs for a clean water supply."), 14));
                         events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("This was early in the development of the genetic sciences, so some unwanted strains developed."), 10));
                         events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("In attempts to mediate the damage, they biult a small<LINE>intelligent organic network tasked with controlling or at least mediating any organisms that developed."), 10));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("It was similar in design to modern iterators. There are rumors of murmurs comming from the depths"), 8));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("It was similar in design to modern iterators. There are rumors of murmurs coming from the depths."), 8));
                         events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I don’t suppose you crawled down there yourself. It would be quite dangerous."), 8));
                         break;
                     case EnumSwitch.ConversationID.Moon_Pearl_Drought2: // FS
@@ -1825,19 +1825,19 @@ namespace Rain_World_Drought.OverWorld
                 switch (State.totalPearlsBrought + State.miscPearlCounter)
                 {
                     case 0:
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("Ah, a pearl. Not a message though. Would you like me to read it to you?"), 10));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Ah, a pearl. Not a message though. Would you like me to read it to you?"), 10));
                         break;
                     case 1:
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("Another pearl! You want me to read this one too? Just a moment..."), 10));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Another pearl! You want me to read this one too? Just a moment..."), 10));
                         break;
                     case 2:
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("And yet another one! I will read it to you."), 10));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("And yet another one! I will read it to you."), 10));
                         break;
                     case 3:
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("Another? You're no better than the scavengers!"), 10));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Another? You're no better than the scavengers!"), 10));
                         if (State.GetOpinion == FPOracleState.PlayerOpinion.Likes)
                         {
-                            events.Add(new Conversation.TextEvent(this, 0, Translate("Let us see... to be honest, I'm as curious to see it as you are."), 10));
+                            events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Let us see... to be honest, I'm as curious to see it as you are."), 10));
                         }
                         break;
                     default:
@@ -1846,16 +1846,16 @@ namespace Rain_World_Drought.OverWorld
                             case 0:
                                 break;
                             case 1:
-                                events.Add(new Conversation.TextEvent(this, 0, Translate("The scavengers must be jealous of you, finding all these"), 10));
+                                events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("The scavengers must be jealous of you, finding all these"), 10));
                                 break;
                             case 2:
-                                events.Add(new Conversation.TextEvent(this, 0, Translate("Here we go again, little archeologist. Let's read your pearl."), 10));
+                                events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Here we go again, little archeologist. Let's read your pearl."), 10));
                                 break;
                             case 3:
-                                events.Add(new Conversation.TextEvent(this, 0, Translate("... You're getting quite good at this you know. A little archeologist beast.<LINE>Now, let's see what it says."), 10));
+                                events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("... You're getting quite good at this you know. A little archeologist beast.<LINE>Now, let's see what it says."), 10));
                                 break;
                             default:
-                                events.Add(new Conversation.TextEvent(this, 0, Translate("And yet another one! I will read it to you."), 10));
+                                events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("And yet another one! I will read it to you."), 10));
                                 break;
                         }
                         break;
@@ -1868,30 +1868,30 @@ namespace Rain_World_Drought.OverWorld
                 State.miscPearlCounter++;
             }
 
-            private void PebblesPearl()
+            private void MoonPearl()
             {
                 switch (UnityEngine.Random.Range(0, 5))
-                {
+                { // Use Drought Translator to allow different nuance than LTTM
                     case 0:
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("You would like me to read this?"), 10));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("This pearl must have been used recently. You can still feel the heat."), 10));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("You would like me to read this?"), 10));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("This pearl must have been used recently. You can still feel the heat."), 10));
                         break;
                     case 1:
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("A pearl... This one is crystal clear - it was used recently."), 10));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("A pearl... This one is crystal clear - it was used recently."), 10));
                         break;
                     case 2:
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("Would you like me to read this pearl?"), 10));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("It has been recently written to."), 10));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Would you like me to read this pearl?"), 10));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("It has been recently written to."), 10));
                         break;
                     case 3:
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("This pearl has been written to just now!"), 10));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("This pearl has been written to just now!"), 10));
                         break;
                     default:
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("Let's see... A pearl..."), 10));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("And this one is sharp! It was not long ago this data was written to it!"), 10));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Let's see... A pearl..."), 10));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("And this one is sharp! It was not long ago this data was written to it!"), 10));
                         break;
                 }
-                TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_PebblesPearl, true, (FPOracleBehaviorHasMark.holdingObject == null) ? UnityEngine.Random.Range(0, 100000) : FPOracleBehaviorHasMark.holdingObject.abstractPhysicalObject.ID.RandomSeed);
+                TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_MoonPearl, true, (FPOracleBehaviorHasMark.holdingObject == null) ? UnityEngine.Random.Range(0, 100000) : FPOracleBehaviorHasMark.holdingObject.abstractPhysicalObject.ID.RandomSeed);
             }
 
             public int GetARandomChatLog(bool whichPearl)

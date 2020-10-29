@@ -8,7 +8,7 @@ overseersMin: 0
 overseersMax: 4
 Subregion: Sky Islands
 Subregion: Communications Array
-playerGuideOverseerSpawnChance: 0.2
+playerGuideOverseerSpawnChance: 0.0
 Room Setting Templates: Outside, Inside
 Room_Attr: SI_A07: RedCentipede-2,
 Room_Attr: SI_A06: RedCentipede-2,KingVulture-2,

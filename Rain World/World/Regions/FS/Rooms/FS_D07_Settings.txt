@@ -1,0 +1,7 @@
+DangerType: FloodAndRain
+EffectColorB: 13
+Effects: Moth-0.173913-124-130, Beetle-0.3043478-20-20, Ant-0.25-287-69, TinyDragonFly-0.2608696-31-70, 
+PlacedObjects: LightBeam><377.3021><225.7785><-25~703~134~692~164~-8~174~142~0.5521738~0.5~0~1, 
+AmbientSounds: OMNI><AM_ENV-CityTone.ogg><685.4197><565.8558><0.3369565><1, OMNI><AM_ENV-LushNight.ogg><696.6944><505.797><0.25><1, OMNI><AM_IND-Warehouse01.ogg><277.2207><455.3022><0.2717391><1, OMNI><AM_IND-DeepHum.ogg><283.8274><331.8511><0.173913><1, 
+FadePalette: 10, 0.2608696, 0.3152174
+WetTerrain: OFF

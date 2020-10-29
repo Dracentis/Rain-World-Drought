@@ -30,7 +30,7 @@ namespace Rain_World_Drought.Slugcat
             RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam)
         {
             WandererSupplement sub = WandererSupplement.GetSub(self.player);
-            sub.cosmetics = new List<PlayerCosmetics>();
+            sub.cosmetics.Clear();
             orig.Invoke(self, sLeaser, rCam);
 
             if (!WandererSupplement.IsWanderer(self.player)) { return; }

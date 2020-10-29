@@ -4,6 +4,7 @@ batDepleteCyclesMax: 7
 batDepleteCyclesMaxIfLessThanTwoLeft: 3
 batDepleteCyclesMaxIfLessThanFiveLeft: 4
 overseersSpawnChance: 0.0
+playerGuideOverseerSpawnChance: 0.0
 overseersMin: 0
 overseersMax: 4
 Subregion: Five Pebbles

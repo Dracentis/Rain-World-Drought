@@ -70,7 +70,7 @@ namespace Rain_World_Drought.Slugcat
                         break;
                 }
             }
-            return text;
+            return DroughtMod.Translate(text);
         }
 
         public void Update(bool eu)
@@ -433,11 +433,11 @@ namespace Rain_World_Drought.Slugcat
                         break;
                     case EnumSwitch.ConversationID.Moon_Pearl_Drought2:// FS
                         events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("This is..."), 3));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("..."), 5));
+                        events.Add(new Conversation.TextEvent(this, 0, Translate("..."), 5));
                         events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("...It has data written on it to be sure, but the format is nothing like I’ve ever seen before."), 6));
                         events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("It bears some resemblance to the creature logs created by the overseers."), 5));
                         events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Most iterators simply ignore it, as it has little importance towards the Task."), 6));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I occasionally look back on those files, as it reminds me of the time back when I worked on the<LINE>tasks of an entire lively city. It was a much more complex time; I worked on everything<LINE>from coordinating farming systems to individuals’ problems or inquiries. "), 20));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I occasionally look back on those files, as it reminds me of the time back when I worked on the<LINE>tasks of an entire lively city. It was a much more complex time; I worked on everything<LINE>from coordinating farming systems to individuals’ problems or inquiries."), 20));
                         events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I do miss the days when they visited my chamber."), 3));
                         events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Anyways, back to the pearl. It appears that someone used that data format as the basis to create a<LINE>new log of individual creatures’ karmic properties and social relationships."), 10));
                         events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("There is a section written in internal language as well. I can try my best to translate it."), 6));
@@ -452,7 +452,7 @@ namespace Rain_World_Drought.Slugcat
                         events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("It is an old qualia that I recorded from one of the sky-sail journeys long ago."), 4));
                         events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I lost it back when one of my capacitor coils burst a few thousand cycle ago. Secondary systems and my biological<LINE>components did their best to bring it back online, but the damage shut down a few disruptors<LINE>leading to some more serious collapses."), 13));
                         events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I do not remember much of the subject, but this pearl always held an importance to me."), 5));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Thank You, <PlayerName>"), 0));
+                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Thank You, <PlayerName>."), 0));
                         break;
                     case EnumSwitch.ConversationID.SI_Spire1:
                         TextManager.LoadEventsFromFile(this, TextManager.EventID.PC_SI_Spire1); break;
@@ -466,15 +466,16 @@ namespace Rain_World_Drought.Slugcat
             private void PearlIntro()
             {
                 switch (State.totalPearlsBrought + State.miscPearlCounter)
-                {
+                {  // vanilla dialogues, so use vanilla InGameTranslator
                     case 0:
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("Hello <PlayerName>!"), 10));
+                        events.Add(new Conversation.TextEvent(this, 0, Translate("Hello, <PlayerName>!"), 10));
                         events.Add(new Conversation.TextEvent(this, 0, Translate("Would you like me to read this?"), 10));
                         events.Add(new Conversation.TextEvent(this, 0, Translate("It's a bit dusty, but I will do my best. Hold on..."), 10));
                         break;
                     case 1:
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("Oh.. Hello again, <PlayerName>!"), 10));
-                        events.Add(new Conversation.TextEvent(this, 0, Translate("Another pearl! Just a moment..."), 10));
+                        events.Add(new Conversation.TextEvent(this, 0, Translate("Oh...") + " " + Translate("Hello again, <PlayerName>!"), 10));
+                        events.Add(new Conversation.TextEvent(this, 0, Translate("Another pearl! You want me to read this one too? Just a moment..."), 10));
+                        // [Another pearl! Just a moment...] is not vanilla dilaogue, and I doubt this minor tweak is worth translating the same sentence 8 times
                         break;
                     case 2:
                         events.Add(new Conversation.TextEvent(this, 0, Translate("..."), 10));
@@ -495,7 +496,7 @@ namespace Rain_World_Drought.Slugcat
                                 break;
                             case 1:
                                 events.Add(new Conversation.TextEvent(this, 0, Translate("..."), 10));
-                                events.Add(new Conversation.TextEvent(this, 0, Translate("The scavengers must be jealous of you, finding all these"), 10));
+                                events.Add(new Conversation.TextEvent(this, 0, Translate("The scavengers must be jealous of you, finding all these") + ".", 10));
                                 break;
                             case 2:
                                 events.Add(new Conversation.TextEvent(this, 0, Translate("..."), 10));
@@ -523,7 +524,7 @@ namespace Rain_World_Drought.Slugcat
             private void PebblesPearl()
             {
                 switch (UnityEngine.Random.Range(0, 5))
-                {
+                { // vanilla dialogues, so use vanilla InGameTranslator
                     case 0:
                         events.Add(new Conversation.TextEvent(this, 0, Translate("Hello, <PlayerName>!"), 10));
                         events.Add(new Conversation.TextEvent(this, 0, Translate("You would like me to read this?"), 10));

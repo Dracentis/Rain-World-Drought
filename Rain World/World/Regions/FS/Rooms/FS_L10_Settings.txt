@@ -1,0 +1,6 @@
+Template: FS_SettingsTemplate_Forest
+Clouds: 0.4782609
+Grime: 0.2608696
+EffectColorB: 13
+FadePalette: 10, 0.2065217, 0.2173913, 0.2608696, 0.25
+WetTerrain: OFF

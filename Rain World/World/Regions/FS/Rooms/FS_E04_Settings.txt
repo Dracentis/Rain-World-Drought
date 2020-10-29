@@ -1,0 +1,6 @@
+DangerType: Flood
+Clouds: 0.7391304
+Grime: 0.1195652
+PlacedObjects: ReliableSpear><508.6688><143.8172><, ReliableSpear><480.9431><144.0519><, ReliableSpear><581.8644><139.086><, ReliableSpear><538.8851><135.1025><, 
+FadePalette: 10, 0.3369565
+WetTerrain: OFF

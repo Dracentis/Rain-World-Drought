@@ -1,6 +1,6 @@
 ﻿using Music;
+using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace Rain_World_Drought.Resource
@@ -11,6 +11,7 @@ namespace Rain_World_Drought.Resource
         {
             On.Music.MusicPiece.SubTrack.Update += new On.Music.MusicPiece.SubTrack.hook_Update(SubTrackHK);
             On.Music.ProceduralMusic.ProceduralMusicInstruction.ctor += new On.Music.ProceduralMusic.ProceduralMusicInstruction.hook_ctor(ProceduralMusicInstructionHK);
+            On.Music.MultiplayerDJ.ctor += new On.Music.MultiplayerDJ.hook_ctor(MultiplayerDJCtorHK);
         }
 
         private static void SubTrackHK(On.Music.MusicPiece.SubTrack.orig_Update orig, MusicPiece.SubTrack self)
@@ -28,14 +29,10 @@ namespace Rain_World_Drought.Resource
             orig.Invoke(self);
         }
 
-        // public static string[] newThreatRegion = new string[] { "FS", "IS" }; // Regions with new threat musics (txt file names in Music/Procedural)
-
         private static void ProceduralMusicInstructionHK(On.Music.ProceduralMusic.ProceduralMusicInstruction.orig_ctor orig,
             ProceduralMusic.ProceduralMusicInstruction self, string name)
         {
             orig.Invoke(self, name);
-            //if (!newThreatRegion.Contains(name)) { return; }
-
             string folder = string.Concat(
                     ResourceManager.assetDir,
                     Path.DirectorySeparatorChar,
@@ -92,6 +89,32 @@ namespace Rain_World_Drought.Resource
                     }
                 }
             }
+        }
+
+        private static void MultiplayerDJCtorHK(On.Music.MultiplayerDJ.orig_ctor orig, MultiplayerDJ self, MusicPlayer musicPlayer)
+        {
+            orig.Invoke(self, musicPlayer);
+            string path = string.Concat(
+                ResourceManager.assetDir,
+                "Futile",
+                Path.DirectorySeparatorChar,
+                "Resources",
+                Path.DirectorySeparatorChar,
+                "Music",
+                Path.DirectorySeparatorChar,
+                "MPMusic.txt"
+                );
+            List<string> songs = new List<string>(self.availableSongs);
+            if (File.Exists(path))
+            {
+                string[] droughtSongs = File.ReadAllLines(path);
+                for (int i = 0; i < droughtSongs.Length; i++)
+                {
+                    if (droughtSongs[i].Length > 2 && !droughtSongs[i].StartsWith("//"))
+                    { songs.Add(droughtSongs[i]); }
+                }
+            }
+            self.availableSongs = songs.ToArray();
         }
     }
 }

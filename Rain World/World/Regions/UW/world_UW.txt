@@ -73,7 +73,7 @@ LINEAGE : UW_D07 : 4 : NONE-0.4, Dropbug-0
 
 //Wanderer
 (0)OFFSCREEN : 0-KingVulture-1
-(0)UW_I01 : 5-Cyan-2, 6-Cyan-2\
+(0)UW_I01 : 5-Cyan-2, 6-Cyan-2
 (0)UW_E03 : 8-White-{Mean:1.0}, 3-SpitterSpider, 4-SpitterSpider-2, 5-SpitterSpider, 6-SpitterSpider, 7-SpitterSpider, 9-SpitterSpider
 (0)UW_D02 : 3-White-{Mean:1.0}, 4-SpitterSpider
 (0)UW_E02 : 3-SpitterSpider, 4-SpitterSpider, 6-White-{Mean:1.0}

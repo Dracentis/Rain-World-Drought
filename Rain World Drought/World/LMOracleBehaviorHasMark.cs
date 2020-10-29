@@ -1688,19 +1688,18 @@ namespace Rain_World_Drought.OverWorld
                         switch (id)
                         {
                             case ID.MoonFirstPostMarkConversation:
-                                events.Add(new Conversation.TextEvent(this, 2, Translate("Oh..."), 2));
-                                events.Add(new Conversation.TextEvent(this, 4, Translate("Hello, <PlayerName>."), 6));
-                                events.Add(new Conversation.TextEvent(this, 0, Translate("You must be Seven Red Suns' little messenger."), 7));
-                                events.Add(new Conversation.TextEvent(this, 0, Translate("I have heard alot about you. How is Seven Red Suns?"), 7));
-                                events.Add(new Conversation.TextEvent(this, 0, Translate("I am glad to see you safe and sound, it's clear that your tail is working as intended."), 10));
-                                events.Add(new Conversation.TextEvent(this, 0, Translate("I have considered tinkering with creatures too. More messengers could be useful."), 10));
-                                events.Add(new Conversation.TextEvent(this, 0, Translate("Communications have always been spotty, even back when our cities were still populated."), 10));
-                                events.Add(new Conversation.TextEvent(this, 0, Translate("Soon enough, messengers like you might be our only way of communicating."), 8));
-                                events.Add(new Conversation.TextEvent(this, 0, Translate("I... I\'ve been holding you here for a while, little creature. I'm sorry! I\'m aware that you have to go."), 10));
-                                events.Add(new Conversation.TextEvent(this, 0, Translate("Thank you for visiting me! Good luck on your way to Five Pebbles!"), 5));
+                                events.Add(new Conversation.TextEvent(this, 2, DroughtMod.Translate("Oh..."), 2));
+                                events.Add(new Conversation.TextEvent(this, 4, DroughtMod.Translate("Hello, <PlayerName>."), 6));
+                                events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("You must be Seven Red Suns\' little messenger."), 7));
+                                events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I have heard a lot about you. How is Seven Red Suns?"), 7));
+                                events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I am glad to see you safe and sound, it's clear that your tail is working as intended."), 10));
+                                events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I have considered tinkering with creatures too. More messengers could be useful."), 10));
+                                events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Communications have always been spotty, even back when our cities were still populated."), 10));
+                                events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Soon enough, messengers like you might be our only way of communicating."), 8));
+                                events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I... I\'ve been holding you here for a while, little creature. I'm sorry! I\'m aware that you have to go."), 10));
+                                events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Thank you for visiting me! Good luck on your way to Five Pebbles!"), 5));
                                 break;
                             case ID.MoonSecondPostMarkConversation:
-
                                 if (State.GetOpinion == SLOrcacleState.PlayerOpinion.Dislikes)
                                 {
                                     events.Add(new Conversation.TextEvent(this, 0, Translate("You again."), 10));
@@ -1720,7 +1719,7 @@ namespace Rain_World_Drought.OverWorld
                                     }
                                     events.Add(new Conversation.TextEvent(this, 3, Translate("I wonder what it is that you want?"), 3));
                                     LMOracleBehaviorHasMark.talking += TEN;
-                                    events.Add(new Conversation.TextEvent(this, 0, Translate("I have very little to give you."), 1));
+                                    events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I have very little to give you."), 1)); // the only custom dialogue in this event
                                     LMOracleBehaviorHasMark.talking += TEN;
                                     if (State.GetOpinion == SLOrcacleState.PlayerOpinion.Likes)
                                     {
@@ -1940,7 +1939,7 @@ namespace Rain_World_Drought.OverWorld
             private void PearlIntro()
             {
                 switch (State.totalPearlsBrought + State.miscPearlCounter)
-                {
+                {  // vanilla dialogues, so use vanilla InGameTranslator
                     case 0:
                         events.Add(new Conversation.TextEvent(this, 0, Translate("Ah, you would like me to read this?"), 10));
                         events.Add(new Conversation.TextEvent(this, 0, Translate("It's a bit dusty, but I will do my best. Hold on..."), 10));
@@ -1964,7 +1963,7 @@ namespace Rain_World_Drought.OverWorld
                             case 0:
                                 break;
                             case 1:
-                                events.Add(new Conversation.TextEvent(this, 0, Translate("The scavengers must be jealous of you, finding all these"), 10));
+                                events.Add(new Conversation.TextEvent(this, 0, Translate("The scavengers must be jealous of you, finding all these") + ".", 10));
                                 break;
                             case 2:
                                 events.Add(new Conversation.TextEvent(this, 0, Translate("Here we go again, little archeologist. Let's read your pearl."), 10));
@@ -1989,7 +1988,7 @@ namespace Rain_World_Drought.OverWorld
             private void PebblesPearl()
             {
                 switch (UnityEngine.Random.Range(0, 5))
-                {
+                { // vanilla dialogues, so use vanilla InGameTranslator
                     case 0:
                         events.Add(new Conversation.TextEvent(this, 0, Translate("You would like me to read this?"), 10));
                         events.Add(new Conversation.TextEvent(this, 0, Translate("It's still warm... this was in use recently."), 10));

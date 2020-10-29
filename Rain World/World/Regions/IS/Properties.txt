@@ -6,7 +6,7 @@ batDepleteCyclesMaxIfLessThanFiveLeft: 4
 overseersSpawnChance: 0.2
 overseersMin: 0
 overseersMax: 4
-playerGuideOverseerSpawnChance: 0.1
+playerGuideOverseerSpawnChance: 0.0
 Subregion: Intake System
 Subregion: Gravity Pump
 Subregion: Water Reservoir

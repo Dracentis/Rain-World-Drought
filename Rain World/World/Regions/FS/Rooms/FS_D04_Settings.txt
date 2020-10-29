@@ -3,7 +3,8 @@ Grime: 0.3043478
 RandomItemDensity: 0.1630435
 RandomItemSpearChance: 0.1347825
 EffectColorB: 13
-PlacedObjects: CustomDecal><1204.021><1271.199><0~95~98~95~98~-1~-291~-155~0~1~0~Birdy~1~0~1~0~1~0~1~0, DeadTokenStalk><1631.273><1306.949><3~80, DeadTokenStalk><1680.612><1305.105><28~67, 
+Effects: Ant-0.2934783-20-20, Moth-0.2717391-113-81, Beetle-0.3695652-126-144, 
+PlacedObjects: CustomDecal><1204.021><1271.199><0~95~98~95~98~-1~-291~-155~0~1~0~Birdy~1~0~1~0~1~0~1~0, DeadTokenStalk><1631.273><1306.949><3~80, DeadTokenStalk><1680.612><1305.105><28~67, LightBeam><467.3842><434.6483><-331~311~-95~441~309~165~223~-107~0.4760868~0.6630435~0~1, 
 AmbientSounds: OMNI><AM_ENV-CityTone.ogg><695.8882><560.3555><0.4130435><1, OMNI><AM_ENV-LushNight.ogg><725.4258><433.5952><0.2282609><1, OMNI><AM_IND-DeepHum.ogg><739.1071><307.8899><0.2065217><1, OMNI><AM_IND-Warehouse01.ogg><721.4402><362.8116><0.07608695><1, 
 FadePalette: 10, 0.3152174, 0.3152174, 0.326087
 WetTerrain: OFF

@@ -131,6 +131,7 @@ namespace Rain_World_Drought.Enums
             if (type == EnumExt_Drought.GiantPiston) { return AbstractPhysicalObjectType.GiantPiston; }
             if (type == EnumExt_Drought.LMOracleSwarmer) { return AbstractPhysicalObjectType.LMOracleSwarmer; }
             if (type == EnumExt_Drought.MoonPearl) { return AbstractPhysicalObjectType.MoonPearl; }
+            if (type == EnumExt_Drought.GreySpear) { return AbstractPhysicalObjectType.GreySpear; }
             return AbstractPhysicalObjectType.DEFAULT;
         }
 
@@ -144,7 +145,8 @@ namespace Rain_World_Drought.Enums
             LargePiston,
             GiantPiston,
             LMOracleSwarmer,
-            MoonPearl
+            MoonPearl,
+            GreySpear
         };
 
         public static DreamsStateID GetDreamsStateID(DreamsState.DreamID id)
@@ -376,6 +378,7 @@ namespace Rain_World_Drought.Enums
         public static AbstractPhysicalObject.AbstractObjectType GiantPiston;
         public static AbstractPhysicalObject.AbstractObjectType LMOracleSwarmer;
         public static AbstractPhysicalObject.AbstractObjectType MoonPearl;
+        public static AbstractPhysicalObject.AbstractObjectType GreySpear;
 
         public static ProcessManager.ProcessID MessageScreen;
 

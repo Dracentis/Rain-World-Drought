@@ -87,7 +87,7 @@ namespace Rain_World_Drought.Slugcat
                             text = "Intake System";
                             break;
                         case "LM":
-                            text = "Looks To the Moon";
+                            text = "Looks to the Moon";
                             break;
                         case "MW":
                             text = "The Fragmented Exterior";

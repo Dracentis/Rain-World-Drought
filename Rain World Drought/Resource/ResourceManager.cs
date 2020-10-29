@@ -15,6 +15,7 @@ namespace Rain_World_Drought.Resource
             On.Menu.MenuIllustration.LoadFile_1 += new On.Menu.MenuIllustration.hook_LoadFile_1(MenuIllustrationLoadFileHK);
             On.CustomDecal.LoadFile += new On.CustomDecal.hook_LoadFile(CustomDecalLoadFileHK);
             On.RoomCamera.LoadPalette += new On.RoomCamera.hook_LoadPalette(RoomCameraLoadPaletteHK);
+            On.BackgroundScene.LoadGraphic += new On.BackgroundScene.hook_LoadGraphic(BackgroundLoadGraphicsHK);
         }
 
         public static string assetDir;
@@ -25,29 +26,29 @@ namespace Rain_World_Drought.Resource
         public static bool LoadAtlases()
         {
             string[] names = new string[] { "rainWorld", "uiSprites" };
-            if (!Directory.Exists(assetDir)) { error = $"Directory [{assetDir}] is missing!"; return false; }
+            if (!Directory.Exists(assetDir)) { error = DroughtMod.Translate("Directory [<assetDir>] is missing: Reinstall DroughtAssets.").Replace("<assetDir>", assetDir); return false; }
 
             foreach (string name in names)
             {
                 string file = assetDir + "Futile" + Path.DirectorySeparatorChar + "Resources" + Path.DirectorySeparatorChar + "Atlases" + Path.DirectorySeparatorChar + name + ".txt";
                 try
                 {
-                    if (!File.Exists(file)) { error = $"File [{file}] is missing!"; return false; }
+                    if (!File.Exists(file)) { error = DroughtMod.Translate("File [<file>] is missing: Reinstall DroughtAssets.").Replace("<file>", file); return false; }
                     string data = File.ReadAllText(file);
                     UnloadDuplicate(data);
 
                     file = assetDir + "Futile" + Path.DirectorySeparatorChar + "Resources" + Path.DirectorySeparatorChar + "Atlases" + Path.DirectorySeparatorChar + name + ".png";
-                    if (!File.Exists(file)) { error = $"File [{file}] is missing!"; return false; }
+                    if (!File.Exists(file)) { error = DroughtMod.Translate("File [<file>] is missing: Reinstall DroughtAssets.").Replace("<file>", file); return false; }
                     WWW www = new WWW("file:///" + file);
                     Texture2D texture = new Texture2D(1, 1, TextureFormat.ARGB32, false) { anisoLevel = 0, filterMode = FilterMode.Point };
                     www.LoadImageIntoTexture(texture);
 
-                    FAtlas atlas = Futile.atlasManager.LoadAtlasFromTexture(file, texture);
+                    FAtlas atlas = Futile.atlasManager.LoadAtlasFromTexture(name, texture);
                     LoadAtlasDataFromString(ref atlas, data);
                 }
                 catch (Exception e)
                 {
-                    error = $"Error occured while loading Drought Atlas [{file}]: Reinstall DroughtAssets.";
+                    error = DroughtMod.Translate("Error occured while loading Drought Atlas [<file>]: Reinstall DroughtAssets.").Replace("<file>", file);
                     Debug.LogError(error);
                     Debug.LogException(e);
                     return false;
@@ -92,6 +93,7 @@ namespace Rain_World_Drought.Resource
             Dictionary<string, object> dictionary2 = (Dictionary<string, object>)dictionary["frames"];
             float resourceScaleInverse = Futile.resourceScaleInverse;
             int num = 0;
+            //Debug.Log($"{atlas.name}: w {atlas._textureSize.x}, h {atlas._textureSize.y}");
             foreach (KeyValuePair<string, object> keyValuePair in dictionary2)
             {
                 FAtlasElement fatlasElement = new FAtlasElement
@@ -142,14 +144,139 @@ namespace Rain_World_Drought.Resource
 
                 fatlasElement.atlas = atlas;
                 Futile.atlasManager.AddElement(fatlasElement);
+
+                /*
+
+                #region Export
+                Texture2D tex = new Texture2D(Mathf.RoundToInt(num5), Mathf.RoundToInt(num6), TextureFormat.ARGB32, false)
+                { filterMode = FilterMode.Point, wrapMode = TextureWrapMode.Clamp };
+                int x = Mathf.RoundToInt(num3);
+                int y = Mathf.RoundToInt(atlas._textureSize.y - num4 - num6);
+                Debug.Log($"{fatlasElement.name}: x {x}, y {y}; w {num5}, h {num6}");
+                for (int v = 0; v < tex.height; v++)
+                {
+                    for (int u = 0; u < tex.width; u++)
+                    {
+                        tex.SetPixel(u, v, (atlas.texture as Texture2D).GetPixel(x + u, y + v));
+                    }
+                }
+                tex.Apply();
+                byte[] d = tex.EncodeToPNG();
+                string path = string.Concat(assetDir, "Futile", Path.DirectorySeparatorChar, "Export", Path.DirectorySeparatorChar);
+                if (!Directory.Exists(path)) { Directory.CreateDirectory(path); }
+                File.WriteAllBytes(path + fatlasElement.name + ".png", d);
+                #endregion Export
+
+                */
             }
         }
+
+        public static bool LoadSprites()
+        {
+            DirectoryInfo dir = new DirectoryInfo(string.Concat(
+                assetDir,
+                "Futile",
+                Path.DirectorySeparatorChar,
+                "Resources",
+                Path.DirectorySeparatorChar,
+                "Sprites",
+                Path.DirectorySeparatorChar
+                ));
+            if (!dir.Exists) { Debug.Log($"Drought) Directory [{dir.FullName}] is missing. Not loading extra Sprites."); return true; }
+            // { error = DroughtMod.Translate("Directory [<assetDir>] is missing: Reinstall DroughtAssets.").Replace("<assetDir>", dir.FullName); return false; }
+            Debug.Log($"Drought Loading Sprites from [{dir}]");
+            string dbg = "";
+            foreach (FileInfo f in dir.GetFiles())
+            {
+                if (f.Name.ToLower().EndsWith(".png"))
+                {
+                    string name = f.Name.Substring(0, f.Name.Length - 4);
+                    if (Futile.atlasManager.DoesContainAtlas(name)) { Futile.atlasManager.UnloadAtlas(name); } // Replace duplicate
+                    if (Futile.atlasManager.DoesContainElementWithName(name)) { Futile.atlasManager._allElementsByName.Remove(name); }
+                    byte[] data = File.ReadAllBytes(f.FullName);
+                    Texture2D tex = new Texture2D(0, 0, TextureFormat.ARGB32, false, false)
+                    { wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Point };
+                    tex.LoadImage(data);
+                    Futile.atlasManager.LoadAtlasFromTexture(name, tex);
+                    dbg += name + "; ";
+                }
+            }
+            Debug.Log(dbg);
+            return true;
+        }
+
+        /*
+        /// <summary>
+        /// Try grabbing sprites, and use vanilla replacement instead
+        /// </summary>
+        /// <param name="drought"></param>
+        /// <param name="vanilla"></param>
+        /// <returns></returns>
+        public static FAtlasElement GetSprite(string drought, string vanilla = "")
+        {
+            if (Futile.atlasManager.DoesContainElementWithName(drought)) { return Futile.atlasManager.GetElementWithName(drought); }
+            if (string.IsNullOrEmpty(vanilla)) { return Futile.atlasManager.GetElementWithName("Futile_White"); }
+            return Futile.atlasManager.GetElementWithName(vanilla);
+        }*/
 
         #endregion Atlases
 
         #region Music
 
-        private static string[] droughtSongs = new string[] { "TH_IS", "TH_FS", "TH_MW", "RW_60" };
+        public static bool CheckDroughtSongs()
+        {
+            Debug.Log("Drought) CheckDroughtSongs");
+            List<string> songs = new List<string>();
+            // Procedural: ogg
+            DirectoryInfo dir = new DirectoryInfo(string.Concat(
+                assetDir,
+                "Futile",
+                Path.DirectorySeparatorChar,
+                "Resources",
+                Path.DirectorySeparatorChar,
+                "Music",
+                Path.DirectorySeparatorChar,
+                "Procedural",
+                Path.DirectorySeparatorChar));
+            if (!dir.Exists) { error = DroughtMod.Translate("Directory [<assetDir>] is missing: Reinstall DroughtAssets.").Replace("<assetDir>", dir.FullName); return false; }
+            foreach (FileInfo f in dir.GetFiles())
+            {
+                if (f.Name.ToLower().EndsWith(".ogg"))
+                {
+                    string name = f.Name.Length > 5 ? f.Name.ToUpper().Substring(0, 5) : f.Name.ToUpper();
+                    if (!songs.Contains(name)) { songs.Add(name); }
+                }
+            }
+            // Song: mp3
+            dir = new DirectoryInfo(string.Concat(
+                assetDir,
+                "Futile",
+                Path.DirectorySeparatorChar,
+                "Resources",
+                Path.DirectorySeparatorChar,
+                "Music",
+                Path.DirectorySeparatorChar,
+                "Songs",
+                Path.DirectorySeparatorChar));
+            if (!dir.Exists) { error = DroughtMod.Translate("Directory [<assetDir>] is missing: Reinstall DroughtAssets.").Replace("<assetDir>", dir.FullName); return false; }
+            foreach (FileInfo f in dir.GetFiles())
+            {
+                if (f.Name.ToLower().EndsWith(".mp3"))
+                {
+                    string name = f.Name.Length > 5 ? f.Name.ToUpper().Substring(0, 5) : f.Name.ToUpper();
+                    if (!songs.Contains(name)) { songs.Add(name); }
+                }
+            }
+            droughtSongs = songs.ToArray();
+
+            string dbg = string.Empty;
+            for (int i = 0; i < droughtSongs.Length; i++)
+            { dbg += droughtSongs[i]; if (i < droughtSongs.Length - 1) { dbg += ", "; } }
+            Debug.Log(dbg);
+            return true;
+        }
+
+        private static string[] droughtSongs = new string[0]; // assuming that we won't replace title song, which comes before initializing this
 
         public static bool IsDroughtTrack(string trackName)
         {
@@ -174,7 +301,7 @@ namespace Rain_World_Drought.Resource
                 Path.DirectorySeparatorChar,
                 trackName,
                 procedural ? ".ogg" : ".mp3"));
-            return www.GetAudioClip(false, true, AudioType.OGGVORBIS);
+            return www.GetAudioClip(false, true, procedural ? AudioType.OGGVORBIS : AudioType.MPEG);
         }
 
         #endregion Music
@@ -267,6 +394,35 @@ namespace Rain_World_Drought.Resource
             else
             { self.ApplyEffectColorsToPaletteTexture(ref texture, -1, -1); }
             texture.Apply(false);
+        }
+
+        public static void BackgroundLoadGraphicsHK(On.BackgroundScene.orig_LoadGraphic orig, BackgroundScene self,
+            string elementName, bool crispPixels, bool clampWrapMode)
+        {
+            if (Futile.atlasManager.GetAtlasWithName(elementName) != null) { return; }
+            string path = string.Concat(
+            assetDir,
+            "Futile",
+            Path.DirectorySeparatorChar,
+            "Resources",
+            Path.DirectorySeparatorChar,
+            "Illustrations",
+            Path.DirectorySeparatorChar,
+            elementName,
+            ".png"
+            );
+            if (!File.Exists(path)) { orig.Invoke(self, elementName, crispPixels, clampWrapMode); return; }
+
+            WWW www = new WWW("file:///" + path);
+            Texture2D texture2D = new Texture2D(1, 1, TextureFormat.ARGB32, false);
+            texture2D.wrapMode = ((!clampWrapMode) ? TextureWrapMode.Repeat : TextureWrapMode.Clamp);
+            if (crispPixels)
+            {
+                texture2D.anisoLevel = 0;
+                texture2D.filterMode = FilterMode.Point;
+            }
+            www.LoadImageIntoTexture(texture2D);
+            HeavyTexturesCache.LoadAndCacheAtlasFromTexture(elementName, texture2D);
         }
 
         #endregion Replacer
