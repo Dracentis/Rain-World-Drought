@@ -15,6 +15,7 @@ namespace Rain_World_Drought.Resource
             On.Menu.MenuIllustration.LoadFile_1 += new On.Menu.MenuIllustration.hook_LoadFile_1(MenuIllustrationLoadFileHK);
             On.CustomDecal.LoadFile += new On.CustomDecal.hook_LoadFile(CustomDecalLoadFileHK);
             On.RoomCamera.LoadPalette += new On.RoomCamera.hook_LoadPalette(RoomCameraLoadPaletteHK);
+            On.BackgroundScene.LoadGraphic += new On.BackgroundScene.hook_LoadGraphic(BackgroundLoadGraphicsHK);
         }
 
         public static string assetDir;
@@ -246,7 +247,7 @@ namespace Rain_World_Drought.Resource
                     if (!songs.Contains(name)) { songs.Add(name); }
                 }
             }
-            // Song: mp3
+            // Song: X mp3, ogg (cuz licensing issue)
             dir = new DirectoryInfo(string.Concat(
                 assetDir,
                 "Futile",
@@ -260,7 +261,8 @@ namespace Rain_World_Drought.Resource
             if (!dir.Exists) { error = DroughtMod.Translate("Directory [<assetDir>] is missing: Reinstall DroughtAssets.").Replace("<assetDir>", dir.FullName); return false; }
             foreach (FileInfo f in dir.GetFiles())
             {
-                if (f.Name.ToLower().EndsWith(".mp3"))
+                //if (f.Name.ToLower().EndsWith(".mp3"))
+                if (f.Name.ToLower().EndsWith(".ogg"))
                 {
                     string name = f.Name.Length > 5 ? f.Name.ToUpper().Substring(0, 5) : f.Name.ToUpper();
                     if (!songs.Contains(name)) { songs.Add(name); }
@@ -299,8 +301,10 @@ namespace Rain_World_Drought.Resource
                 procedural ? "Procedural" : "Songs",
                 Path.DirectorySeparatorChar,
                 trackName,
-                procedural ? ".ogg" : ".mp3"));
-            return www.GetAudioClip(false, true, procedural ? AudioType.OGGVORBIS : AudioType.MPEG);
+                ".ogg"));
+            // procedural ? ".ogg" : ".mp3"));
+            //return www.GetAudioClip(false, true, procedural ? AudioType.OGGVORBIS : AudioType.MPEG);
+            return www.GetAudioClip(false, true, AudioType.OGGVORBIS);
         }
 
         #endregion Music
@@ -393,6 +397,35 @@ namespace Rain_World_Drought.Resource
             else
             { self.ApplyEffectColorsToPaletteTexture(ref texture, -1, -1); }
             texture.Apply(false);
+        }
+
+        public static void BackgroundLoadGraphicsHK(On.BackgroundScene.orig_LoadGraphic orig, BackgroundScene self,
+            string elementName, bool crispPixels, bool clampWrapMode)
+        {
+            if (Futile.atlasManager.GetAtlasWithName(elementName) != null) { return; }
+            string path = string.Concat(
+            assetDir,
+            "Futile",
+            Path.DirectorySeparatorChar,
+            "Resources",
+            Path.DirectorySeparatorChar,
+            "Illustrations",
+            Path.DirectorySeparatorChar,
+            elementName,
+            ".png"
+            );
+            if (!File.Exists(path)) { orig.Invoke(self, elementName, crispPixels, clampWrapMode); return; }
+
+            WWW www = new WWW("file:///" + path);
+            Texture2D texture2D = new Texture2D(1, 1, TextureFormat.ARGB32, false);
+            texture2D.wrapMode = ((!clampWrapMode) ? TextureWrapMode.Repeat : TextureWrapMode.Clamp);
+            if (crispPixels)
+            {
+                texture2D.anisoLevel = 0;
+                texture2D.filterMode = FilterMode.Point;
+            }
+            www.LoadImageIntoTexture(texture2D);
+            HeavyTexturesCache.LoadAndCacheAtlasFromTexture(elementName, texture2D);
         }
 
         #endregion Replacer
