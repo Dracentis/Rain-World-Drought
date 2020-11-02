@@ -1,0 +1,20 @@
+0-79
+Oh...
+
+Hello, <PlayerName>.
+
+You must be Seven Red Suns' little messenger.
+
+I have heard a lot about you. How is Seven Red Suns?
+
+I am glad to see you safe and sound, it's clear that your tail is working as intended.
+
+I have considered tinkering with creatures too. More messengers could be useful.
+
+Communications have always been spotty, even back when our cities were still populated.
+
+Soon enough, messengers like you might be our only way of communicating.
+
+I... I've been holding you here for a while, little creature. I'm sorry! I'm aware that you have to go.
+
+Thank you for visiting me! Good luck on your way to Five Pebbles!

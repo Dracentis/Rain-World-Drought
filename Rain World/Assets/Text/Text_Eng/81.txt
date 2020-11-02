@@ -1,0 +1,10 @@
+0-81
+Hello <PlayerName>.
+
+Welcome back!
+
+Do you have another message for me?
+
+Or are you passing through here for another delivery?
+
+Unless you have something for me, I must return to my work.

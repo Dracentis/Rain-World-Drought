@@ -1,8 +1,6 @@
 ﻿using Rain_World_Drought.Creatures;
 using System.Collections.Generic;
 using RWCustom;
-using System;
-using MonoMod;
 
 namespace Rain_World_Drought.Slugcat
 {
