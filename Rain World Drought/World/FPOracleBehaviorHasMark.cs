@@ -139,7 +139,7 @@ namespace Rain_World_Drought.OverWorld
                 {
                     for (int i = 0; i < player.grasps.Length; i++)
                     {
-                        if (player.grasps[i] != null && player.grasps[i].grabbed is MoonPearl)
+                        if (player.grasps[i] != null && player.grasps[i].grabbed is PebblesPearl)
                         {
                             dialogBox.Interrupt(Translate("Help yourself. There not edible."), 10);
                             talking += 10;
@@ -271,7 +271,7 @@ namespace Rain_World_Drought.OverWorld
                     playerIsAnnoyingWhenNoConversation = false;
                     if (State.annoyances == 1)
                     {
-                        dialogBox.Interrupt(Translate("Are you done?"), 7);
+                        dialogBox.Interrupt(DroughtMod.Translate("Are you done?"), 7);
                         talking += (int)(TEN * 0.7f);
                     }
                 }
@@ -383,7 +383,7 @@ namespace Rain_World_Drought.OverWorld
                         }
                         else
                         {
-                            this.dialogBox.Interrupt(base.Translate("Just a minute, little messenger."), 0);
+                            this.dialogBox.Interrupt(DroughtMod.Translate("Just a minute, little messenger."), 0);
                         }
                     }
                     if (this.actionCounter > 30 && this.actionCounter < 300)
@@ -445,7 +445,7 @@ namespace Rain_World_Drought.OverWorld
                     }
                     else if (this.actionCounter == 980)
                     {
-                        this.dialogBox.Interrupt(base.Translate("You've helped me, and I am thankful for that, but you must go now."), 5);
+                        this.dialogBox.Interrupt(DroughtMod.Translate("You've helped me, and I am thankful for that, but you must go now."), 5);
                     }
                     else if (this.actionCounter == 1980)
                     {
@@ -554,110 +554,109 @@ namespace Rain_World_Drought.OverWorld
             switch (State.totalItemsBrought)
             {
                 case 0:
-
-                    dialogBox.Interrupt(Translate("Oh, Something from outside?"), 10);
+                    dialogBox.Interrupt(DroughtMod.Translate("Oh, Something from outside?"), 10);
                     talking += TEN;
                     break;
                 case 1:
-                    dialogBox.Interrupt(Translate("Another thing for me to inspect?"), 10);
+                    dialogBox.Interrupt(DroughtMod.Translate("Another thing for me to inspect?"), 10);
                     talking += TEN;
                     if (State.GetOpinion != FPOracleState.PlayerOpinion.Dislikes)
                     {
-                        dialogBox.NewMessage(Translate("I will take a look."), 10);
+                        dialogBox.NewMessage(DroughtMod.Translate("I will take a look."), 10);
                         talking += TEN;
                     }
                     break;
                 case 2:
                     if (State.GetOpinion == FPOracleState.PlayerOpinion.Likes)
                     {
-                        dialogBox.Interrupt(Translate("What is that, <PlayerName>?"), 10);
+                        dialogBox.Interrupt(DroughtMod.Translate("What is that, <PlayerName>?"), 10);
                         talking += TEN;
                     }
                     else
                     {
-                        dialogBox.Interrupt(Translate("What is it, <PlayerName>?"), 10);
+                        dialogBox.Interrupt(DroughtMod.Translate("What is it, <PlayerName>?"), 10);
                         talking += TEN;
                     }
                     break;
                 case 3:
-                    dialogBox.Interrupt(Translate("Yet another thing?"), 10);
+                    dialogBox.Interrupt(DroughtMod.Translate("Yet another thing?"), 10);
                     talking += TEN;
                     break;
                 default:
                     switch (UnityEngine.Random.Range(0, 11))
                     {
                         case 0:
-                            dialogBox.Interrupt(Translate("Something new you want me to investigate, <PlayerName>?"), 10);
+                            dialogBox.Interrupt(DroughtMod.Translate("Something new you want me to investigate, <PlayerName>?"), 10);
                             talking += TEN;
                             break;
                         case 1:
                             if (State.GetOpinion == FPOracleState.PlayerOpinion.Likes)
                             {
-                                dialogBox.Interrupt(Translate("Another thing for me to study?"), 10);
+                                dialogBox.Interrupt(DroughtMod.Translate("Another thing for me to study?"), 10);
                                 talking += TEN;
                             }
-                            dialogBox.NewMessage(Translate("Let me see."), 10);
+                            dialogBox.NewMessage(DroughtMod.Translate("Let me see."), 10);
                             talking += TEN;
                             break;
                         case 2:
-                            dialogBox.Interrupt(Translate("Oh, what is that, <PlayerName>?"), 10);
+                            dialogBox.Interrupt(DroughtMod.Translate("Oh, what is that, <PlayerName>?"), 10);
                             talking += TEN;
                             break;
                         case 3:
                             if (State.GetOpinion == FPOracleState.PlayerOpinion.Likes)
                             {
-                                dialogBox.Interrupt(Translate("You're unusually curious, <PlayerName>!"), 10);
+                                dialogBox.Interrupt(DroughtMod.Translate("You're unusually curious, <PlayerName>!"), 10);
                                 talking += TEN;
                             }
                             else
                             {
-                                dialogBox.Interrupt(Translate("Yet another thing?"), 10);
-                                dialogBox.NewMessage(Translate("Your curiosity seems expansive, <PlayerName>."), 10);
+                                dialogBox.Interrupt(DroughtMod.Translate("Yet another thing?"), 10);
+                                dialogBox.NewMessage(DroughtMod.Translate("Your curiosity seems expansive, <PlayerName>."), 10);
                                 talking += TEN;
                             }
                             break;
                         case 4:
-                            dialogBox.Interrupt(Translate("Something else you want me to look at?"), 10);
+                            dialogBox.Interrupt(DroughtMod.Translate("Something else you want me to look at?"), 10);
                             talking += TEN;
                             break;
                         case 5:
                             if (State.GetOpinion == FPOracleState.PlayerOpinion.Likes)
                             {
-                                dialogBox.Interrupt(Translate("Oh... I will look at it."), 10);
+                                dialogBox.Interrupt(DroughtMod.Translate("Oh... I will look at it."), 10);
                                 talking += TEN;
                             }
                             else
                             {
-                                dialogBox.Interrupt(Translate("Something else you want me to see,<LINE>I suppose, <PlayerName>?"), 10);
+                                dialogBox.Interrupt(DroughtMod.Translate("Something else you want me to see,<LINE>I suppose, <PlayerName>?"), 10);
                                 talking += TEN;
                             }
                             break;
                         case 6:
                             if (State.GetOpinion == FPOracleState.PlayerOpinion.Likes)
                             {
-                                dialogBox.Interrupt(Translate("Oh... sure I will take a look"), 10);
+                                dialogBox.Interrupt(DroughtMod.Translate("Oh... sure, I will take a look."), 10);
                                 talking += TEN;
                             }
                             else
                             {
-                                dialogBox.Interrupt(Translate("Oh... I will take a look"), 10);
+                                dialogBox.Interrupt(DroughtMod.Translate("Oh... I will take a look."), 10);
                                 talking += TEN;
                             }
                             break;
                         case 7:
-                            dialogBox.Interrupt(Translate("Do you want me to take a look at that?"), 10);
+                            dialogBox.Interrupt(DroughtMod.Translate("Do you want me to take a look at that?"), 10);
                             talking += TEN;
                             break;
                         case 8:
-                            dialogBox.Interrupt(Translate("Oh... Should I look at that?"), 10);
+                            dialogBox.Interrupt(DroughtMod.Translate("Oh... Should I look at that?"), 10);
                             talking += TEN;
                             break;
                         case 9:
-                            dialogBox.Interrupt(Translate("Another thing for me, <PlayerName>?"), 10);
+                            dialogBox.Interrupt(DroughtMod.Translate("Another thing for me, <PlayerName>?"), 10);
                             talking += TEN;
                             break;
                         default:
-                            dialogBox.Interrupt(Translate("A new object for me, <PlayerName>?"), 10);
+                            dialogBox.Interrupt(DroughtMod.Translate("A new object for me, <PlayerName>?"), 10);
                             talking += TEN;
                             break;
                     }
@@ -671,7 +670,7 @@ namespace Rain_World_Drought.OverWorld
             {
                 this.NewAction(Action.ThrowOut_KillOnSight);
                 this.playerAnnoyingCounter = 0;
-                dialogBox.Interrupt(Translate("GIVE THAT BACK!"), 10);
+                dialogBox.Interrupt(DroughtMod.Translate("GIVE THAT BACK!"), 10);
                 currentConversation.Destroy();
                 currentConversation = null;
                 workingGrav = true;
@@ -682,12 +681,12 @@ namespace Rain_World_Drought.OverWorld
             {
                 if (UnityEngine.Random.value < 0.5f)
                 {
-                    dialogBox.Interrupt(Translate("Yes, take it and don't bother me."), 10);
+                    dialogBox.Interrupt(DroughtMod.Translate("Yes, take it and don't bother me."), 10);
                     talking += TEN;
                 }
                 else
                 {
-                    dialogBox.Interrupt(Translate("And now you're taking it."), 10);
+                    dialogBox.Interrupt(DroughtMod.Translate("And now you're taking it."), 10);
                     talking += TEN;
                 }
             }
@@ -696,28 +695,28 @@ namespace Rain_World_Drought.OverWorld
                 switch (UnityEngine.Random.Range(0, 4))
                 {
                     case 0:
-                        dialogBox.Interrupt(Translate("Oh... Okay, have it back."), 10);
+                        dialogBox.Interrupt(DroughtMod.Translate("Oh... Okay, have it back."), 10);
                         talking += TEN;
                         break;
                     case 1:
                         if (State.GetOpinion == FPOracleState.PlayerOpinion.Likes)
                         {
-                            dialogBox.Interrupt(Translate("You want it back?"), 10);
+                            dialogBox.Interrupt(DroughtMod.Translate("You want it back?"), 10);
                             talking += TEN;
                         }
                         else
                         {
                             talking += TEN;
-                            dialogBox.Interrupt(Translate("And now you're taking it back."), 10);
+                            dialogBox.Interrupt(DroughtMod.Translate("And now you're taking it back."), 10);
                         }
                         break;
                     case 2:
-                        dialogBox.Interrupt(Translate("Want it back, <PlayerName>?"), 10);
+                        dialogBox.Interrupt(DroughtMod.Translate("Want it back, <PlayerName>?"), 10);
                         talking += TEN;
                         break;
                     default:
-                        dialogBox.Interrupt(Translate("Oh..."), 10);
-                        dialogBox.NewMessage(Translate("Yes, you may to have it back."), 10);
+                        dialogBox.Interrupt(DroughtMod.Translate("Oh..."), 10);
+                        dialogBox.NewMessage(DroughtMod.Translate("Yes, you may to have it back."), 10);
                         talking += TEN;
                         break;
                 }
@@ -758,21 +757,21 @@ namespace Rain_World_Drought.OverWorld
                 switch (UnityEngine.Random.Range(0, 4))
                 {
                     case 0:
-                        dialogBox.Interrupt(Translate("Again??"), 10);
+                        dialogBox.Interrupt(DroughtMod.Translate("Again?"), 10);
                         talking += TEN;
                         break;
                     case 1:
-                        dialogBox.Interrupt(Translate("You."), 10);
+                        dialogBox.Interrupt(DroughtMod.Translate("You."), 10);
                         talking += TEN;
                         break;
                     case 2:
-                        dialogBox.Interrupt(Translate("You again."), 10);
+                        dialogBox.Interrupt(DroughtMod.Translate("You again."), 10);
                         talking += TEN;
-                        dialogBox.NewMessage(Translate("Please stop annoying me."), 10);
+                        dialogBox.NewMessage(DroughtMod.Translate("Please stop annoying me."), 10);
                         talking += TEN;
                         break;
                     default:
-                        dialogBox.Interrupt(Translate("Oh, it's you, <PlayerName>."), 10);
+                        dialogBox.Interrupt(DroughtMod.Translate("Oh, it's you, <PlayerName>."), 10);
                         talking += TEN;
                         break;
                 }
@@ -783,29 +782,29 @@ namespace Rain_World_Drought.OverWorld
                 switch (UnityEngine.Random.Range(0, 5))
                 {
                     case 0:
-                        dialogBox.Interrupt(Translate("Hello again, <PlayerName>" + ((!flag) ? "." : "!")), 10);
+                        dialogBox.Interrupt(DroughtMod.Translate("Hello again, <PlayerName>" + ((!flag) ? "." : "!")), 10);
                         talking += TEN;
                         break;
                     case 1:
-                        dialogBox.Interrupt(Translate("Hello, <PlayerName>" + ((!flag) ? "." : "!")), 10);
+                        dialogBox.Interrupt(DroughtMod.Translate("Hello, <PlayerName>" + ((!flag) ? "." : "!")), 10);
                         talking += TEN;
-                        dialogBox.NewMessage(Translate((!flag) ? "Welcome back." : "How have you been?"), 10);
+                        dialogBox.NewMessage(DroughtMod.Translate((!flag) ? "Welcome back." : "How have you been?"), 10);
                         talking += TEN;
                         break;
                     case 2:
-                        dialogBox.Interrupt(Translate("Oh, <PlayerName>. Hello" + ((!flag) ? "." : "!")), 10);
+                        dialogBox.Interrupt(DroughtMod.Translate("Oh, <PlayerName>. Hello" + ((!flag) ? "." : "!")), 10);
                         talking += TEN;
                         break;
                     case 3:
-                        dialogBox.Interrupt(Translate("It's you, <PlayerName>" + ((!flag) ? "." : "!")) + Translate(" Hello."), 10);
+                        dialogBox.Interrupt(DroughtMod.Translate("It's you, <PlayerName>" + ((!flag) ? "." : "!") + " Hello."), 10);
                         talking += TEN;
                         break;
                     case 4:
-                        dialogBox.Interrupt(Translate("Ah... <PlayerName>, you're here again" + ((!flag) ? "." : "!")), 10);
+                        dialogBox.Interrupt(DroughtMod.Translate("Ah... <PlayerName>, you're here again" + ((!flag) ? "." : "!")), 10);
                         talking += TEN;
                         break;
                     default:
-                        dialogBox.Interrupt(Translate("Ah... <PlayerName>, you're back" + ((!flag) ? "." : "!")), 10);
+                        dialogBox.Interrupt(DroughtMod.Translate("Ah... <PlayerName>, you're back" + ((!flag) ? "." : "!")), 10);
                         talking += TEN;
                         break;
                 }
@@ -817,12 +816,12 @@ namespace Rain_World_Drought.OverWorld
             workingGrav = false;
             if (State.annoyances == 0)
             {
-                currentConversation.Interrupt(Translate("Please. Calm down."), 10);
+                currentConversation.Interrupt(DroughtMod.Translate("Please. Calm down."), 10);
                 talking += TEN;
             }
             else if (State.annoyances == 1)
             {
-                currentConversation.Interrupt(Translate("Stop it!"), 10);
+                currentConversation.Interrupt(DroughtMod.Translate("Stop it!"), 10);
                 talking += TEN;
             }
             else
@@ -830,27 +829,27 @@ namespace Rain_World_Drought.OverWorld
                 switch (UnityEngine.Random.Range(0, 6))
                 {
                     case 0:
-                        currentConversation.Interrupt(Translate("<CapPlayerName>! Stay still and listen."), 10);
+                        currentConversation.Interrupt(DroughtMod.Translate("<CapPlayerName>! Stay still and listen."), 10);
                         talking += TEN;
                         break;
                     case 1:
-                        currentConversation.Interrupt(Translate("It won't let you stay here, if you continue like this."), 10);
+                        currentConversation.Interrupt(DroughtMod.Translate("I won't let you stay here, if you continue like this."), 10);
                         talking += TEN;
                         break;
                     case 2:
-                        currentConversation.Interrupt(Translate("Why should I tolerate this?"), 10);
+                        currentConversation.Interrupt(DroughtMod.Translate("Why should I tolerate this?"), 10);
                         talking += TEN;
                         break;
                     case 3:
-                        currentConversation.Interrupt(Translate("STOP!"), 10);
+                        currentConversation.Interrupt(DroughtMod.Translate("STOP!"), 10);
                         talking += TEN;
                         break;
                     case 4:
-                        currentConversation.Interrupt(Translate("This again."), 10);
+                        currentConversation.Interrupt(DroughtMod.Translate("This again."), 10);
                         talking += TEN;
                         break;
                     default:
-                        currentConversation.Interrupt(Translate("Calm down, <PlayerName>."), 10);
+                        currentConversation.Interrupt(DroughtMod.Translate("Calm down, <PlayerName>."), 10);
                         talking += TEN;
                         break;
                 }
@@ -867,31 +866,30 @@ namespace Rain_World_Drought.OverWorld
             switch (UnityEngine.Random.Range(0, 6))
             {
                 case 0:
-                    dialogBox.Interrupt(Translate("What are you doing?"), 10);
+                    dialogBox.Interrupt(DroughtMod.Translate("What are you doing?"), 10);
                     talking += TEN;
                     break;
                 case 1:
-                    dialogBox.Interrupt(Translate("Why should I tolerate this?"), 10);
+                    dialogBox.Interrupt(DroughtMod.Translate("Why should I tolerate this?"), 10);
                     talking += TEN;
                     break;
                 case 2:
-                    dialogBox.Interrupt(Translate("Down you go."), 10);
+                    dialogBox.Interrupt(DroughtMod.Translate("Down you go."), 10);
                     talking += TEN;
                     break;
                 case 3:
-                    dialogBox.Interrupt(Translate("STOP!"), 10);
+                    dialogBox.Interrupt(DroughtMod.Translate("STOP!"), 10);
                     talking += TEN;
                     break;
                 case 4:
-                    dialogBox.Interrupt(Translate("Calm down, <PlayerName>."), 10);
+                    dialogBox.Interrupt(DroughtMod.Translate("Calm down, <PlayerName>."), 10);
                     talking += TEN;
                     break;
                 default:
-                    dialogBox.Interrupt(Translate("Leave me alone!"), 10);
+                    dialogBox.Interrupt(DroughtMod.Translate("Leave me alone!"), 10);
                     talking += TEN;
                     break;
             }
-
             State.InfluenceLike(-0.2f);
             State.annoyances++;
             State.increaseLikeOnSave = false;
@@ -902,33 +900,33 @@ namespace Rain_World_Drought.OverWorld
             workingGrav = false;
             if (State.annoyances < 3)
             {
-                currentConversation.Interrupt(Translate("Thank you."), 5);
+                currentConversation.Interrupt(DroughtMod.Translate("Thank you."), 5);
                 talking += TEN;
             }
 
             if (State.totalInterruptions == 1)
             {
-                currentConversation.ForceAddMessage(Translate("As I was saying..."), 10);
+                currentConversation.ForceAddMessage(DroughtMod.Translate("As I was saying..."), 10);
                 talking += TEN;
             }
             else if (State.totalInterruptions == 2)
             {
-                currentConversation.ForceAddMessage(Translate("As I tried to say to you..."), 10);
+                currentConversation.ForceAddMessage(DroughtMod.Translate("As I tried to say to you..."), 10);
                 talking += TEN;
             }
             else if (State.totalInterruptions == 3)
             {
-                currentConversation.ForceAddMessage(Translate("Little messenger, stop that immediatly!"), 10);
+                currentConversation.ForceAddMessage(DroughtMod.Translate("Little messenger, stop that immediatly!"), 10);
                 talking += TEN;
-                currentConversation.ForceAddMessage(Translate("Let's continue..."), 10);
+                currentConversation.ForceAddMessage(DroughtMod.Translate("Let's continue..."), 10);
                 talking += TEN;
             }
             else if (State.totalInterruptions == 4)
             {
-                currentConversation.ForceAddMessage(Translate("And now you expect me to continue speaking?"), 10);
+                currentConversation.ForceAddMessage(DroughtMod.Translate("And now you expect me to continue speaking?"), 10);
                 talking += TEN;
                 talking += TEN;
-                currentConversation.ForceAddMessage(Translate("Let us try again - not that it has worked well before. I was saying..."), 10);
+                currentConversation.ForceAddMessage(DroughtMod.Translate("Let us try again - not that it has worked well before. I was saying..."), 10);
             }
             else
             {
@@ -937,19 +935,19 @@ namespace Rain_World_Drought.OverWorld
 #pragma warning restore CS0618 // Type or member is obsolete
                 {
                     case 0:
-                        currentConversation.ForceAddMessage(Translate("As I tried to say to you..."), 10);
+                        currentConversation.ForceAddMessage(DroughtMod.Translate("As I tried to say to you..."), 10);
                         talking += TEN;
                         break;
                     case 1:
-                        currentConversation.ForceAddMessage(Translate("If you behave like this, why should I talk to you?"), 10);
+                        currentConversation.ForceAddMessage(DroughtMod.Translate("If you behave like this, why should I talk to you?"), 10);
                         talking += TEN;
                         break;
                     case 2:
-                        currentConversation.ForceAddMessage(Translate("You come here, but you can't be respectful enough to listen to me.<LINE>Will you listen this time?"), 0);
+                        currentConversation.ForceAddMessage(DroughtMod.Translate("You come here, but you can't be respectful enough to listen to me.<LINE>Will you listen this time?"), 0);
                         talking += TEN;
                         break;
                     case 3:
-                        currentConversation.ForceAddMessage(Translate("Now if you'll let me, I will try to say this again."), 0);
+                        currentConversation.ForceAddMessage(DroughtMod.Translate("Now if you'll let me, I will try to say this again."), 0);
                         talking += TEN;
                         break;
                 }
@@ -1167,7 +1165,7 @@ namespace Rain_World_Drought.OverWorld
                         }
                         State.significantPearls[(int)(item as DataPearl).AbstractPearl.dataPearlType] = true;
                         State.totalPearlsBrought++;
-                        Debug.Log("pearls brought up: " + State.totalPearlsBrought);
+                        Debug.Log("Drought) Pearls brought up: " + State.totalPearlsBrought);
                     }
                 }
                 else
@@ -1195,43 +1193,25 @@ namespace Rain_World_Drought.OverWorld
 
         private void AlreadyDiscussedItem(bool pearl)
         {
-            string text = string.Empty;
+            string text;
             if (pearl)
             {
                 int num = UnityEngine.Random.Range(0, 3);
-                if (num != 0)
+                switch (num)
                 {
-                    if (num != 1)
-                    {
-                        text = Translate("This one, <PlayerName>?");
-                    }
-                    else
-                    {
-                        text = Translate("This one I've already read to you, <PlayerName>.");
-                    }
-                }
-                else
-                {
-                    text = Translate("I have already read this one to you, <PlayerName>.");
+                    case 0: text = DroughtMod.Translate("I have already read this one to you, <PlayerName>."); break;
+                    case 1: text = DroughtMod.Translate("This one I've already read to you, <PlayerName>."); break;
+                    default: text = DroughtMod.Translate("This one, <PlayerName>?"); break;
                 }
             }
             else
             {
                 int num = UnityEngine.Random.Range(0, 3);
-                if (num != 0)
+                switch (num)
                 {
-                    if (num != 1)
-                    {
-                        text = Translate("<CapPlayerName>, again?");
-                    }
-                    else
-                    {
-                        text = Translate("I've told you about this one, <PlayerName>.");
-                    }
-                }
-                else
-                {
-                    text = Translate("We have already talked about this one, <PlayerName>.");
+                    case 0: text = DroughtMod.Translate("We have already talked about this one, <PlayerName>."); break;
+                    case 1: text = DroughtMod.Translate("I've told you about this one, <PlayerName>."); break;
+                    default: text = DroughtMod.Translate("<CapPlayerName>, again?"); break;
                 }
             }
             if (currentConversation != null)
@@ -1566,7 +1546,7 @@ namespace Rain_World_Drought.OverWorld
         //Other counters
         private int talking = 0;
         private bool pearlpickupreaction;
-        private static int TEN = 150;
+        private const int TEN = 150;
         public bool intervention = false;
 
         public class PebblesConversation : Conversation
@@ -1599,36 +1579,21 @@ namespace Rain_World_Drought.OverWorld
                     default:
                     case EnumSwitch.ConversationID.DEFAULT:
                         switch (id)
-                        { // To do: Replace all new events to txt file
+                        {
                             case ID.MoonFirstPostMarkConversation:
                                 if ((this.interfaceOwner as FPOracleBehaviorHasMark).rainWorld.progression.currentSaveState.miscWorldSaveData.moonRevived)
                                 { // Delivered CC to Moon
-                                    events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("It's you."), 1));
-                                    events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("How could you betray me like this!"), 5));
-                                    events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("All this work, cycles and cycles of efforts put to waste!"), 5));
-                                    events.Add(new Conversation.TextEvent(this, 0, Translate("..."), 5));
-                                    events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("No, I need not be angry with you. Afterall, you couldn't have known the importance of what you were delivering."), 5));
-                                    events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Perhaps, Moon was right about all this. I have been a bit hasty in my recent endevors."), 5));
-                                    break;
+                                    TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_FirstPostMarkConversation_Betrayed);
                                 }
                                 else
                                 {
-                                    events.Add(new Conversation.TextEvent(this, 4, DroughtMod.Translate("Hello <PlayerName>."), 6));
-                                    events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Welcome back!"), 5));
-                                    events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Do you have another message for me?"), 7));
-                                    events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Or are you passing through here for another delivery?"), 7));
-                                    events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Unless you have something for me, I must return to my work."), 10));
+                                    TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_FirstPostMarkConversation);
                                 }//LoadEventsFromFile(37);
                                 break;
                             case ID.MoonSecondPostMarkConversation:
                                 if ((this.interfaceOwner as FPOracleBehaviorHasMark).rainWorld.progression.currentSaveState.miscWorldSaveData.moonRevived)
                                 {
-                                    events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("You're back."), 1));
-                                    events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I know I shouldn't be angry with you."), 5));
-                                    events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I suppose, we both gained something out of this. Even, if I lost some of my efforts."), 5));
-                                    events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Afterall, you couldn't have known the importance of what you were delivering."), 5));
-                                    events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Perhaps, Moon was right about all this. I have been a bit hasty in my recent endevors."), 5));
-                                    break;
+                                    TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_SecondPostMarkConversation_Betrayed);
                                 }
                                 else
                                 {
@@ -1790,23 +1755,13 @@ namespace Rain_World_Drought.OverWorld
                         events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Best of luck to you, <PlayerName>."), 5)); // cuz [Good luck] was dupe of Moon's dialogue, which confuses translator
                         break;
                     case EnumSwitch.ConversationID.Moon_Pearl_Drought1: // IS
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("This is a lengthy report on the unwanted organism strains that developed<LINE>in the old water filtration systems."), 13));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Back when cities were closer to the surface many of the cities relied on old bioreactor<LINE>reservoirs for a clean water supply."), 14));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("This was early in the development of the genetic sciences, so some unwanted strains developed."), 10));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("In attempts to mediate the damage, they biult a small<LINE>intelligent organic network tasked with controlling or at least mediating any organisms that developed."), 10));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("It was similar in design to modern iterators. There are rumors of murmurs coming from the depths."), 8));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I don’t suppose you crawled down there yourself. It would be quite dangerous."), 8));
+                        TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_Moon_Pearl_Drought1_IS);
                         break;
                     case EnumSwitch.ConversationID.Moon_Pearl_Drought2: // FS
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("This one is strange; it looks to be the data from an offhand project by one of the local iterators."), 10));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("It has sections referencing interactions with local fauna, and some<LINE>unconventional data tables related to the local fauna."), 12));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("The section in internal language represents an interesting insight about<LINE>the embedding of karmic energy in matter and more specifically how it can affect other organizations."), 20));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I’m not sure what else to say about it. Based on the amount of data in this pearl I find it likely that the project is still ongoing."), 0));
+                        TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_Moon_Pearl_Drought2_FS);
                         break;
                     case EnumSwitch.ConversationID.Moon_Pearl_Drought3: // MW
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("It's qualia, or a moment – this one is longer than most. Someone is dragging and tying a decorated rope from a sky-sail, while glancing towards the rest of their group."), 15));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("It has decent resolution, although its emotional value seem much more significant."), 5));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("The original memory was probably collected from Moon’s city."), 3));
+                        TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_Moon_Pearl_Drought3_MW);
                         break;
                     case EnumSwitch.ConversationID.SI_Spire1:
                         TextManager.LoadEventsFromFile(this, TextManager.EventID.FP_SI_Spire1); break;

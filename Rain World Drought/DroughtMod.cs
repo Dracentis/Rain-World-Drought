@@ -7,7 +7,6 @@ using Rain_World_Drought.OverWorld;
 using Rain_World_Drought.PlacedObjects;
 using Rain_World_Drought.Resource;
 using Rain_World_Drought.Slugcat;
-using System;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;

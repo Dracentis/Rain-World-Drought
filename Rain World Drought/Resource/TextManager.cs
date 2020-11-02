@@ -154,7 +154,7 @@ namespace Rain_World_Drought.Resource
             {
                 if (array[i].StartsWith("//")) { continue; }
                 string item = array[i];
-                if (item.Contains("//")) { item = item.Substring(0, item.IndexOf("//")); }
+                if (item.Contains("//")) { item = item.Substring(0, item.IndexOf("//")).TrimEnd(); }
                 string[] pair = item.Split(new char[] { '|' });
                 if (pair.Length < 2) { continue; }
                 if (ShortStringTable.ContainsKey(pair[0])) { continue; } // duplicate key
@@ -303,6 +303,7 @@ namespace Rain_World_Drought.Resource
         public static void LoadEventsFromFile(Conversation instance, EventID id, bool oneRandomLine, int randomSeed)
         {
             Debug.Log($"~~~LOAD DROUGHT CONVO {id} ({(int)id})");
+            LanguageID thisLang = curLang;
             string path = string.Concat(
                 ResourceManager.assetDir,
                 "Text",
@@ -315,6 +316,7 @@ namespace Rain_World_Drought.Resource
             );
             if (!File.Exists(path))
             { // Use English if there's no translation
+                thisLang = LanguageID.English;
                 path = string.Concat(
                     ResourceManager.assetDir,
                     "Text",
@@ -338,8 +340,9 @@ namespace Rain_World_Drought.Resource
             }
             else
             {
-                text2 = Custom.xorEncrypt(text2, (54 + (int)id + (int)instance.interfaceOwner.rainWorld.inGameTranslator.currentLanguage * 7));
+                text2 = Custom.xorEncrypt(text2, (54 + (int)id + (int)thisLang * 7));
             }
+            text2 = text2.Remove(0, 1);
             string[] array = Regex.Split(text2, Environment.NewLine);
             try
             {
@@ -429,6 +432,9 @@ namespace Rain_World_Drought.Resource
             PC_SI_Spire3 = 24,
             PC_MiscPearl = 38,
             PC_PebblesPearl = 40,
+            PC_Moon_Pearl_Drought1_IS = 76,
+            PC_Moon_Pearl_Drought2_FS = 77,
+            PC_Moon_Pearl_Drought3_MW = 78,
             // LMOracleBehaviorHasMark (duplicate of PearlConversation)
             LM_Moon_Pearl_CC = 7,
             LM_Moon_Pearl_SI_west = 20,
@@ -451,6 +457,9 @@ namespace Rain_World_Drought.Resource
             LM_SI_Spire3 = 24,
             LM_MiscPearl = 38,
             LM_PebblesPearl = 40,
+            LM_Moon_Pearl_Drought1_IS = 76,
+            LM_Moon_Pearl_Drought2_FS = 77,
+            LM_Moon_Pearl_Drought3_MW = 78,
             // LMOracleBehaviorHasMark
             LM_KarmaFlower = 25,
             LM_SSOracleSwarmer = 19,
@@ -470,7 +479,11 @@ namespace Rain_World_Drought.Resource
             LM_Moon_Red_First_Conversation = 50, // Replaced by FP_SlimeMold
             LM_Moon_Red_Second_Conversation = 55, // Replaced by FP_Moon_Pearl_LF_west
             LM_Moon_Yellow_First_Conversation = 49, // Replaced by FP_FirecrackerPlant
+            LM_MoonFirstPostMarkConversation = 79,
             // FPOracleBehaviorHasMark
+            FP_FirstPostMarkConversation_Betrayed = 80,
+            FP_FirstPostMarkConversation = 81,
+            FP_SecondPostMarkConversation_Betrayed = 82,
             FP_Moon_Pearl_CC = 8,
             FP_Moon_Pearl_SI_west = 64,
             FP_Moon_Pearl_SI_top = 65,
@@ -508,7 +521,25 @@ namespace Rain_World_Drought.Resource
             FP_SlimeMold = 50,
             FP_ScavBomb = 75,
             FP_BubbleGrass = 53,
-            FP_OverseerRemains = 52
+            FP_OverseerRemains = 52,
+            FP_Moon_Pearl_Drought1_IS = 83,
+            FP_Moon_Pearl_Drought2_FS = 84,
+            FP_Moon_Pearl_Drought3_MW = 85,
+            // SRS MessageScreen
+            SRSDreamPearlLF2 = 86,
+            SRSDreamPearlHI = 87,
+            SRSDreamPearlSH = 88,
+            SRSDreamPearlSB = 89,
+            SRSDreamPearlSB2 = 90,
+            SRSDreamPearlGW = 91,
+            SRSDreamPearlSL = 92,
+            SRSDreamPearlSL2 = 93,
+            SRSDreamPearlSL3 = 94,
+            SRSDreamPearlSI2 = 95,
+            SRSDreamPearlSI5 = 96,
+            SRSDreamPearlFS = 97,
+            SRSDreamTraitor = 98,
+            SRSDreamMissonComplete = 99
         }
     }
 }

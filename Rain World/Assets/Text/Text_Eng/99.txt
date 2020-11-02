@@ -1,0 +1,10 @@
+0-99
+<CapPlayerName>, Thank you!
+
+You have helped me and Five Pebbles' in a very significant way.
+
+You are free to go, as Five Pebbles' told you. The old path should serve you well.
+
+There's a temple deep beneath Five Pebbles' Farm Arrays. Go down as deep and you can go.
+
+Farewell, <PlayerName>.

@@ -382,7 +382,7 @@ namespace Rain_World_Drought.OverWorld
                     working = false;
                     if (this.actionCounter == 1)
                     {
-                        this.dialogBox.Interrupt(base.Translate("Here."), 0);
+                        this.dialogBox.Interrupt(DroughtMod.Translate("Here."), 0);
                     }
                     if (this.actionCounter > 30 && this.actionCounter < 300)
                     {
@@ -434,11 +434,11 @@ namespace Rain_World_Drought.OverWorld
                     this.movementBehavior = SSOracleBehavior.MovementBehavior.Talk;
                     if (this.actionCounter == 700)
                     {
-                        this.dialogBox.Interrupt(base.Translate("That's all. You can go now."), 0);
+                        this.dialogBox.Interrupt(DroughtMod.Translate("That's all. You can go now."), 0);
                     }
                     else if (this.actionCounter == 980)
                     {
-                        this.dialogBox.Interrupt(base.Translate("LEAVE."), 0);
+                        this.dialogBox.Interrupt(DroughtMod.Translate("LEAVE."), 0);
                     }
                     break;
                 case Action.General_ReceiveCCPearl:
@@ -1688,17 +1688,7 @@ namespace Rain_World_Drought.OverWorld
                         switch (id)
                         {
                             case ID.MoonFirstPostMarkConversation:
-                                events.Add(new Conversation.TextEvent(this, 2, DroughtMod.Translate("Oh..."), 2));
-                                events.Add(new Conversation.TextEvent(this, 4, DroughtMod.Translate("Hello, <PlayerName>."), 6));
-                                events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("You must be Seven Red Suns\' little messenger."), 7));
-                                events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I have heard a lot about you. How is Seven Red Suns?"), 7));
-                                events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I am glad to see you safe and sound, it's clear that your tail is working as intended."), 10));
-                                events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I have considered tinkering with creatures too. More messengers could be useful."), 10));
-                                events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Communications have always been spotty, even back when our cities were still populated."), 10));
-                                events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Soon enough, messengers like you might be our only way of communicating."), 8));
-                                events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I... I\'ve been holding you here for a while, little creature. I'm sorry! I\'m aware that you have to go."), 10));
-                                events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Thank you for visiting me! Good luck on your way to Five Pebbles!"), 5));
-                                break;
+                                TextManager.LoadEventsFromFile(this, TextManager.EventID.LM_MoonFirstPostMarkConversation); break;
                             case ID.MoonSecondPostMarkConversation:
                                 if (State.GetOpinion == SLOrcacleState.PlayerOpinion.Dislikes)
                                 {
@@ -1892,41 +1882,11 @@ namespace Rain_World_Drought.OverWorld
                     case EnumSwitch.ConversationID.Moon_Pearl_MoonPearl:
                         break;
                     case EnumSwitch.ConversationID.Moon_Pearl_Drought1: // IS
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("It's an old pearl related to our local intake system."), 3));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Specifically, it details the designed microorganisms used in the main reservoir."), 5));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("The complete report is thousands of entries long, discussing everything from the <LINE>central gravity-amplifier-style intake solution to the interactions with the developed fauna."), 18));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I\'ll give you the gist of it."), 2));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Back when the major cities were closer to the surface, filtered water reservoirs<LINE>were created as bioreactors to purify water and remove unwanted contaminants."), 16));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("The organisms used in these tanks were not very well controlled and many different<LINE>unwanted strains of filter tissue corrupted early tanks."), 14));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Some strains were even observed blending with the natural fauna, creating extremely<LINE>resilient organisms of a very large scale."), 12));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("As a counteractive measure, they built a small intelligent organic network tasked<LINE>with influencing any organisms that developed."), 10));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("In some respects, it was similar to modern iterators. There are rumors of murmurs coming from the depths."), 8));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I hope you didn’t go down there to get this, I’m not sure how the tank would react to your biology."), 10));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I suppose the mark Suns\' gave you would help."), 3));
-                        break;
+                        TextManager.LoadEventsFromFile(this, TextManager.EventID.LM_Moon_Pearl_Drought1_IS); break;
                     case EnumSwitch.ConversationID.Moon_Pearl_Drought2: // FS
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("This is..."), 3));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("..."), 5));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("...It has data written on it to be sure, but the format is nothing like I’ve ever seen before."), 6));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("It bears some resemblance to the creature logs created by the overseers."), 5));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Most iterators simply ignore it, as it has little importance towards the Task."), 6));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I occasionally look back on those files, as it reminds me of the time back when I worked on the<LINE>tasks of an entire lively city. It was a much more complex time; I worked on everything<LINE>from coordinating farming systems to individuals’ problems or inquiries. "), 20));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I do miss the days when they visited my chamber."), 3));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Anyways, back to the pearl. It appears that someone used that data format as the basis to create a<LINE>new log of individual creatures’ karmic properties and social relationships."), 10));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("There is a section written in internal language as well. I can try my best to translate it."), 6));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("\"...organizations of the fourth axiom of karmic staging, It can be ascertained that the quintessence of<LINE>an organic body can never be entirely sequestered from the continuous flow of related<LINE>materials. I propose a contemporary project to aggregate coordinated karmic<LINE>networking\" or perhaps... \"encompassment of an overall site\""), 25));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I am sorry little creature, are you understanding this?"), 3));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I would say this is the remnants or perhaps an older log of a far-reaching project by one of the iterators in the local group."), 10));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("It is hard to say which iterator, although some of the internal language suggests a slightly cynical<LINE>or humorous tone, which could narrow the possiblities."), 10));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Without knowing where it came from, I’m afraid I can’t tell you much more."), 3));
-                        break;
+                        TextManager.LoadEventsFromFile(this, TextManager.EventID.LM_Moon_Pearl_Drought2_FS); break;
                     case EnumSwitch.ConversationID.Moon_Pearl_Drought3: // MW
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Oh, wow! I didn\'t think I would ever see this again!"), 3));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("It is an old qualia that I recorded from one of the sky-sail journeys long ago."), 4));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I lost it back when one of my capacitor coils burst a few thousand cycle ago. Secondary systems and my biological<LINE>components did their best to bring it back online, but the damage shut down a few disruptors<LINE>leading to some more serious collapses."), 13));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("I do not remember much of the subject, but this pearl always held an importance to me."), 5));
-                        events.Add(new Conversation.TextEvent(this, 0, DroughtMod.Translate("Thank You, <PlayerName>"), 0));
-                        break;
+                        TextManager.LoadEventsFromFile(this, TextManager.EventID.LM_Moon_Pearl_Drought3_MW); break;
                     case EnumSwitch.ConversationID.SI_Spire1:
                         TextManager.LoadEventsFromFile(this, TextManager.EventID.LM_SI_Spire1); break;
                     case EnumSwitch.ConversationID.SI_Spire2:
