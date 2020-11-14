@@ -1,0 +1,4 @@
+BkgDroneVolume: 0
+Palette: 21
+PlacedObjects: NoSpearStickZone><482.2745><273.6985><15~244, 
+AmbientSounds: SPOT><AM_IND-DeepHum.ogg><746.7557><311.6999><0.3913043><1><468.7557><61.69997><-81.35535><75.64466><0><0.252174, OMNI><AM_SUB-CaveTone.ogg><790.1119><470.1447><0.3478261><1, OMNI><AM_SUB-BlankState.ogg><754.1138><263.6465><0.3478261><1, 

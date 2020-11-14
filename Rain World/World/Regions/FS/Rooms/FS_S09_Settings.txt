@@ -1,0 +1,4 @@
+BkgDroneVolume: 0
+Palette: 21
+AmbientSounds: OMNI><AM_SUB-CaveTone.ogg><789.5576><248.3085><0.3478261><1, OMNI><AM_SUB-BlankState.ogg><789.3693><322.0894><0.3478261><1, 
+FadePalette: 10, 0.4456522

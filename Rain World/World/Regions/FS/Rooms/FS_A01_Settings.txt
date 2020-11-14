@@ -1,6 +1,8 @@
 Template: FS_SettingsTemplate_Forest
 RainIntensity: 1
 RumbleIntensity: 1
+BkgDroneVolume: 0.3043478
+RandomItemDensity: 0
 PlacedObjects: UniqueDataPearl><219.3751><271.0938><0~0~0~0~2~0, ReliableSpear><147.3129><457.8206><, 
 FadePalette: 11, 0.2391304, 0.2391304
 WetTerrain: OFF

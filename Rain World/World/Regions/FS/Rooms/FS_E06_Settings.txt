@@ -1,5 +1,5 @@
 DangerType: Flood
-Effects: RockFlea-1-20-20, 
+Effects: RockFlea-1-20-20, WaterGlowworm-1-30-30, 
 PlacedObjects: BubbleGrass><4548.699><345.7668><-194~78~8~13, WaterNut><4842.845><426.9261><41~-53~2~3, WaterNut><4885.646><449.5791><0~0~2~3, 
 FadePalette: 10, 0.4891304, 0.4891304, 0.5, 0.5, 0.4891304
 WetTerrain: OFF

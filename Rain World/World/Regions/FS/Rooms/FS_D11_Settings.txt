@@ -7,6 +7,6 @@ EffectColorB: 6
 Effects: LightBurn-0.25-20-20, 
 PlacedObjects: DangleFruit><3669.932><594.4178><4~-247~2~3, DangleFruit><3713.565><606.4228><-125~-190~2~3, DangleFruit><3633.666><593.3184><-291~-162~2~3, 
 AmbientSounds: OMNI><AM_ENV-CityTone.ogg><806.5952><560.3733><0.5><1, OMNI><AM_ENV-NatWind.ogg><737.0278><492.0519><0.2065217><1, OMNI><AM_SUB-CaveTone.ogg><734.5625><247.0697><0.5><1, 
-Triggers: Spot<tA>event<tB>MusicEvent<eA>songName<eB>NA_19 - Halcyon Memories<eA>vol<eB>0.202174<eA>prio<eB>0.5<eA>mxThrt<eB>1<eA>loop<eB>0<eA>droneTol<eB>0<eA>rooms<eB>-1<eA>rest<eB>5<eA>fadeIn<eB>0<eA>oneSongPerCycle<eB>0<eA>stopAtDeath<eB>0<eA>stopAtGate<eB>0<tA>multiUse<tB>0<tA>toCycle<tB>-1<tA>fromCycle<tB>0<tA>delay<tB>0<tA>panPos<tB>269.4336<tB>383.4207<tA>fireChance<tB>1<tA>entrance<tB>-1<tA>karma<tB>0<tA>slugcats<tB>111<tA>pos<tB>1676.434<tB>237.4207<tA>handlePos<tB>-74.35535<tB>261.6447, 
+Triggers: Spot<tA>event<tB>MusicEvent<eA>songName<eB>NA_19 - Halcyon Memories<eA>vol<eB>0.5065218<eA>prio<eB>0.5<eA>mxThrt<eB>1<eA>loop<eB>0<eA>droneTol<eB>0<eA>rooms<eB>-1<eA>rest<eB>5<eA>fadeIn<eB>0<eA>oneSongPerCycle<eB>0<eA>stopAtDeath<eB>0<eA>stopAtGate<eB>0<tA>multiUse<tB>0<tA>toCycle<tB>-1<tA>fromCycle<tB>0<tA>delay<tB>0<tA>panPos<tB>287.4336<tB>423.4207<tA>fireChance<tB>1<tA>entrance<tB>-1<tA>karma<tB>0<tA>slugcats<tB>111<tA>pos<tB>1676.434<tB>237.4207<tA>handlePos<tB>-74.35535<tB>261.6447, 
 FadePalette: 20, 0.4347826, 0.3586957, 0.25, 0.1304348
 WetTerrain: OFF

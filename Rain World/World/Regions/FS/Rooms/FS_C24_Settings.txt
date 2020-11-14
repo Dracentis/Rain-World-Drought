@@ -1,5 +1,5 @@
 Template: FS_SettingsTemplate_Fridge
-BkgDroneVolume: 0.3043478
+BkgDroneVolume: 0
 Effects: Fog-0.1521739-20-20, 
 AmbientSounds: SPOT><SO_SFX-ColdNight.ogg><474.9493><442.5168><0.1086956><1><245.9493><224.5168><-141.3553><-7.355347><0><0.2195653, OMNI><SO_SFX-ColdNight.ogg><294.9302><385.9374><0.09782609><1, 
 FadePalette: 10, 0.6847826

@@ -10,6 +10,7 @@ overseersMax: 4
 playerGuideOverseerSpawnChance: 1.0
 Broken Shelters: 0: FS_S01
 Subregion: Forest Sanctuary
+Subregion: Forest Sanctuary (Subway Station)
 Subregion: Preservation Facility
 Room Setting Templates: Cave, Forest, Industrial, Fridge, Sub
 Room_Attr: FS_A01: Vulture-1,KingVulture-1,
@@ -23,6 +24,10 @@ Room_Attr: FS_D14: Vulture-1,Overseer-1,KingVulture-1,
 Room_Attr: FS_D15: Vulture-1,Overseer-1,KingVulture-1,
 Room_Attr: FS_D16: Overseer-1,
 Room_Attr: FS_D17: Vulture-1,Overseer-1,KingVulture-1,
+Room_Attr: FS_D18: Vulture-1,Overseer-1,KingVulture-1,
+Room_Attr: FS_D19: Vulture-1,Overseer-1,KingVulture-1,
+Room_Attr: FS_D20: Vulture-1,Overseer-1,KingVulture-1,
+Room_Attr: FS_D21: Vulture-1,Overseer-1,KingVulture-1,
 Room_Attr: FS_C06: Overseer-1,
 Room_Attr: FS_C08: Overseer-2,
 Room_Attr: FS_C13: Overseer-1,

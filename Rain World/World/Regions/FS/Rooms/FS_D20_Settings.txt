@@ -1,0 +1,2 @@
+Template: FS_SettingsTemplate_Sub
+FadePalette: 21, 0.7282609
