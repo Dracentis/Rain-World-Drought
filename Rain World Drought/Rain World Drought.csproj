@@ -100,6 +100,7 @@
     <Compile Include="Debugging.cs" />
     <Compile Include="PlacedObjects\AbstractPhysicalObjectHK.cs" />
     <Compile Include="PlacedObjects\DataPearlHK.cs" />
+    <Compile Include="PlacedObjects\Piston.cs" />
     <Compile Include="PlacedObjects\PistonPhysics.cs" />
     <Compile Include="PublicBee.cs" />
     <None Include="Resource\FutileHK.cs" />

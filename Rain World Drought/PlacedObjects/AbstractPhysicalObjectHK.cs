@@ -22,12 +22,13 @@ namespace Rain_World_Drought.PlacedObjects
                     orig.Invoke(self); return;
                 case EnumSwitch.AbstractPhysicalObjectType.LMOracleSwarmer:
                     self.realizedObject = new LMOracleSwarmer(self, self.world); break;
-                case EnumSwitch.AbstractPhysicalObjectType.SmallPiston:
-                    self.realizedObject = new SmallPiston(self); break;
-                case EnumSwitch.AbstractPhysicalObjectType.LargePiston:
-                    self.realizedObject = new LargePiston(self); break;
-                case EnumSwitch.AbstractPhysicalObjectType.GiantPiston:
-                    self.realizedObject = new GiantPiston(self); break;
+                case EnumSwitch.AbstractPhysicalObjectType.Piston:
+                    switch (((Piston.AbstractPiston)self).pistonType) {
+                        case Piston.PistonType.Small: self.realizedObject = new SmallPiston(self); break;
+                        case Piston.PistonType.Large: self.realizedObject = new LargePiston(self); break;
+                        case Piston.PistonType.Giant: self.realizedObject = new GiantPiston(self); break;
+                    }
+                    break;
                 case EnumSwitch.AbstractPhysicalObjectType.GreySpear:
                     self.realizedObject = new GreySpear(self, self.world); break;
             }

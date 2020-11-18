@@ -126,9 +126,7 @@ namespace Rain_World_Drought.Enums
         public static AbstractPhysicalObjectType GetAbstractPhysicalObjectType(AbstractPhysicalObject.AbstractObjectType type)
         {
             if (!DroughtMod.EnumExt) { return AbstractPhysicalObjectType.DEFAULT; }
-            if (type == EnumExt_Drought.SmallPiston) { return AbstractPhysicalObjectType.SmallPiston; }
-            if (type == EnumExt_Drought.LargePiston) { return AbstractPhysicalObjectType.LargePiston; }
-            if (type == EnumExt_Drought.GiantPiston) { return AbstractPhysicalObjectType.GiantPiston; }
+            if (type == EnumExt_Drought.Piston) { return AbstractPhysicalObjectType.Piston; }
             if (type == EnumExt_Drought.LMOracleSwarmer) { return AbstractPhysicalObjectType.LMOracleSwarmer; }
             if (type == EnumExt_Drought.MoonPearl) { return AbstractPhysicalObjectType.MoonPearl; }
             if (type == EnumExt_Drought.GreySpear) { return AbstractPhysicalObjectType.GreySpear; }
@@ -141,9 +139,7 @@ namespace Rain_World_Drought.Enums
             /// Vanilla or other mod
             /// </summary>
             DEFAULT = -1,
-            SmallPiston,
-            LargePiston,
-            GiantPiston,
+            Piston,
             LMOracleSwarmer,
             MoonPearl,
             GreySpear
@@ -373,9 +369,7 @@ namespace Rain_World_Drought.Enums
         public static RoomSettings.RoomEffect.Type GravityPulse;
         public static RoomSettings.RoomEffect.Type TankRoomView;
 
-        public static AbstractPhysicalObject.AbstractObjectType SmallPiston;
-        public static AbstractPhysicalObject.AbstractObjectType LargePiston;
-        public static AbstractPhysicalObject.AbstractObjectType GiantPiston;
+        public static AbstractPhysicalObject.AbstractObjectType Piston;
         public static AbstractPhysicalObject.AbstractObjectType LMOracleSwarmer;
         public static AbstractPhysicalObject.AbstractObjectType MoonPearl;
         public static AbstractPhysicalObject.AbstractObjectType GreySpear;
