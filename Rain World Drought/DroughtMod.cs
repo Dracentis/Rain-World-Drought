@@ -54,6 +54,7 @@ namespace Rain_World_Drought
             // Patch PlacedObjs
             AbstractPhysicalObjectHK.Patch(); // + RedLight
             DataPearlHK.Patch();
+            PistonPhysics.Patch();
 
             #region Resource
             // namespaces must be 'Rain_World_Drought.Resource', not 'Resources' with s, which confuses the compiler with UnityEngine.Resources

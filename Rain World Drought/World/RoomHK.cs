@@ -66,7 +66,7 @@ namespace Rain_World_Drought.OverWorld
                         case EnumSwitch.PlacedObjectType.SmallPistonDeathMode:
                             if (self.abstractRoom.firstTimeRealized)
                             {
-                                self.abstractRoom.entities.Add(new SmallPiston.AbstractSmallPiston(self.world, null, self.GetWorldCoordinate(self.roomSettings.placedObjects[l].pos), self.game.GetNewID(), self.abstractRoom.index, l, false, false));
+                                self.abstractRoom.entities.Add(new Piston.AbstractPiston(self.world, Piston.PistonType.Small, null, self.GetWorldCoordinate(self.roomSettings.placedObjects[l].pos), self.game.GetNewID(), self.abstractRoom.index, l, false, false));
                             }
                             break;
                         case EnumSwitch.PlacedObjectType.LargePiston:
@@ -75,7 +75,7 @@ namespace Rain_World_Drought.OverWorld
                         case EnumSwitch.PlacedObjectType.LargePistonDeathMode:
                             if (self.abstractRoom.firstTimeRealized)
                             {
-                                self.abstractRoom.entities.Add(new LargePiston.AbstractLargePiston(self.world, null, self.GetWorldCoordinate(self.roomSettings.placedObjects[l].pos), self.game.GetNewID(), self.abstractRoom.index, l, false, false));
+                                self.abstractRoom.entities.Add(new Piston.AbstractPiston(self.world, Piston.PistonType.Large, null, self.GetWorldCoordinate(self.roomSettings.placedObjects[l].pos), self.game.GetNewID(), self.abstractRoom.index, l, false, false));
                             }
                             break;
                         case EnumSwitch.PlacedObjectType.GiantPiston:
@@ -84,7 +84,7 @@ namespace Rain_World_Drought.OverWorld
                         case EnumSwitch.PlacedObjectType.GiantPistonDeathMode:
                             if (self.abstractRoom.firstTimeRealized)
                             {
-                                self.abstractRoom.entities.Add(new GiantPiston.AbstractGiantPiston(self.world, null, self.GetWorldCoordinate(self.roomSettings.placedObjects[l].pos), self.game.GetNewID(), self.abstractRoom.index, l, false, false));
+                                self.abstractRoom.entities.Add(new Piston.AbstractPiston(self.world, Piston.PistonType.Giant, null, self.GetWorldCoordinate(self.roomSettings.placedObjects[l].pos), self.game.GetNewID(), self.abstractRoom.index, l, false, false));
                             }
                             break;
                     }
