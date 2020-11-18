@@ -201,13 +201,15 @@ namespace Rain_World_Drought.OverWorld
                         }
                     }
                 }
-                if (player.room == oracle.room && Custom.DistLess(player.mainBodyChunk.pos, oracle.firstChunk.pos, 100f) && !Custom.DistLess(player.mainBodyChunk.lastPos, player.mainBodyChunk.pos, 1f))
+
+                // Annoying pebbles must be started by hitting him with a weapon
+                if (player.room == oracle.room && intervention && !Custom.DistLess(player.mainBodyChunk.lastPos, player.mainBodyChunk.pos, 1f))
                 {
                     playerAnnoyingCounter++;
                 }
                 else
                 {
-                    playerAnnoyingCounter--;
+                    playerAnnoyingCounter -= 2;
                 }
                 playerAnnoyingCounter = Custom.IntClamp(playerAnnoyingCounter, 0, 150);
 
@@ -280,7 +282,7 @@ namespace Rain_World_Drought.OverWorld
                 {
                     for (int j = 0; j < oracle.room.socialEventRecognizer.ownedItemsOnGround.Count; j++)
                     {
-                        if (Custom.DistLess(oracle.room.socialEventRecognizer.ownedItemsOnGround[j].item.firstChunk.pos, oracle.firstChunk.pos, 300f) && WillingToInspectItem(oracle.room.socialEventRecognizer.ownedItemsOnGround[j].item))
+                        if (WillingToInspectItem(oracle.room.socialEventRecognizer.ownedItemsOnGround[j].item))
                         {
                             bool flag2 = true;
                             for (int k = 0; k < pickedUpItemsThisRealization.Count; k++)
@@ -439,23 +441,24 @@ namespace Rain_World_Drought.OverWorld
                     {
                         this.actionCounter = 0;
                     }
-                    if (this.actionCounter == 700)
-                    {
-                        this.dialogBox.Interrupt(base.Translate("That's all. You'll have to go now."), 0);
-                    }
-                    else if (this.actionCounter == 980)
-                    {
-                        this.dialogBox.Interrupt(DroughtMod.Translate("You've helped me, and I am thankful for that, but you must go now."), 5);
-                    }
-                    else if (this.actionCounter == 1980)
-                    {
-                        this.dialogBox.Interrupt(base.Translate("LEAVE."), 0);
-                    }
-                    else if (this.actionCounter > 2500)
-                    {
-                        this.dialogBox.Interrupt(base.Translate("You had your chances."), 0);
-                        this.NewAction(Action.ThrowOut_KillOnSight);
-                    }
+                    // Do not throw out
+                    //if (this.actionCounter == 700)
+                    //{
+                    //    this.dialogBox.Interrupt(base.Translate("That's all. You'll have to go now."), 0);
+                    //}
+                    //else if (this.actionCounter == 980)
+                    //{
+                    //    this.dialogBox.Interrupt(DroughtMod.Translate("You've helped me, and I am thankful for that, but you must go now."), 5);
+                    //}
+                    //else if (this.actionCounter == 1980)
+                    //{
+                    //    this.dialogBox.Interrupt(base.Translate("LEAVE."), 0);
+                    //}
+                    //else if (this.actionCounter > 2500)
+                    //{
+                    //    this.dialogBox.Interrupt(base.Translate("You had your chances."), 0);
+                    //    this.NewAction(Action.ThrowOut_KillOnSight);
+                    //}
                     break;
                 case Action.General_ReceiveCCPearl:
                     workingGrav = false;
@@ -890,6 +893,7 @@ namespace Rain_World_Drought.OverWorld
                     talking += TEN;
                     break;
             }
+
             State.InfluenceLike(-0.2f);
             State.annoyances++;
             State.increaseLikeOnSave = false;

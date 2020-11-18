@@ -21,6 +21,7 @@ namespace Rain_World_Drought.Slugcat
             On.Player.Grabbed += new On.Player.hook_Grabbed(GrabbedHK);
             On.Player.LungUpdate += new On.Player.hook_LungUpdate(LungUpdateHK);
             On.VoidSea.VoidSeaScene.VoidSeaTreatment += new On.VoidSea.VoidSeaScene.hook_VoidSeaTreatment(VoidSeaTreatmentHK);
+            On.TubeWorm.JumpButton += new On.TubeWorm.hook_JumpButton(JumpButtonHK);
         }
 
         private static void CtorHK(On.Player.orig_ctor orig, Player self, AbstractCreature abstractCreature, World world)
@@ -40,9 +41,12 @@ namespace Rain_World_Drought.Slugcat
         public static bool IsGrounded(Player self, bool feetMustBeGrounded)
         {
             if (self.canJump > 0 && self.canWallJump == 0) return true;
+            if (self.animation == Player.AnimationIndex.AntlerClimb) return true;
+            if (self.animation == Player.AnimationIndex.VineGrab) return true;
             if (self.animation == Player.AnimationIndex.SurfaceSwim) return true;
             if (self.bodyMode == Player.BodyModeIndex.ClimbingOnBeam) return true;
             if (self.animation == Player.AnimationIndex.StandOnBeam) return true;
+            if (self.animation == Player.AnimationIndex.ZeroGPoleGrab) return true;
             if (self.animation == Player.AnimationIndex.Roll) return true;
             if (feetMustBeGrounded) return false;
             if (self.canWallJump != 0) return true;
@@ -328,7 +332,8 @@ namespace Rain_World_Drought.Slugcat
                     jumpDir.Normalize();
                 }
             }
-            jumpDir.y += 0.25f;
+
+            jumpDir.y += 0.25f * self.gravity;
 
             if (jumpDir.x == 0 && jumpDir.y == 0) jumpDir.y = 1;
 
@@ -589,6 +594,16 @@ namespace Rain_World_Drought.Slugcat
             if (!WandererSupplement.IsWanderer(self)) return;
 
             WandererSupplement sub = WandererSupplement.GetSub(self);
+
+            // Kick out of focus when unconsious
+            if(!self.Consious)
+            {
+                sub.focusLeft = 0;
+                sub.slowdownLeft = 0;
+                sub.canTripleJump = false;
+                sub.noFocusJumpCounter = 0;
+            }
+
             if (sub.focusLeft > 0)
             {
                 sub.focusLeft--;
@@ -616,7 +631,7 @@ namespace Rain_World_Drought.Slugcat
 
             sub.jumpQueued = false;
 
-            if (WandererSupplement.IsWanderer(self) && self.Consious && !self.Malnourished && self.room != null && self.room.game != null && self.room.game.IsStorySession)
+            if (self.Consious && !self.Malnourished && self.room != null && self.room.game != null && self.room.game.IsStorySession && sub.pearlConversation != null)
             { sub.pearlConversation.Update(eu); }
         }
 
@@ -692,15 +707,16 @@ namespace Rain_World_Drought.Slugcat
 
         private static void LungUpdateHK(On.Player.orig_LungUpdate orig, Player self)
         {
-            float lastAirInLungs = self.airInLungs;
-            float patchedAirInLungs = -1f;
-            if (self.room.game.IsStorySession && WandererSupplement.IsWanderer(self))
+            if (WandererSupplement.IsWanderer(self) && self.room.game.IsStorySession && MiscWorldSaveDroughtData.GetData((self.room.game.session as StoryGameSession).saveState.miscWorldSaveData).isImproved)
             {
-                patchedAirInLungs = lastAirInLungs - 1f / (((MiscWorldSaveDroughtData.GetData((self.room.game.session as StoryGameSession).saveState.miscWorldSaveData).isImproved ? 3f : 1f) * 40f * ((!self.lungsExhausted) ? 9f : 4.5f) * ((self.input[0].y != 1 || self.input[0].x != 0 || self.airInLungs >= 0.333333343f) ? 1f : 1.5f) * ((float)self.room.game.setupValues.lungs / 100f)) * self.slugcatStats.lungsFac);
+                // Divide the rate that air leaves the lungs by 3
+                float lastAirInLungs = self.airInLungs;
+                orig.Invoke(self);
+                if (self.airInLungs > 0f && self.airInLungs < lastAirInLungs) self.airInLungs = Mathf.Lerp(lastAirInLungs, self.airInLungs, 0.333f);
+            } else
+            {
+                orig(self);
             }
-            if (patchedAirInLungs > 0f) { self.airInLungs = Mathf.Max(self.airInLungs, 0.2f); } // prevents drowning early
-            orig.Invoke(self);
-            if (patchedAirInLungs > self.airInLungs) { self.airInLungs = patchedAirInLungs; }
         }
 
         private static void VoidSeaTreatmentHK(On.VoidSea.VoidSeaScene.orig_VoidSeaTreatment orig, VoidSeaScene self, Player player, float swimSpeed)
@@ -715,6 +731,17 @@ namespace Rain_World_Drought.Slugcat
             { sub.past22000 = true; }
             if (player.mainBodyChunk.pos.y < -25000 || self.deepDivePhase == VoidSeaScene.DeepDivePhase.EggScenario)
             { sub.past25000 = true; }
+        }
+
+        private static bool JumpButtonHK(On.TubeWorm.orig_JumpButton orig, TubeWorm self, Player plr)
+        {
+            if (WandererSupplement.IsWanderer(plr))
+            {
+                WandererSupplement sub = WandererSupplement.GetSub(plr);
+                if (sub.jumpForbidden > 0)
+                    return true;
+            }
+            return orig(self, plr);
         }
     }
 }

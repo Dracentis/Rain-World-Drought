@@ -6,9 +6,9 @@ namespace Rain_World_Drought.OverWorld
     {
         public BurstRain(GlobalRain globalRain) : base(globalRain)
         {
-            this.deathRainMode = DeathRainMode.None;
+            this.deathRainMode = DeathRainMode.GradeABuildUp;
             this.burstRainMode = BurstRainMode.BurstCalmBeforeStorm;
-            this.timeInThisMode = Mathf.Lerp(300f, 500f, UnityEngine.Random.value);
+            this.timeInThisMode = Mathf.Lerp(300f, 500f, Random.value);
             this.calmBeforeStormSunlight = ((Random.value >= 0.5f) ? Random.value : 0f);
             this.timer = 0;
         }
@@ -73,21 +73,21 @@ namespace Rain_World_Drought.OverWorld
             switch (this.burstRainMode)
             {
                 case BurstRainMode.BurstCalmBeforeStorm:
-                    this.timeInThisMode = Mathf.Lerp(300f, 500f, UnityEngine.Random.value);
-                    this.calmBeforeStormSunlight = ((UnityEngine.Random.value >= 0.5f) ? UnityEngine.Random.value : 0f);
+                    this.timeInThisMode = Mathf.Lerp(300f, 500f, Random.value);
+                    this.calmBeforeStormSunlight = ((Random.value >= 0.5f) ? Random.value : 0f);
                     break;
                 case BurstRainMode.BurstGradeABuildUp:
                     this.timeInThisMode = 6f;
                     this.globalRain.ShaderLight = -1f;
                     break;
                 case BurstRainMode.BurstGradeAPlateu:
-                    this.timeInThisMode = Mathf.Lerp(100f, 200f, UnityEngine.Random.value);
+                    this.timeInThisMode = Mathf.Lerp(100f, 200f, Random.value);
                     break;
                 case BurstRainMode.BurstGradeBBuildUp:
-                    this.timeInThisMode = ((UnityEngine.Random.value >= 0.2f) ? Mathf.Lerp(50f, 200f, UnityEngine.Random.value) : 100f);
+                    this.timeInThisMode = ((Random.value >= 0.2f) ? Mathf.Lerp(50f, 200f, Random.value) : 100f);
                     break;
                 case BurstRainMode.BurstGradeBPlateu:
-                    this.timeInThisMode = ((UnityEngine.Random.value >= 0.2f) ? Mathf.Lerp(50f, 200f, UnityEngine.Random.value) : 100f);
+                    this.timeInThisMode = ((Random.value >= 0.2f) ? Mathf.Lerp(50f, 200f, Random.value) : 100f);
                     break;
                 case BurstRainMode.BurstEnd:
                     this.timeInThisMode = 1200 - this.timer;
