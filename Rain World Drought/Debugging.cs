@@ -14,22 +14,10 @@ namespace Rain_World_Drought
 
         public static void Patch()
         {
-            On.MainLoopProcess.RawUpdate += MainLoopProcess_RawUpdate;
+            //On.MainLoopProcess.RawUpdate += MainLoopProcess_RawUpdate;
             On.RainWorld.Start += RainWorld_Start;
             On.RainWorld.Update += RainWorld_Update;
             On.FFont.GetQuadInfoForText += FFont_GetQuadInfoForText;
-            On.Room.Loaded += Room_Loaded;
-        }
-
-        private static void Room_Loaded(On.Room.orig_Loaded orig, Room self)
-        {
-            if (self.abstractRoom.name == "SL_L01")
-            {
-                self.water = false;
-                self.defaultWaterLevel = -1;
-                self.floatWaterLevel = float.NegativeInfinity;
-            }
-            orig(self);
         }
 
         // Create log display
