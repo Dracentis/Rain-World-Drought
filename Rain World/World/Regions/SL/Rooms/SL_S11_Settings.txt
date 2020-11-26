@@ -1,0 +1,8 @@
+Template: SL_SettingsTemplate_Sewer
+DangerType: Flood
+CeilingDrips: 0.6847826
+Clouds: 0.9673913
+Palette: 34
+AmbientSounds: SPOT><SO_WAT-OpenFlow.ogg><766.1756><249.4356><0.3478261><0.4521739><536.1756><546.4357><-207.3553><-186.3553><0><0.2630436, 
+FadePalette: 8, 0.2065217
+WetTerrain: OFF
