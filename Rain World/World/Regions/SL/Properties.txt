@@ -8,6 +8,8 @@ overseersMin: 0
 overseersMax: 4
 playerGuideOverseerSpawnChance: 0.0
 Subregion: Shoreline
+Broken Shelters: 0: SL_S11
+Broken Shelters: 2: SL_S11
 Room Setting Templates: Fog, Sewer
 Room_Attr: SL_A08: Salamander-1,
 Room_Attr: SL_E03: Vulture-2,JetFish-1,KingVulture-2,
