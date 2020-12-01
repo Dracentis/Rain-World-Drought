@@ -1,0 +1,2461 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConfigMachine</name>
+    </assembly>
+    <members>
+        <member name="T:OptionalUI.InvalidModNameException">
+            <summary>
+            Thrown when ModID cannot be used as Folder Name
+            </summary>
+        </member>
+        <member name="T:OptionalUI.InvalidMenuObjAccessException">
+            <summary>
+            Exception that's thrown when your mod tried to access MenuObject in UIelement outside Mod Config Screen
+            </summary>
+        </member>
+        <member name="T:OptionalUI.NoTabException">
+            <summary>
+            You need at least one OpTab to contain any UIelements
+            </summary>
+        </member>
+        <member name="T:OptionalUI.TooManyTabsException">
+            <summary>
+            You cannot have more that 20 tabs for single mod
+            </summary>
+        </member>
+        <member name="T:OptionalUI.GeneralInitializeException">
+            <summary>
+            You need at least one OpTab to contain any UIelements
+            </summary>
+        </member>
+        <member name="T:OptionalUI.DupelicateKeyException">
+            <summary>
+            There's already a UIconfig with same key
+            </summary>
+        </member>
+        <member name="T:OptionalUI.GenericUpdateException">
+            <summary>
+            Problem occured in Option Menu Update
+            </summary>
+        </member>
+        <member name="T:OptionalUI.LoadDataException">
+            <summary>
+            Problem occured in LoadData
+            </summary>
+        </member>
+        <member name="T:OptionalUI.SaveDataException">
+            <summary>
+            Problem occured in SaveData
+            </summary>
+        </member>
+        <member name="T:OptionalUI.ElementFormatException">
+            <summary>
+            Wrong argument for (usually) constructor in <see cref="T:OptionalUI.UIelement"/>
+            </summary>
+        </member>
+        <member name="T:OptionalUI.InvalidGetPropertyException">
+            <summary>
+            Called progData property without being it progData
+            </summary>
+        </member>
+        <member name="T:OptionalUI.InvalidActionException">
+            <summary>
+            Wrong method called for wrong <see cref="T:OptionalUI.UIelement"/>
+            </summary>
+        </member>
+        <member name="T:OptionalUI.NullModException">
+            <summary>
+            <see cref="F:OptionalUI.OptionInterface.mod"/> is null.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpLabelLong.#ctor(UnityEngine.Vector2,UnityEngine.Vector2,System.String,System.Boolean,FLabelAlignment)">
+            <summary>
+            Special Label that creates <see cref="T:Menu.MenuLabel"/> to break Futile's character limits.
+            </summary>
+            <param name="pos">BottomLeft Position</param>
+            <param name="size">Size of the Box</param>
+            <param name="text">Text you want to display</param>
+            <param name="autoWrap">Whether you want to wrap text automatically.</param>
+            <param name="alignment">Alignment. Left/Center/Right. Left is default.</param>
+        </member>
+        <member name="F:OptionalUI.OpLabelLong.allowOverflow">
+            <summary>
+            if false, text will be cut if it exceeds the size.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpLabelLong.labels">
+            <summary>
+            The List of <see cref="T:Menu.MenuLabel"/> for this
+            </summary>
+        </member>
+        <member name="T:OptionalUI.ListItem">
+            <summary>
+            struct that's used for handling items in <see cref="T:OptionalUI.OpComboBox"/>
+            </summary>
+        </member>
+        <member name="M:OptionalUI.ListItem.#ctor(System.String,System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="name"></param>
+             <param name="value"></param>
+        </member>
+        <member name="F:OptionalUI.ListItem.name">
+            <summary>
+            Unique name of item.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.ListItem.value">
+            <summary>
+            value used for comparison and sorting.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.ListItem.index">
+            <summary>
+            index number in <see cref="T:OptionalUI.OpComboBox"/>. This will be set automatically, and used for search function.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.ListItem.Comparer(OptionalUI.ListItem,OptionalUI.ListItem)">
+            <summary>
+            Used for <c>List.Sort(IComparer{T})</c>
+            </summary>
+        </member>
+        <member name="T:OptionalUI.FCursor">
+            <summary>
+            <see cref="T:FContainer"/> that acts like <see cref="T:FSprite"/>
+            </summary>
+        </member>
+        <member name="P:OptionalUI.FCursor.color">
+            <summary>
+            Colour of this sprite
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpComboBox.#ctor(UnityEngine.Vector2,UnityEngine.Vector2,System.String,System.Collections.Generic.List{OptionalUI.ListItem},System.String)">
+            <summary>
+            DropDown box that can be also be searched.
+            </summary>
+            <param name="pos">LeftBottom Position of folded <see cref="T:OptionalUI.OpComboBox"/></param>
+            <param name="size">The box size of folded <see cref="T:OptionalUI.OpComboBox"/>. Minimum is 24 pxl for each dimension.</param>
+            <param name="key">Unique <see cref="F:OptionalUI.UIconfig.key"/></param>
+            <param name="list">Will be sorted automatically by <see cref="F:OptionalUI.ListItem.value"/>, then <see cref="F:OptionalUI.ListItem.name"/></param>
+            <param name="defaultName">Set to empty to have no default selection</param>
+            <exception cref="T:OptionalUI.ElementFormatException">Thrown when list has no <see cref="T:OptionalUI.ListItem"/>.</exception>
+        </member>
+        <member name="M:OptionalUI.OpComboBox.#ctor(UnityEngine.Vector2,UnityEngine.Vector2,System.String,System.String[],System.String)">
+            <summary>
+            DropDown box that can be also be searched.
+            </summary>
+            <param name="pos">LeftBottom Position of folded <see cref="T:OptionalUI.OpComboBox"/></param>
+            <param name="size">The box size of folded <see cref="T:OptionalUI.OpComboBox"/>. Minimum is 24 pxl for each dimension.</param>
+            <param name="key">Unique <see cref="F:OptionalUI.UIconfig.key"/></param>
+            <param name="array">The index will be <see cref="F:OptionalUI.ListItem.value"/>, so the order will be kept</param>
+            <param name="defaultName">Set to empty to have no default selection</param>
+            <exception cref="T:OptionalUI.ElementFormatException">Thrown when array has no item.</exception>
+        </member>
+        <member name="M:OptionalUI.OpComboBox.GetItemList">
+            <summary>
+            Grab the array of <see cref="T:OptionalUI.ListItem"/> in <see cref="T:OptionalUI.OpComboBox"/>
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpComboBox.colorEdge">
+            <summary>
+            Edge Colour of <see cref="T:OptionalUI.DyeableRect"/>. Default is <see cref="F:Menu.Menu.MenuColors.MediumGrey"/>.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpComboBox.colorFill">
+            <summary>
+            Fill Colour of <see cref="T:OptionalUI.DyeableRect"/>. Default is <see cref="F:Menu.Menu.MenuColors.Black"/>.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpComboBox.AddItems(System.Boolean,OptionalUI.ListItem[])">
+            <summary>
+            Add items to this <see cref="T:OptionalUI.OpComboBox"/>
+            </summary>
+            <param name="sort">Whether re-sort the list or add newItems at the end</param>
+            <param name="newItems">New <see cref="T:OptionalUI.ListItem"/>s to be added</param>
+            <exception cref="T:OptionalUI.InvalidActionException">Thrown when you call this for <see cref="T:OptionalUI.OpResourceSelector"/>.</exception>
+        </member>
+        <member name="M:OptionalUI.OpComboBox.RemoveItems(System.Boolean,System.String[])">
+            <summary>
+            Remove items with the said names
+            </summary>
+            <param name="selectNext">If true, when selected item is removed the value will be the next one. If false, the value will become null.</param>
+            <param name="names">Names of items to be removed</param>
+            <exception cref="T:OptionalUI.InvalidActionException">Thrown when this is <see cref="T:OptionalUI.OpResourceSelector"/>, or you removed every items.</exception>
+        </member>
+        <member name="T:OptionalUI.OpResourceSelector">
+            <summary>
+            Special type of <see cref="T:OptionalUI.OpComboBox"/> that uses Rain World Resources instead of custom list.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpResourceSelector.#ctor(UnityEngine.Vector2,UnityEngine.Vector2,System.String,System.Type,System.String)">
+            <summary>
+            Special type of <see cref="T:OptionalUI.OpComboBox"/> that uses Rain World Enum instead of custom list.
+            </summary>
+            <param name="pos">LeftBottom Position of folded <see cref="T:OptionalUI.OpComboBox"/></param>
+            <param name="size">The box size of folded <see cref="T:OptionalUI.OpComboBox"/></param>
+            <param name="key">Unique <see cref="F:OptionalUI.UIconfig.key"/></param>
+            <param name="enumType">Type of Enum that you want to get items</param>
+            <param name="defaultName"></param>
+            <exception cref="T:OptionalUI.ElementFormatException">Thrown when enumType is not <see cref="T:System.Enum"/>.</exception>
+        </member>
+        <member name="M:OptionalUI.OpResourceSelector.#ctor(UnityEngine.Vector2,UnityEngine.Vector2,System.String,OptionalUI.OpResourceSelector.SpecialEnum,System.String)">
+            <summary>
+            Special type of <see cref="T:OptionalUI.OpComboBox"/> that uses Rain World Resources instead of custom list. See also <seealso cref="T:OptionalUI.OpResourceSelector.SpecialEnum"/>.
+            </summary>
+            <param name="pos">LeftBottom Position of folded <see cref="T:OptionalUI.OpComboBox"/></param>
+            <param name="size">The box size of folded <see cref="T:OptionalUI.OpComboBox"/></param>
+            <param name="key">Unique <see cref="F:OptionalUI.UIconfig.key"/></param>
+            <param name="listType">Type of List that you want to get items</param>
+            <param name="defaultName"></param>
+            <exception cref="T:OptionalUI.ElementFormatException">Thrown when you used <see cref="F:OptionalUI.OpResourceSelector.SpecialEnum.Enum"/></exception>
+        </member>
+        <member name="T:OptionalUI.OpResourceSelector.SpecialEnum">
+            <summary>
+            The List of Rain World Resource that doesn't have enumType. See also <seealso cref="M:OptionalUI.OpResourceSelector.#ctor(UnityEngine.Vector2,UnityEngine.Vector2,System.String,OptionalUI.OpResourceSelector.SpecialEnum,System.String)"/>
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpResourceSelector.SpecialEnum.Enum">
+            <summary>
+            Do NOT use this. This is for <see cref="M:OptionalUI.OpResourceSelector.#ctor(UnityEngine.Vector2,UnityEngine.Vector2,System.String,System.Type,System.String)"/>.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpResourceSelector.SpecialEnum.Regions">
+            <summary>
+            World/Regions/regions.txt
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpResourceSelector.SpecialEnum.Decals">
+            <summary>
+            Resources/Decals
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpResourceSelector.SpecialEnum.Illustrations">
+            <summary>
+            Resources/Illustrations
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpResourceSelector.SpecialEnum.Songs">
+            <summary>
+            Resources/Music/Songs.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpResourceSelector.SpecialEnum.Palettes">
+            <summary>
+            Resources/Palettes
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpResourceSelector.SpecialEnum.Shaders">
+            <summary>
+            <see cref="F:RainWorld.Shaders"/>
+            </summary>
+        </member>
+        <member name="T:OptionalUI.OpScrollBox">
+            <summary>
+            A box that contains other UI elements to be scrolled through vertically. See remarks for perfomance considerations.
+            <para><see cref="T:OptionalUI.OpScrollBox"/> is contribution of Slimed_Cubed.</para>
+            </summary>
+            <remarks>
+            Before adding objects to an <see cref="T:OptionalUI.OpScrollBox"/> it must first be added to a tab.
+            <para>Each scrollbox owns a <see cref="T:UnityEngine.Camera"/> that (normally) renders each frame. This could cause performance issues with many elements in many scrollboxes.
+            Consider setting <see cref="F:OptionalUI.OpScrollBox.redrawFlags"/> to <see cref="F:OptionalUI.OpScrollBox.RedrawEvents.OnHover"/> to improve performance. Only applies if no child elements are animated unless the mouse is over them.
+            If the contents are to be completely static, consider setting <see cref="F:OptionalUI.OpScrollBox.redrawFlags"/> to <see cref="F:OptionalUI.OpScrollBox.RedrawEvents.Never"/>.
+            The contents will still be redrawn on scroll or when <see cref="M:OptionalUI.OpScrollBox.MarkDirty"/> is called.</para>
+            <para>Adding instances of <see cref="T:OptionalUI.OpScrollBox"/> as children will not function correctly.</para>
+            </remarks>
+        </member>
+        <member name="P:OptionalUI.OpScrollBox.childOffset">
+            <summary>
+            The real position of the box's contents relative to the tab, a considerable distance off-screen.
+            <para>This value is added to each child's pos automatically when they are added in <see cref="M:OptionalUI.OpScrollBox.AddItems(OptionalUI.UIelement[])"/>.</para>
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpScrollBox.children">
+            <summary>
+            A list of all items inside this scrollbox.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpScrollBox.horizontal">
+            <summary>
+            Whether or not the scrollbox scrolls horizontally.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpScrollBox.colorEdge">
+            <summary>
+            The color of the border of the box behind this scrollbox.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpScrollBox.colorFill">
+            <summary>
+            The color of the fill of the box behind this scrollbox.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpScrollBox.fillAlpha">
+            <summary>
+            The alpha of the fill of the box behind this scrollbox.
+            </summary>
+        </member>
+        <member name="P:OptionalUI.OpScrollBox.ScrollOffset">
+            <summary>
+            The visual offset, in pixels, of the contents of this scrollbox. Always equal to or less than zero.
+            </summary>
+        </member>
+        <member name="P:OptionalUI.OpScrollBox.MaxScroll">
+            <summary>
+            Returns the value of <see cref="P:OptionalUI.OpScrollBox.ScrollOffset"/> at the topmost or rightmost position of the box.
+            This value will always be negative or zero.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpScrollBox.targetScrollOffset">
+            <summary>
+            The target value of <see cref="P:OptionalUI.OpScrollBox.ScrollOffset"/>. Change this to smoothly animate scrolling.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpScrollBox.contentSize">
+            <summary>
+            The height of the content inside this scrollbox.
+            Used to calculate maximum scroll distance.
+            </summary>
+        </member>
+        <member name="T:OptionalUI.OpScrollBox.RedrawEvents">
+            <summary>
+            Indicates when the contents of a scrollbox should be redrawn.
+            </summary>
+            <seealso cref="F:OptionalUI.OpScrollBox.redrawFlags"/>
+        </member>
+        <member name="F:OptionalUI.OpScrollBox.RedrawEvents.Never">
+            <summary>Only redraws the scrollbox when scrolled. Use <see cref="M:OptionalUI.OpScrollBox.MarkDirty"/> to redraw manually.</summary>
+        </member>
+        <member name="F:OptionalUI.OpScrollBox.RedrawEvents.Always">
+            <summary>Redraws the scrollbox every frame.</summary>
+        </member>
+        <member name="F:OptionalUI.OpScrollBox.RedrawEvents.OnHover">
+            <summary>Redraws the scrollbox when the mouse is hovered over it. Will continue to redraw for 0.5 seconds afterwards.</summary>
+        </member>
+        <member name="F:OptionalUI.OpScrollBox.RedrawEvents.OnKeypress">
+            <summary>Redraws the scrollbox as long as a key is held down. Will continue to redraw for 0.5 seconds afterwards.</summary>
+        </member>
+        <member name="F:OptionalUI.OpScrollBox.redrawFlags">
+            <summary>
+            Indicates when this scrollbox should be redrawn. Defaults to <see cref="F:OptionalUI.OpScrollBox.RedrawEvents.Always"/>.
+            </summary>
+            <seealso cref="T:OptionalUI.OpScrollBox.RedrawEvents"/>
+        </member>
+        <member name="P:OptionalUI.OpScrollBox.ScrollLocked">
+            <summary>
+            Whether or not scrolling is currently locked. Use <see cref="M:OptionalUI.OpScrollBox.Lock(System.Boolean)"/> and <see cref="M:OptionalUI.OpScrollBox.Unlock"/> to manipulate.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpScrollBox.allowMouseOnContents">
+            <summary>
+            Set to false to keep the mouse from interacting with this scrollbox's contents.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpScrollBox.#ctor(UnityEngine.Vector2,UnityEngine.Vector2,System.Single,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Creates an empty scrollbox.
+            </summary>
+            <param name="pos">Bottom left position</param>
+            <param name="size">Size of the visual box - for interior height see <see cref="F:OptionalUI.OpScrollBox.contentSize"/></param>
+            <param name="contentSize">The size of this box's contents (max 10000). Represents width if <see cref="F:OptionalUI.OpScrollBox.horizontal"/> is true, height otherwise. See <see cref="F:OptionalUI.OpScrollBox.contentSize"/></param>
+            <param name="hasBack">Whether or not to create a box behind this scrollbox</param>
+            <param name="hasSlideBar">Whether or not to create a slider at the right/bottom edge</param>
+        </member>
+        <member name="M:OptionalUI.OpScrollBox.#ctor(OptionalUI.OpTab,System.Single,System.Boolean,System.Boolean)">
+            <summary>
+            Creates an empty scrollbox that fits <see cref="T:OptionalUI.OpTab"/>. This constructor will call <see cref="M:OptionalUI.OpTab.AddItems(OptionalUI.UIelement[])"/> automatically.
+            </summary>
+            <remarks>Example: <code>
+            OpScrollBox sb = new OpScrollBox(Tabs[0], 2400f, false);
+            sb.AddItems(new OpImage(new Vector2(420f, 1850f), "Futile_White"));
+            </code></remarks>
+            <param name="contentSize">The size of this box's contents (max 10000). Represents width if <see cref="F:OptionalUI.OpScrollBox.horizontal"/> is true, height otherwise. See <see cref="F:OptionalUI.OpScrollBox.contentSize"/></param>
+            <param name="hasSlideBar">Whether or not to create a slider at the right/bottom edge</param>
+        </member>
+        <member name="F:OptionalUI.OpScrollBox.doesBackBump">
+            <summary>
+            if set to false, BackRectangular does not react with mouse over.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpScrollBox.MarkDirty">
+            <summary>
+            Causes the contents of this scrollbox to be redrawn at the end of this frame.
+            </summary>
+            <seealso cref="M:OptionalUI.OpScrollBox.MarkDirty(System.Single)"/>
+        </member>
+        <member name="M:OptionalUI.OpScrollBox.MarkDirty(System.Single)">
+            <summary>
+            Redraws the scrollbox every frame for the given time.
+            </summary>
+            <param name="time">Length of time to redraw for, in seconds</param>
+            <seealso cref="M:OptionalUI.OpScrollBox.MarkDirty"/>
+        </member>
+        <member name="M:OptionalUI.OpScrollBox.Lock(System.Boolean)">
+            <summary>
+            Stops the user from scrolling this scrollbox. <see cref="F:OptionalUI.OpScrollBox.targetScrollOffset"/> and <see cref="P:OptionalUI.OpScrollBox.ScrollOffset"/> will function even if locked.
+            </summary>
+            <seealso cref="M:OptionalUI.OpScrollBox.Unlock"/>
+            <seealso cref="P:OptionalUI.OpScrollBox.ScrollLocked"/>
+            <param name="stopImmediately">If true the scrollbox stops immediately, otherwise it proceeds to <see cref="F:OptionalUI.OpScrollBox.targetScrollOffset"/> before stopping.</param>
+        </member>
+        <member name="M:OptionalUI.OpScrollBox.Unlock">
+            <summary>
+            Called after <see cref="M:OptionalUI.OpScrollBox.Lock(System.Boolean)"/> to allow the user to scroll again.
+            </summary>
+            <seealso cref="M:OptionalUI.OpScrollBox.Lock(System.Boolean)"/>
+            <seealso cref="P:OptionalUI.OpScrollBox.ScrollLocked"/>
+        </member>
+        <member name="M:OptionalUI.OpScrollBox.ScrollToTop(System.Boolean)">
+            <summary>
+            Immediately scrolls to the top of the box's content.
+            If <see cref="F:OptionalUI.OpScrollBox.horizontal"/> is <c>true</c>, it scrolls to the leftmost.
+            </summary>
+            <param name="immediate">If <c>true</c> the scrolling animation will be skipped</param>
+        </member>
+        <member name="M:OptionalUI.OpScrollBox.ScrollToBottom(System.Boolean)">
+            <summary>
+            Immediately scrolls to the bottom of the box's content.
+            If <see cref="F:OptionalUI.OpScrollBox.horizontal"/> is <c>true</c>, it scrolls to the rightmost.
+            </summary>
+            <param name="immediate">If <c>true</c> the scrolling animation will be skipped</param>
+        </member>
+        <member name="F:OptionalUI.OpScrollBox.ChildBlacklist">
+            <summary>
+            UIelements that are forbidden to for <see cref="M:OptionalUI.OpScrollBox.AddItems(OptionalUI.UIelement[])"/>.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpScrollBox.AddItems(OptionalUI.UIelement[])">
+            <summary>
+            Adds a collection of items to the interior of this scrollbox.
+            <para>The <see cref="T:OptionalUI.OpScrollBox"/> instance must be added to a tab before calling this method.
+            And for children, call <see cref="M:OptionalUI.OpScrollBox.AddItems(OptionalUI.UIelement[])"/> instead of <see cref="M:OptionalUI.OpTab.AddItems(OptionalUI.UIelement[])"/></para>
+            </summary>
+            <remarks>Example: <c>
+            myScrollBox.AddItems(new OpLabel(50f, 50f, "Example"));
+            </c></remarks>
+            <exception cref="T:System.InvalidOperationException">This <see cref="T:OptionalUI.OpScrollBox"/> was not added to an <see cref="T:OptionalUI.OpTab"/> before adding children.</exception>
+            <param name="items">Items to add</param>
+        </member>
+        <member name="T:OptionalUI.BumpBehaviour">
+            <summary>
+            Mimics <see cref="T:Menu.ButtonBehavior"/> of vanilla Rain World UIs
+            </summary>
+        </member>
+        <member name="M:OptionalUI.BumpBehaviour.#ctor(OptionalUI.UIelement)">
+            <summary>
+            Mimics <see cref="T:Menu.ButtonBehavior"/> of vanilla Rain World UIs
+            </summary>
+            <param name="owner"><see cref="T:OptionalUI.UIelement"/> owner</param>
+        </member>
+        <member name="F:OptionalUI.BumpBehaviour.owner">
+            <summary>
+            <see cref="T:OptionalUI.UIelement"/> owner
+            </summary>
+        </member>
+        <member name="M:OptionalUI.BumpBehaviour.GetColor(UnityEngine.Color)">
+            <summary>
+            Grab Reactive Color with BumpBehav
+            </summary>
+            <param name="orig">Original Color</param>
+            <returns>Reactive Color</returns>
+        </member>
+        <member name="M:OptionalUI.BumpBehaviour.Update">
+            <summary>
+            This will be called automatically with <see cref="M:OptionalUI.UIconfig.Update(System.Single)"/> or <see cref="M:OptionalUI.UItrigger.Update(System.Single)"/>
+            </summary>
+        </member>
+        <member name="P:OptionalUI.BumpBehaviour.AddSize">
+            <summary>
+            Multiplay this with <c>new Vector2(4f, 4f)</c> and apply to <see cref="T:OptionalUI.DyeableRect"/>.addSize
+            </summary>
+        </member>
+        <member name="P:OptionalUI.BumpBehaviour.FillAlpha">
+            <summary>
+            Apply this to <see cref="T:OptionalUI.DyeableRect"/>.fillAlpha
+            </summary>
+        </member>
+        <member name="M:OptionalUI.BumpBehaviour.Sin(System.Single)">
+            <summary>
+            Use this with <see cref="M:UnityEngine.Color.Lerp(UnityEngine.Color,UnityEngine.Color,System.Single)"/> to make colour blinking.
+            </summary>
+            <param name="period">Default is 30f. Recommend 10f for fast blinking.</param>
+        </member>
+        <member name="T:OptionalUI.FTexture">
+            <summary>
+            Special kind of <see cref="T:FSprite"/> that can use raw <see cref="T:UnityEngine.Texture2D"/>
+            </summary>
+        </member>
+        <member name="M:OptionalUI.FTexture.#ctor(UnityEngine.Texture2D,System.String)">
+            <summary>
+            Special kind of <see cref="T:FSprite"/> that accepts raw <see cref="T:UnityEngine.Texture2D"/>
+            </summary>
+            <param name="texture"><see cref="T:UnityEngine.Texture2D"/> to display</param>
+            <param name="salt">Additional salt (No need to be unique)</param>
+        </member>
+        <member name="M:OptionalUI.FTexture.#ctor(UnityEngine.Texture,System.String)">
+            <summary>
+            Special kind of <see cref="T:FSprite"/> that accepts raw <see cref="T:UnityEngine.Texture"/>
+            </summary>
+            <param name="texture"><see cref="T:UnityEngine.Texture"/> to display</param>
+            <param name="salt">Additional salt (No need to be unique)</param>
+        </member>
+        <member name="P:OptionalUI.FTexture.salt">
+            <summary>
+            Randomly generated salt to prevent duplicate <see cref="T:FAtlasElement"/> name
+            </summary>
+        </member>
+        <member name="M:OptionalUI.FTexture.AddTexture2DToFManager(UnityEngine.Texture2D,System.String)">
+            <summary>
+            Add Texture2D to <see cref="T:FAtlasManager"/>, and returns <see cref="F:FAtlasElement.name"/> so it can be used in <see cref="M:FAtlasManager.GetElementWithName(System.String)"/>
+            </summary>
+            <param name="texture"><see cref="T:UnityEngine.Texture2D"/> to be added</param>
+            <param name="salt">Set this to reduce iteration to get an unique <see cref="F:FAtlasElement.name"/></param>
+            <returns>FElement name</returns>
+        </member>
+        <member name="M:OptionalUI.FTexture.SetTexture(UnityEngine.Texture2D)">
+            <summary>
+            Change <see cref="T:UnityEngine.Texture2D"/> to display
+            </summary>
+            <param name="newTexture">New <see cref="T:UnityEngine.Texture2D"/></param>
+        </member>
+        <member name="M:OptionalUI.FTexture.SetTexture(UnityEngine.Texture)">
+            <summary>
+            Change <see cref="T:UnityEngine.Texture"/> to display
+            </summary>
+            <param name="newTexture">New <see cref="T:UnityEngine.Texture"/></param>
+        </member>
+        <member name="M:OptionalUI.FTexture.Destroy">
+            <summary>
+            Call this when you finished using <see cref="T:OptionalUI.FTexture"/> to clear its texture from <see cref="T:FAtlasManager"/>
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpSimpleButton.#ctor(UnityEngine.Vector2,UnityEngine.Vector2,System.String,System.String)">
+            <summary>
+            Simple Rectangular Botton
+            </summary>
+            <param name="pos">BottomLeft Position</param>
+            <param name="size">Minimum size is 24x24</param>
+            <param name="signal">Keyword that gets sent to Signal</param>
+            <param name="text">Text you want to have inside the button</param>
+        </member>
+        <member name="P:OptionalUI.OpSimpleButton.text">
+            <summary>
+            Text inside the button
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpSimpleButton.colorEdge">
+            <summary>
+            The colour of Rectangle Edge and Text
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpSimpleButton.colorFill">
+            <summary>
+            The colour of Rectangle Fill
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpSimpleImageButton.#ctor(UnityEngine.Vector2,UnityEngine.Vector2,System.String,System.String)">
+            <summary>
+            SimpleButton that uses <see cref="T:FAtlasElement"/> instead of text
+            </summary>
+            <param name="pos">BottomLeft Position</param>
+            <param name="size">Minimum size is 24x24</param>
+            <param name="signal">Keyword that gets sent to Signal</param>
+            <param name="fAtlasElement">the name of FAtlasElement</param>
+            <exception cref="T:OptionalUI.ElementFormatException">Thrown when <paramref name="fAtlasElement"/> is Invalid</exception>
+        </member>
+        <member name="M:OptionalUI.OpSimpleImageButton.#ctor(UnityEngine.Vector2,UnityEngine.Vector2,System.String,UnityEngine.Texture2D)">
+            <summary>
+            SimpleButton that uses <see cref="T:UnityEngine.Texture2D"/> instead of text
+            </summary>
+            <param name="pos">BottomLeft Position</param>
+            <param name="size">Minimum size is 24x24</param>
+            <param name="signal">Keyword that gets sent to Signal</param>
+            <param name="image"><see cref="T:UnityEngine.Texture2D"/> to display</param>
+            <exception cref="T:OptionalUI.ElementFormatException">Thrown when <paramref name="image"/> is null</exception>
+        </member>
+        <member name="F:OptionalUI.OpSimpleImageButton.sprite">
+            <summary>
+            <see cref="T:FSprite"/> of this button
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpSimpleImageButton.ChangeImage(UnityEngine.Texture2D)">
+            <summary>
+            Swap Image to new one
+            </summary>
+            <param name="newImage">new image</param>
+            <exception cref="T:OptionalUI.InvalidActionException">Thrown when you called this with <see cref="T:FAtlasElement"/> version of the button</exception>
+        </member>
+        <member name="T:OptionalUI.OpSpriteEditor">
+             <summary>
+             Features:
+             Four times undos
+             16 Palettes (First two are fixed to Clear and White)
+            
+             </summary>
+        </member>
+        <member name="M:OptionalUI.OpSpriteEditor.#ctor(UnityEngine.Vector2,UnityEngine.Vector2,System.String,UnityEngine.Texture2D)">
+            <summary>
+            Config Machine's internal Sprite Editor with minimal functionality
+            </summary>
+            <param name="pos">Bottom Left Position</param>
+            <param name="size">Minimum is Texture size + 10 pxl for each dimension</param>
+            <param name="key"></param>
+            <param name="defaultTexture"></param>
+        </member>
+        <member name="F:OptionalUI.OpSpriteEditor.colorEdge">
+            <summary>
+            Used for Colour of Button and Editor Bound Rectangular
+            </summary>
+        </member>
+        <member name="P:OptionalUI.OpSpriteEditor.description">
+            <summary>
+            Custom Description will be shown for Preview Mode
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpSpriteEditor.StringToTexture2D(System.String)">
+            <summary>
+            Converts Base64 <see cref="T:System.String"/> to <see cref="T:UnityEngine.Texture2D"/>
+            </summary>
+            <remarks>
+            See <seealso cref="M:OptionalUI.OpSpriteEditor.Texture2DToString(UnityEngine.Texture2D)"/> for reverse.
+            </remarks>
+            <param name="data">Base64String</param>
+            <returns>Texture2D</returns>
+        </member>
+        <member name="M:OptionalUI.OpSpriteEditor.Texture2DToString(UnityEngine.Texture2D)">
+            <summary>
+            Converts <see cref="T:UnityEngine.Texture2D"/> to Base64 <see cref="T:System.String"/>
+            </summary>
+            <remarks>
+            See <seealso cref="M:OptionalUI.OpSpriteEditor.StringToTexture2D(System.String)"/> for reverse.
+            <param name="image">Texture2D to be converted</param>
+            <returns>Base64String</returns>
+            </remarks>
+        </member>
+        <member name="P:OptionalUI.OpSpriteEditor.valueTexture">
+            <summary>
+            value of this in <see cref="T:UnityEngine.Texture2D"/> format.
+            </summary>
+            <remarks>
+            See also <seealso cref="M:OptionalUI.OpSpriteEditor.StringToTexture2D(System.String)"/> and
+            <seealso cref="M:OptionalUI.OpSpriteEditor.Texture2DToString(UnityEngine.Texture2D)"/>.
+            </remarks>
+        </member>
+        <member name="T:OptionalUI.LoremIpsum">
+            <summary>
+            Static class that aids generating Lorem Ipsum, placeholder text. See <see cref="M:OptionalUI.LoremIpsum.Generate(System.Int32,System.Int32,System.Int32)"/> to use.
+            <para>Source: https://stackoverflow.com/questions/4286487/is-there-any-lorem-ipsum-generator-in-c </para>
+            </summary>
+        </member>
+        <member name="F:OptionalUI.LoremIpsum.meanCharPerSentence">
+            <summary>
+            Average character count per sentence. See <see cref="M:OptionalUI.LoremIpsum.Generate(System.Int32,System.Int32,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="M:OptionalUI.LoremIpsum.Generate(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Generate rough Lorem Ipsum. See also <seealso cref="F:OptionalUI.LoremIpsum.meanCharPerSentence"/>.
+            </summary>
+            <param name="minSentences">Minimum sentences per each paragraph</param>
+            <param name="maxSentences">Maximum sentences per each paragraph</param>
+            <param name="numParagraphs">Number of paragraphs divided by linebreak</param>
+            <returns></returns>
+        </member>
+        <member name="T:OptionalUI.UItrigger">
+            <summary>
+            Special kind of <see cref="T:OptionalUI.UIelement"/> that can trigger <see cref="M:OptionalUI.OptionInterface.Signal(OptionalUI.UItrigger,System.String)"/>
+            </summary>
+        </member>
+        <member name="M:OptionalUI.UItrigger.#ctor(UnityEngine.Vector2,UnityEngine.Vector2,System.String)">
+            <summary>
+            Special kind of Rectangular <see cref="T:OptionalUI.UIelement"/> that can trigger <see cref="M:OptionalUI.OptionInterface.Signal(OptionalUI.UItrigger,System.String)"/>
+            </summary>
+            <remarks>If using <see cref="T:OptionalUI.UItrigger"/> causes crash, check if you are running <see cref="M:OptionalUI.OptionInterface.Update(System.Single)"/></remarks>
+            <param name="pos">BottomLeft Position</param>
+            <param name="size">Size</param>
+            <param name="signal">Non-exclusive signal key</param>
+        </member>
+        <member name="M:OptionalUI.UItrigger.#ctor(UnityEngine.Vector2,System.Single,System.String)">
+            <summary>
+            Special kind of Circular <see cref="T:OptionalUI.UIelement"/> that can trigger <see cref="M:OptionalUI.OptionInterface.Signal(OptionalUI.UItrigger,System.String)"/>
+            </summary>
+            <remarks>If using <see cref="T:OptionalUI.UItrigger"/> causes crash, check if you are running <see cref="M:OptionalUI.OptionInterface.Update(System.Single)"/></remarks>
+            <param name="pos">BottomLeft Position</param>
+            <param name="rad">Radius</param>
+            <param name="signal">Non-exclusive signal key</param>
+        </member>
+        <member name="F:OptionalUI.UItrigger.signal">
+            <summary>
+            Non-exclusive key for UItrigger
+            </summary>
+        </member>
+        <member name="F:OptionalUI.UItrigger.greyedOut">
+            <summary>
+            Whether this UItrigger is greyedOut or not
+            </summary>
+        </member>
+        <member name="P:OptionalUI.UItrigger.held">
+            <summary>
+            Whether this is held or not.
+            If this is true, other <see cref="T:OptionalUI.UIelement"/> will be frozen.
+            </summary>
+        </member>
+        <member name="P:OptionalUI.UItrigger.bumpBehav">
+            <summary>
+            Mimics <see cref="T:Menu.ButtonBehavior"/> of vanilla Rain World UIs
+            </summary>
+        </member>
+        <member name="P:OptionalUI.UItrigger.disabled">
+            <summary>
+            Either this is <see cref="F:OptionalUI.UItrigger.greyedOut"/> or <see cref="P:OptionalUI.UIelement.isHidden"/>.
+            Prevents its interaction in <see cref="M:OptionalUI.UItrigger.Update(System.Single)"/>.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.UItrigger.Signal">
+            <summary>
+            Calls <see cref="M:OptionalUI.OptionInterface.Signal(OptionalUI.UItrigger,System.String)"/>
+            </summary>
+        </member>
+        <member name="T:OptionalUI.OptionInterface">
+            <summary>
+            To Interact with CompletelyOptional Mod
+            Check if PartialityMod file has this class
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OptionInterface.#ctor(Partiality.Modloader.PartialityMod)">
+            <summary>
+            Option Interface for Partiality Mod/Patch.
+            Create <c>public static [YourOIclass] LoadOI()</c> in your <see cref="T:Partiality.Modloader.PartialityMod"/>.
+            ConfigMachine will load your OI after IntroRoll.
+            </summary>
+            <remarks>Example:
+            <code>
+            public static MyOptionInterface LoadOI()
+            {
+                return new MyOptionInterface(MyMod.instance);
+            }
+            </code>
+            </remarks>
+            <param name="mod">Your Partiality mod.</param>
+        </member>
+        <member name="M:OptionalUI.OptionInterface.ConfigModExist">
+            <summary>
+            Returns whether ConfigMachine is loaded or not.
+            </summary>
+            <remarks>But if it didn't, your dependent mod also won't load so this never gets unused.</remarks>
+        </member>
+        <member name="M:OptionalUI.OptionInterface.GetPriority">
+            <summary>
+            The less the value is, the more likely to ignored by ConfigMachine. The range is -1 ~ 2.
+            </summary>
+        </member>
+        <member name="P:OptionalUI.OptionInterface.IsConfigScreen">
+            <summary>
+            Is this ConfigScreen or not.
+            If you are editing <see cref="T:Menu.MenuObject"/> in <see cref="T:OptionalUI.UIelement"/>s,
+            make sure that those codes don't run when this is false.
+            Or it will throw <see cref="T:System.NullReferenceException"/>.
+            </summary>
+        </member>
+        <member name="P:OptionalUI.OptionInterface.soundFill">
+            <summary>
+            How much the Sound Engine is full. This exists to prevent cramping Unity Sound thingly and causing sound artifacts. See also <seealso cref="P:OptionalUI.OptionInterface.soundFilled"/>
+            </summary>
+            <remarks>Example: <code>
+            if (!soundFilled)
+            {
+                soundFill += 5;
+                menu.PlaySound(SoundID.MENU_Scroll_Tick);
+            }
+            </code>
+            </remarks>
+        </member>
+        <member name="P:OptionalUI.OptionInterface.soundFilled">
+            <summary>
+            Whether the Sound Engine is full or not. See also <seealso cref="P:OptionalUI.OptionInterface.soundFill"/> for example.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OptionInterface.Configuable">
+            <summary>
+            Whether the mod is configurable or not.
+            You can just replace this to <c>return true;</c> or <c>false</c> to save computing time.
+            </summary>
+            <returns>Whether the mod is configurable or not</returns>
+        </member>
+        <member name="F:OptionalUI.OptionInterface.mod">
+            <summary>
+            The <see cref="T:Partiality.Modloader.PartialityMod"/> using this <see cref="T:OptionalUI.OptionInterface"/>.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OptionInterface.Tabs">
+            <summary>
+            OpTab that contains UIelements for your config screen.
+            Initialize this in <see cref="M:OptionalUI.OptionInterface.Initialize"/> like <c>this.Tabs = new OpTab[count];</c>
+            </summary>
+        </member>
+        <member name="P:OptionalUI.OptionInterface.defaultData">
+            <summary>
+            Default Save Data of this mod. If this isn't needed, just leave it be.
+            </summary>
+        </member>
+        <member name="P:OptionalUI.OptionInterface.slot">
+            <summary>
+            Currently selected saveslot
+            </summary>
+        </member>
+        <member name="P:OptionalUI.OptionInterface.slugcat">
+            <summary>
+            Currently selected slugcat
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OptionInterface.config">
+            <summary>
+            Config Data. Their Key is the key you set when add <see cref="T:OptionalUI.UIconfig"/> in <see cref="M:OptionalUI.OpTab.AddItems(OptionalUI.UIelement[])"/>.
+            Value is the value of those configs, in string form.
+            </summary>
+            <remarks>As this is a <c>static</c>, add salt (e.g. ModID) to your keys to prevent collision with other mods.</remarks>
+        </member>
+        <member name="M:OptionalUI.OptionInterface.LoadConfig">
+            <summary>
+            This will be called by ConfigMachine manager. It's called automatically.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OptionInterface.ShowConfig">
+            <summary>
+            Displays loaded config to <see cref="T:OptionalUI.UIconfig"/>s. It's called automatically.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OptionInterface.GrabConfig">
+            <summary>
+            Grabbing config from config menu. It's called automatically.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OptionInterface.SaveConfig(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Saving Config. It's called automatically.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OptionInterface.objectDictionary">
+            <summary>
+            Dictionary that contains configuable objects.
+            Use <see cref="F:OptionalUI.OptionInterface.config"/> instead.
+            </summary>
+        </member>
+        <member name="P:OptionalUI.OptionInterface.data">
+            <summary>
+            Set this to whatever you want and call <see cref="M:OptionalUI.OptionInterface.SaveData"/> and <see cref="M:OptionalUI.OptionInterface.LoadData"/> when you need.
+            </summary>
+        </member>
+        <member name="P:OptionalUI.OptionInterface.progData">
+            <summary>
+            Use <see cref="P:OptionalUI.OptionInterface.data"/> instead.
+            </summary>
+            <exception cref="T:System.NotImplementedException">Thrown when used.</exception>
+        </member>
+        <member name="M:OptionalUI.OptionInterface.DataOnChange">
+            <summary>
+            Event when saved data is changed
+            This is called when 1. <see cref="M:OptionalUI.OptionInterface.LoadData"/>, 2. Your mod changes data.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OptionInterface.ConfigOnChange">
+            <summary>
+            Event that happens when Config is loaded from file/changed by config menu.
+            Put your configuable var in here.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OptionInterface.SlotOnChange">
+            <summary>
+            Event that happens when selected SaveSlot has been changed.
+            This automatically saves and loads data by default.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OptionInterface.progressData">
+            <summary>
+            If this is true, data is automatically Saved/Loaded like vanilla game
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OptionInterface.LoadData">
+            <summary>
+            Load your raw data from ConfigMachine Mod.
+            Call this by your own.
+            Check <see cref="P:OptionalUI.OptionInterface.dataTinkered"/> to see if saved data is tinkered or not.
+            </summary>
+            <returns>Loaded Data</returns>
+        </member>
+        <member name="P:OptionalUI.OptionInterface.dataTinkered">
+            <summary>
+            If you want to see whether your data is tinkered or not.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OptionInterface.SaveData">
+            <summary>
+            Save your raw data in file. bool is whether it succeed or not
+            Call this by your own.
+            </summary>
+        </member>
+        <member name="P:OptionalUI.OptionInterface.isOptionMenu">
+            <summary>
+            If true, <see cref="M:OptionalUI.OptionInterface.Initialize"/> is in Mod Config Menu; if false, we're in IntroRoll and loading Configs.
+            Do not edit graphical details of <see cref="T:OptionalUI.UIelement"/>s when this is false.
+            </summary>
+            <remarks>Example: <c>if (isOptionMenu) { myLabel.label.alpha = 0.5f; }</c></remarks>
+        </member>
+        <member name="M:OptionalUI.OptionInterface.Initialize">
+            <summary>
+            Write your UI overlay here. See also <seealso cref="P:OptionalUI.OptionInterface.isOptionMenu"/>.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OptionInterface.Update(System.Single)">
+            <summary>
+            Event that's called every frame. Do not call this by your own.
+            </summary>
+            <param name="dt">deltaTime</param>
+        </member>
+        <member name="M:OptionalUI.OptionInterface.BackgroundUpdate(System.Int32)">
+            <summary>
+            Do not call this by your own.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OptionInterface.GenerateDataArray(System.Int32)">
+            <summary>
+            Do not call this by your own.
+            </summary>
+            <param name="slugcatLength"></param>
+        </member>
+        <member name="M:OptionalUI.OptionInterface.HexToColor(System.String)">
+            <summary>
+            Use <see cref="M:OptionalUI.OpColorPicker.HexToColor(System.String)"/> instead.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OptionInterface.ColorToHex(UnityEngine.Color)">
+            <summary>
+            Use <see cref="M:OptionalUI.OpColorPicker.ColorToHex(UnityEngine.Color)"/> instead.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OptionInterface.transFile">
+            <summary>
+            File name of your mod's translation data in your mod's assembly, including '.txt'
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OptionInterface.Translate(System.String)">
+            <summary>
+            Translate your string using embed txt in your mod
+            </summary>
+            <param name="orig">Original text</param>
+            <returns>Translated text (returns original if translation isn't found.)</returns>
+        </member>
+        <member name="M:OptionalUI.OptionInterface.GetCultureInfo">
+            <summary>
+            Returns <see cref="T:System.Globalization.CultureInfo"/> according to Rain World Language Settings.
+            </summary>
+            <remarks>Example: <c>DateTime.ParseExact("20200123", "yyyyMMdd", null).ToString("D", GetCultureInfo());</c></remarks>
+        </member>
+        <member name="M:OptionalUI.OptionInterface.GetLanguageID">
+            <summary>
+            Returns 3-lettered
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OptionalUI.OptionInterface.Signal(OptionalUI.UItrigger,System.String)">
+            <summary>
+            Method that's called from <see cref="T:OptionalUI.UItrigger"/>s.
+            Override this and write your own events.
+            </summary>
+            <param name="trigger"><see cref="T:OptionalUI.UItrigger"/> instance.</param>
+            <param name="signal"><see cref="F:OptionalUI.UItrigger.signal"/> value.</param>
+        </member>
+        <member name="T:OptionalUI.DyeableRect">
+            <summary>
+            A special <see cref="T:Menu.RoundedRect"/> that can be coloured easily.
+            If you are making custom <see cref="T:OptionalUI.UIelement"/> that has this, Add this to <see cref="F:OptionalUI.UIelement.subObjects"/>.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.DyeableRect.#ctor(Menu.Menu,Menu.MenuObject,UnityEngine.Vector2,UnityEngine.Vector2,System.Boolean)">
+            <summary>
+            A special <see cref="T:Menu.RoundedRect"/> that can be coloured easily.
+            If you are making custom <see cref="T:OptionalUI.UIelement"/> that has this, Add this to <see cref="F:OptionalUI.UIelement.subObjects"/>.
+            </summary>
+            <remarks>Example for custom <see cref="T:OptionalUI.UIelement"/> constructor: <code>
+            this.rect = new DyeableRect(menu, owner, this.pos, this.size, true);
+            this.subObjects.Add(this.rect);
+            </code></remarks>
+        </member>
+        <member name="F:OptionalUI.DyeableRect.color">
+            <summary>
+            Edge Color of this Rect. Default is <see cref="F:Menu.Menu.MenuColors.MediumGrey"/>.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.DyeableRect.colorF">
+            <summary>
+            Fill Color of this Rect. Default is <see cref="F:Menu.Menu.MenuColors.Black"/>.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.DyeableRect.tab">
+            <summary>
+            whether you cut right side or not.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.DyeableRect.GrafUpdate(System.Single)">
+            <summary>
+            Called automatically.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.DyeableRect.Hide">
+            <summary>
+            Useful for hiding this in <see cref="M:OptionalUI.UIelement.Hide"/>
+            </summary>
+        </member>
+        <member name="M:OptionalUI.DyeableRect.Show">
+            <summary>
+            Usefull for unhiding this in <see cref="M:OptionalUI.UIelement.Show"/>
+            </summary>
+        </member>
+        <member name="T:OptionalUI.OpCheckBox">
+            <summary>
+            Simple CheckBox.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpCheckBox.#ctor(UnityEngine.Vector2,System.String,System.Boolean)">
+            <summary>
+            Simple CheckBox which returns "true" of "false". The fixedSize is 24x24.
+            </summary>
+            <param name="pos">LeftBottom of Position</param>
+            <param name="key">Unique <see cref="F:OptionalUI.UIconfig.key"/></param>
+            <param name="defaultBool">default bool</param>
+        </member>
+        <member name="M:OptionalUI.OpCheckBox.#ctor(System.Single,System.Single,System.String,System.Boolean)">
+            <summary>
+            Simple CheckBox which returns "true" of "false". The fixedSize is 24x24.
+            </summary>
+            <param name="posX">Left of Position</param>
+            <param name="posY">Bottom of Position</param>
+            <param name="key">Unique <see cref="F:OptionalUI.UIconfig.key"/></param>
+            <param name="defaultBool">default bool</param>
+        </member>
+        <member name="F:OptionalUI.OpCheckBox.rect">
+            <summary>
+            <see cref="T:OptionalUI.DyeableRect"/> for the boundary.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpCheckBox.symbolSprite">
+            <summary>
+            <see cref="T:FSprite"/> for Check Symbol.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpCheckBox.colorEdge">
+            <summary>
+            Symbol and Edge Colour of <see cref="T:OptionalUI.DyeableRect"/>. Default is <see cref="F:Menu.Menu.MenuColors.MediumGrey"/>.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpCheckBox.colorFill">
+            <summary>
+            Fill Colour of <see cref="T:OptionalUI.DyeableRect"/>. Default is <see cref="F:Menu.Menu.MenuColors.Black"/>.
+            </summary>
+        </member>
+        <member name="T:OptionalUI.OpColorPicker">
+            <summary>
+            ColorPicker for Option Config.
+            The fixedSize is 150x150, and output is in form of Hex(FFFFFF)
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpColorPicker.#ctor(UnityEngine.Vector2,System.String,System.String)">
+            <summary>
+            ColorPicker for Option Config.
+            The fixedSize is 150x150, and output is in form of Hex. (See also <seealso cref="M:OptionalUI.OpColorPicker.HexToColor(System.String)"/>)
+            </summary>
+            <exception cref="T:OptionalUI.ElementFormatException">Thrown when defaultHex is not a proper Hex code</exception>
+            <param name="pos">BottomLeft Position</param>
+            <param name="key">Unique <see cref="F:OptionalUI.UIconfig.key"/></param>
+            <param name="defaultHex">default Hex. (See also <seealso cref="M:OptionalUI.OpColorPicker.ColorToHex(UnityEngine.Color)"/>)</param>
+        </member>
+        <member name="F:OptionalUI.OpColorPicker.rect">
+            <summary>
+            DyeableRect : RoundedRect (but dyeable)
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpColorPicker.HexToColor(System.String)">
+            <summary>
+            Converts HEX <see cref="T:System.String"/> to <see cref="T:UnityEngine.Color"/>.
+            Useful for grabbing <see cref="T:UnityEngine.Color"/> from <see cref="F:OptionalUI.OptionInterface.config"/>
+            </summary>
+            <remarks>
+            Example: <c>myConfig = OpColorPicker.HexToColor(OptionInterface.config[MyModSetting]);</c>
+            </remarks>
+            <param name="hex">HEX ("FFFFFF")</param>
+            <returns>Color (Alpha is always 1f)</returns>
+            <exception cref="T:System.FormatException">Thrown when input is not correct Color Hex</exception>
+        </member>
+        <member name="M:OptionalUI.OpColorPicker.ColorToHex(UnityEngine.Color)">
+            <summary>
+            Converts <see cref="T:UnityEngine.Color"/> to HEX <see cref="T:System.String"/>.
+            Useful to set defaultHex in ctor.
+            </summary>
+            <remarks>
+            Example: <c>new OpColorPicker(cpkPos, "MyModSetting", OpColorPicker.ColorToHex(new Color(0.5f, 0.5f, 0.5f)));</c>
+            </remarks>
+            <param name="color">Original Color</param>
+            <returns>Color Hex string</returns>
+        </member>
+        <member name="P:OptionalUI.OpColorPicker.valueColor">
+            <summary>
+            Output in Color type.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpColorPicker.colorEdge">
+            <summary>
+            Edge Colour of <see cref="T:OptionalUI.DyeableRect"/>. Default is <see cref="F:Menu.Menu.MenuColors.MediumGrey"/>.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpColorPicker.r">
+            <summary>
+            Red in RGB (0 ~ 100)
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpColorPicker.g">
+            <summary>
+            Green in RGB (0 ~ 100)
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpColorPicker.b">
+            <summary>
+            Blue in RGB (0 ~ 100)
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpColorPicker.h">
+            <summary>
+            Hue in HSL (0 ~ 100)
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpColorPicker.s">
+            <summary>
+            Saturation in HSL (0 ~ 100)
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpColorPicker.l">
+            <summary>
+            Lightness in HSL (0 ~ 100)
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpColorPicker.pi">
+            <summary>
+            Palette Index
+            </summary>
+        </member>
+        <member name="P:OptionalUI.OpColorPicker.value">
+            <summary>
+            In form of Hex ("FFFFFF")
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpColorPicker.mod">
+            <summary>
+            0: RGB, 1: HSL, 2: Palette
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpColorPicker.PaletteHex">
+            <summary>
+            Edit this and <see cref="F:OptionalUI.OpColorPicker.PaletteName"/> to change the Palette of this <see cref="T:OptionalUI.OpColorPicker"/>
+            <para>See also <seealso cref="M:OptionalUI.OpColorPicker.ColorToHex(UnityEngine.Color)"/></para>
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpColorPicker.PaletteName">
+            <summary>
+            Edit this and <see cref="F:OptionalUI.OpColorPicker.PaletteHex"/> to change the Palette of this <see cref="T:OptionalUI.OpColorPicker"/>
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpColorPicker.PaletteHexDefault">
+            <summary>
+            HTML Color Palette from
+            <c>https://www.w3schools.com/colors/colors_names.asp</c>
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpColorPicker.PaletteNameDefault">
+            <summary>
+            Name of Palette Colors
+            </summary>
+        </member>
+        <member name="T:OptionalUI.OpDragger">
+            <summary>
+            Dragger to adjust int value easily.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpDragger.#ctor(UnityEngine.Vector2,System.String,System.Int32)">
+            <summary>
+            Dragger to adjust int value easily. The fixedSize is 24x24.
+            </summary>
+            <param name="pos">BottomLeft</param>
+            <param name="key">Unique <see cref="F:OptionalUI.UIconfig.key"/></param>
+            <param name="defaultInt">default value</param>
+        </member>
+        <member name="F:OptionalUI.OpDragger.min">
+            <summary>
+            Minimum value. default = 0
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpDragger.max">
+            <summary>
+            Maximum value. default = 99
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpDragger.SetCustomText(System.String[])">
+            <summary>
+            Set custom text to display for each index.
+            </summary>
+            <param name="newTexts">strings to display from min to max</param>
+        </member>
+        <member name="F:OptionalUI.OpDragger.rect">
+            <summary>
+            Boundary DyeableRect
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpDragger.label">
+            <summary>
+            MenuLabel
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpDragger.colorText">
+            <summary>
+            Text Colour. Default is <see cref="F:Menu.Menu.MenuColors.MediumGrey"/>.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpDragger.colorEdge">
+            <summary>
+            Edge Colour of DyeableRect. Default is <see cref="F:Menu.Menu.MenuColors.MediumGrey"/>.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpDragger.colorFill">
+            <summary>
+            Fill Colour of DyeableRect. Default is <see cref="F:Menu.Menu.MenuColors.Black"/>.
+            </summary>
+        </member>
+        <member name="T:OptionalUI.OpImage">
+            <summary>
+            Image Display
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpImage.#ctor(UnityEngine.Vector2,UnityEngine.Texture2D)">
+            <summary>
+            Simply displays <see cref="T:UnityEngine.Texture2D"/>.
+            </summary>
+            <param name="pos">LeftBottom Position in default</param>
+            <param name="image">Image you want to display</param>
+            <exception cref="T:OptionalUI.ElementFormatException">Thrown when image is null</exception>
+        </member>
+        <member name="M:OptionalUI.OpImage.#ctor(UnityEngine.Vector2,System.String)">
+            <summary>
+            Show <see cref="T:FAtlasElement"/> in RainWorld.
+            </summary>
+            <param name="pos">LeftBottom Position</param>
+            <param name="fAtlasElement">Name of <see cref="T:FAtlasElement"/> in RainWorld you want to display</param>
+            <exception cref="T:OptionalUI.ElementFormatException">Thrown when there is no <see cref="T:FAtlasElement"/> with the name</exception>
+        </member>
+        <member name="M:OptionalUI.OpImage.ChangeImage(UnityEngine.Texture2D)">
+            <summary>
+            Swap <see cref="T:UnityEngine.Texture2D"/> to new one. This must be initialized with <see cref="T:UnityEngine.Texture2D"/> to use this.
+            </summary>
+            <exception cref="T:OptionalUI.InvalidActionException">Thrown when you called this with <see cref="T:FAtlasElement"/> version of <see cref="T:OptionalUI.OpImage"/></exception>
+            <param name="newImage">New image to display</param>
+        </member>
+        <member name="M:OptionalUI.OpImage.ChangeElement(System.String)">
+            <summary>
+            Swap <see cref="T:FAtlasElement"/> to new one. This must be initialized with <see cref="T:FAtlasElement"/> to use this.
+            </summary>
+            <param name="newElement">New element name to display</param>
+            <exception cref="T:OptionalUI.InvalidActionException">Thrown when you called this with <see cref="T:UnityEngine.Texture2D"/> version of <see cref="T:OptionalUI.OpImage"/></exception>
+        </member>
+        <member name="P:OptionalUI.OpImage.anchor">
+            <summary>
+            AnchorX and Y for sprite.
+            </summary>
+            <remarks>
+            In {0f, 0f}, pos will be the bottomleft of sprite. In {0.5f, 0.5f}, pos will be the center of sprite.
+            </remarks>
+        </member>
+        <member name="P:OptionalUI.OpImage.alpha">
+            <summary>
+            Alpha of OpImage.
+            </summary>
+        </member>
+        <member name="P:OptionalUI.OpImage.color">
+            <summary>
+            Set new Colour. This will be ignored with <see cref="T:UnityEngine.Texture2D"/> version of this.
+            </summary>
+        </member>
+        <member name="T:OptionalUI.OpKeyBinder">
+            <summary>
+            Simple Key Binder
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpKeyBinder.#ctor(UnityEngine.Vector2,UnityEngine.Vector2,System.String,System.String,System.String)">
+            <summary>
+            Obsolete ctor!
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpKeyBinder.#ctor(UnityEngine.Vector2,UnityEngine.Vector2,System.String,System.String,System.String,System.Boolean,OptionalUI.OpKeyBinder.BindController)">
+            <summary>
+            Simple Key Binder. Value is the <see cref="T:UnityEngine.KeyCode"/> in string form.
+            </summary>
+            <param name="pos">LeftBottom Position of this UI</param>
+            <param name="size">Size; minimum size is 30x30.</param>
+            <param name="modID">Your <see cref="F:Partiality.Modloader.PartialityMod.ModID"/></param>
+            <param name="key">Unique <see cref="F:OptionalUI.UIconfig.key"/></param>
+            <param name="defaultKey">Default <see cref="T:UnityEngine.KeyCode"/> name. Set to empty to bind to <see cref="F:UnityEngine.KeyCode.None"/> in default.</param>
+            <param name="collisionCheck">Whether you will check the key is colliding with other <see cref="T:OptionalUI.OpKeyBinder"/> or not</param>
+            <param name="ctrlerNo">Which Controller this <see cref="T:OptionalUI.OpKeyBinder"/> can bind</param>
+            <exception cref="T:OptionalUI.ElementFormatException">Thrown when defaultKey is null or empty</exception>
+        </member>
+        <member name="M:OptionalUI.OpKeyBinder.#ctor(UnityEngine.Vector2,UnityEngine.Vector2,Partiality.Modloader.PartialityMod,System.String,System.String)">
+            <summary>
+            Obsolete!
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpKeyBinder.#ctor(UnityEngine.Vector2,UnityEngine.Vector2,Partiality.Modloader.PartialityMod,System.String,System.String,System.Boolean,OptionalUI.OpKeyBinder.BindController)">
+            <summary>
+            Simple Key Binder. Value is the KeyCode in string form.
+            </summary>
+            <param name="pos">LeftBottom Position of this UI</param>
+            <param name="size">Size. minimum size is 30f*30f.</param>
+            <param name="mod">Your <see cref="T:Partiality.Modloader.PartialityMod"/></param>
+            <param name="key">Unique <see cref="F:OptionalUI.UIconfig.key"/></param>
+            <param name="defaultKey">Default <see cref="T:UnityEngine.KeyCode"/> name. Set to empty to bind to <see cref="F:UnityEngine.KeyCode.None"/> in default.</param>
+            <param name="collisionCheck">Whether you will check the key is colliding with other <see cref="T:OptionalUI.OpKeyBinder"/> or not</param>
+            <param name="ctrlerNo">Which Controller this <see cref="T:OptionalUI.OpKeyBinder"/> can bind</param>
+            <exception cref="T:OptionalUI.ElementFormatException">Thrown when defaultKey is null or empty</exception>
+        </member>
+        <member name="F:OptionalUI.OpKeyBinder.collisionCheck">
+            <summary>
+            Whether you will check the key is colliding with other KeyBinder or not
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpKeyBinder.rect">
+            <summary>
+            Boundary DyeableRect
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpKeyBinder.colorEdge">
+            <summary>
+            Text and Edge Colour of DyeableRect. Default is <see cref="F:Menu.Menu.MenuColors.MediumGrey"/>.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpKeyBinder.colorFill">
+            <summary>
+            Fill Colour of DyeableRect. Default is <see cref="F:Menu.Menu.MenuColors.Black"/>.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpKeyBinder.GetControllerForPlayer(System.Int32)">
+            <summary>
+            Get <see cref="T:OptionalUI.OpKeyBinder.BindController"/> of vanilla with player, useful for <see cref="M:OptionalUI.OpKeyBinder.SetController(OptionalUI.OpKeyBinder.BindController)"/>
+            </summary>
+            <remarks>Example: <c>kbSetting.SetController(OpKeyBinder.GetControllerForPlayer(1));</c></remarks>
+            <exception cref="T:OptionalUI.ElementFormatException">Thrown when Player number is not 1 ~ 4</exception>
+            <param name="player">Start from Player [1 to 4]</param>
+            <returns></returns>
+        </member>
+        <member name="F:OptionalUI.OpKeyBinder.player">
+            <summary>
+            Abandoned because this only created confusion. Use <see cref="M:OptionalUI.OpKeyBinder.GetControllerForPlayer(System.Int32)"/>.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpKeyBinder.StringToKeyCode(System.String)">
+            <summary>
+            If you want to convert <see cref="T:System.String"/> to <see cref="T:UnityEngine.KeyCode"/> but you are too lazy to code that by yourself.
+            </summary>
+            <remarks>Example: <c>if (Input.GetKey(StringToKeyCode(OptionInterface.config[MyModKey])))</c></remarks>
+            <param name="str">KeyCode in string</param>
+            <returns>KeyCode</returns>
+        </member>
+        <member name="F:OptionalUI.OpKeyBinder.label">
+            <summary>
+            This displays Key
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpKeyBinder.BindController.AnyController">
+            <summary>
+            Accept input from any controller connected
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpKeyBinder.BindController.Controller1">
+            <summary>
+            Accept input from the first controller (See Vanilla config menu for reference)
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpKeyBinder.BindController.Controller2">
+            <summary>
+            Accept input from the second controller (See Vanilla config menu for reference)
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpKeyBinder.BindController.Controller3">
+            <summary>
+            Accept input from the third controller (See Vanilla config menu for reference)
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpKeyBinder.BindController.Controller4">
+            <summary>
+            Accept input from the fourth controller (See Vanilla config menu for reference)
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpKeyBinder.SetController(OptionalUI.OpKeyBinder.BindController)">
+            <summary>
+            Set new Controller number for this OpKeyBinder. See also <seealso cref="M:OptionalUI.OpKeyBinder.GetControllerForPlayer(System.Int32)"/>
+            </summary>
+            <param name="controller">New <see cref="T:OptionalUI.OpKeyBinder.BindController"/></param>
+        </member>
+        <member name="P:OptionalUI.OpKeyBinder.description">
+            <summary>
+            Use <see cref="M:OptionalUI.OpKeyBinder.SetDescription(System.String)"/> and <see cref="M:OptionalUI.OpKeyBinder.GetDescription"/> instead.
+            </summary>
+        </member>
+        <member name="T:OptionalUI.OpLabel">
+            <summary>
+            Simple Label.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpLabel.#ctor(UnityEngine.Vector2,UnityEngine.Vector2,System.String,FLabelAlignment,System.Boolean)">
+            <summary>
+            Simple Label that displays text. See also <seealso cref="M:OptionalUI.OpLabel.#ctor(System.Single,System.Single,System.String,System.Boolean)"/> for lazier version.
+            </summary>
+            <param name="pos">BottomLeft Position</param>
+            <param name="size">Size of the Box</param>
+            <param name="text">Text you want to display; max length 600. See also <seealso cref="T:OptionalUI.OpLabelLong"/><para>Leaving this as TEXT will call <see cref="T:OptionalUI.LoremIpsum"/>.</para></param>
+            <param name="alignment">Alignment. Left/Center/Right. Center is default.</param>
+            <param name="bigText">Whether this uses bigFont or not</param>
+        </member>
+        <member name="M:OptionalUI.OpLabel.#ctor(System.Single,System.Single,System.String,System.Boolean)">
+            <summary>
+            Lazier version of Label. Auto-calculates the size (assuming text is single line), and aligned to Left.
+            <para>Use <seealso cref="M:OptionalUI.OpLabel.#ctor(UnityEngine.Vector2,UnityEngine.Vector2,System.String,FLabelAlignment,System.Boolean)"/> for more complicated setup.</para>
+            </summary>
+            <param name="posX">Leftmost Position</param>
+            <param name="posY">Bottom Position</param>
+            <param name="text">Max length is limited to 200 for this constructor.</param>
+            <param name="bigText">Whether this uses bigFont or not</param>
+        </member>
+        <member name="T:OptionalUI.OpLabel.LabelVAlignment">
+            <summary>
+            Vertical Alignment of the text inside the box defined with <see cref="P:OptionalUI.UIelement.size"/>. Will not work correctly with overflowed text.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpLabel.LabelVAlignment.Top">
+            <summary>
+            The text fills from the top (<see cref="P:OptionalUI.UIelement.pos"/>.y + <see cref="P:OptionalUI.UIelement.size"/>.y)
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpLabel.LabelVAlignment.Center">
+            <summary>
+            The text is vertically aligned to the center
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpLabel.LabelVAlignment.Bottom">
+            <summary>
+            The text fills from the bottom (<see cref="P:OptionalUI.UIelement.pos"/>.y)
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpLabel.label">
+            <summary>
+            Access MenuLabel. Be aware: when IsConfigScreen is false, accessing this will throw NullRefException.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpLabel.autoWrap">
+            <summary>
+            (default : false) If this is true, OpLabel will automatically make text in MultiLine.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpLabel.color">
+            <summary>
+            Colour of the text. <see cref="F:Menu.Menu.MenuColors.MediumGrey"/> in default.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpLabel.bumpBehav">
+            <summary>
+            Set this to <see cref="P:OptionalUI.UIconfig.bumpBehav"/> or <see cref="P:OptionalUI.UItrigger.bumpBehav"/> to make its colour reactive.
+            <para>Example:
+            <c>OpCheckBox chk = new OpCheckBox(posChk, "_");
+            Tabs[0].AddItems(chk, new OpLabel(posLbl, sizLbl, "Text") { bumpBehav = chk.bumpBehav });</c>
+            </para>
+            </summary>
+            <remarks>Alternatively, you can initialize this on its own to make <see cref="T:OptionalUI.OpLabel"/> reactive to Mouse.</remarks>
+        </member>
+        <member name="P:OptionalUI.OpLabel.text">
+            <summary>
+            text that will be displayed with this label. Do not edit <see cref="F:OptionalUI.OpLabel.label"/> directly.
+            See also <seealso cref="M:OptionalUI.OpLabel.GetLineCount"/>
+            </summary>
+        </member>
+        <member name="T:OptionalUI.OpPathSelector">
+            <summary>
+            Allow users to choose relative path.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpPathSelector.#ctor(UnityEngine.Vector2,System.String,System.String,System.String)">
+            <summary>
+            Allow users to choose relative path.
+            </summary>
+            <param name="pos">LeftBottom position. This is a circular button with radius of 30 pxl.</param>
+            <param name="key">Unique <see cref="F:OptionalUI.UIconfig.key"/></param>
+            <param name="defaultPath"></param>
+            <param name="extension">Requested extension ('dir' for directory, default is *)</param>
+            <exception cref="T:OptionalUI.ElementFormatException">Thrown when defaultPath is Invalid</exception>
+        </member>
+        <member name="F:OptionalUI.OpPathSelector.extension">
+            <summary>
+            Requested extension ('dir' for directory)
+            </summary>
+        </member>
+        <member name="P:OptionalUI.OpPathSelector.isDir">
+            <summary>
+            Whether this selector is for Directory or File
+            </summary>
+        </member>
+        <member name="P:OptionalUI.OpPathSelector.valueFile">
+            <summary>
+            FileInfo casting for the value
+            </summary>
+            <exception cref="T:OptionalUI.InvalidGetPropertyException">Thrown when the extention is 'dir'</exception>
+        </member>
+        <member name="P:OptionalUI.OpPathSelector.valueDir">
+            <summary>
+            DirectoryInfo casting for the value
+            </summary>
+            <exception cref="T:OptionalUI.InvalidGetPropertyException">Thrown when the extention is not 'dir'</exception>
+        </member>
+        <member name="M:OptionalUI.OpRadioButton.#ctor(UnityEngine.Vector2)">
+            <summary>
+            This returns value in "true" of "false", although this is NOT a <see cref="T:OptionalUI.UIconfig"/> thus this value won't be saved.
+            <para>Initialize <see cref="T:OptionalUI.OpRadioButtonGroup"/> first before these, then bind these to the Group using <see cref="M:OptionalUI.OpRadioButtonGroup.SetButtons(OptionalUI.OpRadioButton[])"/></para>
+            </summary>
+            <param name="pos">LeftBottom of the Button (The size is fixed to 24x24)</param>
+        </member>
+        <member name="M:OptionalUI.OpRadioButton.#ctor(System.Single,System.Single)">
+            <summary>
+            Lazier version of <see cref="T:OptionalUI.OpRadioButton"/>. See also <seealso cref="M:OptionalUI.OpRadioButtonGroup.SetButtons(OptionalUI.OpRadioButton[])"/> for an example.
+            <para>Initialize <see cref="T:OptionalUI.OpRadioButtonGroup"/> first before these, then bind these to the Group using <see cref="M:OptionalUI.OpRadioButtonGroup.SetButtons(OptionalUI.OpRadioButton[])"/></para>
+            </summary>
+            <param name="posX">Left of the Button (The size is fixed to 24x24)</param>
+            <param name="posY">Bottom of the Button</param>
+        </member>
+        <member name="F:OptionalUI.OpRadioButton.greyedOut">
+            <summary>
+            Whether this button is greyedOut or not
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpRadioButton.colorEdge">
+            <summary>
+            Symbol and Edge Colour of DyeableRect. Default is MediumGrey.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpRadioButton.colorFill">
+            <summary>
+            Fill Colour of DyeableRect. Default is Black.
+            </summary>
+        </member>
+        <member name="P:OptionalUI.OpRadioButton.bumpBehav">
+            <summary>
+            Mimics <see cref="T:Menu.ButtonBehavior"/> of vanilla Rain World UIs
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpRadioButton.Update(System.Single)">
+            <summary>
+            size: mouseOver : big / pressed/leave : smol
+            symbolColor : mouseOver : flash(not selected: 0.5flash) / not: 1/0
+            </summary>
+            <param name="dt">deltaTime</param>
+        </member>
+        <member name="F:OptionalUI.OpRadioButton.group">
+            <summary>
+            OpRadioButtonGroup this button is belong to.
+            This will be automatically set when you SetButtons for Group.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpRadioButton.index">
+            <summary>
+            Index of this button.
+            </summary>
+        </member>
+        <member name="P:OptionalUI.OpRadioButton.value">
+            <summary>
+            OpRadioButton is not UIconfig, so this value will not be saved.
+            (OpRadioButtonGroup is the one gets saved instead)
+            </summary>
+        </member>
+        <member name="P:OptionalUI.OpRadioButton.valueBool">
+            <summary>
+            Access value in bool form.
+            </summary>
+        </member>
+        <member name="T:OptionalUI.OpRadioButtonGroup">
+            <summary>
+            Ties a number of <see cref="T:OptionalUI.OpRadioButton"/> together, so only one of them can be activated. See remarks for detail.
+            </summary>
+            <remarks>
+            Initialize this then <see cref="M:OptionalUI.OpTab.AddItems(OptionalUI.UIelement[])"/> to make it functional.
+            Then Initialize <see cref="T:OptionalUI.OpRadioButton"/> instances, then use <see cref="M:OptionalUI.OpRadioButtonGroup.SetButtons(OptionalUI.OpRadioButton[])"/> to bind them.
+            </remarks>
+        </member>
+        <member name="M:OptionalUI.OpRadioButtonGroup.#ctor(System.String,System.Int32)">
+            <summary>
+            Ties a number of <see cref="T:OptionalUI.OpRadioButton"/> together, so only one of them can be activated.
+            </summary>
+            <param name="key"></param>
+            <param name="defaultValue"></param>
+        </member>
+        <member name="M:OptionalUI.OpRadioButtonGroup.SetButtons(OptionalUI.OpRadioButton[])">
+            <summary>
+            Bind <see cref="T:OptionalUI.OpRadioButton"/> to this group.
+            <para>This will call <see cref="M:OptionalUI.OpTab.AddItems(OptionalUI.UIelement[])"/> or <see cref="M:OptionalUI.OpScrollBox.AddItems(OptionalUI.UIelement[])"/> for <see cref="T:OptionalUI.OpRadioButton"/>s automatically.</para>
+            </summary>
+            <remarks>Example (See also <seealso cref="M:OptionalUI.OpRadioButton.#ctor(System.Single,System.Single)"/>): <code>
+            OpRadioButtonGroup group = new OpRadioButtonGroup("MyModChoice");
+            Tabs[0].AddItems(group);
+            group.SetButtons(new OpRadioButton[] { new OpRadioButton(300f, 450f), new OpRadioButton(350f, 450f) });
+            </code></remarks>
+            <param name="buttons">Array of OpRadioButton</param>
+        </member>
+        <member name="P:OptionalUI.OpRadioButtonGroup.greyedOut">
+            <summary>
+            Whether this RadioButtonGroup is greyedOut or not
+            Changing this overrides original <see cref="F:OptionalUI.OpRadioButton.greyedOut"/>.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpRadioButtonGroup.SetColorEdge(UnityEngine.Color)">
+            <summary>
+            Set all <see cref="F:OptionalUI.OpRadioButton.colorEdge"/> to new one
+            </summary>
+            <param name="newColor">New Edge and Symbol Color</param>
+        </member>
+        <member name="M:OptionalUI.OpRadioButtonGroup.SetColorFill(UnityEngine.Color)">
+            <summary>
+            Set all <see cref="F:OptionalUI.OpRadioButton.colorFill"/> to new one
+            </summary>
+            <param name="newColor">New Fill Color</param>
+        </member>
+        <member name="M:OptionalUI.OpRadioButtonGroup.Hide">
+            <summary>
+            Calls <see cref="M:OptionalUI.OpRadioButton.Hide"/> for its children
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpRadioButtonGroup.Show">
+            <summary>
+            Calls <see cref="M:OptionalUI.OpRadioButton.Show"/> for its children
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpRadioButtonMultiGroup.#ctor(System.String,System.String,System.Int32)">
+            <summary>
+            Allows you to chose fixed number of multiple options in <see cref="T:OptionalUI.OpRadioButtonGroup"/>.
+            If you want non-fixed number of choices, just use <see cref="T:OptionalUI.OpCheckBox"/>.
+            Max number of radiobutton on this is 15.
+            </summary>
+            <param name="key">Unique Key for this UIconfig</param>
+            <param name="defaultSet">Default values</param>
+            <param name="multi">Number of choices you want. 2 or more.</param>
+            <exception cref="T:OptionalUI.ElementFormatException">Thrown when you set defaultSet with non-matching number with multi</exception>
+        </member>
+        <member name="T:OptionalUI.OpRect">
+            <summary>
+            Simply Rounded Rectangle
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpRect.#ctor(UnityEngine.Vector2,UnityEngine.Vector2,System.Single)">
+            <summary>
+            Create <see cref="T:OptionalUI.DyeableRect"/> for Decoration
+            </summary>
+            <param name="pos">Position</param>
+            <param name="size">Size</param>
+            <param name="alpha">0f ~ 1f (default: 0.3f)</param>
+        </member>
+        <member name="F:OptionalUI.OpRect.rect">
+            <summary>
+            <see cref="T:OptionalUI.DyeableRect"/> of this <see cref="T:OptionalUI.UIelement"/>.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpRect.doesBump">
+            <summary>
+            If you want this Rect to react with MouseOver, set this true.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpRect.colorEdge">
+            <summary>
+            Edge Colour of <see cref="T:OptionalUI.DyeableRect"/>. Default is <see cref="F:Menu.Menu.MenuColors.MediumGrey"/>.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpRect.colorFill">
+            <summary>
+            Fill Colour of <see cref="T:OptionalUI.DyeableRect"/>. Default is Black.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpRect.alpha">
+            <summary>
+            fillAlpha of <see cref="T:OptionalUI.DyeableRect"/>. (Ignored when <see cref="F:OptionalUI.OpRect.doesBump"/> is true)
+            </summary>
+        </member>
+        <member name="P:OptionalUI.OpRect.bumpBehav">
+            <summary>
+            When <see cref="F:OptionalUI.OpRect.doesBump"/> is true, this gets used.
+            </summary>
+        </member>
+        <member name="T:OptionalUI.OpSlider">
+            <summary>
+            Slider that let you input integer more visually.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpSlider.#ctor(UnityEngine.Vector2,System.String,RWCustom.IntVector2,System.Single,System.Boolean,System.Int32)">
+            <summary>
+            Slider that let you input integer more visually.
+            </summary>
+            <param name="pos">LeftBottom position. (excluding extra length in the end of slider line)</param>
+            <param name="key">unique keyword for this UIconfig</param>
+            <param name="range">x = min, y = max</param>
+            <param name="multi">Length of this slider will be this value * range. minimum 1f. (The width is 30 pxl)</param>
+            <param name="vertical">if true, the slider will go vertical and the length will be used as height</param>
+            <param name="defaultValue">default integer value</param>
+        </member>
+        <member name="M:OptionalUI.OpSlider.#ctor(UnityEngine.Vector2,System.String,RWCustom.IntVector2,System.Int32,System.Boolean,System.Int32)">
+            <summary>
+            Slider that let you input integer more visually.
+            </summary>
+            <param name="pos">left-bottom corner coordinate (excluding extra length in the end of slider line)</param>
+            <param name="key">unique keyword for this UIconfig</param>
+            <param name="range">x = min, y = max</param>
+            <param name="length">Length of this slider will be this (minimum is the range; and the width is 30 pxl)</param>
+            <param name="vertical">if true, the slider will go vertical and the length will be used as height</param>
+            <param name="defaultValue">default integer value</param>
+        </member>
+        <member name="F:OptionalUI.OpSlider.wheelTick">
+            <summary>
+            The amount that changes when you scroll your mousewheel over <see cref="T:OptionalUI.OpSlider"/>
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpSlider.colorEdge">
+            <summary>
+            Text and Edge Colour of DyeableRect. Default is <see cref="F:Menu.Menu.MenuColors.MediumGrey"/>.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpSlider.colorFill">
+            <summary>
+            Fill Colour of DyeableRect. Default is <see cref="F:Menu.Menu.MenuColors.Black"/>.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpSlider.colorLine">
+            <summary>
+            Colour of Lines. Default is <see cref="F:Menu.Menu.MenuColors.MediumGrey"/>.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpSliderSubtle.#ctor(UnityEngine.Vector2,System.String,RWCustom.IntVector2,System.Int32,System.Boolean,System.Int32)">
+            <summary>
+            SubtleSlider that let you input integer in small range
+            </summary>
+            <param name="pos">left-bottom corner coordinate (excluding extra length in the end of slider line)</param>
+            <param name="key">unique keyword for this UIconfig</param>
+            <param name="range">x = min, y = max</param>
+            <param name="length">Length of this slider will be this (Min: 20 * range; The width is 30 pxl)</param>
+            <param name="vertical">if true, the slider will go vertical and the length will be used as height</param>
+            <param name="defaultValue">default integer value</param>
+            <exception cref="T:OptionalUI.ElementFormatException">Thrown when the range of this is less than 2 or more than 30</exception>
+        </member>
+        <member name="M:OptionalUI.OpTab.#ctor(System.String)">
+            <summary>
+            Tab. 600 pxl * 600 pxl.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpTab.owner">
+            <summary>
+            Do NOT mess with this on your own.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpTab.color">
+            <summary>
+            Colour of Tab Button. <see cref="F:Menu.Menu.MenuColors.MediumGrey"/> in default.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpTab.menu">
+            <summary>
+            Do NOT use this.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpTab.name">
+            <summary>
+            Name of this that will display on the bottom.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpTab.isHidden">
+            <summary>
+            Do NOT mess with this on your own.
+            </summary>
+        </member>
+        <member name="P:OptionalUI.OpTab.init">
+            <summary>
+            Use <see cref="P:OptionalUI.OptionInterface.IsConfigScreen"/> instead.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpTab.Update(System.Single)">
+            <summary>
+            Update for OpTab. Automatically called. Don't call this by yourself.
+            </summary>
+            <param name="dt">deltaTime</param>
+        </member>
+        <member name="M:OptionalUI.OpTab.AddItem(OptionalUI.UIelement)">
+            <summary>
+            Obsolete! Use <see cref="M:OptionalUI.OpTab.AddItems(OptionalUI.UIelement[])"/> instead.
+            </summary>
+            <param name="item">UIelement</param>
+        </member>
+        <member name="M:OptionalUI.OpTab.AddItems(OptionalUI.UIelement[])">
+            <summary>
+            Add <see cref="T:OptionalUI.UIelement"/> to this Tab.
+            </summary>
+            <param name="items">UIelements</param>
+        </member>
+        <member name="M:OptionalUI.OpTab.RemoveItem(OptionalUI.UIelement)">
+            <summary>
+            Obsolete! Use RemoveItems instead.
+            </summary>
+            <param name="item">UIelement</param>
+        </member>
+        <member name="M:OptionalUI.OpTab.RemoveItems(OptionalUI.UIelement[])">
+            <summary>
+            Remove <see cref="T:OptionalUI.UIelement"/>  in this Tab.
+            </summary>
+            <param name="items">UIelements</param>
+        </member>
+        <member name="M:OptionalUI.OpTab.Hide">
+            <summary>
+            Hide this tab. Automatically called. Do NOT call this by yourself.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpTab.Show">
+            <summary>
+            Show this tab. Automatically called. Do NOT call this by yourself.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpTab.GetTabDictionary">
+            <summary>
+            Called by Config Machine. You don't need to care about this.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpTab.GetTabObject">
+            <summary>
+            Called by Config Machine. You don't need to care about this.
+            </summary>
+        </member>
+        <member name="T:OptionalUI.OpTextBox">
+            <summary>
+            Simple TextBox for general purpose.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.OpTextBox.#ctor(UnityEngine.Vector2,System.Single,System.String,System.String,OptionalUI.OpTextBox.Accept)">
+            <summary>
+            Simple TextBox.
+            </summary>
+            <param name="pos">LeftBottom position.</param>
+            <param name="sizeX">Horizontal size (min = 30 pxl). The height is fixed to 24 pxl.</param>
+            <param name="key">Unique <see cref="F:OptionalUI.UIconfig.key"/></param>
+            <param name="defaultValue">Default string value</param>
+            <param name="accept">Which type of text you want to <see cref="T:OptionalUI.OpTextBox.Accept"/></param>
+        </member>
+        <member name="F:OptionalUI.OpTextBox.label">
+            <summary>
+            MenuLabel of TextBox.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpTextBox.rect">
+            <summary>
+            Boundary DyeableRect.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpTextBox.colorEdge">
+            <summary>
+            Edge Colour of DyeableRect. Default is MediumGrey.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpTextBox.colorText">
+            <summary>
+            Text Colour, which affects Cursor Colour too. Default is MediumGrey.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpTextBox.colorFill">
+            <summary>
+            Fill Colour of DyeableRect. Default is Black.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpTextBox.password">
+            <summary>
+            If you want to hide what is written for whatever reason,
+            even though Rain World is singleplayer game.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpTextBox.allowSpace">
+            <summary>
+            whether you allow space or not. default is false.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpTextBox.accept">
+            <summary>
+            Which type of string this accept
+            </summary>
+        </member>
+        <member name="P:OptionalUI.OpTextBox.maxLength">
+            <summary>
+            maximum length. default is 100.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpTextBox.Accept.Int">
+            <summary>
+            Can be parsed to <see cref="T:System.Int32"/>
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpTextBox.Accept.Float">
+            <summary>
+            Can be parsed to <see cref="T:System.Single"/>
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpTextBox.Accept.StringEng">
+            <summary>
+            Only accepts english alphabet without spacing
+            </summary>
+        </member>
+        <member name="F:OptionalUI.OpTextBox.Accept.StringASCII">
+            <summary>
+            Accepts all ASCII characters
+            </summary>
+        </member>
+        <member name="P:OptionalUI.OpTextBox.valueInt">
+            <summary>
+            value in <see cref="T:System.Int32"/> form.
+            </summary>
+        </member>
+        <member name="P:OptionalUI.OpTextBox.valueFloat">
+            <summary>
+            value in <see cref="T:System.Single"/> form.
+            </summary>
+        </member>
+        <member name="T:OptionalUI.SelectableUIelement">
+            <summary>
+            This is for the controller support that will never come.
+            </summary>
+        </member>
+        <member name="T:OptionalUI.UIconfig">
+            <summary>
+            Configuable Settings. Every configuable value is tied to <see cref="T:OptionalUI.UIconfig"/> and <see cref="F:OptionalUI.UIconfig.key"/>.
+            <para>Saving and loading will be handled automatically when this is added to the <see cref="T:OptionalUI.OpTab"/>.</para>
+            </summary>
+            <remarks>Adding '_' before key (or leaving it empty) makes this <see cref="F:OptionalUI.UIconfig.cosmetic"/>, preventing it to be saved.</remarks>
+        </member>
+        <member name="M:OptionalUI.UIconfig.#ctor(UnityEngine.Vector2,UnityEngine.Vector2,System.String,System.String)">
+            <summary>
+            Rectangular <see cref="T:OptionalUI.UIconfig"/>.
+            </summary>
+            <param name="pos">BottomLeft Position</param>
+            <param name="size">Size</param>
+            <param name="key">Key: this must be unique</param>
+            <param name="defaultValue">Default Value</param>
+        </member>
+        <member name="M:OptionalUI.UIconfig.#ctor(UnityEngine.Vector2,System.Single,System.String,System.String)">
+            <summary>
+            Circular <see cref="T:OptionalUI.UIconfig"/>.
+            </summary>
+            <param name="pos">BottomLeft Position (NOT center!)</param>
+            <param name="rad">Radius</param>
+            <param name="key">Key: this must be unique</param>
+            <param name="defaultValue">Default Value</param>
+        </member>
+        <member name="P:OptionalUI.UIconfig.defaultValue">
+            <summary>
+            This is set in ctor.
+            <para>It'll be the default <see cref="P:OptionalUI.UIconfig.value"/> of this <see cref="T:OptionalUI.UIconfig"/> when your mod is installed first/configs are reset.</para>
+            </summary>
+        </member>
+        <member name="F:OptionalUI.UIconfig.cosmetic">
+            <summary>
+            Set <see cref="F:OptionalUI.UIconfig.key"/> to empty or start with '_' to make this <see cref="T:OptionalUI.UIconfig"/> cosmetic and prevent saving
+            </summary>
+        </member>
+        <member name="P:OptionalUI.UIconfig.bumpBehav">
+            <summary>
+            Mimics <see cref="T:Menu.ButtonBehavior"/> of vanilla Rain World UIs
+            </summary>
+        </member>
+        <member name="P:OptionalUI.UIconfig.held">
+            <summary>
+            Whether this is held or not.
+            If this is true, other <see cref="T:OptionalUI.UIelement"/> will be frozen.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.UIconfig.key">
+            <summary>
+            Unique key for this <see cref="T:OptionalUI.UIconfig"/>
+            </summary>
+        </member>
+        <member name="F:OptionalUI.UIconfig.greyedOut">
+            <summary>
+            If this is true, this <see cref="T:OptionalUI.UIconfig"/> will be greyed out and can't be interacted.
+            </summary>
+        </member>
+        <member name="P:OptionalUI.UIconfig.disabled">
+            <summary>
+            Either this is <see cref="F:OptionalUI.UIconfig.greyedOut"/> or <see cref="P:OptionalUI.UIelement.isHidden"/>.
+            Prevents its interaction in <see cref="M:OptionalUI.UIconfig.Update(System.Single)"/>.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.UIconfig.ForceValue(System.String)">
+            <summary>
+            If you want to change value directly without running <see cref="M:OptionalUI.UIconfig.OnChange"/>.
+            This is not recommended unless you know what you are doing.
+            </summary>
+        </member>
+        <member name="P:OptionalUI.UIconfig.value">
+            <summary>
+            Value in <see cref="T:System.String"/> form, which is how it is saved.
+            </summary>
+        </member>
+        <member name="P:OptionalUI.UIconfig.valueInt">
+            <summary>
+            Value in <see cref="T:System.Int32"/> form
+            </summary>
+        </member>
+        <member name="P:OptionalUI.UIconfig.valueFloat">
+            <summary>
+            Value in <see cref="T:System.Single"/> form
+            </summary>
+        </member>
+        <member name="P:OptionalUI.UIconfig.valueBool">
+            <summary>
+            Value in <see cref="T:System.Boolean"/> form
+            </summary>
+        </member>
+        <member name="M:OptionalUI.UIconfig.GrafUpdate(System.Single)">
+            <summary>
+            Separates Graphical update for code-visiblilty.
+            </summary>
+            <param name="dt">deltaTime</param>
+        </member>
+        <member name="M:OptionalUI.UIconfig.Update(System.Single)">
+            <summary>
+            Update method that happens every frame.
+            </summary>
+            <param name="dt">deltaTime</param>
+        </member>
+        <member name="T:OptionalUI.UIelement">
+            <summary>
+            UIelement for <see cref="T:OptionalUI.OpTab"/> Canvas (600x600)
+            </summary>
+        </member>
+        <member name="M:OptionalUI.UIelement.#ctor(UnityEngine.Vector2,UnityEngine.Vector2)">
+            <summary>
+            Rectangular UIelement.
+            </summary>
+            <param name="pos">BottomLeft Position</param>
+            <param name="size">Size in pxl</param>
+        </member>
+        <member name="M:OptionalUI.UIelement.#ctor(UnityEngine.Vector2,System.Single)">
+            <summary>
+            Circular UIelement.
+            </summary>
+            <param name="pos">BottomLeft Position</param>
+            <param name="rad">Radius in pxl</param>
+        </member>
+        <member name="F:OptionalUI.UIelement.fixedSize">
+            <summary>
+            If this is set, this element cannot change its <see cref="P:OptionalUI.UIelement.size"/>.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.UIelement.AddToScrollBox(OptionalUI.OpScrollBox)">
+            <summary>
+            This will be called by OpScrollBox automatically.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.UIelement.Reset">
+            <summary>
+            Resets <see cref="T:OptionalUI.UIelement"/>.
+            </summary>
+        </member>
+        <member name="P:OptionalUI.UIelement.offset">
+            <summary>
+            Offset from BottomLeft of the screen.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.UIelement._offset">
+            <summary>
+            Offset from BottomLeft of the screen.
+            </summary>
+        </member>
+        <member name="P:OptionalUI.UIelement.soundFill">
+            <summary>
+            Prevent Sound Engine from Crashing. Use <see cref="P:OptionalUI.OptionInterface.soundFill"/> one instead.
+            </summary>
+        </member>
+        <member name="P:OptionalUI.UIelement.soundFilled">
+            <summary>
+            Whether the Sound Engine is full or not. Use <see cref="P:OptionalUI.OptionInterface.soundFilled"/> instead.
+            </summary>
+        </member>
+        <member name="P:OptionalUI.UIelement.init">
+            <summary>
+            Whether this is in ConfigMenu or not. Use <see cref="P:OptionalUI.OptionInterface.isOptionMenu"/> instead.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.UIelement.GetPos">
+            <summary>
+            For grabbing LeftBottom Position of this element from LeftBottom of <see cref="T:OptionalUI.OpTab"/> or <see cref="T:OptionalUI.OpScrollBox"/>, without offset.
+            </summary>
+            <seealso cref="P:OptionalUI.UIelement.pos"/>
+        </member>
+        <member name="P:OptionalUI.UIelement.pos">
+            <summary>
+            For setting LeftBottom Position of this element from LeftBottom of <see cref="T:OptionalUI.OpTab"/> or <see cref="T:OptionalUI.OpScrollBox"/>.
+            <para>For grabbing position without offset, use <see cref="M:OptionalUI.UIelement.GetPos"/>.</para>
+            </summary>
+        </member>
+        <member name="P:OptionalUI.UIelement.size">
+            <summary>
+            Size of this element.
+            </summary>
+        </member>
+        <member name="P:OptionalUI.UIelement.rad">
+            <summary>
+            Radian of the element.
+            </summary>
+        </member>
+        <member name="F:OptionalUI.UIelement.isRectangular">
+            <summary>
+            Whether the element is Rectangular(true) or Circular(false)
+            </summary>
+        </member>
+        <member name="F:OptionalUI.UIelement.tab">
+            <summary>
+            OpTab this element is belong to.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.UIelement.SetTab(OptionalUI.OpTab)">
+            <summary>
+            Do not use this. Instead, use <see cref="M:OptionalUI.OpTab.AddItems(OptionalUI.UIelement[])"/> and <see cref="M:OptionalUI.OpTab.RemoveItems(OptionalUI.UIelement[])"/>.
+            </summary>
+            <param name="newTab">new OpTab this item will be belong to</param>
+        </member>
+        <member name="P:OptionalUI.UIelement.hidden">
+            <summary>
+            Whether this is Hidden manually by Modder.
+            Use <see cref="M:OptionalUI.UIelement.Hide"/> and <see cref="M:OptionalUI.UIelement.Show"/> to manipulate this.
+            <para>To check whether this is actually hidden/invisible, use <see cref="P:OptionalUI.UIelement.isHidden"/></para>
+            </summary>
+        </member>
+        <member name="P:OptionalUI.UIelement.isHidden">
+            <summary>
+            Whether this is actually Hidden. See also <seealso cref="P:OptionalUI.UIelement.hidden"/>
+            </summary>
+        </member>
+        <member name="F:OptionalUI.UIelement.subObjects">
+            <summary>
+            MenuObject this element have.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.UIelement.OnChange">
+            <summary>
+            Called whenever this UIelement needs graphical change.
+            RePosition and ReSize subObjects.
+            </summary>
+        </member>
+        <member name="P:OptionalUI.UIelement.MouseOver">
+            <summary>
+            Whether mousecursor is over this element or not.
+            </summary>
+        </member>
+        <member name="P:OptionalUI.UIelement.MousePos">
+            <summary>
+            Mouse Position on <see cref="T:OptionalUI.UIelement"/>. The BottomLeft(<see cref="P:OptionalUI.UIelement.pos"/>) is (0f, 0f).
+            </summary>
+        </member>
+        <member name="F:OptionalUI.UIelement.description">
+            <summary>
+            Infotext that will be shown at the bottom of the screen.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.UIelement.Update(System.Single)">
+            <summary>
+            Update method that happens every frame.
+            </summary>
+            <param name="dt">deltaTime</param>
+        </member>
+        <member name="M:OptionalUI.UIelement.GrafUpdate(System.Single)">
+            <summary>
+            Update method that happens every frame, but this is only for graphical detail for visiblity of Update code.
+            </summary>
+            <param name="dt">deltaTime</param>
+        </member>
+        <member name="M:OptionalUI.UIelement.Unload">
+            <summary>
+            Called when exiting ConfigMenu.
+            </summary>
+        </member>
+        <member name="M:OptionalUI.UIelement.Hide">
+            <summary>
+            Hide this element
+            </summary>
+        </member>
+        <member name="M:OptionalUI.UIelement.Show">
+            <summary>
+            Show this element
+            </summary>
+        </member>
+        <member name="T:CompletelyOptional.ConfigMenu">
+            <summary>
+            Menu Screen for Mod Config
+            </summary>
+        </member>
+        <member name="F:CompletelyOptional.ConfigMenu.BoundKey">
+            <summary>
+            List of Binded Key.
+            Key: ...it's key. Value: ...this is also Key... of OpKeyBinder.
+            </summary>
+        </member>
+        <member name="F:CompletelyOptional.ConfigMenu.freezeMenu">
+            <summary>
+            Whether to freeze menu or not
+            </summary>
+        </member>
+        <member name="M:CompletelyOptional.ConfigMenu.CompareOIModID(OptionalUI.OptionInterface,OptionalUI.OptionInterface)">
+            <summary>
+            Comparator for Sorting OptionInterfaces by ModID
+            </summary>
+        </member>
+        <member name="M:CompletelyOptional.ConfigMenu.ResetCurrentConfig">
+            <summary>
+            Call this manually if you really need to. This is what Reset Config Button does.
+            </summary>
+        </member>
+        <member name="T:CompletelyOptional.ConfigTabController">
+            <summary>
+            Special UI used internally in CM for switching tabs
+            </summary>
+        </member>
+        <member name="F:CompletelyOptional.ConfigTabController.SelectTab.index">
+            <summary>
+            Index this Object is presenting
+            </summary>
+        </member>
+        <member name="F:CompletelyOptional.ConfigTabController.SelectTab.label">
+            <summary>
+            Tab Label
+            </summary>
+        </member>
+        <member name="F:CompletelyOptional.ConfigTabController.SelectTab.rect">
+            <summary>
+            Tab Boundary
+            </summary>
+        </member>
+        <member name="F:CompletelyOptional.ConfigTabController.SelectTab.rectH">
+            <summary>
+            Tab Highlight
+            </summary>
+        </member>
+        <member name="T:CompletelyOptional.ConfigTabController.SelectButton">
+            <summary>
+            When the number of Tab is more than 12. Only first 2 character of <see cref="F:OptionalUI.OpTab.name"/> will be displayed.
+            </summary>
+        </member>
+        <member name="F:CompletelyOptional.ConfigTabController.SelectButton.index">
+            <summary>
+            Index this Object is presenting
+            </summary>
+        </member>
+        <member name="T:CompletelyOptional.InternalTestOI">
+            <summary>
+            Internal OI for testing new features of Config Machine
+            </summary>
+        </member>
+        <member name="T:CompletelyOptional.InternalTranslator">
+            <summary>
+            ConfigMachine's internal translator.
+            </summary>
+        </member>
+        <member name="T:CompletelyOptional.Crypto">
+            <summary>
+            This Encrypt/Decrypt data/config.
+            https://stackoverflow.com/questions/5251759/easy-way-to-encrypt-obfuscate-a-byte-array-using-a-secret-in-net
+            </summary>
+        </member>
+        <member name="M:CompletelyOptional.Crypto.GetAlgorithm(System.String)">
+            <summary>
+            Create and initialize a crypto algorithm.
+            </summary>
+            <param name="password">The password.</param>
+        </member>
+        <member name="M:CompletelyOptional.Crypto.EncryptString(System.String,System.String)">
+            <summary>
+            Encrypts a string with a given password.
+            </summary>
+            <param name="clearText">The clear text.</param>
+            <param name="password">The password.</param>
+        </member>
+        <member name="M:CompletelyOptional.Crypto.DecryptString(System.String,System.String)">
+            <summary>
+            Decrypts a string using a given password.
+            </summary>
+            <param name="cipherText">The cipher text.</param>
+            <param name="password">The password.</param>
+        </member>
+        <member name="T:CompletelyOptional.UnconfiguableOI">
+            <summary>
+            Default OI that's called when your mod does not support CompletelyOptional.
+            Also shows the error in your OI.
+            </summary>
+        </member>
+        <member name="M:CompletelyOptional.UnconfiguableOI.SetIgnoredModList(System.Collections.Generic.List{Partiality.Modloader.PartialityMod})">
+            <summary>
+            Set the list of ignored mod
+            </summary>
+        </member>
+        <member name="M:CompletelyOptional.UnconfiguableOI.CompareModID(Partiality.Modloader.PartialityMod,Partiality.Modloader.PartialityMod)">
+            <summary>
+            Comparator for Sorting OptionInterfaces by ModID
+            </summary>
+        </member>
+        <member name="T:CompletelyOptional.MenuTab">
+            <summary>
+            Special kind of OpTab for ConfigMenu. You don't need this.
+            </summary>
+        </member>
+        <member name="T:CompletelyOptional.OptionMod">
+            <summary>
+            PartialityMod part of CompletelyOptional Mod
+            </summary>
+        </member>
+        <member name="F:CompletelyOptional.OptionMod.directory">
+            <summary>
+            Directory that all the data/configs is saved
+            </summary>
+        </member>
+        <member name="F:CompletelyOptional.OptionMod.go">
+            <summary>
+            GameObject for CompletelyOptional MonoBehavior
+            </summary>
+        </member>
+        <member name="F:CompletelyOptional.OptionMod.script">
+            <summary>
+            CompletelyOptional MonoBehavior
+            </summary>
+        </member>
+        <member name="M:CompletelyOptional.OptionMod.OnEnable">
+            <summary>
+            Create GameObject and remove remaining junk
+            </summary>
+        </member>
+        <member name="P:CompletelyOptional.OptionMod.randomSong">
+            <summary>
+            List of Random Song gets played in ConfigMenu,
+            carefully chosen by me :P
+            </summary>
+        </member>
+        <member name="F:CompletelyOptional.OptionMod.levelpath">
+            <summary>
+            Path of Levels
+            </summary>
+        </member>
+        <member name="T:CompletelyOptional.OptionScript">
+            <summary>
+            MonoBehavior part of CompletelyOptional Mod
+            </summary>
+        </member>
+        <member name="F:CompletelyOptional.OptionScript.rw">
+            <summary>
+            RainWorld Instance.
+            </summary>
+        </member>
+        <member name="F:CompletelyOptional.OptionScript.pm">
+            <summary>
+            ProcessManager Instance.
+            </summary>
+        </member>
+        <member name="F:CompletelyOptional.OptionScript.configMenu">
+            <summary>
+            ConfigMenu Instance.
+            </summary>
+        </member>
+        <member name="F:CompletelyOptional.OptionScript.soundFill">
+            <summary>
+            Prevent Sound Engine from crashing by not letting sound when this is >100
+            </summary>
+        </member>
+        <member name="F:CompletelyOptional.OptionScript.loadedMods">
+            <summary>
+            All loadedMods directly taken from Partiality ModManager.
+            </summary>
+        </member>
+        <member name="F:CompletelyOptional.OptionScript.loadedModsDictionary">
+            <summary>
+            Loaded Mod Dictionary.
+            Key: ModID, Value: PartialityMod Instance
+            </summary>
+        </member>
+        <member name="F:CompletelyOptional.OptionScript.loadedInterfaces">
+            <summary>
+            List of OptionInterface Instances
+            </summary>
+        </member>
+        <member name="F:CompletelyOptional.OptionScript.loadedInterfaceDict">
+            <summary>
+            Loaded OptionInterface Instances.
+            Key: ModID, Value: OI Instance
+            </summary>
+        </member>
+        <member name="P:CompletelyOptional.OptionScript.Directory">
+            <summary>
+            Rain World/ModConfigs.
+            </summary>
+        </member>
+        <member name="F:CompletelyOptional.OptionScript.blackList">
+            <summary>
+            Blacklisted mod from config menu.
+            </summary>
+        </member>
+        <member name="P:CompletelyOptional.OptionScript.Slot">
+            <summary>
+            Current SaveSlot.
+            </summary>
+        </member>
+        <member name="P:CompletelyOptional.OptionScript.Slugcat">
+            <summary>
+            Currently Playing Slugcat.
+            </summary>
+        </member>
+        <member name="F:CompletelyOptional.OptionScript.configChanged">
+            <summary>
+            Whether Config has changed in Config Menu or not
+            </summary>
+        </member>
+        <member name="F:CompletelyOptional.OptionScript.curLang">
+            <summary>
+            Current Language of the game, including ComMod ones
+            </summary>
+        </member>
+        <member name="M:CompletelyOptional.OptionScript.Initialize">
+            <summary>
+            Runs right before MainMenu opens
+            </summary>
+        </member>
+        <member name="F:CompletelyOptional.OptionScript.tabs">
+            <summary>
+            List of Tabs in ConfigMenu
+            </summary>
+        </member>
+        <member name="M:CompletelyOptional.OptionScript.KillTabs">
+            <summary>
+            Unload All Tabs
+            </summary>
+        </member>
+        <member name="M:CompletelyOptional.OptionScript.TroubleShoot(System.String,System.String,UnityEngine.LogType)">
+            <summary>
+            Show Low-friendly TroubleShoot Messages
+            </summary>
+        </member>
+        <member name="M:CompletelyOptional.OptionScript.Update">
+            <summary>
+            MonoBehavior Update
+            </summary>
+        </member>
+        <member name="T:CompletelyOptional.OptionsMenuPatch">
+            <summary>
+            These code attach themselves to OptionsMenu.
+            </summary>
+        </member>
+    </members>
+</doc>

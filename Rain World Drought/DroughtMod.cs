@@ -13,7 +13,7 @@ using UnityEngine;
 
 namespace Rain_World_Drought
 {
-    public class DroughtMod : PartialityMod
+    public partial class DroughtMod : PartialityMod
     {
         public DroughtMod()
         {

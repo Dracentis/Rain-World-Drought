@@ -42,6 +42,9 @@
       <HintPath>..\References\Assembly-CSharp-firstpass.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="ConfigMachine">
+      <HintPath>..\References\ConfigMachine.dll</HintPath>
+    </Reference>
     <Reference Include="GoKit">
       <HintPath>..\References\GoKit.dll</HintPath>
       <Private>False</Private>
@@ -96,8 +99,9 @@
     <Compile Include="Creature\MultiplayerUnlocksHK.cs" />
     <Compile Include="Creature\OverseerDroughtTutorialBehavior.cs" />
     <Compile Include="Creature\OverseerHK.cs" />
-    <None Include="DroughtConfig.cs" />
+    <Compile Include="DroughtConfigGenerator.cs" />
     <Compile Include="Debugging.cs" />
+    <Compile Include="DroughtConfig.cs" />
     <Compile Include="PlacedObjects\AbstractPhysicalObjectHK.cs" />
     <Compile Include="PlacedObjects\DataPearlHK.cs" />
     <Compile Include="PlacedObjects\Piston.cs" />
