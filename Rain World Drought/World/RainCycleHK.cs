@@ -15,6 +15,8 @@ namespace Rain_World_Drought.OverWorld
                 typeof(RainCycleHK).GetMethod("RainGameOverHK", BindingFlags.Static | BindingFlags.Public));
             IDetour hkMA = new Hook(typeof(RainCycle).GetProperty("MusicAllowed", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic).GetGetMethod(),
                 typeof(RainCycleHK).GetMethod("MusicAllowedHK", BindingFlags.Static | BindingFlags.Public));
+            IDetour hkSC = new Hook(typeof(RainCycle).GetProperty("ScreenShake", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic).GetGetMethod(),
+                typeof(RainCycleHK).GetMethod("ScreenShakeHK", BindingFlags.Static | BindingFlags.Public));
             On.RainCycle.Update += new On.RainCycle.hook_Update(UpdateHK);
         }
 
@@ -38,13 +40,20 @@ namespace Rain_World_Drought.OverWorld
             return Mathf.InverseLerp(0f, 400f, (float)TimeUntilBurst(self, CurrentBurst(self)));
         }
 
+        public static float AnyRainApproaching(RainCycle self)
+        {
+            float burstApproaching = BurstApproaching(self);
+            return Mathf.Min(burstApproaching, self.RainApproaching);
+        }
+
+
 #pragma warning disable IDE0060
 
         public delegate float LightChangeBecauseOfRain(RainCycle self);
 
         public static float LightChangeBecauseOfRainHK(LightChangeBecauseOfRain orig, RainCycle self)
         {
-            float burstApproaching = BurstApproaching(self);
+            float burstApproaching = AnyRainApproaching(self);
             if (burstApproaching < 0.2f)
             { return Mathf.InverseLerp(0.2f, 1f, burstApproaching); }
             else
@@ -63,6 +72,15 @@ namespace Rain_World_Drought.OverWorld
         public static bool MusicAllowedHK(MusicAllowed orig, RainCycle self)
         {
             return self.world.game.IsArenaSession || (self.TimeUntilRain >= 2400 && TimeUntilBurst(self, CurrentBurst(self)) > 1200);
+        }
+
+        public delegate float ScreenShake(RainCycle self);
+        public static float ScreenShakeHK(ScreenShake orig, RainCycle self)
+        {
+            // Give burst rain screen shake
+            float origSc = orig(self);
+            float sc = Mathf.Pow(1f - Mathf.InverseLerp(0f, 0.2f, AnyRainApproaching(self)), 2f);
+            return Mathf.Max(sc, origSc);
         }
 
         private static void UpdateHK(On.RainCycle.orig_Update orig, RainCycle self)
@@ -118,7 +136,7 @@ namespace Rain_World_Drought.OverWorld
         }
 
         public static float BurstRainApproaching(RainCycle self)
-        { // unused
+        {
             int timeUntilBurst = TimeUntilBurst(self, CurrentBurst(self));
             if (timeUntilBurst > 0)
             { return Mathf.InverseLerp(0f, 2400f, (float)timeUntilBurst); }
