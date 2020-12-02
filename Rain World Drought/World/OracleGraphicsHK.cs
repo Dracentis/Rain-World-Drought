@@ -230,6 +230,7 @@ namespace Rain_World_Drought.OverWorld
                 if (self.lightsource == null)
                 {
                     self.lightsource = new LightSource(self.oracle.firstChunk.pos, false, Custom.HSL2RGB(0.1f, 1f, 0.5f), self.oracle);
+                    self.lightsource.requireUpKeep = true;
                     self.lightsource.affectedByPaletteDarkness = 0f;
                     self.oracle.room.AddObject(self.lightsource);
                 }
@@ -245,6 +246,7 @@ namespace Rain_World_Drought.OverWorld
                 if (self.lightsource == null)
                 {
                     self.lightsource = new LightSource(self.oracle.firstChunk.pos, false, Custom.HSL2RGB(0.1012423f, 0.257576f, 0.91322334f), self.oracle);
+                    self.lightsource.requireUpKeep = true;
                     self.lightsource.affectedByPaletteDarkness = 0f;
                     self.oracle.room.AddObject(self.lightsource);
                 }
@@ -255,6 +257,7 @@ namespace Rain_World_Drought.OverWorld
                     self.lightsource.setPos = new Vector2?(self.oracle.firstChunk.pos);
                 }
             }
+            if (self.lightsource != null) self.lightsource.stayAlive = true;
         }
 
         private static void DrawSpritesHK(On.OracleGraphics.orig_DrawSprites orig, OracleGraphics self,
