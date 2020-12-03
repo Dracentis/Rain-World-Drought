@@ -9,6 +9,10 @@ namespace Rain_World_Drought.OverWorld
     {
         public static void Patch()
         {
+            On.OracleGraphics.ArmBase.ApplyPalette += ArmBase_ApplyPalette;
+            On.OracleGraphics.ArmJointGraphics.DrawSprites += ArmJointGraphics_DrawSprites;
+            On.OracleGraphics.ArmJointGraphics.ApplyPalette += ArmJointGraphics_ApplyPalette;
+
             On.OracleGraphics.ctor += new On.OracleGraphics.hook_ctor(CtorHK);
             On.OracleGraphics.InitiateSprites += new On.OracleGraphics.hook_InitiateSprites(InitiateSpritesHK);
             On.OracleGraphics.AddToContainer += new On.OracleGraphics.hook_AddToContainer(AddToContainerHK);
@@ -16,6 +20,36 @@ namespace Rain_World_Drought.OverWorld
             On.OracleGraphics.DrawSprites += new On.OracleGraphics.hook_DrawSprites(DrawSpritesHK);
             On.OracleGraphics.ApplyPalette += new On.OracleGraphics.hook_ApplyPalette(ApplyPaletteHK);
             On.OracleGraphics.UbilicalCord.SetStuckSegments += new On.OracleGraphics.UbilicalCord.hook_SetStuckSegments(UCSetStuckSegmentsHK);
+        }
+
+        private static void ArmBase_ApplyPalette(On.OracleGraphics.ArmBase.orig_ApplyPalette orig, OracleGraphics.ArmBase self, RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, RoomPalette palette)
+        {
+            // Have arm graphics use Pebble's colors instead
+            Oracle oracle = self.owner.oracle;
+            Oracle.OracleID startID = oracle.ID;
+            if (startID == Oracle.OracleID.SL) oracle.ID = Oracle.OracleID.SS;
+            orig(self, sLeaser, rCam, palette);
+            oracle.ID = startID;
+        }
+
+        private static void ArmJointGraphics_DrawSprites(On.OracleGraphics.ArmJointGraphics.orig_DrawSprites orig, OracleGraphics.ArmJointGraphics self, RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, float timeStacker, Vector2 camPos)
+        {
+            // Have arm graphics use Pebble's colors instead
+            Oracle oracle = self.owner.oracle;
+            Oracle.OracleID startID = oracle.ID;
+            if (startID == Oracle.OracleID.SL) oracle.ID = Oracle.OracleID.SS;
+            orig(self, sLeaser, rCam, timeStacker, camPos);
+            oracle.ID = startID;
+        }
+
+        private static void ArmJointGraphics_ApplyPalette(On.OracleGraphics.ArmJointGraphics.orig_ApplyPalette orig, OracleGraphics.ArmJointGraphics self, RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, RoomPalette palette)
+        {
+            // Have arm graphics use Pebble's colors instead
+            Oracle oracle = self.owner.oracle;
+            Oracle.OracleID startID = oracle.ID;
+            if (startID == Oracle.OracleID.SL) oracle.ID = Oracle.OracleID.SS;
+            orig(self, sLeaser, rCam, palette);
+            oracle.ID = startID;
         }
 
         private static void CtorHK(On.OracleGraphics.orig_ctor orig, OracleGraphics self, PhysicalObject ow)
