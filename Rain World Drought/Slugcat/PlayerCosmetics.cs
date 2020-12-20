@@ -19,6 +19,7 @@ namespace Rain_World_Drought.Slugcat
 
         public override void InitiateSprites(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam)
         {
+            base.InitiateSprites(sLeaser, rCam);
             sLeaser.sprites[startSprite] = TriangleMesh.MakeLongMesh(1, false, true);
             sLeaser.sprites[startSprite + 1] = TriangleMesh.MakeLongMesh(1, false, true);
         }
