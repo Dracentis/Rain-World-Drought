@@ -164,7 +164,7 @@ namespace HUD
                 pips[i].isVisible = fill > 0.01f && drawAlpha > 0f;
                 pips[i].x = drawPos.x + spacing * i;
                 pips[i].y = drawPos.y + yOffset;
-                pips[i].scale = pipScale * alpha;
+                pips[i].scale = pipScale;
             }
         }
         
