@@ -128,6 +128,7 @@
     <Compile Include="Slugcat\WandererSupplement.cs" />
     <Compile Include="World\AboveCloudsViewHK.cs" />
     <Compile Include="World\BurstRain.cs" />
+    <Compile Include="World\DialogBoxHK.cs" />
     <Compile Include="World\FocusMeter.cs" />
     <Compile Include="World\GlobalRainHK.cs" />
     <Compile Include="World\MainLoopProcessHK.cs" />
