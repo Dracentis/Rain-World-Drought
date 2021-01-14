@@ -1,0 +1,24 @@
+Template: FS_SettingsTemplate_Fridge
+CeilingDrips: 0.5
+RainIntensity: 1
+RumbleIntensity: 1
+WaveSpeed: 0.75
+WaveLength: 0.5
+WaveAmplitude: 0
+SecondWaveLength: 0.1666667
+SecondWaveAmplitude: 0
+Clouds: 1
+Grime: 0.5
+BkgDroneVolume: 0.3043478
+BkgDroneNoThreatVolume: 1
+RandomItemDensity: 0.2065217
+RandomItemSpearChance: 0.2
+WaterReflectionAlpha: 1
+Palette: 13
+EffectColorA: 3
+EffectColorB: 7
+Effects: Fog-0.6630435-271-19, 
+PlacedObjects: CustomDecal><298.6843><404.8111><-178~48~665~46~439~3~-336~-198~0.6195652~1~0~FrozenCondensate~0.3043478~0.7173913~0.3043478~0.7173913~0.3043478~0.7173913~0.3043478~0.7173913, CustomDecal><852.0686><355.8342><-30~57~400~64~356~-23~108~-356~0.6195652~1~0~FrozenCondensate~0.2826087~0.3586957~0.2826087~0.3586957~0.2826087~0.3586957~0.2826087~0.3586957, ReliableSpear><812.5854><101.8863><, CustomDecal><1598.16><361.8706><-6~48~286~41~298~-1~-12~-519~0.6304348~1~0~FrozenCondensate~0.25~0~0.25~0~0.25~0~0.25~0, ReliableSpear><2376.624><441.1556><, ReliableSpear><2573.937><140.0707><, MultiplayerItem><2088.6><38.82651><Spear~17.32051~-10~1, ReliableSpear><1932.439><53.19055><, MultiplayerItem><2275.586><114.8644><Spear~17.32051~-10~1, MultiplayerItem><2658.356><439.3608><Rock~17.32051~-10~1, MultiplayerItem><2457.667><517.3898><Rock~17.32051~-10~1, DeadTokenStalk><1083.867><429.1003><21~100, DeadTokenStalk><1046.429><448.161><30~82, DeadTokenStalk><983.4519><457.1941><27~82, MultiplayerItem><732.0538><178.5574><Rock~17.32051~-10~1, MultiplayerItem><310.8103><297.6866><Rock~17.32051~-10~1, MultiplayerItem><1058.6><214.9232><Spear~17.32051~-10~1, MultiplayerItem><841.3533><94.88589><Spear~17.32051~-10~1, 
+AmbientSounds: OMNI><AM_IND-Utility01.ogg><760.9634><475.9466><0.3043478><1, OMNI><AM_SUB-MysticCave1.ogg><774.4025><234.0753><0.173913><1, OMNI><AM_IND-Fabrik01.ogg><734.8864><344.1462><0.1956522><1, OMNI><SO_SFX-ColdNight.ogg><269.9302><343.9374><0.2065217><1, 
+FadePalette: 10, 0.8043478, 0.8260869, 0.8478261, 10, 0.6304348
+WetTerrain: OFF

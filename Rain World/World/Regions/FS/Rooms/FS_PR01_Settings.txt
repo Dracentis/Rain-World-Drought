@@ -1,0 +1,4 @@
+Template: FS_SettingsTemplate_Industrial
+PlacedObjects: ReliableSpear><399.5602><79.18678><, ReliableSpear><273.3221><128.6585><, ReliableSpear><463.6998><121.0084><, 
+FadePalette: 10, 0.6086956, 0.6521739
+WetTerrain: OFF
