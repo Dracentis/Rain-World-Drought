@@ -4,4 +4,4 @@ BkgDroneVolume: 0
 Effects: Fog-0.6739131-20-20, 
 PlacedObjects: ExitSymbolHidden><1948.841><371.5721><, 
 AmbientSounds: SPOT><SO_SFX-ColdNight.ogg><569.075><438.3467><0.3586957><1><1495.076><328.6057><-594.3553><-81.35535><0><1, OMNI><SO_SFX-ColdNight.ogg><269.9302><343.9374><0.2065217><1, OMNI><SO_IND-HVAC.ogg><715.0886><174.8819><0.2065217><1, OMNI><SO_IND-Generator.ogg><713.6694><219.433><0.2065217><1, 
-FadePalette: 10, 0.8152174, 0.8913044
+FadePalette: 10, 0.8478261, 0.8913044

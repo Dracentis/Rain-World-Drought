@@ -1,5 +1,5 @@
 Template: FS_SettingsTemplate_Fridge
 BkgDroneVolume: 0.3043478
-PlacedObjects: ExitSymbolHidden><1244.315><137.3258><, CustomDecal><1161.434><564.8276><-9~55~595~49~593~6~-353~-422~0.6630435~1~0~FrozenCondensate~0.5~0.5217391~0.5~0.5217391~0.5~0.5217391~0.5~0.5217391, 
+PlacedObjects: CustomDecal><1161.434><564.8276><-9~55~595~49~593~6~-353~-422~0.6630435~1~0~FrozenCondensate~0.5~0.5217391~0.5~0.5217391~0.5~0.5217391~0.5~0.5217391, 
 FadePalette: 10, 0.6086956, 0.6739131
 WetTerrain: OFF
