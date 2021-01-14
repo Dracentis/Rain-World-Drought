@@ -10,13 +10,12 @@ overseersMax: 4
 playerGuideOverseerSpawnChance: 1.0
 Broken Shelters: 0: FS_S01
 Subregion: Forest Sanctuary
-Subregion: Forest Sanctuary (Depot Remnants)
+Subregion: Depot Remnants
 Subregion: Preservation Facility
 Room Setting Templates: Cave, Forest, Industrial, Fridge, Sub
 Room_Attr: GATE_FS_SB: Overseer-1,
 Room_Attr: FS_A01: Vulture-1,KingVulture-1,
 Room_Attr: FS_D05: Vulture-3,KingVulture-3,
-Room_Attr: FS_Lost: StandardGroundCreature-1,Slugcat-1,LizardTemplate-1,PinkLizard-1,GreenLizard-1,BlueLizard-1,YellowLizard-1,WhiteLizard-1,RedLizard-1,BlackLizard-1,Salamander-1,CyanLizard-1,Fly-1,Leech-1,SeaLeech-1,Snail-1,Vulture-1,GarbageWorm-1,LanternMouse-1,CicadaA-1,CicadaB-1,Spider-1,JetFish-1,BigEel-1,Deer-1,TubeWorm-1,DaddyLongLegs-1,BrotherLongLegs-1,TentaclePlant-1,PoleMimic-1,MirosBird-1,TempleGuard-1,Centipede-1,RedCentipede-1,Centiwing-1,SmallCentipede-1,Scavenger-1,Overseer-1,VultureGrub-1,EggBug-1,BigSpider-1,SpitterSpider-1,SmallNeedleWorm-1,BigNeedleWorm-1,DropBug-1,KingVulture-1,Hazer-1,LightWorm-1,CrossBat-1,WalkerBeast-1,GreyLizard-1,SeaDrake-1,
 Room_Attr: FS_D06: GreenLizard-1,RedCentipede-4,
 Room_Attr: FS_D07: Vulture-2,KingVulture-2,
 Room_Attr: FS_D11: Vulture-2,KingVulture-2,
