@@ -1,8 +1,9 @@
 Template: FS_SettingsTemplate_Fridge
 CeilingDrips: 0.5
+Grime: 0.1304348
 BkgDroneVolume: 0
 Effects: Fog-0.5-20-20, 
-PlacedObjects: ExitSymbolHidden><824.1833><204.9385><, 
-AmbientSounds: SPOT><SO_SFX-ColdNight.ogg><543.8329><379.3599><0.2065217><1><491.8329><203.3599><-2.355347><696.6447><0><0.4260871, 
+PlacedObjects: CustomDecal><20.68494><161.4237><-6~68~937~59~944~-2~-196~117~0.6739131~1~0~FrozenCondensate~0.5~0.5108696~0.5~0.5108696~0.5~0.5108696~0.5~0.5108696, 
+AmbientSounds: SPOT><SO_SFX-ColdNight.ogg><543.8329><379.3599><0.2065217><1><491.8329><202.3599><-2.355347><696.6447><0><0.4260871, 
 FadePalette: 10, 0.6630435, 0.7391304, 0.8152174
 WetTerrain: OFF

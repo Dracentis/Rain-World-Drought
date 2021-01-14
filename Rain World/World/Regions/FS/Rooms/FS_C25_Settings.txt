@@ -1,0 +1,5 @@
+Template: FS_SettingsTemplate_Fridge
+Grime: 0.173913
+BkgDroneVolume: 0
+AmbientSounds: SPOT><SO_SFX-ColdNight.ogg><512.5502><390.9898><0.2065217><1><489.5502><75.98981><-254.3553><94.64471><0><0.173913, 
+FadePalette: 10, 0.7826087

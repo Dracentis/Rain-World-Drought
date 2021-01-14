@@ -1,0 +1,7 @@
+Template: FS_SettingsTemplate_Fridge
+Grime: 0.2065217
+BkgDroneVolume: 0
+Effects: Fog-0.5760869-20-20, 
+PlacedObjects: ExitSymbolHidden><2826.134><332.1626><, 
+AmbientSounds: OMNI><SO_SFX-ColdNight.ogg><269.9302><343.9374><0.2065217><1, OMNI><SO_IND-Generator.ogg><600.6222><167.4038><0.2065217><1, OMNI><SO_IND-HVAC.ogg><616.7938><258.9451><0.2065217><1, SPOT><SO_SFX-ColdNight.ogg><412.3483><416.0758><0.2065217><1><199.3483><346.0758><600.6447><-213.3553><0><1, SPOT><SO_SFX-ColdNight.ogg><593.195><431.7944><0.2065217><1><1512.195><318.7944><-537.3553><-134.3553><0><1, SPOT><SO_SFX-ColdNight.ogg><467.8885><269.6442><0.25><1><2577.889><366.6442><-488.3553><-148.3553><0><1, 
+FadePalette: 10, 0.8152174, 0.8152174, 0.8152174

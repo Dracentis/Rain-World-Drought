@@ -1,0 +1,7 @@
+Template: FS_SettingsTemplate_Fridge
+Grime: 0.1413043
+BkgDroneVolume: 0
+Effects: Fog-0.7282609-20-20, 
+PlacedObjects: DataPearl><1783.139><288.1058><-474~-311~0~0~0~1, 
+AmbientSounds: SPOT><SO_SFX-ColdNight.ogg><452.8589><418.3918><0.4021739><1><1164.859><366.3918><-1006.355><12.64465><0><1, 
+FadePalette: 10, 0.8913044, 0.9239131
