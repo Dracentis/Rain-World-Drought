@@ -1,6 +1,6 @@
 Template: NONE
 RainIntensity: 0
-RumbleIntensity: 0.0326087
+RumbleIntensity: 0.07608695
 Grime: 0.05434782
 RandomItemDensity: 0.05434782
 RandomItemSpearChance: 0.1021738

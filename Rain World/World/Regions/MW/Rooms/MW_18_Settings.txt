@@ -2,6 +2,7 @@ Template: NONE
 RainIntensity: 0.1847826
 RumbleIntensity: 0.25
 Clouds: 0.3804348
+Grime: 0
 Palette: 8
 EffectColorA: 8
 EffectColorB: 6

@@ -1,10 +1,12 @@
 Template: NONE
 DangerType: Thunder
 Clouds: 1
+Grime: 0
 Palette: 16
-EffectColorA: 8
+EffectColorA: 11
+EffectColorB: 10
 Effects: Lightning-0.1630435-284-85, ElectricDeath-1-20-20, 
-PlacedObjects: LightSource><544.3047><438.5432><1~EffectColor1~0~100~50~86.60254~0~0, LightSource><400.1222><433.5962><0.4021739~EffectColor2~0~100~50~86.60254~0~0, LightSource><260.1824><443.5618><0.4021739~EffectColor1~0~100~50~86.60254~0~0, LightFixture><614.1995><609.3065><SlimeMoldLight~17.32051~-10~45, LightFixture><183.386><612.6467><RedLight~17.32051~-10~84, CosmeticSlimeMold2><619.6989><611.0211><0~100, CosmeticSlimeMold><626.9014><617.6307><0~100, SlimeMold><584.902><615.88><0~0~2~3, SlimeMold><653.04><595.5541><0~0~2~3, 
-AmbientSounds: OMNI><AM_IND-Utility02.ogg><739.147><457.9215><0.5><1, OMNI><AM_RAIN-Rumbles.ogg><726.6776><294.158><0.25><1, OMNI><AM_WIN-HowlingWnd.ogg><733.0507><553.0169><0.25><1, OMNI><Mech Basic.wav><721.9845><387.8006><0.5><1, SPOT><SO_IND-FlourLight.ogg><680.1729><250.6494><0.3913043><1><406.1729><420.6494><-27.35535><-116.3553><0><0.1, 
+PlacedObjects: LightSource><544.3047><438.5432><0.4021739~EffectColor1~0~100~-656~-56.39746~0~0, LightSource><400.1222><433.5962><0.4021739~EffectColor1~0~100~-517~22.60254~0~0, LightSource><258.1824><439.5618><0.4021739~EffectColor1~-65~107~-380~85.60251~0~0, LightFixture><211.1995><87.30652><SlimeMoldLight~182.3205~-134~45, LightFixture><183.386><612.6467><RedLight~142.3205~-2~84, CosmeticSlimeMold2><208.6989><85.02112><0~100, CosmeticSlimeMold><207.9014><97.63068><0~100, SlimeMold><219.902><101.88><336~-50~2~3, SlimeMold><234.04><100.5541><129~-65~2~3, LightSource><542.2045><165.8052><0.4021739~EffectColor1~1~97~43~420.6025~1~0, LightSource><399.229><176.8011><0.4021739~EffectColor1~-1~88~189~327.6025~1~0, LightSource><263.4028><173.129><0.4021739~EffectColor1~-5~89~315~257.6025~1~0, LightSource><-189.7665><144.8007><0.4021739~EffectColor1~53~91~69~159.6025~1~0, 
+AmbientSounds: OMNI><AM_IND-Utility02.ogg><739.147><457.9215><0.5><1, OMNI><AM_RAIN-Rumbles.ogg><726.6776><294.158><0.25><1, OMNI><AM_WIN-HowlingWnd.ogg><733.0507><553.0169><0.25><1, OMNI><Mech Basic.wav><721.9845><387.8006><0.5><1, SPOT><SO_IND-FlourLight.ogg><11.17291><470.6494><0.3913043><1><402.1729><430.6494><-27.35535><-116.3553><0><0.1, SPOT><SO_IND-FlourLight.ogg><13.56671><359.4385><0.3913043><1><542.5667><163.4386><-47.35535><-63.35535><0><0.1, SPOT><SO_IND-FlourLight.ogg><18.57959><243.6047><0.3913043><1><399.5796><167.6047><-38.35535><-70.35535><0><0.1, SPOT><SO_IND-FlourLight.ogg><22.25104><133.8><0.3913043><1><260.251><164.8><-35.35535><-65.35535><0><0.1, 
 FadePalette: 17, 0.5
 WetTerrain: OFF

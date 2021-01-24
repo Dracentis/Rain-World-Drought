@@ -1,7 +1,7 @@
 Template: NONE
 DangerType: None
 Clouds: 0.6086956
-Grime: 0.3369565
+Grime: 0
 Palette: 16
 EffectColorA: 10
 Effects: Lightning-0.7065217-20-20, ExtraLoudThunder-0.4565217-4-82, 

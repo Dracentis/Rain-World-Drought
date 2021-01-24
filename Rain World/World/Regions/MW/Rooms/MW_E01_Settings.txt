@@ -6,7 +6,7 @@ Palette: 8
 EffectColorA: 9
 EffectColorB: 8
 Effects: Fog-0.7608696-20-20, SkyBloom-0.5652174-17-89, AboveCloudsView-1-261-174, 
-PlacedObjects: DangleFruit><1406.921><398.3965><0~0~2~3, DangleFruit><1490.896><381.6367><0~0~2~3, DangleFruit><1552.555><370.5428><0~0~2~3, DangleFruit><1626.773><372.3013><0~0~2~3, 
+PlacedObjects: DangleFruit><1406.921><398.3965><0~0~2~3, DangleFruit><1490.896><381.6367><0~0~2~3, DangleFruit><1552.555><370.5428><0~0~2~3, DangleFruit><1626.773><372.3013><0~0~2~3, CustomDecal><283.5579><2476.442><-1~122~483~120~483~1~-370~6~0.2826087~1~0.1195652~purple moist eye~1~0.08695652~1~0.08695652~1~0.08695652~1~0.08695652, 
 AmbientSounds: OMNI><AM_ENV-CityTone.ogg><682.0967><568.1284><0.5><1, OMNI><AM_ENV-CricketsWnd.ogg><681.9499><509.7562><0.5><1, OMNI><AM_WIN-StrongWnd2.ogg><711.5829><418.432><0.7608696><1, 
 FadePalette: 18, 0.5543478, 0.5543478, 0.5543478, 0.5543478, 0.5543478, 0.5543478, 0.5543478, 0.5543478, 0.5543478, 0.5543478
 WetTerrain: OFF

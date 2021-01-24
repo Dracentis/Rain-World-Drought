@@ -1,8 +1,10 @@
 Template: NONE
 Clouds: 1
+Grime: 0
 Palette: 16
-EffectColorA: 10
+EffectColorA: 11
 Effects: Lightning-0.6847826-40-113, ExtraLoudThunder-0.1847826-41-65, 
+PlacedObjects: LightSource><683.9961><216.7372><0.3370341~EffectColor1~0~79~-472.9941~-90.37585~1~0, 
 AmbientSounds: OMNI><AM_RAIN-RollingThunder.ogg><712.0404><559.4459><0.1630435><1, OMNI><AM_RAIN-Rumbles.ogg><757.3696><220.3483><0.1630435><1, OMNI><SO_IND-Humm.ogg><736.9056><94.92632><0.2282609><1, 
 FadePalette: 17, 0.7717391
 WetTerrain: OFF

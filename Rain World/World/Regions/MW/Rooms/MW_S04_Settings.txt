@@ -1,8 +1,9 @@
 Template: NONE
 DangerType: None
 Clouds: 0.6956522
+Grime: 0
 Palette: 16
-EffectColorA: 9
+EffectColorA: 11
 Effects: Lightning-0.5108696-33-127, 
 AmbientSounds: OMNI><AM_ENV-WallHum.ogg><721.411><429.1314><0.5><1, OMNI><AM_IND-Midsex02.ogg><740.554><568.0395><0.3043478><1, OMNI><AM_IND-Utility01.ogg><709.4238><472.6511><0.04347826><1, 
 FadePalette: 17, 0.5543478, 0.5543478, 0.5543478

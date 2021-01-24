@@ -2,9 +2,10 @@ Template: NONE
 DangerType: Thunder
 RumbleIntensity: 0.173913
 Clouds: 0.04347826
+Grime: 0
 Palette: 16
 EffectColorA: 10
-EffectColorB: 8
+EffectColorB: 10
 Effects: GreenSparks-0.3043478-20-20, ExtraLoudThunder-0.4456522-18-96, ElectricDeath-1-309-37, Lightning-0.5760869-291-110, SunBlock-1-30-30, 
 AmbientSounds: OMNI><AM_IND-12thFloor.ogg><753.6978><352.72><0.3369565><1, OMNI><AM_WIN-HowlingWnd.ogg><720.4283><550.1867><0.2065217><1, OMNI><AM_RAIN-RollingThunder.ogg><721.4484><308.5255><0.3695652><1, OMNI><AM_RAIN-MehThunder.ogg><723.4616><343.5537><0.2065217><1, OMNI><Basic Mech.wav><756.696><427.04><0.2065217><1, SPOT><SO_IND-Generator.ogg><727.0569><223.698><0.5><1><383.0861><1910.713><-127.3553><3.644653><0><0.1, SPOT><SO_IND-MechHum02.ogg><755.1458><564.3869><0.5><1><316.1459><1227.382><55.64465><-106.3553><0><0.1, SPOT><SO_IND-WinFan.ogg><730.3058><478.558><0.5><1><755.3613><186.5703><-176.3553><-8.355347><0><0.1, 
 FadePalette: 17, 0.423913, 0.5434783, 0.5434783

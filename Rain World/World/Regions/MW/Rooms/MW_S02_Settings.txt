@@ -1,6 +1,7 @@
 Template: NONE
-DangerType: NONE
+DangerType: None
 Clouds: 0.7934783
+Grime: 0
 Palette: 16
 EffectColorA: 10
 FadePalette: 17, 0.7065217, 0.7065217, 0.7065217

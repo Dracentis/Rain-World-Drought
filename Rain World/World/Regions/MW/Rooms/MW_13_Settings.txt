@@ -1,6 +1,7 @@
 Template: NONE
 DangerType: Thunder
-Clouds: 1
+Clouds: 0.7065217
+Grime: 0
 Palette: 16
 EffectColorA: 10
 Effects: Lightning-0.7065217-20-20, ExtraLoudThunder-0.2934783-36-68, GreenSparks-0.6521739-261-164, ElectricDeath-1-279-49, 

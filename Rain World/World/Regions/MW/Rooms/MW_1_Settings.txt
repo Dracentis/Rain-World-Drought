@@ -2,6 +2,7 @@ Template: NONE
 RainIntensity: 0.5
 RumbleIntensity: 0.5108696
 Clouds: 0.4673913
+Grime: 0
 Palette: 8
 EffectColorB: 8
 Effects: AboveCloudsView-1-256-48, Fog-0.75-256-99, SkyBloom-0.5760869-1-97, 

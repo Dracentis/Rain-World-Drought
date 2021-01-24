@@ -1,6 +1,7 @@
 Template: NONE
 DangerType: None
 Clouds: 0.9347826
+Grime: 0
 Palette: 16
 EffectColorA: 4
 AmbientSounds: OMNI><AM_ENV-WallHum.ogg><732.6791><427.0891><0.5><1, OMNI><AM_IND-DeepHum.ogg><725.791><315.4458><0.7065217><1, 

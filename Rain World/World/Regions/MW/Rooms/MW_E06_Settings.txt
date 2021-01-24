@@ -6,5 +6,6 @@ RandomItemDensity: 0
 RandomItemSpearChance: 0
 Palette: 18
 EffectColorA: 9
+Triggers: Spot<tA>event<tB>StopMusicEvent<eA>songName<eB>NO SONG<eA>prio<eB>1<eA>type<eB>0<eA>fadeOut<eB>200<tA>multiUse<tB>1<tA>toCycle<tB>-1<tA>fromCycle<tB>0<tA>delay<tB>0<tA>panPos<tB>704.5505<tB>215.5134<tA>fireChance<tB>1<tA>entrance<tB>0<tA>karma<tB>0<tA>slugcats<tB>111<tA>pos<tB>122.5505<tB>104.5134<tA>handlePos<tB>-35.35534<tB>-35.35534, 
 FadePalette: 8, 0.5326087, 0.5326087, 0.5326087
 WetTerrain: OFF
