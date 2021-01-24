@@ -23,7 +23,15 @@ namespace Rain_World_Drought.Effects
             {
                 if (room.world.rainCycle.TimeUntilRain > 0 && room.waterObject.fWaterLevel < room.waterObject.originalWaterLevel + this.room.roomRain.globalRain.flood)
                 {
-                    room.waterObject.fWaterLevel = room.waterObject.fWaterLevel + room.waterObject.originalWaterLevel / 3000f;
+                    room.waterObject.fWaterLevel = room.waterObject.fWaterLevel + room.waterObject.originalWaterLevel / 300f;
+                }
+                else if (room.world.rainCycle.TimeUntilRain > 0 && room.waterObject.fWaterLevel > room.waterObject.originalWaterLevel + this.room.roomRain.globalRain.flood)
+                {
+                    room.waterObject.fWaterLevel = room.waterObject.fWaterLevel - room.waterObject.originalWaterLevel / 300f;
+                }
+                else
+                {
+                    room.waterObject.fWaterLevel = Mathf.Lerp(room.waterObject.fWaterLevel, room.waterObject.originalWaterLevel + this.room.roomRain.globalRain.flood, 0.1f);
                 }
                 return;
             }

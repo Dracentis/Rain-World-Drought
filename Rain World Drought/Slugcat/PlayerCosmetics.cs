@@ -19,6 +19,7 @@ namespace Rain_World_Drought.Slugcat
 
         public override void InitiateSprites(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam)
         {
+            base.InitiateSprites(sLeaser, rCam);
             sLeaser.sprites[startSprite] = TriangleMesh.MakeLongMesh(1, false, true);
             sLeaser.sprites[startSprite + 1] = TriangleMesh.MakeLongMesh(1, false, true);
         }
@@ -235,6 +236,13 @@ namespace Rain_World_Drought.Slugcat
         private float bumpProgress = 0f;    // from 0 to 1 bump
         private float fadeProgress = 0f;    // from 0 to 1 fade light and mark out
 
+        public override void AddToContainer(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, FContainer newContainer)
+        {
+            newContainer = rCam.ReturnFContainer("Foreground");
+            newContainer.AddChild(sLeaser.sprites[startSprite]);
+            newContainer.AddChild(sLeaser.sprites[startSprite + 1]);
+        }
+
         public override void Update()
         {
             base.Update();
@@ -256,10 +264,10 @@ namespace Rain_World_Drought.Slugcat
                 { this.alpha = Mathf.Lerp(this.alpha, this.bumpProgress, 0.1f); }
                 else if (this.fadeProgress > 0f && this.fadeProgress < 1f)
                 { this.alpha = Mathf.Lerp(this.alpha, 1f - this.fadeProgress, 0.1f); }
-                else
-                {
-                    this.alpha = Custom.LerpAndTick(this.alpha, Mathf.Clamp(Mathf.InverseLerp(50f, 100f, (float)this.pGraphics.player.touchedNoInputCounter) - UnityEngine.Random.value * Mathf.InverseLerp(100f, 50f, (float)this.pGraphics.player.touchedNoInputCounter), 0f, 1f) * this.pGraphics.markBaseAlpha, 0.1f, 0.0333333351f);
-                }
+            }
+            else
+            {
+                this.alpha = Custom.LerpAndTick(this.alpha, Mathf.Clamp(Mathf.InverseLerp(50f, 100f, (float)this.pGraphics.player.touchedNoInputCounter) - UnityEngine.Random.value * Mathf.InverseLerp(100f, 50f, (float)this.pGraphics.player.touchedNoInputCounter), 0f, 1f) * this.pGraphics.markBaseAlpha, 0.1f, 0.0333333351f);
             }
         }
 

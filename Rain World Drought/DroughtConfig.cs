@@ -1,4 +1,7 @@
-﻿using System.Globalization;
+﻿using System;
+using OptionalUI;
+using Partiality.Modloader;
+using UnityEngine;
 
 namespace Rain_World_Drought
 {
@@ -7,11 +10,27 @@ namespace Rain_World_Drought
     /// </summary>
     public static class DroughtConfig
     {
+        // To add more overrides, see the METHODS section of DroughtConfigGenerator.CreateOIType
+
+        public static void Ctor(OptionInterface self, PartialityMod mod)
+        {
+        }
+        
         public static void Initialize(OptionInterface self)
+        {
+            self.Tabs = new OpTab[1];
+            self.Tabs[0] = new OpTab("Config");
+
+            OpLabel cfgTitle = new OpLabel(new Vector2(100, 550), new Vector2(400, 40), "Put Config Here!", FLabelAlignment.Center, true);
+            self.Tabs[0].AddItems(cfgTitle);
+        }
+        
+        public static void ConfigOnChange(OptionInterface self)
         {
         }
 
-        // I'll just believe in Slime_Cubed for implementing CM support without making it dependency
-        public static CultureInfo GetCultureInfo(OptionInterface self) => return self.GetCultureInfo();
+        public static void Update(OptionInterface self, float dt)
+        {
+        }
     }
 }

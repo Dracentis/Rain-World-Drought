@@ -1332,7 +1332,7 @@ namespace Rain_World_Drought.OverWorld
 
         public override string Translate(string s)
         {
-            return ReplaceParts(base.Translate(s));
+            return ReplaceParts(DroughtMod.Translate(s));
         }
 
         public RainWorld rainWorld
