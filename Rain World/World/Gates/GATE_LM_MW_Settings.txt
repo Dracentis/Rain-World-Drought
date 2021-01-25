@@ -7,5 +7,6 @@ RandomItemSpearChance: 0
 Palette: 18
 EffectColorA: 9
 PlacedObjects: NoSpearStickZone><479.8545><267.3282><-8~240, 
+AmbientSounds: SPOT><AM_IND-ElectricHum01.ogg><749.6615><295.5706><0.3586957><1><824.6615><570.5706><-109.3553><-111.3553><0><0.1, SPOT><AM_IND-ElectricHum01.ogg><749.9354><295.675><0.3586957><1><137.9354><570.675><-107.3553><-125.3553><0><0.1, 
 FadePalette: 17, 0.75
 WetTerrain: OFF
