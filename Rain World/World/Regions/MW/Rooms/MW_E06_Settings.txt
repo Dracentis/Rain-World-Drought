@@ -6,6 +6,7 @@ RandomItemDensity: 0
 RandomItemSpearChance: 0
 Palette: 18
 EffectColorA: 9
+AmbientSounds: SPOT><AM_IND-ElectricHum01.ogg><747.7><294.2528><0.2934783><1><-3.300049><320.2528><-63.35535><-74.35535><0><0.1, SPOT><AM_IND-ElectricHum01.ogg><747.6886><294.1834><0.2934783><1><138.6886><319.1834><-69.35535><-64.35535><0><0.1, SPOT><AM_IND-ElectricHum01.ogg><747.5392><294.0539><0.2934783><1><300.5392><319.0539><-70.35535><-62.35535><0><0.1, SPOT><AM_IND-ElectricHum01.ogg><747.8774><294.408><0.2934783><1><2743.877><355.408><-62.35535><-82.35535><0><0.1, SPOT><AM_IND-ElectricHum01.ogg><747.0258><294.4483><0.2934783><1><2946.026><356.4483><-56.35535><-82.35535><0><0.1, 
 Triggers: Spot<tA>event<tB>StopMusicEvent<eA>songName<eB>NO SONG<eA>prio<eB>1<eA>type<eB>0<eA>fadeOut<eB>200<tA>multiUse<tB>1<tA>toCycle<tB>-1<tA>fromCycle<tB>0<tA>delay<tB>0<tA>panPos<tB>704.5505<tB>215.5134<tA>fireChance<tB>1<tA>entrance<tB>0<tA>karma<tB>0<tA>slugcats<tB>111<tA>pos<tB>122.5505<tB>104.5134<tA>handlePos<tB>-35.35534<tB>-35.35534, 
 FadePalette: 8, 0.5326087, 0.5326087, 0.5326087
 WetTerrain: OFF

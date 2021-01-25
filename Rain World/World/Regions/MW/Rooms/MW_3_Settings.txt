@@ -4,6 +4,6 @@ Palette: 18
 EffectColorA: 9
 EffectColorB: 8
 PlacedObjects: LightBeam><323.8021><76.97101><-216~640~189~641~395~2~0~0~0.5304347~0~1~1, DangleFruit><647.0605><610.9361><-93~6~2~3, DangleFruit><787.4259><625.4048><0~0~2~3, DangleFruit><837.8853><603.0862><0~0~2~3, 
-AmbientSounds: OMNI><AM_ENV-CricketsWnd.ogg><767.9383><550.6826><0.6086956><1, OMNI><AM_ENV-CityTone.ogg><735.3409><565.8712><0.5><1, 
+AmbientSounds: OMNI><AM_ENV-CricketsWnd.ogg><767.9383><550.6826><0.6086956><1, OMNI><AM_ENV-CityTone.ogg><735.3409><565.8712><0.5><1, SPOT><AM_IND-50hz.ogg><673.832><340.8586><0.3586957><1><564.832><374.8586><-67.35535><-69.35535><0><0.1, SPOT><AM_IND-50hz.ogg><674.2><340.7453><0.3586957><1><373.2><376.7453><-70.35535><-65.35535><0><0.1, 
 FadePalette: 8, 0.3369565
 WetTerrain: OFF

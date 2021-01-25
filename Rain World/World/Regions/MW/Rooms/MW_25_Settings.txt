@@ -7,6 +7,6 @@ Palette: 16
 EffectColorA: 11
 EffectColorB: 10
 Effects: Lightning-0.7608696-20-20, GreenSparks-0.8152174-13-82, ExtraLoudThunder-0.5652174-2-138, ElectricDeath-1-373-184, 
-AmbientSounds: OMNI><AM_IND-Factory01.ogg><716.9307><221.4143><0.5><1, OMNI><AM_IND-Fabrik01.ogg><728.1993><248.517><0.5><1, OMNI><AM_IND-DeepHum.ogg><744.6733><310.8499><0.2934783><1, OMNI><AM_IND-SuperStructure.ogg><743.1178><491.3384><0.5><1, 
+AmbientSounds: OMNI><AM_IND-Factory01.ogg><716.9307><221.4143><0.5><1, OMNI><AM_IND-Fabrik01.ogg><728.1993><248.517><0.5><1, OMNI><AM_IND-DeepHum.ogg><744.6733><310.8499><0.2934783><1, OMNI><AM_IND-SuperStructure.ogg><743.1178><491.3384><0.5><1, SPOT><AM_IND-50hz.ogg><751.3021><343.5569><0.3586957><1><517.3185><1108.579><-62.35535><-55.35535><0><0.1, SPOT><AM_IND-50hz.ogg><751.442><343.694><0.3586957><1><211.44><926.69><-61.35535><-59.35535><0><0.1, SPOT><AM_IND-50hz.ogg><751.2361><343.5505><0.3586957><1><331.2357><1014.534><-59.35535><-52.35535><0><0.1, 
 FadePalette: 17, 0.5652174, 0.5652174
 WetTerrain: OFF
