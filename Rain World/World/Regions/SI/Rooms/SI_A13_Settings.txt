@@ -1,5 +1,6 @@
-DangerType: None
 CeilingDrips: 0.5
+RainIntensity: 0.07608695
+RumbleIntensity: 0.07608695
 WaveSpeed: 0.75
 WaveLength: 0.5
 WaveAmplitude: 0
@@ -13,6 +14,6 @@ EffectColorA: 10
 EffectColorB: 2
 Effects: Flies-0.0326087-208-175, SkyDandelions-0.06521739-214-122, AboveCloudsView-1-20-20, 
 PlacedObjects: LightSource><489.6024><522.3282><1~Environment~0~-139~50~86.60254~1~0, KarmaFlower><382.976><188.9485><0~0~5~7, UniqueDataPearl><799.0914><430.319><0~0~0~0~24~0, 
-AmbientSounds: OMNI><AM_ENV-NatWind.ogg><859.5842><582.1382><0.3008696><1, OMNI><AM_WIN-StrongWnd2.ogg><134.5517><285.724><0.8804348><1, 
+AmbientSounds: OMNI><AM_ENV-NatWind.ogg><859.5842><582.1382><0.3008696><1, OMNI><AM_WIN-StrongWnd2.ogg><134.5517><285.724><0.8804348><1, SPOT><AM_IND-ElectricHum01.ogg><692.9451><289.7943><0.3586957><1><491.9451><550.7943><-77.35535><-68.35535><0><0.1, 
 FadePalette: 18, 0.5760869
 WetTerrain: OFF

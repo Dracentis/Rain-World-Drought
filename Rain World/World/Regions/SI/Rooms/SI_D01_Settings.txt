@@ -1,0 +1,11 @@
+Clouds: 0.25
+Grime: 0.2826087
+BkgDroneVolume: 0.2608696
+Palette: 2
+EffectColorA: 10
+EffectColorB: 13
+Effects: Flies-0.173913-27-74, 
+PlacedObjects: LightSource><1190.062><798.9313><0.7391304~Environment~94~-37~29~-194.3975~1~0, LightSource><920.808><769.944><0.3695652~Environment~-57~-57~4~-241.3975~1~0, InsectGroup><903.4496><1522.444><-169~160~0~0~TinyDragonFly~0.2391304, CustomDecal><190.4241><348.3149><45~346~955~324~997~-19~-309~75~0.1956522~1~0~RustB2~1~1~0.9565217~1~0~1~0~1, CustomDecal><1208.437><182.9279><-50~545~578~434~562~21~-79~291~0~1~0~RustB3~0~1~1~1~1~1~0~1, CustomDecal><1645.197><1129.716><-15~707~353~662~316~-3~-324~-443~0.2934783~0.5652174~0~RustB3~0~1~1~1~1~1~0~1, CustomDecal><1790.103><1009.328><-14~345~338~340~347~8~-613~317~0.2173913~1~0~UNQ - Cartoon Peeker~1~0~0.5108696~0.3478261~0.5108696~0.08695652~0.6956522~0.6304348, CustomDecal><1832.061><1025.564><-13~80~179~143~105~-7~93~-321~0.25~0.3804348~0~WhiteTag3Q~1~0~1~0~1~0.8260869~1~1, CustomDecal><1715.589><926.5708><9~444~473~500~416~-45~-737~61~0~1~0~Rust2~0.4673913~1~1~1~0.2173913~1~1~1, CustomDecal><280.351><471.6727><-2~77~144~108~125~0~323~-63~0.2934783~1~0~CrudeBubblyB&W~0.4673913~0~0~0~0.4347826~0.9456522~0~1, 
+AmbientSounds: OMNI><AM_ENV-LightWind.ogg><757.892><519.8317><0.3804348><1, SPOT><AM_IND-12thFloor.ogg><766.1707><354.0664><0.3913043><1><1034.171><335.0664><63.64465><229.6447><0><0.6978262, SPOT><AM_IND-DeepHum.ogg><762.6074><239.6403><0.2934783><1><1010.607><963.6403><-115.3553><-7.355339><0><0.3717393, SPOT><AM_ENV-LightWind.ogg><73.19989><501.4927><0.3152174><0.8826087><-102.8001><1379.493><69.64466><-217.3553><0><0.6760871, SPOT><AM_IND-ElectricHum02.ogg><764.4594><117.6958><0.1847826><1><382.7923><537.6959><-35.35534><-35.35534><0><0.2956523, 
+Triggers: Spot<tA>event<tB>MusicEvent<eA>songName<eB>RW_42 - Kayava<eA>vol<eB>0.2347823<eA>prio<eB>0.5<eA>mxThrt<eB>1<eA>loop<eB>0<eA>droneTol<eB>0<eA>rooms<eB>6<eA>rest<eB>5<eA>fadeIn<eB>202.1739<eA>oneSongPerCycle<eB>1<eA>stopAtDeath<eB>0<eA>stopAtGate<eB>0<tA>multiUse<tB>0<tA>toCycle<tB>-1<tA>fromCycle<tB>0<tA>delay<tB>0<tA>panPos<tB>433.4979<tB>397.8<tA>fireChance<tB>0.3043478<tA>entrance<tB>4<tA>karma<tB>0<tA>slugcats<tB>111<tA>pos<tB>979.4978<tB>1040.799<tA>handlePos<tB>749.6447<tB>305.6447, 
+FadePalette: 18, 0.25, 0.25, 0.25, 0.25

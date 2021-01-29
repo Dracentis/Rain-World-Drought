@@ -1,0 +1,8 @@
+Template: SI_SettingsTemplate_Inside
+DangerType: None
+Clouds: 0
+EffectColorB: 18
+Effects: AboveCloudsView-1-30-30, SkyDandelions-0-25-102, 
+PlacedObjects: SuperStructureFuses><452.8967><391.8287><63~53, LightSource><471.6093><387.6421><0.2065217~EffectColor2~-671~53~50~86.60254~1~0, 
+AmbientSounds: SPOT><SO_SFX-Data1.ogg><719.5535><280.7869><0.423913><1><470.5535><388.7869><-153.3553><-141.3553><0><0.1, 
+FadePalette: 18, 0.5978261
