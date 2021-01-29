@@ -1,5 +1,6 @@
-DangerType: None
+RainIntensity: 0.1521739
+RumbleIntensity: 0.1521739
 Effects: AboveCloudsView-1-20-20, SkyDandelions-0.06521739-69-109, 
-AmbientSounds: OMNI><AM_WIN-StrongWnd2.ogg><731.5618><500.5677><0.4456522><1, 
+AmbientSounds: OMNI><AM_WIN-StrongWnd2.ogg><731.5618><500.5677><0.5><1, 
 FadePalette: 18, 0.5434783, 0.4565217, 0.4021739
 WetTerrain: OFF

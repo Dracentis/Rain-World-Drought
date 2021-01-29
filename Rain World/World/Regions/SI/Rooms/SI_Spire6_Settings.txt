@@ -3,7 +3,7 @@ Clouds: 0
 EffectColorA: 9
 EffectColorB: 18
 Effects: AboveCloudsView-1-20-20, SkyDandelions-0-30-30, Flies-0-40-40, 
-PlacedObjects: LightSource><419.5992><1801.826><1~EffectColor2~-66~-73~49~-48.39746~1~0, UniqueDataPearl><515.4421><1444.444><0~0~0~0~26~0, 
-AmbientSounds: OMNI><AM_WIN-StrongWnd2.ogg><772.8636><507.1037><1><1.03913, 
+PlacedObjects: LightSource><406.5992><1778.826><0.2065217~EffectColor2~-811~-641~49~-48.39746~1~0, UniqueDataPearl><515.4421><1444.444><0~0~0~0~26~0, 
+AmbientSounds: OMNI><AM_WIN-StrongWnd2.ogg><772.8636><507.1037><0.8043478><1.03913, SPOT><SO_SFX-Data1.ogg><766.2361><139.5505><0.4021739><1><271.2361><1920.551><-199.3553><-325.3553><0><0.3065219, SPOT><AM_IND-50hz.ogg><731.158><343.1226><0.5><1><502.158><686.1226><-60.35535><-61.35535><0><0.1, SPOT><AM_IND-50hz.ogg><730.2459><340.55><0.5><1><498.2459><1059.55><-61.35535><-63.35535><0><0.1, 
 FadePalette: 18, 0.5978261, 0.5978261, 0.5978261
 WetTerrain: OFF

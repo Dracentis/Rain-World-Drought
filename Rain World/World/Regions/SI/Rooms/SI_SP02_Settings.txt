@@ -1,7 +1,9 @@
 Template: NONE
-DangerType: None
+RainIntensity: 0.0326087
+RumbleIntensity: 0.0326087
 Palette: 2
 EffectColorA: 0
 EffectColorB: 0
 Effects: AboveCloudsView-1-20-20, 
+AmbientSounds: OMNI><AM_WIN-StrongWnd2.ogg><734.5616><488.567><0.9021739><1, 
 FadePalette: 18, 0.6521739, 0.6413044, 0.6086956

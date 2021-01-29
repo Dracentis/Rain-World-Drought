@@ -5,7 +5,8 @@ BkgDroneVolume: 0.2608696
 Palette: 2
 EffectColorA: 0
 Effects: AboveCloudsView-1-20-20, 
-PlacedObjects: ReliableSpear><235.8135><522.6896><, ReliableSpear><362.6956><487.4579><, UniqueDataPearl><641.8201><663.9373><-159~-263~0~0~25~0, 
-AmbientSounds: OMNI><AM_WIN-StrongWnd2.ogg><725.5688><501.9152><0.9021739><1, 
+PlacedObjects: ReliableSpear><362.6956><487.4579><, UniqueDataPearl><641.8201><663.9373><-159~-263~0~0~25~0, 
+AmbientSounds: OMNI><AM_WIN-StrongWnd2.ogg><725.5688><501.9152><0.75><1, SPOT><SO_SFX-Data2.ogg><702.4599><262.9459><0.3586957><1><505.4641><434.9459><-112.3553><-112.3553><0><0.3065219, 
+Triggers: Spot<tA>event<tB>MusicEvent<eA>songName<eB>DR_07 - Higher Than Before<eA>vol<eB>0.3000004<eA>prio<eB>0.5<eA>mxThrt<eB>1<eA>loop<eB>0<eA>droneTol<eB>0<eA>rooms<eB>-1<eA>rest<eB>5<eA>fadeIn<eB>0<eA>oneSongPerCycle<eB>0<eA>stopAtDeath<eB>0<eA>stopAtGate<eB>0<tA>multiUse<tB>0<tA>toCycle<tB>-1<tA>fromCycle<tB>0<tA>delay<tB>51<tA>panPos<tB>754.3016<tB>213.8068<tA>fireChance<tB>1<tA>entrance<tB>-1<tA>karma<tB>0<tA>slugcats<tB>111<tA>pos<tB>489.3016<tB>349.8068<tA>handlePos<tB>-485.3553<tB>-288.3553, 
 FadePalette: 18, 0.5869565
 WetTerrain: OFF

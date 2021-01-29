@@ -1,0 +1,11 @@
+RainIntensity: 0.7717391
+RumbleIntensity: 0.8043478
+Clouds: 0.4782609
+Grime: 0.2717391
+BkgDroneVolume: 0.2608696
+Palette: 2
+EffectColorA: 10
+Effects: AboveCloudsView-1-20-20, Fog-0.173913-15-79, 
+PlacedObjects: DandelionPatch><430.8493><392.8264><16~72, 
+AmbientSounds: OMNI><AM_ENV-LightWind.ogg><746.9493><521.4827><0.3043478><0.9217392, SPOT><AM_WIN-StrongWnd2.ogg><750.3112><223.8161><0.25><1><0.3112183><333.8161><-209.3553><-166.3553><0><0.5130436, SPOT><AM_IND-ElectricHum01.ogg><764.3124><375.5694><0.1630435><1><475.3124><727.5693><-35.35534><-35.35534><0><0.2956523, SPOT><AM_WIN-StrongWnd2.ogg><752.3707><92.59741><0.3586957><1><23.37073><1272.597><-246.3553><-54.35535><0><0.4695654, 
+FadePalette: 18, 0.326087, 0.3043478

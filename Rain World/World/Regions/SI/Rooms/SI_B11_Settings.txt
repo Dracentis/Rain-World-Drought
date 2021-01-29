@@ -1,0 +1,10 @@
+Clouds: 0.2391304
+Grime: 0.2934783
+BkgDroneVolume: 0.2608696
+Palette: 2
+EffectColorA: 0
+EffectColorB: 2
+PlacedObjects: DandelionPatch><613.6581><212.1777><-68~120, DandelionPatch><140.8201><171.3376><-116~111, DandelionPatch><730.6675><1158.609><-6~77, GhostSpot><188.69><1303.563><, CustomDecal><-8.610046><136.8571><-36~117~1021~120~1041~-29~-114~166~0.07608695~1~0~DirtyWaterLine~0.3152174~1~0.25~1~1~1~1~1, CustomDecal><312.1758><186.9047><-10~64~95~100~91~1~259~171~0.2826087~1~0~WhiteTag3Q~0.6521739~0~1~0~0.1956522~1~0.6956522~1, CustomDecal><618.4878><228.5504><-9~101~95~102~90~-2~-459~89~0.2717391~1~0~ScavMark Ghost~1~0~1~0~1~0.423913~1~0.6413044, CustomDecal><198.0194><210.9491><-23~88~298~46~248~-25~-311~-197~0.2173913~1~0~junkGraffiti4~0~0.5652174~1~0.5652174~1~0.5652174~0~0.5652174, 
+AmbientSounds: SPOT><AM_IND-Utility02.ogg><577.5656><285.3274><0.4021739><1><482.5656><81.32742><-336.3553><35.64466><0><0.6652175, SPOT><OM.wav><736.1943><473.3079><0.2282609><0.7847826><726.1943><1034.308><-76.35535><-24.35535><0><0.2847827, 
+Triggers: Spot<tA>event<tB>MusicEvent<eA>songName<eB>NA_20 - Crystalline<eA>vol<eB>0.2891302<eA>prio<eB>0.5<eA>mxThrt<eB>1<eA>loop<eB>0<eA>droneTol<eB>0<eA>rooms<eB>2<eA>rest<eB>5<eA>fadeIn<eB>156.5217<eA>oneSongPerCycle<eB>0<eA>stopAtDeath<eB>0<eA>stopAtGate<eB>0<tA>multiUse<tB>0<tA>toCycle<tB>-1<tA>fromCycle<tB>0<tA>delay<tB>0<tA>panPos<tB>624.8534<tB>558.4212<tA>fireChance<tB>1<tA>entrance<tB>-1<tA>karma<tB>0<tA>pos<tB>588.8534<tB>1241.421<tA>handlePos<tB>-320.3553<tB>-362.3553, 
+FadePalette: 18, 0.1630435, 0.1630435

@@ -1,0 +1,9 @@
+Clouds: 0.4565217
+Grime: 0.1304348
+BkgDroneVolume: 0.2608696
+Palette: 2
+EffectColorA: 10
+Effects: AboveCloudsView-1-20-20, Fog-0.8369565-19-79, 
+PlacedObjects: NeedleEgg><1560.8><76.24786><0~0~4~9, DandelionPatch><1022.676><461.1554><0~100, DandelionPatch><723.8033><412.7862><15~75, InsectGroup><838.113><531.8958><-39~111~0~0~TinyDragonFly~0.2173913, 
+AmbientSounds: OMNI><AM_ENV-LightWind.ogg><759.5138><517.5505><0.3043478><0.8826087, 
+FadePalette: 18, 0.2717391, 0.2717391
