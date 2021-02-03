@@ -26,4 +26,4 @@
 
 
 - Put the Cabinet Plants texts in the Plants category, but not side by side, otherwise it won't work !
-- Suggestions on the fans: If you want to make them visible behind the Fan Cage tile, I recommand increasing their size and putting them on depth 1 (for layer 1), depth 11 (for layer 2) or depth 21 (for layer 3). They snap to grid to help you place them.
+- Suggestions on the fans: If you want to make them visible behind the Fan Cage tile, I recommand increasing (for most of them) their size and putting them on depth 1 (for layer 1), depth 11 (for layer 2) or depth 21 (for layer 3). They snap to grid to help you place them.
