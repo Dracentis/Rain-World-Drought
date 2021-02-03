@@ -2,4 +2,28 @@
 
 [#nm:"Cabinet plants 2", #tp:"variedSoft", #pxlSize:point(100, 180), #vars:3, #random:0, #depth:6, #round:0, #contourExp:1, #selfShade:1, #highLightBorder:1.0, #depthAffectHilites:0.6, #shadowBorder:0.8, #smoothShading:5, #colorize:1, #tags:["postEffects"], #notes:[]]
 
------ Put these texts in the Plants category, but not side by side, otherwise it won't work !
+
+-["Fans And Wind Turbines", color(180, 255, 255)]
+[#nm:"FanA1", #tp:"standard", colorTreatment:"bevel", #bevel:2, #sz:point(6,6), #repeatL:[1,2,1], #tags:["snapToGrid"], #layerExceptions:[], #notes:[]]
+[#nm:"FanA1-B", #tp:"standard", colorTreatment:"bevel", #bevel:2, #sz:point(6,6), #repeatL:[1,2,1], #tags:["snapToGrid"], #layerExceptions:[], #notes:[]]
+[#nm:"FanA2", #tp:"standard", colorTreatment:"bevel", #bevel:2, #sz:point(6,6), #repeatL:[1,2,1], #tags:["snapToGrid"], #layerExceptions:[], #notes:[]]
+[#nm:"FanA2-B", #tp:"standard", colorTreatment:"bevel", #bevel:2, #sz:point(6,6), #repeatL:[1,2,1], #tags:["snapToGrid"], #layerExceptions:[], #notes:[]]
+[#nm:"FanA3", #tp:"standard", colorTreatment:"bevel", #bevel:2, #sz:point(6,6), #repeatL:[1,2,1], #tags:["snapToGrid"], #layerExceptions:[], #notes:[]]
+[#nm:"FanA4", #tp:"standard", colorTreatment:"bevel", #bevel:2, #sz:point(6,6), #repeatL:[1,2,1], #tags:["snapToGrid"], #layerExceptions:[], #notes:[]]
+[#nm:"FanA5", #tp:"standard", colorTreatment:"bevel", #bevel:2, #sz:point(6,6), #repeatL:[1,2,1], #tags:["snapToGrid"], #layerExceptions:[], #notes:[]]
+[#nm:"FanB1", #tp:"standard", colorTreatment:"bevel", #bevel:2, #sz:point(6,6), #repeatL:[1,2,1], #tags:["snapToGrid"], #layerExceptions:[], #notes:[]]
+[#nm:"FanB1-B", #tp:"standard", colorTreatment:"bevel", #bevel:2, #sz:point(6,6), #repeatL:[1,2,1], #tags:["snapToGrid"], #layerExceptions:[], #notes:[]]
+[#nm:"FanB2", #tp:"standard", colorTreatment:"bevel", #bevel:2, #sz:point(6,6), #repeatL:[1,2,1], #tags:["snapToGrid"], #layerExceptions:[], #notes:[]]
+[#nm:"FanB2-B", #tp:"standard", colorTreatment:"bevel", #bevel:2, #sz:point(6,6), #repeatL:[1,2,1], #tags:["snapToGrid"], #layerExceptions:[], #notes:[]]
+[#nm:"FanB2-C", #tp:"standard", colorTreatment:"bevel", #bevel:2, #sz:point(6,6), #repeatL:[1,2,1], #tags:["snapToGrid"], #layerExceptions:[], #notes:[]]
+[#nm:"FanB3", #tp:"standard", colorTreatment:"bevel", #bevel:2, #sz:point(6,6), #repeatL:[1,2,1], #tags:["snapToGrid"], #layerExceptions:[], #notes:[]]
+[#nm:"FanB3-B", #tp:"standard", colorTreatment:"bevel", #bevel:2, #sz:point(6,6), #repeatL:[1,2,1], #tags:["snapToGrid"], #layerExceptions:[], #notes:[]]
+[#nm:"FanB4", #tp:"standard", colorTreatment:"bevel", #bevel:2, #sz:point(6,6), #repeatL:[1,2,1], #tags:["snapToGrid"], #layerExceptions:[], #notes:[]]
+[#nm:"FanC1", #tp:"standard", colorTreatment:"bevel", #bevel:2, #sz:point(6,6), #repeatL:[1,2,1], #tags:["snapToGrid"], #layerExceptions:[], #notes:[]]
+[#nm:"FanC2", #tp:"standard", colorTreatment:"bevel", #bevel:2, #sz:point(6,6), #repeatL:[1,2,1], #tags:["snapToGrid"], #layerExceptions:[], #notes:[]]
+[#nm:"WindTurbine1", #tp:"standard", colorTreatment:"bevel", #bevel:2, #sz:point(6,6), #repeatL:[1,2,1], #tags:["snapToGrid"], #layerExceptions:[], #notes:[]]
+[#nm:"WindTurbine2", #tp:"standard", colorTreatment:"bevel", #bevel:2, #sz:point(6,6), #repeatL:[1,2,1], #tags:["snapToGrid"], #layerExceptions:[], #notes:[]]
+
+
+- Put the Cabinet Plants texts in the Plants category, but not side by side, otherwise it won't work !
+- Suggestions on the fans: If you want to make them visible behind the Fan Cage tile, I recommand increasing their size and putting them on depth 1 (for layer 1), depth 11 (for layer 2) or depth 21 (for layer 3). They snap to grid to help you place them.
