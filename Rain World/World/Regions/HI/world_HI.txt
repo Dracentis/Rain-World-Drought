@@ -86,40 +86,6 @@ LINEAGE : HI_C02 : 5 : Pink-0.2, Blue-0.5, Cyan-0.3, Red-0
 (0)LINEAGE : HI_A04 : 2 : Mimic-{18}-0.7, TentaclePlant-0
 (0)LINEAGE : HI_C03 : 3 : White-0.2, Cyan-0
 (0)LINEAGE : HI_C04 : 5 : Blue-0.5, NONE-0.2, White-0.5, NONE-0.5, Cyan-0
-(0)HI_A04 : 2-Mimic-{18}
-(0)HI_C11 : 3-Blue
-(0)HI_C03 : 3-White
-(0)HI_B05 : 3-White
-(0)HI_A16 : 3-Green
-(0)HI_C04 : 5-Blue, 6-Snail, 7-Snail-2
-(0)LINEAGE : HI_C01 : 4 : Blue-0.1, Cyan-0.2, Red-0
-(0)LINEAGE : HI_C02 : 6 : Green-0.2, Blue-0.5, Red-0
-(0)LINEAGE : HI_B06 : 3 : Green-0.2, Blue-0.5, White-0.2, Red-0
-
-
-//[Other cat]
-(1)OFFSCREEN : 0-Vulture-2, 0-KingVulture-1, 0-Scavenger-7
-(1)LINEAGE : OFFSCREEN : 0 : Vulture-0.65, KingVulture-0
-(1)LINEAGE : OFFSCREEN : 0 : Vulture-0.7, KingVulture-0
-(1)HI_B09 : 3-Dropwig, 2-White
-(1)HI_B05 : 3-Dropwig
-(1)HI_C11 : 3-Cyan
-(1)HI_A16 : 4-Blue
-(1)HI_A17 : 3-Green
-(1)HI_B12 : 3-EggBug
-(1)HI_B07 : 3-Pink-2, 2-EggBug
-(1)HI_A25 : 2-Dropbug
-(1)HI_B15 : 2-Small Centipede-2, 3-Centipede-{0.55}, 2-Centipede-{0.72}, 3-Centipede-{0.68}
-(1)HI_C04 : 5-Cyan
-(1)HI_B06 : 3-Cyan, 4-Red
-(1)LINEAGE : HI_B03 : 3 : Blue-1, White-1, Cyan-0
-(1)LINEAGE : HI_C11 : 4 : Blue-0.4, Dropwig-1, Cyan-0
-(1)LINEAGE : HI_C01 : 3 : NONE-0.07, Blue-0.4, NONE-0.1, Cyan-0
-(1)LINEAGE : HI_C02 : 6 : Dropwig-0.2, BigSpider-0.5, SpitterSpider-0
-(1)LINEAGE : HI_C01 : 4 : Cyan-0.3, Red-0
-(1)LINEAGE : HI_A04 : 2 : Mimic-{18}-0.7, TentaclePlant-0
-(1)LINEAGE : HI_C03 : 3 : White-0.2, Cyan-0
-(1)LINEAGE : HI_C04 : 5 : Blue-0.5, NONE-0.2, White-0.5, NONE-0.5, Cyan-0
 
 END CREATURES
 
