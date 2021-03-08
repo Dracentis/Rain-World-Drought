@@ -38,27 +38,11 @@
       <HintPath>..\References\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>..\References\Assembly-CSharp-firstpass.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="ConfigMachine">
       <HintPath>..\References\ConfigMachine.dll</HintPath>
     </Reference>
-    <Reference Include="GoKit">
-      <HintPath>..\References\GoKit.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="HOOKS-Assembly-CSharp">
       <HintPath>..\References\HOOKS-Assembly-CSharp.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Mono.Security">
-      <HintPath>..\References\Mono.Security.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="MonoMod">
-      <HintPath>..\References\MonoMod.exe</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="MonoMod.RuntimeDetour, Version=18.6.0.33006, Culture=neutral, processorArchitecture=MSIL">
@@ -70,14 +54,11 @@
       <HintPath>..\References\Partiality.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="System" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="System1">
-      <HintPath>..\References\System1.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="UnityEngine">
       <HintPath>..\References\UnityEngine.dll</HintPath>
       <Private>False</Private>
@@ -86,6 +67,10 @@
       <HintPath>..\References\UnityEngine.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="SlugBase">
+      <HintPath>..\References\SlugBase.dll</HintPath>
+      <Private>False</Private>	
+	</Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Creature\AbstractCreatureHK.cs" />
@@ -125,6 +110,7 @@
     <Compile Include="Slugcat\PlayerHK.cs" />
     <Compile Include="Slugcat\SaveStateHK.cs" />
     <Compile Include="Slugcat\SlugcatSelectMenuHK.cs" />
+    <Compile Include="Slugcat\WandererCharacter.cs" />
     <Compile Include="Slugcat\WandererSupplement.cs" />
     <Compile Include="World\AboveCloudsViewHK.cs" />
     <Compile Include="World\BurstRain.cs" />

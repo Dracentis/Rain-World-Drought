@@ -690,7 +690,7 @@ namespace Rain_World_Drought.Slugcat
         
         private static Color ShortCutColorHK(On.Player.orig_ShortCutColor orig, Player self)
         {
-            if (self.playerState.slugcatCharacter == WandererSupplement.SlugcatCharacter)
+            if (self.playerState.slugcatCharacter == WandererSupplement.StoryCharacter)
             { return new Color(0.4f, 0.49411764705f, 0.8f); }
             return orig.Invoke(self);
         }

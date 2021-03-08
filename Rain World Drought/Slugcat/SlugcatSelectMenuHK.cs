@@ -9,12 +9,13 @@ namespace Rain_World_Drought.Slugcat
     {
         public static void Patch()
         {
-            On.Menu.SlugcatSelectMenu.ctor += new On.Menu.SlugcatSelectMenu.hook_ctor(CtorHK);
-            On.Menu.SlugcatSelectMenu.StartGame += new On.Menu.SlugcatSelectMenu.hook_StartGame(StartGameHK);
-            On.Menu.SlugcatSelectMenu.SlugcatPageNewGame.ctor += new On.Menu.SlugcatSelectMenu.SlugcatPageNewGame.hook_ctor(PageNewGameHK);
-            On.Menu.SlugcatSelectMenu.SlugcatPageContinue.ctor += new On.Menu.SlugcatSelectMenu.SlugcatPageContinue.hook_ctor(PageContinueHK);
+            //On.Menu.SlugcatSelectMenu.ctor += new On.Menu.SlugcatSelectMenu.hook_ctor(CtorHK);
+            //On.Menu.SlugcatSelectMenu.StartGame += new On.Menu.SlugcatSelectMenu.hook_StartGame(StartGameHK);
+            //On.Menu.SlugcatSelectMenu.SlugcatPageNewGame.ctor += new On.Menu.SlugcatSelectMenu.SlugcatPageNewGame.hook_ctor(PageNewGameHK);
+            //On.Menu.SlugcatSelectMenu.SlugcatPageContinue.ctor += new On.Menu.SlugcatSelectMenu.SlugcatPageContinue.hook_ctor(PageContinueHK);
         }
 
+        /*
         private static void CtorHK(On.Menu.SlugcatSelectMenu.orig_ctor orig, SlugcatSelectMenu self, ProcessManager manager)
         {
             orig.Invoke(self, manager);
@@ -118,5 +119,6 @@ namespace Rain_World_Drought.Slugcat
             self.regionLabel.label.alignment = FLabelAlignment.Center;
             self.subObjects.Add(self.regionLabel);
         }
+        */
     }
 }

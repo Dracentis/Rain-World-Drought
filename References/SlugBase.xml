@@ -1,0 +1,859 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SlugBase</name>
+    </assembly>
+    <members>
+        <member name="T:SlugBase.SlugBaseCharacter">
+            <summary>
+            The core of adding a custom character to be registered with <see cref="M:SlugBase.PlayerManager.RegisterCharacter(SlugBase.SlugBaseCharacter)"/>.
+            You must derive a class from this to represent the character to add.
+            </summary>
+        </member>
+        <member name="M:SlugBase.SlugBaseCharacter.#ctor(System.String,SlugBase.SlugBaseCharacter.FormatVersion,System.Int32)">
+            <summary>
+            Create a new custom character.
+            </summary>
+            <param name="name">The name of the custom character, containing only alphanumericals, underscores, and spaces.</param>
+            <param name="version">The version this mod was first built with.</param>
+            <param name="useSpawns">
+            The character to copy creatures and world state from.
+            The value should be 0 (survivor), 1 (monk) or 2 (hunter).
+            Values outside of this range are allowed, but the vanilla game's world files are not set up to use them correctly.
+            </param>
+            <remarks>
+            The name of this character must be unique; other mods that add a character of this same name will throw an exception
+            when registering their character. If your name is likely to cause conflicts (such as any of the vanilla achievement
+            names), then consider prefixing your player's name with some other text, like the author's name.
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">Thrown when input name is null.</exception>
+            <exception cref="T:System.ArgumentException">Thrown when input name is empty or contains illegal characters.</exception>
+        </member>
+        <member name="P:SlugBase.SlugBaseCharacter.DevMode">
+            <summary>
+            Enables or disables developer mode.
+            </summary>
+        </member>
+        <member name="P:SlugBase.SlugBaseCharacter.SlugcatIndex">
+            <summary>
+            The slugcat index of this character.
+            </summary>
+            <remarks>
+            Use this value only when absolutely necessary.
+            This may be -1, even when in a story game, and may change each time the game is launched.
+            </remarks>
+        </member>
+        <member name="P:SlugBase.SlugBaseCharacter.StartRoom">
+            <summary>
+            The room that this player begins in when starting a new game.
+            Any values other than the default, "SU_C04", may need code to determine where to place the player.
+            </summary>
+        </member>
+        <member name="M:SlugBase.SlugBaseCharacter.Prepare">
+            <summary>
+            Called once as a game starts from the select screen or multiplayer menu.
+            </summary>
+            <remarks>
+            This is called as soon possible, the moment that user's character choice is locked in.
+            Effects that must apply before the <see cref="T:RainWorldGame"/> instance is created may be done here.
+            </remarks>
+        </member>
+        <member name="M:SlugBase.SlugBaseCharacter.Enable">
+            <summary>
+            Called once when a game is started as this character.
+            </summary>
+        </member>
+        <member name="M:SlugBase.SlugBaseCharacter.Disable">
+            <summary>
+            Called once when a game is ended as this character.
+            </summary>
+        </member>
+        <member name="M:SlugBase.SlugBaseCharacter.GetStats(SlugcatStats)">
+            <summary>
+            Modifies a <see cref="T:SlugcatStats"/> instance to contain the stats for this character.
+            </summary>
+            <remarks>
+            By default, this is the exact same as Survivor's stats.
+            Make sure to take <see cref="F:SlugcatStats.malnourished"/> into account.
+            </remarks>
+            <param name="stats">The instance of <see cref="T:SlugcatStats"/> to modify.</param>
+        </member>
+        <member name="M:SlugBase.SlugBaseCharacter.GetFoodMeter(System.Int32@,System.Int32@)">
+            <summary>
+            Get the amount of food that this character needs to sleep and the total amount that it can hold.
+            Defaults to Survivor's food meter.
+            </summary>
+            <remarks>
+            Changing this will result in the tutorial text being incorrect. Consider changing it, or
+            disabling it by setting <see cref="P:SlugBase.SlugBaseCharacter.HasGuideOverseer"/> to false.
+            </remarks>
+            <param name="maxFood">The amount of food that this character can hold.</param>
+            <param name="foodToSleep">The amount of food that this character needs to sleep.</param>
+        </member>
+        <member name="M:SlugBase.SlugBaseCharacter.CanEatMeat(Player,Creature)">
+            <summary>
+            Checks whether or not this player can eat the meat of a certain creature.
+            By default, this returns the same as the vanilla game, which is true for dead centipedes and false for all other creatures.
+            </summary>
+            <param name="player">The player that is trying to eat.</param>
+            <param name="creature">The creature that the player is tring to eat.</param>
+            <returns>True if the creature can be eaten, false otherwise.</returns>
+        </member>
+        <member name="P:SlugBase.SlugBaseCharacter.QuarterFood">
+            <summary>
+            True if this character receives a quarter pips for non-meat foods.
+            Defaults to false.
+            </summary>
+        </member>
+        <member name="P:SlugBase.SlugBaseCharacter.GatesPermanentlyUnlock">
+            <summary>
+            True if karma gates unlock permanently for this character, such as when playing as Monk.
+            Defaults to false.
+            </summary>
+        </member>
+        <member name="M:SlugBase.SlugBaseCharacter.GetCycleLength">
+            <summary>
+            Gets how many minutes this cycle should last.
+            Defaults to null.
+            </summary>
+            <returns>The number of minutes the cycle should last, or null to use the default.</returns>
+        </member>
+        <member name="P:SlugBase.SlugBaseCharacter.CanSkipTempleGuards">
+            <summary>
+            True if this character can skip the temple guardians with a flashbang.
+            Defaults to true.
+            </summary>
+        </member>
+        <member name="P:SlugBase.SlugBaseCharacter.HasGuideOverseer">
+            <summary>
+            True if the tutorial overseer follows this character.
+            Defaults to true.
+            </summary>
+        </member>
+        <member name="P:SlugBase.SlugBaseCharacter.HasDreams">
+            <summary>
+            True if dreams can play when this character is selected.
+            Defaults to false.
+            </summary>
+        </member>
+        <member name="P:SlugBase.SlugBaseCharacter.Name">
+            <summary>
+            The name of the character.
+            </summary>
+        </member>
+        <member name="P:SlugBase.SlugBaseCharacter.DisplayName">
+            <summary>
+            The name to display to the user, such as on the player select screen.
+            </summary>
+            <remarks>
+            Defaults to your character's internal name.
+            This should start with "The", and the first letter of each word should be capitalized.
+            </remarks>
+        </member>
+        <member name="P:SlugBase.SlugBaseCharacter.Description">
+            <summary>
+            The description of this SlugBase character to be displayed on the player select screen.
+            All instances of "&lt;LINE&gt;" will be replaced with a line break.
+            </summary>
+        </member>
+        <member name="M:SlugBase.SlugBaseCharacter.SlugcatColor">
+            <summary>
+            Get the color used for this character's UI and in-game sprites.
+            </summary>
+            <returns>The color to use, or null to use the default for this save slot.</returns>
+        </member>
+        <member name="M:SlugBase.SlugBaseCharacter.CreateNewSave(PlayerProgression)">
+            <summary>
+            Creates an empty save state for this character.
+            </summary>
+            <remarks>
+            If your character needs to save more data, this may be overridden 
+            to return a new instance of a child class of <see cref="T:SlugBase.CustomSaveState"/>.
+            </remarks>
+        </member>
+        <member name="P:SlugBase.SlugBaseCharacter.DefaultResourcePath">
+            <summary>
+            Gets the default directory that contains resources for this character.
+            </summary>
+        </member>
+        <member name="M:SlugBase.SlugBaseCharacter.GetResource(System.String[])">
+            <summary>
+            Gets a stream containing the specified resource.
+            By default this reads from a file inside of <see cref="P:SlugBase.SlugBaseCharacter.DefaultResourcePath"/>.
+            </summary>
+            <remarks>
+            This is intended to be overridden to load from different locations, such as from embedded resources via <see cref="M:System.Reflection.Assembly.GetManifestResourceStream(System.String)"/>.
+            This should return null if the resource does not exist, or there was a problem accessing the resource.
+            Make sure to dispose of it!
+            </remarks>
+            <param name="path">The relative location of the resource.</param>
+            <returns>A stream of data for the specified resource, or null if the resource does not exist.</returns>
+        </member>
+        <member name="M:SlugBase.SlugBaseCharacter.GetStringResource(System.String[])">
+            <summary>
+            Gets a resource, then decodes it as a UTF-8 string.
+            </summary>
+            <param name="path">The relative location of the resource.</param>
+            <returns>A string if the resource was found, or null if the resource does not exist or was not valid UTF-8.</returns>
+        </member>
+        <member name="M:SlugBase.SlugBaseCharacter.BuildScene(System.String)">
+            <summary>
+            Retrieves information about a custom scene.
+            </summary>
+            <remarks>
+            This is intended to be overridden if you need more control over which images are loaded in a scene.
+            For example, this may be changed to enable or disable background elements based on save state.
+            <para>The returned images should be ordered from lowest to highest depth.</para>
+            </remarks>
+            <param name="sceneName">The name of the scene to build.</param>
+        </member>
+        <member name="M:SlugBase.SlugBaseCharacter.BuildSlideshow(System.String)">
+            <summary>
+            Retrieves information about a custom slideshow.
+            </summary>
+            <remarks>
+            This is intended to be overridden if you need to change which images are loaded for a slideshow
+            without changing the JSON file.
+            </remarks>
+            <param name="slideshowName">The name of the slideshow to build.</param>
+        </member>
+        <member name="M:SlugBase.SlugBaseCharacter.HasScene(System.String)">
+            <summary>
+            Checks whether or not this player defines a custom scene.
+            </summary>
+            <param name="sceneName">The name of the scene to check for.</param>
+            <returns>True if the scene exists, false if it does not.</returns>
+        </member>
+        <member name="M:SlugBase.SlugBaseCharacter.HasSlideshow(System.String)">
+            <summary>
+            Checks whether or not this player defines a custom slideshow.
+            </summary>
+            <param name="slideshowName">The name of the slideshow to check for.</param>
+            <returns>True if the slideshow exists, false if it does not.</returns>
+        </member>
+        <member name="M:SlugBase.SlugBaseCharacter.OverrideNextScene(System.String,SlugBase.SceneImageFilter)">
+            <summary>
+            Replaces the next <see cref="T:Menu.MenuScene"/> with a scene loaded from this character's resources.
+            <see cref="M:SlugBase.SlugBaseCharacter.ClearSceneOverride"/> may be used to abort this.
+            </summary>
+            <param name="sceneName">The name of the scene to load.</param>
+            <param name="filter">A delegate that returns true for each image that should be shown in the scene, or null to show all.</param>
+        </member>
+        <member name="M:SlugBase.SlugBaseCharacter.ClearSceneOverride">
+            <summary>
+            Aborts a scene override from <see cref="M:SlugBase.SlugBaseCharacter.OverrideNextScene(System.String,SlugBase.SceneImageFilter)"/>.
+            </summary>
+        </member>
+        <member name="T:SlugBase.SlugBaseCharacter.FormatVersion">
+            <summary>
+            Indicates which version this mod was built with.
+            </summary>
+            <remarks>
+            This is intended to help preserve backwards compatibility, should any otherwise breaking changes apply to new versions.
+            When first creating a mod, you should always use the most recent version.
+            </remarks>
+        </member>
+        <member name="F:SlugBase.SlugBaseCharacter.FormatVersion.V1">
+            <summary>
+            The current version. Use this one.
+            </summary>
+        </member>
+        <member name="T:SlugBase.CustomSaveState">
+            <summary>
+            Contains the save data for any characters added through SlugBase.
+            </summary>
+            <remarks>
+            If you need to save extra data for your character, you should create a class that inherits from this.
+            </remarks>
+        </member>
+        <member name="M:SlugBase.CustomSaveState.#ctor(PlayerProgression,SlugBase.SlugBaseCharacter)">
+            <summary>
+            Creates a new representation of a SlugBase character's save state.
+            </summary>
+            <param name="progression">The <see cref="T:PlayerProgression"/> instance to attach this save state to.</param>
+            <param name="character">The SlugBase character that owns this save state.</param>
+            <exception cref="T:System.ArgumentException">Thrown when <paramref name="character"/> is null.</exception>
+        </member>
+        <member name="P:SlugBase.CustomSaveState.Character">
+            <summary>
+            The <see cref="T:SlugBase.SlugBaseCharacter"/> that owns this save state.
+            </summary>
+        </member>
+        <member name="M:SlugBase.CustomSaveState.Save(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Converts save data for this character to strings to enter into a dictionary.
+            This data is not saved when the player dies.
+            </summary>
+            <remarks>
+            <see cref="M:SlugBase.CustomSaveState.Load(System.Collections.Generic.Dictionary{System.String,System.String})"/> should be overridden to handle the same values.
+            </remarks>
+            <param name="data">The empty dictionary to add your data to.</param>
+        </member>
+        <member name="M:SlugBase.CustomSaveState.Load(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Loads saved data for this character from entries in a dictionary.
+            This data is loaded from the last time the player survived a cycle.
+            </summary>
+            <remarks>
+            <see cref="M:SlugBase.CustomSaveState.Save(System.Collections.Generic.Dictionary{System.String,System.String})"/> should be overridden to handle the same values.
+            </remarks>
+            <param name="data">The dictionary to read your data from.</param>
+        </member>
+        <member name="M:SlugBase.CustomSaveState.SavePermanent(System.Collections.Generic.Dictionary{System.String,System.String},System.Boolean,System.Boolean)">
+            <summary>
+            Converts death-persistant save data for this character to strings to enter into a dictionary.
+            This data is not reset when the player dies.
+            </summary>
+            <remarks>
+            Saved values that change on quit or death should be changed here.
+            This is saved as a death once when starting the cycle, so quitting the game
+            early counts as a death if it is not overwritten by the end of the cycle.
+            <para><see cref="M:SlugBase.CustomSaveState.LoadPermanent(System.Collections.Generic.Dictionary{System.String,System.String})"/> should be overridden to handle the same values.</para>
+            </remarks>
+            <param name="data">The empty dictionary to add your data to.</param>
+            <param name="asDeath">True if the player has quit or died.</param>
+            <param name="asQuit">True if the player has quit.</param>
+        </member>
+        <member name="M:SlugBase.CustomSaveState.LoadPermanent(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Loads death-persistant saved data for this character from entries in a dictionary.
+            This data is not reset when the player dies.
+            </summary>
+            <remarks>
+            <see cref="M:SlugBase.CustomSaveState.SavePermanent(System.Collections.Generic.Dictionary{System.String,System.String},System.Boolean,System.Boolean)"/> should be overridden to handle the same values.
+            </remarks>
+            <param name="data">The dictionary to read your data from.</param>
+        </member>
+        <member name="T:SlugBase.CustomScene">
+            <summary>
+            Represents a scene added by a SlugBase character.
+            </summary>
+        </member>
+        <member name="P:SlugBase.CustomScene.Images">
+            <summary>
+            The images this scene contains.
+            </summary>
+        </member>
+        <member name="P:SlugBase.CustomScene.Owner">
+            <summary>
+            The character that this scene was loaded from.
+            </summary>
+        </member>
+        <member name="P:SlugBase.CustomScene.Name">
+            <summary>
+            This scene's name.
+            </summary>
+        </member>
+        <member name="M:SlugBase.CustomScene.#ctor(SlugBase.SlugBaseCharacter,System.String)">
+            <summary>
+            Creates an empty scene.
+            </summary>
+        </member>
+        <member name="M:SlugBase.CustomScene.#ctor(SlugBase.SlugBaseCharacter,System.String,System.String)">
+            <summary>
+            Creates a scene from a JSON string.
+            </summary>
+        </member>
+        <member name="M:SlugBase.CustomScene.#ctor(SlugBase.SlugBaseCharacter,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Creates a scene from a JSON object.
+            </summary>
+        </member>
+        <member name="M:SlugBase.CustomScene.InsertImage(SlugBase.SceneImage)">
+            <summary>
+            Inserts an image into the list according to its depth.
+            </summary>
+        </member>
+        <member name="M:SlugBase.CustomScene.GetProperty``1(System.String)">
+            <summary>
+            Retrieves a named value from this scene's JSON, or the type's default value if does not exist.
+            These may be defined by the engine (see remarks), or by another mod.
+            </summary>
+            <remarks>
+            This may defined by your mod, or be one of several built-in tags:
+            <list type="bullet">
+                <item>
+                    <term>MarkX (float)</term>
+                    <description>The X position of the default mark of communication.</description>
+                </item>
+                <item>
+                    <term>MarkY (float)</term>
+                    <description>The Y position of the default mark of communication.</description>
+                </item>
+                <item>
+                    <term>GlowX (float)</term>
+                    <description>The X position of the default player glow.</description>
+                </item>
+                <item>
+                    <term>GlowY (float)</term>
+                    <description>The Y position of the default player glow.</description>
+                </item>
+                <item>
+                    <term>SlugcatDepth (float)</term>
+                    <description>The depth of the slugcat in the select screen. This is used when positioning the mark and glow.</description>
+                </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="M:SlugBase.CustomScene.SetProperty(System.String,System.Object)">
+            <summary>
+            Attaches a named value to this scene.
+            </summary>
+        </member>
+        <member name="M:SlugBase.CustomScene.ToString">
+            <summary>
+            Creates a JSON string that represents this object.
+            </summary>
+            <returns>A JSON string.</returns>
+        </member>
+        <member name="M:SlugBase.CustomScene.ApplyFilter(SlugBase.SceneImageFilter)">
+            <summary>
+            Disables images in this scene based on a filter.
+            </summary>
+            <param name="filter">A delegate that returns false for any images that should be hidden.</param>
+        </member>
+        <member name="T:SlugBase.SceneImage">
+            <summary>
+            Represents a single image in a <see cref="T:SlugBase.CustomScene"/>.
+            </summary>
+            <remarks>
+            This class may be inherited if a scene image requires more functionality than <see cref="T:Menu.MenuIllustration"/> can provide.
+            Consider using <see cref="M:SlugBase.CustomScene.InsertImage(SlugBase.SceneImage)"/> to add illustrations manually.
+            </remarks>
+        </member>
+        <member name="P:SlugBase.SceneImage.AssetName">
+            <summary>
+            The name of the file containing the image.
+            </summary>
+        </member>
+        <member name="P:SlugBase.SceneImage.Owner">
+            <summary>
+            The scene this image is a part of.
+            </summary>
+        </member>
+        <member name="P:SlugBase.SceneImage.Pos">
+            <summary>
+            The position of the bottom left of this image
+            </summary>
+        </member>
+        <member name="P:SlugBase.SceneImage.Depth">
+            <summary>
+            How far into the screen this illustration should be drawn.
+            The higher this value, the less this image moves when the mouse is moved.
+            This should be less than zero if the image is flat.
+            </summary>
+        </member>
+        <member name="P:SlugBase.SceneImage.Enabled">
+            <summary>
+            True if this image should be shown in the scene, false otherwise.
+            This has no effect once the scene's illustrations have been loaded.
+            </summary>
+        </member>
+        <member name="P:SlugBase.SceneImage.ShouldBeSaved">
+            <summary>
+            True if this image should be saved to the scene. This does not affect <see cref="M:SlugBase.SceneImage.OnSave(System.Collections.Generic.Dictionary{System.String,System.Object})"/>.
+            Defaults to true.
+            </summary>
+        </member>
+        <member name="P:SlugBase.SceneImage.DisplayName">
+            <summary>
+            The name to display when showing this image in the scene editor.
+            </summary>
+        </member>
+        <member name="P:SlugBase.SceneImage.AlphaKeys">
+            <summary>
+            A list of alpha keyframes. This may be null.
+            </summary>
+            <remarks>
+            X values correspond to time, Y values correspond to this image's alpha at this time.
+            Time values range from 0 to 1.
+            Keyframes will be linearly interpolated between during a slideshow.
+            </remarks>
+        </member>
+        <member name="M:SlugBase.SceneImage.#ctor(SlugBase.CustomScene)">
+            <summary>
+            Creates a blank scene image.
+            </summary>
+        </member>
+        <member name="M:SlugBase.SceneImage.#ctor(SlugBase.CustomScene,System.String)">
+            <summary>
+            Creates a scene image from a JSON string.
+            </summary>
+        </member>
+        <member name="M:SlugBase.SceneImage.#ctor(SlugBase.CustomScene,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Creates a scene image from a JSON object.
+            </summary>
+        </member>
+        <member name="M:SlugBase.SceneImage.ToString">
+            <summary>
+            Converts this image into a JSON string.
+            </summary>
+            <returns>A JSON string.</returns>
+        </member>
+        <member name="M:SlugBase.SceneImage.AlphaAtTime(System.Single)">
+            <summary>
+            Finds the alpha of this image at <paramref name="t"/> by sampling from <see cref="P:SlugBase.SceneImage.AlphaKeys"/>.
+            </summary>
+            <param name="t">The time to sample at, typically between 0 and 1.</param>
+            <returns>The alpha that this image should have at this point. This does not take other alpha modifiers into account.</returns>
+        </member>
+        <member name="M:SlugBase.SceneImage.OnSave(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Called before a scene is saved.
+            </summary>
+            <param name="scene">A JSON object representing the scene to be saved.</param>
+        </member>
+        <member name="M:SlugBase.SceneImage.OnBuild(Menu.MenuScene)">
+            <summary>
+            Called when this image's graphics should be added to a scene.
+            Defaults to true.
+            </summary>
+            <remarks>
+            This may be overridden to add graphics to the scene without using a <see cref="T:Menu.MenuIllustration"/>.
+            </remarks>
+            <returns>True if this image should create a <see cref="T:Menu.MenuIllustration"/>.</returns>
+        </member>
+        <member name="M:SlugBase.SceneImage.GetProperty``1(System.String)">
+            <summary>
+            Retrieves a named value from this image's JSON, or the type's default value if does not exist.
+            These may be defined by the engine (see remarks), or by another mod.
+            </summary>
+            <remarks>
+            This may defined by your mod, or be one of several built-in tags:
+            <list type="bullet">
+                <item>
+                    <term>Mark (bool)</term>
+                    <description>This image only appears on the select screen if the player has the mark of communication.</description>
+                </item>
+                <item>
+                    <term>Glow (bool)</term>
+                    <description>True if this image should only appear on the select screen if the player is glowing.</description>
+                </item>
+                <item>
+                    <term>Shader (string)</term>
+                    <description>Set this image to use the specified shader.
+                    These are first checked against <see cref="T:Menu.MenuDepthIllustration.MenuShader"/>.
+                    If the image is flat or there is no corresponding MenuShader, then the shader with this name is used.</description>
+                </item>
+                <item>
+                    <term>Flatmode (bool)</term>
+                    <description>True if this image should only appear in flat mode, and all others without it will be hidden in flat mode.
+                    This should be used in conjunction with a <see cref="P:SlugBase.SceneImage.Depth"/> less than zero.</description>
+                </item>
+                <item>
+                    <term>Crisp (bool)</term>
+                    <description>True to disable antialiasing for this image.</description>
+                </item>
+                <item>
+                    <term>Focus (bool)</term>
+                    <description>Marks this image as a candidate for camera focus.
+                    If no images are marked as such, then the camera will occasionally focus at the depth of a random image.</description>
+                </item>
+                <item>
+                    <term>Alpha (float)</term>
+                    <description>Sets this image's opacity. This value should be between 0 and 1, inclusive.</description>
+                </item>
+                <item>
+                    <term>Fade (float)</term>
+                    <description>This image will fade out when the map is opened on the sleep and death screens.</description>
+                </item>
+            </list>
+            </remarks>
+            <returns>An instance of <typeparamref name="T"/>, or <typeparamref name="T"/>'s default value if no matching key was found.</returns>
+        </member>
+        <member name="M:SlugBase.SceneImage.SetProperty(System.String,System.Object)">
+            <summary>
+            Attaches a named value to this image.
+            </summary>
+        </member>
+        <member name="M:SlugBase.SceneImage.GetTempProperty``1(System.String)">
+            <summary>
+            Like <see cref="M:SlugBase.SceneImage.GetProperty``1(System.String)"/>, but only for temporary values.
+            </summary>
+            <returns>An instance of <typeparamref name="T"/>, or <typeparamref name="T"/>'s default value if no matching key was found.</returns>
+        </member>
+        <member name="M:SlugBase.SceneImage.SetTempProperty(System.String,System.Object)">
+            <summary>
+            Attaches a temporary value to this image. This will not be saved with the scene.
+            </summary>
+        </member>
+        <member name="M:SlugBase.SceneImage.HasTag(System.String)">
+            <summary>
+            Check if this image has the specified property, and that the property's value is not false.
+            </summary>
+        </member>
+        <member name="T:SlugBase.CustomSlideshow">
+            <summary>
+            Represents a slideshow added by a SlugBase character.
+            </summary>
+        </member>
+        <member name="P:SlugBase.CustomSlideshow.Owner">
+            <summary>
+            The SlugBase character that owns this slideshow.
+            </summary>
+        </member>
+        <member name="P:SlugBase.CustomSlideshow.Name">
+            <summary>
+            The name of this slideshow.
+            </summary>
+        </member>
+        <member name="P:SlugBase.CustomSlideshow.Slides">
+            <summary>
+            A list of slides to display during this slideshow.
+            </summary>
+        </member>
+        <member name="P:SlugBase.CustomSlideshow.Music">
+            <summary>
+            The name of the music track to play during this slideshow.
+            </summary>
+        </member>
+        <member name="P:SlugBase.CustomSlideshow.NextProcess">
+            <summary>
+            The ID of the process to move to move to after the slideshow.
+            If this is null, an ID will be chosen based on the <see cref="T:Menu.SlideShow.SlideShowID"/> of the
+            slideshow that this replaced.
+            </summary>
+        </member>
+        <member name="M:SlugBase.CustomSlideshow.#ctor(SlugBase.SlugBaseCharacter,System.String)">
+            <summary>
+            Creates an empty slideshow.
+            </summary>
+            <param name="owner"></param>
+            <param name="name"></param>
+        </member>
+        <member name="M:SlugBase.CustomSlideshow.#ctor(SlugBase.SlugBaseCharacter,System.String,System.String)">
+            <summary>
+            Creates a slideshow from a JSON string.
+            </summary>
+        </member>
+        <member name="M:SlugBase.CustomSlideshow.#ctor(SlugBase.SlugBaseCharacter,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Creates a slideshow from a JSON object.
+            </summary>
+        </member>
+        <member name="T:SlugBase.SlideshowSlide">
+            <summary>
+            Represents a single slide of a <see cref="T:SlugBase.CustomSlideshow"/>.
+            </summary>
+        </member>
+        <member name="P:SlugBase.SlideshowSlide.Owner">
+            <summary>
+            The <see cref="T:SlugBase.CustomSlideshow"/> that this slide is a part of.
+            </summary>
+        </member>
+        <member name="P:SlugBase.SlideshowSlide.SceneName">
+            <summary>
+            The name of the scene that this slide displays.
+            This is first checked against the owner's scenes, then against <see cref="T:Menu.MenuScene.SceneID"/>.
+            </summary>
+        </member>
+        <member name="P:SlugBase.SlideshowSlide.CameraPath">
+            <summary>
+            The path that the camera takes while viewing this scene.
+            X and Y are the camera's position, Z is the camera's focal depth.
+            </summary>
+        </member>
+        <member name="P:SlugBase.SlideshowSlide.Duration">
+            <summary>
+            The time in seconds this image remains on screen, including both fades.
+            </summary>
+        </member>
+        <member name="P:SlugBase.SlideshowSlide.FadeIn">
+            <summary>
+            The time in seconds this image takes to fade in.
+            </summary>
+        </member>
+        <member name="P:SlugBase.SlideshowSlide.FadeOut">
+            <summary>
+            The time in seconds this image takes to fade out.
+            </summary>
+        </member>
+        <member name="P:SlugBase.SlideshowSlide.Enabled">
+            <summary>
+            True if this slide should appear in the slideshow.
+            </summary>
+        </member>
+        <member name="M:SlugBase.SlideshowSlide.#ctor(SlugBase.CustomSlideshow)">
+            <summary>
+            Creates an empty slideshow slide.
+            </summary>
+        </member>
+        <member name="M:SlugBase.SlideshowSlide.#ctor(SlugBase.CustomSlideshow,System.String)">
+            <summary>
+            Creates a single slide from a JSON string.
+            </summary>
+        </member>
+        <member name="M:SlugBase.SlideshowSlide.#ctor(SlugBase.CustomSlideshow,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Creates a single slide from a JSON object.
+            </summary>
+        </member>
+        <member name="T:SlugBase.SaveManager">
+            <summary>
+            Manages save data for SlugBase characters.
+            </summary>
+            <remarks>
+            Save data for different SlugBase characters is saved to separate files.
+            This ensures that one character's save game will never be played by another character
+            and that, after uninstalling SlugBase, the vanilla game will not try to load modded saves.
+            </remarks>
+        </member>
+        <member name="M:SlugBase.SaveManager.GetSaveFileDirectory">
+            <summary>
+            Gets the path that contains all SlugBase character save files.
+            </summary>
+            <returns>An absolute path to the save file directory.</returns>
+        </member>
+        <member name="M:SlugBase.SaveManager.GetSaveFilePath(System.String,System.Int32)">
+            <summary>
+            Gets the path to a specific SlugBase character's save file.
+            </summary>
+            <param name="name">The name of the SlugBase character.</param>
+            <param name="slot">The game's current save slot.</param>
+            <returns>An absolute path to the save file.</returns>
+        </member>
+        <member name="M:SlugBase.SaveManager.HasCustomSaveData(System.String,System.Int32)">
+            <summary>
+            Checks for a save file for a specific SlugBase character.
+            </summary>
+            <param name="name">The name of the SlugBase character.</param>
+            <param name="slot">The game's current save slot.</param>
+            <returns>True if the save file exists, false otherwise.</returns>
+        </member>
+        <member name="M:SlugBase.SaveManager.GetCustomSaveData(RainWorld,System.String,System.Int32)">
+            <summary>
+            Gets a summary of the content in a SlugBase character's save file.
+            </summary>
+            <param name="rainWorld">The current <see cref="T:RainWorld"/> instance.</param>
+            <param name="name">The name of the SlugBase character.</param>
+            <param name="slot">The game's current save slot.</param>
+            <returns>A summary of the given character's save file.</returns>
+        </member>
+        <member name="T:SlugBase.SceneImageFilter">
+            <summary>
+            Determines if this image should be included in the scene.
+            </summary>
+            <remarks>
+            This is intended to filter items based on <see cref="M:SlugBase.SceneImage.GetProperty``1(System.String)"/>.
+            </remarks>
+            <param name="image">The <see cref="T:SlugBase.SceneImage"/> instance to check.</param>
+            <returns>True if this image should be in the scene, false otherwise.</returns>
+        </member>
+        <member name="T:SlugBase.PlayerManager">
+            <summary>
+            Contains utilities related to SlugBase characters.
+            </summary>
+        </member>
+        <member name="P:SlugBase.PlayerManager.ResourceDirectory">
+            <summary>
+            Returns a path to the folder containing resources for SlugBase characters.
+            </summary>
+        </member>
+        <member name="P:SlugBase.PlayerManager.CurrentCharacter">
+            <summary>
+            The custom character that is being played in the current game.
+            This will be null if there is not an ongoing game, or if the current character was not added through SlugBase.
+            </summary>
+        </member>
+        <member name="P:SlugBase.PlayerManager.UsingCustomCharacter">
+            <summary>
+            True if the current game session uses a player added by SlugBase.
+            </summary>
+        </member>
+        <member name="M:SlugBase.PlayerManager.RegisterCharacter(SlugBase.SlugBaseCharacter)">
+            <summary>
+            Registers a new character to appear in the select menu.
+            </summary>
+            <param name="newCharacter">The character to register.</param>
+            <exception cref="T:System.ArgumentException">Thrown when a SlugBase character with this name already exists.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown when a SlugBase character is registered after the game has started.</exception>
+        </member>
+        <member name="M:SlugBase.PlayerManager.GetCustomPlayers">
+            <summary>
+            Gets all registered SlugBase characters in alphabetical order.
+            </summary>
+            <returns>A read-only collection containing all registered SlugBase characters.</returns>
+        </member>
+        <member name="M:SlugBase.PlayerManager.GetCustomPlayer(System.String)">
+            <summary>
+            Gets a SlugBase character by name.
+            </summary>
+            <param name="name">The name to search for.</param>
+            <returns>The character, or null if it was not found.</returns>
+        </member>
+        <member name="M:SlugBase.PlayerManager.GetCustomPlayer(System.Int32)">
+            <summary>
+            Retrieves the SlugBase character with the given index.
+            If no such character exists, null is returned.
+            </summary>
+            <remarks>
+            <see cref="M:SlugBase.PlayerManager.GetCustomPlayer(System.String)"/> should be used instead whenever possible.
+            </remarks>
+            <param name="index">The slugcat number of this character.</param>
+            <returns>A <see cref="T:SlugBase.SlugBaseCharacter"/> instace with the given index or null.</returns>
+        </member>
+        <member name="T:AttachedField`2">
+            <summary>
+            A collection that attaches values to objects using <see cref="T:System.WeakReference"/>.
+            </summary>
+            <typeparam name="TKey">The type to attach the value to.</typeparam>
+            <typeparam name="TValue">The type the the attached value.</typeparam>
+        </member>
+        <member name="E:AttachedField`2.OnCulled">
+            <summary>
+            Called after a key is garbage collected.
+            </summary>
+        </member>
+        <member name="M:AttachedField`2.Set(`0,`1)">
+            <summary>
+            Updates or attaches a value to an object.
+            </summary>
+            <param name="obj">The object to attach to.</param>
+            <param name="value">The value to set.</param>
+        </member>
+        <member name="M:AttachedField`2.Unset(`0)">
+            <summary>
+            Detaches a value from an object.
+            </summary>
+            <param name="obj">The object to remove the attached value from.</param>
+        </member>
+        <member name="M:AttachedField`2.Get(`0)">
+            <summary>
+            Retrieves a stored value for a given object.
+            </summary>
+            <param name="obj">The object to get from.</param>
+            <returns>The previously set value for this object, or default(<typeparamref name="TValue"/>) if unset.</returns>
+        </member>
+        <member name="M:AttachedField`2.TryGet(`0,`1@)">
+            <summary>
+            Checks for and retrieves a stored value for a given object.
+            </summary>
+            <param name="obj">The object to get from.</param>
+            <param name="value">The previously set value for this obejct.</param>
+            <returns>True if a value exists for <paramref name="obj"/>, false otherwise.</returns>
+        </member>
+        <member name="P:AttachedField`2.Item(`0)">
+            <summary>
+            Sets or retrieves the value attached to object.
+            </summary>
+            <param name="obj">The object key.</param>
+            <returns>The attached value, or default(<typeparamref name="TValue"/>) if the value has not been set.</returns>
+        </member>
+        <member name="M:AttachedField`2.Clear">
+            <summary>
+            Clears all entries.
+            </summary>
+        </member>
+        <member name="P:AttachedField`2.Count">
+            <summary>
+            The number of entries currently stored.
+            </summary>
+        </member>
+        <member name="M:AttachedField`2.CullDead">
+            <summary>
+            Removes entries for which the key has been garbage collected.
+            </summary>
+        </member>
+    </members>
+</doc>

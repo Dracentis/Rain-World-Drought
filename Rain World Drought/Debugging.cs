@@ -9,32 +9,27 @@ namespace Rain_World_Drought
     {
         private static FLabel logs;
         private const int logLength = 25;
-        private static Queue<string> logLines;
+        private static Queue<string> logLines = new Queue<string>();
         private static int ctr;
 
         public static void Patch()
         {
             //On.MainLoopProcess.RawUpdate += MainLoopProcess_RawUpdate;
-            On.RainWorld.Start += RainWorld_Start;
             On.RainWorld.Update += RainWorld_Update;
             On.FFont.GetQuadInfoForText += FFont_GetQuadInfoForText;
-        }
-
-        // Create log display
-        private static void RainWorld_Start(On.RainWorld.orig_Start orig, RainWorld self)
-        {
-            orig(self);
-            logLines = new Queue<string>();
-            logs = new FLabel("font", "");
-            logs.anchorX = 0f;
-            logs.anchorY = 1f;
-            Futile.stage.AddChild(logs);
         }
 
         // Move log display
         private static void RainWorld_Update(On.RainWorld.orig_Update orig, RainWorld self)
         {
             orig(self);
+            if (logs == null)
+            {
+                logs = new FLabel("font", string.Join(Environment.NewLine, logLines.ToArray()));
+                logs.anchorX = 0f;
+                logs.anchorY = 1f;
+                Futile.stage.AddChild(logs);
+            }
             logs.MoveToFront();
             logs.x = 10.5f;
             logs.y = Futile.screen.height - 10.5f;
@@ -54,7 +49,7 @@ namespace Rain_World_Drought
                     logLines.Enqueue(lines[i]);
                 while (logLines.Count > logLength)
                     logLines.Dequeue();
-                logs.text = string.Join(Environment.NewLine, logLines.ToArray());
+                if (logs != null) logs.text = string.Join(Environment.NewLine, logLines.ToArray());
             }
             catch (Exception e) {
                 Debug.LogException(new Exception($"Failed to log message: {msg}", e));

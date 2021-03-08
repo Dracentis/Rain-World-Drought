@@ -16,6 +16,8 @@ namespace Rain_World_Drought.Slugcat
             this.cosmetics = new List<PlayerCosmetics>(); // to prevent crash with monkland
         }
 
+        internal static WandererCharacter character;
+
         public readonly Player self;
 
         private static WandererSupplement[] fields = new WandererSupplement[4];
@@ -25,7 +27,7 @@ namespace Rain_World_Drought.Slugcat
 
         public static bool IsWanderer(Player self)
         {
-            return DroughtMod.EnumExt && self.playerState.slugcatCharacter == SlugcatCharacter;
+            return character.Enabled || ((int)self.slugcatStats.name == character.SlugcatIndex && character.SlugcatIndex != -1);
         }
 
         public static WandererSupplement GetSub(Player self, bool makeNewSub = false)
@@ -72,10 +74,6 @@ namespace Rain_World_Drought.Slugcat
             fields[self.playerState.playerNumber] = new WandererSupplement(self);
         }
 
-        // Wanderer replaces orig slugcat: this can be changed with enumext but
-        public const int SlugcatCharacter = 0;
-        public const int StoryCharacter = 0;
-
         #region Ability Suppliments
         // Number of ability uses per food pip
         public const int maxEnergy = 9;
@@ -113,6 +111,8 @@ namespace Rain_World_Drought.Slugcat
         public float PanicSlowdown => (slowdownLeft == 0 || !panicSlowdown) ? 0f : Custom.LerpMap(ticksUntilPanicHit, 6f, 1f, 0f, 1f);
         public float Energy => (energy + (hasHalfEnergyPip ? 0f : 0.5f)) / maxEnergy;
         public int AirJumpsLeft => maxExtraJumps + 1 - jumpsSinceGrounded;
+
+        public static int StoryCharacter => character.SlugcatIndex;
 
         #region Ending Supplement
         public bool voidEnergy = false; //true if the void effects are controlling the maxEnergy

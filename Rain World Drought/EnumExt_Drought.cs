@@ -14,8 +14,10 @@ namespace Rain_World_Drought.Enums
     {
         public static int GetMaxCreatureTemplateType()
         {
-            return Mathf.Max((int)EnumExt_Drought.LightWorm, (int)EnumExt_Drought.CrossBat, (int)EnumExt_Drought.WalkerBeast,
-                (int)EnumExt_Drought.GreyLizard, (int)EnumExt_Drought.SeaDrake);
+            int max = 0;
+            foreach(int type in Enum.GetValues(typeof(CreatureTemplate.Type)))
+                if (type > max) max = type;
+            return max;
         }
 
         public const int SandboxUnlockIDExtend = 3;

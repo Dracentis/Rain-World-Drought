@@ -15,7 +15,6 @@ namespace Rain_World_Drought.Slugcat
             On.PlayerGraphics.Update += new On.PlayerGraphics.hook_Update(UpdateHK);
             On.PlayerGraphics.DrawSprites += new On.PlayerGraphics.hook_DrawSprites(DrawSpritesHK);
             On.PlayerGraphics.ApplyPalette += new On.PlayerGraphics.hook_ApplyPalette(ApplyPaletteHK);
-            On.PlayerGraphics.SlugcatColor += new On.PlayerGraphics.hook_SlugcatColor(SlugcatColor);
         }
 
         public static int AddCosmetics(WandererSupplement sub, int spriteIndex, PlayerCosmetics cosmetic)
@@ -124,7 +123,7 @@ namespace Rain_World_Drought.Slugcat
                 body = Color.Lerp(body, Color.gray, 0.4f * num);
                 eye = Color.Lerp(eye, Color.Lerp(Color.white, palette.fogColor, 0.5f), 0.2f * num * num);
             }
-            if (self.player.playerState.slugcatCharacter == WandererSupplement.SlugcatCharacter)
+            if (self.player.playerState.slugcatCharacter == WandererSupplement.StoryCharacter)
             {
                 eye = Color.Lerp(new Color(1f, 1f, 1f), body, 0.3f);
                 body = Color.Lerp(palette.blackColor, Color.Lerp(PlayerGraphics.SlugcatColor(self.player.playerState.slugcatCharacter), Color.white, voidInEffect), Mathf.Lerp(0.08f, 0.04f, palette.darkness));
@@ -146,12 +145,6 @@ namespace Rain_World_Drought.Slugcat
             {
                 sub.cosmetics[i].ApplyPalette(sLeaser, rCam, palette);
             }
-        }
-
-        private static Color SlugcatColor(On.PlayerGraphics.orig_SlugcatColor orig, int i)
-        {
-            if (i == WandererSupplement.SlugcatCharacter) { return Custom.HSL2RGB(0.63055557f, 0.54f, 0.2f); }
-            return orig.Invoke(i);
         }
     }
 }

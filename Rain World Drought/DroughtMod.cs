@@ -24,12 +24,12 @@ namespace Rain_World_Drought
         public override void OnEnable()
         {
             base.OnEnable();
-            ResourceReady = false;
-            ResourceManager.assetDir = string.Concat(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location),
-                Path.DirectorySeparatorChar, "DroughtAssets", Path.DirectorySeparatorChar);
 
             // Debugging!
             Debugging.Patch();
+            
+            ResourceReady = false;
+            ResourceManager.assetDir = FindAssetDirectory();
 
             #region Creatures
             // namespaces must be 'Rain_World_Drought.Creatures', not 'Creature' without s, which confuses the compiler with global::Creature
@@ -91,11 +91,30 @@ namespace Rain_World_Drought
             #endregion OverWorld
 
             On.RainWorld.Start += new On.RainWorld.hook_Start(RainWorldHK);
+
+            SlugBase.PlayerManager.RegisterCharacter(WandererSupplement.character = new WandererCharacter());
         }
 
         public static bool EnumExt => (int)EnumExt_Drought.LightWorm > 10;
         public static bool ResourceReady;
         public static bool Enabled => EnumExt && ResourceReady;
+
+        private static string FindAssetDirectory()
+        {
+            string psc = Path.DirectorySeparatorChar.ToString();
+            string[] paths = new string[] {
+                string.Concat(RWCustom.Custom.RootFolderDirectory(), psc, "Mods", psc, "DroughtAssets", psc),
+                string.Concat(RWCustom.Custom.RootFolderDirectory(), psc, "BepInEx", psc, "plugins", psc, "DroughtAssets", psc),
+                string.Concat(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), psc, "DroughtAssets", psc)
+            };
+
+            foreach (string path in paths)
+            {
+                if (Directory.Exists(path)) return path;
+            }
+
+            return paths[paths.Length - 1];
+        }
 
         private static void RainWorldHK(On.RainWorld.orig_Start orig, RainWorld self)
         {

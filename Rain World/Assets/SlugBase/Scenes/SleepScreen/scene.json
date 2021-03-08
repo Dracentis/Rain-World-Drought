@@ -1,0 +1,9 @@
+{
+	"images": [
+		{"name":"Sleep - 5.png",            "x":672, "y":236, "depth":3.5, "fade":0.2},
+		{"name":"Sleep - 4.png",            "x":669, "y":138, "depth":2.8, "alpha":0.24, "fade":0.1},
+		{"name":"Sleep - 3.png",            "x":696, "y":118, "depth":2.2, "fade":0.35},
+		{"name":"Sleep - 2 - White.png",    "x":677, "y":63 , "depth":1.7},
+		{"name":"Sleep - 1.png",            "x":486, "y":-54, "depth":1.2}
+	]
+}

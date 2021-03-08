@@ -1,0 +1,13 @@
+{
+	"images": [
+		{"name":"White Background - 5.png", "x":358, "y":117, "depth":3.6},
+		{"name":"White Haze - 4.png",       "x":425, "y":205, "depth":3.2, "shader":"Lighten"},
+		{"name":"White BkgPlants - 3.png",  "x":457, "y":140, "depth":3.1},
+		{"name":"White Vines - 1.png",      "x":459, "y":385, "depth":2.8},
+		{"name":"White Slugcat - 2.png",    "x":550, "y":180, "depth":2.7, "shader":"LightEdges"},
+		{"name":"White FgPlants - 0.png",   "x":383, "y":64,  "depth":2.1}
+		{"name":"Slugcat - White - Flat.png", "x":0, "y":0, "depth":-1, "flatmode":true}
+	],
+	"selectmenux":-10,
+	"selectmenuy":100
+}
