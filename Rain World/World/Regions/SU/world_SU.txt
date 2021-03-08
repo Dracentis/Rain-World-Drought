@@ -93,50 +93,12 @@ LINEAGE : SU_A31 : 3 : NONE-0.1, Small Centipede-1.0, Centipede-{0.3}-1.0, Centi
 (0)LINEAGE : SU_B06 : 4 : Blue-0.8, White-0.5, Cyan-0
 (0)LINEAGE : SU_B06 : 5 : Blue-0.8, White-0.5, Cyan-0
 (0)LINEAGE : SU_A04 : 5 : NONE-0.05, TentaclePlant-0
-(0)LINEAGE : SU_A06 : 3 : Green-0.1, NONE-0.5, Pink-0.5, Cyan-0.5, Red-0
-(0)SU_B04 : 3-Pink, 4-Green
-(0)SU_C02 : 5-Pink
-(0)SU_B05 : 5-Green
-(0)SU_B01 : 6-Mimic-{24}
-(0)SU_A10 : 2-Mimic-{21}, 3-Green
-
-//[Other cat]
-(1)OFFSCREEN : 0-Scavenger-6
-(1)OFFSCREEN : 0-KingVulture-1, 0-Vulture-2
-(1)SU_B09 : 4-DropBug-2
-(1)SU_A17 : 2-White
-(1)SU_A20 : 6-Centipede-5
-(1)SU_B04 : 3-DropBug-2, 4-DropBug, 5-DropBug
-(1)SU_B05 : 5-Pink
-(1)SU_B01 : 6-TentaclePlant
-(1)SU_A10 : 2-TentaclePlant, 3-Green
-(1)SU_A30 : 2-DropBug
-(1)SU_B07 : 3-Green
-(1)SU_B02 : 7-Centipede, 8-Centipede-2
-(1)SU_A32 : 2-DropBug
-(1)SU_B08 : 3-Red
-(1)SU_A13 : 4-DropBug, 3-CicadaB
-(1)LINEAGE : SU_A06 : 4 : Red-1, NONE-0.001, Red-0
-(1)LINEAGE : SU_A06 : 3 : DropBug-0.1, NONE-0.5, BigSpider-0.5, SpitterSpider-0
-(1)LINEAGE : SU_B08 : 2 : Green-0.3, Red-0
-(1)LINEAGE : SU_B12 : 3 : Pink-0.4, Blue-0.15, Red-0
-(1)LINEAGE : SU_A40 : 2 : Green-0.5, Blue-0.4, Cyan-0
-(1)LINEAGE : SU_B07 : 2 : Green-0.5, Pink-0.4, Cyan-0
-(1)LINEAGE : SU_C02 : 4 : Green-0.5, Yellow-0.9, Cyan-0
-(1)LINEAGE : SU_A04 : 4 : Blue-0.1, White-0.5, Cyan-0
-(1)LINEAGE : SU_B11 : 6 : Blue-0.1, White-0.5, Cyan-0
-(1)LINEAGE : SU_B11 : 7 : Blue-0.1, White-0.5, Cyan-0
-(1)LINEAGE : SU_B06 : 4 : Blue-0.8, White-0.5, Cyan-0
-(1)LINEAGE : SU_B06 : 5 : Blue-0.8, White-0.5, Cyan-0
-(1)LINEAGE : SU_A04 : 5 : NONE-0.05, TentaclePlant-0
-
-//Wanderer and [Other cat]
-(0,1)SU_B12 : 2-Green
-(0,1)LINEAGE : SU_A02 : 2 : NONE-0.05, Mimic-{16}-0.4, Mimic-{18}-0.4, TentaclePlant-0
-(0,1)LINEAGE : SU_A02 : 3 : NONE-0.05, Mimic-{18}-0.4, Mimic-{14}-0.4, TentaclePlant-0
-(0,1)LINEAGE : SU_B05 : 5 : NONE-0.05, Mimic-{14}-0.4, TentaclePlant-0
-(0,1)SU_A04 : 4-Pink-2, 2-CicadaB, 3-CicadaB
-(0,1)SU_C02 : 2-BigNeedleWorm, 3-SmallNeedleWorm-3
+(0)SU_B12 : 2-Green
+(0)LINEAGE : SU_A02 : 2 : NONE-0.05, Mimic-{16}-0.4, Mimic-{18}-0.4, TentaclePlant-0
+(0)LINEAGE : SU_A02 : 3 : NONE-0.05, Mimic-{18}-0.4, Mimic-{14}-0.4, TentaclePlant-0
+(0)LINEAGE : SU_B05 : 5 : NONE-0.05, Mimic-{14}-0.4, TentaclePlant-0
+(0)SU_A04 : 4-Pink-2, 2-CicadaB, 3-CicadaB
+(0)SU_C02 : 2-BigNeedleWorm, 3-SmallNeedleWorm-3
 END CREATURES
 
 BAT MIGRATION BLOCKAGES
