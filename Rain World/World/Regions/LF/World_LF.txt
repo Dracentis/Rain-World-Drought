@@ -85,29 +85,8 @@ LINEAGE : LF_C03 : 4 : Small Centipede-0.5, Centipede-{4}-0.5, Centipede-{6}-0.5
 (0)LINEAGE : LF_B03 : 3 : Centipede-0.3, Centipede-0.3, Centipede-{0.75}-0.2, RedCentipede-0
 (0)LINEAGE : LF_C02 : 6 : Pink-0.5, Cyan-0
 (0)LINEAGE : LF_F02 : 4 : Centipede-{0.65}-0.5, Centipede-{0.75}-0.5, Centipede-{0.9}-1.0, RedCentipede-0
-(0)LINEAGE : LF_E02 : 3 : Pink-0.5, Cyan-0.3, Red-0
+(0)LINEAGE : LF_E02 : 3 : Pink-0.5, Cyan-0.3, GreyLizard-0
 (0)LINEAGE : LF_E04 : 5 : Pink-0.3, Pink-0.3, GreyLizard-0
-(0)LF_C02 : 6-Green, 6-Blue, 3-CicadaA-2
-(0)LF_D03 : 2-CicadaB, 3-CicadaA-2
-(0)LINEAGE : LF_E01 : 4 : Blue-0.3, White-0.3, Red-0
-(0)LINEAGE : LF_E03 : 2 : Blue-0.5, GreyLizard-0
-
-//[Other cat]
-(1)OFFSCREEN : 0-Deer-6, 0-Vulture-2, 0-KingVulture, 0-Scavenger-14
-(1)LF_D08 : 6-Mimic-{13}, 2-Mimic-{10}, 4-Mimic-{15}, 7-SpitterSpider-2, 8-SpitterSpider, 8-BigSpider-2
-(1)LF_C02 : 6-Green, 3-CicadaA-2
-(1)LF_E04 : 3-Centipede
-(1)LF_C03 : 2-Centipede-2
-(1)LF_D06 : 3-Centipede
-(1)LF_F02 : 5-Centipede
-(1)LF_D03 : 5-CicadaA, 6-Centipede
-(1)LINEAGE : LF_D03 : 2 : Blue-0.5, Cyan-0
-(1)LINEAGE : LF_D03 : 3 : Blue-0.5, Cyan-0
-(1)LINEAGE : LF_B03 : 3 : Centipede-0.3, Centipede-0.3, Centipede-{0.75}-0.2, RedCentipede-0
-(1)LINEAGE : LF_C02 : 6 : Pink-0.5, Cyan-0
-(1)LINEAGE : LF_F02 : 4 : Centipede-{0.65}-0.5, Centipede-{0.75}-0.5, Centipede-{0.9}-1.0, RedCentipede-0
-(1)LINEAGE : LF_E02 : 3 : Pink-0.5, Cyan-0.3, Red-0
-(1)LINEAGE : LF_E04 : 5 : Pink-0.3, Pink-0.3, Red-0
 
 
 
