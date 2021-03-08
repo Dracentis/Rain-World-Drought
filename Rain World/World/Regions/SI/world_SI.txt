@@ -50,12 +50,6 @@ END ROOMS
 CREATURES
 //all
 SI_A18 : 3-Eggbug
-SI_SP02 : 2-Dropbug-2, 5-Cyan, 8-BigNeedleWorm, 7-SmallNeedleWorm-5
-SI_SP01 : 3-White-2, 4-CicadaB-2, 5-CicadaA-2
-//SI_Spire4 : 3-CicadaB-2
-SI_A13 : 3-BigNeedleWorm, 4-SmallNeedleWorm-4
-//SI_SpireM : 4-Blue
-SI_A09 : 3-CicadaB-1, 4-CicadaA-3
 SI_C02 : 4-Eggbug
 SI_D05 : 4-Eggbug
 SI_B04 : 2-White
@@ -90,35 +84,15 @@ LINEAGE : SI_C01 : 5 : NONE-0.07, TentaclePlant-0
 (0)LINEAGE : SI_A23 : 2 : NONE-0.2, Blue-0.5, Cyan-0
 (0)LINEAGE : SI_C06 : 3 : Centiwing-0.1, RedCentipede-0
 (0)LINEAGE : SI_B09 : 5 : White-0.5, Cyan-0.5, Red-0
-(0)SI_D01 : 7-CicadaA-2, 8-CicadaB-2, 9-CicadaB, 10-CicadaB, 6-Blue
-(0)SI_C01 : 3-Yellow, 4-Yellow-2
-(0)SI_C06 : 2-CicadaB, 3-CicadaA
-(0)SI_D06 : 5-Yellow, 6-Yellow, 7-Yellow
-(0)SI_B09 : 6-CicadaA
-(0)LINEAGE : SI_B09 : 4 : Centiwing-0.05, Centiwing-0.05, Centipede-{0.8}-0.2, RedCentipede-0
-(0)LINEAGE : SI_B09 : 5 : Pink-0.5, Blue-0.5, White-0.3, Red-0
-
-//[Other cat]
-(1)OFFSCREEN : 0-Vulture-3, 0-KingVulture-2, 0-Scavenger-8
-(1)SI_A17 : 4-DropBug
-(1)SI_D01 : 7-CicadaA-2, 8-CicadaB-2, 9-CicadaB, 10-CicadaB, 5-White, 5-Cyan, 6-EggBug
-(1)SI_C01 : 4-Yellow-2, 3-Cyan-2
-(1)SI_C07 : 2-Cyan, 3-Cyan
-(1)SI_B09 : 4-Cyan-2, 6-Centiwing
-(1)SI_B01 : 5-BigNeedleWorm, 5-SmallNeedleWorm
-(1)SI_A27 : 3-CicadaB, 4-CicadaA
-(1)SI_C06 : 2-DropBug-1
-(1)SI_D06 : 5-Yellow, 6-Yellow-2, 7-Yellow, 8-DropBug
-(1)SI_B03 : 3-Centiwing
-(1)SI_C09 : 3-Centiwing
-(1)LINEAGE : SI_A23 : 2 : NONE-0.2, Blue-0.5, Cyan-0
-(1)LINEAGE : SI_C06 : 3 : Centiwing-0.1, RedCentipede-0
-(1)LINEAGE : SI_B09 : 5 : White-0.5, Cyan-0.5, Red-0
-
-//Wanderer and [Other cat]
-(0,1)SI_C08 : 4-Centiwing
-(0,1)SI_A02 : 2-Blue
-(0,1)SI_A17 : 3-White
+(0)SI_C08 : 4-Centiwing
+(0)SI_A02 : 2-Blue
+(0)SI_A17 : 3-White
+(0)SI_SP02 : 2-Dropbug-2, 5-Cyan, 8-BigNeedleWorm, 7-SmallNeedleWorm-5
+(0)SI_SP01 : 3-White-2, 4-CicadaB-2, 5-CicadaA-2
+//(0)SI_Spire4 : 3-CicadaB-2
+(0)SI_A13 : 3-BigNeedleWorm, 4-SmallNeedleWorm-4
+//(0)SI_SpireM : 4-Blue
+(0)SI_A09 : 3-CicadaB-1, 4-CicadaA-3
 END CREATURES
 
 BAT MIGRATION BLOCKAGES
