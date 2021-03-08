@@ -54,7 +54,7 @@ MW_S07 : MW_8 : SHELTER
 END ROOMS
 
 CREATURES
-//wanderer
+//Wanderer
 (0)OFFSCREEN : 0-KingVulture-2
 (0)MW_1 : 3-White
 (0)MW_2 : 2-White
@@ -74,7 +74,6 @@ CREATURES
 (0)MW_17 : 2-Yellow-3, 4-White, 5-Tube-2
 (0)MW_33 : 3-White, 4-Dropbug
 (0)MW_20 : 5-Yellow, 6-Yellow, 7-Yellow, 4-Yellow-2
-(0)MW_22 : 2-White, 5-Mimic-{16}
 (0)MW_23 : 2-Yellow-2, 3-Yellow, 4-Yellow, 5-Yellow
 (0)MW_24 : 4-White, 6-Dropbug
 (0)MW_25 : 3-White
