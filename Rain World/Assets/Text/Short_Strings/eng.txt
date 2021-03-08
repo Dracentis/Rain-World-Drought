@@ -2,7 +2,7 @@
 // Add | at the end of each line and add translation. anything after '//' will be ignored.
 
 /// Character Screen ///
-THE WANDERER
+The Wanderer
 Curious and calm, with a deep desire to discover the ancient mysteries around it.<LINE>In tune with the events of the world, your journey will have a significant impact on things much greater than yourself.
 
 /// Region Name ///
