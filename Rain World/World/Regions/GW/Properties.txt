@@ -1,6 +1,5 @@
 Palette: 9
 Subregion: Garbage Wastes
-Subregion: Corrupted Wastes
 Room Setting Templates: Outside, Inside
 playerGuideOverseerSpawnChance: 0.0
 Room_Attr: GW_C06: Centipede-3,RedCentipede-3,Scavenger-3,DropBug-3,

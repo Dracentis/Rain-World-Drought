@@ -1,0 +1,17 @@
+//Later
+//GW_B01 : 5-Leech-10, 3-Leech-5
+//GW_C01 : 3-Leech-7, 5-Leech-7
+//GW_B04 : 3-Leech-7, 4-Leech-7
+//GW_D01 : 7-Leech-8
+//GW_D01 : 6-Leech-7 //taking this out because it spawned leeches in an upwards-facing land den where they just stayed and died. For Red, I'm moving these leeches to the water
+//GW_E02 : 8-Green
+//GW_B09 : 2-Leech-10
+//GW_D02 : 6-Leech-10
+//GW_E01 : 7-Leech-10, 5-Bro, 6-Bro
+//GW_C10 : 2-Leech-7
+//GW_C08 : 3-Leech-10
+//GW_C04 : 6-Leech-3, 7-Leech-3
+//GW_B08 : 8-Leech-3, 9-Leech-5, 10-Leech-5, 12-Sea Leech-10, 13-Sea Leech-10
+//LINEAGE : GW_C03 : 5 : Green-0.2, Yellow-0.5, Red-0
+//LINEAGE : GW_C09 : 5 : NONE-0.07, Bro-0.5, NONE-0.07, Bro-0
+//LINEAGE : GW_C09 : 6 : NONE-0.1, Bro-0.5, NONE-0.05, Bro-0
