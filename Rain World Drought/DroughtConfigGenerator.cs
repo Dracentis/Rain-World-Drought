@@ -11,7 +11,7 @@ namespace Rain_World_Drought
 {
     public partial class DroughtMod
     {
-        public OptionInterface LoadOI() => DroughtConfigGenerator.LoadOI(this);
+        public object LoadOI() => DroughtConfigGenerator.LoadOI(this);
     }
 
     /// <summary>
@@ -22,7 +22,7 @@ namespace Rain_World_Drought
         private static Type oiType;
 
         // Create a new instance of the generated OptionInterface type
-        public static OptionInterface LoadOI(DroughtMod mod)
+        public static object LoadOI(DroughtMod mod)
         {
             try
             {
