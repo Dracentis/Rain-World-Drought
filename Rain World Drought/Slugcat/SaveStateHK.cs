@@ -28,8 +28,7 @@ namespace Rain_World_Drought.Slugcat
             orig.Invoke(self, str, game);
             if (self.saveStateNumber == WandererSupplement.StoryCharacter && self.denPosition.Equals("SU_C04"))
             {
-                Debug.Log("Drought) New Save File Created. Change starting room.");
-                self.denPosition = "FS_A01";
+                Debug.Log("Drought) New Save File Created.");
                 self.deathPersistentSaveData.theMark = true;
             }
         }

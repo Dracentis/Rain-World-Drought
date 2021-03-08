@@ -27,6 +27,10 @@ namespace Rain_World_Drought
 
         public override Color? SlugcatColor() => Custom.HSL2RGB(0.63055557f, 0.54f, 0.2f);
 
+        public override string StartRoom => "FS_A01";
+
+        public override bool HasDreams => true;
+
         public override Stream GetResource(params string[] path)
         {
             try
