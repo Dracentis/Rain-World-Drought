@@ -58,6 +58,7 @@ SL_L03 : SL_E03, SL_L02
 END ROOMS
 
 CREATURES
+//all
 SL_A14 : 1-Tentacle Plant
 SL_A02 : 3-Salamander, 4-Sea Leech-10
 SL_D06 : 5-Salamander, 6-Salamander, 8-Tentacle Plant
@@ -81,6 +82,7 @@ LINEAGE : SL_D05 : 6 : NONE-0.02, Salamander-0
 (0)OFFSCREEN : 0-Vulture-3, 0-KingVulture-2, 0-Leviathan-3
 (0)SL_F01 : 4-Sea Leech-8, 7-Jet Fish, 6-Jet Fish-2
 (0)SL_H03 : 7-Sea Leech-8, 5-Jet Fish, 7-Jet Fish, 9-Tentacle Plant
+(0)SL_C10 : 2-Bro
 (0)SL_C04 : 3-Sea Leech-8
 (0)SL_D01 : 3-Jet Fish
 (0)SL_D04 : 6-Jet Fish
@@ -88,31 +90,13 @@ LINEAGE : SL_D05 : 6 : NONE-0.02, Salamander-0
 (0)LINEAGE : SL_F01 : 3 : White-0.5, Cyan-0
 (0)LINEAGE : SL_B04 : 2 : White-0.5, Cyan-0
 (0)LINEAGE : SL_B04 : 3 : White-0.5, Cyan-0
-(0)SL_F01 : 4-Jet Fish, 5-Jet Fish, 6-Jet Fish
-(0)SL_C04 : 3-Sea Leech-5
-(0)SL_B04 : 2-White
-
-//[Other cat]
-(1)OFFSCREEN : 0-Vulture-3, 0-KingVulture-2, 0-Leviathan-3
-(1)SL_F01 : 4-Sea Leech-8, 7-Jet Fish, 6-Jet Fish-2
-(1)SL_H03 : 7-Sea Leech-8, 5-Jet Fish, 7-Jet Fish, 9-Tentacle Plant
-(1)SL_C10 : 2-Bro
-(1)SL_C04 : 3-Sea Leech-8
-(1)SL_D01 : 3-Jet Fish
-(1)SL_D04 : 6-Jet Fish
-(1)SL_H02 : 5-Jet Fish, 7-Jet Fish
-(1)LINEAGE : SL_F01 : 3 : White-0.5, Cyan-0
-(1)LINEAGE : SL_B04 : 2 : White-0.5, Cyan-0
-(1)LINEAGE : SL_B04 : 3 : White-0.5, Cyan-0
-
-//Wanderer and [Other cat]
-(0,1)SL_B02 : 8-Sea Leech-5, 5-Sea Leech-5, 9-Tentacle Plant
-(0,1)SL_E02 : 4-Jet Fish, 5-Jet Fish, 6-Sea Leech-7, 7-Sea Leech-7, 8-Sea Leech-7
-(0,1)SL_A10 : 3-Sea Leech-6
-(0,1)SL_D06 : 7-Salamander
-(0,1)SL_C02 : 5-Salamander
-(0,1)SL_H02 : 9-Sea Leech-15
-(0,1)SL_D04 : 4-Salamander, 5-Sea Leech-10, 7-Sea Leech-15
+(0)SL_B02 : 8-Sea Leech-5, 5-Sea Leech-5, 9-Tentacle Plant
+(0)SL_E02 : 4-Jet Fish, 5-Jet Fish, 6-Sea Leech-7, 7-Sea Leech-7, 8-Sea Leech-7
+(0)SL_A10 : 3-Sea Leech-6
+(0)SL_D06 : 7-Salamander
+(0)SL_C02 : 5-Salamander
+(0)SL_H02 : 9-Sea Leech-15
+(0)SL_D04 : 4-Salamander, 5-Sea Leech-10, 7-Sea Leech-15
 END CREATURES
 
 BAT MIGRATION BLOCKAGES
