@@ -143,42 +143,7 @@ LINEAGE : SH_B17 : 5 : BigSpider-0.3, BigSpider-0.3, NONE-0.1, SpitterSpider-0
 (0)LINEAGE : SH_C12 : 2 : NONE-0.05, BigSpider-0
 (0)LINEAGE : SH_B17 : 5 : BigSpider-0.2, NONE-0.5, Black-0.5, SpitterSpider-0
 (0)LINEAGE : SH_B04 : 5 : EggBug-0.5, BigSpider-0
-(0)SH_D01 : 3-Pink
-(0)SH_C09 : 2-Spider-5, 3-Spider-5, 4-Spider-15, 5-Spider-10
-(0)SH_C05 : 2-Lantern Mouse, 3-Lantern Mouse, 5-Lantern Mouse, 6-Lantern Mouse, 4-Spider-15
-(0)SH_C04 : 4-Lantern Mouse-2, 5-Lantern Mouse-1, 6-Lantern Mouse, 7-Spider-20
-(0)LINEAGE : SH_C08 : 2 : Black-0.2, Yellow-0.2, Red-0
-(0)LINEAGE : SH_B05 : 7 : Lantern Mouse-0.4, Bigspider-0
-(0)LINEAGE : SH_B08 : 2 : Pink-0.4, Black-0
-(0)LINEAGE : SH_C05 : 4 : BigSpider-0.3, BigSpider-0.2, NONE-0.1, SpitterSpider-0
-
-//[Other cat]
-(1)SH_C09 : 2-Spider-5, 3-Spider-10, 4-Spider-15, 5-Spider-15, 3-BigSpider
-(1)SH_C05 : 2-Lantern Mouse, 3-Lantern Mouse, 5-Lantern Mouse, 6-BigSpider, 4-Spider-20
-(1)SH_C04 : 4-Lantern Mouse-2, 5-Lantern Mouse-2, 6-Dropbug, 7-Spider-20
-(1)SH_A15 : 4-Dropbug
-(1)SH_A14 : 4-Dropbug
-(1)SH_H01 : 4-Centipede-{0.65}
-(1)SH_B06 : 4-BigSpider-2, 5-BigSpider
-(1)SH_C03 : 5-SpitterSpider
-(1)SH_C01 : 6-SpitterSpider
-(1)SH_C03 : 7-Spider-30
-(1)SH_B13 : 3-BigSpider, 3-Spider-10
-(1)SH_B07 : 2-BigSpider, 4-Spider-5
-(1)SH_E02 : 3-Centipede-{0.25}, 3-Centipede-{0.2}, 3-Centipede-{0.4}, 3-Centipede-{0.35}
-(1)LINEAGE : SH_B08 : 2 : Dropbug-0.3, BigSpider-0.5, SpitterSpider-0.5, NONE-0
-(1)LINEAGE : SH_B05 : 7 : BigSpider-0.4, SpitterSpider-0
-(1)LINEAGE : SH_C08 : 2 : Black-0.2, BigSpider-0.5, SpitterSpider-0.5, Red-0
-(1)LINEAGE : SH_C03 : 7 : BigSpider-0.5, DropBug-0.5, SpitterSpider-0
-(1)LINEAGE : SH_C03 : 4 : BigSpider-0.5, DropBug-0.5, SpitterSpider-0
-(1)LINEAGE : SH_C01 : 3 : BigSpider-0.5, DropBug-0.5, SpitterSpider-0
-(1)LINEAGE : SH_C05 : 6 : BigSpider-0.5, DropBug-0.5, SpitterSpider-0
-(1)LINEAGE : SH_C12 : 2 : NONE-0.05, BigSpider-0
-(1)LINEAGE : SH_B17 : 5 : BigSpider-0.2, NONE-0.5, Black-0.5, SpitterSpider-0
-(1)LINEAGE : SH_B04 : 5 : EggBug-0.5, BigSpider-0
-
-//Wanderer and [Other cat]
-(0,1)OFFSCREEN : 0-Miros Bird-17, 0-Scavenger-7
+(0)OFFSCREEN : 0-Miros Bird-17, 0-Scavenger-7
 
 END CREATURES
 
