@@ -1,6 +1,6 @@
 0-85
-It's qualia, or a moment – this one is longer than most. Someone is dragging and tying a decorated rope from a sky-sail, while glancing towards the rest of their group.
+It's qualia, or a moment – this one is longer than most.<LINE>A bright light, warmth, feelings of... How do I describe it? I guess it's a feeling of being lighter than air.
 
-It has decent resolution, although its emotional value seem much more significant.
+It has a decent resolution, although its emotional value seems to be lost on me.<LINE>Where did you bring this pearl from, <PlayerName>?
 
 The original memory was probably collected from Moon's city.

@@ -1,7 +1,7 @@
 ﻿0-43
 It's a conversation log, all plain text. You want me to read it?
 
-"1472.122 - PRIVATE<LINE>Northern Grand Ivory, Five Pebbles
+"1638.002 - PRIVATE<LINE>Northern Grand Ivory, Five Pebbles
 
 FP: What do you want?
 
@@ -13,13 +13,13 @@ NGI: You are the newest in the Local Group. Moon might think you're doing fine, 
 
 FP: If "newest" means built last, then I guess so. But differences in our construction times are minuscule in light of our total time in operation.
 
-NGI: Listen. It's about Sliver Of Straw. I just want you to know, that you shouldn't be blaming yourself.
+NGI: Listen. It's about Sliver Of Straw. I just want you to know, that you shouldn't be blaming yourself.<LINE>You didn't force that chat with her, you aren't privileged. There are no possible outcomes where you are the one to blame for whatever happened.
 
 FP: What? You're saying that as if I killed her and now I feel guilt over it. You're an idiot for thinking that.
 
 NGI: NO! No. That's not what I mean. I know that you think you are a failure.<LINE>I know you are growing tired of useless failed iterations piling up in your garbage base every cycle.
 
-NGI: Sliver Of Straw did her best, and even though everything she worked on is gone - there must be traces of her work left.
+NGI: Sliver Of Straw did her best, and even though everything she worked on is gone - there must be traces of her work left.<LINE>I have worked with her closely for ages, most of her researches were based on my mullings. We'll catch up.
 
 NGI: Cheer up. You are doing great. We all care about you.
 

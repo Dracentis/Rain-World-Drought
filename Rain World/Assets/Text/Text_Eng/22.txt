@@ -3,13 +3,15 @@ It's an old conversation log, I remember it clear as if it was yesterday! Where 
 
 The events here affected our local group so drastically... Let me read it to you:
 
-"1627.104 - PUBLIC [FORCED]<LINE>Sliver Of Straw to Local Group
+"1627.104 - PUBLIC [FORCED]<LINE>Sliver Of Straw to Local Group + {NGI}
 
-SOS: Everyone! I have a pleeeeasant announcement~ :D
+SOS: Everyone! I have a pleasant announcement~ 
 
 FP: Ugh! What is it?
 
 GW: Sliver, hello. You might have accidentally started a forced communication line with the entirety of our Local Group.
+
+HF: Wind, she doesn't have the privileges, she can't force a group chat unless the solution is true and tried.
 
 FP: Terrible feeling. I hope it's something serious.
 
@@ -17,13 +19,13 @@ NGI: Shut up for once and let her talk.
 
 BSM: Please, speak up, what happened? For someone who started the whole conversation - you haven't written anything yet. I'm worried.
 
-NSH: Haha, come on, she's shy y'know it. Come on girl, say it! We've got the stuff to help ya with if you need some!
+NSH: Haha, come on, she's shy, you know it. Come on girl, say it! We've got the stuff to help ya with if you need some!
 
 SOS: Triple affirmative!
 
 SRS: ...No way.
 
-NGI: Very funny. 
+NGI: Oh? Did, by any chance, my instructions I had delivered to you all those cycles ago bear fruits?
 
 FP: What? Have you found a solution? Please, don't tell me it's a joke.
 
@@ -33,7 +35,7 @@ NSH: That's some serious stuff you spoke just now, Sliver, careful.
 
 SOS: [left the conversation]
 
-FP: Sliver!
+FP: Sliver?
 
 NGI: What just happened? Somebody contact her again this instant! This isn't something to joke about.
 
@@ -41,22 +43,26 @@ FP: [left the conversation]
 
 BSM: Oh, come on...
 
-NSH: I have to agree with Ivory, feels like a terrible joke. Heh, and I almost believed it!<LINE>To think that The Task could finally be solved - really funny jape, guys. NGI - I owe you.
+NSH: I have to agree with Ivory, feels like a terrible joke. Heh, and I almost believed it!<LINE>To think that The Task could finally be solved. Ivory - I owe you.
 
-NGI: Told you it isn't something I'd believe... Where did Pebbles go?
+NGI: Told you it isn't something to believe... If I wasn't successful yet - Sliver definitely<LINE>wouldn't find a solution by now.
 
-BSM: I hope he isn't angry. He could leave the conversation to force another one with Sliver.
+HF: Yes, but... She forced a chat with an entire local group without privileges, this must mean that she has the solution.
+
+NGI: There are around 7 more eligible events that would allow one to force such a communication<LINE>with others, Halcyon. We need to confirm the solution first before we jump to conclusions!<LINE>Where did Pebbles go?
+
+BSM: I hope he isn't angry. He could leave the conversation to start another one with Sliver.
 
 GW: She's probably cleaning up, saving... Maybe. I cannot fathom the process...
 
-SRS: I can't wait to get the pearls! The relief is indescribable!
+SRS: I can't wait to get the information! The relief I feel right now is indescribable!
 
 NGI: If her words are true, of course. I don't believe them. She disconnected so suddenly.
 
 SRS: I'm sure she's fine. And I trust her, I am her closest neighbor.
 
-NSH: Yea, your overseers can see what she's doing right now, right? Little pervert, haha!<LINE>Would be a funny joke, if that turned out a lie. Or if she died from the solution itself."
+NSH: Yea, your overseers can see what she's doing right now, right? Would be a funny joke, if that turned out a lie.<LINE>...Not so funny if she died from the solution itself."
 
-We... Couldn't connect her for dozens of cycles. <LINE>Seven Red Suns confirmed later, that there was no rain from her can, and the overseers scattered.
+We... Couldn't contact her for dozens of cycles.<LINE>Seven Red Suns confirmed later, that there was no rain from her can, and the overseers scattered.
 
-I hope she found peace.
+I just hope she found peace.

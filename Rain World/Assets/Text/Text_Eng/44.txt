@@ -1,7 +1,5 @@
 ﻿0-44
-Oh my, careful! My analysis reports are detecting flammable powder inside!
-
-I wonder where did you get it? There is a lot of it, stuffed into some kind of shell.<LINE>I would be very careful around this!
+Oh my, careful! My analysis reports are detecting flammable powder inside!<LINE>I wonder where you got it? There is a lot of it, stuffed into some kind of shell.<LINE>I would be very careful around this!
 
 Did scavengers make this? Where did they get that powder?<LINE>This is simply fantastic...
 

@@ -1,20 +1,12 @@
 0-79
-Oh...
+Hello, <PlayerName>.<LINE>Did you bring me something?
 
-Hello, <PlayerName>.
+I haven't seen you in a long time! How is Seven Red Suns?<LINE>I am glad to see you safe and sound, it's clear that your tail is working as intended.
 
-You must be Seven Red Suns' little messenger.
+I have considered tinkering with creatures too. More messengers could be useful.<LINE>Communications have always been spotty, even back when our cities were still populated.
 
-I have heard a lot about you. How is Seven Red Suns?
+Soon enough, messengers like you might be our only way of communicating.<LINE>Though perhaps I am being too pessimistic?
 
-I am glad to see you safe and sound, it's clear that your tail is working as intended.
-
-I have considered tinkering with creatures too. More messengers could be useful.
-
-Communications have always been spotty, even back when our cities were still populated.
-
-Soon enough, messengers like you might be our only way of communicating.
-
-I... I've been holding you here for a while, little creature. I'm sorry! I'm aware that you have to go.
+I guess you don't have anything for me yet. That means you're visiting Pebbles?<LINE>I've been holding you here for a while, little creature. I'm sorry, I'm aware that you have to go!
 
 Thank you for visiting me! Good luck on your way to Five Pebbles!

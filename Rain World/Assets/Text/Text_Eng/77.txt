@@ -1,28 +1,22 @@
 0-77
-This is...
+Ah, what a wonderful color. Let me see what's inside...
 
-...
+Hm. I expected something interesting, but this is a plain encrypted log from one of the overseers.<LINE>There is no signature - as per the norm, of course, overseers do not report back to their iterators<LINE>all the time - but from the data I'd assume it belongs to Seven Red Suns.
 
-...It has data written on it to be sure, but the format is nothing like I've ever seen before.
+You brought it from Forest Sanctuary, correct?<LINE>Oh, I can see by your reaction that I am right. Did you know, that that place was<LINE>created as a way to preserve spliced creatures?
 
-It bears some resemblance to the creature logs created by the overseers.
+A common way to create a purposed creature was, of course, done through researching. A lot of time<LINE>went into creating yours and many other creatures' ancestors. Failed and undesired creatures<LINE>were kept in there together with the original ones.
 
-Most iterators simply ignore it, as it has little importance towards the Task.
+This report covers the last one hundred and eight cycles and contains the genome encodings<LINE>of the creatures living in the area, as well as their wellbeing and any changes detected in their genes.<LINE>Let me give you a small piece.
 
-I occasionally look back on those files, as it reminds me of the time back when I worked on the<LINE>tasks of an entire lively city. It was a much more complex time; I worked on everything<LINE>from coordinating farming systems to individuals' problems or inquiries.
+"...organizations of the fourth axiom of karmic staging, ascertained by the quintessence of<LINE>an organic body (never entirely sequestered from the continuous flow of related<LINE>materials). Proposal: contemporary project to aggregate coordinated karmic<LINE>networking..."<LINE>And then there are numbers and symbols and more nuanced information for many more pages.
 
-I do miss the days when they visited my chamber.
+It's an assumption, for I don't remember the clear reasoning behind letting the original<LINE>creatures co-exist with failed experiments, but perhaps by letting the artificial beings<LINE>near they were hoping for a chance of a lucky gene deviation.
 
-Anyways, back to the pearl. It appears that someone used that data format as the basis to create a<LINE>new log of individual creatures' karmic properties and social relationships.
+Of course all of that started a very, very long time ago, long before I was built even.<LINE>This knowledge was not put into me with the dogmas, history, mantras - but luckily I've learned a little bit more from Suns.<LINE>It's an interesting tidbit of truth about our past, and sometimes I question why did my parents put only the most crucial information into me.
 
-There is a section written in internal language as well. I can try my best to translate it.
+I vividly remember creatures that came before you, <PlayerName>. They had no purpose<LINE>to us or to The Task, but nonetheless from such simple-minded beings with the help<LINE>of my creators - you came to be!
 
-"...organizations of the fourth axiom of karmic staging, It can be ascertained that the quintessence of<LINE>an organic body can never be entirely sequestered from the continuous flow of related<LINE>materials. I propose a contemporary project to aggregate coordinated karmic<LINE>networking" or perhaps... "encompassment of an overall site"
+Sliver of Straw started calling your brethren 'slugcats'. I do not understand why she decided to<LINE>give all of you such a moniker, but it is simpler to pronounce, as well as makes you stand out<LINE>from the rest.
 
-I am sorry little creature, are you understanding this?
-
-I would say this is the remnants or perhaps an older log of a far-reaching project by one of the iterators in the local group.
-
-It is hard to say which iterator, although some of the internal language suggests a slightly cynical<LINE>or humorous tone, which could narrow the possiblities.
-
-Without knowing where it came from, I'm afraid I can't tell you much more.
+I assume that I could call you a slugcat too. I do like the sound of that word.<LINE>But I choose to keep calling you a <PlayerName>. Not as concise of an alias for you,<LINE>but it is... to my preference.
