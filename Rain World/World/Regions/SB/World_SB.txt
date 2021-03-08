@@ -102,41 +102,8 @@ LINEAGE : SB_A01 : 3 : Small Centipede-0.6, Centipede-{0.4}-0.3, Centipede-{0.8}
 (0)LINEAGE : SB_E04 : 5 : Eggbug-1.0, SpitterSpider-0
 (0)LINEAGE : SB_A03 : 6 : Cyan-0.3, White-0.5, Red-0
 (0)LINEAGE : SB_E02 : 4 : Dropbug-0.8, SpitterSpider-0.5, Cyan-0.3
-(0)SB_H02 : 4-Centipede-{0.7}, 6-Small Centipede-3, 7-Centipede-2
-(0)SB_E04 : 4-Centipede
-(0)SB_J03 : 3-Black, 7-Black, 4-TentaclePlant, 5-Small Centipede-3, 6-Centipede-2
-(0)SB_A03 : 4-TentaclePlant, 5-Green
-(0)LINEAGE : SB_A03 : 6 : Blue-0.3, White-0.5, Red-0
-
-//[Other cat]
-(1)OFFSCREEN : 0-Miros-10, 0-Scavenger-15
-(1)SB_H03 : 3-Centipede-2, 4-SpitterSpider, 6-BigSpider-3, 7-BigSpider-2, 8-BigSpider-2, 5-Centipede-2
-(1)SB_H02 : 4-Centipede-3, 5-BigSpider-5 6-SpitterSpider-2, 7-Centipede-4, 5-Red Centipede
-(1)SB_C06 : 2-Black, 3-Black, 4-Black-2
-(1)SB_F02 : 4-Black, 5-Black, 6-Black, 7-Black-2
-(1)SB_J03 : 3-Black, 7-Black, 4-TentaclePlant, 5-Small Centipede-3, 6-Centipede-3
-(1)SB_J02 : 5-JetFish
-(1)SB_J02 : 3-Cyan-3
-(1)SB_G02 : 3-DropBug-2
-(1)SB_E02 : 3-DropBug-2
-(1)SB_C01 : 4-DropBug
-(1)SB_B02 : 2-DropBug
-(1)SB_A03 : 3-DropBug
-(1)SB_E04 : 4-SpitterSpider, 4-BigSpider
-(1)SB_A03 : 4-TentaclePlant, 5-Cyan-2
-(1)SB_F01 : 3-SpitterSpider, 4-SpitterSpider-2, 5-BigSpider
-(1)SB_C07 : 2-Salamander
-(1)SB_C07 : 3-Dropbug
-(1)SB_D04 : 9-Black, 5-BigSpider, 6-BigSpider
-(1)LINEAGE : SB_J02 : 4 : Jetfish-0.5, Salamander-0
-(1)LINEAGE : SB_C07 : 3 : Salamander-1.0, Cyan-0
-(1)LINEAGE : SB_E04 : 5 : Eggbug-1.0, SpitterSpider-0
-(1)LINEAGE : SB_A03 : 6 : Cyan-0.3, White-0.5, Red-0
-(1)LINEAGE : SB_E02 : 4 : Dropbug-0.8, SpitterSpider-0.5, Cyan-0.3
-
-//Wanderer and [Other cat]
-(0,1)SB_I01 : 8-Black, 9-Black, 10-Black, 11-Black, 12-Black, 13-Black
-(0,1)LINEAGE : SB_A04 : 4 : Dropbug-0.4, SpitterSpider-0.4, Red-0
+(0)SB_I01 : 8-Black, 9-Black, 10-Black, 11-Black, 12-Black, 13-Black
+(0)LINEAGE : SB_A04 : 4 : Dropbug-0.4, SpitterSpider-0.4, Red-0
 END CREATURES
 
 BAT MIGRATION BLOCKAGES
