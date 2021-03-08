@@ -31,7 +31,7 @@ namespace Rain_World_Drought
         {
             try
             {
-                return File.OpenRead(JoinPaths(Custom.RootFolderDirectory(), "Mods", "DroughtAssets", "SlugBase", path));
+                return File.OpenRead(JoinPaths(Resource.ResourceManager.assetDir, "SlugBase", path));
             }
             catch
             {
