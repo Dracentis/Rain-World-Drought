@@ -1,8 +1,6 @@
 ﻿0-19
-Is this.. one of Five Pebbles' neurons?
+Is this.. one of Five Pebbles' neurons?<LINE>Why would you bring this to me little messenger?
 
-Why would you bring this to me little messenger?
+We use these for many important processes across all our systems.
 
-We use these for many important processes across all our systems. <LINE>I already have more than I need.
-
-I suppose I could put it to some use. Thank you, <PlayerName>.
+I suppose I could put it to some use, quite a few were lost after the fault in my producing units due to slag buildup.<LINE>Nothing critical, of course! Thank you, <PlayerName>.

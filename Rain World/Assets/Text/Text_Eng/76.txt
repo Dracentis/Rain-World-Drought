@@ -1,18 +1,22 @@
 0-76
-It's an old pearl related to our local intake system.
+While you've been on your way to me, I've picked up traces of an unpleasant, musty<LINE>smell coming from you. This must be the reason, correct?<LINE>I suppose I could read this to you, but I still wonder how you've got it.
 
-Specifically, it details the designed microorganisms used in the main reservoir.
+It's... an old pearl related to our local intake system. By "our" I mean mine and Pebbles'.
 
-The complete report is thousands of entries long, discussing everything from the <LINE>central gravity-amplifier-style intake solution to the interactions with the developed fauna.
+Specifically, it has details on microorganisms used in the main reservoir.
 
-I'll give you the gist of it.
+The complete report is thousands of entries long, discussing everything from the<LINE>central gravity-amplifier-style intake solution to the interactions with the developed fauna.<LINE>I'll give you the gist of it.
 
-Back when the major cities were closer to the surface, filtered water reservoirs<LINE>were created as bioreactors to purify water and remove unwanted contaminants.
+Back when cities were closer to the surface, filtered water reservoirs<LINE>were created as bioreactors to purify water and remove contaminants.
 
-The organisms used in these tanks were not very well controlled and many different<LINE>unwanted strains of filter tissue corrupted early tanks.
+The organisms inside those reservoirs weren't kept under constant control,<LINE>and thus many different, quite undesirable strains of them infected the water and<LINE>filter tissue, corrupting early reservoirs.
 
-Some strains were even observed blending with the natural fauna, creating extremely<LINE>resilient organisms of a very large scale.
+Some strains were even observed blending with the natural fauna, creating extremely<LINE>resilient organisms of a very large scale. On some occasions they would grow a colony<LINE>near the filters, feeding onto incoming particles and growing like mold.
 
-I hope you didn't go down there to get this, I'm not sure how the tank would react to your biology.
+Eventually a strain of bacteria was made to keep the waters clean. The deed was not well<LINE>received by some monks, especially during the supremacy of Pisceous Dogma,<LINE>but it was required for me and other similar iterators to work properly.
 
-I suppose the mark Suns' gave you would help.
+It took a lot of time, but the bacteria seemed to bear fruits, working as intended.<LINE>From what this report has, it seems the bacteria absorbs any undesirable 'taint' and<LINE>converts it into air? I assume it has to be breathable.
+
+<PlayerName>, I take it you dove into... Oh, you don't have to answer, it's obvious<LINE>where you got this. I’m not sure how the tank would react to you.
+
+To be honest, I'm not even sure if the bacteria are safe, now that I've read the report! The formulae are so long,<LINE>I question how the byproducts would affect you.<LINE>But I suppose the mark Suns gave you would help, in a way.

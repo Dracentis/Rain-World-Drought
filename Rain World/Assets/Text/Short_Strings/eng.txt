@@ -3,7 +3,7 @@
 
 /// Character Screen ///
 THE WANDERER
-Curious and calm, with a deep desire to discover the ancient mysteries around it.<LINE>In tune with the events of the world, your journey will have a significant impact on things much greater than yourself.
+Curious and calm, with a brilliant mind and sharp reflexes to help escape any danger.<LINE>In tune with the events of the world, your journey will have a significant impact on things much greater than yourself.
 
 /// Region Name ///
 Intake System
@@ -39,8 +39,8 @@ little tormentor
 Little annoyance
 little annoyance
 // disliked by SRS
-Traitor
-traitor
+Defective vermin
+defective vermin
 // liked by any, brought pearl 10+
 Little archaeologist
 little archaeologist
@@ -56,8 +56,9 @@ my little friend
 
 /// PearlConversation ~ Distant connect to LTTM with Moon Mark ///
 // MoonReceiveSwarmer
-You're reaching the end of your journey, little friend.
-Thank you, for helping me.
+<PlayerName>, my connection with you grows weaker. I think it's time for a farewell.
+You're reaching the end of your journey, aren't you?
+Before you go - thank you. For helping me, and for helping us.
 
 /// Moon Conversation ///
 // Moon Second+ Conversation, when she doesn't dislike you
@@ -84,7 +85,7 @@ LEAVE.
 You again. // dislikes
 Hello messenger. // neutral or likes
 Do you have that pearl Suns was talking about?
-You are welcome stay here, but I must return to my work. // likes remark
+You are welcome to stay here, but I must return to my work shortly. // likes remark
 // Third And Up Greeting (Dislike)
 Again?
 You.
@@ -124,14 +125,14 @@ Leave me alone!
 Thank you. // first three interruption
 As I was saying... // 1st
 As I tried to say to you... // 2nd
-Little messenger, stop that immediatly! // 3rd
+Little messenger, stop that immediately! // 3rd
 Let's continue...
 And now you expect me to continue speaking? // 4th
 Let us try again - not that it has worked well before. I was saying...
 As I tried to say to you... // 5th and so on
 If you behave like this, why should I talk to you?
 You come here, but you can't be respectful enough to listen to me.<LINE>Will you listen this time?
-Now if you'll let me, I will try to say this again.
+Now, if you let me, I will try to say this again.
 // Before Giving Mark
 Just a minute, little messenger.
 // ThrowOut
@@ -159,10 +160,11 @@ Do you want me to take a look at that?
 Oh... Should I look at that?
 Another thing for me, <PlayerName>?
 A new object for me, <PlayerName>?
+OwO What's this you bwought me, wittwe fwiend?
 // Misc Item Reaction
 It's a rock. I have no use for this. // Rock
 This is one of my processing neurons, don't eat any. // Pebbles' Neuron
-It's a piece of sharpened rebar... What is it you want to know?<LINE>I've see you used them very effectively. // Spear
+It's a piece of sharpened rebar... What is it you want to know?<LINE>I've seen you use them very effectively. // Spear
 It's a weapon made with fire powder. Did the scavengers give this to you?<LINE>It could be very dangerous if used incorrectly! // Explosive Spear
 It's an edible plant. You could use the energy! // Waternut
 Is this one of Moon's neurons? // Moon's Neuron
@@ -173,9 +175,9 @@ This one I've already read to you, <PlayerName>.
 This one, <PlayerName>?
 We have already talked about this one, <PlayerName>. // not Pearl
 I've told you about this one, <PlayerName>.
-<CapPlayerName>, again?
+<PlayerName>! AGAIN with this?
 // Interrupted by Taking Item
-GIVE THAT BACK! // Moon_Pearl_CC
+GIVE THAT BACK, VERMIN! // Moon_Pearl_CC
 Yes, take it and don't bother me. // Already Dislike
 And now you're taking it.
 Oh... Okay, have it back. // Not Dislike
@@ -188,15 +190,16 @@ Yes, you may to have it back.
 Go to the west past the Farm Arrays, and then down into the<LINE>earth where the land fissures, as deep as you can reach, where the ancients<LINE>built their temples and danced their silly rituals. The mark I gave you will let you through.
 Best of luck to you, <PlayerName>.
 // Any Pearl Intro
-Ah, a pearl. Not a message though. Would you like me to read it to you? // 1st
+Ah, a pearl. Not the message though. Would you like me to read it to you? // 1st
 Another pearl! You want me to read this one too? Just a moment... // 2nd
 And yet another one! I will read it to you. // 3rd
-Another? You're no better than the scavengers! // 4th
-Let us see... to be honest, I'm as curious to see it as you are. // 4th, extra remark when 5p likes
-The scavengers must be jealous of you, finding all these // 5th or later random
-Here we go again, little archeologist. Let's read your pearl.
-... You're getting quite good at this you know. A little archeologist beast.<LINE>Now, let's see what it says.
-And yet another one! I will read it to you.
+Another? Your thirst for knowledge is really something!<LINE>Or is it that my readings calm your spirits? // 4th
+Let us see...<LINE>To be honest with you, <PlayerName>, I'm as curious to see what's in it as you are. // 4th, extra remark when 5p likes
+The scavengers must be envious of you. // 5th or later random
+Here we go again, <PlayerName>. Let's read your pearl.
+... You're getting quite good at this, you know. A little archaeologist creature.<LINE>Now, let's see what it says.
+And yet another one! I will read it to you in a moment.
+So many of these lately! I see you've been wandering the world a lot.
 // Moon Pearl Intro (random)
 You would like me to read this? // 0
 This pearl must have been used recently. You can still feel the heat.

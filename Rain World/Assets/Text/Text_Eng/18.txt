@@ -3,15 +3,15 @@ Interesting... This one is written by me. It's an essay on a very... influential
 
 It's about an iterator called Sliver of Straw. I wrote it many cycles ago...<LINE>Do you know Sliver of Straw? She's quite legendary among us.
 
-Would you like to hear about her?
+Sliver was our dearest friend. Seven Red Suns and my brother couldn't go a cycle without chatting to her.<LINE>Always so cheerful! She loved her job and she loved the world around us to bits.<LINE>Would you like to hear about her?
 
-Of course you would. Who else would tell you about events of the past, so deeply ingrained into the menology of<LINE>our world.	Settle down, <PlayerName>.
+Of course you would. Who else would tell you about events of the past, so deeply ingrained into the menology of<LINE>our world. Settle down, <PlayerName>.
 
-The iterator herself, Sliver of Straw, was a very good friend of many other iterators in the local group. She was<LINE>industrious, as well as somewhat goofy - a unique trait that helped her pal up with almost everyone who wasn't<LINE>neck deep in processes. Five Pebbles absolutely adored her, you know? He wouldn't spend even 17 cycles without mentioning her.
+The iterator herself, Sliver of Straw, was a very good friend of many other iterators in the local group. She was<LINE>industrious, as well as somewhat goofy - a unique trait that helped her befriend almost everyone who wasn't<LINE>neck deep in processes. Five Pebbles absolutely adored her, you know? He wouldn't spend even 17 cycles without mentioning her.
 
-Our local group... Well. All local groups are quite small, at best 56.3 gongs betwixt farthest points.<LINE>Sliver was the farthest from us, so the connection with her wasn't the best - yet she always reached out for us, sharing<LINE>all sorts of crazy ideas on how to solve The Task!<LINE>And she absolutely loved watching flora and fauna develop around her and around the world - this is why she talked a lot to NSH.
+Our local group... well, all local groups are quite small, at best 56.3 gongs between the farthest points.<LINE>Sliver was the farthest from us, so the connection with her wasn't the best - yet she always reached out for us.<LINE>The solutions she proposed for The Task were more inventive than any of ours! She always said she drew her inspiration<LINE>from watching flora and fauna develop around her and around the world - I suppose this is why<LINE>she talked to Suns so much.
 
-But, of course, with her attitude and approaches to finding the solution - she was bound to find it sooner or later.<LINE>...Sorry for the long winded talk. So, why is she so legendary?
+With her attitude and approaches to finding the solution she was the most valuable member of our local group.<LINE>...Sorry for the long winded talk. So, why is she so legendary?
 
 Sliver of Straw was... and is the only one to ever broadcast a specific signal: the Big Problem we're all working on has been solved.<LINE>The triple affirmative - affirmative that a solution has been found, affirmative that the solution is portable, and affirmative<LINE>that a technical implementation is possible and generally applicable. She's also one of few that has ever been confirmed as<LINE>exhaustively incapacitated, or dead. We do not die easily.
 
@@ -21,7 +21,7 @@ Everyone had a theory. Some said that she did have a solution, but that the solu
 
 Some said she never had a solution, she just died.<LINE>And when the systems broke down an erroneous signal was sent.
 
-One camp claimed that dying *was* the solution. 
+One camp claimed that dying *was* the solution.
 
 Either way, after that these different factions developed, as well as a huge forensic effort<LINE>to recreate and simulate Sliver of Straw's last moments. Some of the simulations were wrapped<LINE>in a simulation wrapped in a simulation, in case something dangerous might happen.<LINE>Nothing much has come from it.
 
