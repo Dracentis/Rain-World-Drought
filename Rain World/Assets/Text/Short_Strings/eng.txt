@@ -39,8 +39,8 @@ little tormentor
 Little annoyance
 little annoyance
 // disliked by SRS
-Puny vermin
-puny vermin
+Defective vermin
+defective vermin
 // liked by any, brought pearl 10+
 Little archaeologist
 little archaeologist
@@ -164,7 +164,7 @@ OwO What's this you bwought me, wittwe fwiend?
 // Misc Item Reaction
 It's a rock. I have no use for this. // Rock
 This is one of my processing neurons, don't eat any. // Pebbles' Neuron
-It's a piece of sharpened rebar... What is it you want to know?<LINE>I've see you used them very effectively. // Spear
+It's a piece of sharpened rebar... What is it you want to know?<LINE>I've seen you use them very effectively. // Spear
 It's a weapon made with fire powder. Did the scavengers give this to you?<LINE>It could be very dangerous if used incorrectly! // Explosive Spear
 It's an edible plant. You could use the energy! // Waternut
 Is this one of Moon's neurons? // Moon's Neuron

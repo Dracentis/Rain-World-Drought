@@ -23,8 +23,8 @@ Your purpose ends here, <PlayerName>. You have worked very hard, and I think you
 
 From your memories you might unearth that one time I mentioned<LINE>Void Sea to you. This is your salvation.
 
-Sliver would be very proud of you, little slugcat.<LINE>If I remember correctly... This is the moniker she gave to your species?<LINE>If she could, I'm sure she'd thank you as well.
+Sliver would be very proud of you, little slugcat.<LINE>If I remember correctly... This is the name she gave to your species?<LINE>If she could, I'm sure she'd thank you as well.
 
 From now on your job as an envoy is over. I will inform Suns that you succeeded.<LINE>I'll be very busy, so don't come back.
 
-If you want - say hello to Moon for me.<LINE>And then - onward, to your escape.
+If you want - say hello to Moon for me.

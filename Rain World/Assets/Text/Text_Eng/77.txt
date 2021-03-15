@@ -3,7 +3,7 @@ Ah, what a wonderful color. Let me see what's inside...
 
 Hm. I expected something interesting, but this is a plain encrypted log from one of the overseers.<LINE>There is no signature - as per the norm, of course, overseers do not report back to their iterators<LINE>all the time - but from the data I'd assume it belongs to Seven Red Suns.
 
-You brought it from Forest Sanctuary, correct?<LINE>Oh, I can see by your reaction that I am right. Did you know, that that place was<LINE>created as a way to preserve spliced creatures?
+You brought it from Forest Sanctuary, correct?<LINE>Did you know, that that place was created as a way to preserve spliced creatures?
 
 A common way to create a purposed creature was, of course, done through researching. A lot of time<LINE>went into creating yours and many other creatures' ancestors. Failed and undesired creatures<LINE>were kept in there together with the original ones.
 

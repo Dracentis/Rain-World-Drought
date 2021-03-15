@@ -1,5 +1,5 @@
 ﻿0-37
-Oh! This plant is quite dangerous.<LINE>Although it could be utilized as a weapon, I'd be very careful with this.<LINE>Especially around me. I don't like bright things.
+Oh! This plant is quite dangerous.<LINE>Although it could be utilized as a weapon, I'd be very careful with this.<LINE>At least wait until you are out of here before you throw it. I don't like bright things.
 
 This 'nut' is capable of releasing a blinding flash of light when thrown. It doesn't even need to collide with anything.
 
